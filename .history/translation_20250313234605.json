@@ -1,0 +1,24 @@
+{
+    "ACCUEIL": "",
+
+        "presentation_1": {
+            "fr": "Bonjour et bienvenue ! Je m’appelle Thomas, passionné par la création numérique et spécialisé dans le Design UI/UX et le Développement Web.",
+            "en": "Hello and welcome! My name is Thomas, I am passionate about digital creation and specialize in UI/UX Design and Web Development."
+        },
+        "presentation_2": {
+            "fr": "Après des études en Game/Level Design et UI/UX Design, j’ai élargi mes compétences vers le développement web pour combiner créativité et expertise technique.",
+            "en": "After studying Game/Level Design and UI/UX Design, I expanded my skills towards web development to combine creativity and technical expertise."
+        },
+        "presentation_3": {
+            "fr": "Mon objectif est de créer des expériences utilisateur engageantes et des interfaces fonctionnelles qui répondent aux besoins des utilisateurs tout en renforçant l’identité de la marque.",
+            "en": "My goal is to create engaging user experiences and functional interfaces that meet user needs while strengthening brand identity."
+        },
+        "presentation_4": {
+            "fr": "À travers mon portfolio, vous découvrirez mes réalisations passées ainsi que mes projets actuels.",
+            "en": "Through my portfolio, you will discover my past achievements as well as my current projects."
+        },
+        "presentation_5": {
+            "fr": "Je suis prêt à collaborer avec des équipes dynamiques et à contribuer activement à des projets ambitieux.",
+            "en": "I am ready to collaborate with dynamic teams and actively contribute to ambitious projects."
+        }
+}

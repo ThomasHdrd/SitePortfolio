@@ -1,0 +1,133 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURGER CODE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev" class="active"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-burger">
+        <div>
+            <h1 class="h1">BURGER CODE</h1>
+            <h3>HTML - CSS - JAVASCRIPT - PHP - MYSQL</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section>
+        <div class="burger-pres">
+            <div class="burgerpres-left">
+                <p data-key="burger_pres1">BurgerCode est une application web qui permet aux utilisateurs de passer des commandes de burgers en ligne avec un système de gestion des commandes en temps réel. Ce projet vise à offrir une expérience fluide pour les utilisateurs souhaitant commander en ligne tout en gérant efficacement le côté restaurant.</p>
+                <br>
+                <h4 data-key="dev_fonctionnalites"><strong>FONCTIONNALITÉS PRINCIPALES :</strong></h4>
+                <ul>
+                    <li data-key="burger_liste1"><strong>SYSTEME DE COMMANDE EN LIGNE :</strong> Sélectionnez et commandez vos burgers préférés.</li>
+                    <li data-key="burger_liste2"><strong>GESTION DES COMMADES :</strong> Suivi en temps réel des commandes.</li>
+                </ul>
+            </div>
+            <div class="burgerpres-right">
+                <img src="images/developpeur/burger.png" alt="burger">
+            </div>
+        </div>
+
+        <!-- représentation -->
+        <div class="burger-infos2">
+            <div class="burgerinfo2-left">
+                <img src="images/developpeur/burger/burger1.png" alt="burger1">
+            </div>
+            <div class="burgerinfo2-left">
+                <p data-key="burger_pres2">Ceci représente la section administrateur dans laquelle on peut voir, modifier, supprimer et ajouter un item.</p>
+            </div>
+        </div>
+     </section>
+
+    <!-- Technologies utilisées -->
+    <section id="burger-technologies">
+        <h2 data-key="titre_dev_technos">TECHNOLOGIES UTILISÉES</h2>
+        <div class="burgerLogiciel">
+            <img src="images/developpeur/logo/html.png" alt="html">
+            <img src="images/developpeur/logo/css.png" alt="css">
+            <img src="images/developpeur/logo/js.png" alt="js">
+            <img src="images/developpeur/logo/php.png" alt="php">
+            <img src="images/developpeur/logo/mysql.png" alt="mysql">
+        </div>
+    </section>
+
+    <!-- lien code -->
+    <section>
+        <div class="burgerLienCode">
+            <a data-key="dev_button2" class="button-info" href="https://github.com/ThomasHdrd/BurgerCode" target="_blank">CLIQUEZ ICI POUR VOIR LE CODE SUR GITHUB</a>
+        </div>
+    </section>
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

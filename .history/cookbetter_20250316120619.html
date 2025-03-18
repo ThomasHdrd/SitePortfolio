@@ -1,0 +1,196 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOK BETTER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design" class="active"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-cookbetter">
+        <div>
+            <h1 class="h1">COOK BETTER</h1>
+            <h3 data-key="cookbetter_banner">Design Thinking – Design Basses Fidélité – Design Haute Fidélité – Responsive Web Design</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section>
+        <div class="cookbetter-pres">
+            <div class="cookbetterpres-left">
+                <p data-key="cookbetter_pres">Cook Better est un responsive web conçu pour répondre aux amoureux de la cuisine qui souhaitent apprendre à cuisiner des repas sains. </p>
+                <br>
+                <ul>
+                    <li data-key="cookbetter_pres_projet"><strong>PROJET :</strong> Site web responsive</li>
+                    <li data-key="cookbetter_pres_role"><strong>RÔLE :</strong> UI & UX Designer</li>
+                    <li data-key="cookbetter_pres_date"><strong>DATE :</strong> Janvier 2023 – Avril 2023</li>
+                    <li data-key="cookbetter_pres_duree"><strong>DURÉE :</strong>  3 mois</li>
+                </ul>
+                <br>
+                <ul>
+                    <li data-key="cookbetter_pres_reponsabilite"><strong>RESPONSABILITÉ :</strong> 
+                        <ul>
+                            <li data-key="cookbetter_pres_reponsabilite1" class="texte-decale">Design Thinking</li>
+                            <li class="texte-decale" data-key="cookbetter_pres_reponsabilite1">Design Basse Fidélité</li>
+                            <li class="texte-decale" data-key="cookbetter_pres_reponsabilite2">Design Haute Fidélité</li>
+                            <li class="texte-decale" data-key="cookbetter_pres_reponsabilite3">Tests utilisateurs</li>
+                            <li class="texte-decale" data-key="cookbetter_pres_reponsabilite4">Audit concurrentiel</li>
+                            <li class="texte-decale">Responsive web design</li>
+                        </ul>
+                </ul>
+            </div>
+            <div class="cookbetterpres-right">
+                <img src="images/cookbetter/resultatfinal.png" alt="resultatfinal">
+            </div>
+        </div>
+    </section>
+        
+    <!-- persona -->
+    <section id="cookbetter-persona">
+        <h2>PERSONA</h2>
+        <div class="cookbetter-img">
+            <img src="images/cookbetter/persona.png" alt="persona">
+        </div>
+    </section> 
+
+    <!-- wireframe -->
+    <section id="cookbetter-wireframe">
+        <h2>WIREFRAME</h2>
+        <div class="cookbetterWireframe">
+            <img class="wireframe" src="images/cookbetter/wireframepapier.png" alt="wireframepapier">
+            <img class="wireframe-tel" src="images/cookbetter/wireframepapier-tel.png" alt="wireframepapier-tel">
+        </div>
+    </section> 
+
+    <!-- basse fidelité -->
+    <section id="cookbetter-bassefid">
+        <h2 data-key="titre_proto_bassefid">PROTOTYPE BASSE FIDÉLITÉ</h2>
+        <div class="cookbetterBassefid">
+            <img class="lowfid" src="images/cookbetter/lowfid.png" alt="lowfid">
+            <img class="lowfid-tel" src="images/cookbetter/lowfid-tel.png" alt="lowfid-tel">
+        </div>
+    </section> 
+
+    <!-- haute fidelité -->
+    <section id="cookbetter-hautefid">
+        <h2 data-key="titre_proto_hautefid">PROTOTYPE HAUTE FIDÉLITÉ</h2>
+        <div class="cookbetterHautefid">
+            <img class="highfid" src="images/cookbetter/highfid.png" alt="highfid">
+        </div>
+        <!-- tel -->
+        <div class="cookbetterHautefid-tel">
+            <img class="highfidtel" src="images/cookbetter/highfid-tel1.png" alt="highfid-tel1">
+            <img class="highfidtel" src="images/cookbetter/highfid-tel2.png" alt="highfid-tel2">
+            <img class="highfidtel" src="images/cookbetter/highfid-tel3.png" alt="highfid-tel3">
+        </div>
+    </section> 
+
+
+    
+    <!-- responsive -->
+    <section id="cookbetter-responsive">
+        <h2 data-key="titre_proto_bassefid_responsive">RESPONSIVE WEB DESIGN - PROTOTYPE BASSE FIDÉLITÉ</h2>
+        <div class="cookbetterResponsive">
+            <img class="lowfid" src="images/cookbetter/responsive/bassefid.png" alt="bassefid">
+        </div>
+    </section> 
+    <!-- haute fidelité -->
+    <section id="cookbetter-responsive-hautefid">
+        <h2 data-key="titre_proto_hautefid_responsive">PROTOTYPE HAUTE FIDÉLITÉ</h2>
+        <div class="cookbetterResponsiveHautefid">
+            <img class="highfid" src="images/cookbetter/responsive/highfid.png" alt="highfid">
+        </div>
+        <div class="cookbetterResponsiveHautefid-Result">
+            <img class="highfidresult" src="images/cookbetter/responsive/highfid-result1.png" alt="highfid-result1">
+            <img class="highfidresult" src="images/cookbetter/responsive/highfid-result2.png" alt="highfid-result2">
+            <img class="highfidresult" src="images/cookbetter/responsive/highfid-result3.png" alt="highfid-result3">
+        </div>
+
+        <!-- lien proto -->
+        <div class="LienPrototype">
+            <a data-key="button_proto" class="button-info" href="https://www.figma.com/design/pDlgTades5hfS4rYg28DBz/CookBetter?node-id=195-758&p=f" target="_blank">CLIQUEZ ICI POUR VOIR LE PROTOTYPE FINAL</a>
+        </div>
+    </section>
+
+    <!-- logiciel utilisés -->
+     <section id="cookbetter-logiciel">
+        <h2 data-key="titre_lociels_utilises">LOGICIELS UTILISÉS</h2>
+        <div class="cookbetterLogiciel">
+            <img src="images/logiciels/figma.png" alt="figma">
+            <img src="images/logiciels/adobephotoshop.png" alt="adobephotoshop">
+            <img src="images/logiciels/googledrive.png" alt="googledrive">
+            <img src="images/logiciels/miro.png" alt="miro">
+        </div>
+     </section>
+
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

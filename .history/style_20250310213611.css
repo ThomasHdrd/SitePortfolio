@@ -1,0 +1,5614 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+    background-color: white;
+}
+
+p{
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+li {
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #328ad3;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 33px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bold;
+    color: #328ad3; 
+}
+
+ul li {
+    font-size: 18px;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* HEADER */
+nav {
+    background-color: #328ad3;
+
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.menu h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    align-items: center; 
+}
+
+.menu a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    font-family: 'Open Sans';
+}
+
+.menu li a:hover {
+    background-color: rgb(247, 247, 247);
+    color: #1a5696;
+    border-bottom: 4px solid #1a5696; 
+}
+
+.menu .active {
+    border-bottom: 4px solid #1a5696; 
+    color: #1a5696;
+    background-color: rgb(247, 247, 247);
+}
+
+.menu .moncv {
+    background-color: rgb(212, 0, 0);
+}
+
+.menu .moncv:hover {
+    color: rgb(212, 0, 0);
+    border-bottom: 4px solid rgb(212, 0, 0); 
+}
+
+.name {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding-right: 600px;
+}
+
+.name p{
+    color: white;
+    text-align: center;
+}
+
+/* menu déroulant */
+.sousMenu {
+    position: relative;  /* Ajoute cette ligne pour que le sous-menu se positionne correctement */
+}
+
+.sousMenu .sousMenu-content {
+    display: none;
+    position: absolute;
+    top: 90%;  /* Positionne le sous-menu juste en dessous de l'élément parent */
+    left: 0;
+    background-color: #3491dd;
+    min-width: 200px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.sousMenu:hover .sousMenu-content {
+    display: block;
+}
+
+.sousMenu-content a {
+    color: rgb(247, 247, 247);
+    background-color: #3491dd;
+}
+
+.sousMenu-content a:hover {
+    color: #3491dd;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* Footer */
+footer {
+    background-color: #328ad3; 
+    color: white;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.footer-bottom {
+    background-color: #1a5696a8; 
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; 
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.footer-social img:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    filter: invert(0.80);
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* A PROPOS */
+.presentation {
+    padding: 50px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px; 
+}
+
+.presentation img {
+    width: 350px;
+    height: auto;
+    border: 4px solid #328ad3;
+}
+
+
+.text-right p {
+    text-align: justify;
+}
+
+/* cv video */
+.cv-video {
+    text-align: center;
+}
+
+.cv-video h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+video {
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+    border: 4px solid #328ad3;
+}
+
+
+/* compétences techniques */
+.competences-techniques h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-technique {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+
+.competencestechniques {
+    background-color: #328ad3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 14%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.competencestechniques:hover {
+    background-color: rgb(247, 247, 247);
+    border: 2px solid #328ad3;;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.04);
+}
+
+.competencestechniques img {
+    width: 125px;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+.competencestechniques h4 {
+    color: rgb(247, 247, 247);
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.competencestechniques:hover h4 {
+    color: #328ad3;
+}
+
+.competencestechniques ul li {
+    padding-top: 15px;
+    list-style: none;
+    color: rgb(247, 247, 247);
+}
+
+.competencestechniques:hover ul li {
+    color: #328ad3;
+}
+
+
+/* ui ux design */
+.competencestechniques .imageuiuxdesign {
+    background-image: url(images/uiuxdesign.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.competencestechniques:hover .imageuiuxdesign {
+   background-image: url(images/uiuxdesign_hover.png);
+}
+
+
+/* front end */
+.competencestechniques .imagefrontend {
+    background-image: url(images/frontend.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;  
+ }
+
+.competencestechniques:hover .imagefrontend {
+   background-image: url(images/frontend_hover.png);
+}
+
+/* back end */
+.competencestechniques .imagebackend {
+    background-image: url(images/backend.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.competencestechniques:hover .imagebackend {
+   background-image: url(images/backend_hover.png);
+}
+
+/* game et level design */
+.competencestechniques .imagegameleveldesign {
+    background-image: url(images/leveldesign.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;  
+ }
+
+.competencestechniques:hover .imagegameleveldesign {
+   background-image: url(images/leveldesign_hover.png);
+}
+
+/* competence annexes */
+.competencestechniques .imageannexe {
+    background-image: url(images/annexe.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+ }
+
+.competencestechniques:hover .imageannexe {
+   background-image: url(images/annexe_hover.png);
+}
+
+
+
+
+/* compétences relationnelles comportementales */
+.competences-relationnelles-comportementales h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-relations {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.competencesrelationnelles {
+    background-color: #328ad3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 14%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.competencesrelationnelles:hover {
+    background-color: rgb(247, 247, 247);
+    border: 2px solid #328ad3;;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.04);
+}
+
+.competencesrelationnelles img {
+    width: 125px;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+.competencesrelationnelles h4 {
+    color: rgb(247, 247, 247);
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.competencesrelationnelles:hover h4 {
+    color: #328ad3;
+}
+
+
+/* esprit equipe */
+.competencesrelationnelles .imageespritequipe {
+    background-image: url(images/espritequipe.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.competencesrelationnelles:hover .imageespritequipe {
+   background-image: url(images/espritequipe_hover.png);
+}
+
+/* creatif */
+.competencesrelationnelles .imagecreatif {
+    background-image: url(images/creatif.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.competencesrelationnelles:hover .imagecreatif {
+   background-image: url(images/creatif_hover.png);
+}
+
+/* polyvalent */
+.competencesrelationnelles .imagepolyvalent {
+    background-image: url(images/polyvalent.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.competencesrelationnelles:hover .imagepolyvalent {
+   background-image: url(images/polyvalent_hover.png);
+}
+
+/* curieux */
+.competencesrelationnelles .imagecurieux {
+    background-image: url(images/creatif.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.competencesrelationnelles:hover .imagecurieux {
+   background-image: url(images/creatif_hover.png);
+}
+
+
+/* langues */
+.langues h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-langues {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.langages {
+    background-color: #328ad3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 14%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.langages:hover {
+    background-color: rgb(247, 247, 247);
+    border: 2px solid #328ad3;;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.04);
+}
+
+.langages img {
+    width: 125px;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+.langages h4 {
+    color: rgb(247, 247, 247);
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.langages:hover h4 {
+    color: #328ad3;
+}
+
+/* fr */
+.langages .imagefr {
+    background-image: url(images/fr.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+ /* en */
+.langages .imageen {
+    background-image: url(images/eng.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+
+ /* outils et logiciels */
+ .logiciels h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.icone-logiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.icone-logiciel img {
+    width: 250px;
+    height: auto;
+}
+
+
+/* passions */
+.passions h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-passion {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.passion {
+    background-color: #328ad3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 14%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.passion:hover {
+    background-color: rgb(247, 247, 247);
+    border: 2px solid #328ad3;;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.04);
+}
+
+.passion img {
+    width: 125px;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+.passion h4 {
+    color: rgb(247, 247, 247);
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.passion:hover h4 {
+    color: #328ad3;
+}
+
+
+/* sports */
+.passion .imagesports {
+    background-image: url(images/sport.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.passion:hover .imagesports {
+   background-image: url(images/sport_hover.png);
+}
+
+/* voyages */
+.passion .imagevoyages {
+    background-image: url(images/voyage.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.passion:hover .imagevoyages {
+   background-image: url(images/voyage_hover.png);
+}
+
+/* entrepeunariat */
+.passion .imageentrepeneuriat {
+    background-image: url(images/entrepeneur.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.passion:hover .imageentrepeneuriat {
+   background-image: url(images/entrepeneur_hover.png);
+}
+
+/* lecture */
+.passion .imagelecture {
+    background-image: url(images/lecture.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.passion:hover .imagelecture {
+   background-image: url(images/lecture_hover.png);
+}
+
+/* jeux video */
+.passion .imagejv {
+    background-image: url(images/jeuxvideo.png);   
+    height: 160px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease; 
+ }
+
+.passion:hover .imagejv {
+   background-image: url(images/jeuxvideo_hover.png);
+}
+
+
+/* certificats */
+.certificat h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-certifications {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.certificat img {
+    width: 500px;
+    height: auto;
+    color: rgb(247, 247, 247);
+    border: 4px solid #328ad3; 
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* EXPERIENCES PRO */
+
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* DESIGNER */
+
+/* ui ux */
+#projetDesigner h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-design {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 210px;
+    margin-bottom: 40px;
+}
+
+.uiux {
+    background-color: #328ad3;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.uiux h3 {
+    color: #ffffff;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.uiux h4 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.uiux p {
+    color: #ffffff;
+    margin: 8px 0;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.uiux img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.uiux .button-info {
+    display: block; 
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    color: #328ad3;
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+    font-family: 'Roboto';
+    text-align: center;  
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    text-decoration: none; 
+}
+
+.uiux .button-info:hover {
+    background-color: #328ad3;
+    color: rgb(247, 247, 247);
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid rgb(247, 247, 247);
+    border-radius: 3px;
+}
+
+
+/* gd ld */
+#projetGDLD h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-gdld {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 210px;
+    margin-bottom: 40px;
+}
+
+.gdld {
+    background-color: #328ad3;
+    padding-top: 30px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gdld h3 {
+    color: #ffffff;
+    margin: 20px 0;
+    text-transform: uppercase;
+
+}
+
+.gdld h4 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.gdld p {
+    color: #ffffff;
+    margin: 8px 0;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.gdld img {
+    width: 380px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gdld .button-info {
+    display: block; 
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    color: #328ad3;
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+    font-family: 'Roboto';
+    text-align: center;  
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.gdld .button-info:hover {
+    background-color: #328ad3;
+    color: rgb(247, 247, 247);
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid rgb(247, 247, 247);
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* DEVELOPPEUR */
+#projetDeveloppeur h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-developpeur {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 210px;
+    margin-bottom: 40px;
+}
+
+.tableau-developpeur-back-end {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 210px;
+    margin-bottom: 40px;
+}
+
+.developpeur {
+    background-color: #328ad3;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.developpeur h3 {
+    color: #ffffff;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.developpeur h4 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.developpeur p {
+    color: #ffffff;
+    margin: 8px 0;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.developpeur img {
+    width: 380px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.developpeur .button-info {
+    display: block; 
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    color: #328ad3;
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+    font-family: 'Roboto';
+    text-align: center;  
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    text-decoration: none; 
+}
+
+.developpeur .button-info:hover {
+    background-color: #328ad3;
+    color: rgb(247, 247, 247);
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid rgb(247, 247, 247);
+    border-radius: 3px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* EXP PRO */
+#ExperiencePro h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.tableau-experiences {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px 210px;
+    margin-bottom: 40px;
+}
+
+.exPro {
+    background-color: #328ad3;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.exPro h3 {
+    color: #ffffff;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.exPro h4 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.exPro p {
+    color: #ffffff;
+    margin: 8px 0;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.exPro img {
+    width: 380px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.exPro .button-info {
+    display: block; 
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    color: #328ad3;
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+    font-family: 'Roboto';
+    text-align: center;  
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    text-decoration: none; 
+}
+
+.exPro .button-info:hover {
+    background-color: #328ad3;
+    color: rgb(247, 247, 247);
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid rgb(247, 247, 247);
+    border-radius: 3px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* COOKBETTER */
+.banner-cookbetter {
+    background-image: url('images/design/cookbetter.png'); 
+    background-position: center;
+    background-size: 25%; 
+    background-repeat: no-repeat;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.banner-cookbetter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.banner-cookbetter h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-cookbetter {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.cookbetter-pres {
+    padding: 0 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.cookbetter-pres img {
+    width: 700px;
+    height: auto;
+}
+
+
+.cookbetterpres-left p {
+    text-align: justify;
+}
+
+.cookbetterpres-left ul {
+    padding-left: 30px;
+}
+
+/* persona */
+#cookbetter-persona h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.cookbetter-img {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.cookbetter-img img {
+    width: 65%;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+
+/* wireframe */
+#cookbetter-wireframe h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.cookbetterWireframe {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.cookbetterWireframe .wireframe-tel {
+    width: 18%;
+    color: rgb(247, 247, 247);
+
+}
+
+.cookbetterWireframe .wireframe {
+    width: 40%;
+    height: 40%;
+    color: rgb(247, 247, 247);
+
+}
+
+/* basse fidelité */
+#cookbetter-bassefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.cookbetterBassefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.cookbetterBassefid .lowfid-tel {
+    width: 18%;
+    color: rgb(247, 247, 247);
+}
+
+.cookbetterBassefid .lowfid {
+    width: 40%;
+    height: 40%;
+    color: rgb(247, 247, 247);
+}
+
+/* haute fidelité */
+#cookbetter-hautefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* pc */
+.cookbetterHautefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.cookbetterHautefid .highfid {
+    width: 65%;
+    color: rgb(247, 247, 247);
+
+}
+
+/* tel */
+.cookbetterHautefid-tel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.cookbetterHautefid-tel .highfidtel {
+    width: 17%;
+    color: rgb(247, 247, 247);
+}
+
+
+
+/* responsive */
+#cookbetter-responsive h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* low fid */
+.cookbetterResponsive {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.cookbetterResponsive .lowfid {
+    width: 65%;
+    color: rgb(247, 247, 247);
+
+}
+
+/* haute fidelité */
+#cookbetter-responsive-hautefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* pc */
+.cookbetterResponsiveHautefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.cookbetterResponsiveHautefid .highfid {
+    width: 65%;
+    color: rgb(247, 247, 247);
+}
+
+/* tel */
+.cookbetterResponsiveHautefid-Result {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.cookbetterResponsiveHautefid-Result .highfidresult {
+    width: 21%;
+    color: rgb(247, 247, 247);
+
+}
+
+/* lien proto */
+.LienPrototype {
+    display: flex;
+    justify-content: center;
+}
+
+.LienPrototype .button-info {
+    margin-bottom: 20px;
+    width: 65%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.LienPrototype .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* logiciel utilisés */
+#cookbetter-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.cookbetterLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.cookbetterLogiciel img {
+    width: 375px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* MOVIE PASS */
+.banner-moviepass {
+    background-image: url('images/design/moviepass.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-moviepass::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-moviepass h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-moviepass {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.moviepass-pres {
+    padding: 0 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.moviepass-pres img {
+    width: 700px;
+    height: auto;
+}
+
+.moviepasspres-left p {
+    text-align: justify;
+}
+
+.moviepasspres-left ul {
+    padding-left: 30px;
+}
+
+/* persona */
+#moviepasspres-persona h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.moviepasspres-img {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.moviepasspres-img img {
+    width: 38%;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+/* wireframe */
+#moviepass-wireframe h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.moviepassWireframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.moviepassWireframe ul li {
+    font-size: 24px;
+}
+
+.moviepassWireframe .wireframe {
+    width: 40%;
+    height: 40%;
+    color: rgb(247, 247, 247);
+}
+
+/* basse fidelité */
+#moviepass-bassefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.moviepassBassefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.moviepassBassefid .lowfid {
+    width: 60%;
+    color: rgb(247, 247, 247);
+}
+
+
+/* haute fidelité */
+#moviepass-hautefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* pc */
+.moviepassHautefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.moviepassHautefid .highfid {
+    width: 65%;
+    color: rgb(247, 247, 247);
+
+}
+
+/* tel */
+.moviepassHautefid-tel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.moviepassHautefid-tel .highfidtel {
+    width: 17%;
+    color: rgb(247, 247, 247);
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* cats kitchen */
+.banner-catskitchen {
+    background-image: url('images/design/catkitchen.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-catskitchen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-catskitchen h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-catskitchen {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.catskitchen-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; 
+}
+
+.catskitchen-pres img {
+    width: 550px;
+    height: auto;
+}
+
+.catskitchen-left p {
+    text-align: justify;
+}
+
+.catskitchen-left ul {
+    padding-left: 30px;
+}
+
+/* persona */
+#catskitchen-persona h2 {
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.catskitchen-img {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.catskitchen-img img {
+    width: 58%;
+    height: auto;
+    color: rgb(247, 247, 247);
+}
+
+/* wireframe */
+#catskitchen-wireframe h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.catskitchenWireframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.catskitchenWireframe p {
+    font-size: 22px;
+    width: 30%;
+    text-align: justify;
+}
+
+.catskitchenWireframe .wireframe {
+    width: 25%;
+    color: rgb(247, 247, 247);
+}
+
+/* basse fidelité */
+#catskitchen-bassefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.catskitchenBassefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.catskitchenBassefid .lowfid {
+    width: 30%;
+    color: rgb(247, 247, 247);
+}
+
+/* haute fidelité */
+#catskitchen-hautefid h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* pc */
+.catskitchenHautefid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.catskitchenHautefid .highfid {
+    width: 50%;
+    color: rgb(247, 247, 247);
+
+}
+
+/* tel */
+.catskitchenHautefid-tel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.catskitchenHautefid-tel .highfidtel {
+    width: 23%;
+    color: rgb(247, 247, 247);
+}
+
+
+
+
+/* responsive */
+#catskitchen-wireframe-responsive h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.catskitchenWireframeResponsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.catskitchenWireframeResponsive p {
+    font-size: 22px;
+    width: 30%;
+    text-align: center;
+    text-align: justify;
+}
+
+.catskitchenWireframeResponsive .wireframe {
+    width: 30%;
+}
+
+/* low fid */
+#catskitchen-bassefid-responsive h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.catskitchenBassefidResponsive {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.catskitchenBassefidResponsive .lowfid {
+    width: 45%;
+    color: rgb(247, 247, 247);
+}
+
+/* haute fidelité */
+#catskitchen-hautefid-responsive h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* pc */
+.catskitchenHautefidResponsive {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.catskitchenHautefidResponsive .highfid {
+    width: 45%;
+    color: rgb(247, 247, 247);
+}
+
+/* tel */
+.catskitchenHautefidResponsive-Result {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.catskitchenHautefidResponsive-Result .highfidresult {
+    width: 15%;
+    color: rgb(247, 247, 247);
+}
+
+/* lien */
+.catskitchenLienPrototype {
+    display: flex;
+    justify-content: center;
+}
+
+.catskitchenLienPrototype .button-info {
+    margin-bottom: 20px;
+    width: 65%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.catskitchenLienPrototype .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* logiciel */
+#catskitchen-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.catskitchenLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.catskitchenLogiciel img {
+    width: 375px;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* among us */
+.banner-amongus {
+    background-image: url('images/design/amongus.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-amongus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-amongus h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-amongus {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.amongus-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.amongus-pres img {
+    width: 700px;
+    height: auto;
+}
+
+.amonguspres-left p{
+    font-size: 20px;
+}
+
+.amonguspres-left ul{
+    padding-left: 30px;
+}
+
+.amonguspres-left li {
+    font-size: 20px;
+}
+
+.amonguspresentation-texte {
+    padding: 10px 250px;
+    text-align: justify;
+}
+
+.amonguspresentation-texte p {
+    padding: 4px 0;
+    text-align: justify;
+}
+
+/* gameplay */
+#amongus-gameplay h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.amongusGameplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.amongusGameplay .gameplay {
+    width: 24%;
+    color: rgb(247, 247, 247);
+}
+
+/* tache */
+#amongus-tache h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.amongusTache {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.amongusTache .tache {
+    width: 24%;
+    color: rgb(247, 247, 247);
+}
+
+/* menu */
+#amongus-menu h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.amongusMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.amongusMenu .menu {
+    width: 24%;
+    color: rgb(247, 247, 247);
+}
+
+/* lien proto */
+.amongusLienPrototype {
+    display: flex;
+    justify-content: center;
+}
+
+.amongusLienPrototype .button-info {
+    margin-bottom: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.amongusLienPrototype .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* logiciel utilisés */
+#amongus-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.amongusLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.amongusLogiciel img {
+    width: 400px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* viking */
+.banner-viking {
+    background-image: url('images/viking/vikingpres1.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-viking::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-viking h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-viking {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* pres general */
+.viking-pres {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.viking-pres .vikingpres-right {
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.vikingpres-left p{
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* info general */
+#viking {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.viking-infos {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.viking-infos img {
+    width: 700px; 
+    height: auto;
+    border-radius: 15px;
+}
+
+.viking-infos ul {
+    width: 600px;
+}
+
+.viking-infos ul li {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* role et responsabilites */
+#vikingRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.viking-RP {
+    padding: 20px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.vikingRP-right img {
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.vikingRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.vikingRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.vikingRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.viking-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+ /* outils et logiciels */
+#viking-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.vikingLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.vikingLogiciel img {
+    width: 300px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* seishin */
+.banner-japan {
+    background-image: url('images/japan/japan1.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(73, 73, 73);
+    z-index: -1;
+}
+
+.banner-japan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-japan h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-japan {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.japan-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.japan-pres .japanpres-right {
+    width: 700px;
+    height: auto;
+}
+
+.japanpres-left p{
+    text-align: justify;
+}
+
+
+/* info general */
+/* 1 */
+.japan-infos {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.japan-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.japaninfo-left ul {
+    padding: 0 100px;
+}
+
+.japaninfo-left ul li {
+    font-size: 22px;
+}
+
+/* 2 */
+.japan-infos2 {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.japan-infos2 img {
+    width: 700px;
+    height: auto;
+}
+
+.japaninfo2-left ul {
+    padding-left: 100px;
+}
+
+.japaninfo2-left ul li {
+    font-size: 22px;
+}
+
+/* role et responsabilites */
+#japanRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.japan-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.japanRP-right img {
+    width: 700px;
+    height: auto;
+}
+
+.japanRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.japanRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.japanRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.japan-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+ /* outils et logiciels */
+#japan-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.japanLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.japanLogiciel img {
+    width: 300px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* unite */
+.banner-unite {
+    background-image: url('images/unite/unite.png'); 
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(22, 22, 22);
+    z-index: -1;
+}
+
+.banner-unite::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-unite h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-unite {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.unite-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.unite-pres .unitepres-right {
+    width: 700px;
+    height: auto;
+}
+
+.unitepres-left p{
+    text-align: justify;
+}
+
+
+/* info general */
+/* 1 */
+.unite-infos {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.unite-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.uniteinfo-left ul {
+    padding: 0 100px;
+}
+
+.uniteinfo-left ul li {
+    font-size: 22px;
+}
+
+/* 2 */
+.unite-infos2 {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.unite-infos2 img {
+    width: 700px;
+    height: auto;
+}
+
+.uniteinfo2-left ul {
+    padding-left: 100px;
+}
+
+.uniteinfo2-left ul li {
+    font-size: 22px;
+}
+
+/* role et responsabilites */
+#uniteRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.unite-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.uniteRP-right img {
+    width: 700px;
+    height: auto;
+}
+
+.uniteRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.uniteRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.uniteRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.unite-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+ /* outils et logiciels */
+#unite-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.uniteLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.uniteLogiciel img {
+    width: 300px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* hold up */
+.banner-holdup {
+    background-image: url('images/holdup/holdup.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.banner-holdup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-holdup h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-holdup {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.holdup-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.holdup-pres img {
+    width: 750px;
+}
+
+.holduppres-left p{
+    text-align: justify;
+}
+
+.holdup-pres .holduppres-left {
+    width: 700px;
+    height: auto;
+}
+
+/* info general */
+/* 1 */
+.holdup-infos {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.holdup-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.holdupinfo-left ul {
+    padding: 0 100px;
+}
+
+.holdupinfo-left ul li {
+    font-size: 26px;
+}
+
+/* 2 */
+.holdup-infos2 {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.holdup-infos2 img {
+    width: 700px;
+    height: auto;
+}
+
+.holdupinfo2-left ul {
+    padding-left: 100px;
+}
+
+.holdupinfo2-left ul li {
+    font-size: 26px;
+}
+
+/* role et responsabilites */
+#holdupRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.holdup-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.holdupRP-right img {
+    width: 700px;
+    height: auto;
+}
+
+.holdupRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.holdupRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.holdupRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.holdup-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* regles */
+#holdup-regles h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.holdupRegles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.holdupRegles .regles {
+    width: 24%;
+    color: rgb(247, 247, 247);
+}
+
+/* cartes */
+#holdup-cartes h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.holdupCartes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.holdupCartes .cartes {
+    width: 21%;
+}
+
+.holdupCartes .cartesBis {
+    width: 11%;
+}
+
+
+/* lien proto */
+.holdupLienPrototype {
+    display: flex;
+    justify-content: center;
+}
+
+.holdupLienPrototype .button-info {
+    margin-bottom: 20px;
+    width: 65%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.holdupLienPrototype .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+
+ /* outils et logiciels */
+#holdup-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.holdupLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.holdupLogiciel img {
+    width: 500px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* recolorful */
+.banner-recolorful {
+    background-image: url('images/recolorful/recolorful.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(73, 73, 73);
+    z-index: -1;
+}
+
+.banner-recolorful::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-recolorful h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-recolorful {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.recolorful-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.recolorful-pres .recolorfulpres-right {
+    width: 700px;
+    height: auto;
+}
+
+.recolorfulpres-left p{
+    text-align: justify;
+}
+
+.recolorfulpres-left a {
+    font-size: 24px;
+}
+
+
+/* info general */
+/* 1 */
+.recolorful-infos {
+    padding: 30px 220px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.recolorful-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.recolorfulinfo-left ul {
+    padding: 0 100px;
+}
+
+.recolorfulinfo-left ul li {
+    font-size: 22px;
+}
+
+/* 2 */
+.recolorful-infos2 {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.recolorful-infos2 img {
+    width: 700px;
+    height: auto;
+}
+
+.recolorfulinfo2-left ul {
+    padding-left: 100px;
+}
+
+.recolorfulinfo2-left ul li {
+    font-size: 22px;
+}
+
+
+
+/* role et responsabilites */
+#recolorfulRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.recolorful-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.recolorfulRP-right img {
+    width: 700px;
+    height: auto;
+}
+
+.recolorfulRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.recolorfulRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.recolorfulRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.recolorful-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+ /* outils et logiciels */
+#recolorful-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.recolorfulLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.recolorfulLogiciel img {
+    width: 400px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* arma 3 */
+.banner-arma {
+    background-image: url('images/arma3/arma3.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.banner-arma::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-arma h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-arma {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.arma-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.arma-pres img {
+    width: 700px;
+}
+
+.armapres-left p{
+    text-align: justify;
+}
+
+.arma-pres .armapres-left {
+    width: 50%;
+    height: auto;
+}
+
+
+
+/* info general */
+/* 1 */
+.arma-infos {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.arma-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.armainfo-left ul {
+    padding: 0 100px;
+}
+
+.armainfo-left ul li {
+    font-size: 26px;
+}
+
+/* 2 */
+.arma-infos2 {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.arma-infos2 img {
+    width: 700px;
+    height: auto;
+}
+
+.armainfo2-left ul {
+    padding-left: 100px;
+}
+
+.armainfo2-left ul li {
+    font-size: 26px;
+}
+
+/* role et responsabilites */
+#armaRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.arma-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.armaRP-right img {
+    width: 700px;
+    height: auto;
+}
+
+.armaRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.armaRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.armaRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.arma-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* lien proto */
+.armaLienPrototype {
+    display: flex;
+    justify-content: center;
+}
+
+.armaLienPrototype .button-info {
+    margin: 20px 0;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.armaLienPrototype .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* outils et logiciels */
+#arma-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.armaLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.armaLogiciel img {
+    width: 500px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* crysis */
+.banner-crysis {
+    background-image: url('images/crysis/crysis3.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(22, 22, 22);
+    z-index: -1;
+}
+
+.banner-crysis::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-crysis h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-crysis {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.crysis-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.crysis-pres .crysispres-right {
+    width: 700px;
+    height: auto;
+}
+
+.crysispres-left p{
+    text-align: justify;
+}
+
+/* info general */
+/* 1 */
+.crysis-infos {
+    padding: auto;
+    display: flex;
+    align-items: center;
+    gap: 150px; 
+    justify-content: center;
+}
+
+.crysis-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.crysisinfo-left ul {
+    padding: 0 100px;
+}
+
+.crysisinfo-left ul li {
+    font-size: 26px;
+}
+
+/* 2 */
+.crysis-infos2 {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    gap: 150px; 
+    justify-content: center;
+}
+
+.crysis-infos2 img {
+    width: 700px;
+}
+
+.crysisinfo2-left ul {
+    padding-left: 100px;
+}
+
+.crysisinfo2-left ul li {
+    font-size: 26px;
+}
+
+/* role et responsabilites */
+#crysisRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.crysis-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.crysisRP-right img {
+    width: 700px;
+    height: auto;
+}
+
+.crysisRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.crysisRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.crysisRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.crysis-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* lien proto */
+.crysisLienPrototype {
+    display: flex;
+    justify-content: center;
+}
+
+.crysisLienPrototype .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.crysisLienPrototype .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+ /* outils et logiciels */
+#crysis-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.crysisLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.crysisLogiciel img {
+    width: 300px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* car */
+.banner-car {
+    background-image: url('images/car/car.png'); 
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(22, 22, 22);
+    z-index: -1;
+}
+
+.banner-car::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-car h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-car {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.car-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.car-pres .carpres-right {
+    width: 700px;
+    height: auto;
+}
+
+.carpres-left ul {
+    padding-left: 30px;
+}
+
+.car-pres li {
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+.carpres-left p{
+    text-align: justify;
+}
+
+/* info general */
+/* 1 */
+.car-infos {
+    padding: auto;
+    display: flex;
+    align-items: center;
+    gap: 100px; 
+    justify-content: center;
+}
+
+.car-infos img {
+    width: 700px;
+    height: auto;
+}
+
+.carinfo-left ul {
+    padding: 0 100px;
+}
+
+.carinfo-left ul li {
+    font-size: 26px;
+}
+
+/* 2 */
+.car-infos2 {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    gap: 100px; 
+    justify-content: center;
+}
+
+.car-infos2 img {
+    width: 700px;
+}
+
+.carinfo2-left ul {
+    padding-left: 100px;
+}
+
+.carinfo2-left ul li {
+    font-size: 26px;
+}
+
+/* role et responsabilites */
+#carRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.car-RP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; 
+}
+
+.carRP-right img {
+    width: 750px;
+    height: auto;
+}
+
+.carRP-left ul {
+    padding-left: 50px;
+    
+}
+
+.carRP-left ul li {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.carRP-left p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.car-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* outils et logiciels */
+#crysis-logiciel h2 {
+    padding: 40px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.crysisLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.crysisLogiciel img {
+    width: 400px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* lay */
+.banner-lay {
+    background-image: url('images/lay/lay.png'); 
+    background-position: bottom;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(73, 73, 73);
+    z-index: -1;
+}
+
+.banner-lay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.banner-lay h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-lay {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* pres general */
+.lay-pres {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.lay-pres .laypres-right {
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.laypres-left p{
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* info general */
+#lay {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.lay-infos {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.lay-infos img {
+    width: 700px; 
+    height: auto;
+    border-radius: 15px;
+}
+
+.lay-infos ul {
+    width: 600px;
+}
+
+.lay-infos ul li {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+
+/* role et responsabilites */
+#layRP h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* 1 */
+.lay-RP {
+    padding: 30px 300px;
+    display: flex;
+    align-items:center;
+    text-align: justify;
+    gap: 80px; 
+}
+
+.layRP-right img {
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.layRP-left ul {
+    padding-left: 50px; 
+}
+
+.layRP-left ul li {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.layRP-left p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.lay-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* plan general */
+#lay-plangeneral h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.LayPlangeneral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 75px;
+}
+
+.LayPlangeneral .plangeneral {
+    width: 35%;
+
+    border-radius: 15px;
+}
+
+/* plan de circulation */
+#lay-plancirculation h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.LayPlancirculation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 75px;
+}
+
+.LayPlancirculation .plancirculation {
+    width: 35%;
+    color: rgb(247, 247, 247);
+}
+
+/* zone 1 */
+#lay-zone1 h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.layZone1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.layZone1 .zone1 {
+    width: 25%;
+}
+
+/* zone 2 */
+#lay-zone2 h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.layZone2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.layZone2 .zone2 {
+    width: 25%;
+}
+
+/* zone 3 */
+#lay-zone3 h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.layZone3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.layZone3 .zone3 {
+    width: 19%;
+}
+
+/* video final */
+.laypres-final {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.laypres-final h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.laypres-final .layVideoFinal {
+    width: 1200px;
+}
+
+
+/* outils et logiciels */
+#lay-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.layLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.layLogiciel img {
+    width: 275px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* ---- DEV ---- */
+
+/* Travel Agency */
+.banner-travelAgency {
+    background-image: url('images/developpeur/travel.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-travelAgency::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-travelAgency h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-travelAgency {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.travelAgency-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.travelAgency-pres img {
+    width: 700px;
+    height: auto;
+    border: 4px solid #328ad3;
+}
+
+.travelAgencypres-left p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.travelAgencypres-left h4{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.travelAgencypres-left ul{
+    padding-left: 40px;
+    text-align: justify;
+}
+
+.travelAgencypres-left li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* lien site internet */
+.travelAgencyLienSite {
+    display: flex;
+    justify-content: center;
+}
+
+.travelAgencyLienSite .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.travelAgencyLienSite .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* Technologies utilisées */
+#travelAgency-technologies h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.travelAgencyLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.travelAgencyLogiciel img {
+    width: 200px;
+}
+
+/* lien code */
+.travelAgencyLienCode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.travelAgencyLienCode .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.travelAgencyLienCode .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* Snake */
+.banner-snake {
+    background-image: url('images/developpeur/snake.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-snake::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-snake h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-snake {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.snake-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.snake-pres img {
+    width: 700px;
+}
+
+.snakepres-left p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.snakepres-left h4{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.snakepres-left ul{
+    padding-left: 40px;
+    text-align: justify;
+}
+
+.snakepres-left li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* lien site internet */
+.snakeLienSite {
+    display: flex;
+    justify-content: center;
+}
+
+.snakeLienSite .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.snakeLienSite .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* Technologies utilisées */
+#snake-technologies h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.snakeLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.snakeLogiciel img {
+    width: 200px;
+}
+
+/* lien code */
+.snakeLienCode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.snakeLienCode .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.snakeLienCode .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* top 5 acteurs */
+.banner-top5acteurs {
+    background-image: url('images/developpeur/acteur.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(138, 138, 138);
+    z-index: -1;
+}
+
+.banner-top5acteurs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-top5acteurs h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-top5acteurs {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.top5acteurs-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.top5acteurs-pres img {
+    width: 700px;
+}
+
+.top5acteurspres-left p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.top5acteurspres-left h4{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.top5acteurspres-left ul{
+    padding-left: 40px;
+    text-align: justify;
+}
+
+.top5acteurspres-left li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* lien site internet */
+.top5acteursLienSite {
+    display: flex;
+    justify-content: center;
+}
+
+.top5acteursLienSite .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.top5acteursLienSite .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* Technologies utilisées */
+#top5acteurs-technologies h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.top5acteursLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.top5acteursLogiciel img {
+    width: 200px;
+}
+
+/* lien code */
+.top5acteursLienCode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.top5acteursLienCode .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.top5acteursLienCode .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* burger */
+.banner-burger {
+    background-image: url('images/developpeur/burger.png'); 
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(32, 32, 32);
+    z-index: -1;
+}
+
+.banner-burger::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.banner-burger h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-burger {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(114, 114, 114);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.burger-pres {
+    padding: 40px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.burger-pres img {
+    width: 700px;
+}
+
+.burgerpres-left p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.burgerpres-left h4{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.burgerpres-left ul{
+    padding-left: 40px;
+    text-align: justify;
+}
+
+.burgerpres-left li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* representation */
+.burgerCode {
+    display: flex;
+    padding: 40px 250px;
+}
+
+.burgerCode .burger1 {
+    text-align: center;
+}
+
+.burgerCode .burger1 img {
+    width: 90%;
+}
+
+.burgerCode .burger1 p {
+    margin-bottom: 20px;
+
+}
+
+/* 2 */
+.burger-infos2 {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.burger-infos2 img {
+    width: 700px;
+    height: auto;
+}
+
+.burgerinfo2-left ul {
+    padding-left: 100px;
+}
+
+.burgerinfo2-left ul li {
+    font-size: 22px;
+}
+
+/* Technologies utilisées */
+#burger-technologies h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.burgerLogiciel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.burgerLogiciel img {
+    width: 200px;
+}
+
+/* lien code */
+.burgerLienCode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.burgerLienCode .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.burgerLienCode .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* EXP PRO */
+
+/* chromateq */
+.banner-chromateq {
+    background-image: url('images/expro/chromateq.png'); 
+    background-position: center;
+    background-size: 15%; 
+    background-repeat: no-repeat;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.banner-chromateq::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.banner-chromateq h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-chromateq {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.chromateq-pres {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.chromateq-pres img {
+    width: 600px;
+    height: auto;
+}
+
+.chromateqpres-left p {
+    text-align: justify;
+}
+
+.chromateqpres-left ul {
+    padding-left: 45px;
+}
+
+/* role */
+#chromateq-role h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.chromateq-role-texte ul {
+    padding-left: 50px; 
+}
+
+.chromateq-role-texte ul li {
+    margin: 30px 250px;
+    text-align: justify;
+}
+
+.chromateq-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* competences utilisées */
+#chromateq-competences h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.chromateq-competences-texte ul {
+    padding-left: 50px; 
+}
+
+.chromateq-competences-texte ul li {
+    margin: 10px 250px;
+    text-align: justify;
+}
+
+.chromateq-competences-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* logiciel */
+#chromateq-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.chromateqLogiciel {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+}
+
+.chromateqLogiciel li {
+    width: 15%;
+    text-align: justify;
+}
+
+.chromateqLogiciel img {
+    width: 300px;  
+    height: auto; 
+}
+
+
+/* lien chromateq */
+.LienChromateq {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.LienChromateq .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.LienChromateq .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------- */
+/* stc */
+.banner-stc {
+    background-image: url('images/expro/stc/stc_black.png'); 
+    background-position: center;
+    background-size: 30%; 
+    background-repeat: no-repeat;
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.banner-stc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.banner-stc h1 {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-stc {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* pres general */
+.stc-pres {
+    padding: 30px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.stc-pres img {
+    width: 600px;
+    height: auto;
+}
+
+.stcpres-left p {
+    text-align: justify;
+}
+
+.stcpres-left ul {
+    padding-left: 45px;
+}
+
+/* role */
+#stc-role h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.stc-role-texte ul {
+    padding-left: 50px; 
+}
+
+.stc-role-texte ul li {
+    margin: 30px 250px;
+    text-align: justify;
+}
+
+.stc-role-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* competences utilisées */
+#stc-competences h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.stc-competences-texte ul {
+    padding-left: 50px; 
+}
+
+.stc-competences-texte ul li {
+    margin: 10px 250px;
+    text-align: justify;
+}
+
+.stc-competences-texte p {
+    margin: 15px 250px;
+    text-align: justify;
+}
+
+/* logiciel */
+#stc-logiciel h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.stcLogiciel {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 65px; 
+}
+
+.stcLogiciel li {
+    width: 22%;
+    text-align: justify;
+}
+
+.stcLogiciel img {
+    width: 400px;  
+    height: auto; 
+}
+
+
+/* lien chromateq */
+.LienStc {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.LienStc .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.LienStc .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* EXP PERSO */
+
+/* 4l trophy */
+.banner-Trophy {
+    background-image: url('images/banner3.jfif'); 
+    background-size: cover;
+    background-position: center;
+    height: 250px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 200px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.banner-Trophy h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    color: rgba(255, 236, 236, 0.808);
+}
+
+
+.banner-Trophy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 120, 0.15);
+    z-index: -1;
+}
+
+/* pres general */
+.Trophy-pres {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.Trophy-pres img {
+    width: 400px;
+    height: auto;
+}
+
+.Trophypres-left p {
+    text-align: justify;
+}
+
+.Trophypres-left ul {
+    padding-left: 45px;
+}
+
+.Trophypres-left ul li {
+    padding-bottom: 15px;
+}
+
+/* lien trophy */
+.LienTrophy {
+    display: flex;
+    justify-content: center;
+}
+
+.LienTrophy .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.LienTrophy .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+/* role */
+#Trophy-role h2 {
+    padding: 20px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.Trophy-role-texte {
+    padding-left: 250px;
+    width: 87%;
+}
+
+.Trophy-role-texte ul {
+    padding: 5px 40px;  
+}
+
+.Trophy-role-texte ul li {
+    text-align: justify;
+}
+
+.Trophy-role-texte p {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.Trophy-sousTexte li {
+    margin-bottom: 8px;
+}
+
+.Trophy-sousTexte strong {
+    color: black;
+}
+
+
+
+/* competences utilisées */
+#trophyCompetences h2 {
+    padding: 40px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.trophy-competences {
+    padding: 30px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px; 
+}
+
+.trophyCompetences-right img {
+    width: 650px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trophyCompetences-left ul {
+    padding-left: 50px;
+    
+}
+
+.trophyCompetences-left ul li {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.trophyCompetences-left p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* logiciel */
+#trophy-logiciel h2 {
+    padding: 40px 0;
+    border-bottom: 4px solid #328ad3; 
+    padding-bottom: 5px; 
+    margin-bottom: 30px; 
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    color: #328ad3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.trophyLogiciel {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 75px; 
+}
+
+.trophyLogiciel img {
+    width: 300px;  
+    height: auto; 
+}
+
+
+/* lien site perso */
+.LienLesDesertmines {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.LienLesDesertmines .button-info {
+    margin: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.LienLesDesertmines .button-info:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* CONTACT */
+#contact {
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-btn h3 {
+    color: #328ad3;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+.contact-btn p {
+    margin-bottom: 60px;
+}
+
+.contact-btn a {
+    margin: 40px 0;
+    padding: 15px;
+    color: white;
+    background-color: #328ad3;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.contact-btn a:hover {
+    background-color: rgb(247, 247, 247);
+    color: #328ad3;
+    transition: transform 0.3s ease;
+    transform: scale(1.025);
+    border: 2px solid #328ad3;
+    border-radius: 3px;
+}
+
+
+.autre-contact h3 {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: #328ad3;
+}
+
+.autre-contact ul li {
+    list-style-type: none;
+    padding: 2px;
+    font-size: 20px;
+
+}
+
+

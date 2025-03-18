@@ -1,0 +1,183 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMA III</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design" class="active"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-arma">
+        <div>
+            <h1 class="h1">ARMA III</h1>
+            <h3 data-key="arma_titre_banner">Level Design – Narrative Design – Mission Design – Programmation</h3>
+        </div>
+    </section>
+
+     <!-- pres generale -->
+     <section id="arma">
+        <div class="arma-pres">
+            <div class="armapres-left">
+                <p data-key="arma_pres1">"Sauver le VIP" est une mission du jeu Arma III dans laquelle le joueur incarne un membre de l'OTAN, envoyé sur le terrain pour libérer et secourir un médecin chirurgien capturé.</p>
+                <p data-key="arma_pres2">Ce médecin avait été dépêché pour soigner un militaire blessé, mais il a été kidnappé par les forces ennemies, la FIA.</p>
+                <p data-key="arma_pres3">Le joueur, accompagné de son escouade, doit traverser différents villages pour retrouver le médecin en vie. La mission exige une approche discrète, où le joueur doit éviter d'ouvrir le feu autant que possible afin de ne pas attirer l'attention et protéger les civils. L’objectif est de récupérer le médecin tout en minimisant les pertes humaines et les risques de détection</p>
+            </div>
+            <div class="armapres-right">
+                <img src="images/arma3/armaPres.png" alt="arma">
+            </div>
+        </div>
+    </section>     
+
+    <!-- informations generale -->
+    <section id="arma">
+        <div>
+            <div class="arma-infos">
+                <div>
+                    <img src="images/arma3/armaPres1.png" alt="arma1">
+                </div>
+                <div>
+                    <ul>
+                        <li data-key="arma_pres_liste1"><strong>GENRE :</strong> FPS tactique, Infiltration</li>
+                        <li data-key="arma_pres_liste2"><strong>MÉCANIQUES :</strong> Tir, Tactique, Infiltration</li>
+                        <li><strong>PUBLIC :</strong> 16+</li>
+                        <li data-key="arma_pres_liste3"><strong>JOUEURS :</strong> 1</li>
+                        <li><strong>SUPPORT :</strong> PC</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arma-infos">
+                <div>
+                    <img src="images/arma3/armaPres2.png" alt="arma2">
+                </div>
+                <div>
+                    <ul>
+                        <li data-key="arma_pres_liste4"><strong>TAILLE D’ÉQUIPE :</strong> 1</li>
+                        <li data-key="arma_pres_liste5"><strong>DATE :</strong> Février 2021 – Mars 2021</li>
+                        <li data-key="arma_pres_liste6"><strong>DURÉE :</strong> 1 mois</li>
+                        <li data-key="arma_pres_liste7"><strong>MOTEUR DE JEU :</strong> Eden Editor (Moteur interne de Arma)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- role et responsabilite -->
+    <section id="armaRP">
+        <h2 data-key="titre_gdld_role">RÔLE ET RESPONSABILITÉ</h2>
+        <div>
+            <div class="arma-RP">
+                <div class="armaRP-left">
+                    <p><strong>DESIGN :</strong></p>
+                    <ul>
+                        <li>Mission Design Document</li>
+                        <li>Playtests</li>
+                    </ul>
+                    <br>
+                    <p data-key="arma_role_liste3"><strong>PROGRAMMATION :</strong></p>
+                    <ul>
+                        <li data-key="arma_role_liste4">Évenements scriptés</li>
+                        <li data-key="arma_role_liste5">Comportement IA</li>
+                    </ul>
+                </div>
+                <div class="armaRP-right">
+                    <img src="images/arma3/armaPres3.png" alt="arma3">
+                </div>
+            </div>
+        </div>
+        <div class="holdup-role-texte">
+            <p data-key="arma_role_texte1">Cette mission se déroule dans l'univers d'Arma III, avec pour objectif de créer une mission militaire réaliste et immersive pour le joueur.</p>
+            <p data-key="arma_role_texte2">Lors de la phase de conception, j'ai commencé par développer l'ensemble de la mission sur papier. J'ai rédigé un document de mission design, détaillant la localisation, la procédure à suivre et chaque zone, une par une. Pour cela, je me suis appuyé sur des ressources réelles, à travers des articles et des vidéos, en étudiant particulièrement les conditions de déploiement sur un territoire ennemi.</p>
+            <p data-key="arma_role_texte3">Une fois la conception théorique finalisée, un défi majeur s’est présenté : il fallait implémenter le contenu du document de design dans le moteur d'Arma III, l’Eden Editor. Etant un nouvel outil pour moi, il a fallu que je prenne le temps d’apprendre et de me familiariser avec ce moteur pour que je puisse traduire mes idées en éléments interactifs dans le jeu.</p>
+        </div>
+    </section>
+
+       <!-- lien proto -->
+    <section>
+        <div class="armaLienPrototype">
+            <a data-key="arma_button" class="button-info" href="https://docs.google.com/document/d/157Hbaemf8z5Wu-gChzljMuym2Sxa_BOnp75NeBdMH48/edit?usp=sharing" target="_blank">CLIQUEZ ICI POUR VOIR LE MISSION DESIGN DOCUMENT</a>
+        </div>
+    </section>
+
+
+    <!-- logiciel utilisés -->
+     <section id="arma-logiciel">
+        <h2 data-key="titre_gdld_role">LOGICIELS UTILISÉS</h2>
+        <div class="armaLogiciel">
+            <img src="images/logiciels/edenEditor.png" alt="edenEditor">
+            <img src="images/logiciels/adobephotoshop.png" alt="adobephotoshop">
+            <img src="images/logiciels/googledrive.png" alt="googledrive">
+        </div>
+     </section>
+
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,184 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYSIS II</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design" class="active"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-crysis">
+        <div>
+            <h1 class="h1">CRYSIS II</h1>
+            <h3 data-key="crysis_titre_banner">Level Design – Narrative Design – Programmation – 3D</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section id="crysis">
+        <div class="crysis-pres">
+            <div class="crysispres-left">
+                <p data-key="crysis_pres1">Cette mission se déroule dans l'univers de Crysis II, où le joueur incarne Jacob, un soldat solitaire envoyé à Manhattan pour désactiver le vaisseau ennemi des Ceph.</p>
+                <p data-key="crysis_pres2">Le vaisseau mère des Ceph est situé au cœur de Central Park. Le joueur doit se rendre sur place pour désactiver le vaisseau et, par conséquent, éliminer la menace des Ceph qui envahissent la ville.</p>
+                <p data-key="crysis_pres3">Pour accomplir sa mission, Jacob doit d'abord localiser et récupérer une arme sur son chemin, puis se précipiter vers Central Park aussi rapidement que possible, tout en affrontant des ennemis et des obstacles sur son parcours. Le temps est compté, et chaque seconde compte pour sauver la ville.</p>
+            </div>
+            <video controls class="crysispres-right">
+                <source src="videos/CRYSIS II - TRAILER.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture de vidéo.
+            </video>
+        </div>
+    </section>
+        
+    <!-- informations generale -->
+    <section id="crysis">
+        <div>
+            <div class="crysis-infos">
+                <div>
+                    <img src="images/crysis/crysis1.png" alt="crysis1">
+                </div>
+                <div>
+                    <ul>
+                        <li data-key="crysis_pres_liste1"><strong>GENRE :</strong> FPS</li>
+                        <li data-key="crysis_pres_liste2"><strong>MÉCANIQUES :</strong> Tir</li>
+                        <li><strong>PUBLIC :</strong> 16+</li>
+                        <li data-key="crysis_pres_liste3"><strong>JOUEURS :</strong> 1</li>
+                        <li><strong>SUPPORT :</strong> PC</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="crysis-infos">
+                <div>
+                    <img src="images/crysis/crysis.png" alt="crysis">
+                </div>
+                <div>
+                    <ul>
+                        <li data-key="crysis_pres_liste4"><strong>TAILLE D’ÉQUIPE :</strong> 1</li>
+                        <li data-key="crysis_pres_liste5"><strong>DATE :</strong> Décembre 2020 – Janvier 2021</li>
+                        <li data-key="crysis_pres_liste6"><strong>DURÉE :</strong> 1 mois</li>
+                        <li data-key="crysis_pres_liste7"><strong>MOTEUR DE JEU :</strong> Unreal Engine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- role et responsabilite -->
+    <section id="crysisRP">
+        <h2 data-key="titre_gdld_role">RÔLE ET RESPONSABILITÉ</h2>
+        <div>
+            <div class="crysis-RP">
+                <div class="crysisRP-left">
+                    <p><strong>DESIGN :</strong></p>
+                    <ul>
+                        <li>Level Design</li>
+                        <li data-key="crysis_role_liste1">Prototypage</li>
+                        <li>Playtests</li>
+                    </ul>
+                    <br>
+                    <p data-key="crysis_role_liste2"><strong>PROGRAMMATION :</strong></p>
+                    <ul>
+                        <li>Blueprint</li>
+                    </ul>
+                </div>
+                <div class="crysisRP-right">
+                    <img src="images/crysis/crysis2.png" alt="crysis2">
+                </div>
+            </div>
+        </div>
+        <div class="crysis-role-texte">
+            <p>Cette mission se déroule dans l'univers de Crysis II, et mon objectif était de concevoir une mission complète en prenant en compte les capacités physiques du personnage.</p>
+            <p>Lors de la phase de conception, j'ai commencé par élaborer l'ensemble de la mission et du level design sur papier. Cela comprenait la création de l'environnement, la disposition des bâtiments, des ennemis, ainsi que la localisation des objets interactifs, comme l'arme que le personnage doit récupérer au sol.</p>
+            <p>J'ai ensuite rédigé un document de level design détaillant le déroulement de la mission, les objectifs à atteindre et les éléments de gameplay qui guideraient l’expérience du joueur. Ce document a servi de référence pour toute la production de la mission.</p>
+            <p>Une fois cette phase terminée, j'ai implemnté le blockout, en m'assurant de respecter les proportions et la logique du niveau. Enfin, j'ai créé les modules nécessaires à l'environnement de production pour une intégration directe dans le moteur du jeu.</p>
+        </div>
+    </section>
+
+    <!-- lien proto -->
+    <section>
+        <div class="crysisLienPrototype">
+            <a class="button-info" href="https://docs.google.com/document/d/1S54A4oPZs7Dyt32k22XiUVjCU1IaXNt2-F2aBgpEfSM/edit?usp=sharing" target="_blank">CLIQUEZ ICI POUR VOIR LE LEVEL DESIGN DOCUMENT</a>
+        </div>
+    </section>
+
+    <!-- logiciel utilisés -->
+     <section id="crysis-logiciel">
+        <h2>LOGICIELS UTILISÉS</h2>
+        <div class="crysisLogiciel">
+            <img src="images/logiciels/ue.png" alt="Unreal">
+            <img src="images/logiciels/adobephotoshop.png" alt="adobephotoshop">
+            <img src="images/logiciels/3dsmax.png" alt="3dsmax">
+            <img src="images/logiciels/googledrive.png" alt="googledrive">
+        </div>
+     </section>
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

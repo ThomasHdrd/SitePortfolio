@@ -1,0 +1,129 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev" class="active"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-snake">
+        <div>
+            <h1 class="h1">SNAKE</h1>
+            <h3>HTML - CSS - JAVASCRIPT</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section>
+        <div class="snake-pres">
+            <div class="snakepres-left">
+                <p data-key="snake_pres1">Snake Game est une implémentation simple du jeu classique "Snake" en JavaScript. Le joueur contrôle un serpent qui doit manger de la nourriture pour grandir tout en évitant de se heurter à lui-même ou aux bords de l'écran.</p>
+                <br>
+                <h4 data-key="dev_fonctionnalites"><strong>FONCTIONNALITÉS PRINCIPALES :</strong></h4>
+                <ul>
+                    <li data-key="snake_pres_liste1"><strong>CONTRÔLE DU SERPENT :</strong> Utilisez les touches fléchées pour diriger le serpent.</li>
+                    <li data-key="snake_pres_liste2"><strong>GESTION DE LA CROISSANCE :</strong> Le serpent grandit à chaque fois qu'il mange de la nourriture.</li>
+                    <li data-key="snake_pres_liste3"><strong>SCORE EN DIRECT :</strong> Suivi du score en fonction de la nourriture consommée.</li>
+                </ul>
+            </div>
+            <div class="snakepres-right">
+                <img src="images/developpeur/snake.png" alt="snake">
+            </div>
+        </div>
+     </section>
+
+    <!-- lien site -->
+    <section>
+        <div class="snakeLienSite">
+            <a data-key="" class="button-info" href="" target="_blank">CLIQUEZ ICI POUR VOIR LE SITE INTERNET</a>
+        </div>
+    </section>
+
+    <!-- Technologies utilisées -->
+    <section id="snake-technologies">
+        <h2 data-key="">TECHNOLOGIES UTILISÉES</h2>
+        <div class="snakeLogiciel">
+            <img src="images/developpeur/logo/html.png" alt="html">
+            <img src="images/developpeur/logo/css.png" alt="css">
+            <img src="images/developpeur/logo/js.png" alt="js">
+        </div>
+    </section>
+
+    <!-- lien code -->
+    <section>
+        <div class="snakeLienCode">
+            <a class="button-info" href="https://github.com/ThomasHdrd/snake_game_JS" target="_blank">CLIQUEZ ICI POUR VOIR LE CODE SUR GITHUB</a>
+        </div>
+    </section>
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

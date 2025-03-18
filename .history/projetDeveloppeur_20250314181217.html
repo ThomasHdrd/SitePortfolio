@@ -1,0 +1,123 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETS DEVELOPPEUR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev" class="active"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+        
+   <!-- ux ui design -->
+   <section id="projetDeveloppeur">
+        <h2>FRONT-END</h2>
+        <div class="tableau-developpeur">
+            <!-- travel -->
+            <div class="developpeur">
+                <img src="images/developpeur/travel.png" alt="travel">
+                <h3>SITE DE VOYAGE</h3>
+                <h4>HTML - CSS | VS Code</h4>
+                <p>Apprentissage du HTML et du CSS en créant un site web pour le voyage.</p>
+                <a href="travelagency.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- snake -->
+            <div class="developpeur">
+                <img src="images/developpeur/snake.png" alt="snake">
+                <h3>JEU DU SERPENT</h3>
+                <h4>JAVASCRIPT - HTML - CSS | VS Code</h4>
+                <p>Apprentissage du JavaScript en recréant le fameux jeu Snake.</p>
+                <a href="snake.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- top 5 acteurs -->
+            <div class="developpeur">
+                <img src="images/developpeur/acteur.png" alt="acteur">
+                <h3>TOP 5 ACTEURS</h3>
+                <h4>JQUERY - HTML - CSS | VS Code</h4>
+                <p>Apprentissage du JQuery en créant un site web intéractif.</p>
+                <a href="top5acteurs.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- back end -->
+    <section id="projetDeveloppeur">
+        <h2>BACK-END</h2>
+        <div class="tableau-developpeur-back-end">
+            <div class="developpeur">
+                <img src="images/developpeur/burger.png" alt="burger">
+                <h3>BURGER CODE</h3>
+                <h4>PHP - SQL - HTML - CSS | VS Code</h4>
+                <p>Apprentissage du PHP et du SQL en créant un site web dynamique de réservation de burger.</p>
+                <a href="burger.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

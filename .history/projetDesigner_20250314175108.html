@@ -1,0 +1,211 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETS DESIGNER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design" class="active"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+     
+    <!-- ux ui design -->
+    <section id="projetDesigner">
+        <h2>UI & UX DESIGN</h2>
+        <div class="tableau-design">
+            <!-- cook better -->
+            <div class="uiux">
+                <img src="images/design/cookbetter.png" alt="cookbetter">
+                <h3>COOK BETTER</h3>
+                <h4>UI & UX Design | Figma</h4>
+                <p data-key="design_uiux_cookbetter" >Cook Better est un site web responsive conçu pour les passionnés de cuisine souhaitant apprendre à préparer des repas sains.</p>
+                <a href="cookbetter.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- movie pass -->
+            <div class="uiux">
+                <img src="images/design/moviepass.png" alt="moviepass">
+                <h3>MOVIE PASS</h3>
+                <h4>UI & UX Design | Figma</h4>
+                <p data-key="design_uiux_moviepass">Movie Pass est une application conçue pour répondre aux amoureux du cinéma qui souhaitent commander rapidement et facilement leur place de cinéma.</p>
+                <a href="moviepass.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- cat kitchen -->
+            <div class="uiux">
+                <img src="images/design/catkitchen.png" alt="catkitchen">
+                <h3>CAT KITCHEN</h3>
+                <h4>UI & UX Design | Adobe XD</h4>
+                <p data-key="design_uiux_catkitchen">Cats Kitchen est un site web responsive conçu pour répondre aux amoureux de chats qui souhaitent commander de la bonne nourriture saine pour leur chat.</p>
+                <a href="catkitchen.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- Among Us -->
+            <div class="uiux">
+                <img src="images/design/amongus.png" alt="amongus">
+                <h3>AMONG US</h3>
+                <h4>UI & UX Design | Adobe XD</h4>
+                <p data-key="design_uiux_amongus">Découvrez le projet UI/UX design de Among Us FPS, un exercice de refonte de l'interface utilisateur du jeu culte dans une perspective FPS.</p>
+                <a href="amongus.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- game et level design -->
+    <section id="projetGDLD">
+        <h2>GAME & LEVEL DESIGN</h2>
+        <div class="tableau-gdld">
+            <!-- lay -->
+            <div class="gdld">
+                <img src="images/design/lay.png" alt="lay">
+                <h3>LAY</h3>
+                <h4>Jeu 3D - Monde ouvert - Exploration - Puzzle - Jeu gratuit</h4>
+                <h4>— UNREAL ENGINE —</h4>
+                <p data-key="design_gdld_lay">Lay est un jeu d’exploration qui demande au joueur d’alterner entre marche, vole et résolution de puzzles afin de découvrir le monde secret qui l’entoure.</p>
+                <a href="lay.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- viking -->
+            <div class="gdld">
+                <img src="images/design/viking.png" alt="viking">
+                <h3>JARLASOGÜR</h3>
+                <h4>Jeu 3D - TPS - Exploration - Parcours</h4>
+                <h4>— UNREAL ENGINE —</h4>
+                <p data-key="design_gdld_viking">Jarlasogur est un jeu d’exploration à la troisième personne dans lequel il traverser différentes régions afin de sauver et de restaurer le monde détruit par le Ragnarok.</p>
+                <a href="viking.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- japon -->
+            <div class="gdld">
+                <img src="images/design/japon.png" alt="japon">
+                <h3>SEISHIN</h3>
+                <h4>Jeu 3D - TPS - Réflexion - Puzzle</h4>
+                <h4>— UNREAL ENGINE —</h4>
+                <p data-key="design_gdld_japan">Seishin est un jeu d’énigmes, de réflexion et d’angoisse dans un environnement clos, le tout dans un univers de temple japonais à la première personne.</p>
+                <a href="japon.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+        </div>
+
+        <div class="tableau-gdld">
+            <!-- unite -->
+            <div class="gdld">
+                <img src="images/design/unite.png" alt="unite">
+                <h3>UNITE</h3>
+                <h4>Jeu 2D - Coopétitif - Réflexe</h4>
+                <h4>— UNREAL ENGINE —</h4>
+                <p data-key="design_gdld_unite">Unite est un jeu coopétitif mettant l'accent sur de l’action, de la rapidité et des réflexes. Il a été réalisé pour l'événement Coeur de Ville en Lumière (CVL) à Montpellier. </p>
+                <a href="unite.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- hold up -->
+            <div class="gdld">
+                <img src="images/design/boardgame.png" alt="boardgame">
+                <h3>HOLD-UP</h3>
+                <h4>Jeu de société - Ruse - Stratégie</h4>
+                <h4>— JEU DE SOCIÉTÉ —</h4>
+                <p>Hold-up est un jeu de société dont le but est de collecter le plus d’argent possible. Les joueurs incarnent des voleurs et doivent trouver un moyen de collecter le plus d’argent.</p>
+                <a href="holdup.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- recolorful -->
+            <div class="gdld">
+                <img src="images/design/recolorful.png" alt="recolorful">
+                <h3>RE-COLORFUL</h3>
+                <h4>Game Jams - Jeu 2D - Action</h4>
+                <h4>— UNITY 3D —</h4>
+                <p>Re-Colorful est un jeu réalisé en game jams dont le thème était : "éco-action". Le joueur incarne une fleur afin de raviver de couleur et de rendre plus jolie une planète.</p>
+                <a href="recolorful.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+        </div>
+
+        <div class="tableau-gdld">
+            <!-- arma 3 -->
+            <div class="gdld">
+                <img src="images/design/arma3.png" alt="arma3">
+                <h3>ARMA III</h3>
+                <h4>Document level design & mission design</h4>
+                <h4>— EDEN EDITOR | MOTEUR INTERNE —</h4>
+                <p>"Sauver le VIP" est une mission du jeu Arma III dans laquelle le joueur incarne un des membres de l’OTAN envoyé sur le terrain pour libérer et secourir le médecin chirurgien.</p>
+                <a href="arma3.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- crysis 2 -->
+            <div class="gdld">
+                <img src="images/design/crysis2.png" alt="crysis2">
+                <h3>CRYSIS II</h3>
+                <h4>Document level design & mission design - Prototypage</h4>
+                <h4>— UNREAL EGINE —</h4>
+                <p>Mission de jeu se déroulant dans l’univers de Crysis II, où le joueur incarne Jacob. En étant que le seul sur place, il est envoyé dans un quartier de Manhattan pour désactiver le vaisseau ennemi, les « Ceph ».</p>
+                <a href="crysis2.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+            <!-- car project -->
+            <div class="gdld">
+                <img src="images/design/car.png" alt="car">
+                <h3>CAR PROJECT</h3>
+                <h4>Level Design - Prototypage</h4>
+                <h4>— UNREAL ENGINE —</h4>
+                <p>Ce projet est un projet personnel réalisé lors de mon temps libre dans lequel j’ai créé un level design de jeu de voiture. Ce jeu contient plusieurs biomes, quatre exactement. Un dans la ville, deux sur un circuit et un autre dans le désert.</p>
+                <a href="car.html" class="button-info">PLUS D'INFOS</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

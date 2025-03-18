@@ -1,0 +1,179 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE PASS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design" class="active"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-moviepass">
+        <div>
+            <h1 class="h1">MOVIE PASS</h1>
+            <h3 data-key="moviepass_banner">Design Thinking – Design Basses Fidélité – Design Haute Fidélité</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section>
+        <div class="moviepass-pres">
+            <div class="moviepasspres-left">
+                <p data-key="moviepass_pres">Movie Pass est une application conçue pour répondre aux amoureux du cinéma qui souhaitent commander rapidement et facilement leur place de cinéma.</p>
+                <br>
+                <ul>
+                    <li data-key="moviepass_pres_projet"><strong>PROJET :</strong> Application mobile</li>
+                    <li data-key="moviepass_pres_role"><strong>RÔLE :</strong> UI & UX Designer</li>
+                    <li data-key="moviepass_pres_date"><strong>DATE :</strong> Janvier 2023 – Avril 2023</li>
+                    <li data-key="moviepass_pres_duree"><strong>DURÉE :</strong>  3 mois</li>
+                </ul>
+                <br>
+                <ul>
+                    <li><strong  data-key="moviepass_pres_reponsabilite">RESPONSABILITÉ :</strong> 
+                        <ul>
+                            <li class="texte-decale">Design Thinking</li>
+                            <li class="texte-decale" data-key="moviepass_pres_reponsabilite1">Design Basse Fidélité</li>
+                            <li class="texte-decale" data-key="moviepass_pres_reponsabilite2">Design Haute Fidélité</li>
+                            <li class="texte-decale" data-key="moviepass_pres_reponsabilite3">Tests utilisateurs</li>
+                            <li class="texte-decale" data-key="moviepass_pres_reponsabilite4">Audit concurrentiel</li>
+                        </ul>
+                </ul>
+            </div>
+            <div class="moviepasspres-right">
+                <img src="images/moviepass/resultatfinal.png" alt="resultatfinal">
+            </div>
+        </div>
+    </section>
+        
+    <!-- persona -->
+    <section id="moviepasspres-persona">
+        <h2>PERSONAS</h2>
+        <div class="moviepasspres-img">
+            <img src="images/moviepass/persona1.png" alt="persona1">
+            <img src="images/moviepass/persona2.png" alt="persona2">
+        </div>
+    </section> 
+
+    <!-- wireframe -->
+    <section id="moviepass-wireframe">
+        <h2>WIREFRAME</h2>
+        <div class="moviepassWireframe">
+            <img class="wireframe" src="images/moviepass/wireframe.png" alt="wireframepapier">
+            <ul>
+                <li>Hiérarchie de l’information</li>
+                <li>Menu de navigation</li>
+                <li>Contenu de la page d’accueil </li>
+                <li>Contenu de la page de réservation</li>
+            </ul>
+        </div>
+    </section> 
+
+    <!-- basse fidelité -->
+    <section id="moviepass-bassefid">
+        <h2>PROTOTYPE BASSE FIDÉLITÉ</h2>
+        <div class="moviepassBassefid">
+            <img class="lowfid" src="images/moviepass/lowfid.png" alt="lowfid">
+        </div>
+    </section> 
+
+    <!-- haute fidelité -->
+    <section id="moviepass-hautefid">
+        <h2>PROTOTYPE HAUTE FIDÉLITÉ</h2>
+        <div class="moviepassHautefid">
+            <img class="highfid" src="images/moviepass/highfidtotal.png" alt="highfid">
+        </div>
+        <!-- tel -->
+        <div class="moviepassHautefid-tel">
+            <img class="highfidtel" src="images/moviepass/highfid1.png" alt="highfid-tel1">
+            <img class="highfidtel" src="images/moviepass/highfid2.png" alt="highfid-tel2">
+            <img class="highfidtel" src="images/moviepass/highfid3.png" alt="highfid-tel3">
+        </div>
+    </section> 
+
+        <!-- lien proto -->
+        <div class="MoviePassLienPrototype">
+            <a class="button-info" href="https://www.figma.com/design/zjpYbQloqZbqdnNYpSTzdf/MoviePass?node-id=34-36&p=f" target="_blank">CLIQUEZ ICI POUR VOIR LE PROTOTYPE FINAL</a>
+        </div>
+    </section>
+
+    <!-- logiciel utilisés -->
+     <section id="cookbetter-logiciel">
+        <h2>LOGICIELS UTILISÉS</h2>
+        <div class="cookbetterLogiciel">
+            <img src="images/logiciels/figma.png" alt="figma">
+            <img src="images/logiciels/adobephotoshop.png" alt="adobephotoshop">
+            <img src="images/logiciels/googledrive.png" alt="googledrive">
+            <img src="images/logiciels/miro.png" alt="miro">
+        </div>
+     </section>
+
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

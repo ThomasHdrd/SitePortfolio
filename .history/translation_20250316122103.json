@@ -1,0 +1,675 @@
+{
+        "button": {
+            "fr": "PLUS D'INFOS",
+            "en": "MORE INFOS"
+        },
+    
+    "_COMMENT1" : "-------------------------------- HEADER ----------------------------------------",
+
+        "menu_job": {
+            "fr": "DESIGNER | DÉVELOPPEUR WEB",
+            "en": "DESIGNER | WEB DEVELOPER"
+        },
+        "menu_about": {
+            "fr": "A PROPOS",
+            "en": "ABOUT ME"
+        },
+        "menu_portfolio": {
+            "fr": "PORTFOLIO ▾",
+            "en": "PORTFOLIO ▾"
+        },
+        "menu_exp_pro": {
+            "fr": "EXPERIENCES PROFESSIONNELLES",
+            "en": "WORK EXPERIENCES"
+        },
+        "menu_projects_design": {
+            "fr": "PROJETS DESIGNER",
+            "en": "DESIGN PROJECTS"
+        },
+        "menu_projects_dev": {
+            "fr": "PROJETS DEVELOPPEUR",
+            "en": "DEVELOPER PROJECTS"
+        },
+        "menu_projects_personal": {
+            "fr": "PROJETS PERSONNELS",
+            "en": "PERSONAL PROJECTS"
+        },
+        "menu_contact": {
+            "fr": "CONTACT",
+            "en": "CONTACT"
+        },
+        "menu_cv": {
+            "fr": "MON CV",
+            "en": "MY RESUME"
+        },
+
+    "_COMMENT2" : "-------------------------------- FOOTER ----------------------------------------",
+    "footer": {
+        "fr": "©2025, Thomas Houdard, Tous droits réservés",
+        "en": "©2025, Thomas Houdard, All rights reserved"
+    },
+
+
+    "_COMMENT3" : "-------------------------------- INDEX.HTML ----------------------------------------",
+
+        "presentation_1": {
+            "fr": "Bonjour et bienvenue ! Je m’appelle Thomas, passionné par la création numérique et spécialisé dans le Design UI/UX et le Développement Web.",
+            "en": "Hello and welcome! My name is Thomas, and I am passionate about digital creation, specializing in UI/UX Design and Web Development."
+        },
+        "presentation_2": {
+            "fr": "Mon parcours a débuté dans le Game/Level Design et l’UX/UI Design, où j’ai appris à concevoir des expériences interactives immersives. Au fil du temps, j’ai élargi mes compétences au développement web, afin d’allier créativité et expertise technique.",
+            "en": "My journey began in Game/Level Design and UX/UI Design, where I learned to craft immersive interactive experiences. Over time, I expanded my skills to web development, combining creativity with technical expertise."
+        },
+        "presentation_3": {
+            "fr": "Mon objectif ? Créer des interfaces à la fois intuitives, fonctionnelles et esthétiques qui offrent une expérience utilisateur engageante tout en valorisant l'identité des marques. Chaque projet est pour moi une opportunité d’innover, d’expérimenter et d’apporter des solutions digitales adaptées aux besoins du marché.",
+            "en": "My goal? To design intuitive, functional, and visually appealing interfaces that provide engaging user experiences while enhancing brand identity. Every project is an opportunity for me to innovate, experiment, and develop digital solutions tailored to market needs."
+        },
+        "presentation_4": {
+            "fr": "À travers mon portfolio, vous découvrirez des réalisations variées illustrant mon adaptabilité, ma vision centrée utilisateur et mon engagement envers l'excellence.",
+            "en": "Through my portfolio, you will discover a variety of projects that showcase my adaptability, user-centered vision, and commitment to excellence"
+        },
+        "presentation_5": {
+            "fr": "Toujours en quête de nouveaux défis, je suis prêt à collaborer avec des équipes dynamiques et à contribuer à des projets ambitieux. N’hésitez pas à me contacter pour discuter de vos idées et donner vie à vos concepts !",
+            "en": "Always looking for new challenges, I am eager to collaborate with dynamic teams and contribute to ambitious projects. Feel free to contact me to discuss your ideas and bring your most creative concepts to life!"
+        },
+
+
+        "titre_video": {
+            "fr": "MON CV VIDÉO",
+            "en": "MY VIDEO RESUME"
+        },
+        "titre_competences_tech": {
+            "fr": "MES COMPÉTENCES TECHNIQUES",
+            "en": "MY TECHNICAL SKILLS"
+        },
+        "titre_competences_relation": {
+            "fr": "MES COMPÉTENCES RELATIONNELLES ET COMPORTEMENTALES",
+            "en": "MY SOFT SKILLS"
+        }, 
+        "titre_accueil_langues": {
+            "fr": "MES LANGUES",
+            "en": "MY LANGUAGES"
+        }, 
+        "titre_accueil_logiciels": {
+            "fr": "MES OUTILS & LOGICIELS",
+            "en": "MY TOOLS & SOFTWARE"
+        },
+        "titre_accueil_passions": {
+            "fr": "MES PASSIONS",
+            "en": "MY HOBBIES"
+        },
+        "titre_accueil_certifications": {
+            "fr": "MES CERTIFICATIONS",
+            "en": "MY CERTIFICATIONS"
+        },
+
+
+        "competences_tech_uiux": {
+            "fr": "Audit Concurrentiel",
+            "en": "Competitive Analysis"
+        },
+        "competences_tech_uiux2": {
+            "fr": "Design d’interaction",
+            "en": "Interaction Design"
+        },
+
+        "competences_tech_gdld": {
+            "fr": "Design itératif",
+            "en": "Iterative Design"
+        },
+        "competences_tech_gdld2": {
+            "fr": "Prototypage",
+            "en": "Prototyping"
+        },
+
+        "competences_tech_annexe": {
+            "fr": "Intelligence Artificielle",
+            "en": "Artificial Intelligence"
+        },
+        "competences_tech_annexe2": {
+            "fr": "Gestion de projet",
+            "en": "Project Management"
+        }, 
+
+
+        "competences_relation_equipe": {
+            "fr": "ESPRIT D'ÉQUIPE",
+            "en": "TEAM SPIRIT"
+        },
+        "competences_relation_creatif": {
+            "fr": "CRÉATIVITÉ",
+            "en": "CREATIVITY"
+        },
+        "competences_relation_polyvalent": {
+            "fr": "POLYVALENCE",
+            "en": "VERSATILITY"
+        }, 
+        "competences_relation_curieux": {
+            "fr": "CURIOSITÉ",
+            "en": "CURIOSITY"
+        },
+
+
+        "langue_fr": {
+            "fr": "FRANÇAIS",
+            "en": "FRENCH"
+        },
+        "langue_en": {
+            "fr": "ANGLAIS",
+            "en": "ENGLISH"
+        }, 
+
+
+        "passions_voyages": {
+            "fr": "VOYAGES",
+            "en": "TRAVELS"
+        }, 
+        "passions_entrepeunariat": {
+            "fr": "ENTREPRENEURIAT",
+            "en": "ENTREPRENEURSHIP"
+        }, 
+        "passions_lecture": {
+            "fr": "LECTURE",
+            "en": "READING"
+        }, 
+        "passions_jeuxvideos": {
+            "fr": "JEUX VIDÉO",
+            "en": "VIDEO GAMES"
+        },
+
+
+    "_COMMENT4" : "-------------------------------- PORFOLIO ----------------------------------------",
+        "titre_exp_pro": {
+            "fr": "EXPÉRIENCES PROFESSIONNELLES",
+            "en": "PROFESSIONAL EXPERIENCES"
+        },
+        "exp_pro_chromateq": {
+            "fr": "TECHNICIEN SUPPORT CLIENT",
+            "en": "CUSTOMER SUPPORT TECHNICIAN"
+        },
+        "exp_pro_stc": {
+            "fr": "DEVELOPPEUR WEB ANGULAR",
+            "en": "ANGULAR DEVELOPER WEB"
+        },
+
+
+        "design_uiux_cookbetter": {
+            "fr": "Cook Better est un site web responsive conçu pour les passionnés de cuisine souhaitant apprendre à préparer des repas sains.",
+            "en": "Cook Better is a responsive website designed for cooking enthusiasts who want to learn how to prepare healthy meals."
+        },
+        "design_uiux_moviepass": {
+            "fr": "Movie Pass est une application conçue pour répondre aux amoureux du cinéma qui souhaitent commander rapidement et facilement leur place de cinéma.",
+            "en": "Movie Pass is an application designed for film lovers who want to order their cinema tickets quickly and easily."
+        },
+        "design_uiux_catkitchen": {
+            "fr": "Cats Kitchen est un site web responsive conçu pour répondre aux amoureux de chats qui souhaitent commander de la bonne nourriture saine pour leur chat.",
+            "en": "Cats Kitchen is a responsive website designed for cat lovers who want to order good, healthy food for their cat."
+        },
+        "design_uiux_amongus": {
+            "fr": "Découvrez le projet UI/UX design de Among Us FPS, un exercice de refonte de l'interface utilisateur du jeu culte dans une perspective FPS.",
+            "en": "Discover the UI/UX design project for Among Us FPS, an exercise in reworking the user interface of the cult game."
+        },
+
+        "design_gdld_lay_title": {
+            "fr": "Jeu 3D - Monde ouvert - Exploration - Puzzle - Jeu gratuit",
+            "en": "3D game - Open world - Exploration - Puzzle - Free game"
+        },
+        "design_gdld_lay": {
+            "fr": "Découvrez le projet UI/UX design de Among Us FPS, un exercice de refonte de l'interface utilisateur du jeu culte dans une perspective FPS.",
+            "en": "Discover the UI/UX design project for Among Us FPS, an exercise in reworking the user interface of the cult game from an FPS perspective."
+        },       
+
+        "design_gdld_viking_title": {
+            "fr": "Jeu 3D - TPS - Exploration - Parcours",
+            "en": "3D Game - TPS - Exploration - Trails"
+        },
+        "design_gdld_viking": {
+            "fr": "Jarlasogur est un jeu d’exploration à la troisième personne dans lequel il traverser différentes régions afin de sauver et de restaurer le monde détruit par le Ragnarok.",
+            "en": "Jarlasogur is a third-person exploration game in which you cross different regions to save and restore the world destroyed by Ragnarok."
+        },
+
+        "design_gdld_japan_title": {
+            "fr": "Jeu 3D - TPS - Réflexion - Puzzle",
+            "en": "3D Game - TPS - Reflexion - Puzzle"
+        },
+        "design_gdld_japan": {
+            "fr": "Seishin est un jeu d’énigmes, de réflexion et d’angoisse dans un environnement clos, le tout dans un univers de temple japonais à la première personne.",
+            "en": "Seishin is a game of puzzles, reflection and anxiety in an enclosed environment, all set in a first-person Japanese temple world."
+        },
+
+        "design_gdld_unite_title": {
+            "fr": "Jeu 2D - Coopétitif - Réflexe",
+            "en": "2D Game - Cooperative - Reflex"
+        },
+        "design_gdld_unite": {
+            "fr": "Unite est un jeu coopétitif mettant l'accent sur de l’action, de la rapidité et des réflexes. Il a été réalisé pour l'événement Coeur de Ville en Lumière (CVL) à Montpellier.",
+            "en": "Unite is a cooperative game focusing on action, speed and reflexes. It was created for the Coeur de Ville en Lumière (CVL) event in Montpellier."
+        },
+
+        "design_gdld_holdup_title": {
+            "fr": "Jeu de société - Ruse - Stratégie",
+            "en": "Board game - Guile - Strategy"
+        },
+        "design_gdld_holdup_title2": {
+            "fr": "— JEU DE SOCIÉTÉ —",
+            "en": "— BOARD GAME —"
+        },
+        "design_gdld_holdup": {
+            "fr": "Hold-up est un jeu de société dont le but est de collecter le plus d’argent possible. Les joueurs incarnent des voleurs et doivent trouver un moyen de collecter le plus d’argent.",
+            "en": "Hold-up is a board game where the aim is to collect as much money as possible. Players take on the role of thieves and must find a way to collect as much money as possible."
+        },
+
+        "design_gdld_recolorful_title": {
+            "fr": "Game Jams - Jeu 2D - Action",
+            "en": "Game Jams - 2D Game - Action"
+        },
+        "design_gdld_recolorful": {
+            "fr": "Re-Colorful est un jeu réalisé en game jams dont le thème était : 'éco-action'. Le joueur incarne une fleur afin de raviver de couleur et de rendre plus jolie une planète.",
+            "en": "Re-Colorful is a game created in game jams on the theme of ‘eco-action’. The player takes on the role of a flower in order to revive the colour of a planet and make it more beautiful."
+        },
+
+        "design_gdld_arma3_title": {
+            "fr": "Document level design & mission design",
+            "en": "Level design & mission design document"
+        },
+        "design_gdld_arma3_title2": {
+            "fr": "— EDEN EDITOR | MOTEUR INTERNE —",
+            "en": "— EDEN EDITOR | INTERNAL ENGINE —"
+        },
+        "design_gdld_arma3": {
+            "fr": "'Sauver le VIP' est une mission du jeu Arma III dans laquelle le joueur incarne un des membres de l’OTAN envoyé sur le terrain pour libérer et secourir le médecin chirurgien.",
+            "en": "'Saving the VIP' is a mission in the game Arma III in which the player takes on the role of one of the members of NATO sent into the field to free and rescue the surgeon."
+        },
+
+        "design_gdld_crysis2_title": {
+            "fr": "Document level design & mission design - Prototypage",
+            "en": "Level design & mission design document - Prototyping"
+        },
+        "design_gdld_crysis2": {
+            "fr": "Mission de jeu se déroulant dans l’univers de Crysis II, où le joueur incarne Jacob. En étant que le seul sur place, il est envoyé dans un quartier de Manhattan pour désactiver le vaisseau ennemi, les 'Ceph'.",
+            "en": "A game mission set in the world of Crysis II, where the player takes on the role of Jacob. As the only one there, he is sent to a district of Manhattan to disable the enemy vessel, the ‘Ceph’."
+        },
+
+        "design_gdld_car_title": {
+            "fr": "Level Design - Prototypage",
+            "en": "Level design - Prototyping"
+        },
+        "design_gdld_car": {
+            "fr": "Ce projet est un projet personnel réalisé lors de mon temps libre dans lequel j’ai créé un level design de jeu de voiture. Ce jeu contient plusieurs biomes, quatre exactement. Un dans la ville, deux sur un circuit et un autre dans le désert.",
+            "en": "This is a personal project I've done in my spare time in which I've created a level design for a car game. This game contains several biomes, four to be exact. One in the city, two on a circuit and one in the desert."
+        },
+
+
+
+        "dev_travelAgency_title": {
+            "fr": "SITE DE VOYAGE",
+            "en": "TRAVEL WEBSITE"
+        },
+        "dev_travelAgency": {
+            "fr": "Apprentissage du HTML et du CSS en créant un site web pour le voyage.",
+            "en": "Learn HTML and CSS by creating a website for the trip."
+        },
+
+        "dev_snake_title": {
+            "fr": "JEU DU SERPENT",
+            "en": "SNAKE GAME"
+        },
+        "dev_snake": {
+            "fr": "Apprentissage du JavaScript en recréant le fameux jeu Snake.",
+            "en": "Learn JavaScript by recreating the famous game Snake."
+        },
+
+        "dev_top5acteurs_title": {
+            "fr": "TOP 5 ACTEURS",
+            "en": "TOP 5 ACTORS"
+        },
+        "dev_top5acteurs": {
+            "fr": "Apprentissage du JQuery en créant un site web intéractif.",
+            "en": "Learn JQuery by creating an interactive websit."
+        },
+
+        "dev_burger": {
+            "fr": "Apprentissage du PHP et du SQL en créant un site web dynamique de réservation de burger.",
+            "en": "Learning PHP and SQL by creating a dynamic burger booking website."
+        },
+
+
+
+
+    "_COMMENT5" : "------------------------------- EXP PRO - CHROMATEQ & STC ----------------------------------------",
+        "titre_role": {
+            "fr": "MON RÔLE",
+            "en": "MY FUNCTION"
+        }, 
+        "titre_technos": {
+            "fr": "COMPÉTENCES ET TECHNOLOGIES UTILISÉES",
+            "en": "SKILLS AND TECHNOLOGIES USED"
+        }, 
+        "titre_logiciels": {
+            "fr": "LOGICIELS UTILISÉS",
+            "en": "SOFTWARE USED"
+        }, 
+
+    
+        "chromateq_pres1": {
+            "fr": "Chromateq est une entreprise spécialisée dans le développement de solutions technologiques pour des industries et répond aux besoins des professionnels de l'éclairage DMX du monde entier.",
+            "en": "Chromateq specialises in the development of technological solutions for industries and meets the needs of DMX lighting professionals worldwide."
+        }, 
+        "chromateq_pres2": {
+            "fr": "Développeur, fabricant et fournisseur mondialement reconnu pour ses solutions de contrôle d'éclairage stables, efficaces et rentables. Par conséquent, les solutions Chromateq se retrouvent dans des projets d'éclairage architectural, commercial, de divertissement et de scène partout dans le monde.",
+            "en": "Chromateq is a world-renowned developer, manufacturer and supplier of stable, efficient and cost-effective lighting control solutions. As a result, Chromateq solutions can be found in architectural, commercial, entertainment and stage lighting projects around the world."
+        }, 
+
+        "chromateq_pres_role": {
+            "fr": "<strong>RÔLE :</strong> Technicien Support Client",
+            "en": "<strong>FUNCTION :</strong> Customer Support Technician"
+        },
+        "chromateq_pres_date": {
+            "fr": "<strong>DATE :</strong> Juillet 2023 – Janvier 2024",
+            "en": "<strong>DATE :</strong> July 2023 – January 2024"
+        },
+        "chromateq_pres_duree": {
+            "fr": "<strong>DURÉE :</strong> 6 mois",
+            "en": "<strong>DURATION :</strong> 6 months"        
+        },
+
+
+        "chromateq_role_texte": {
+            "fr": "En tant que Technicien Support chez Chromateq, j'ai eu l'opportunité de contribuer à plusieurs aspects techniques et commerciaux, en assurant un service client de haute qualité et en soutenant la maintenance et la gestion des produits de l’entreprise. Voici les principales responsabilités que j’ai prises en charge pendant mon expérience :",
+            "en": "As a Support Technician at Chromateq, I've had the opportunity to contribute to a number of technical and commercial aspects, ensuring high-quality customer service and supporting the maintenance and management of the company's products. Here are the main responsibilities I took on during my time there :"
+        }, 
+        "chromateq_role_liste1": {
+            "fr": "<strong>Tests Fonctionnels : </strong> Avant leur mise en vente, j'ai effectué des tests rigoureux pour analyser et résoudre tout dysfonctionnement des produits, assurant ainsi leur bon fonctionnement et leur fiabilité avant d'atteindre les clients.",
+            "en": "<strong>Functional testing : </strong> Before they went on sale, I carried out rigorous tests to analyse and resolve any malfunctions in the products, ensuring that they functioned properly and were reliable before reaching customers."
+        },
+        "chromateq_role_liste2": {
+            "fr": "<strong>Support Technique : </strong> J’ai fourni une assistance technique à distance aux clients en identifiant et en diagnostiquant les probl.èmes techniques liés aux produits, tout en proposant des solutions adaptées pour résoudre ces problèmes.",
+            "en": "<strong>Technical Support : </strong> I provided remote technical assistance to customers, identifying and diagnosing technical problems with the products and proposing appropriate solutions to resolve these problems."
+        },
+        "chromateq_role_liste3": {
+            "fr": "<strong>Création de Documentation Technique : </strong> J'ai contribué à la création et à la mise à jour de la documentation technique, en détaillant les instructions d’utilisation, d’installation et de maintenance des produits. Cela a permis aux clients de mieux comprendre le fonctionnement des solutions proposées.",
+            "en": "<strong>Creation of Technical Documentation : </strong>  I contributed to the creation and updating of technical documentation, detailing instructions for the use, installation and maintenance of products. This gave customers a better understanding of how the proposed solutions worked."
+        },
+        "chromateq_role_liste4": {
+            "fr": "<strong>Réparation et Maintenance des Produits : </strong> Lorsque des problèmes techniques surviennent, j'ai participé à la réparation et à la maintenance des produits, en intervenant pour remplacer les pièces défectueuses et en assurant un bon fonctionnement du produit après la réparation.",
+            "en": "<strong>Product repair and maintenance : </strong>  When technical problems arise, I'm involved in product repair and maintenance, replacing faulty parts and ensuring that the product works properly after repair."
+        },
+        "chromateq_role_liste5": {
+           "fr": "<strong>Formation Client : </strong> En plus de l'assistance technique, j’ai animé des sessions de formation pour les clients et utilisateurs, leur expliquant comment utiliser au mieux les produits et tirer parti de toutes leurs fonctionnalités.",
+            "en": "<strong>Customer training : </strong> As well as providing technical support, I ran training sessions for customers and users, explaining how best to use the products and take advantage of all their features."
+        },
+
+
+        "chromateq_techno_texte": {
+            "fr": "Pendant mon temps chez Chromateq, j’ai eu l’occasion de développer et de perfectionner mes compétences dans plusieurs domaines clés, notamment :",
+            "en": "During my time at Chromateq, I had the opportunity to develop and improve my skills in a number of key areas, including :"
+        }, 
+        "chromateq_techno_liste1": {
+            "fr": "<strong>Tests fonctionnels et validation produit</strong>",
+            "en": "<strong>Functional testing and product validation</strong>"
+        }, 
+        "chromateq_techno_liste2": {
+            "fr": "<strong>Support technique et gestion de la relation client</strong>",
+            "en": "<strong>Technical support and customer relations</strong>"
+        }, 
+        "chromateq_techno_liste3": {
+            "fr": "<strong>Rédaction de documentation technique</strong>",
+            "en": "<strong>Writing technical documentation</strong>"
+        }, 
+        "chromateq_techno_liste4": {
+            "fr": "<strong>Maintenance de produits électroniques et logiciels</strong>",
+            "en": "<strong>Electronics and software maintenance</strong>"
+        }, 
+        "chromateq_techno_liste5": {
+            "fr": "<strong>Formation et support à l’utilisation des produits</strong>",
+            "en": "<strong>Training and support for product use</strong> "
+        }, 
+
+
+        "chromateq_logiciel_texte1": {
+            "fr": "Utilisé principalement pour l'assistance technique à distance, ce logiciel permet d'interagir directement avec les systèmes des clients, ce qui est essentiel pour le dépannage et la gestion des problèmes à distance.",
+            "en": "Used primarily for remote technical support, this software enables direct interaction with customers' systems, which is essential for remote troubleshooting and problem management."
+        }, 
+        "chromateq_logiciel_texte2": {
+            "fr": "Logiciel spécifique à l'entreprise, utilisé pour le contrôle des systèmes DMX (éclairage, effets spéciaux, etc.), utilisé dans le cadre de gestion des équipements lumineux ou audio-visuels.",
+            "en": "Company-specific software used to control DMX systems (lighting, special effects, etc.), used to manage lighting or audio-visual equipment."
+        }, 
+        "chromateq_logiciel_texte3": {
+            "fr": "Autre logiciel spécifique à l'entreprise, utilisé dans l'analyse et la gestion des équipements d'éclairage et de projection pour une gestion avancée des installations en environnement professionnel ou événementiel.",
+            "en": "Another company-specific software package, used to analyse and manage lighting and projection equipment for advanced facility management in professional or event environments."
+        }, 
+        "chromateq_logiciel_texte4": {
+            "fr": "Outil de transfert de fichiers FTP très couramment utilisé dans les environnements professionnels pour uploader ou télécharger des fichiers entre un serveur distant et une machine locale.",
+            "en": "FTP file transfer tool widely used in professional environments to upload or download files between a remote server and a local machine."
+        },
+
+        "chromateq_button": {
+            "fr": "CLIQUEZ ICI POUR VOIR LE SITE DE L'ENTREPRISE",
+            "en": "CLICK HERE TO SEE THE COMPANY WEBSITE"
+        },
+
+    
+
+        "stc_pres1": {
+            "fr": "Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l'intégration et la maintenance de solutions logicielles pour les industries utilisant des technologies avancées. Elle répond aux besoins des professionnels en matière de développement web et de solutions logicielles personnalisées.",
+            "en": "Sud Trading Company (STC) specialises in the development, integration and maintenance of software solutions for advanced technology industries. It meets the needs of professionals for web development and custom software solutions."
+        }, 
+
+        "stc_pres_role": {
+            "fr": "<strong>RÔLE :</strong> Développeur Front-End Angular",
+            "en": "<strong>FUNCTION :</strong> Front-End Angular Developer"
+        },
+        "stc_pres_date": {
+            "fr": "<strong>DATE :</strong> Décembre 2024",
+            "en": "<strong>DATE :</strong> Décember 2024"
+        },
+        "stc_pres_duree": {
+            "fr": "<strong>DURÉE :</strong> 1 mois",
+            "en": "<strong>DURATION :</strong> 1 month"        
+        },
+
+
+        "stc_role_texte": {
+            "fr": "En tant que Développeur Front-End Angular chez Sud Trading Company, j'ai eu l'opportunité de participer au développement d'une application web dynamique, en mettant l'accent sur l'amélioration de l'interface utilisateur et des performances. Voici les principales responsabilités que j’ai prises en charge pendant mon expérience :",
+            "en": "As a Front-End Angular Developer at Sud Trading Company, I had the opportunity to take part in the development of a dynamic web application, focusing on improving the user interface and performance. Here are the main responsibilities I took on during my experience:"
+        }, 
+        "stc_role_liste1": {
+            "fr": "<strong>Participation au déploiement et à la maintenance : </strong> J'ai contribué au déploiement de nouvelles fonctionnalités sur l'application Angular, en veillant à ce que l'application soit fonctionnelle et performante.",
+            "en": "<strong>Participation in deployment and maintenance : </strong> I contributed to the deployment of new functionalities on the Angular application, ensuring that the application was functional and efficient."
+        },
+        "stc_role_liste2": {
+            "fr": "<strong>Contribution à la modification de composants front-end : </strong> J'ai été impliqué dans la modification et l'amélioration de divers composants de l'application, afin d'optimiser l'expérience utilisateur et de corriger les anomalies mineures.",
+            "en": "<strong>Contribution to the modification of front-end components : </strong> I was involved in modifying and improving various components of the application, in order to optimise the user experience and correct minor anomalies."
+        },
+        "stc_role_liste3": {
+            "fr": "<strong>Assistance technique à l’équipe de développement : </strong> J’ai fourni un support technique à l’équipe de développement en effectuant des tests fonctionnels et en documentant les corrections nécessaires pour assurer une meilleure stabilité de l'application. ",
+            "en": "<strong>Technical support for the development team : </strong> I provided technical support to the development team by carrying out functional tests and documenting the corrections needed to ensure greater stability of the application. "
+        },
+
+
+        "stc_techno_texte": {
+            "fr": "Pendant mon temps chez Sud Trading Company, j'ai pu renforcer mes compétences et mon expertise dans les domaines suivants :",
+            "en": "During my time at Sud Trading Company, I was able to strengthen my skills and expertise in the following areas:"
+        }, 
+        "stc_techno_liste1": {
+            "fr": "<strong>Développement front-end avec Angular</strong>",
+            "en": "<strong>Angular front-end development</strong>"
+        }, 
+        "stc_techno_liste2": {
+            "fr": "<strong>Amélioration de l'interface utilisateur</strong>",
+            "en": "<strong>Enhanced user interface</strong>"
+        }, 
+        "stc_techno_liste3": {
+            "fr": "<strong>Tests fonctionnels et débogage</strong>",
+            "en": "<strong>Functional testing and debugging</strong>"
+        }, 
+        "stc_techno_liste4": {
+            "fr": "<strong>Déploiement et maintenance d'applications web</strong>",
+            "en": "<strong>Web application deployment and maintenance</strong>"
+        }, 
+        "stc_techno_liste5": {
+            "fr": "<strong>Collaboration et travail d’équipe en environnement Agile</strong>",
+            "en": "<strong>Collaboration and teamwork in an Agile environment</strong> "
+        }, 
+
+
+        "stc_logiciel_texte1": {
+            "fr": "Framework principal pour le développement d'applications web dynamiques et performantes.",
+            "en": "Main framework for developing dynamic, high-performance web applications."
+        }, 
+        "stc_logiciel_texte2": {
+            "fr": "Éditeur de code utilisé pour le développement, la gestion du code et la collaboration avec l’équipe de développement.",
+            "en": "Code editor used for development, code management and collaboration with the development team."
+        }, 
+        "stc_logiciel_texte3": {
+            "fr": "Utilisé pour créer des environnements virtuels permettant de tester et déployer l'application dans des configurations diverses sans perturber l'environnement principal.",
+            "en": "Used to create virtual environments enabling the application to be tested and deployed in various configurations without disturbing the main environment."
+        }, 
+
+
+        "stc_button": {
+            "fr": "CLIQUEZ ICI POUR VOIR LE SITE DE L'ENTREPRISE",
+            "en": "CLICK HERE TO SEE THE COMPANY WEBSITE"
+        }, 
+
+
+
+    "_COMMENT6" : "------------------------------- UI & UX DESIGN - COOK BETTER & MOVIE PASS & CAT KITCHEN & AMONG US ----------------------------------------",
+        "titre_proto_bassefid": {
+            "fr": "PROTOTYPE BASSE FIDÉLITÉ",
+            "en": "LOW-FIDELITY PROTOTYPE"
+        }, 
+        "titre_proto_hautefid": {
+            "fr": "PROTOTYPE HAUTE FIDÉLITÉ",
+            "en": "HIGH-FIDELITY PROTOTYPE"
+        }, 
+        "titre_proto_bassefid_responsive": {
+            "fr": "RESPONSIVE WEB DESIGN - PROTOTYPE BASSE FIDÉLITÉ",
+            "en": "RESPONSIVE WEB DESIGN - LOW-FIDELITY PROTOTYPE"
+        }, 
+        "titre_proto_hautefid_responsive": {
+            "fr": "RESPONSIVE WEB DESIGN - PROTOTYPE HAUTE FIDÉLITÉ",
+            "en": "RESPONSIVE WEB DESIGN - HIGH-FIDELITY PROTOTYPE"
+        }, 
+        "titre_lociels_utilises": {
+            "fr": "LOGICIELS UTILISÉS",
+            "en": "SOFTWARE USED"
+        },
+        "button_proto": {
+            "fr": "CLIQUEZ ICI POUR VOIR LE PROTOTYPE FINAL",
+            "en": "CLICK HERE TO SEE THE FINAL PROTOTYPE"
+        },
+
+    
+        "cookbetter_banner": {
+            "fr": "Design Thinking – Design Basses Fidélité – Design Haute Fidélité – Responsive Web Design",
+            "en": "Design Thinking - Low Fidelity Design - High Fidelity Design - Responsive Web Design"
+        }, 
+        "cookbetter_pres": {
+            "fr": "Cook Better est un responsive web conçu pour répondre aux amoureux de la cuisine qui souhaitent apprendre à cuisiner des repas sains.",
+            "en": "Cook Better is a responsive web site designed for cooking enthusiasts who want to learn how to cook healthy meals."
+        }, 
+        "cookbetter_pres_projet": {
+            "fr": "<strong>PROJET :</strong> Site web responsive",
+            "en": "<strong>PROJECT :</strong> responsive website"        
+        },
+        "cookbetter_pres_role": {
+            "fr": "<strong>RÔLE :</strong> UI & UX Designer",
+            "en": "<strong>FUNCTION :</strong> UI & UX Designer"
+        },
+        "cookbetter_pres_date": {
+            "fr": "<strong>DATE :</strong>  Janvier 2023 – Avril 2023",
+            "en": "<strong>DATE :</strong> January 2023 - April 2023"
+        },
+        "cookbetter_pres_duree": {
+            "fr": "<strong>DURÉE :</strong> 3 mois",
+            "en": "<strong>DURATION :</strong> 3 months"        
+        },
+        
+        "cookbetter_pres_reponsabilite": {
+            "fr": "<strong>RESPONSABILITÉ :</strong>",
+            "en": "<strong>RESPONSIBILITY :</strong>"  
+        }, 
+        "cookbetter_pres_reponsabilite1": {
+            "fr": "Design Basse Fidélité",
+            "en": "Low-fidelity design"  
+        }, 
+        "cookbetter_pres_reponsabilite2": {
+            "fr": "Design Haute Fidélité",
+            "en": "High-Fidelity Design"
+        }, 
+        "cookbetter_pres_reponsabilite3": {
+            "fr": "Tests utilisateurs",
+            "en": "User testing"
+        }, 
+        "cookbetter_pres_reponsabilite4": {
+            "fr": "Audit concurrentiel",
+            "en": "Competitive audit"
+        },
+
+
+        
+        "moviepass_banner": {
+            "fr": "Design Thinking – Design Basses Fidélité – Design Haute Fidélité",
+            "en": "Design Thinking - Low Fidelity Design - High Fidelity Design"
+        }, 
+        "moviepass_pres": {
+            "fr": "Movie Pass est une application conçue pour répondre aux amoureux du cinéma qui souhaitent commander rapidement et facilement leur place de cinéma.",
+            "en": "Movie Pass is an application designed for film lovers who want to order their cinema tickets quickly and easily."
+        }, 
+        "moviepass_pres_projet": {
+            "fr": "<strong>PROJET :</strong> Application mobile",
+            "en": "<strong>PROJECT :</strong> Mobile application"        
+        },
+        "moviepass_pres_role": {
+            "fr": "<strong>RÔLE :</strong> UI & UX Designer",
+            "en": "<strong>FUNCTION :</strong> UI & UX Designer"
+        },
+        "moviepass_pres_date": {
+            "fr": "<strong>DATE :</strong>  Janvier 2023 – Avril 2023",
+            "en": "<strong>DATE :</strong> January 2023 - April 2023"
+        },
+        "moviepass_pres_duree": {
+            "fr": "<strong>DURÉE :</strong> 3 mois",
+            "en": "<strong>DURATION :</strong> 3 months"        
+        },
+        
+        "moviepass_pres_reponsabilite": {
+            "fr": "<strong>RESPONSABILITÉ :</strong>",
+            "en": "<strong>RESPONSIBILITY :</strong>"  
+        }, 
+        "moviepass_pres_reponsabilite1": {
+            "fr": "Design Basse Fidélité",
+            "en": "Low-fidelity design"  
+        }, 
+        "moviepass_pres_reponsabilite2": {
+            "fr": "Design Haute Fidélité",
+            "en": "High-Fidelity Design"
+        }, 
+        "moviepass_pres_reponsabilite3": {
+            "fr": "Tests utilisateurs",
+            "en": "User testing"
+        }, 
+        "moviepass_pres_reponsabilite4": {
+            "fr": "Audit concurrentiel",
+            "en": "Competitive audit"
+        }, 
+
+        "moviepass_wireframe_liste1": {
+            "fr": "Hiérarchie de l’information",
+            "en": "Information hierarchy"
+        }, 
+        "moviepass_wireframe_liste2": {
+            "fr": "Menu de navigation",
+            "en": "Navigation menu"
+        }, 
+        "moviepass_wireframe_liste3": {
+            "fr": "Contenu de la page d’accueil",
+            "en": "Home page content"
+        }, 
+        "moviepass_wireframe_liste4": {
+            "fr": "Contenu de la page de réservation",
+            "en": "Contents of the booking page"
+        }
+
+}

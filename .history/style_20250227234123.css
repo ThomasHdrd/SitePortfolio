@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+p{
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+li {
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #328ad3;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bold;
+    color: #328ad3; 
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* HEADER */
+nav {
+    background-color: #328ad3;
+
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.menu h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    align-items: center; 
+}
+
+.menu a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    font-family: 'Open Sans';
+}
+
+.menu li a:hover {
+    background-color: rgb(247, 247, 247);
+    color: #1a5696;
+    border-bottom: 4px solid #1a5696; 
+}
+
+.menu .active {
+    border-bottom: 4px solid #1a5696; 
+    color: #1a5696;
+    background-color: rgb(247, 247, 247);
+}
+
+.menu .moncv {
+    background-color: rgb(212, 0, 0);
+}
+
+.menu .moncv:hover {
+    color: rgb(212, 0, 0);
+    border-bottom: 4px solid rgb(212, 0, 0); 
+}
+
+.name {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding-right: 600px;
+}
+
+.name p{
+    color: white;
+    text-align: center;
+}
+
+/* menu déroulant */
+.sousMenu .sousMenu-content {
+    display: none;
+    position: absolute;
+    background-color: #3491dd;
+    min-width: 200px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.sousMenu:hover .sousMenu-content {
+    display: block;
+}
+
+.sousMenu-content a {
+    color: rgb(247, 247, 247);
+    padding: 15px;
+    background-color: #3491dd;
+}
+
+.sousMenu-content a:hover {
+    color: #3491dd;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* Footer */
+footer {
+    background-color: #328ad3; 
+    color: white;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.footer-bottom {
+    background-color: #1a5696a8; 
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; 
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;   
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* A PROPOS */
+.presentation {
+    padding: 25px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.presentation img {
+    width: 350px;
+    height: auto;
+}
+
+
+.text-right p {
+    text-align: justify;
+}
+
+/* cv video */
+.cv-video {
+    text-align: center;
+}
+
+.cv-video h2 {
+    padding: 30px 0;
+    border-bottom: 5px solid #328ad3; 
+    padding-bottom: 10px; 
+    margin-bottom: 30px; 
+    width: 75%;
+}
+
+video {
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+}

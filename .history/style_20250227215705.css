@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+p{
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+li {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #886632;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bold;
+    color: #2b6cb0; 
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* HEADER */
+nav {
+    background-color: #328ad3;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+.menu li a:hover {
+    background-color: rgb(247, 247, 247);
+    color: #3491dd;
+    border-bottom: 4px solid #1a5696; 
+}
+
+
+.menu .active {
+    border-bottom: 4px solid #2b6cb0; 
+    color: #3491dd;
+    background-color: #1a5696;
+}
+
+.menu .active:hover {
+    background-color: rgb(247, 247, 247);
+    color: #447fbe;
+    border-bottom: 4px solid #1a5696; 
+}
+
+.menu .moncv {
+    background-color: rgb(212, 0, 0);
+}
+
+.menu .moncv:hover {
+    color: rgb(212, 0, 0);
+    border-bottom: 4px solid #9b1414; 
+}
+
+
+/* menu déroulant */
+.sousMenu .sousMenu-content {
+    display: none;
+    position: absolute;
+    background-color: #3491dd;
+    min-width: 200px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.sousMenu:hover .sousMenu-content {
+    display: block;
+}
+
+.sousMenu-content a {
+    color: rgb(247, 247, 247);
+    padding: 10px;
+    background-color: #3491dd;
+}
+
+.sousMenu-content a:hover {
+    color: #3491dd;
+}

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+p{
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+li {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #886632;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bold;
+    color: #886632 
+}
+
+/* ----------------------------------------------------------------------- */
+/* ACCUEIL */

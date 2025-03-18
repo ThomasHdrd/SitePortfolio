@@ -1,0 +1,184 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEISHIN</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design" class="active"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- banniere -->
+    <section class="banner-japan">
+        <div>
+            <h1 class="h1">SEISHIN</h1>
+            <h3 data-key="japan_titre_banner">Game Design – Level Design – Prototype – QA Tester – Modélisation</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section id="japan">
+        <div class="japan-pres">
+            <div class="japanpres-left">
+                <p data-key="japan_pres1">Seishin est un jeu d'énigmes et de réflexion, mêlé d'angoisse, se déroulant dans un environnement clos inspiré de l'univers japonais, le tout en vue à la première personne.</p>
+                <p data-key="japan_pres2">Le protagoniste doit fuir et s'échapper d’un temple japonais en résolvant une série d'énigmes, toutes basées sur des éléments musicaux. Les énigmes deviennent de plus en plus complexes en fonction du temps imparti, imposant au joueur une pression croissante.</p>
+                <p data-key="japan_pres3">Le joueur incarne un explorateur désireux de découvrir les mystères d’un temple japonais ancien. Pour réussir à s'échapper, il devra résoudre trois énigmes distinctes. Chaque énigme résolue permet au joueur de progresser tout en découvrant des aspects de la culture japonaise.</p>
+                <p data-key="japan_pres4">Les énigmes exigent non seulement de comprendre les mécanismes mais aussi les traditions et la philosophie japonaises. Ce jeu constitue ainsi une expérience captivante qui pousse à la réflexion, tout en permettant d'explorer de manière ludique cette culture.
+                </p>
+            </div>
+            <video controls class="japanpres-right">
+                <source src="videos/SEISHIN TRAILER FINAL - JAPAN GAME.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture de vidéo.
+            </video>
+        </div>
+    </section>
+        
+    <!-- informations generale -->
+    <section id="japan">
+        <div>
+            <div class="japan-infos">
+                <div>
+                    <img src="images/japan/japan1.png" alt="japanpres1">
+                </div>
+                <div>
+                    <ul>
+                        <li data-key="japan_titre_banner"><strong>GENRE :</strong> TPS, Réflexion, Puzzle</li>
+                        <li data-key="japan_titre_banner"><strong>MÉCANIQUES :</strong> Intéractions, Culture japonaises</li>
+                        <li data-key="japan_titre_banner"><strong>PUBLIC :</strong> 10+</li>
+                        <li data-key="japan_titre_banner"><strong>JOUEURS :</strong> 1</li>
+                        <li data-key="japan_titre_banner"><strong>SUPPORT :</strong> PC</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="japan-infos">
+                <div>
+                    <img src="images/japan/japan2.png" alt="japanpres2">
+                </div>
+                <div>
+                    <ul>
+                        <li data-key="japan_titre_banner"><strong>TAILLE D’ÉQUIPE :</strong> 5</li>
+                        <li data-key="japan_titre_banner"><strong>DATE :</strong> Novembre 2019 – Décembre 2019</li>
+                        <li data-key="japan_titre_banner"><strong>DURÉE :</strong> 1 mois</li>
+                        <li data-key="japan_titre_banner"><strong>MOTEUR DE JEU :</strong> Unreal Engine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- role et responsabilite -->
+    <section id="japanRP">
+        <h2 data-key="titre_gdld_role">RÔLE ET RESPONSABILITÉ</h2>
+        <div>
+            <div class="japan-RP">
+                <div class="japanRP-left">
+                    <p><strong>DESIGN :</strong></p>
+                    <ul>
+                        <li>Game Design</li>
+                        <li>Level Design</li>
+                        <li>Prototypage</li>
+                        <li>Playtests</li>
+                        <li>Signes & Feedbacks</li>
+                    </ul>
+                    <br>
+                    <p><strong>GRAPHISME :</strong></p>
+                    <ul>
+                        <li>Modélisation</li>
+                        <li>Texturing</li>
+                    </ul>
+                </div>
+                <div class="japanRP-right">
+                    <img src="images/japan/japan3.png" alt="japanpres3">
+                </div>
+            </div>
+        </div>
+        <div class="japan-role-texte">
+            <p>Seishin est un projet de groupe dans lequel j'ai occupé les rôles de Game & Level Designer, ainsi que Graphiste. J'ai rédigé le document de Game Design et contribué à la création de plusieurs blockouts des niveaux.</p>
+            <p>Lors de la phase de conception, ma mission principale était de définir le concept du jeu et de développer certaines parties du gameplay. J'ai collaboré étroitement avec l’équipe pour affiner les mécaniques de jeu et concevoir une expérience captivante.</p>
+            <p>En production, j’ai commencé par réaliser des blockouts pour les niveaux, avant de programmer puis d’implémentater des assets et des gameplays elements en utilisant du Blueprint. Ceci m’a permis d'intégrer les fonctionnalités du jeu de manière fluide.</p>
+            <p>Enfin, j’ai effectué des playtests réguliers, corrigé les bugs et ajusté le workflow du joueur pour garantir une expérience de jeu optimale et sans accroc.</p>
+        </div>
+    </section>
+
+
+    <!-- logiciel utilisés -->
+     <section id="japan-logiciel">
+        <h2 data-key="titre_gdld_logiciel">LOGICIELS UTILISÉS</h2>
+        <div class="japanLogiciel">
+            <img src="images/logiciels/ue.png" alt="Unreal">
+            <img src="images/logiciels/adobephotoshop.png" alt="adobephotoshop">
+            <img src="images/logiciels/3dsmax.png" alt="3dsmax">
+            <img src="images/logiciels/googledrive.png" alt="googledrive">
+        </div>
+     </section>
+
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

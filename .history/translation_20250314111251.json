@@ -1,0 +1,61 @@
+{
+    "_COMMENT1" : "HEADER",
+
+        "menu_about": {
+            "fr": "A PROPOS",
+            "en": "ABOUT ME"
+        },
+        "menu_portfolio": {
+            "fr": "PORTFOLIO ▾",
+            "en": "PORTFOLIO ▾"
+        },
+        "menu_exp_pro": {
+            "fr": "EXPERIENCES PROFESSIONNELLES",
+            "en": "WORK EXPERIENCE"
+        },
+        "menu_projects_design": {
+            "fr": "PROJETS DESIGNER",
+            "en": "DESIGN PROJECTS"
+        },
+        "menu_projects_dev": {
+            "fr": "PROJETS DEVELOPPEUR",
+            "en": "DEVELOPER PROJECTS"
+        },
+        "menu_projects_personal": {
+            "fr": "PROJETS PERSONNELS",
+            "en": "PERSONAL PROJECTS"
+        },
+        "menu_contact": {
+            "fr": "CONTACT",
+            "en": "CONTACT"
+        },
+        "menu_cv": {
+            "fr": "MON CV",
+            "en": "MY RESUME"
+        },
+
+
+
+        "_COMMENT2" : "ACCUEIL",
+
+        "presentation_1": {
+            "fr": "Bonjour et bienvenue ! Je m’appelle Thomas, passionné par la création numérique et spécialisé dans le Design UI/UX et le Développement Web.",
+            "en": "Hello and welcome! My name is Thomas, and I am passionate about digital creation, specializing in UI/UX Design and Web Development."
+        },
+        "presentation_2": {
+            "fr": "Mon parcours a débuté dans le Game/Level Design et l’UX/UI Design, où j’ai appris à concevoir des expériences interactives immersives. Au fil du temps, j’ai élargi mes compétences au développement web, afin d’allier créativité et expertise technique.",
+            "en": "My journey began in Game/Level Design and UX/UI Design, where I learned to craft immersive interactive experiences. Over time, I expanded my skills to web development, combining creativity with technical expertise."
+        },
+        "presentation_3": {
+            "fr": "Mon objectif ? Créer des interfaces à la fois intuitives, fonctionnelles et esthétiques qui offrent une expérience utilisateur engageante tout en valorisant l'identité des marques. Chaque projet est pour moi une opportunité d’innover, d’expérimenter et d’apporter des solutions digitales adaptées aux besoins du marché.",
+            "en": "My goal? To design intuitive, functional, and visually appealing interfaces that provide engaging user experiences while enhancing brand identity. Every project is an opportunity for me to innovate, experiment, and develop digital solutions tailored to market needs."
+        },
+        "presentation_4": {
+            "fr": "À travers mon portfolio, vous découvrirez des réalisations variées illustrant mon adaptabilité, ma vision centrée utilisateur et mon engagement envers l'excellence.",
+            "en": "Through my portfolio, you will discover a variety of projects that showcase my adaptability, user-centered vision, and commitment to excellence."
+        },
+        "presentation_5": {
+            "fr": "Toujours en quête de nouveaux défis, je suis prêt à collaborer avec des équipes dynamiques et à contribuer à des projets ambitieux. N’hésitez pas à me contacter pour discuter de vos idées et donner vie à vos concepts !",
+            "en": "Always looking for new challenges, I am eager to collaborate with dynamic teams and contribute to ambitious projects. Feel free to contact me to discuss your ideas and bring your concepts to life! "
+        }
+}

@@ -1,0 +1,131 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP 5 DES MEILLEURS ACTEURS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev" class="active"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+
+    <!-- banniere -->
+    <section class="banner-top5acteurs">
+        <div>
+            <h1 class="h1">TOP 5 DES MEILLEURS ACTEURS</h1>
+            <h3>HTML - CSS - JAVASCRIPT</h3>
+        </div>
+    </section>
+
+    <!-- pres generale -->
+    <section>
+        <div class="top5acteurs-pres">
+            <div class="top5acteurspres-left">
+                <p data-key="acteurs_pres1">Top 5 Meilleurs Acteurs est un projet web interactif qui présente un classement des cinq meilleurs acteurs selon une sélection personnelle. Les utilisateurs peuvent consulter des informations sur chaque acteur ainsi que les films dans lesquels ils se sont illustrés.</p>
+                <br>
+                <h4 data-key="dev_fonctionnalites"><strong>FONCTIONNALITÉS PRINCIPALES :</strong></h4>
+                <ul>
+                    <li data-key="acteurs_liste1"><strong>CLASSEMENT DYNAMIQUE :</strong> Affichage des 5 meilleurs acteurs avec des détails de 3 de leurs films les plus connus.</li>
+                    <li data-key="acteurs_liste2"><strong>FICHES ACTEURS :</strong> Informations détaillées sur chaque acteur et ses films emblématiques.</li>
+                    <li data-key="acteurs_liste3"><strong>INTERFACE INTERACTIVE :</strong> Navigation fluide et responsive pour une expérience utilisateur agréable.</li>
+                </ul>
+            </div>
+            <div class="top5acteurspres-right">
+                <img src="images/developpeur/acteur.png" alt="acteur">
+            </div>
+        </div>
+     </section>
+
+    <!-- lien site -->
+    <section>
+        <div class="top5acteursLienSite">
+            <a data-key="dev_button1" class="button-info" href="" target="_blank">CLIQUEZ ICI POUR VOIR LE SITE INTERNET</a>
+        </div>
+    </section>
+
+    <!-- Technologies utilisées -->
+    <section id="top5acteurs-technologies">
+        <h2 data-key="dev_fonctionnalites">TECHNOLOGIES UTILISÉES</h2>
+        <div class="top5acteursLogiciel">
+            <img src="images/developpeur/logo/html.png" alt="html">
+            <img src="images/developpeur/logo/css.png" alt="css">
+            <img src="images/developpeur/logo/js.png" alt="js">
+            <img src="images/developpeur/logo/jquery.png" alt="jquery">
+        </div>
+    </section>
+
+    <!-- lien code -->
+    <section>
+        <div class="top5acteursLienCode">
+            <a data-key="dev_button2" class="button-info" href="https://github.com/ThomasHdrd/Top5MeilleursActeurs" target="_blank">CLIQUEZ ICI POUR VOIR LE CODE SUR GITHUB</a>
+        </div>
+    </section>
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>
