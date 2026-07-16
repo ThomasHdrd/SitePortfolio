@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pack Design — moderne, intuitif, orienté objectifs</title>
+
+  <!-- Typo proche du style TH : Inter (ajuste si besoin) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- menu (repris tel quel de ton code pour garder la même structure) -->
+  <nav>
+    <div class="name">
+      <h1>Thomas HOUDARD</h1>
+      <p data-key="menu_job"></p>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html" data-key="menu_about"></a></li>
+      <li class="sousMenu">
+        <a href="#" data-key="menu_portfolio"> ▾</a>
+        <div class="sousMenu-content">
+          <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+          <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+          <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+          <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+        </div>
+      </li>
+      <li><a href="contact.html" data-key="menu_contact"></a></li>
+      <li><a class="travailleravecmoi" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+
+      <!-- sélecteur langue identique -->
+      <li class="lang-mobile">
+        <div class="lang-dropdown">
+          <button id="lang-button">
+            <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue">
+            <span id="current-lang-text">FR</span>
+            <span id="dropdown-arrow">▾</span>
+          </button>
+          <ul id="lang-list">
+            <li id="lang-fr"><img src="images/langSelect_FR.png" alt="FR"> FR</li>
+            <li id="lang-en"><img src="images/langSelect_EN.png" alt="EN"> EN</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">UI/UX Pack</p>
+      <h2>Pack Design — <span>moderne</span>, <span>intuitif</span>, <span>orienté objectifs</span></h2>
+      <p class="lead">
+        Je conçois une expérience claire et efficace pour présenter votre activité et atteindre vos objectifs
+        (demande de devis, prise de contact, ventes). Version en ligne, prête pour l’intégration.
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge">Secteurs variés</span>
+        <span class="badge">Formule adaptable</span>
+        <span class="badge">3–5 jours ouvrés</span>
+        <span class="badge badge-dark">100% sur-mesure</span>
+      </div>
+
+      <div class="hero-cta">
+        <div class="price">À partir de <strong>290€</strong></div>
+        <a class="btn primary" href="#contact">Demander un devis</a>
+        <a class="btn ghost" href="#inclus">Voir ce qui est inclus</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- POUR QUI / OBJECTIFS -->
+  <section class="grid-2 container">
+    <div class="card">
+      <h3>Pour qui est ce pack ?</h3>
+      <ul class="list">
+        <li>Indépendants & PME qui veulent une présence pro et claire.</li>
+        <li>Startups qui lancent un produit et ont besoin d’une vitrine rapide, propre, efficace.</li>
+        <li>Entreprises qui souhaitent moderniser leur identité digitale.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Objectifs traités</h3>
+      <ul class="list">
+        <li>Clarifier l’offre & la proposition de valeur.</li>
+        <li>Créer confiance & capter l’attention du visiteur.</li>
+        <li>Optimiser l’action : prise de contact, devis, achat, inscription.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INCLUS / METHODO -->
+  <section id="inclus" class="container inclus">
+    <div class="card">
+      <h3>Ce qui est inclus dans le pack</h3>
+      <ul class="bullets">
+        <li>Livrables haute-fidélité (Figma) — desktop & mobile.</li>
+        <li>Intégration légère (pages statiques, contenus, composants clé).</li>
+        <li>Sections PRÊTES à l’emploi pour navigation.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Méthodo</h3>
+      <ul class="bullets">
+        <li>Brief express & cadrage des objectifs.</li>
+        <li>Structure rapide & arborescence.</li>
+        <li>Design UI net, précis & lisible.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MODULES + ESTIMATION -->
+  <section class="container modules">
+    <div class="modules-grid">
+      <div class="card">
+        <h3>Modules optionnels</h3>
+        <h4>Expérience & UI</h4>
+        <ul class="bullets compact">
+          <li>Prototype interactif Figma détaillé — <strong>+100€</strong></li>
+          <li>Dark mode — <strong>+60€</strong></li>
+          <li>Design system léger (UI kit) — <strong>+150€</strong></li>
+          <li>Sections / pages supplémentaires — <strong>+45€ / page</strong></li>
+        </ul>
+        <h4>Identité & assets</h4>
+        <ul class="bullets compact">
+          <li>Pack d’icônes (20 custom) — <strong>+90€</strong></li>
+          <li>Logo simple / refonte légère — <strong>+250€</strong></li>
+          <li>Illustrations (sélection ou retouches) — <strong>+60€</strong></li>
+        </ul>
+      </div>
+
+      <div class="card estimate">
+        <h3>Estimation rapide</h3>
+        <form class="estimator" onsubmit="return false;">
+          <label class="tick"><input type="checkbox" data-price="100" checked> Prototype interactif</label>
+          <label class="tick"><input type="checkbox" data-price="60"> Dark mode</label>
+          <label class="tick"><input type="checkbox" data-price="150"> Design system léger</label>
+          <label class="tick"><input type="number" min="0" value="0" data-mult="45"> Sections/pages supp. (×45€)</label>
+
+          <div class="total">
+            Base <span>290€</span>
+          </div>
+          <div class="grand-total">
+            Total estimé <strong id="total-eur">390€</strong>
+          </div>
+          <a class="btn primary" href="#contact">Demander un devis</a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSUS -->
+  <section class="container process">
+    <h3>Processus simple et rapide</h3>
+    <div class="steps">
+      <div class="step">
+        <span class="step-n">01</span>
+        <h4>Cadre</h4>
+        <p>Un échange de 20–30 min pour comprendre vos objectifs, audience et contenus disponibles.</p>
+      </div>
+      <div class="step">
+        <span class="step-n">02</span>
+        <h4>Structure</h4>
+        <p>Hiérarchie des informations et validation rapide de l’arborescence pour valider le parcours.</p>
+      </div>
+      <div class="step">
+        <span class="step-n">03</span>
+        <h4>Design</h4>
+        <p>Création de maquettes haute fidélité (desktop & mobile) selon votre identité.</p>
+      </div>
+      <div class="step">
+        <span class="step-n">04</span>
+        <h4>Livraison</h4>
+        <p>Dossier de livraison Figma, exports & handoff, prêt pour passage à l’intégration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container faq">
+    <h3>Questions fréquentes</h3>
+    <details>
+      <summary>Combien de temps dure un projet standard ?</summary>
+      <p>3 à 5 jours ouvrés pour une vitrine ; cela dépend du nombre de pages et options.</p>
+    </details>
+    <details>
+      <summary>Comment sont livrés les fichiers ?</summary>
+      <p>Figma (source) + exports optimisés (SVG/PNG) + guide rapide pour la suite.</p>
+    </details>
+    <details>
+      <summary>Pouvez-vous aussi développer le site ?</summary>
+      <p>Oui, en option (pack intégration). Web statique ou intégration dans votre stack.</p>
+    </details>
+    <details>
+      <summary>Y a-t-il un acompte ?</summary>
+      <p>Un acompte de 30% est demandé pour lancer le projet.</p>
+    </details>
+  </section>
+
+  <!-- CTA CONTACT -->
+  <section id="contact" class="container contact-cta">
+    <h3>Parlons de votre projet</h3>
+    <p>Expliquez vos objectifs en quelques lignes et obtenez une proposition adaptée.</p>
+    <div class="cta-actions">
+      <a class="btn primary" href="contact.html">Contact direct</a>
+      <a class="btn ghost" href="TravaillerAvecMoi.html">Formulaire détaillé</a>
+    </div>
+  </section>
+
+  <!-- footer (identique) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+        <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+        <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- mini calc total -->
+  <script>
+    (function () {
+      const base = 290;
+      const form = document.querySelector('.estimator');
+      const out = document.getElementById('total-eur');
+      if (!form || !out) return;
+
+      function compute() {
+        let total = base;
+        form.querySelectorAll('input[type="checkbox"]').forEach(i => {
+          if (i.checked) total += Number(i.dataset.price || 0);
+        });
+        const mult = form.querySelector('input[type="number"][data-mult]');
+        if (mult) total += (Number(mult.value || 0) * Number(mult.dataset.mult || 0));
+        out.textContent = total + '€';
+      }
+      form.addEventListener('change', compute);
+      compute();
+    })();
+  </script>
+</body>
+</html>

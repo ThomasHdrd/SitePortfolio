@@ -1,163 +1,424 @@
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUD TRADING COMPANY</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sud Trading Company – Développeur Angular | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas : mission de Développeur Front-End Angular chez Sud Trading Company. Intégration, optimisation UI et support technique." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script.js" defer></script>  
 </head>
-
 <body>
-    <!-- menu -->
-    <nav>
-        <div class="name">
-            <h1>Thomas HOUDARD</h1>
-            <p data-key="menu_job"></p>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX Designer · Dev Web</small>
         </div>
-    <!-- menu petit ecran -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+      </div>
 
-        <ul class="menu" id="menu">
-            <li><a href="index.html" data-key="menu_about"></a></li>
-            <li class="sousMenu">
-                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
-                <div class="sousMenu-content">
-                    <a href="experiencesProfessionnelles.html" class="active" data-key="menu_exp_pro"></a>
-                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
-                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
-                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
-                </div>
-            </li>
-            <li><a href="contact.html" data-key="menu_contact"></a></li>
-            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
-        
-            <!-- Sélecteur de langue placé sous le menu -->
-            <li class="lang-mobile">
-                <div class="lang-dropdown">
-                    <button id="lang-button">
-                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
-                        <span id="current-lang-text">FR</span>
-                        <span id="dropdown-arrow">▾</span>
-                    </button>
-                    <ul id="lang-list">
-                        <li id="lang-fr">
-                            <img src="images/langSelect_FR.png" alt="FR"> FR
-                        </li>
-                        <li id="lang-en">
-                            <img src="images/langSelect_EN.png" alt="EN"> EN 
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>        
-    </nav>
+      <div class="burger" id="burger"><span></span></div>
 
-    <!-- banniere -->
-    <section class="banner-stc">
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="experiencesProfessionnelles.html" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>        
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="reveal">
+      <div class="case-hero">
         <div>
-            <h1 class="h1">SUD TRADING COMPANY</h1>
-            <h3 data-key="exp_pro_stc"></h3>
+          <p class="case-meta" data-key="stc_meta">Étude de cas · Front-End · Angular</p>
+          <h1 data-key="stc_title">Application métier pour Sud Trading Company</h1>
+          <p class="case-subtitle" data-key="stc_subtitle">
+            Mission de développement front-end Angular pour une application métier utilisée en environnement industriel :
+            optimisation de l’interface, stabilité et support à l’équipe produit.
+          </p>
+
+          <div class="case-badges">
+            <span class="tag">Angular</span>
+            <span class="tag">Front-End</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">Agile</span>
+          </div>
         </div>
+
+        <div class="case-cover">
+          <img src="images/expro/stc/stc1.png" alt="Interface Sud Trading Company" loading="lazy" />
+        </div>
+      </div>
     </section>
 
-    <!-- pres generale -->
-    <section>
-        <div class="stc-pres">
-            <div class="stcpres-left">
-                <p data-key="stc_pres1">Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l'intégration et la maintenance de solutions logicielles pour les industries utilisant des technologies avancées. Elle répond aux besoins des professionnels en matière de développement web et de solutions logicielles personnalisées.</p>
-                <br>
-                <ul>
-                    <li data-key="stc_pres_role"><strong>RÔLE :</strong> Développeur Front-End Angular</li>
-                    <li data-key="stc_pres_date"><strong>DATE :</strong> Décembre 2024</li>
-                    <li data-key="stc_pres_duree"><strong>DURÉE :</strong> 1 mois</li>
-                </ul>
-            </div>
-            <div class="stcpres-right">
-                <img src="images/expro/stc/stc1.png" alt="stc">
-            </div>
-        </div>
-    </section>
-        
-    <!-- mon role -->
-    <section id="stc-role">
-        <h2 data-key="titre_role">MON RÔLE</h2>
-        <div class="stc-role-texte">
-            <p data-key="stc_role_texte">En tant que Développeur Front-End Angular chez Sud Trading Company, j'ai eu l'opportunité de participer au développement d'une application web dynamique, en mettant l'accent sur l'amélioration de l'interface utilisateur et des performances. Voici les principales responsabilités que j’ai prises en charge pendant mon expérience :</p>
-            <ul>
-                <li data-key="stc_role_liste1"><strong>Participation au déploiement et à la maintenance :</strong> J'ai contribué au déploiement de nouvelles fonctionnalités sur l'application Angular, en veillant à ce que l'application soit fonctionnelle et performante.</li>
-            </ul>
-            <ul>
-                <li data-key="stc_role_liste2"><strong>Contribution à la modification de composants front-end :</strong> J'ai été impliqué dans la modification et l'amélioration de divers composants de l'application, afin d'optimiser l'expérience utilisateur et de corriger les anomalies mineures.</li>
-            </ul>
-            <ul>
-                <li data-key="stc_role_liste3"><strong>Assistance technique à l’équipe de développement :</strong> J’ai fourni un support technique à l’équipe de développement en effectuant des tests fonctionnels et en documentant les corrections nécessaires pour assurer une meilleure stabilité de l'application.</li>
-            </ul>
-        </div>
-    </section> 
+    <!-- CONTEXTE & MISSION -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_context_title">Contexte & mission</h2>
+        <div class="bar"></div>
+      </div>
 
-    <!-- competences utilisées -->
-    <section id="stc-competences">
-        <h2 data-key="titre_technos">COMPÉTENCES ET TECHNOLOGIES UTILISÉES</h2>
-        <div class="stc-competences-texte">
-            <p data-key="stc_techno_texte">Pendant mon temps chez Sud Trading Company, j'ai pu renforcer mes compétences et mon expertise dans les domaines suivants :</p>
-            <ul>
-                <li data-key="stc_techno_liste1"><strong>Développement front-end avec Angular</strong></li>
-            </ul>
-            <ul>
-                <li data-key="stc_techno_liste2"><strong>Amélioration de l'interface utilisateur</strong></li>
-            </ul>
-            <ul>
-                <li data-key="stc_techno_liste3"><strong>Tests fonctionnels et débogage</strong></li>
-            </ul>
-            <ul>
-                <li data-key="stc_techno_liste4"><strong>Déploiement et maintenance d'applications web</strong></li>
-            </ul>
-            <ul>
-                <li data-key="stc_techno_liste5"><strong>Collaboration et travail d’équipe en environnement Agile</strong></li>
-            </ul>
-        </div>
-    </section>
-    
-    
-    <!-- logiciel utilisés -->
-    <section id="stc-logiciel">
-        <h2 data-key="titre_logiciels">LOGICIELS UTILISÉS</h2>
-        <ul class="stcLogiciel">
-            <li><img src="images/expro/stc/angular.png" alt="angular"><span data-key="stc_logiciel_texte1"></span>Framework principal pour le développement d'applications web dynamiques et performantes.</li>
-            <li><img src="images/logiciels/vscode.png" alt="vscode"><span data-key="stc_logiciel_texte2"></span>Éditeur de code utilisé pour le développement, la gestion du code et la collaboration avec l’équipe de développement.</li>
-            <li><img src="images/expro/stc/vmware.png" alt="vmware"><span data-key="stc_logiciel_texte3"></span>Utilisé pour créer des environnements virtuels permettant de tester et déployer l'application dans des configurations diverses sans perturber l'environnement principal.</li>
-        </ul>
-        </div>
+      <div class="grid cols-2">
+        <article class="card">
+          <small data-key="stc_context_label">Entreprise & enjeux</small>
+          <h3 data-key="stc_context_heading">Sud Trading Company</h3>
+          <p data-key="stc_context_text">
+            Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l’intégration et
+            la maintenance de solutions logicielles pour des environnements industriels et techniques.
+            L’équipe avait besoin de renforcer le front-end d’une application Angular existante tout en
+            améliorant la lisibilité et la stabilité du produit.
+          </p>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_meta_label">Rôle & cadre</small>
+          <h3 data-key="stc_role_heading">Mission front-end Angular</h3>
+          <ul class="meta-list">
+            <li data-key="stc_role_item_role"><strong>Rôle :</strong> Développeur Front-End Angular</li>
+            <li data-key="stc_role_item_date"><strong>Période :</strong> Décembre 2024</li>
+            <li data-key="stc_role_item_duration"><strong>Durée :</strong> 1 mois</li>
+            <li data-key="stc_role_item_env"><strong>Environnement :</strong> Angular, Git, VMware, VS Code</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section>
-        <!-- lien du site -->
-        <div class="LienStc">
-            <a class="button-info" href="https://stcpro.fr/FR/" target="_blank" data-key="stc_button">CLIQUEZ ICI POUR VOIR LE SITE DE L'ENTREPRISE</a>
-        </div>
+    <!-- MON RÔLE -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_role_title">Mon rôle</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <article class="card">
+          <small data-key="stc_role_block1_label">Front-End & composants</small>
+          <h3 data-key="stc_role_block1_title">Évolution de l’interface</h3>
+          <ul>
+            <li data-key="stc_role_l1">
+              Participation au déploiement de nouvelles fonctionnalités Angular, en veillant au bon
+              fonctionnement de l’application en production.
+            </li>
+            <li data-key="stc_role_l2">
+              Modification et optimisation de composants existants pour améliorer la lisibilité, la
+              cohérence visuelle et la fluidité de navigation.
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_role_block2_label">Support & qualité</small>
+          <h3 data-key="stc_role_block2_title">Stabilité & support technique</h3>
+          <ul>
+            <li data-key="stc_role_l3">
+              Réalisation de tests fonctionnels ciblés pour détecter les anomalies et documenter les
+              correctifs à appliquer.
+            </li>
+            <li data-key="stc_role_l4">
+              Support à l’équipe de développement dans un environnement Agile : échanges réguliers,
+              remontées d’anomalies et propositions d’améliorations UI.
+            </li>
+          </ul>
+        </article>
+      </div>
     </section>
+
+    <!-- COMPÉTENCES & TECHNOLOGIES -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_skills_title">Compétences & technologies utilisées</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-3">
+        <article class="card">
+          <small data-key="stc_skills_block1_label">Front-End</small>
+          <h3 data-key="stc_skills_block1_title">Angular & intégration</h3>
+          <ul>
+            <li data-key="stc_skill_l1">Développement d’interfaces avec Angular et TypeScript.</li>
+            <li data-key="stc_skill_l2">Gestion de composants réutilisables et logiques d’affichage.</li>
+            <li data-key="stc_skill_l3">Intégration HTML/CSS responsive en cohérence avec le design existant.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_skills_block2_label">Qualité</small>
+          <h3 data-key="stc_skills_block2_title">Tests & débogage</h3>
+          <ul>
+            <li data-key="stc_skill_l4">Tests fonctionnels sur les parcours clés de l’application.</li>
+            <li data-key="stc_skill_l5">Débogage et correction de bugs mineurs côté front.</li>
+            <li data-key="stc_skill_l6">Suivi des retours utilisateurs internes pour prioriser les correctifs.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_skills_block3_label">Collaboration</small>
+          <h3 data-key="stc_skills_block3_title">Travail en équipe</h3>
+          <ul>
+            <li data-key="stc_skill_l7">Collaboration avec l’équipe de développement en environnement Agile.</li>
+            <li data-key="stc_skill_l8">Communication régulière avec les référents techniques.</li>
+            <li data-key="stc_skill_l9">Documentation claire des changements et des impacts.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- LOGICIELS UTILISÉS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_tools_title">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/expro/stc/angular.png" alt="Angular" loading="lazy" />
+          </div>
+          <p class="tool-title" data-key="stc_tools_cat1">Framework front-end</p>
+          <p class="tool-sub">Angular</p>
+          <p class="tool-desc" data-key="stc_tools_desc1">
+            Framework principal utilisé pour le développement de l’application web :
+            composants dynamiques, routing et gestion des états côté client.
+          </p>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/logiciels/vscode.png" alt="Visual Studio Code" loading="lazy" />
+          </div>
+          <p class="tool-title" data-key="stc_tools_cat2">Environnement de développement</p>
+          <p class="tool-sub">Visual Studio Code</p>
+          <p class="tool-desc" data-key="stc_tools_desc2">
+            Éditeur de code utilisé pour le développement, le versionning Git, les extensions Angular
+            et la collaboration avec l’équipe technique.
+          </p>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/expro/stc/vmware.png" alt="VMware" loading="lazy" />
+          </div>
+          <p class="tool-title" data-key="stc_tools_cat3">Environnements virtuels</p>
+          <p class="tool-sub">VMware</p>
+          <p class="tool-desc" data-key="stc_tools_desc3">
+            Utilisé pour créer et gérer des environnements de test isolés, afin de valider les
+            modifications sans impacter l’infrastructure principale.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RÉSULTAT & LIEN -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_outcome_title">Résultat & lien</h2>
+        <div class="bar"></div>
+      </div>
+
+      <article class="card">
+        <small data-key="stc_outcome_label">Impact</small>
+        <h3 data-key="stc_outcome_heading">Une application plus claire et maintenable</h3>
+        <p data-key="stc_outcome_text">
+          Cette mission m’a permis de contribuer à la stabilité et à l’évolution d’une application
+          métier Angular existante, en améliorant à la fois l’interface et la qualité du front-end.
+          Elle a également renforcé mon expérience dans les environnements techniques exigeants.
+        </p>
+        <div class="card-cta">
+          <a href="https://stcpro.fr/FR/" target="_blank" rel="noopener" class="btn btn-primary" data-key="stc_outcome_cta">
+            Voir le site de l’entreprise
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about:"Accueil",
+        menu_portfolio:"Portfolio ▾",
+        menu_exp_pro:"Expériences Professionnelles",
+        menu_projects_design:"Projets Design",
+        menu_projects_dev:"Projets Développement",
+        menu_projects_personal:"Perso",
+        menu_contact:"Contact",
+        menu_cv:"Travailler avec moi",
+
+        stc_meta:"Étude de cas · Front-End · Angular",
+        stc_title:"Application métier pour Sud Trading Company",
+        stc_subtitle:"Mission de développement front-end Angular pour une application métier utilisée en environnement industriel : optimisation de l’interface, stabilité et support à l’équipe produit.",
+
+        stc_context_title:"Contexte & mission",
+        stc_context_label:"Entreprise & enjeux",
+        stc_context_heading:"Sud Trading Company",
+        stc_context_text:"Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l’intégration et la maintenance de solutions logicielles pour des environnements industriels et techniques. L’équipe avait besoin de renforcer le front-end d’une application Angular existante tout en améliorant la lisibilité et la stabilité du produit.",
+
+        stc_meta_label:"Rôle & cadre",
+        stc_role_heading:"Mission front-end Angular",
+        stc_role_item_role:"Rôle : Développeur Front-End Angular",
+        stc_role_item_date:"Période : Décembre 2024",
+        stc_role_item_duration:"Durée : 1 mois",
+        stc_role_item_env:"Environnement : Angular, Git, VMware, VS Code",
+
+        stc_role_title:"Mon rôle",
+        stc_role_block1_label:"Front-End & composants",
+        stc_role_block1_title:"Évolution de l’interface",
+        stc_role_l1:"Participation au déploiement de nouvelles fonctionnalités Angular, en veillant au bon fonctionnement de l’application en production.",
+        stc_role_l2:"Modification et optimisation de composants existants pour améliorer la lisibilité, la cohérence visuelle et la fluidité de navigation.",
+        stc_role_block2_label:"Support & qualité",
+        stc_role_block2_title:"Stabilité & support technique",
+        stc_role_l3:"Réalisation de tests fonctionnels ciblés pour détecter les anomalies et documenter les correctifs à appliquer.",
+        stc_role_l4:"Support à l’équipe de développement dans un environnement Agile : échanges réguliers, remontées d’anomalies et propositions d’améliorations UI.",
+
+        stc_skills_title:"Compétences & technologies utilisées",
+        stc_skills_block1_label:"Front-End",
+        stc_skills_block1_title:"Angular & intégration",
+        stc_skill_l1:"Développement d’interfaces avec Angular et TypeScript.",
+        stc_skill_l2:"Gestion de composants réutilisables et logiques d’affichage.",
+        stc_skill_l3:"Intégration HTML/CSS responsive en cohérence avec le design existant.",
+        stc_skills_block2_label:"Qualité",
+        stc_skills_block2_title:"Tests & débogage",
+        stc_skill_l4:"Tests fonctionnels sur les parcours clés de l’application.",
+        stc_skill_l5:"Débogage et correction de bugs mineurs côté front.",
+        stc_skill_l6:"Suivi des retours utilisateurs internes pour prioriser les correctifs.",
+        stc_skills_block3_label:"Collaboration",
+        stc_skills_block3_title:"Travail en équipe",
+        stc_skill_l7:"Collaboration avec l’équipe de développement en environnement Agile.",
+        stc_skill_l8:"Communication régulière avec les référents techniques.",
+        stc_skill_l9:"Documentation claire des changements et des impacts.",
+
+        stc_tools_title:"Logiciels utilisés",
+        stc_tools_cat1:"Framework front-end",
+        stc_tools_desc1:"Framework principal utilisé pour le développement de l’application web : composants dynamiques, routing et gestion des états côté client.",
+        stc_tools_cat2:"Environnement de développement",
+        stc_tools_desc2:"Éditeur de code utilisé pour le développement, le versionning Git, les extensions Angular et la collaboration avec l’équipe technique.",
+        stc_tools_cat3:"Environnements virtuels",
+        stc_tools_desc3:"Utilisé pour créer et gérer des environnements de test isolés, afin de valider les modifications sans impacter l’infrastructure principale.",
+
+        stc_outcome_title:"Résultat & lien",
+        stc_outcome_label:"Impact",
+        stc_outcome_heading:"Une application plus claire et maintenable",
+        stc_outcome_text:"Cette mission m’a permis de contribuer à la stabilité et à l’évolution d’une application métier Angular existante, en améliorant à la fois l’interface et la qualité du front-end. Elle a également renforcé mon expérience dans les environnements techniques exigeants.",
+        stc_outcome_cta:"Voir le site de l’entreprise",
+
+        footer:"©2025 Thomas Houdard · Tous droits réservés"
+      },
+
+      en: {
+        menu_about:"Home",
+        menu_portfolio:"Portfolio ▾",
+        menu_exp_pro:"Professional Experience",
+        menu_projects_design:"Design Projects",
+        menu_projects_dev:"Development Projects",
+        menu_projects_personal:"Personal",
+        menu_contact:"Contact",
+        menu_cv:"Work with me",
+
+        stc_meta:"Case study · Front-End · Angular",
+        stc_title:"Business application for Sud Trading Company",
+        stc_subtitle:"Front-end Angular mission on an internal business application used in an industrial context: interface optimisation, stability and support to the product team.",
+
+        stc_context_title:"Context & mission",
+        stc_context_label:"Company & challenges",
+        stc_context_heading:"Sud Trading Company",
+        stc_context_text:"Sud Trading Company (STC) is a company specialised in developing, integrating and maintaining software solutions for industrial and technical environments. The team needed to strengthen the front-end of an existing Angular application while improving readability and product stability.",
+
+        stc_meta_label:"Role & scope",
+        stc_role_heading:"Front-end Angular mission",
+        stc_role_item_role:"Role: Front-End Angular Developer",
+        stc_role_item_date:"Period: December 2024",
+        stc_role_item_duration:"Duration: 1 month",
+        stc_role_item_env:"Environment: Angular, Git, VMware, VS Code",
+
+        stc_role_title:"My role",
+        stc_role_block1_label:"Front-End & components",
+        stc_role_block1_title:"Interface evolution",
+        stc_role_l1:"Contributed to deploying new Angular features, ensuring the application worked properly in production.",
+        stc_role_l2:"Updated and optimised existing components to improve readability, visual consistency and navigation flow.",
+        stc_role_block2_label:"Support & quality",
+        stc_role_block2_title:"Stability & technical support",
+        stc_role_l3:"Performed functional tests to detect issues and document the fixes to apply.",
+        stc_role_l4:"Supported the development team in an Agile environment: regular discussions, issue reporting and UI improvement suggestions.",
+
+        stc_skills_title:"Skills & technologies used",
+        stc_skills_block1_label:"Front-End",
+        stc_skills_block1_title:"Angular & integration",
+        stc_skill_l1:"Interface development with Angular and TypeScript.",
+        stc_skill_l2:"Management of reusable components and display logic.",
+        stc_skill_l3:"Responsive HTML/CSS integration aligned with the existing design.",
+        stc_skills_block2_label:"Quality",
+        stc_skills_block2_title:"Testing & debugging",
+        stc_skill_l4:"Functional tests on key application flows.",
+        stc_skill_l5:"Debugging and fixing minor front-end issues.",
+        stc_skill_l6:"Monitoring internal user feedback to prioritise fixes.",
+        stc_skills_block3_label:"Collaboration",
+        stc_skills_block3_title:"Teamwork",
+        stc_skill_l7:"Collaboration with the development team in an Agile environment.",
+        stc_skill_l8:"Regular communication with technical leads.",
+        stc_skill_l9:"Clear documentation of changes and impacts.",
+
+        stc_tools_title:"Tools used",
+        stc_tools_cat1:"Front-end framework",
+        stc_tools_desc1:"Main framework used to develop the web application: dynamic components, routing and client-side state management.",
+        stc_tools_cat2:"Development environment",
+        stc_tools_desc2:"Code editor used for development, Git versioning, Angular extensions and collaboration with the technical team.",
+        stc_tools_cat3:"Virtual environments",
+        stc_tools_desc3:"Used to create and manage isolated test environments, to validate changes without impacting the main infrastructure.",
+
+        stc_outcome_title:"Result & link",
+        stc_outcome_label:"Impact",
+        stc_outcome_heading:"A clearer and more maintainable application",
+        stc_outcome_text:"This mission allowed me to contribute to the stability and evolution of an existing Angular business application, improving both the interface and front-end quality. It also strengthened my experience in demanding technical environments.",
+        stc_outcome_cta:"View the company website",
+
+        footer:"©2025 Thomas Houdard · All rights reserved"
+      }
+    };
+  </script>
 </body>
-
-
-<footer>
-    <div class="footer-container">
-        <!-- social media -->
-        <div class="footer-social">
-           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
-           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
-           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
-        </div>
-    </div>
-
-    <!-- droits reserves -->
-    <div class="footer-bottom">
-        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
-    </div>
-</footer>
-
 </html>

@@ -1,99 +1,150 @@
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJETS DEVELOPPEUR</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Expériences Professionnelles - Thomas Houdard</title>
+    <meta name="description" content="Expériences professionnelles de Thomas Houdard : Freelance UX/UI, Support Client, Développement Web." />
+    <meta property="og:title" content="Expériences Professionnelles" />
+    <meta property="og:description" content="Freelance, support client, développement web." />
+    <meta property="og:url" content="https://thomashoudard.com/experiencesProfessionnelles" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
-
 <body>
-    <!-- menu -->
-    <nav>
-        <div class="name">
-            <h1>Thomas HOUDARD</h1>
-            <p data-key="menu_job"></p>
+<nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
         </div>
-    <!-- menu petit ecran -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+      </div>
 
-        <ul class="menu" id="menu">
-            <li><a href="index.html" data-key="menu_about"></a></li>
-            <li class="sousMenu">
-                <a href="#" class="active" data-key="menu_portfolio"> ▾</a>
-                <div class="sousMenu-content">
-                    <a href="experiencesProfessionnelles.html" class="active" data-key="menu_exp_pro"></a>
-                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
-                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
-                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
-                </div>
-            </li>
-            <li><a href="contact.html" data-key="menu_contact"></a></li>
-            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
-        
-            <!-- Sélecteur de langue placé sous le menu -->
-            <li class="lang-mobile">
-                <div class="lang-dropdown">
-                    <button id="lang-button">
-                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
-                        <span id="current-lang-text">FR</span>
-                        <span id="dropdown-arrow">▾</span>
-                    </button>
-                    <ul id="lang-list">
-                        <li id="lang-fr">
-                            <img src="images/langSelect_FR.png" alt="FR"> FR
-                        </li>
-                        <li id="lang-en">
-                            <img src="images/langSelect_EN.png" alt="EN"> EN 
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>        
-    </nav>
-        
-   <!-- ux ui design -->
-   <section id="ExperiencePro">
-        <h2 data-key="titre_exp_pro">EXPÉRIENCES PROFESSIONNELLES</h2>
-        <div class="tableau-experiences">
-            <!-- cook better -->
-            <div class="exPro">
-                <img src="images/expro/chromateq.png" alt="chromateq">
-                <h3>CHROMATEQ</h3>
-                <h4 data-key="exp_pro_chromateq">TECHNICIEN SUPPORT CLIENT</h4>
-                <a href="chromateq.html" class="button-info" data-key="button">PLUS D'INFOS</a>
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html"  data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>        
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+</nav>
+
+    <main>
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_exp_pro">Expériences Professionnelles</h2>
+                <div class="bar"></div>
             </div>
-            <!-- movie pass -->
-            <div class="exPro">
-                <img src="images/expro/stc.png" alt="stc">
-                <h3>SUD TRADING COMPANY</h3>
-                <h4 data-key="exp_pro_stc">DEVELOPPEUR WEB ANGULAR</h4>
-                <a href="sudtradingcompany.html" class="button-info" data-key="button">PLUS D'INFOS</a>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <img src="images/expro/Ironcat.png" alt="Ironcat">
+                    <h3>Ironcat</h3>
+                    <h4 data-key="exp_pro_ironcat_role">UX/UI Designer & Développeur Web</h4>
+                    <p data-key="exp_pro_ironcat_desc"></p>
+                    <a href="ironcat.html" class="btn btn-primary" data-key="button_plus">
+                        Plus d'infos
+                    </a>
+                </div>
+                <div class="experience-card">
+                    <img src="images/photoprofil.webp" alt="Freelance">
+                    <h3>Freelance</h3>
+                    <h4 data-key="exp_pro_freelance_role">UX/UI Designer & Développeur Web</h4>
+                    <p data-key="exp_pro_freelance_desc"></p>
+                    <a href="freelance.html" class="btn btn-primary" data-key="button_plus">Plus d'infos</a>
+                </div>
+                <div class="experience-card">
+                    <img src="images/expro/chromateq.png" alt="Chromateq">
+                    <h3>Chromateq</h3>
+                    <h4 data-key="exp_pro_chromateq_role">Technicien Support Client</h4>
+                    <p data-key="exp_pro_chromateq_desc"></p>
+                    <a href="chromateq.html" class="btn btn-primary" data-key="button_plus">Plus d'infos</a>
+                </div>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <img src="images/expro/stc.png" alt="Sud Trading Company">
+                    <h3>Sud Trading Company</h3>
+                    <h4 data-key="exp_pro_stc_role">Développeur Web Angular</h4>
+                    <p data-key="exp_pro_stc_desc"></p>
+                    <a href="sudtradingcompany.html" class="btn btn-primary" data-key="button_plus">Plus d'infos</a>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
             </div>
         </div>
-    </section>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",
+                menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                titre_exp_pro:"Expériences Professionnelles",
+                exp_pro_ironcat_role:"UX/UI Designer & Développeur Web",
+                exp_pro_ironcat_desc:"Conception et développement de solutions numériques dans un environnement international : création d’interfaces, amélioration de l’expérience utilisateur et participation à des projets web et interactifs.",
+                exp_pro_freelance_role:"UX/UI Designer & Développeur Web",
+                exp_pro_freelance_desc:"Conception d’interfaces centrées utilisateur (wireframes, prototypage haute fidélité, design système) et intégration front (HTML, CSS, JS). Optimisation accessibilité, performance & SEO.",
+                exp_pro_chromateq_role:"Technicien Support Client",
+                exp_pro_chromateq_desc:"Support technique international (FR/EN), diagnostic logiciel & matériel, création de documentation claire et amélioration de l’expérience utilisateur.",
+                exp_pro_stc_role:"Développeur Web Angular",
+                exp_pro_stc_desc:"Intégration front moderne, composants réutilisables, collaboration UI/UX & optimisation des parcours utilisateurs sur application métier.",
+                button_plus:"Plus d'infos",
+                footer:"©2025 Thomas Houdard · Tous droits réservés"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",
+                menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                titre_exp_pro:"Professional Experience",
+                exp_pro_ironcat_role:"UX/UI Designer & Web Developer",
+                exp_pro_ironcat_desc:"Designing and developing digital solutions in an international environment: creating interfaces, improving user experience and participating in web and interactive projects.",
+                exp_pro_freelance_role:"UX/UI Designer & Web Developer",
+                exp_pro_freelance_desc:"Designing user-centered interfaces (wireframes, high‑fidelity prototypes, design systems) and front-end integration (HTML, CSS, JS). Accessibility, performance & SEO optimization.",
+                exp_pro_chromateq_role:"Customer Support Technician",
+                exp_pro_chromateq_desc:"International technical support (FR/EN), software & hardware diagnostics, clear documentation and UX improvement initiatives.",
+                exp_pro_stc_role:"Angular Web Developer",
+                exp_pro_stc_desc:"Modern front-end integration, reusable components, UI/UX collaboration and user flow optimization on business web app.",
+                button_plus:"More info",
+                footer:"©2025 Thomas Houdard · All rights reserved"
+            }
+        };
+
+    </script>
 </body>
-
-
-<footer>
-    <div class="footer-container">
-        <!-- social media -->
-        <div class="footer-social">
-           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
-           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
-           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
-        </div>
-    </div>
-
-    <!-- droits reserves -->
-    <div class="footer-bottom">
-        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
-    </div>
-</footer>
-
 </html>

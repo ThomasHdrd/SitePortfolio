@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pack Design — moderne, intuitif, orienté objectifs</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+/* ====================================================================== */
+/* === Ta charte (police + couleurs) — reprise telle quelle ==============*/
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Open Sans',sans-serif;background-color:white;color:#111}
+p{font-family:'Open Sans';font-size:18px}
+li{font-family:'Open Sans';font-size:16px}
+h1{font-size:36px;color:#328ad3;font-weight:bold}
+h2{font-size:33px}
+h3{font-size:28px}
+h4{font-size:19px}
+strong{font-weight:bold;color:#328ad3}
+ul li{font-size:18px}
+
+/* ----------------------------------------------------------------------- */
+/* HEADER (simplifié, même couleurs & police) */
+nav{background-color:#328ad3;display:flex;align-items:center;gap:24px;padding:14px 24px}
+nav .brand{color:#fff;font-weight:800;font-size:20px;letter-spacing:.3px}
+.menu{list-style:none;display:flex;gap:8px;font-weight:bold}
+.menu a{color:#f7f7f7;text-decoration:none;padding:10px 14px;display:block;border-radius:6px}
+.menu a:hover{background:#f7f7f7;color:#1a5696;border-bottom:4px solid #1a5696}
+.menu .active{background:#f7f7f7;color:#1a5696;border-bottom:4px solid #1a5696;border-radius:6px 6px 0 0}
+.menu .cta{background:rgb(212,0,0);color:#fff}
+.menu .cta:hover{color:rgb(212,0,0);background:#fff;border-bottom:4px solid rgb(212,0,0)}
+
+/* ----------------------------------------------------------------------- */
+/* Mise en page globale inspirée de la page exemple */
+.container{max-width:1200px;margin:0 auto;padding:32px 24px}
+.section{padding:40px 0;border-top:1px solid #eee}
+.grid{display:grid;gap:20px}
+.grid-2{grid-template-columns:1.2fr .8fr}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+}
+
+/* Cartes */
+.card{border:1px solid #e8e8e8;border-radius:12px;padding:18px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+.card h4{color:#328ad3;margin-bottom:8px}
+
+/* Hero */
+.hero{padding:32px 0 16px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.badge{background:#f5f9ff;border:1px solid #cfe6fb;color:#1a5696;padding:6px 10px;font-size:13px;border-radius:999px;font-weight:600}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn{appearance:none;border:none;border-radius:10px;padding:12px 16px;font-weight:700;cursor:pointer}
+.btn-primary{background:#328ad3;color:#fff}
+.btn-outline{background:#fff;border:2px solid #328ad3;color:#328ad3}
+.btn-dark-outline{background:#fff;border:2px solid #1a5696;color:#1a5696}
+
+/* Listes avec puces fines */
+.ul-ticks{list-style:none;display:grid;gap:8px}
+.ul-ticks li{display:flex;gap:10px;align-items:flex-start}
+.ul-ticks li::before{content:"✔";color:#328ad3;margin-top:2px}
+
+/* Tableaux “inclus/méthodo” */
+.cols-cards{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
+@media (max-width:900px){.cols-cards{grid-template-columns:1fr}}
+
+/* Modules + Estimation */
+.modules{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:1000px){.modules{grid-template-columns:1fr}}
+.price-box{border:2px dashed #cfe6fb}
+.price-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed #eee}
+.price-row:last-child{border-bottom:none}
+.total{display:flex;justify-content:space-between;font-weight:800;padding-top:14px;border-top:2px solid #328ad3}
+
+/* Processus */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.steps{grid-template-columns:1fr}}
+.step{background:#f7fbff;border:1px solid #cfe6fb;border-radius:12px;padding:16px}
+.step h4{margin-bottom:6px}
+
+/* FAQ */
+.faq{max-width:900px;margin:0 auto}
+.faq-item{border-bottom:1px solid #eee}
+.faq-q{display:flex;justify-content:space-between;gap:16px;align-items:center;cursor:pointer;padding:16px 0;font-weight:700}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 16px}
+
+/* CTA contact */
+.cta{display:flex;justify-content:space-between;gap:20px;align-items:center}
+@media (max-width:800px){.cta{flex-direction:column;align-items:flex-start}}
+.cta .card{width:100%}
+
+/* Footer */
+footer{margin-top:40px;background:#328ad3;color:#fff}
+.footer-top{display:flex;justify-content:center;gap:16px;padding:18px}
+.footer-top a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.15);text-decoration:none;font-weight:800}
+.footer-bottom{background:#1a5696a8;color:rgba(255,255,255,.85);text-align:center;padding:12px 10px}
+
+/* Petits détails */
+.muted{color:#666}
+.small{font-size:14px}
+hr.sep{border:0;border-top:1px solid #eee;margin:28px 0}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav>
+    <div class="brand">andrea.design</div>
+    <ul class="menu">
+      <li><a href="#" class="active">Pack Design</a></li>
+      <li><a href="#">Méthode</a></li>
+      <li><a href="#">Tarifs</a></li>
+      <li><a href="#" class="cta">Travailler avec moi</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero grid grid-2">
+      <div>
+        <h1>Pack Design — moderne, intuitif, orienté objectifs</h1>
+        <p class="muted" style="margin-top:10px">
+          Je conçois une expérience claire et efficace pour présenter votre activité et atteindre vos objectifs
+          (demande de devis, prise de rendez-vous, vente…). Vous obtenez un design prêt pour l’intégration.
+        </p>
+
+        <div class="badges">
+          <span class="badge">Site vitrine</span>
+          <span class="badge">Figma, assets prêts</span>
+          <span class="badge">2–3 jours ouvrés</span>
+          <span class="badge">100% sur-mesure</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary">Demander un devis</button>
+          <button class="btn btn-outline">Voir ce qui est inclus</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>À partir de 280€</h4>
+        <p class="small muted">Pack base : 1 page clé</p>
+        <hr class="sep">
+        <div class="ul-ticks">
+          <li>Design responsive (desktop & mobile)</li>
+          <li>Sections essentielles (héros, offres, preuves)</li>
+          <li>Fichiers Figma & exports pour intégration</li>
+        </div>
+      </div>
+    </section>
+
+    <!-- POUR QUI / OBJECTIFS -->
+    <section class="section grid grid-2">
+      <div class="card">
+        <h3>Pour qui est ce pack ?</h3>
+        <ul class="ul-ticks" style="margin-top:12px">
+          <li>Indépendants & PMEs qui souhaitent une présence pro et claire.</li>
+          <li>Startups qui lancent un produit et ont besoin d’une landing page efficace.</li>
+          <li>Entreprises qui souhaitent moderniser leur identité digitale.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Objectifs traités</h3>
+        <ul class="ul-ticks" style="margin-top:12px">
+          <li>Clarifier l’offre & la proposition de valeur.</li>
+          <li>Créer la confiance par la preuve (témoignages, logos, chiffres).</li>
+          <li>Optimiser l’action : prise de rendez-vous, devis, achat, inscription.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Inclus + Méthodo -->
+    <section class="section cols-cards">
+      <div class="card">
+        <h3>Ce qui est inclus dans le pack</h3>
+        <div class="grid grid-2" style="margin-top:10px">
+          <div>
+            <h4>Livrables</h4>
+            <ul class="ul-ticks" style="margin-top:6px">
+              <li>Maquettes haute-fidélité (Figma desktop & mobile)</li>
+              <li>Typographie, styles, composants clés</li>
+              <li>Images libres & icônes prêtes</li>
+              <li>Exports PNG/JPG & liens pour intégration</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Méthodo</h4>
+            <ul class="ul-ticks" style="margin-top:6px">
+              <li>Brief express & cadrage des objectifs</li>
+              <li>Structure rapide et claire</li>
+              <li>Design UI soigné, prêt à être intégré</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Exemples de sections</h3>
+        <ul class="ul-ticks" style="margin-top:10px">
+          <li>Héros orienté bénéfices & CTA</li>
+          <li>Preuves (logos, témoignages, chiffres clés)</li>
+          <li>Offre / modules / grille tarifaire</li>
+          <li>FAQ, contact, formulaire simple</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Modules + Estimation -->
+    <section class="section modules">
+      <div class="card">
+        <h3>Modules optionnels</h3>
+        <div class="grid grid-2" style="margin-top:12px">
+          <div>
+            <h4>Expérience & UI</h4>
+            <ul class="ul-ticks">
+              <li>Prototype interactif (Figma) — <strong>+100€</strong></li>
+              <li>Dark mode — <strong>+60€</strong></li>
+              <li>Design system léger (UI kit) — <strong>+120€</strong></li>
+              <li>Sections / pages sup. — <strong>+40€</strong> / page</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Identité & assets</h4>
+            <ul class="ul-ticks">
+              <li>Pack d’icônes cohérent — <strong>+30€</strong></li>
+              <li>Logo simple / Favicon léger — <strong>+25€</strong></li>
+              <li>Illustrations (sélection ou retouche) — <strong>+35€</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card price-box">
+        <h3>Estimation rapide</h3>
+        <p class="small muted">Coche ce dont tu as besoin : le total s’actualise.</p>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="180" checked> Pack de base (1 page clé)</label>
+          <strong>180€</strong>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="100"> Prototype interactif</label>
+          <span>+100€</span>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="60"> Dark mode</label>
+          <span>+60€</span>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="120"> Design system léger</label>
+          <span>+120€</span>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="40" data-multi="true"> Section / page supplémentaire</label>
+          <span>+40€ / page</span>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="30"> Pack d’icônes</label>
+          <span>+30€</span>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="25"> Logo simple / Favicon</label>
+          <span>+25€</span>
+        </div>
+        <div class="price-row">
+          <label><input type="checkbox" class="opt" data-price="35"> Illustrations (sélection/retouche)</label>
+          <span>+35€</span>
+        </div>
+
+        <div class="total">
+          <span>Total estimé</span>
+          <span id="total">200€</span>
+        </div>
+        <p class="small muted" style="margin-top:8px">
+          Devis final après échange rapide selon le périmètre exact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Processus -->
+    <section class="section">
+      <h3>Processus simple et rapide</h3>
+      <div class="steps" style="margin-top:12px">
+        <div class="step">
+          <h4>01 — Cadrage</h4>
+          <p class="small">Un échange de 20–30 minutes pour comprendre tes objectifs, audience et contenus disponibles.</p>
+        </div>
+        <div class="step">
+          <h4>02 — Structure</h4>
+          <p class="small">Hiérarchie des informations et validation rapide de l’ossature pour valider les parcours.</p>
+        </div>
+        <div class="step">
+          <h4>03 — Design</h4>
+          <p class="small">Création des maquettes haute-fidélité (desktop & mobile) selon votre identité.</p>
+        </div>
+        <div class="step">
+          <h4>04 — Livraison</h4>
+          <p class="small">Remise du dossier Figma, exports et assets, prêt pour passage à l’intégration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <h3>Questions fréquentes</h3>
+
+      <div class="faq-item">
+        <div class="faq-q">Combien de temps faut-il pour un projet standard? <span>+</span></div>
+        <div class="faq-a"><p>En général 2 à 3 jours ouvrés pour un site vitrine (1–3 sections). Les délais peuvent varier selon options et réactivité.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Comment se déroule notre suivi ? <span>+</span></div>
+        <div class="faq-a"><p>Via un fil dédié (email/Discord) et 1 à 2 points courts. Les retours sont intégrés rapidement.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Puis-je demander des ajustements ? <span>+</span></div>
+        <div class="faq-a"><p>Oui, une passe d’ajustements est incluse (micro-changement, copy, visuels).</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Proposes-tu aussi l’intégration du site ? <span>+</span></div>
+        <div class="faq-a"><p>Sur demande, je peux recommander un dev ou prendre en charge l’intégration simple.</p></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section cta">
+      <div class="card">
+        <h3>Parlons de votre projet</h3>
+        <p class="muted">Expliquez vos objectifs en quelques lignes et recevez une proposition adaptée.</p>
+        <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#contact">Contact direct</a>
+          <a class="btn btn-outline" href="#brief">Formulaire détaillé</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="small muted">Infos</h4>
+        <div class="ul-ticks" style="margin-top:6px">
+          <li>Démarrage rapide sous réserve de dispo</li>
+          <li>Facture & contrat simples</li>
+          <li>Remise pour récurrence / packs</li>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <a href="#" aria-label="X">X</a>
+      <a href="#" aria-label="Dribbble">D</a>
+      <a href="#" aria-label="Behance">B</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+    <div class="footer-bottom">© 2025 — Pack Design. Tous droits réservés.</div>
+  </footer>
+
+  <script>
+    // === Estimation rapide
+    const checkboxes = document.querySelectorAll('.opt');
+    const totalEl = document.getElementById('total');
+
+    function formatEUR(num){ return (Math.round(num*100)/100).toFixed(0) + '€'; }
+
+    function computeTotal(){
+      let total = 0;
+      checkboxes.forEach(cb=>{
+        if(cb.checked){
+          total += Number(cb.dataset.price||0);
+        }
+      });
+      totalEl.textContent = formatEUR(total);
+    }
+    checkboxes.forEach(cb=>cb.addEventListener('change', computeTotal));
+    computeTotal();
+
+    // === FAQ accordéon
+    document.querySelectorAll('.faq-item').forEach(item=>{
+      item.querySelector('.faq-q').addEventListener('click', ()=>{
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

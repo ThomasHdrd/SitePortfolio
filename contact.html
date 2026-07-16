@@ -1,94 +1,138 @@
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact | Thomas Houdard</title>
+    <meta name="description" content="Contact de Thomas Houdard : email, téléphone, LinkedIn. UI/UX Designer & Développeur Web." />
+    <meta property="og:title" content="Contact - Portfolio" />
+    <meta property="og:description" content="Email · Téléphone · LinkedIn · Collaboration" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
-
 <body>
-    <!-- menu -->
     <nav>
-        <div class="name">
-            <h1>Thomas HOUDARD</h1>
-            <p data-key="menu_job"></p>
-        </div>
-    <!-- menu petit ecran -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
 
-        <ul class="menu" id="menu">
-            <li><a href="index.html" data-key="menu_about"></a></li>
-            <li class="sousMenu">
-                <a href="#" data-key="menu_portfolio"> ▾</a>
-                <div class="sousMenu-content">
-                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
-                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
-                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
-                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="active" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+                <div class="lang-switch" id="langSwitch">
+                    <button data-lang="fr" class="active">FR</button>
+                    <button data-lang="en">EN</button>
                 </div>
-            </li>
-            <li><a href="contact.html" data-key="menu_contact" class="active"></a></li>
-            <li><a class="moncv" data-key="menu_cv" href="cv/CV_FR.pdf" target="_blank"></a></li>
-        
-            <!-- Sélecteur de langue placé sous le menu -->
-            <li class="lang-mobile">
-                <div class="lang-dropdown">
-                    <button id="lang-button">
-                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
-                        <span id="current-lang-text">FR</span>
-                        <span id="dropdown-arrow">▾</span>
-                    </button>
-                    <ul id="lang-list">
-                        <li id="lang-fr">
-                            <img src="images/langSelect_FR.png" alt="FR"> FR
-                        </li>
-                        <li id="lang-en">
-                            <img src="images/langSelect_EN.png" alt="EN"> EN 
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>        
+            </ul>
+
+        </div>
     </nav>
 
-    <section id="contact">
-        <div class="contact-btn">
-            <p data-key="contact_texte1">Vous avez des questions ou souhaitez en savoir plus ? N'hésitez pas me contacter !</p>
-            <!-- Bouton de contact par mail -->
-            <h3 data-key="contact_texte2">Me contacter par email</h3>
-            <a data-key="contact_button" href="mailto:contact@thomashoudard.com?" class="contact-btn">Envoyer un email</a>
-        </div>
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="contact_title">Contact</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:100%;color:var(--text-dim)" data-key="contact_intro"></p>
+        </section>
 
-        <div class="autre-contact">
-            <h3 data-key="contact_texte3">Autres moyens de me contacter</h3>
-            <ul>
-                <li data-key="contact_texte4"><strong>Téléphone :</strong> +33 7 88 20 29 32</li>
-                <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/thomashoudard/">https://www.linkedin.com/in/thomashoudard/</a></li>
-            </ul>
+        <section class="reveal">
+            <div class="grid-contact">
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_email_title"></h2>
+                    <p data-key="contact_email_text"></p>
+                    <a href="mailto:contact@thomashoudard.com" class="btn" data-key="contact_email_button"></a>
+                </div>
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_other_title"></h2>
+                    <ul class="contact-list">
+                        <li><span class="highlight" data-key="contact_phone_label"></span><span> +33 7 88 20 29 32</span></li>
+                        <li><span class="highlight">Email:</span> <a href="mailto:contact@thomashoudard.com">contact@thomashoudard.com</a></li>
+                        <li><span class="highlight" data-key="contact_linkedin_label"></span> <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" rel="noopener">linkedin.com/in/thomashoudard</a></li>
+                        <li><span class="highlight" data-key="contact_availability_label"></span><span data-key="contact_availability"></span></li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_collab_title"></h2>
+                    <p data-key="contact_collab_text"></p>
+                    <a href="TravaillerAvecMoi.html" class="btn" data-key="contact_collab_button"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
         </div>
-    </section> 
+    </footer>
+
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                footer:"©2025 Thomas Houdard · Tous droits réservés",
+                contact_title:"Contact",
+                contact_intro:"Vous souhaitez échanger sur un projet, une mission freelance ou une opportunité ? Voici les moyens directs de me joindre.",
+                contact_email_title:"Email direct",
+                contact_email_text:"Contactez-moi par mail pour un retour structuré (brief, budget, délais, objectifs). Réponse rapide.",
+                contact_email_button:"Envoyer un email",
+                contact_other_title:"Coordonnées",
+                contact_phone_label:"Téléphone:",
+                contact_linkedin_label:"LinkedIn:",
+                contact_availability_label:"Disponibilité: ",
+                contact_availability:"Ouvert à missions freelance / CDI (UI/UX · Front · Produit).",
+                contact_collab_title:"Collaborer",
+                contact_collab_text:"Intéressé par une refonte produit, prototype, audit UX ou intégration front ? Découvrir ma démarche.",
+                contact_collab_button:"Travailler ensemble"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                footer:"©2025 Thomas Houdard · All rights reserved",
+                contact_title:"Contact",
+                contact_intro:"Want to discuss a project, freelance mission or opportunity? Reach me through these direct channels.",
+                contact_email_title:"Direct email",
+                contact_email_text:"Email me for structured inquiries (brief, budget, timelines, goals). Fast reply.",
+                contact_email_button:"Send Email",
+                contact_other_title:"Details",
+                contact_phone_label:"Phone:",
+                contact_linkedin_label:"LinkedIn:",
+                contact_availability_label:"Availability: ",
+                contact_availability:"Open to freelance / full-time (UI/UX · Front · Product).",
+                contact_collab_title:"Collaborate",
+                contact_collab_text:"Need a product redesign, prototype, UX audit or front integration? Explore my approach.",
+                contact_collab_button:"Work together"
+            }
+        };
+    </script>
 </body>
-
-<footer>
-    <div class="footer-container">
-        <!-- social media -->
-        <div class="footer-social">
-           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
-           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
-           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
-        </div>
-    </div>
-
-    <!-- droits reserves -->
-    <div class="footer-bottom">
-        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
-    </div>
-</footer>
-
 </html>

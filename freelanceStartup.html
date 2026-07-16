@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Freelance UI/UX — Étude de cas | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas freelance : refonte UI/UX, design system, hiérarchie typographique, cohérence visuelle et prototype Figma. Par Thomas Houdard." />
+    <meta property="og:title" content="Freelance UI/UX — Étude de cas" />
+    <meta property="og:description" content="Refonte UI/UX complète : analyse, design system, modernisation visuelle et prototype Figma." />
+    <meta property="og:url" content="https://thomashoudard.com/freelance.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+
+            <div class="burger" id="burger"><span></span></div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="freelance_hero_sub">Étude de cas · UI/UX · Design System</p>
+                <h1 data-key="freelance_hero_title">Refonte UI/UX pour une startup</h1>
+                <p data-key="freelance_hero_p1">
+                    Projet freelance mené de l’audit à la livraison d’un prototype Figma cliquable. Objectifs : clarifier la hiérarchie,
+                    harmoniser les composants, renforcer la cohérence visuelle et améliorer la lisibilité sur desktop et mobile.
+                </p>
+                <p data-key="freelance_hero_p2">
+                    Travail réalisé: analyse, benchmark, refonte visuelle, design system, composants réutilisables, documentation et
+                    prototypage haute-fidélité.
+                </p>
+
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>UI/UX</span>
+                    <span class="badge"><span class="dot"></span>Design System</span>
+                    <span class="badge"><span class="dot"></span>Prototype</span>
+                    <span class="badge"><span class="dot"></span>Responsive</span>
+                </div>
+
+                <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+                    <a href="#apres" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir le résultat</a>
+                    <a href="#prototype" class="btn btn-outline" data-key="cta_see_proto" style="width:100%; justify-content: center;">Voir le prototype</a>
+                </div>
+            </div>
+            <div class="video-wrap" style="align-self:start">
+                <div class="proto-wrap">
+                    <p style="font-size:.92rem;color:var(--text-dim)" data-key="freelance_side_note">Extrait du prototype (aperçu statique)</p>
+                    <div class="gallery">
+                        <img loading="lazy" src="images/freelance/after_design1.JPG" alt="Aperçu design final 1">
+                        <img loading="lazy" src="images/freelance/after_design2.JPG" alt="Aperçu design final 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVANT -->
+        <section class="reveal" id="avant">
+            <div class="section-header">
+                <h2 data-key="freelance_avant_title">Avant — État initial</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <h4 data-key="freelance_avant_problemes">Constats & Pain points</h4>
+                    <ul>
+                        <li data-key="freelance_avant1">Hiérarchie visuelle peu lisible sur certaines pages</li>
+                        <li data-key="freelance_avant2">Composants hétérogènes (boutons, onglets, tableaux)</li>
+                        <li data-key="freelance_avant3">Palette et contrastes irréguliers</li>
+                        <li data-key="freelance_avant4">Espaces et rythmes visuels incohérents</li>
+                        <li data-key="freelance_avant5">Responsive non uniforme</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 data-key="freelance_avant_objectifs">Objectifs</h4>
+                    <ul>
+                        <li data-key="freelance_avant_obj1">Clarifier la lecture et l’accès à l’information</li>
+                        <li data-key="freelance_avant_obj2">Mettre en place un Design System cohérent</li>
+                        <li data-key="freelance_avant_obj3">Moderniser la direction artistique</li>
+                        <li data-key="freelance_avant_obj4">Uniformiser l’expérience responsive</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top:1.8rem">
+                <h3 style="font-size:1rem;color:var(--sand);text-transform:uppercase" data-key="freelance_avant_galerie">Captures (avant)</h3>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/freelance/before_design2.PNG" alt="Écran avant refonte 1">
+                <img loading="lazy" src="images/freelance/before_design3.PNG" alt="Écran avant refonte 2">
+            </div>
+        </section>
+
+        <!-- APRES -->
+        <section class="reveal" id="apres">
+            <div class="section-header">
+                <h2 data-key="freelance_apres_title">Après — État final du design</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <p data-key="freelance_apres_intro">
+                        La refonte a permis d’obtenir une interface plus claire, cohérente et moderne, en s’appuyant sur les principes d’UX Design et de Design System.
+                        La nouvelle palette crée une identité visuelle plus douce et structurée, tandis que la grille, les contrastes et la typographie assurent une lecture fluide et professionnelle.
+                    </p>
+                    <h4 data-key="freelance_apres_keys_title">Améliorations clés</h4>
+                    <ul>
+                        <li data-key="freelance_apres1">Hiérarchie typographique renforcée</li>
+                        <li data-key="freelance_apres2">Refonte de la hiérarchie visuelle (titres, tables, formulaires)</li>
+                        <li data-key="freelance_apres3">Réorganisation des espaces pour une meilleure lisibilité</li>
+                        <li data-key="freelance_apres4">Harmonisation des composants UI (boutons, onglets, tableaux)</li>
+                        <li data-key="freelance_apres5">Modernisation du style : couleurs, arrondis, icônes, contrastes</li>
+                        <li data-key="freelance_apres6">Uniformisation responsive sur l’ensemble de l’interface</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 data-key="freelance_ds_title">Design System</h4>
+                    <ul>
+                        <li data-key="freelance_ds1">Tokens (couleurs, rayons, ombres, espacements)</li>
+                        <li data-key="freelance_ds2">Styles typographiques et grille</li>
+                        <li data-key="freelance_ds3">Composants réutilisables et variantes</li>
+                        <li data-key="freelance_ds4">Documentation d’usage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top:1.8rem">
+                <h3 style="font-size:1rem;color:var(--sand);text-transform:uppercase" data-key="freelance_apres_galerie">Captures (après)</h3>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/freelance/after_design1.JPG" alt="Écran après refonte 1">
+                <img loading="lazy" src="images/freelance/after_design2.JPG" alt="Écran après refonte 2">
+                <img loading="lazy" src="images/freelance/after_design3.JPG" alt="Écran après refonte 3">
+            </div>
+        </section>
+
+        <!-- PROTOTYPE -->
+        <section class="reveal" id="prototype">
+            <div class="section-header">
+                <h2 data-key="freelance_proto_title">Prototype</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="proto-wrap">
+                <p style="font-size:.95rem;color:var(--text-dim)" data-key="freelance_proto_desc">
+                    Parcourez le prototype interactif Figma pour découvrir les écrans clés et les interactions.
+                </p>
+                <div>
+                    <a class="btn btn-primary" target="_blank" href="https://www.figma.com/design/dLV5C4un0LEI2T9TzuS0FQ/Kaspereo?node-id=30-160&p=f&t=vkI24T80zRKpLiev-0" data-key="button_proto">
+                        Voir le prototype Figma
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTILS -->
+<section>
+    <div class="section-header">
+        <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+        <div class="bar"></div>
+    </div>
+    <div>
+        <div class="tools-grid">
+            <article class="tool-card">
+                <div class="tool-icon">
+                    <img src="images/logiciels/figma.png" alt="Figma">
+                </div>
+                <p class="tool-title">UI/UX DESIGN</p>
+                <p class="tool-sub">Figma</p>
+                <p class="tool-desc" data-key="tool_figma_desc">
+                    Outil principal pour les maquettes haute fidélité, le design system,
+                    les composants réutilisables et le prototype interactif.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+            <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub" />
+            </a>
+            <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+                <img src="images/email.png" alt="Email" />
+            </a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+            ©2025 Thomas Houdard · Tous droits réservés
+            </span>
+        </div>
+        <div class="footer-bottom">
+            <!-- <p>Design & Code</p> -->
+            <a href="blog.html">Blog</a>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Expériences Professionnelles",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Développement",
+                menu_projects_personal: "Perso",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+                // Freelance page
+                freelance_hero_sub: "Étude de cas · UI/UX · Design System",
+                freelance_hero_title: "Refonte UI/UX pour une startup",
+                freelance_hero_p1: "Projet freelance mené de l’audit à la livraison d’un prototype Figma cliquable. Objectifs : clarifier la hiérarchie, harmoniser les composants, renforcer la cohérence visuelle et améliorer la lisibilité sur desktop et mobile.",
+                freelance_hero_p2: "Travail réalisé: analyse, benchmark, refonte visuelle, design system, composants réutilisables, documentation et prototypage haute-fidélité.",
+                cta_see_final: "Voir le résultat",
+                cta_see_proto: "Voir le prototype",
+                freelance_side_note: "Extrait du prototype (aperçu statique)",
+
+                freelance_avant_title: "Avant — État initial",
+                freelance_avant_problemes: "Constats & Pain points",
+                freelance_avant1: "Hiérarchie visuelle peu lisible sur certaines pages",
+                freelance_avant2: "Composants hétérogènes (boutons, onglets, tableaux)",
+                freelance_avant3: "Palette et contrastes irréguliers",
+                freelance_avant4: "Espaces et rythmes visuels incohérents",
+                freelance_avant5: "Responsive non uniforme",
+                freelance_avant_objectifs: "Objectifs",
+                freelance_avant_obj1: "Clarifier la lecture et l’accès à l’information",
+                freelance_avant_obj2: "Mettre en place un Design System cohérent",
+                freelance_avant_obj3: "Moderniser la direction artistique",
+                freelance_avant_obj4: "Uniformiser l’expérience responsive",
+                freelance_avant_galerie: "Captures (avant)",
+
+                freelance_apres_title: "Après — État final du design",
+                freelance_apres_intro: "La refonte a permis d’obtenir une interface plus claire, cohérente et moderne, en s’appuyant sur les principes d’UX Design et de Design System. La nouvelle palette crée une identité visuelle plus douce et structurée, tandis que la grille, les contrastes et la typographie assurent une lecture fluide et professionnelle.",
+                freelance_apres_keys_title: "Améliorations clés",
+                freelance_apres1: "Hiérarchie typographique renforcée",
+                freelance_apres2: "Refonte de la hiérarchie visuelle (titres, tables, formulaires)",
+                freelance_apres3: "Réorganisation des espaces pour une meilleure lisibilité",
+                freelance_apres4: "Harmonisation des composants UI (boutons, onglets, tableaux)",
+                freelance_apres5: "Modernisation du style : couleurs, arrondis, icônes, contrastes",
+                freelance_apres6: "Uniformisation responsive sur l’ensemble de l’interface",
+                freelance_ds_title: "Design System",
+                freelance_ds1: "Tokens (couleurs, rayons, ombres, espacements)",
+                freelance_ds2: "Styles typographiques et grille",
+                freelance_ds3: "Composants réutilisables et variantes",
+                freelance_ds4: "Documentation d’usage",
+                freelance_apres_galerie: "Captures (après)",
+
+                freelance_proto_title: "Prototype",
+                freelance_proto_desc: "Parcourez le prototype interactif Figma pour découvrir les écrans clés et les interactions.",
+                button_proto: "Voir le prototype Figma",
+
+                titre_logiciels_utilises: "Logiciels utilisés",
+                tool_figma_desc: "Outil principal pour les maquettes haute fidélité, le design system, les composants réutilisables et le prototype interactif."
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Professional Experience",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Development Projects",
+                menu_projects_personal: "Personal",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+
+                footer: "©2025 Thomas Houdard · All rights reserved",
+
+                // Freelance page
+                freelance_hero_sub: "Case study · UI/UX · Design System",
+                freelance_hero_title: "UI/UX Redesign for a startup",
+                freelance_hero_p1: "Freelance project from audit to an interactive Figma prototype. Goals: clarify hierarchy, harmonize components, improve visual consistency and readability across desktop and mobile.",
+                freelance_hero_p2: "Scope: analysis, benchmark, visual redesign, design system, reusable components, documentation and high-fidelity prototyping.",
+                cta_see_final: "See result",
+                cta_see_proto: "Open prototype",
+                freelance_side_note: "Prototype excerpts (static preview)",
+
+                freelance_avant_title: "Before — Initial state",
+                freelance_avant_problemes: "Findings & Pain points",
+                freelance_avant1: "Weak visual hierarchy on several screens",
+                freelance_avant2: "Heterogeneous components (buttons, tabs, tables)",
+                freelance_avant3: "Irregular palette and contrast",
+                freelance_avant4: "Inconsistent spacing and rhythm",
+                freelance_avant5: "Non-uniform responsive",
+                freelance_avant_objectifs: "Goals",
+                freelance_avant_obj1: "Clarify reading and information access",
+                freelance_avant_obj2: "Set up a coherent Design System",
+                freelance_avant_obj3: "Modernize the art direction",
+                freelance_avant_obj4: "Unify responsive behavior",
+                freelance_avant_galerie: "Screens (before)",
+
+                freelance_apres_title: "After — Final design",
+                freelance_apres_intro: "The redesign delivers a clearer, more coherent and modern interface, grounded in UX and Design System principles. The new palette builds a structured identity, while grid, contrast and typography ensure professional readability.",
+                freelance_apres_keys_title: "Key improvements",
+                freelance_apres1: "Strengthened typographic hierarchy",
+                freelance_apres2: "Visual hierarchy overhaul (titles, tables, forms)",
+                freelance_apres3: "Space reorganization for better readability",
+                freelance_apres4: "Harmonized UI components (buttons, tabs, tables)",
+                freelance_apres5: "Modernized style: colors, radiuses, icons, contrasts",
+                freelance_apres6: "Consistent responsive across the interface",
+                freelance_ds_title: "Design System",
+                freelance_ds1: "Tokens (colors, radii, shadows, spacing)",
+                freelance_ds2: "Type styles and grid",
+                freelance_ds3: "Reusable components and variants",
+                freelance_ds4: "Usage documentation",
+                freelance_apres_galerie: "Screens (after)",
+
+                freelance_proto_title: "Prototype",
+                freelance_proto_desc: "Open the interactive Figma prototype to browse key screens and interactions.",
+                button_proto: "Open Figma prototype",
+
+                titre_logiciels_utilises: "Tools used",
+                tool_figma_desc: "Main tool for high-fidelity mockups, design system, reusable components and interactive prototype."
+            }
+        };
+    </script>
+</body>
+</html></div>

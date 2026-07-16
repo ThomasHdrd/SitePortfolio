@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Travailler avec moi | Thomas Houdard</title>
+    <meta name="description" content="UI/UX Design, Développement Web et Pack Complet à Montpellier. Maquettes Figma, sites vitrines HTML/CSS/JS, solutions clé en main."/>
+    <meta property="og:title" content="Travailler avec moi — UI/UX & Développement Web"/>
+    <meta property="og:description" content="Design Figma, développement Web, pack clé en main. Devis rapide."/>
+    <meta property="og:type" content="website"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>    
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio"> ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi active" data-key="menu_cv"></a></li>
+                <div class="lang-switch" id="langSwitch">
+                    <button data-lang="fr" class="active">FR</button>
+                    <button data-lang="en">EN</button>
+                </div>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="titre_pourquoi_avec_moi"></h1>
+                <div class="bar"></div>
+            </div>
+            <p style="color:var(--text-dim)" data-key="texte_pourquoi_avec_moi"></p>
+        </section>
+
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_mes_services"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <div class="card">
+                    <h3 data-key="titre_service_design"></h3>
+                    <p data-key="texte_service_design"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="texte_service_design1"></li>
+                        <li data-key="texte_service_design2"></li>
+                        <li data-key="texte_service_design3"></li>
+                        <li data-key="texte_service_design4"></li>
+                        <li data-key="texte_service_design5"></li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-text" data-key="prix_service_design"></span>
+                        <a href="commande-design.html?base=150#estimation" class="btn btn-primary" data-key="commander"></a>
+                    </div>
+                    <div class="badge-row">
+                        <span class="badge" data-key="delai_service_design"></span>
+                        <span class="badge" data-key="sur_mesure_service_design"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 data-key="titre_service_dev"></h3>
+                    <p data-key="texte_service_dev"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="texte_service_dev1"></li>
+                        <li data-key="texte_service_dev2"></li>
+                        <li data-key="texte_service_dev3"></li>
+                        <li data-key="texte_service_dev4"></li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-text" data-key="prix_service_dev"></span>
+                        <a href="commande-dev.html?base=200#estimation" class="btn btn-primary" data-key="commander"></a>
+                    </div>
+                    <div class="badge-row">
+                        <span class="badge" data-key="delai_service_dev"></span>
+                        <span class="badge" data-key="sur_mesure_service_dev"></span>
+                        <span class="badge" data-key="optimisé_service_dev"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 data-key="titre_service_complet"></h3>
+                    <p data-key="texte_service_complet"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="texte_service_complet1"></li>
+                        <li data-key="texte_service_complet2"></li>
+                        <li data-key="texte_service_complet3"></li>
+                        <li data-key="texte_service_complet4"></li>
+                        <li data-key="texte_service_complet5"></li>
+                        <li data-key="texte_service_complet6"></li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-text" data-key="prix_service_complet"></span>
+                        <a href="commande-complet.html?base=350#estimation" class="btn btn-primary" data-key="commander"></a>
+                    </div>
+                    <div class="badge-row">
+                        <span class="badge" data-key="delai_service_complet"></span>
+                        <span class="badge" data-key="sur_mesure_service_complet"></span>
+                        <span class="badge" data-key="optimisé_service_complet"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal" aria-labelledby="faq-title">
+            <div class="section-header">
+                <h2 id="faq-title" data-key="faq_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div>
+                <details><summary data-key="faq_question_1"></summary><p data-key="faq_answer_1"></p></details>
+                <details><summary data-key="faq_question_2"></summary><p data-key="faq_answer_2"></p></details>
+                <details><summary data-key="faq_question_4"></summary><p data-key="faq_answer_4"></p></details>
+                <details><summary data-key="faq_question_7"></summary><p data-key="faq_answer_7"></p></details>
+                <details><summary data-key="faq_question_8"></summary><p data-key="faq_answer_8"></p></details>
+                <details><summary data-key="faq_question_9"></summary><p data-key="faq_answer_9"></p></details>
+                <details><summary data-key="faq_question_10"></summary><p data-key="faq_answer_10"></p></details>
+                <details><summary data-key="faq_question_11"></summary><p data-key="faq_answer_11"></p></details>
+                <details><summary data-key="faq_question_12"></summary><p data-key="faq_answer_12"></p></details>
+            </div>
+        </section>
+
+        <section class="reveal" id="reviews">
+            <div class="section-header">
+                <h2 data-key="reviews_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="reviews-summary">
+                <div class="reviews-stars" id="reviews-average-stars" aria-hidden="true">★★★★★</div>
+                <div><span id="reviews-average">0.0</span>/5 — <span id="reviews-count" data-key="reviews_count_label"></span></div>
+            </div>
+            <div id="reviews-list" class="reviews-list" data-key="reviews_list"></div>
+            <div class="reviews-pagination" id="reviews-pagination" hidden>
+                <button type="button" id="reviews-prev" class="btn btn-primary" data-key="reviews_previous"></button>
+                <button type="button" id="reviews-next" class="btn btn-primary" data-key="reviews_next"></button>
+            </div>
+            <h3 style="margin-top:2rem" data-key="reviews_add_title"></h3>
+            <form id="review-form" class="reviews-form" novalidate>
+                <div class="form-row">
+                    <label for="reviewerName" data-key="reviews_form_name_label"></label>
+                    <input id="reviewerName" name="name" type="text" required data-key="reviews_form_name_placeholder" data-i18n-attr="placeholder" placeholder="">
+                </div>
+                <div class="form-row">
+                    <label data-key="reviews_form_rating_label"></label>
+                    <div class="star-picker" id="star-picker" role="radiogroup" aria-label="Note">
+                        <input type="radio" name="rating" id="rate-5" value="5"><label for="rate-5" aria-label="5">★</label>
+                        <input type="radio" name="rating" id="rate-4" value="4"><label for="rate-4" aria-label="4">★</label>
+                        <input type="radio" name="rating" id="rate-3" value="3"><label for="rate-3" aria-label="3">★</label>
+                        <input type="radio" name="rating" id="rate-2" value="2"><label for="rate-2" aria-label="2">★</label>
+                        <input type="radio" name="rating" id="rate-1" value="1"><label for="rate-1" aria-label="1">★</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="reviewMessage" data-key="reviews_form_message_label"></label>
+                    <textarea id="reviewMessage" name="message" rows="4" required data-key="reviews_form_message_placeholder" data-i18n-attr="placeholder" placeholder=""></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-primary" data-key="reviews_form_submit"></button>
+                </div>
+                <p class="reviews-form-note" data-key="reviews_form_note"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const translations={
+        fr:{
+            menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+            titre_pourquoi_avec_moi:"Pourquoi travailler avec moi ?",texte_pourquoi_avec_moi:"Designer & développeur : je conçois des interfaces esthétiques, accessibles et performantes. Process clair, livrables propres, communication transparente. Travaillez avec un freelance qui comprend à la fois l’expérience utilisateur et la réalisation technique.",
+            titre_mes_services:"Mes Services",
+            titre_service_design:"UI/UX DESIGN",texte_service_design:"Conception d’interfaces efficaces et attrayantes orientées conversion.",texte_service_design1:"Maquettes haute-fidélité (desktop & mobile)",texte_service_design2:"Styleguide (typo, couleurs, composants)",texte_service_design3:"2 allers-retours inclus",texte_service_design4:"Exports PNG/SVG",texte_service_design5:"Fichier source Figma livré",prix_service_design:"À PARTIR DE 150€",delai_service_design:"3–10 jours ouvrés",sur_mesure_service_design:"100% sur-mesure",
+            titre_service_dev:"Développement Web",texte_service_dev:"Intégration moderne, responsive et optimisée.",texte_service_dev1:"HTML / CSS / JavaScript",texte_service_dev2:"Site vitrine (1 à 5 pages)",texte_service_dev3:"Mobile / Tablette / Desktop",texte_service_dev4:"Code propre & commenté",prix_service_dev:"À PARTIR DE 200€",delai_service_dev:"5–15 jours ouvrés",sur_mesure_service_dev:"100% sur-mesure",optimisé_service_dev:"Optimisé & documenté",
+            titre_service_complet:"Pack Complet",texte_service_complet:"De l’idée au site en ligne : design + développement.",texte_service_complet1:"Cadrage & mini audit",texte_service_complet2:"UX + UI Figma",texte_service_complet3:"Intégration HTML/CSS/JS",texte_service_complet4:"Responsive complet",texte_service_complet5:"Mise en ligne + support initial",texte_service_complet6:"SEO & perf de base",prix_service_complet:"À PARTIR DE 350€",delai_service_complet:"10–20 jours ouvrés",sur_mesure_service_complet:"100% sur-mesure",optimisé_service_complet:"Clé en main",
+            commander:"Commander",
+            faq_title:"Questions fréquentes",
+            faq_question_1:"Combien de temps pour un projet standard ?",faq_answer_1:"Entre 3 et 10 jours selon la complexité et vos retours.",
+            faq_question_2:"Plus de révisions possibles ?",faq_answer_2:"Oui, au-delà des 2 incluses, facturation supplémentaire.",
+            faq_question_4:"Interfaces mobile possibles ?",faq_answer_4:"Oui, je conçois aussi pour applications mobiles.",
+            faq_question_7:"Réductions projets récurrents ?",faq_answer_7:"Tarifs préférentiels pour engagements long terme.",
+            faq_question_8:"Types de projets réalisés ?",faq_answer_8:"Sites vitrines, landing pages, portfolios, interfaces web & mobile.",
+            faq_question_9:"Pouvez-vous aussi développer le site ?",faq_answer_9:"Oui, via le service Développement ou le Pack Complet.",
+            faq_question_10:"Si le design ne me convient pas ?",faq_answer_10:"On ajuste avec les allers-retours inclus jusqu’à satisfaction.",
+            faq_question_11:"Moyens de paiement ?",faq_answer_11:"Virement bancaire uniquement.",
+            faq_question_12:"Acompte requis ?",faq_answer_12:"Possible selon ampleur du projet.",
+            reviews_title:"Avis",
+            reviews_count_label:"0 avis",
+            reviews_list:"Aucun avis pour le moment. Partagez votre expérience.",
+            reviews_previous:"Précédent",
+            reviews_next:"Suivant",
+            reviews_add_title:"Ajouter un avis",
+            reviews_form_name_label:"Nom",
+            reviews_form_name_placeholder:"Votre nom",
+            reviews_form_rating_label:"Note",
+            reviews_form_message_label:"Votre avis",
+            reviews_form_message_placeholder:"Partagez votre expérience…",
+            reviews_form_submit:"Envoyer l’avis",
+            reviews_form_note:"Votre avis peut être affiché publiquement sur cette page.",
+            footer:"©2025 Thomas Houdard · Tous droits réservés"
+        },
+        en:{
+            menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Exp.",menu_projects_design:"Design Projects",menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+            titre_pourquoi_avec_moi:"Why work with me?",texte_pourquoi_avec_moi:"Designer & developer: I deliver interfaces that look great, perform well and feel intuitive. Clear process, clean handoffs, transparent communication. Work with someone who understands both UX intent and implementation.",
+            titre_mes_services:"My Services",
+            titre_service_design:"UI/UX DESIGN",texte_service_design:"Effective, conversion‑oriented interface design.",texte_service_design1:"High‑fidelity mockups (desktop & mobile)",texte_service_design2:"Light styleguide (type, colors, components)",texte_service_design3:"2 revision rounds included",texte_service_design4:"PNG/SVG exports",texte_service_design5:"Figma source delivered",prix_service_design:"FROM €150",delai_service_design:"3–10 business days",sur_mesure_service_design:"100% custom",
+            titre_service_dev:"Web Development",texte_service_dev:"Modern, responsive, optimized implementation.",texte_service_dev1:"HTML / CSS / JavaScript",texte_service_dev2:"Showcase site (1–5 pages)",texte_service_dev3:"Mobile / Tablet / Desktop",texte_service_dev4:"Clean & commented code",prix_service_dev:"FROM €200",delai_service_dev:"5–15 business days",sur_mesure_service_dev:"100% custom",optimisé_service_dev:"Optimized & documented",
+            titre_service_complet:"Full Pack",texte_service_complet:"Idea to live site: design + build.",texte_service_complet1:"Scope & quick audit",texte_service_complet2:"UX + UI in Figma",texte_service_complet3:"HTML/CSS/JS build",texte_service_complet4:"Full responsive",texte_service_complet5:"Deployment + initial support",texte_service_complet6:"Basic SEO & performance",prix_service_complet:"FROM €350",delai_service_complet:"10–20 business days",sur_mesure_service_complet:"100% custom",optimisé_service_complet:"Turnkey",
+            commander:"Order",
+            faq_title:"Frequently Asked Questions",
+            faq_question_1:"Timeline for a standard project?",faq_answer_1:"Typically 3–10 business days depending on scope.",
+            faq_question_2:"Can I get extra revisions?",faq_answer_2:"Yes, beyond the 2 included they are billed.",
+            faq_question_4:"Do you design mobile app UIs?",faq_answer_4:"Yes, I can design mobile application interfaces.",
+            faq_question_7:"Discount for recurring work?",faq_answer_7:"Preferential rates for long‑term collaboration.",
+            faq_question_8:"What kinds of projects done?",faq_answer_8:"Showcase sites, landing pages, portfolios, web & mobile UIs.",
+            faq_question_9:"Can you also develop the site?",faq_answer_9:"Yes, via Development service or Full Pack.",
+            faq_question_10:"If I dislike the design?",faq_answer_10:"We refine within included revision rounds until satisfied.",
+            faq_question_11:"Accepted payment methods?",faq_answer_11:"Bank transfer only.",
+            faq_question_12:"Is a deposit required?",faq_answer_12:"Possible depending on project size.",
+            reviews_title:"Reviews",
+            reviews_count_label:"0 reviews",
+            reviews_list:"No reviews yet. Share your experience.",
+            reviews_previous:"Previous",
+            reviews_next:"Next",
+            reviews_add_title:"Add a review",
+            reviews_form_name_label:"Name",
+            reviews_form_name_placeholder:"Your name",
+            reviews_form_rating_label:"Rating",
+            reviews_form_message_label:"Your review",
+            reviews_form_message_placeholder:"Share your experience…",
+            reviews_form_submit:"Submit review",
+            reviews_form_note:"Your review may be displayed publicly.",
+            footer:"©2025 Thomas Houdard · All rights reserved"
+        }
+    };
+    </script>
+</body>
+</html>

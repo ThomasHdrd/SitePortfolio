@@ -1,0 +1,248 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+       <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" data-key="menu_portfolio">▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact" class="active"></a></li>
+            <li><a class="travailleravecmoi" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+  <main class="design-page">
+    <p class="petit-titre">UI/UX Design</p>
+    <h1>Pack Design — moderne, intuitif, orienté objectifs</h1>
+    <p class="texte-presentation">
+      Je conçois une expérience claire et efficace pour présenter votre activité et atteindre vos objectifs
+      (demandes de devis, prises de contact, ventes). Livraison sur Figma, prête pour l'intégration.
+    </p>
+
+    <ul class="chips" aria-label="Caractéristiques principales">
+      <li class="chip">Desktop &amp; Mobile</li>
+      <li class="chip">Figma</li>
+      <li class="chip">2 allers-retours inclus</li>
+      <li class="chip">Styleguide léger</li>
+    </ul>
+
+    <section class="cards" aria-label="Informations clés">
+      <article class="card">
+        <strong>À partir de 200€</strong>
+        <span>Pack de base</span>
+      </article>
+      <article class="card">
+        <strong>3–5 j ouvrés</strong>
+        <span>Délai indicatif</span>
+      </article>
+      <article class="card">
+        <strong>100% sur-mesure</strong>
+        <span>Adapté à vos objectifs</span>
+      </article>
+    </section>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="#">Discuter de votre projet</a>
+      <a class="btn btn-secondary" href="#">Voir ce qui est inclus</a>
+    </div>
+  </main>
+
+
+</body>
+
+<footer>
+    <div class="sticky-cta" role="contentinfo">
+        <div class="sticky-inner">
+            <span class="sticky-text">Pack Design — à partir de 200€ • Devis en 24h ouvrées</span>
+            <a class="btn btn-accent" href="#">Demander un devis</a>
+        </div>
+    </div>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+</html>
+
+
+<style>
+.design-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px 140px;
+}
+
+.design-page h1 {
+  color: black;
+  text-transform: uppercase;
+}
+
+.petit-titre {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+
+.lead {
+  color: #cfd5e3;
+  max-width: 950px;
+  margin: 16px 0 26px;
+  font-size: 18px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  background: #222433;
+  color: #d7dcf0;
+  border: 1px solid #2b2e3d;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 6px 0 20px;
+}
+
+.card {
+  background: #141722;
+  border: 1px solid #232738;
+  border-radius: 12px;
+  padding: 24px 22px;
+  text-align: center;
+}
+
+.card strong {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.card span {
+  color: #8a8f9c;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: #8b5cf6;
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid #2b2f43;
+}
+
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17,18,26,0.9);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-text {
+  color: #cfd5e3;
+  font-size: 14px;
+}
+
+.btn-accent {
+  background: #8b5cf6;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+</style>

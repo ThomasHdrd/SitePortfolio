@@ -1,0 +1,261 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+       <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" data-key="menu_portfolio">▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact" class="active"></a></li>
+            <li><a class="travailleravecmoi" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+  <main class="design-page">
+    <p class="petit-titre">UI/UX Design</p>
+    <h1>Pack Design — moderne, intuitif, orienté objectifs</h1>
+    <p class="texte-presentation">
+      Je conçois une expérience claire et efficace pour présenter votre activité et atteindre vos objectifs
+      (demandes de devis, prises de contact, ventes). Livraison sur Figma, prête pour l'intégration.
+    </p>
+
+    <ul class="liste-presentation">
+      <li class="liste-presentation1">Desktop &amp; Mobile</li>
+      <li class="liste-presentation2">Figma</li>
+      <li class="liste-presentation3">2 allers-retours inclus</li>
+      <li class="liste-presentation4">Styleguide léger</li>
+    </ul>
+
+    <section class="cartes">
+      <article class="carte1">
+        <strong>À partir de 200€</strong>
+        <span>Pack de base</span>
+      </article>
+      <article class="carte2">
+        <strong>3–5 j ouvrés</strong>
+        <span>Délai indicatif</span>
+      </article>
+      <article class="carte3">
+        <strong>100% sur-mesure</strong>
+        <span>Adapté à vos objectifs</span>
+      </article>
+    </section>
+
+    <div class="btn-actions">
+      <a class="btn-discuter" href="#">Discuter de votre projet</a>
+      <a class="btn-inclus" href="#">Voir ce qui est inclus</a>
+    </div>
+  </main>
+    <div class="barre-devis">
+        <div class="barre-interne">
+            <span class="barre-texte">Pack Design — à partir de 200€ • Devis en 24h ouvrées</span>
+            <a class="btn-devis" href="#">Demander un devis</a>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+</html>
+
+
+<style>
+.design-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px 140px;
+}
+
+.design-page h1 {
+  color: black;
+  text-transform: uppercase;
+}
+
+.petit-titre {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+
+.lead {
+  color: #cfd5e3;
+  max-width: 950px;
+  margin: 16px 0 26px;
+  font-size: 18px;
+}
+
+.liste-presentation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.liste-presentation1,
+.liste-presentation2,
+.liste-presentation3,
+.liste-presentation4 {
+  background: #f5f5f5;
+  color: rgb(0, 0, 0, 0.7);
+  border: 1px solid #328ad3;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 6px 0 20px;
+}
+
+.carte1, .carte2, .carte3 {
+  background: #f5f5f5;
+  border: 1px solid #328ad3;
+  border-radius: 12px;
+  padding: 24px 22px;
+  text-align: center;
+}
+
+.carte1 strong, .carte2 strong, .carte3 strong {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.carte1 span, .carte2 span, .carte3 span {
+  color: rgb(0, 0, 0, 0.7);
+  font-size: 15px;
+}
+
+.btn-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-discuter, .btn-inclus {
+  text-decoration: none;
+  padding: 14px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-discuter {
+  background: #328ad3;
+  color: white;
+}
+.btn-discuter:hover {
+  background: white;
+  color: #328ad3;
+  border: 1px solid #328ad3;
+}
+
+.btn-inclus {
+  background: transparent;
+  color: #328ad3;
+  border: 1px solid #328ad3;
+}
+.btn-inclus:hover {
+  background: #328ad3;
+  color: white;
+  border: none;
+}
+
+.barre-devis {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17,18,26,0.9);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barre-texte {
+  color: #cfd5e3;
+  font-size: 14px;
+}
+
+.btn-devis {
+  background: #8b5cf6;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+</style>

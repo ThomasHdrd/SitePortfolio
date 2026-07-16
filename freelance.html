@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Freelance - Services Design & Web | Thomas Houdard</title>
+    <meta name="description" content="Services freelance UI/UX Design et développement web de Thomas Houdard : création d'interfaces, prototypes et sites web." />
+    <meta property="og:title" content="Services Freelance - Thomas Houdard" />
+    <meta property="og:description" content="UI/UX Design · Développement Web · Prototypes" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+   <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+</nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="page_title_freelance">Services Freelance</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:880px;color:var(--text-dim)" data-key="page_intro_freelance">Services de design et développement web pour transformer vos idées en solutions numériques efficaces et percutantes.</p>
+        </section>
+
+        <!-- SERVICES DESIGN -->
+        <section class="reveal">
+            <!-- <div class="section-header">
+                <h2 data-key="titre_freelance_design">Services Design</h2>
+                <div class="bar"></div>
+            </div> -->
+            <div class="grid cards">
+                <!-- startup -->
+                <div class="card">
+                    <img src="images/freelance/after_design1.JPG" alt="Refonte UI/UX - Études de cas" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Design System</span><span class="tag">Figma</span><span class="tag">Responsive</span>
+                    </div>
+                    <h3>STARTUP REDESIGN</h3>
+                    <h4 data-key="freelance_design_uiux_title"></h4>
+                    <p data-key="freelance_design_uiux"></p>
+                    <a href="freelanceStartup.html" class="btn btn-primary">PLUS D'INFOS</a>
+                </div>
+                <!-- Coach sportif -->
+                <div class="card">
+                    <img src="images/freelance/CoachSport/DesignDesktop.JPG" alt="Design site web - Études de cas" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Web Design</span><span class="tag">Responsive</span><span class="tag">UI/UX</span>
+                    </div>
+                    <h3>COACH APPLICATION</h3>
+                    <h4 data-key="freelance_design_web_title"></h4>
+                    <p data-key="freelance_design_web"></p>
+                    <a href="freelanceCoach.html" class="btn btn-primary">PLUS D'INFOS</a>
+                </div>
+                <!-- Au comptoir urbain -->
+                <div class="card">
+                    <img src="images/freelance/AuComptoirUrbain/DesignDesktop.JPG" alt="Design site web - Études de cas" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Web Design</span><span class="tag">Responsive</span><span class="tag">UI/UX</span>
+                    </div>
+                    <h3>AU COMPTOIR URBAIN</h3>
+                    <h4 data-key="freelance_design_acu_title"></h4>
+                    <p data-key="freelance_design_acu"></p>
+                    <a href="freelanceAuComptoirUrbain.html" class="btn btn-primary">PLUS D'INFOS</a>
+                </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="reveal" style="text-align:center;padding:4rem 2rem">
+            <h2 data-key="freelance_cta_title" style="margin-bottom:1rem"></h2>
+            <p style="max-width:600px;margin:0 auto 2rem;color:var(--text-dim)" data-key="freelance_cta_desc"></p>
+            <a href="TravaillerAvecMoi.html" class="btn btn-primary" data-key="button_contact_now"></a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",menu_projects_dev:"Projets Développement",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                page_title_freelance:"Services Freelance",
+                page_intro_freelance:"Services de design et développement web pour transformer vos idées en solutions numériques efficaces et percutantes.",
+                titre_freelance_design:"Services Design",
+                titre_freelance_dev:"Services Développement",
+                freelance_design_uiux_title:"UI · UX· Figma",
+                freelance_design_uiux:"Redesign d'une interface épurée, intuitive et accessible pour applications web et mobile.",
+                freelance_design_web_title:"UI · UX · FIGMA · FRONT-END · RESPONSIVE",
+                freelance_design_web: "Conception et développement d'un site one-page pour un coach sportif indépendant",
+                freelance_design_acu_title:"UI · UX · FIGMA · FRONT-END · RESPONSIVE",
+                freelance_design_acu:"Création complète d'un site web de restaurant de luxe, pour une expérience utilisateur optimale et une identité visuelle modernisée.",
+                freelance_design_game_title:"Game & Level design · Gameplay",
+                freelance_design_game:"Conception de niveaux, mécaniques de jeu et expériences interactives engageantes.",
+                freelance_design_brand_title:"Logo · Guideline · Charte graphique",
+                freelance_design_brand:"Création d'identités visuelles fortes et cohérentes pour marquer vos clients.",
+                freelance_dev_website_title:"Sites vitrines · Landing pages",
+                freelance_dev_website:"Développement de sites web performants, SEO-friendly et optimisés pour la conversion.",
+                freelance_dev_webapp_title:"Applications interactives · PWA",
+                freelance_dev_webapp:"Développement d'applications web modernes avec les dernières technologies.",
+                freelance_dev_ecommerce_title:"Boutiques en ligne · Intégrations paiement",
+                freelance_dev_ecommerce:"Création de plateformes e-commerce complètes et sécurisées.",
+                freelance_dev_support_title:"Maintenance · Optimisation · Support",
+                freelance_dev_support:"Maintenance, mises à jour de sécurité et optimisations de performance.",
+                freelance_cta_title:"Prêt à transformer votre projet ?",
+                freelance_cta_desc:"Parlons de vos besoins et trouvons la meilleure solution ensemble.",
+                button_contact:"CONTACT",
+                button_contact_now:"DÉMARRER UN PROJET",
+                footer:"©2025 Thomas Houdard · Tous droits réservés"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",menu_projects_dev:"Development Projects",menu_contact:"Contact",menu_cv:"Work with me",
+                page_title_freelance:"Freelance Services",
+                page_intro_freelance:"Design and web development services to transform your ideas into effective and impactful digital solutions.",
+                titre_freelance_design:"Design Services",
+                titre_freelance_dev:"Development Services",
+                freelance_design_uiux_title:"UI · UX· Figma",
+                freelance_design_uiux:"Redesigning clean, intuitive and accessible interfaces for web and mobile applications.",
+                freelance_design_web_title:"UI · UX · FIGMA · FRONT-END · RESPONSIVE",
+                freelance_design_web:"Designing modern websites adapted to all devices with consistent design systems.",
+                freelance_design_game_title:"Game & Level design · Gameplay",
+                freelance_design_game:"Designing engaging levels, game mechanics and interactive experiences.",
+                freelance_design_brand_title:"Logo · Guidelines · Visual identity",
+                freelance_design_brand:"Creating strong and consistent visual identities that impress your clients.",
+                freelance_dev_website_title:"Showcase websites · Landing pages",
+                freelance_dev_website:"Developing high-performance, SEO-friendly and conversion-optimized websites.",
+                freelance_dev_webapp_title:"Interactive applications · PWA",
+                freelance_dev_webapp:"Developing modern web applications using the latest technologies.",
+                freelance_dev_ecommerce_title:"Online stores · Payment integration",
+                freelance_dev_ecommerce:"Creating complete and secure e-commerce platforms.",
+                freelance_dev_support_title:"Maintenance · Optimization · Support",
+                freelance_dev_support:"Maintenance, security updates and performance optimization.",
+                freelance_cta_title:"Ready to transform your project?",
+                freelance_cta_desc:"Let's discuss your needs and find the best solution together.",
+                button_contact:"CONTACT",
+                button_contact_now:"START A PROJECT",
+                footer:"©2025 Thomas Houdard · All rights reserved"
+            }
+        };
+    </script>
+</body>
+</html>
