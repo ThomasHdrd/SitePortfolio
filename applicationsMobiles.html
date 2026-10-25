@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Applications mobiles | Thomas Houdard</title>
+    <meta name="description" content="Applications mobiles conçues et développées de A à Z par Thomas Houdard : Rewind et PetCare (UX/UI, design system, React Native, Flutter, Firebase)." />
+    <meta property="og:title" content="Applications mobiles - Portfolio" />
+    <meta property="og:description" content="Design & Dev · Rewind · PetCare" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1" />
+    <script src="script.js" defer></script>
+    <style>
+        /* Accent par projet, issu de sa véritable interface (90% portfolio / 10% projet) */
+        .grid.cards .card.card-rewind { border-top: 3px solid #fd736d; }
+        .grid.cards .card.card-rewind .category { color: #ffb0ac; border-color: rgba(253,115,109,.45); }
+        .grid.cards .card.card-rewind:hover { box-shadow: 0 18px 40px rgba(253,115,109,.16); }
+
+        .grid.cards .card.card-petcare { border-top: 3px solid #d4f45a; }
+        .grid.cards .card.card-petcare .category { color: #e4f89a; border-color: rgba(212,244,90,.45); }
+        .grid.cards .card.card-petcare:hover { box-shadow: 0 18px 40px rgba(212,244,90,.16); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Professionnelles</a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Développement</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="page_title_mobile">Applications mobiles</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="color:var(--text-dim)" data-key="page_intro_mobile"></p>
+        </section>
+
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_mobile_designdev">Design & Dev</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <!-- Rewind -->
+                <div class="card card-rewind">
+                    <img src="images/rewind/miniature_rewind.jpg" alt="Rewind - application de suivi de séries, films et jeux" loading="lazy">
+                    <span class="category" data-key="mobile_rewind_badge">Application mobile</span>
+                    <h3>REWIND</h3>
+                    <h4>Product Design · React Native · Firebase</h4>
+                    <p data-key="mobile_rewind"></p>
+                    <div class="tags">
+                        <span class="tag">Design System</span><span class="tag">Expo</span><span class="tag">TypeScript</span>
+                    </div>
+                    <a href="rewind.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- PetCare -->
+                <div class="card card-petcare">
+                    <img src="images/petcare/miniature_petcare.jpg" alt="PetCare - application de scan d'alimentation pour animaux" loading="lazy">
+                    <span class="category" data-key="mobile_petcare_badge">Application mobile</span>
+                    <h3>PETCARE</h3>
+                    <h4>Product Design · Flutter · Firebase</h4>
+                    <p data-key="mobile_petcare"></p>
+                    <div class="tags">
+                        <span class="tag">UX/UI</span><span class="tag">Scan</span><span class="tag">OCR</span>
+                    </div>
+                    <a href="petcare.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                page_title_mobile:"Applications mobiles",
+                page_intro_mobile:"Des applications que j'ai conçues et développées seul, de l'idée jusqu'au produit fonctionnel : parcours UX, interface, design system, puis développement mobile et back-end. Elles montrent comment je passe de la maquette au code sans perdre la qualité du design.",
+                titre_mobile_designdev:"Design & Dev",
+                mobile_rewind_badge:"Application mobile",
+                mobile_rewind:"Suivre ses séries, films et jeux vidéo au même endroit : progression épisode par épisode, recommandations, amis, statistiques et Rewind annuel.",
+                mobile_petcare_badge:"Application mobile",
+                mobile_petcare:"Scanner les croquettes et pâtées pour chats et chiens et obtenir une note sur 100, basée sur des seuils nutritionnels européens.",
+                button:"PLUS D'INFOS",
+                footer:"©2025 Thomas Houdard · Tous droits réservés"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                page_title_mobile:"Mobile Apps",
+                page_intro_mobile:"Apps I designed and built on my own, from idea to working product: UX flows, interface, design system, then mobile and back-end development. They show how I go from mockup to code without losing design quality.",
+                titre_mobile_designdev:"Design & Dev",
+                mobile_rewind_badge:"Mobile app",
+                mobile_rewind:"Track your series, movies and video games in one place: episode-by-episode progress, recommendations, friends, statistics and a yearly Rewind.",
+                mobile_petcare_badge:"Mobile app",
+                mobile_petcare:"Scan cat and dog food and get a score out of 100, based on European nutritional guidelines.",
+                button:"MORE INFO",
+                footer:"©2025 Thomas Houdard · All rights reserved"
+            }
+        };
+    </script>
+</body>
+</html>

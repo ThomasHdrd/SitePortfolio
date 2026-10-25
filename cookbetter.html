@@ -11,17 +11,37 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="script.js" defer></script>
+    <style>
+        /* COOK BETTER V2 — thème "Forest Premium" (scoped à cette page) */
+        body.cookbetter-v2 {
+            --primary: #cbab6e;
+            --primary-soft: #e3cda1;
+            --accent: #1f4d34;
+            --accent-soft: #7fa88f;
+            --grad-primary: linear-gradient(135deg, #173620 0%, #2d5c3d 55%, #cbab6e 100%);
+        }
+        body.cookbetter-v2 h1 {
+            font-family: var(--font-display, "Fraunces", Georgia, serif);
+            font-style: italic;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.01em;
+        }
+        body.cookbetter-v2 .badge .dot {
+            box-shadow: 0 0 0 4px rgba(203, 171, 110, 0.25);
+        }
+    </style>
 </head>
-<body>
+<body class="cookbetter-v2">
     <nav>
         <div class="nav-inner">
             <div class="brand">
                 <div class="brand-title">
                     <h3>Thomas Houdard</h3>
-                    <small>UI/UX DESIGNER · DEV WEB</small>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
                 </div>
             </div>
             <div class="burger" id="burger"><span></span></div>
@@ -31,6 +51,7 @@
                     <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                     <div class="dropdown-content">
                         <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                         <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
                         <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
                     </div>
@@ -77,11 +98,17 @@
 
             <div class="video-wrap" style="align-self:start">
             <div class="proto-wrap">
-                <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/highfid.png" alt="Maquette haute fidélité desktop Cook Better">
+                <div class="gallery" style="grid-template-columns:2.4fr 1fr;align-items:center;">
+                <img loading="lazy" src="images/cookbetter/v2_hf_desktop_home.png?v=1" alt="Cook Better V2 — écran d'accueil desktop Forest Premium">
+                <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_hf_mobile_home.png?v=1" alt="Cook Better V2 — écran d'accueil mobile Forest Premium">
                 </div>
             </div>
             </div>
+        </section>
+
+        <!-- V2 NOTICE -->
+        <section class="reveal">
+            <p class="case-context" data-key="cookbetter_v2_notice">Refonte V2 — j'ai repris ce projet pour retravailler entièrement la direction artistique ("Forest Premium" : vert profond, doré, typographie éditoriale) et construire un vrai design system, sur les versions desktop et mobile.</p>
         </section>
 
         <!-- RESPONSABILITÉS -->
@@ -92,7 +119,7 @@
             </div>
             <ul class="grid" style="grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:.5rem">
             <li style="display:flex;align-items:center;gap:.5rem">
-                <a href="#bassefid" aria-label="Voir la section Prototype basse fidélité" title="Aller au prototype basse fidélité" style="display:flex;align-items:center;gap:.5rem">
+                <a href="#wireframe" aria-label="Voir la section Wireframes et basse fidélité" title="Aller aux wireframes et basse fidélité" style="display:flex;align-items:center;gap:.5rem">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -132,7 +159,7 @@
                 </a>
             </li>
             <li style="display:flex;align-items:center;gap:.5rem">
-                <a href="#responsive-high" aria-label="Voir la section Responsive – Haute fidélité" title="Aller au responsive haute fidélité" style="display:flex;align-items:center;gap:.5rem">
+                <a href="#hautefid" aria-label="Voir la section Prototype haute fidélité" title="Aller au prototype haute fidélité desktop et mobile" style="display:flex;align-items:center;gap:.5rem">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -153,27 +180,42 @@
             </div>
         </section>
 
-        <!-- WIREFRAME -->
+        <!-- WIREFRAME / BASSE FID -->
         <section class="reveal" id="wireframe">
             <div class="section-header">
-                <h2>Wireframes</h2>
+                <h2 data-key="titre_proto_bassefid">Wireframes & basse fidélité</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="cookbetter_wireframe_context">Avant de reprendre l'identité visuelle, j'ai retravaillé la structure de chaque écran en niveaux de gris, pour le desktop comme pour le mobile : hiérarchie de l'information, priorité des actions (voir la recette du soir, ajouter au plan, démarrer la cuisson), navigation par onglets Home/Discover/Plan/Profile.</p>
+            <p class="compare-title" data-key="cookbetter_wireframe_desktop_title" style="font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin:1.5rem 0 .5rem;">Desktop</p>
             <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/wireframepapier.png" alt="Wireframes papier desktop">
-                <img loading="lazy" src="images/cookbetter/wireframepapier-tel.png" alt="Wireframes papier mobile">
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_wf_desktop_home.png?v=1" alt="Wireframe Cook Better desktop — écran d'accueil">
+                    <figcaption data-key="cookbetter_wireframe_desktop_home_caption">Home — recette du soir mise en avant, accès rapide aux recettes courtes.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_wf_desktop_detail.png?v=1" alt="Wireframe Cook Better desktop — fiche recette">
+                    <figcaption data-key="cookbetter_wireframe_desktop_detail_caption">Fiche recette — hero, infos clés et instructions numérotées, ingrédients à cocher en colonne latérale.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_wf_desktop_cooking.png?v=1" alt="Wireframe Cook Better desktop — mode cuisson">
+                    <figcaption data-key="cookbetter_wireframe_desktop_cooking_caption">Mode cuisson — une étape à la fois, avec minuteur et progression en haut d'écran.</figcaption>
+                </figure>
             </div>
-        </section>
-
-        <!-- BASSE FID -->
-        <section class="reveal" id="bassefid">
-            <div class="section-header">
-                <h2 data-key="titre_proto_bassefid">Prototype basse fidélité</h2>
-                <div class="bar"></div>
-            </div>
+            <p class="compare-title" data-key="cookbetter_wireframe_mobile_title" style="font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin:2rem 0 .5rem;">Mobile</p>
             <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/lowfid.png" alt="Prototype basse fidélité desktop">
-                <img loading="lazy" src="images/cookbetter/lowfid-tel.png" alt="Prototype basse fidélité mobile">
+                <figure>
+                    <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_wf_mobile_home.png?v=1" alt="Wireframe Cook Better mobile — écran d'accueil">
+                    <figcaption data-key="cookbetter_wireframe_mobile_home_caption">Home — même structure que desktop, condensée en une colonne.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_wf_mobile_discover.png?v=1" alt="Wireframe Cook Better mobile — écran Discover">
+                    <figcaption data-key="cookbetter_wireframe_mobile_discover_caption">Discover — recherche, filtres rapides et grille de résultats en 2 colonnes.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_wf_mobile_detail.png?v=1" alt="Wireframe Cook Better mobile — fiche recette">
+                    <figcaption data-key="cookbetter_wireframe_mobile_detail_caption">Fiche recette — onglets Ingredients/Nutrition/Steps/Reviews pour limiter le scroll.</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -183,40 +225,51 @@
                 <h2 data-key="titre_proto_hautefid">Prototype haute fidélité</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="cookbetter_hautefid_context">J'ai ensuite appliqué l'identité "Forest Premium" (vert profond, doré, fond ivoire, typographie éditoriale) et un design system de composants réutilisables, sur l'ensemble du parcours desktop et mobile : accueil, fiche recette et mode cuisson.</p>
+            <p class="compare-title" data-key="cookbetter_hautefid_desktop_title" style="font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin:1.5rem 0 .5rem;">Desktop</p>
             <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/highfid.png" alt="Prototype haute fidélité desktop global">
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_hf_desktop_home.png?v=1" alt="Cook Better desktop — écran d'accueil">
+                    <figcaption data-key="cookbetter_hautefid_desktop_home_caption">Home — "Perfect for tonight" met en avant la recette du soir et les ingrédients déjà en stock.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_hf_desktop_detail.png?v=1" alt="Cook Better desktop — fiche recette">
+                    <figcaption data-key="cookbetter_hautefid_desktop_detail_caption">Fiche recette — instructions étape par étape et liste d'ingrédients déjà cochés selon le stock.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_hf_desktop_cooking.png?v=1" alt="Cook Better desktop — mode cuisson">
+                    <figcaption data-key="cookbetter_hautefid_desktop_cooking_caption">Mode cuisson — un pas à la fois, avec minuteur intégré pour chaque étape.</figcaption>
+                </figure>
             </div>
+            <p class="compare-title" data-key="cookbetter_hautefid_mobile_title" style="font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin:2rem 0 .5rem;">Mobile</p>
             <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/highfid-tel1.png" alt="Écran mobile 1">
-                <img loading="lazy" src="images/cookbetter/highfid-tel2.png" alt="Écran mobile 2">
-                <img loading="lazy" src="images/cookbetter/highfid-tel3.png" alt="Écran mobile 3">
+                <figure>
+                    <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_hf_mobile_home.png?v=1" alt="Cook Better mobile — écran d'accueil">
+                    <figcaption data-key="cookbetter_hautefid_mobile_home_caption">Home — même logique qu'en desktop, condensée pour le pouce.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_hf_mobile_discover.png?v=1" alt="Cook Better mobile — écran Discover">
+                    <figcaption data-key="cookbetter_hautefid_mobile_discover_caption">Discover — recherche et filtres, avec le nombre de recettes réalisables avec ce qu'il y a déjà en cuisine.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" class="mobile-shot" src="images/cookbetter/v2_hf_mobile_detail.png?v=1" alt="Cook Better mobile — fiche recette">
+                    <figcaption data-key="cookbetter_hautefid_mobile_detail_caption">Fiche recette — onglets Ingredients/Nutrition/Steps/Reviews pour limiter le scroll sur petit écran.</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- RESPONSIVE LOW -->
-        <section class="reveal" id="responsive-low">
+        <!-- DESIGN SYSTEM -->
+        <section class="reveal" id="designsystem">
             <div class="section-header">
-                <h2 data-key="titre_proto_bassefid_responsive">Responsive – Basse fidélité</h2>
+                <h2 data-key="cookbetter_ds_title">Design System</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="cookbetter_ds_context">Pour garantir la cohérence entre desktop et mobile, j'ai formalisé un design system complet : palette (vert forêt, blanc cassé, or, tons sémantiques), typographie éditoriale, échelle d'espacement, iconographie, et une bibliothèque de composants réutilisables (cartes recette, sélecteurs, timers, navigation, statistiques).</p>
             <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/responsive/bassefid.png" alt="Basse fidélité responsive">
-            </div>
-        </section>
-
-        <!-- RESPONSIVE HIGH -->
-        <section class="reveal" id="responsive-high">
-            <div class="section-header">
-                <h2 data-key="titre_proto_hautefid_responsive">Responsive – Haute fidélité</h2>
-                <div class="bar"></div>
-            </div>
-            <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/responsive/highfid.png" alt="Haute fidélité responsive ensemble">
-            </div>
-            <div class="gallery">
-                <img loading="lazy" src="images/cookbetter/responsive/highfid-result1.png" alt="Résultat final 1">
-                <img loading="lazy" src="images/cookbetter/responsive/highfid-result2.png" alt="Résultat final 2">
-                <img loading="lazy" src="images/cookbetter/responsive/highfid-result3.png" alt="Résultat final 3">
+                <figure>
+                    <img loading="lazy" src="images/cookbetter/v2_designsystem.png?v=1" alt="Design system Cook Better — Forest Premium">
+                    <figcaption data-key="cookbetter_ds_caption">Fondations (couleurs, typographie, espacements, icônes) et composants (boutons, cartes recette, sélecteurs, timers, navigation, statistiques).</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -308,14 +361,7 @@
     <script>
         const translations = {
             fr: {
-                menu_about: "Accueil",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Expériences Professionnelles",
-                menu_projects_design: "Projets Design",
-                menu_projects_dev: "Projets Développement",
-                menu_projects_personal: "Perso",
-                menu_contact: "Contact",
-                menu_cv: "Travailler avec moi",
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
                 footer: "©2025 Thomas Houdard · Tous droits réservés",
                 cookbetter_banner: "Design Thinking · Low-fi · High-fi · Responsive",
                 cookbetter_hero_title: "Cook Better — Apprendre à cuisiner sain",
@@ -328,10 +374,8 @@
                 cookbetter_pres_reponsabilite2: "Design Haute Fidélité",
                 cookbetter_pres_reponsabilite3: "Tests utilisateurs",
                 cookbetter_pres_reponsabilite4: "Audit concurrentiel",
-                titre_proto_bassefid: "Prototype basse fidélité",
+                titre_proto_bassefid: "Wireframes & basse fidélité",
                 titre_proto_hautefid: "Prototype haute fidélité",
-                titre_proto_bassefid_responsive: "Responsive – Basse fidélité",
-                titre_proto_hautefid_responsive: "Responsive – Haute fidélité",
                 button_proto: "Voir le prototype Figma",
                 titre_logiciels_utilises: "Logiciels utilisés",
                 cookbetter_proto_title: "Prototype final",
@@ -340,6 +384,28 @@
                 cta_see_proto: "Voir le prototype",
                 cookbetter_side_note: "Aperçu des écrans finaux",
                 cookbetter_responsabilites_title: "Responsabilités",
+                cookbetter_v2_notice: "Refonte V2 — j'ai repris ce projet pour retravailler entièrement la direction artistique (\"Forest Premium\" : vert profond, doré, typographie éditoriale) et construire un vrai design system, sur les versions desktop et mobile.",
+                cookbetter_wireframe_context: "Avant de reprendre l'identité visuelle, j'ai retravaillé la structure de chaque écran en niveaux de gris, pour le desktop comme pour le mobile : hiérarchie de l'information, priorité des actions (voir la recette du soir, ajouter au plan, démarrer la cuisson), navigation par onglets Home/Discover/Plan/Profile.",
+                cookbetter_wireframe_desktop_title: "Desktop",
+                cookbetter_wireframe_mobile_title: "Mobile",
+                cookbetter_wireframe_desktop_home_caption: "Home — recette du soir mise en avant, accès rapide aux recettes courtes.",
+                cookbetter_wireframe_desktop_detail_caption: "Fiche recette — hero, infos clés et instructions numérotées, ingrédients à cocher en colonne latérale.",
+                cookbetter_wireframe_desktop_cooking_caption: "Mode cuisson — une étape à la fois, avec minuteur et progression en haut d'écran.",
+                cookbetter_wireframe_mobile_home_caption: "Home — même structure que desktop, condensée en une colonne.",
+                cookbetter_wireframe_mobile_discover_caption: "Discover — recherche, filtres rapides et grille de résultats en 2 colonnes.",
+                cookbetter_wireframe_mobile_detail_caption: "Fiche recette — onglets Ingredients/Nutrition/Steps/Reviews pour limiter le scroll.",
+                cookbetter_hautefid_context: "J'ai ensuite appliqué l'identité \"Forest Premium\" (vert profond, doré, fond ivoire, typographie éditoriale) et un design system de composants réutilisables, sur l'ensemble du parcours desktop et mobile : accueil, fiche recette et mode cuisson.",
+                cookbetter_hautefid_desktop_title: "Desktop",
+                cookbetter_hautefid_mobile_title: "Mobile",
+                cookbetter_hautefid_desktop_home_caption: "Home — \"Perfect for tonight\" met en avant la recette du soir et les ingrédients déjà en stock.",
+                cookbetter_hautefid_desktop_detail_caption: "Fiche recette — instructions étape par étape et liste d'ingrédients déjà cochés selon le stock.",
+                cookbetter_hautefid_desktop_cooking_caption: "Mode cuisson — un pas à la fois, avec minuteur intégré pour chaque étape.",
+                cookbetter_hautefid_mobile_home_caption: "Home — même logique qu'en desktop, condensée pour le pouce.",
+                cookbetter_hautefid_mobile_discover_caption: "Discover — recherche et filtres, avec le nombre de recettes réalisables avec ce qu'il y a déjà en cuisine.",
+                cookbetter_hautefid_mobile_detail_caption: "Fiche recette — onglets Ingredients/Nutrition/Steps/Reviews pour limiter le scroll sur petit écran.",
+                cookbetter_ds_title: "Design System",
+                cookbetter_ds_context: "Pour garantir la cohérence entre desktop et mobile, j'ai formalisé un design system complet : palette (vert forêt, blanc cassé, or, tons sémantiques), typographie éditoriale, échelle d'espacement, iconographie, et une bibliothèque de composants réutilisables (cartes recette, sélecteurs, timers, navigation, statistiques).",
+                cookbetter_ds_caption: "Fondations (couleurs, typographie, espacements, icônes) et composants (boutons, cartes recette, sélecteurs, timers, navigation, statistiques).",
                 tool_figma_title: "UI DESIGN",
                 tool_figma_name: "Figma",
                 tool_figma_desc: "Maquettes, composants, prototype haute fidélité.",
@@ -357,14 +423,7 @@
                 cookbetter_site_button: "Voir le prototype Figma"
             },
             en: {
-                menu_about: "Home",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Professional Experience",
-                menu_projects_design: "Design Projects",
-                menu_projects_dev: "Development Projects",
-                menu_projects_personal: "Personal",
-                menu_contact: "Contact",
-                menu_cv: "Work with me",
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
                 footer: "©2025 Thomas Houdard · All rights reserved",
                 cookbetter_banner: "Design Thinking · Low-fi · High-fi · Responsive",
                 cookbetter_hero_title: "Cook Better — Learn healthy cooking",
@@ -377,10 +436,8 @@
                 cookbetter_pres_reponsabilite2: "High-Fidelity Design",
                 cookbetter_pres_reponsabilite3: "User testing",
                 cookbetter_pres_reponsabilite4: "Competitive audit",
-                titre_proto_bassefid: "Low-fidelity prototype",
+                titre_proto_bassefid: "Wireframes & low-fidelity",
                 titre_proto_hautefid: "High-fidelity prototype",
-                titre_proto_bassefid_responsive: "Responsive – Low-fidelity",
-                titre_proto_hautefid_responsive: "Responsive – High-fidelity",
                 button_proto: "Open Figma prototype",
                 titre_logiciels_utilises: "Tools used",
                 cookbetter_proto_title: "Final prototype",
@@ -389,6 +446,28 @@
                 cta_see_proto: "Open prototype",
                 cookbetter_side_note: "Preview of final screens",
                 cookbetter_responsabilites_title: "Responsibilities",
+                cookbetter_v2_notice: "V2 redesign — I revisited this project to fully rework its art direction (\"Forest Premium\": deep green, gold, editorial typography) and build a proper design system, across desktop and mobile.",
+                cookbetter_wireframe_context: "Before reworking the visual identity, I restructured every screen in grayscale, for both desktop and mobile: information hierarchy, priority of key actions (view tonight's recipe, add to plan, start cooking), navigation through Home/Discover/Plan/Profile tabs.",
+                cookbetter_wireframe_desktop_title: "Desktop",
+                cookbetter_wireframe_mobile_title: "Mobile",
+                cookbetter_wireframe_desktop_home_caption: "Home — tonight's recipe up front, quick access to short recipes.",
+                cookbetter_wireframe_desktop_detail_caption: "Recipe detail — hero, key info and numbered instructions, ingredients to check off in a side column.",
+                cookbetter_wireframe_desktop_cooking_caption: "Cooking mode — one step at a time, with a timer and progress bar at the top.",
+                cookbetter_wireframe_mobile_home_caption: "Home — same structure as desktop, condensed into a single column.",
+                cookbetter_wireframe_mobile_discover_caption: "Discover — search, quick filters and a 2-column results grid.",
+                cookbetter_wireframe_mobile_detail_caption: "Recipe detail — Ingredients/Nutrition/Steps/Reviews tabs to limit scrolling.",
+                cookbetter_hautefid_context: "I then applied the \"Forest Premium\" identity (deep green, gold, ivory background, editorial typography) and a reusable component design system, across the desktop and mobile flow: home, recipe detail and cooking mode.",
+                cookbetter_hautefid_desktop_title: "Desktop",
+                cookbetter_hautefid_mobile_title: "Mobile",
+                cookbetter_hautefid_desktop_home_caption: "Home — \"Perfect for tonight\" surfaces tonight's recipe and the ingredients already in stock.",
+                cookbetter_hautefid_desktop_detail_caption: "Recipe detail — step-by-step instructions and an ingredient list already checked against stock.",
+                cookbetter_hautefid_desktop_cooking_caption: "Cooking mode — one step at a time, with a built-in timer for each step.",
+                cookbetter_hautefid_mobile_home_caption: "Home — same logic as desktop, condensed for thumb reach.",
+                cookbetter_hautefid_mobile_discover_caption: "Discover — search and filters, with the count of recipes cookable with what's already in the kitchen.",
+                cookbetter_hautefid_mobile_detail_caption: "Recipe detail — Ingredients/Nutrition/Steps/Reviews tabs to limit scrolling on small screens.",
+                cookbetter_ds_title: "Design System",
+                cookbetter_ds_context: "To keep desktop and mobile consistent, I formalized a full design system: palette (forest green, off-white, gold, semantic tones), editorial typography, spacing scale, iconography, and a library of reusable components (recipe cards, selectors, timers, navigation, stats).",
+                cookbetter_ds_caption: "Foundations (colors, typography, spacing, icons) and components (buttons, recipe cards, selectors, timers, navigation, stats).",
                 tool_figma_title: "UI DESIGN",
                 tool_figma_name: "Figma",
                 tool_figma_desc: "Mockups, components, high-fidelity prototype.",

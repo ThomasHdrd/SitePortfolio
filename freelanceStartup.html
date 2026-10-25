@@ -12,17 +12,26 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="script.js" defer></script>
+    <style>
+        body.startup-v2 {
+            --primary: #6d28d9;
+            --primary-soft: #c4b5fd;
+            --accent: #8b5cf6;
+            --accent-soft: #ddd6fe;
+            --grad-primary: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 55%, #c4b5fd 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="startup-v2">
     <nav>
         <div class="nav-inner">
             <div class="brand">
                 <div class="brand-title">
                     <h3>Thomas Houdard</h3>
-                    <small>UI/UX DESIGNER · DEV WEB</small>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
                 </div>
             </div>
 
@@ -34,6 +43,7 @@
                     <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                     <div class="dropdown-content">
                         <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                         <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
                         <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
                     </div>
@@ -52,8 +62,12 @@
         <!-- HERO -->
         <section class="hero reveal">
             <div class="hero-intro">
+                <span class="category" data-key="startup_badge">Projet client · Freelance</span>
                 <p class="hero-sub" data-key="freelance_hero_sub">Étude de cas · UI/UX · Design System</p>
                 <h1 data-key="freelance_hero_title">Refonte UI/UX pour une startup</h1>
+                <div class="company-meta">
+                    <span data-key="startup_meta_role">UI/UX Designer freelance</span>
+                </div>
                 <p data-key="freelance_hero_p1">
                     Projet freelance mené de l’audit à la livraison d’un prototype Figma cliquable. Objectifs : clarifier la hiérarchie,
                     harmoniser les composants, renforcer la cohérence visuelle et améliorer la lisibilité sur desktop et mobile.
@@ -125,6 +139,74 @@
             </div>
         </section>
 
+        <!-- DECISIONS UX/UI -->
+        <section class="reveal" id="decisions">
+            <div class="section-header">
+                <h2 data-key="startup_decisions_title">Décisions UX/UI</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="decision-block">
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_probleme">Problème</span>
+                    <p data-key="startup_decision1_probleme">Hiérarchie visuelle peu lisible et composants hétérogènes (boutons, onglets, tableaux) selon les pages.</p>
+                </div>
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_solution">Décision</span>
+                    <p data-key="startup_decision1_solution">Refonte de la hiérarchie visuelle (titres, tables, formulaires) et harmonisation de tous les composants UI.</p>
+                </div>
+            </div>
+
+            <div class="decision-block">
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_probleme">Problème</span>
+                    <p data-key="startup_decision2_probleme">Palette et contrastes irréguliers, nuisant à la lisibilité et à la cohérence de marque.</p>
+                </div>
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_solution">Décision</span>
+                    <p data-key="startup_decision2_solution">Modernisation du style : nouvelle palette, arrondis, icônes et contrastes revus.</p>
+                </div>
+            </div>
+
+            <div class="decision-block">
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_probleme">Problème</span>
+                    <p data-key="startup_decision3_probleme">Espaces et rythmes visuels incohérents rendant la lecture des pages plus fatigante.</p>
+                </div>
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_solution">Décision</span>
+                    <p data-key="startup_decision3_solution">Réorganisation des espaces et renforcement de la hiérarchie typographique pour une lecture plus fluide.</p>
+                </div>
+            </div>
+
+            <div class="decision-block">
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_probleme">Problème</span>
+                    <p data-key="startup_decision4_probleme">Responsive non uniforme selon les pages et les écrans.</p>
+                </div>
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_solution">Décision</span>
+                    <p data-key="startup_decision4_solution">Uniformisation responsive sur l’ensemble de l’interface, desktop et mobile.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESIGN SYSTEM -->
+        <section class="reveal" id="design-system">
+            <div class="section-header">
+                <h2 data-key="freelance_ds_title">Design System</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="card">
+                <ul>
+                    <li data-key="freelance_ds1">Tokens (couleurs, rayons, ombres, espacements)</li>
+                    <li data-key="freelance_ds2">Styles typographiques et grille</li>
+                    <li data-key="freelance_ds3">Composants réutilisables et variantes</li>
+                    <li data-key="freelance_ds4">Documentation d’usage</li>
+                </ul>
+            </div>
+        </section>
+
         <!-- APRES -->
         <section class="reveal" id="apres">
             <div class="section-header">
@@ -132,31 +214,20 @@
                 <div class="bar"></div>
             </div>
 
-            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-                <div class="card">
-                    <p data-key="freelance_apres_intro">
-                        La refonte a permis d’obtenir une interface plus claire, cohérente et moderne, en s’appuyant sur les principes d’UX Design et de Design System.
-                        La nouvelle palette crée une identité visuelle plus douce et structurée, tandis que la grille, les contrastes et la typographie assurent une lecture fluide et professionnelle.
-                    </p>
-                    <h4 data-key="freelance_apres_keys_title">Améliorations clés</h4>
-                    <ul>
-                        <li data-key="freelance_apres1">Hiérarchie typographique renforcée</li>
-                        <li data-key="freelance_apres2">Refonte de la hiérarchie visuelle (titres, tables, formulaires)</li>
-                        <li data-key="freelance_apres3">Réorganisation des espaces pour une meilleure lisibilité</li>
-                        <li data-key="freelance_apres4">Harmonisation des composants UI (boutons, onglets, tableaux)</li>
-                        <li data-key="freelance_apres5">Modernisation du style : couleurs, arrondis, icônes, contrastes</li>
-                        <li data-key="freelance_apres6">Uniformisation responsive sur l’ensemble de l’interface</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4 data-key="freelance_ds_title">Design System</h4>
-                    <ul>
-                        <li data-key="freelance_ds1">Tokens (couleurs, rayons, ombres, espacements)</li>
-                        <li data-key="freelance_ds2">Styles typographiques et grille</li>
-                        <li data-key="freelance_ds3">Composants réutilisables et variantes</li>
-                        <li data-key="freelance_ds4">Documentation d’usage</li>
-                    </ul>
-                </div>
+            <div class="card">
+                <p data-key="freelance_apres_intro">
+                    La refonte a permis d’obtenir une interface plus claire, cohérente et moderne, en s’appuyant sur les principes d’UX Design et de Design System.
+                    La nouvelle palette crée une identité visuelle plus douce et structurée, tandis que la grille, les contrastes et la typographie assurent une lecture fluide et professionnelle.
+                </p>
+                <h4 data-key="freelance_apres_keys_title">Améliorations clés</h4>
+                <ul>
+                    <li data-key="freelance_apres1">Hiérarchie typographique renforcée</li>
+                    <li data-key="freelance_apres2">Refonte de la hiérarchie visuelle (titres, tables, formulaires)</li>
+                    <li data-key="freelance_apres3">Réorganisation des espaces pour une meilleure lisibilité</li>
+                    <li data-key="freelance_apres4">Harmonisation des composants UI (boutons, onglets, tableaux)</li>
+                    <li data-key="freelance_apres5">Modernisation du style : couleurs, arrondis, icônes, contrastes</li>
+                    <li data-key="freelance_apres6">Uniformisation responsive sur l’ensemble de l’interface</li>
+                </ul>
             </div>
 
             <div class="section-header" style="margin-top:1.8rem">
@@ -189,7 +260,7 @@
         </section>
 
         <!-- OUTILS -->
-<section>
+<section class="reveal">
     <div class="section-header">
         <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
         <div class="bar"></div>
@@ -211,6 +282,26 @@
     </div>
 </section>
 
+        <!-- NAVIGATION ENTRE PROJETS -->
+        <section class="reveal">
+            <div class="project-nav">
+                <a class="project-nav-link" href="freelanceSeaRecovery.html" style="border-left:3px solid #0ea5e9">
+                    <span class="project-nav-label" data-key="nav_prev">Projet précédent ←</span>
+                    <span class="project-nav-name">Sea Recovery</span>
+                </a>
+                <a class="project-nav-all btn btn-outline" href="freelance.html" data-key="nav_all">Voir toutes mes missions freelance</a>
+                <a class="project-nav-link next" href="freelanceCoach.html" style="border-left:3px solid #a3e635">
+                    <span class="project-nav-label" data-key="nav_next">Projet suivant →</span>
+                    <span class="project-nav-name">Coach Sportif</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA SECONDAIRE -->
+        <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+            <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="nav_cta_title">Vous avez un projet similaire ?</h2>
+            <a href="TravaillerAvecMoi.html" class="btn btn-primary" data-key="nav_cta_button">Parler de mon projet</a>
+        </section>
     </main>
 
     <footer>
@@ -241,14 +332,7 @@
     <script>
         const translations = {
             fr: {
-                menu_about: "Accueil",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Expériences Professionnelles",
-                menu_projects_design: "Projets Design",
-                menu_projects_dev: "Projets Développement",
-                menu_projects_personal: "Perso",
-                menu_contact: "Contact",
-                menu_cv: "Travailler avec moi",
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
 
                 footer: "©2025 Thomas Houdard · Tous droits réservés",
 
@@ -296,17 +380,29 @@
                 button_proto: "Voir le prototype Figma",
 
                 titre_logiciels_utilises: "Logiciels utilisés",
-                tool_figma_desc: "Outil principal pour les maquettes haute fidélité, le design system, les composants réutilisables et le prototype interactif."
+                tool_figma_desc: "Outil principal pour les maquettes haute fidélité, le design system, les composants réutilisables et le prototype interactif.",
+
+                startup_badge: "Projet client · Freelance",
+                startup_meta_role: "UI/UX Designer freelance",
+                startup_decisions_title: "Décisions UX/UI",
+                label_probleme: "Problème",
+                label_solution: "Décision",
+                startup_decision1_probleme: "Hiérarchie visuelle peu lisible et composants hétérogènes (boutons, onglets, tableaux) selon les pages.",
+                startup_decision1_solution: "Refonte de la hiérarchie visuelle (titres, tables, formulaires) et harmonisation de tous les composants UI.",
+                startup_decision2_probleme: "Palette et contrastes irréguliers, nuisant à la lisibilité et à la cohérence de marque.",
+                startup_decision2_solution: "Modernisation du style : nouvelle palette, arrondis, icônes et contrastes revus.",
+                startup_decision3_probleme: "Espaces et rythmes visuels incohérents rendant la lecture des pages plus fatigante.",
+                startup_decision3_solution: "Réorganisation des espaces et renforcement de la hiérarchie typographique pour une lecture plus fluide.",
+                startup_decision4_probleme: "Responsive non uniforme selon les pages et les écrans.",
+                startup_decision4_solution: "Uniformisation responsive sur l’ensemble de l’interface, desktop et mobile.",
+                nav_prev: "Projet précédent ←",
+                nav_next: "Projet suivant →",
+                nav_all: "Voir toutes mes missions freelance",
+                nav_cta_title: "Vous avez un projet similaire ?",
+                nav_cta_button: "Parler de mon projet"
             },
             en: {
-                menu_about: "Home",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Professional Experience",
-                menu_projects_design: "Design Projects",
-                menu_projects_dev: "Development Projects",
-                menu_projects_personal: "Personal",
-                menu_contact: "Contact",
-                menu_cv: "Work with me",
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
 
                 footer: "©2025 Thomas Houdard · All rights reserved",
 
@@ -354,9 +450,28 @@
                 button_proto: "Open Figma prototype",
 
                 titre_logiciels_utilises: "Tools used",
-                tool_figma_desc: "Main tool for high-fidelity mockups, design system, reusable components and interactive prototype."
+                tool_figma_desc: "Main tool for high-fidelity mockups, design system, reusable components and interactive prototype.",
+
+                startup_badge: "Client project · Freelance",
+                startup_meta_role: "Freelance UI/UX Designer",
+                startup_decisions_title: "UX/UI decisions",
+                label_probleme: "Problem",
+                label_solution: "Decision",
+                startup_decision1_probleme: "Weak visual hierarchy and heterogeneous components (buttons, tabs, tables) across pages.",
+                startup_decision1_solution: "Overhauled visual hierarchy (titles, tables, forms) and harmonized every UI component.",
+                startup_decision2_probleme: "Irregular palette and contrast, hurting readability and brand consistency.",
+                startup_decision2_solution: "Modernized style: new palette, radiuses, icons and revised contrast.",
+                startup_decision3_probleme: "Inconsistent spacing and visual rhythm made pages more tiring to read.",
+                startup_decision3_solution: "Reorganized spacing and strengthened typographic hierarchy for smoother reading.",
+                startup_decision4_probleme: "Non-uniform responsive behavior across pages and screens.",
+                startup_decision4_solution: "Unified responsive behavior across the whole interface, desktop and mobile.",
+                nav_prev: "Previous project ←",
+                nav_next: "Next project →",
+                nav_all: "See all my freelance missions",
+                nav_cta_title: "Have a similar project?",
+                nav_cta_button: "Talk about my project"
             }
         };
     </script>
 </body>
-</html></div>
+</html>

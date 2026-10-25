@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Projets Développeur | Thomas Houdard</title>
+    <title>Développement Web | Thomas Houdard</title>
     <meta name="description" content="Portfolio Développeur Front-End & Back-End de Thomas Houdard : projets d'apprentissage HTML, CSS, JavaScript, jQuery, PHP, SQL." />
     <meta property="og:title" content="Projets Développeur - Portfolio" />
     <meta property="og:description" content="Front-End · Back-End · Exercices d'apprentissage" />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>    
+    <link rel="stylesheet" href="style.css?v=1" />
+    <script src="script.js" defer></script>
+    <style>
+        /* Accent par projet, issu de sa véritable interface (90% portfolio / 10% projet) */
+        .grid.cards .card.card-travel { border-top: 3px solid #f2a71b; }
+        .grid.cards .card.card-travel .category { color: #f7c876; border-color: rgba(242,167,27,.45); }
+        .grid.cards .card.card-travel:hover { box-shadow: 0 18px 40px rgba(242,167,27,.16); }
+
+        .grid.cards .card.card-snake { border-top: 3px solid #2e9e3f; }
+        .grid.cards .card.card-snake .category { color: #7fc98c; border-color: rgba(46,158,63,.45); }
+        .grid.cards .card.card-snake:hover { box-shadow: 0 18px 40px rgba(46,158,63,.16); }
+
+        .grid.cards .card.card-top5 { border-top: 3px solid #c41e2a; }
+        .grid.cards .card.card-top5 .category { color: #e8a0a5; border-color: rgba(196,30,42,.45); }
+        .grid.cards .card.card-top5:hover { box-shadow: 0 18px 40px rgba(196,30,42,.16); }
+
+        .grid.cards .card.card-burger { border-top: 3px solid #e8541f; }
+        .grid.cards .card.card-burger .category { color: #f7c94a; border-color: rgba(232,84,31,.45); }
+        .grid.cards .card.card-burger:hover { box-shadow: 0 18px 40px rgba(232,84,31,.16); }
+    </style>
 </head>
 <body>
     <nav>
@@ -19,7 +37,7 @@
             <div class="brand">
                 <div class="brand-title">
                     <h3>Thomas Houdard</h3>
-                    <small>UI/UX DESIGNER · DEV WEB</small>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
                 </div>
             </div>
             <div class="burger" id="burger"><span></span></div>
@@ -29,6 +47,7 @@
                     <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
                     <div class="dropdown-content">
                         <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Professionnelles</a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                         <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
                         <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Développement</a>
                     </div>
@@ -46,10 +65,11 @@
     <main class="wrapper">
         <section class="reveal">
             <div class="section-header">
-                <h1 data-key="page_title_projets_dev">Projets Développeur</h1>
+                <h1 data-key="page_title_projets_dev">Développement Web</h1>
                 <div class="bar"></div>
             </div>
-            <p style="max-width:880px;color:var(--text-dim)" data-key="page_intro_projets_dev"></p>
+            <p style="color:var(--text-dim)" data-key="page_intro_projets_dev"></p>
+            <p style="color:var(--text-dim)" data-key="page_link_uxui"></p>
         </section>
 
         <!-- FRONT-END -->
@@ -60,37 +80,40 @@
             </div>
             <div class="grid cards">
                 <!-- Travel Agency -->
-                <div class="card">
+                <div class="card card-travel">
                     <img src="images/developpeur/travel.png" alt="Agence de voyage - HTML CSS" loading="lazy">
+                    <span class="category" data-key="dev_travel_badge">Intégration Front-End</span>
+                    <h3 data-key="dev_travelAgency_title"></h3>
+                    <h4>HTML · CSS · Responsive</h4>
+                    <p data-key="dev_travelAgency"></p>
                     <div class="tags">
                         <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span>
                     </div>
-                    <h3 data-key="dev_travelAgency_title"></h3>
-                    <h4>HTML · CSS · VS Code</h4>
-                    <p data-key="dev_travelAgency"></p>
                     <a href="travelagency.html" class="btn btn-primary" data-key="button"></a>
                 </div>
                 <!-- Snake -->
-                <div class="card">
+                <div class="card card-snake">
                     <img src="images/developpeur/snake.png" alt="Snake Game - JavaScript" loading="lazy">
+                    <span class="category" data-key="dev_snake_badge">Projet JavaScript</span>
+                    <h3 data-key="dev_snake_title"></h3>
+                    <h4>JavaScript · HTML · CSS</h4>
+                    <p data-key="dev_snake"></p>
                     <div class="tags">
                         <span class="tag">JavaScript</span><span class="tag">Canvas</span><span class="tag">Game</span>
                     </div>
-                    <h3 data-key="dev_snake_title"></h3>
-                    <h4>JavaScript · HTML · CSS · VS Code</h4>
-                    <p data-key="dev_snake"></p>
                     <a href="snake.html" class="btn btn-primary" data-key="button"></a>
                 </div>
                 <!-- Top 5 Acteurs -->
-                <div class="card">
+                <div class="card card-top5">
                     <img src="images/developpeur/acteur.png" alt="Top 5 Acteurs - jQuery" loading="lazy">
+                    <span class="category" data-key="dev_top5_badge">Interactions Front-End</span>
+                    <h3 data-key="dev_top5acteurs_title"></h3>
+                    <h4>jQuery · HTML · CSS</h4>
+                    <p data-key="dev_top5acteurs"></p>
                     <div class="tags">
                         <span class="tag">jQuery</span><span class="tag">DOM</span><span class="tag">Interaction</span>
                     </div>
-                        <h3 data-key="dev_top5acteurs_title"></h3>
-                        <h4>jQuery · HTML · CSS · VS Code</h4>
-                        <p data-key="dev_top5acteurs"></p>
-                        <a href="top5acteurs.html" class="btn btn-primary" data-key="button"></a>
+                    <a href="top5acteurs.html" class="btn btn-primary" data-key="button"></a>
                 </div>
             </div>
         </section>
@@ -103,14 +126,15 @@
             </div>
             <div class="grid cards">
                 <!-- Burger Code -->
-                <div class="card">
+                <div class="card card-burger">
                     <img src="images/developpeur/burger.png" alt="Burger Code - PHP SQL" loading="lazy">
-                    <div class="tags">
-                        <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">CRUD</span>
-                    </div>
+                    <span class="category" data-key="dev_burger_badge">Projet Full-Stack</span>
                     <h3 data-key="dev_burger_title"></h3>
-                    <h4>PHP · SQL · HTML · CSS · VS Code</h4>
+                    <h4>PHP · MySQL · HTML · CSS</h4>
                     <p data-key="dev_burger"></p>
+                    <div class="tags">
+                        <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">CRUD</span>
+                    </div>
                     <a href="burger.html" class="btn btn-primary" data-key="button"></a>
                 </div>
                 <div></div>
@@ -138,36 +162,46 @@
     <script>
         const translations = {
             fr: {
-                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
-                page_title_projets_dev:"Projets Développeur",
-                page_intro_projets_dev:"Sélection de projets d'apprentissage Front-End et Back-End illustrant progression et technologies utilisées.",
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                page_title_projets_dev:"Développement Web",
+                page_intro_projets_dev:"Une sélection de projets réalisés pour approfondir l'intégration Front-End, JavaScript et les bases du développement Back-End. Cette pratique technique me permet aujourd'hui de concevoir des interfaces plus réalistes et de mieux collaborer avec les développeurs.",
+                page_link_uxui:"Ma pratique du développement Front-End me permet de mieux comprendre les contraintes techniques, de concevoir des interfaces réalistes et de faciliter la collaboration entre design et développement.",
                 titre_projets_dev_frontend:"Front-End",
                 titre_projets_dev_backend:"Back-End",
+                dev_travel_badge:"Intégration Front-End",
                 dev_travelAgency_title:"AGENCE DE VOYAGE",
-                dev_travelAgency:"Apprentissage du HTML et du CSS en créant un site web pour le voyage.",
+                dev_travelAgency:"Intégration HTML/CSS responsive d'une page vitrine, structurée pour une lecture claire sur desktop et mobile.",
+                dev_snake_badge:"Projet JavaScript",
                 dev_snake_title:"JEU DU SERPENT",
-                dev_snake:"Apprentissage du JavaScript en recréant le fameux jeu Snake.",
+                dev_snake:"Logique JavaScript d'un jeu Snake : boucle de jeu, déplacement, collisions et score.",
+                dev_top5_badge:"Interactions Front-End",
                 dev_top5acteurs_title:"TOP 5 ACTEURS",
-                dev_top5acteurs:"Apprentissage du jQuery en créant un site web interactif.",
+                dev_top5acteurs:"Interactions DOM et manipulation jQuery pour un classement dynamique d'acteurs et de films.",
+                dev_burger_badge:"Projet Full-Stack",
                 dev_burger_title:"BURGER CODE",
-                dev_burger:"Apprentissage du PHP et du SQL en créant un site web dynamique de réservation de burger.",
+                dev_burger:"Application de commande en ligne avec interface d'administration CRUD, du front-end à la base de données MySQL.",
                 button:"PLUS D'INFOS",
                 footer:"©2025 Thomas Houdard · Tous droits réservés"
             },
             en: {
-                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
-                page_title_projets_dev:"Developer Projects",
-                page_intro_projets_dev:"Selection of Front-End and Back-End learning projects showing progression and used technologies.",
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                page_title_projets_dev:"Web Development",
+                page_intro_projets_dev:"A selection of projects built to deepen my Front-End integration, JavaScript and Back-End development fundamentals. This technical practice helps me design more realistic interfaces today and collaborate better with developers.",
+                page_link_uxui:"My Front-End development practice helps me better understand technical constraints, design realistic interfaces and ease collaboration between design and development.",
                 titre_projets_dev_frontend:"Front-End",
                 titre_projets_dev_backend:"Back-End",
+                dev_travel_badge:"Front-End Integration",
                 dev_travelAgency_title:"TRAVEL AGENCY",
-                dev_travelAgency:"Learning HTML & CSS by creating a travel website.",
+                dev_travelAgency:"Responsive HTML/CSS integration of a showcase page, structured for clear reading on desktop and mobile.",
+                dev_snake_badge:"JavaScript project",
                 dev_snake_title:"SNAKE GAME",
-                dev_snake:"Learning JavaScript by recreating the classic Snake game.",
+                dev_snake:"JavaScript logic for a Snake game: game loop, movement, collisions and score.",
+                dev_top5_badge:"Front-End interactions",
                 dev_top5acteurs_title:"TOP 5 ACTORS",
-                dev_top5acteurs:"Learning jQuery by building an interactive ranking site.",
+                dev_top5acteurs:"DOM interactions and jQuery manipulation for a dynamic ranking of actors and films.",
+                dev_burger_badge:"Full-Stack project",
                 dev_burger_title:"BURGER CODE",
-                dev_burger:"Learning PHP & SQL by building a dynamic burger ordering website.",
+                dev_burger:"Online ordering application with a CRUD admin interface, from the front-end to the MySQL database.",
                 button:"MORE INFO",
                 footer:"©2025 Thomas Houdard · All rights reserved"
             }

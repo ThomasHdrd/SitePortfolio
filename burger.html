@@ -10,17 +10,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.burger-v2 {
+        --primary: #3d1f0a;
+        --primary-soft: #f2b378;
+        --accent: #e8541f;
+        --accent-soft: #f7c94a;
+        --grad-primary: linear-gradient(135deg, #241206 0%, #a83a15 55%, #e8541f 100%);
+    }
+</style>
 </head>
-<body>
+<body class="burger-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -30,6 +39,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -48,6 +58,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="burger_badge">Projet Full-Stack</span>
             <p class="hero-sub" data-key="burger_banner"></p>
             <h1>BURGER CODE</h1>
             <p data-key="burger_tagline"></p>
@@ -77,39 +88,87 @@
         </div>
     </section>
 
-    <!-- OVERVIEW -->
+    <!-- 01 OBJECTIF -->
     <section class="reveal" id="overview">
         <div class="section-header">
-            <h2 data-key="burger_overview_title" style="margin-bottom:0;"></h2>
+            <h2 data-key="burger_overview_title" style="margin-bottom:0;">01 — Objectif</h2>
             <div class="bar"></div>
         </div>
         <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
             <div>
-                <p data-key="burger_pres1"></p>
-                <p data-key="burger_pres2"></p>
-                <p data-key="burger_pres3"></p>
+                <p data-key="burger_objectif_text"></p>
             </div>
         </div>
-        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
-            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="burger_focus_title"></strong>
-            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
-                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="burger_focus1"></span></li>
-                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="burger_focus2"></span></li>
-                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="burger_focus3"></span></li>
-            </ul>
+    </section>
+
+    <!-- 02 ARCHITECTURE -->
+    <section class="reveal" id="architecture">
+        <div class="section-header">
+            <h2 data-key="burger_archi_title">02 — Architecture du projet</h2>
+            <div class="bar"></div>
         </div>
+        <div class="highlight" style="margin:0 0 1rem;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;font-weight:600">
+            <span>Interface (HTML/CSS/JS)</span>
+            <span style="color:var(--accent)">→</span>
+            <span>PHP</span>
+            <span style="color:var(--accent)">→</span>
+            <span>MySQL</span>
+        </div>
+        <p data-key="burger_archi_text"></p>
+    </section>
+
+    <!-- 03 INTERFACE UTILISATEUR -->
+    <section class="reveal" id="ui">
+        <div class="section-header">
+            <h2 data-key="burger_ui_title">03 — Interface utilisateur</h2>
+            <div class="bar"></div>
+        </div>
+        <p data-key="burger_pres1"></p>
+    </section>
+
+    <!-- 04 INTERFACE ADMIN -->
+    <section class="reveal" id="admin">
+        <div class="section-header">
+            <h2 data-key="burger_admin_title">04 — Interface admin</h2>
+            <div class="bar"></div>
+        </div>
+        <p data-key="burger_pres2"></p>
         <div>
             <img src="images/developpeur/burger/burger1.png" alt="Interface admin" style="width:100%;border-radius:10px">
             <small data-key="burger_admin_caption"></small>
         </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="reveal" id="features" aria-labelledby="features-title">
+    <!-- 05 CRUD -->
+    <section class="reveal" id="crud">
         <div class="section-header">
-            <h2 id="features-title" data-key="burger_features_title"></h2>
+            <h2 data-key="burger_crud_title">05 — CRUD</h2>
             <div class="bar"></div>
         </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem">
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="burger_crud_create"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="burger_crud_read"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="burger_crud_update"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="burger_crud_delete"></span></li>
+        </ul>
+    </section>
+
+    <!-- 06 BASE DE DONNÉES -->
+    <section class="reveal" id="database">
+        <div class="section-header">
+            <h2 data-key="burger_db_title">06 — Base de données</h2>
+            <div class="bar"></div>
+        </div>
+        <p data-key="burger_db_text"></p>
+    </section>
+
+    <!-- 07 RÉSULTAT -->
+    <section class="reveal" id="features" aria-labelledby="features-title">
+        <div class="section-header">
+            <h2 id="features-title" data-key="burger_features_title">07 — Résultat</h2>
+            <div class="bar"></div>
+        </div>
+        <p data-key="burger_pres3"></p>
         <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem">
             <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="burger_feature1"></span></li>
             <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="burger_feature2"></span></li>
@@ -121,7 +180,7 @@
     <!-- TECHNOLOGIES -->
     <section class="reveal" id="technologies">
         <div class="section-header">
-            <h2 data-key="titre_dev_technos"></h2>
+            <h2 data-key="titre_dev_technos">08 — Technologies</h2>
             <div class="bar"></div>
         </div>
         <div class="tool-grid">
@@ -163,6 +222,30 @@
             <a class="btn btn-primary" target="_blank" href="https://github.com/ThomasHdrd/BurgerCode" data-key="burger_button_code" style="flex:1;text-align:center;"></a>
         </div>
     </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="top5acteurs.html" style="border-left:3px solid #c41e2a">
+                <span class="project-nav-label" data-key="dev_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Top 5 Acteurs</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDeveloppeur.html" data-key="dev_nav_all">Voir tous les projets Développement</a>
+            <a class="project-nav-link next" href="travelagency.html" style="border-left:3px solid #f2a71b">
+                <span class="project-nav-label" data-key="dev_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Travel Agency</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="dev_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="dev_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="dev_cta_contact">Me contacter</a>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -184,14 +267,7 @@
 <script>
 const translations = {
   fr: {
-    menu_about:"Accueil",
-    menu_portfolio:"Portfolio ▾",
-    menu_exp_pro:"Expériences Professionnelles",
-    menu_projects_design:"Projets Design",
-    menu_projects_dev:"Projets Développement",
-    menu_projects_personal:"Perso",
-    menu_contact:"Contact",
-    menu_cv:"Travailler avec moi",
+    menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
     footer:"©2025 Thomas Houdard · Tous droits réservés",
     burger_banner:"Application web · CRUD · Temps réel",
     burger_tagline:"Commande de burgers en ligne avec interface d’administration (ajout, édition, suppression).",
@@ -200,21 +276,29 @@ const translations = {
     burger_meta_stack:"STACK : HTML · CSS · JS · PHP · MySQL",
     burger_meta_date:"DATE : 2024",
     burger_meta_duree:"DURÉE : 1 semaine",
-    burger_overview_title:"Présentation",
+    burger_overview_title:"01 — Objectif",
+    burger_objectif_text:"Concevoir une application de commande de burgers en ligne, avec un espace public pour les clients et un espace d'administration pour gérer le catalogue.",
+    burger_archi_title:"02 — Architecture du projet",
+    burger_archi_text:"Une architecture front / back séparée : l'interface envoie des requêtes à des scripts PHP, qui lisent et écrivent dans une base de données MySQL.",
+    burger_ui_title:"03 — Interface utilisateur",
     burger_pres1:"Burger Code permet aux utilisateurs de parcourir un catalogue de burgers et de passer des commandes.",
+    burger_admin_title:"04 — Interface admin",
     burger_pres2:"Côté administrateur : gestion complète des items (CRUD) et suivi des commandes.",
     burger_pres3:"L’architecture séparée (front / back) simplifie l’évolution vers plus de logique métier.",
     burger_admin_caption:"Vue d’un écran d’administration (liste des produits).",
-    burger_focus_title:"Focus",
-    burger_focus1:"Interface claire client / admin",
-    burger_focus2:"Opérations CRUD simples",
-    burger_focus3:"Base prête pour extension (auth, rôles)",
-    burger_features_title:"Fonctionnalités",
+    burger_crud_title:"05 — CRUD",
+    burger_crud_create:"Create · Ajouter un item",
+    burger_crud_read:"Read · Voir un item",
+    burger_crud_update:"Update · Modifier un item",
+    burger_crud_delete:"Delete · Supprimer un item",
+    burger_db_title:"06 — Base de données",
+    burger_db_text:"MySQL stocke les produits, leurs catégories et prix, ainsi que les commandes passées par les utilisateurs.",
+    burger_features_title:"07 — Résultat",
     burger_feature1:"Catalogue de burgers",
     burger_feature2:"Système de commande",
     burger_feature3:"Interface admin CRUD",
     burger_feature4:"Organisation modulaire",
-    titre_dev_technos:"Technologies utilisées",
+    titre_dev_technos:"08 — Technologies",
     burger_tech_html:"Structure sémantique des pages.",
     burger_tech_css:"Mise en page responsive & composants.",
     burger_tech_js:"Interactions (menu, validations).",
@@ -226,17 +310,17 @@ const translations = {
     cta_scroll_overview:"Voir la présentation",
     cta_scroll_tools:"Voir les technologies",
     burger_cta_features:"Fonctionnalités",
-    burger_cta_links:"Liens"
+    burger_cta_links:"Liens",
+    burger_badge:"Projet Full-Stack",
+    dev_nav_prev:"Projet précédent ←",
+    dev_nav_next:"Projet suivant →",
+    dev_nav_all:"Voir tous les projets Développement",
+    dev_cta_title:"Découvrir mes projets Product & UX/UI",
+    dev_cta_button:"Voir mes projets Product & UX/UI",
+    dev_cta_contact:"Me contacter"
   },
   en: {
-    menu_about:"Home",
-    menu_portfolio:"Portfolio ▾",
-    menu_exp_pro:"Work Experience",
-    menu_projects_design:"Design Projects",
-    menu_projects_dev:"Development Projects",
-    menu_projects_personal:"Personal",
-    menu_contact:"Contact",
-    menu_cv:"Work with me",
+    menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
     footer:"©2025 Thomas Houdard · All rights reserved",
     burger_banner:"Web App · CRUD · Real-time",
     burger_tagline:"Online burger ordering with admin interface (add, edit, delete).",
@@ -245,21 +329,29 @@ const translations = {
     burger_meta_stack:"STACK: HTML · CSS · JS · PHP · MySQL",
     burger_meta_date:"DATE: 2024",
     burger_meta_duree:"DURATION: 1 week",
-    burger_overview_title:"Overview",
+    burger_overview_title:"01 — Objective",
+    burger_objectif_text:"Design an online burger ordering application, with a public area for customers and an admin area to manage the catalog.",
+    burger_archi_title:"02 — Project architecture",
+    burger_archi_text:"A separated front / back architecture: the interface sends requests to PHP scripts, which read and write to a MySQL database.",
+    burger_ui_title:"03 — User interface",
     burger_pres1:"Burger Code lets users browse a burger catalog and place orders.",
+    burger_admin_title:"04 — Admin interface",
     burger_pres2:"Admin side: full item management (CRUD) and order tracking.",
     burger_pres3:"Separated architecture (front / back) eases future business logic.",
     burger_admin_caption:"Admin screen (product list).",
-    burger_focus_title:"Focus",
-    burger_focus1:"Clear customer / admin UI",
-    burger_focus2:"Simple CRUD operations",
-    burger_focus3:"Ready for extensions (auth, roles)",
-    burger_features_title:"Features",
+    burger_crud_title:"05 — CRUD",
+    burger_crud_create:"Create · Add an item",
+    burger_crud_read:"Read · View an item",
+    burger_crud_update:"Update · Edit an item",
+    burger_crud_delete:"Delete · Remove an item",
+    burger_db_title:"06 — Database",
+    burger_db_text:"MySQL stores products, their categories and prices, as well as orders placed by users.",
+    burger_features_title:"07 — Result",
     burger_feature1:"Burger catalog",
     burger_feature2:"Order system",
     burger_feature3:"Admin CRUD interface",
     burger_feature4:"Modular organization",
-    titre_dev_technos:"Technologies used",
+    titre_dev_technos:"08 — Technologies",
     burger_tech_html:"Semantic page structure.",
     burger_tech_css:"Responsive layout & components.",
     burger_tech_js:"Interactions (menu, validations).",
@@ -271,7 +363,14 @@ const translations = {
     cta_scroll_overview:"View overview",
     cta_scroll_tools:"View technologies",
     burger_cta_features:"Features",
-    burger_cta_links:"Links"
+    burger_cta_links:"Links",
+    burger_badge:"Full-Stack project",
+    dev_nav_prev:"Previous project ←",
+    dev_nav_next:"Next project →",
+    dev_nav_all:"See all Development projects",
+    dev_cta_title:"Discover my Product & UX/UI projects",
+    dev_cta_button:"See my Product & UX/UI projects",
+    dev_cta_contact:"Contact me"
   }
 };
 </script>

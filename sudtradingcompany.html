@@ -8,17 +8,26 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <script src="script.js" defer></script>  
+  <script src="script.js" defer></script>
+  <style>
+    body.stc-v2 {
+      --primary: #4a5568;
+      --primary-soft: #c7ced8;
+      --accent: #9aa3b2;
+      --accent-soft: #c7ced8;
+      --grad-primary: linear-gradient(135deg, #2b323d 0%, #4a5568 55%, #9aa3b2 100%);
+    }
+  </style>
 </head>
-<body>
+<body class="stc-v2">
   <nav>
     <div class="nav-inner">
       <div class="brand">
         <div class="brand-title">
           <h3>Thomas Houdard</h3>
-          <small>UI/UX Designer · Dev Web</small>
+          <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
         </div>
       </div>
 
@@ -27,9 +36,10 @@
       <ul class="menu" id="menu">
         <li><a href="index.html" data-key="menu_about">Accueil</a></li>
         <li class="dropdown">
-          <a href="experiencesProfessionnelles.html" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
           <div class="dropdown-content">
             <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
             <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
             <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
 
@@ -50,6 +60,7 @@
     <section class="reveal">
       <div class="case-hero">
         <div>
+          <span class="category" data-key="stc_badge">Mission Front-End</span>
           <p class="case-meta" data-key="stc_meta">Étude de cas · Front-End · Angular</p>
           <h1 data-key="stc_title">Application métier pour Sud Trading Company</h1>
           <p class="case-subtitle" data-key="stc_subtitle">
@@ -74,7 +85,7 @@
     <!-- CONTEXTE & MISSION -->
     <section class="reveal">
       <div class="section-header">
-        <h2 data-key="stc_context_title">Contexte & mission</h2>
+        <h2 data-key="stc_context_title">01 — Contexte & mission</h2>
         <div class="bar"></div>
       </div>
 
@@ -103,10 +114,10 @@
       </div>
     </section>
 
-    <!-- MON RÔLE -->
+    <!-- MES CONTRIBUTIONS -->
     <section class="reveal">
       <div class="section-header">
-        <h2 data-key="stc_role_title">Mon rôle</h2>
+        <h2 data-key="stc_role_title">02 — Mes contributions</h2>
         <div class="bar"></div>
       </div>
 
@@ -120,8 +131,8 @@
               fonctionnement de l’application en production.
             </li>
             <li data-key="stc_role_l2">
-              Modification et optimisation de composants existants pour améliorer la lisibilité, la
-              cohérence visuelle et la fluidité de navigation.
+              Modification et optimisation de composants existants pour améliorer la lisibilité et la
+              cohérence visuelle.
             </li>
           </ul>
         </article>
@@ -135,58 +146,33 @@
               correctifs à appliquer.
             </li>
             <li data-key="stc_role_l4">
-              Support à l’équipe de développement dans un environnement Agile : échanges réguliers,
-              remontées d’anomalies et propositions d’améliorations UI.
+              Support à l’équipe de développement dans un environnement Agile : échanges réguliers et
+              remontées d’anomalies.
             </li>
           </ul>
         </article>
       </div>
     </section>
 
-    <!-- COMPÉTENCES & TECHNOLOGIES -->
+    <!-- UI & EXPÉRIENCE -->
     <section class="reveal">
       <div class="section-header">
-        <h2 data-key="stc_skills_title">Compétences & technologies utilisées</h2>
+        <h2 data-key="stc_ui_title">03 — UI & expérience</h2>
         <div class="bar"></div>
       </div>
-
-      <div class="grid cols-3">
-        <article class="card">
-          <small data-key="stc_skills_block1_label">Front-End</small>
-          <h3 data-key="stc_skills_block1_title">Angular & intégration</h3>
-          <ul>
-            <li data-key="stc_skill_l1">Développement d’interfaces avec Angular et TypeScript.</li>
-            <li data-key="stc_skill_l2">Gestion de composants réutilisables et logiques d’affichage.</li>
-            <li data-key="stc_skill_l3">Intégration HTML/CSS responsive en cohérence avec le design existant.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <small data-key="stc_skills_block2_label">Qualité</small>
-          <h3 data-key="stc_skills_block2_title">Tests & débogage</h3>
-          <ul>
-            <li data-key="stc_skill_l4">Tests fonctionnels sur les parcours clés de l’application.</li>
-            <li data-key="stc_skill_l5">Débogage et correction de bugs mineurs côté front.</li>
-            <li data-key="stc_skill_l6">Suivi des retours utilisateurs internes pour prioriser les correctifs.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <small data-key="stc_skills_block3_label">Collaboration</small>
-          <h3 data-key="stc_skills_block3_title">Travail en équipe</h3>
-          <ul>
-            <li data-key="stc_skill_l7">Collaboration avec l’équipe de développement en environnement Agile.</li>
-            <li data-key="stc_skill_l8">Communication régulière avec les référents techniques.</li>
-            <li data-key="stc_skill_l9">Documentation claire des changements et des impacts.</li>
-          </ul>
-        </article>
+      <div class="card">
+        <p data-key="stc_ui_text">
+          En parallèle du développement, j’ai proposé quelques améliorations ponctuelles de l’interface
+          (lisibilité, cohérence visuelle, fluidité de navigation) — sans que cela constitue une mission
+          UX/UI complète sur ce projet.
+        </p>
       </div>
     </section>
 
-    <!-- LOGICIELS UTILISÉS -->
+    <!-- ENVIRONNEMENT TECHNIQUE -->
     <section class="reveal">
       <div class="section-header">
-        <h2 data-key="stc_tools_title">Logiciels utilisés</h2>
+        <h2 data-key="stc_tools_title">04 — Environnement technique</h2>
         <div class="bar"></div>
       </div>
 
@@ -229,20 +215,35 @@
       </div>
     </section>
 
+    <!-- COLLABORATION -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_collab_title">05 — Collaboration</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="card">
+        <ul>
+          <li data-key="stc_skill_l7">Collaboration avec l’équipe de développement en environnement Agile.</li>
+          <li data-key="stc_skill_l8">Communication régulière avec les référents techniques.</li>
+          <li data-key="stc_skill_l9">Documentation claire des changements et des impacts.</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- RÉSULTAT & LIEN -->
     <section class="reveal">
       <div class="section-header">
-        <h2 data-key="stc_outcome_title">Résultat & lien</h2>
+        <h2 data-key="stc_outcome_title">06 — Résultat & lien</h2>
         <div class="bar"></div>
       </div>
 
       <article class="card">
-        <small data-key="stc_outcome_label">Impact</small>
-        <h3 data-key="stc_outcome_heading">Une application plus claire et maintenable</h3>
+        <small data-key="stc_outcome_label">Bilan</small>
+        <h3 data-key="stc_outcome_heading">Contribution à l’évolution de l’application</h3>
         <p data-key="stc_outcome_text">
-          Cette mission m’a permis de contribuer à la stabilité et à l’évolution d’une application
-          métier Angular existante, en améliorant à la fois l’interface et la qualité du front-end.
-          Elle a également renforcé mon expérience dans les environnements techniques exigeants.
+          Cette mission m’a permis de contribuer à l’évolution et à la stabilisation d’une application
+          métier Angular existante. Elle a également renforcé mon expérience dans les environnements
+          techniques exigeants.
         </p>
         <div class="card-cta">
           <a href="https://stcpro.fr/FR/" target="_blank" rel="noopener" class="btn btn-primary" data-key="stc_outcome_cta">
@@ -250,6 +251,30 @@
           </a>
         </div>
       </article>
+    </section>
+
+    <!-- NAVIGATION ENTRE EXPÉRIENCES -->
+    <section class="reveal">
+      <div class="project-nav">
+        <a class="project-nav-link" href="chromateq.html" style="border-left:3px solid #e0792e">
+          <span class="project-nav-label" data-key="exp_nav_prev">Expérience précédente ←</span>
+          <span class="project-nav-name">Chromateq</span>
+        </a>
+        <a class="project-nav-all btn btn-outline" href="experiencesProfessionnelles.html" data-key="exp_nav_all">Voir toutes mes expériences</a>
+        <a class="project-nav-link next" href="freelance.html" style="border-left:3px solid #7c8fa3">
+          <span class="project-nav-label" data-key="exp_nav_next">Expérience suivante →</span>
+          <span class="project-nav-name">Freelance</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+      <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="exp_cta_title">Vous souhaitez échanger sur mon parcours ?</h2>
+      <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary" data-key="exp_cta_button">Me contacter</a>
+        <a href="cv/CV_Thomas_Houdard.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-key="exp_cta_cv">Voir mon CV</a>
+      </div>
     </section>
   </main>
 
@@ -280,20 +305,14 @@
   <script>
     const translations = {
       fr: {
-        menu_about:"Accueil",
-        menu_portfolio:"Portfolio ▾",
-        menu_exp_pro:"Expériences Professionnelles",
-        menu_projects_design:"Projets Design",
-        menu_projects_dev:"Projets Développement",
-        menu_projects_personal:"Perso",
-        menu_contact:"Contact",
-        menu_cv:"Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
 
+        stc_badge:"Mission Front-End",
         stc_meta:"Étude de cas · Front-End · Angular",
         stc_title:"Application métier pour Sud Trading Company",
         stc_subtitle:"Mission de développement front-end Angular pour une application métier utilisée en environnement industriel : optimisation de l’interface, stabilité et support à l’équipe produit.",
 
-        stc_context_title:"Contexte & mission",
+        stc_context_title:"01 — Contexte & mission",
         stc_context_label:"Entreprise & enjeux",
         stc_context_heading:"Sud Trading Company",
         stc_context_text:"Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l’intégration et la maintenance de solutions logicielles pour des environnements industriels et techniques. L’équipe avait besoin de renforcer le front-end d’une application Angular existante tout en améliorant la lisibilité et la stabilité du produit.",
@@ -305,34 +324,20 @@
         stc_role_item_duration:"Durée : 1 mois",
         stc_role_item_env:"Environnement : Angular, Git, VMware, VS Code",
 
-        stc_role_title:"Mon rôle",
+        stc_role_title:"02 — Mes contributions",
         stc_role_block1_label:"Front-End & composants",
         stc_role_block1_title:"Évolution de l’interface",
         stc_role_l1:"Participation au déploiement de nouvelles fonctionnalités Angular, en veillant au bon fonctionnement de l’application en production.",
-        stc_role_l2:"Modification et optimisation de composants existants pour améliorer la lisibilité, la cohérence visuelle et la fluidité de navigation.",
+        stc_role_l2:"Modification et optimisation de composants existants pour améliorer la lisibilité et la cohérence visuelle.",
         stc_role_block2_label:"Support & qualité",
         stc_role_block2_title:"Stabilité & support technique",
         stc_role_l3:"Réalisation de tests fonctionnels ciblés pour détecter les anomalies et documenter les correctifs à appliquer.",
-        stc_role_l4:"Support à l’équipe de développement dans un environnement Agile : échanges réguliers, remontées d’anomalies et propositions d’améliorations UI.",
+        stc_role_l4:"Support à l’équipe de développement dans un environnement Agile : échanges réguliers et remontées d’anomalies.",
 
-        stc_skills_title:"Compétences & technologies utilisées",
-        stc_skills_block1_label:"Front-End",
-        stc_skills_block1_title:"Angular & intégration",
-        stc_skill_l1:"Développement d’interfaces avec Angular et TypeScript.",
-        stc_skill_l2:"Gestion de composants réutilisables et logiques d’affichage.",
-        stc_skill_l3:"Intégration HTML/CSS responsive en cohérence avec le design existant.",
-        stc_skills_block2_label:"Qualité",
-        stc_skills_block2_title:"Tests & débogage",
-        stc_skill_l4:"Tests fonctionnels sur les parcours clés de l’application.",
-        stc_skill_l5:"Débogage et correction de bugs mineurs côté front.",
-        stc_skill_l6:"Suivi des retours utilisateurs internes pour prioriser les correctifs.",
-        stc_skills_block3_label:"Collaboration",
-        stc_skills_block3_title:"Travail en équipe",
-        stc_skill_l7:"Collaboration avec l’équipe de développement en environnement Agile.",
-        stc_skill_l8:"Communication régulière avec les référents techniques.",
-        stc_skill_l9:"Documentation claire des changements et des impacts.",
+        stc_ui_title:"03 — UI & expérience",
+        stc_ui_text:"En parallèle du développement, j’ai proposé quelques améliorations ponctuelles de l’interface (lisibilité, cohérence visuelle, fluidité de navigation) — sans que cela constitue une mission UX/UI complète sur ce projet.",
 
-        stc_tools_title:"Logiciels utilisés",
+        stc_tools_title:"04 — Environnement technique",
         stc_tools_cat1:"Framework front-end",
         stc_tools_desc1:"Framework principal utilisé pour le développement de l’application web : composants dynamiques, routing et gestion des états côté client.",
         stc_tools_cat2:"Environnement de développement",
@@ -340,30 +345,36 @@
         stc_tools_cat3:"Environnements virtuels",
         stc_tools_desc3:"Utilisé pour créer et gérer des environnements de test isolés, afin de valider les modifications sans impacter l’infrastructure principale.",
 
-        stc_outcome_title:"Résultat & lien",
-        stc_outcome_label:"Impact",
-        stc_outcome_heading:"Une application plus claire et maintenable",
-        stc_outcome_text:"Cette mission m’a permis de contribuer à la stabilité et à l’évolution d’une application métier Angular existante, en améliorant à la fois l’interface et la qualité du front-end. Elle a également renforcé mon expérience dans les environnements techniques exigeants.",
+        stc_collab_title:"05 — Collaboration",
+        stc_skill_l7:"Collaboration avec l’équipe de développement en environnement Agile.",
+        stc_skill_l8:"Communication régulière avec les référents techniques.",
+        stc_skill_l9:"Documentation claire des changements et des impacts.",
+
+        stc_outcome_title:"06 — Résultat & lien",
+        stc_outcome_label:"Bilan",
+        stc_outcome_heading:"Contribution à l’évolution de l’application",
+        stc_outcome_text:"Cette mission m’a permis de contribuer à l’évolution et à la stabilisation d’une application métier Angular existante. Elle a également renforcé mon expérience dans les environnements techniques exigeants.",
         stc_outcome_cta:"Voir le site de l’entreprise",
+
+        exp_nav_prev:"Expérience précédente ←",
+        exp_nav_next:"Expérience suivante →",
+        exp_nav_all:"Voir toutes mes expériences",
+        exp_cta_title:"Vous souhaitez échanger sur mon parcours ?",
+        exp_cta_button:"Me contacter",
+        exp_cta_cv:"Voir mon CV",
 
         footer:"©2025 Thomas Houdard · Tous droits réservés"
       },
 
       en: {
-        menu_about:"Home",
-        menu_portfolio:"Portfolio ▾",
-        menu_exp_pro:"Professional Experience",
-        menu_projects_design:"Design Projects",
-        menu_projects_dev:"Development Projects",
-        menu_projects_personal:"Personal",
-        menu_contact:"Contact",
-        menu_cv:"Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
 
+        stc_badge:"Front-End mission",
         stc_meta:"Case study · Front-End · Angular",
         stc_title:"Business application for Sud Trading Company",
         stc_subtitle:"Front-end Angular mission on an internal business application used in an industrial context: interface optimisation, stability and support to the product team.",
 
-        stc_context_title:"Context & mission",
+        stc_context_title:"01 — Context & mission",
         stc_context_label:"Company & challenges",
         stc_context_heading:"Sud Trading Company",
         stc_context_text:"Sud Trading Company (STC) is a company specialised in developing, integrating and maintaining software solutions for industrial and technical environments. The team needed to strengthen the front-end of an existing Angular application while improving readability and product stability.",
@@ -375,34 +386,20 @@
         stc_role_item_duration:"Duration: 1 month",
         stc_role_item_env:"Environment: Angular, Git, VMware, VS Code",
 
-        stc_role_title:"My role",
+        stc_role_title:"02 — My contributions",
         stc_role_block1_label:"Front-End & components",
         stc_role_block1_title:"Interface evolution",
         stc_role_l1:"Contributed to deploying new Angular features, ensuring the application worked properly in production.",
-        stc_role_l2:"Updated and optimised existing components to improve readability, visual consistency and navigation flow.",
+        stc_role_l2:"Updated and optimised existing components to improve readability and visual consistency.",
         stc_role_block2_label:"Support & quality",
         stc_role_block2_title:"Stability & technical support",
         stc_role_l3:"Performed functional tests to detect issues and document the fixes to apply.",
-        stc_role_l4:"Supported the development team in an Agile environment: regular discussions, issue reporting and UI improvement suggestions.",
+        stc_role_l4:"Supported the development team in an Agile environment: regular discussions and issue reporting.",
 
-        stc_skills_title:"Skills & technologies used",
-        stc_skills_block1_label:"Front-End",
-        stc_skills_block1_title:"Angular & integration",
-        stc_skill_l1:"Interface development with Angular and TypeScript.",
-        stc_skill_l2:"Management of reusable components and display logic.",
-        stc_skill_l3:"Responsive HTML/CSS integration aligned with the existing design.",
-        stc_skills_block2_label:"Quality",
-        stc_skills_block2_title:"Testing & debugging",
-        stc_skill_l4:"Functional tests on key application flows.",
-        stc_skill_l5:"Debugging and fixing minor front-end issues.",
-        stc_skill_l6:"Monitoring internal user feedback to prioritise fixes.",
-        stc_skills_block3_label:"Collaboration",
-        stc_skills_block3_title:"Teamwork",
-        stc_skill_l7:"Collaboration with the development team in an Agile environment.",
-        stc_skill_l8:"Regular communication with technical leads.",
-        stc_skill_l9:"Clear documentation of changes and impacts.",
+        stc_ui_title:"03 — UI & experience",
+        stc_ui_text:"Alongside development, I suggested a few targeted interface improvements (readability, visual consistency, navigation flow) — without this being a full UX/UI mission on this project.",
 
-        stc_tools_title:"Tools used",
+        stc_tools_title:"04 — Technical environment",
         stc_tools_cat1:"Front-end framework",
         stc_tools_desc1:"Main framework used to develop the web application: dynamic components, routing and client-side state management.",
         stc_tools_cat2:"Development environment",
@@ -410,11 +407,23 @@
         stc_tools_cat3:"Virtual environments",
         stc_tools_desc3:"Used to create and manage isolated test environments, to validate changes without impacting the main infrastructure.",
 
-        stc_outcome_title:"Result & link",
-        stc_outcome_label:"Impact",
-        stc_outcome_heading:"A clearer and more maintainable application",
-        stc_outcome_text:"This mission allowed me to contribute to the stability and evolution of an existing Angular business application, improving both the interface and front-end quality. It also strengthened my experience in demanding technical environments.",
+        stc_collab_title:"05 — Collaboration",
+        stc_skill_l7:"Collaboration with the development team in an Agile environment.",
+        stc_skill_l8:"Regular communication with technical leads.",
+        stc_skill_l9:"Clear documentation of changes and impacts.",
+
+        stc_outcome_title:"06 — Result & link",
+        stc_outcome_label:"Takeaway",
+        stc_outcome_heading:"Contribution to the application's evolution",
+        stc_outcome_text:"This mission allowed me to contribute to the evolution and stabilisation of an existing Angular business application. It also strengthened my experience in demanding technical environments.",
         stc_outcome_cta:"View the company website",
+
+        exp_nav_prev:"Previous experience ←",
+        exp_nav_next:"Next experience →",
+        exp_nav_all:"See all my experiences",
+        exp_cta_title:"Want to talk about my background?",
+        exp_cta_button:"Contact me",
+        exp_cta_cv:"View my CV",
 
         footer:"©2025 Thomas Houdard · All rights reserved"
       }

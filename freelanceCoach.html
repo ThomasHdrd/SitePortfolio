@@ -4,28 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Coach Sportif — Étude de cas | Thomas Houdard</title>
-  <meta name="description" content="Étude de cas : design UI/UX + intégration HTML/CSS/JS d’une landing page one-page pour un coach sportif indépendant. Mobile-first, premium dark UI, orientée conversion." />
+  <meta name="description" content="Étude de cas : design UI/UX + intégration HTML/CSS/JS d’une landing page one-page pour un coach sportif indépendant. Mobile-first, premium dark UI, pensée pour faciliter la prise de contact." />
 
   <meta property="og:title" content="Coach Sportif — Étude de cas" />
-  <meta property="og:description" content="Design + développement d’une landing page one-page pour un coach sportif indépendant. Mobile-first, premium dark UI, orientée conversion." />
+  <meta property="og:description" content="Design + développement d’une landing page one-page pour un coach sportif indépendant. Mobile-first, premium dark UI, pensée pour faciliter la prise de contact." />
   <meta property="og:url" content="https://thomashoudard.com/coachSportif.html" />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <script src="script.js" defer></script>
+  <style>
+    body.coach-v2 {
+      --primary: #3f6212;
+      --primary-soft: #a3e635;
+      --accent: #84cc16;
+      --accent-soft: #d9f99d;
+      --grad-primary: linear-gradient(135deg, #1a2e05 0%, #4d7c0f 55%, #a3e635 100%);
+    }
+  </style>
 </head>
 
-<body>
+<body class="coach-v2">
   <!-- NAV (identique à ton template) -->
   <nav>
     <div class="nav-inner">
       <div class="brand">
         <div class="brand-title">
           <h3>Thomas Houdard</h3>
-          <small>UI/UX DESIGNER · DEV WEB</small>
+          <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
         </div>
       </div>
 
@@ -38,6 +47,7 @@
           <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
           <div class="dropdown-content">
             <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
             <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
             <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
           </div>
@@ -58,9 +68,14 @@
     <!-- HERO -->
     <section class="hero reveal">
       <div class="hero-intro">
+        <span class="category" data-key="coach_badge">Projet client · Freelance</span>
         <p class="hero-sub" data-key="coach_hero_sub">Étude de cas · UI/UX · Front-end</p>
 
         <h1 data-key="coach_hero_title">Landing page pour un coach sportif</h1>
+
+        <div class="company-meta">
+          <span data-key="coach_meta_role">UI/UX Designer &amp; Développeur Front-End freelance</span>
+        </div>
 
         <p data-key="coach_hero_p1">
           Conception et développement d’une landing page one-page pour un coach sportif indépendant.
@@ -120,7 +135,7 @@
           <h4 data-key="coach_context_problem_title">Problème</h4>
           <p data-key="coach_context_problem">
             Un coach indépendant a besoin d’une présence en ligne claire et crédible pour transformer des visiteurs en demandes de contact,
-            sans complexifier l’expérience (site simple, rapide, orienté conversion).
+            sans complexifier l’expérience (site simple, rapide, pensé pour faciliter la prise de contact).
           </p>
         </div>
 
@@ -129,7 +144,7 @@
           <ul>
             <li data-key="coach_goal_1">Clarifier l’offre et la valeur du coaching</li>
             <li data-key="coach_goal_2">Créer un sentiment de confiance (structure + ton)</li>
-            <li data-key="coach_goal_3">Optimiser la conversion (CTA, sections, contact)</li>
+            <li data-key="coach_goal_3">Faciliter la prise de contact (CTA, sections, formulaire)</li>
             <li data-key="coach_goal_4">Garantir une expérience mobile-first fluide</li>
           </ul>
         </div>
@@ -168,6 +183,17 @@
             <li data-key="coach_ui_2">Cohérence des composants (cards, boutons, sections)</li>
             <li data-key="coach_ui_3">Focus sur la lisibilité mobile</li>
           </ul>
+        </div>
+      </div>
+
+      <div class="decision-block">
+        <div class="decision-item">
+          <span class="decision-label" data-key="label_probleme">Problème</span>
+          <p data-key="coach_decision_probleme">Un coach indépendant évolue dans un univers sport / performance : il fallait une direction visuelle forte, sans tomber dans un site générique.</p>
+        </div>
+        <div class="decision-item">
+          <span class="decision-label" data-key="label_solution">Décision</span>
+          <p data-key="coach_decision_solution">Un dark UI à fort contraste avec un accent lime électrique, pensé pour incarner l’énergie et la performance tout en gardant une hiérarchie visuelle claire.</p>
         </div>
       </div>
     </section>
@@ -211,7 +237,7 @@
       <div style="display:grid;gap:2rem;grid-template-columns:1fr">
         <div class="card">
           <p data-key="coach_result_p">
-            Une landing page premium, claire et orientée conversion, conçue mobile-first et déclinée en desktop.
+            Une landing page premium, claire et pensée pour faciliter la prise de contact, conçue mobile-first et déclinée en desktop.
             L'intégration front respecte le responsive, la lisibilité et une structure simple pour faciliter l'évolution.
           </p>
 
@@ -234,7 +260,7 @@
     </section>
 
     <!-- OUTILS -->
-    <section>
+    <section class="reveal">
       <div class="section-header">
         <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
         <div class="bar"></div>
@@ -279,6 +305,27 @@
             <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/CoachFitness" data-key="button_code" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
         </div>
     </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+      <div class="project-nav">
+        <a class="project-nav-link" href="freelanceStartup.html" style="border-left:3px solid #8b5cf6">
+          <span class="project-nav-label" data-key="nav_prev">Projet précédent ←</span>
+          <span class="project-nav-name">Startup Redesign</span>
+        </a>
+        <a class="project-nav-all btn btn-outline" href="freelance.html" data-key="nav_all">Voir toutes mes missions freelance</a>
+        <a class="project-nav-link next" href="freelanceAuComptoirUrbain.html" style="border-left:3px solid #d4a017">
+          <span class="project-nav-label" data-key="nav_next">Projet suivant →</span>
+          <span class="project-nav-name">Au Comptoir Urbain</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA SECONDAIRE -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+      <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="nav_cta_title">Vous avez un projet similaire ?</h2>
+      <a href="TravaillerAvecMoi.html" class="btn btn-primary" data-key="nav_cta_button">Parler de mon projet</a>
+    </section>
   </main>
 
   <!-- FOOTER (identique à ton template) -->
@@ -311,13 +358,7 @@
   <script>
     const translations = {
       fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Développement",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
 
         coach_hero_sub: "Étude de cas · UI/UX · Front-end",
@@ -330,11 +371,11 @@
 
         coach_context_title: "Contexte",
         coach_context_problem_title: "Problème",
-        coach_context_problem: "Un coach indépendant a besoin d’une présence en ligne claire et crédible pour transformer des visiteurs en demandes de contact, sans complexifier l’expérience (site simple, rapide, orienté conversion).",
+        coach_context_problem: "Un coach indépendant a besoin d’une présence en ligne claire et crédible pour transformer des visiteurs en demandes de contact, sans complexifier l’expérience (site simple, rapide, pensé pour faciliter la prise de contact).",
         coach_context_goal_title: "Objectifs",
         coach_goal_1: "Clarifier l’offre et la valeur du coaching",
         coach_goal_2: "Créer un sentiment de confiance (structure + ton)",
-        coach_goal_3: "Optimiser la conversion (CTA, sections, contact)",
+        coach_goal_3: "Faciliter la prise de contact (CTA, sections, formulaire)",
         coach_goal_4: "Garantir une expérience mobile-first fluide",
 
         coach_approach_title: "Approche",
@@ -350,7 +391,7 @@
         coach_ui_3: "Focus sur la lisibilité mobile",
 
         coach_result_title: "Résultat",
-        coach_result_p: "Une landing page premium, claire et orientée conversion, conçue mobile-first et déclinée en desktop. L’intégration front respecte le responsive, la lisibilité et une structure simple pour faciliter l’évolution.",
+        coach_result_p: "Une landing page premium, claire et pensée pour faciliter la prise de contact, conçue mobile-first et déclinée en desktop. L’intégration front respecte le responsive, la lisibilité et une structure simple pour faciliter l’évolution.",
         coach_result_keys_title: "Points clés",
         coach_result_1: "Hero impactante + CTA immédiat",
         coach_result_2: "Sections structurées et rassurantes",
@@ -380,16 +421,22 @@
 
         links_title: "Liens",
         button_code: "Voir le code",
+
+        coach_badge: "Projet client · Freelance",
+        coach_meta_role: "UI/UX Designer &amp; Développeur Front-End freelance",
+        label_probleme: "Problème",
+        label_solution: "Décision",
+        coach_decision_probleme: "Un coach indépendant évolue dans un univers sport / performance : il fallait une direction visuelle forte, sans tomber dans un site générique.",
+        coach_decision_solution: "Un dark UI à fort contraste avec un accent lime électrique, pensé pour incarner l’énergie et la performance tout en gardant une hiérarchie visuelle claire.",
+        nav_prev: "Projet précédent ←",
+        nav_next: "Projet suivant →",
+        nav_all: "Voir toutes mes missions freelance",
+        nav_cta_title: "Vous avez un projet similaire ?",
+        nav_cta_button: "Parler de mon projet",
       },
 
       en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Professional Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
 
         coach_hero_sub: "Case study · UI/UX · Front-end",
@@ -402,11 +449,11 @@
 
         coach_context_title: "Context",
         coach_context_problem_title: "Problem",
-        coach_context_problem: "An independent coach needs a clear and credible online presence to convert visitors into contact requests, without adding friction (simple, fast, conversion-focused page).",
+        coach_context_problem: "An independent coach needs a clear and credible online presence to convert visitors into contact requests, without adding friction (simple, fast page designed to make getting in touch easy).",
         coach_context_goal_title: "Goals",
         coach_goal_1: "Clarify the offer and coaching value",
         coach_goal_2: "Build trust (structure + tone)",
-        coach_goal_3: "Improve conversion (CTA, sections, contact)",
+        coach_goal_3: "Make it easy to get in touch (CTAs, sections, form)",
         coach_goal_4: "Ensure a smooth mobile-first experience",
 
         coach_approach_title: "Approach",
@@ -422,7 +469,7 @@
         coach_ui_3: "Mobile readability focus",
 
         coach_result_title: "Outcome",
-        coach_result_p: "A premium, clear and conversion-focused landing page designed mobile-first and adapted to desktop. The front-end integration focuses on responsive behavior, readability and a maintainable structure.",
+        coach_result_p: "A premium, clear landing page designed to make getting in touch easy, built mobile-first and adapted to desktop. The front-end integration focuses on responsive behavior, readability and a maintainable structure.",
         coach_result_keys_title: "Highlights",
         coach_result_1: "Impactful hero + immediate CTA",
         coach_result_2: "Trust-building sections",
@@ -452,6 +499,18 @@
 
         links_title: "Links",
         button_code: "View code",
+
+        coach_badge: "Client project · Freelance",
+        coach_meta_role: "Freelance UI/UX Designer &amp; Front-End Developer",
+        label_probleme: "Problem",
+        label_solution: "Decision",
+        coach_decision_probleme: "An independent coach operates in a sport / performance world: the visual direction needed to feel strong, without becoming a generic template.",
+        coach_decision_solution: "A high-contrast dark UI with an electric lime accent, designed to embody energy and performance while keeping a clear visual hierarchy.",
+        nav_prev: "Previous project ←",
+        nav_next: "Next project →",
+        nav_all: "See all my freelance missions",
+        nav_cta_title: "Have a similar project?",
+        nav_cta_button: "Talk about my project",
       }
     };
   </script>

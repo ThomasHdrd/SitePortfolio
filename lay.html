@@ -11,17 +11,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.lay-v2 {
+        --primary: #7d6bb0;
+        --primary-soft: #c9bfe8;
+        --accent: #d9a8d0;
+        --accent-soft: #e8cbe2;
+        --grad-primary: linear-gradient(135deg, #4d3f75 0%, #7d6bb0 55%, #d9a8d0 100%);
+    }
+</style>
 </head>
-<body>
+<body class="lay-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -49,6 +59,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="lay_badge">Jeu publié · Steam</span>
             <p class="hero-sub" data-key="lay_banner"></p>
             <h1>LAY</h1>
             <p data-key="lay_tagline"></p>
@@ -70,7 +81,7 @@
             <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
                 <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%; justify-content: center;"></a>
                 <a href="#role" class="btn btn-outline" data-key="cta_scroll_role" style="width: 100%; justify-content: center;"></a>
-                <a href="#steam" class="btn btn-outline" data-key="lay_cta_steam" style="width: 100%; justify-content: center;"></a>
+                <a href="#prototype" class="btn btn-outline" data-key="lay_cta_steam" style="width: 100%; justify-content: center;"></a>
             </div>
         </div>
         <div class="video-wrap" style="align-self:start">
@@ -144,6 +155,17 @@
         </div>
         <div>
             <img loading="lazy" src="images/lay/lay3.png" alt="Île civilisation blockout" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+
+        <div class="decision-block">
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_contrainte">Contrainte</span>
+                <p data-key="lay_decision_probleme">Faire progresser le joueur à travers trois zones d'énigmes sans que la difficulté ne devienne confuse ou décourageante.</p>
+            </div>
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_decision">Décision</span>
+                <p data-key="lay_decision_solution">Organisation des puzzles en trois zones à complexité croissante (Sokoban et Simon simples, puis combinaisons et répéteurs multi-phases).</p>
+            </div>
         </div>
     </section>
 
@@ -246,7 +268,7 @@
             <div class="bar"></div>
         </div>
         <div class="proto-wrap">
-            <a class="btn btn-primary" target="_blank" href="https://store.steampowered.com/app/1966100/LAY/" data-key="lay_button">Voir le prototype Adobe XD</a>
+            <a class="btn btn-primary" target="_blank" href="https://store.steampowered.com/app/1966100/LAY/" data-key="lay_button">Télécharger le jeu sur Steam</a>
         </div>
     </section>
 
@@ -289,6 +311,30 @@
             </article>
         </div>
     </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="car.html" style="border-left:3px solid #a68b5b">
+                <span class="project-nav-label" data-key="gdld_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Car Project</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDesigner.html#game-design-projects" data-key="gdld_nav_all">Voir tous les projets Game & Level Design</a>
+            <a class="project-nav-link next" href="viking.html" style="border-left:3px solid #e0912f">
+                <span class="project-nav-label" data-key="gdld_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Jarlasogür</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="gdld_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="gdld_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="gdld_cta_contact">Me contacter</a>
+        </div>
+    </section>
 </main>
 
   <footer>
@@ -319,14 +365,7 @@
 <script>
 const translations = {
     fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Développement",
-        menu_projects_personal: "Perso",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
         lay_banner: "Game Design · Level Design · Prototype · QA Tester",
         lay_tagline: "Exploration poétique entre marche, vol et énigmes dans un archipel d’îles volantes.",
@@ -373,17 +412,21 @@ const translations = {
         lay_tool_drive: "Stockage des documents et versions.",
         cta_scroll_overview: "Voir la présentation",
         cta_scroll_role: "Explorer le rôle",
-        cta_scroll_tools: "Voir les outils"
+        cta_scroll_tools: "Voir les outils",
+        lay_badge: "Jeu publié · Steam",
+        label_contrainte: "Contrainte",
+        label_decision: "Décision",
+        lay_decision_probleme: "Faire progresser le joueur à travers trois zones d'énigmes sans que la difficulté ne devienne confuse ou décourageante.",
+        lay_decision_solution: "Organisation des puzzles en trois zones à complexité croissante (Sokoban et Simon simples, puis combinaisons et répéteurs multi-phases).",
+        gdld_nav_prev: "Projet précédent ←",
+        gdld_nav_next: "Projet suivant →",
+        gdld_nav_all: "Voir tous les projets Game & Level Design",
+        gdld_cta_title: "Découvrir mes projets Product & UX/UI",
+        gdld_cta_button: "Voir mes projets Product & UX/UI",
+        gdld_cta_contact: "Me contacter"
     },
     en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Professional Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_projects_personal: "Personal",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
         lay_banner: "Game Design · Level Design · Prototype · QA Tester",
         lay_tagline: "Poetic exploration mixing walking, flying and puzzle solving across floating isles.",
@@ -430,7 +473,18 @@ const translations = {
         lay_tool_drive: "Document storage and versioning.",
         cta_scroll_overview: "View overview",
         cta_scroll_role: "Explore role",
-        cta_scroll_tools: "View tools"
+        cta_scroll_tools: "View tools",
+        lay_badge: "Published game · Steam",
+        label_contrainte: "Constraint",
+        label_decision: "Decision",
+        lay_decision_probleme: "Guide the player through three puzzle zones without the difficulty becoming confusing or discouraging.",
+        lay_decision_solution: "Puzzles organized into three zones of increasing complexity (simple Sokoban and Simon puzzles, then multi-phase combinations and repeaters).",
+        gdld_nav_prev: "Previous project ←",
+        gdld_nav_next: "Next project →",
+        gdld_nav_all: "See all Game & Level Design projects",
+        gdld_cta_title: "Discover my Product & UX/UI projects",
+        gdld_cta_button: "See my Product & UX/UI projects",
+        gdld_cta_contact: "Contact me"
     }
 };
 </script>

@@ -11,17 +11,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.holdup-v2 {
+        --primary: #3d2f1a;
+        --primary-soft: #d9c185;
+        --accent: #b6912f;
+        --accent-soft: #d9c185;
+        --grad-primary: linear-gradient(135deg, #2a2011 0%, #8a6a1f 55%, #b6912f 100%);
+    }
+</style>
 </head>
-<body>
+<body class="holdup-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -49,6 +59,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="holdup_badge">Jeu de société</span>
             <p class="hero-sub" data-key="holdup_banner"></p>
             <h1>HOLD‑UP</h1>
             <p data-key="holdup_pres_tagline"></p>
@@ -148,6 +159,17 @@
                 <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="holdup_role_liste2"></span></li>
             </ul>
         </div>
+
+        <div class="decision-block">
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_contrainte">Contrainte</span>
+                <p data-key="holdup_decision_probleme">Chaque décision de vol comporte un risque : il fallait que ce risque reste lisible et que les actions possibles soient claires.</p>
+            </div>
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_decision">Décision</span>
+                <p data-key="holdup_decision_solution">Équilibrage des risques/récompenses ajusté via playtests, et clarification des actions possibles à chaque tour.</p>
+            </div>
+        </div>
     </section>
 
     <!-- REGLES -->
@@ -186,7 +208,7 @@
             <div class="bar"></div>
         </div>
         <div class="proto-wrap">
-            <a class="btn btn-primary" target="_blank" href="https://docs.google.com/document/d/1YAf6ZrErae1qU8of-_AI3IGK6NEiYWp3iSPFv0zaYBw/edit?usp=sharing" data-key="holdup_button">Voir le prototype Figma</a>
+            <a class="btn btn-primary" target="_blank" href="https://docs.google.com/document/d/1YAf6ZrErae1qU8of-_AI3IGK6NEiYWp3iSPFv0zaYBw/edit?usp=sharing" data-key="holdup_button">Voir le Game Design Document</a>
         </div>
     </section>
 
@@ -211,6 +233,30 @@
             </article>
         </div>
     </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="unite.html" style="border-left:3px solid #e0562e">
+                <span class="project-nav-label" data-key="gdld_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Unite</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDesigner.html#game-design-projects" data-key="gdld_nav_all">Voir tous les projets Game & Level Design</a>
+            <a class="project-nav-link next" href="recolorful.html" style="border-left:3px solid #39d353">
+                <span class="project-nav-label" data-key="gdld_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Re-Colorful</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="gdld_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="gdld_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="gdld_cta_contact">Me contacter</a>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -232,14 +278,7 @@
 <script>
 const translations = {
     fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Developpement",
-        menu_projects_personal: "Perso",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
         holdup_banner: "Game Design · Level Design · Prototypage · UI/UX · Tests",
         holdup_pres_tagline: "Jeu de société compétitif où chaque voleur cherche à accumuler le plus de butin en prenant des risques calculés.",
@@ -277,17 +316,22 @@ const translations = {
         holdup_tool_drive: "Stockage & versionnement du document de règles.",
         cta_scroll_overview: "Voir la présentation",
         cta_scroll_role: "Explorer le rôle",
-        cta_scroll_tools: "Voir les outils"
+        cta_scroll_tools: "Voir les outils",
+        holdup_gdd_title: "Game Design Document",
+        holdup_badge: "Jeu de société",
+        label_contrainte: "Contrainte",
+        label_decision: "Décision",
+        holdup_decision_probleme: "Chaque décision de vol comporte un risque : il fallait que ce risque reste lisible et que les actions possibles soient claires.",
+        holdup_decision_solution: "Équilibrage des risques/récompenses ajusté via playtests, et clarification des actions possibles à chaque tour.",
+        gdld_nav_prev: "Projet précédent ←",
+        gdld_nav_next: "Projet suivant →",
+        gdld_nav_all: "Voir tous les projets Game & Level Design",
+        gdld_cta_title: "Découvrir mes projets Product & UX/UI",
+        gdld_cta_button: "Voir mes projets Product & UX/UI",
+        gdld_cta_contact: "Me contacter"
     },
     en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Professional Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_projects_personal: "Personal",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
         holdup_banner: "Game Design · Level Design · Prototyping · UI/UX · Testing",
         holdup_pres_tagline: "Competitive board game where thieves race to amass the largest loot under calculated risk.",
@@ -326,7 +370,18 @@ const translations = {
         cta_scroll_overview: "View overview",
         cta_scroll_role: "Explore role",
         cta_scroll_tools: "View tools",
-        holdup_gdd_title: "Game Design Document"
+        holdup_gdd_title: "Game Design Document",
+        holdup_badge: "Board game",
+        label_contrainte: "Constraint",
+        label_decision: "Decision",
+        holdup_decision_probleme: "Every theft decision carries risk: that risk needed to stay readable and possible actions needed to be clear.",
+        holdup_decision_solution: "Risk/reward balancing adjusted through playtests, and clarified possible actions on each turn.",
+        gdld_nav_prev: "Previous project ←",
+        gdld_nav_next: "Next project →",
+        gdld_nav_all: "See all Game & Level Design projects",
+        gdld_cta_title: "Discover my Product & UX/UI projects",
+        gdld_cta_button: "See my Product & UX/UI projects",
+        gdld_cta_contact: "Contact me"
     }
 };
 </script>

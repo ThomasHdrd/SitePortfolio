@@ -11,17 +11,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.crysis-v2 {
+        --primary: #2e3b45;
+        --primary-soft: #a9c6dd;
+        --accent: #4a90c2;
+        --accent-soft: #8fc4e0;
+        --grad-primary: linear-gradient(135deg, #1c2429 0%, #2e3b45 55%, #4a90c2 100%);
+    }
+</style>
 </head>
-<body>
+<body class="crysis-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -49,6 +59,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="crysis_badge">Level Design</span>
             <p class="hero-sub" data-key="crysis_banner"></p>
             <h1>CRYSIS II</h1>
             <p data-key="crysis_tagline"></p>
@@ -108,6 +119,7 @@
                 <p data-key="crysis_pres1"></p>
                 <p data-key="crysis_pres2"></p>
                 <p data-key="crysis_pres3"></p>
+                <p data-key="crysis_disclaimer" style="font-size:.85rem;color:var(--text-dim);font-style:italic"></p>
             </div>
         </div>
         <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;">
@@ -156,6 +168,17 @@
                 <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Blueprint</li>
             </ul>
         </div>
+
+        <div class="decision-block">
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_contrainte">Contrainte</span>
+                <p data-key="crysis_decision_probleme">Créer une tension constante sous contrainte de temps, sans que le joueur ne se perde dans le trajet vers l'objectif.</p>
+            </div>
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_decision">Décision</span>
+                <p data-key="crysis_decision_solution">Un layout linéaire ponctué de points de tension et d'une récupération d'arme en chemin, pour rythmer la progression vers Central Park.</p>
+            </div>
+        </div>
     </section>
 
     <!-- DOCUMENT -->
@@ -202,6 +225,30 @@
             </article>
         </div>
     </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="arma3.html" style="border-left:3px solid #7a7a5c">
+                <span class="project-nav-label" data-key="gdld_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Arma III</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDesigner.html#game-design-projects" data-key="gdld_nav_all">Voir tous les projets Game & Level Design</a>
+            <a class="project-nav-link next" href="car.html" style="border-left:3px solid #a68b5b">
+                <span class="project-nav-label" data-key="gdld_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Car Project</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="gdld_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="gdld_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="gdld_cta_contact">Me contacter</a>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -223,14 +270,7 @@
 <script>
 const translations = {
     fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Développement",
-        menu_projects_personal: "Perso",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
         crysis_banner: "Level Design · Narrative Design · Blueprint · 3D · Prototypage",
         crysis_tagline: "Mission solo à Manhattan : désactiver le vaisseau Ceph au cœur de Central Park avant l’invasion totale.",
@@ -270,17 +310,22 @@ const translations = {
         crysis_tool_drive: "Stockage et suivi des versions du document de conception.",
         cta_scroll_overview: "Voir la présentation",
         cta_scroll_role: "Explorer le rôle",
-        cta_scroll_tools: "Voir les outils"
+        cta_scroll_tools: "Voir les outils",
+        crysis_badge: "Level Design",
+        crysis_disclaimer: "Mission fan-made développée indépendamment sous Unreal Engine, à des fins d'entraînement — non affiliée à Crytek.",
+        label_contrainte: "Contrainte",
+        label_decision: "Décision",
+        crysis_decision_probleme: "Créer une tension constante sous contrainte de temps, sans que le joueur ne se perde dans le trajet vers l'objectif.",
+        crysis_decision_solution: "Un layout linéaire ponctué de points de tension et d'une récupération d'arme en chemin, pour rythmer la progression vers Central Park.",
+        gdld_nav_prev: "Projet précédent ←",
+        gdld_nav_next: "Projet suivant →",
+        gdld_nav_all: "Voir tous les projets Game & Level Design",
+        gdld_cta_title: "Découvrir mes projets Product & UX/UI",
+        gdld_cta_button: "Voir mes projets Product & UX/UI",
+        gdld_cta_contact: "Me contacter"
     },
     en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Professional Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_projects_personal: "Personal",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
         crysis_banner: "Level Design · Narrative Design · Blueprint · 3D · Prototyping",
         crysis_tagline: "Solo mission in Manhattan: disable the Ceph ship in Central Park before full invasion.",
@@ -320,7 +365,19 @@ const translations = {
         crysis_tool_drive: "Storage and version control for design document.",
         cta_scroll_overview: "View overview",
         cta_scroll_role: "Explore role",
-        cta_scroll_tools: "View tools"
+        cta_scroll_tools: "View tools",
+        crysis_badge: "Level Design",
+        crysis_disclaimer: "Fan-made mission developed independently in Unreal Engine, for training purposes — not affiliated with Crytek.",
+        label_contrainte: "Constraint",
+        label_decision: "Decision",
+        crysis_decision_probleme: "Create constant tension under time pressure, without the player getting lost on the way to the objective.",
+        crysis_decision_solution: "A linear layout punctuated with tension points and a weapon pickup along the way, pacing progression toward Central Park.",
+        gdld_nav_prev: "Previous project ←",
+        gdld_nav_next: "Next project →",
+        gdld_nav_all: "See all Game & Level Design projects",
+        gdld_cta_title: "Discover my Product & UX/UI projects",
+        gdld_cta_button: "See my Product & UX/UI projects",
+        gdld_cta_contact: "Contact me"
     }
 };
 </script>

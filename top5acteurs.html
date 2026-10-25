@@ -11,17 +11,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.acteurs-v2 {
+        --primary: #3a0d10;
+        --primary-soft: #e8a0a5;
+        --accent: #c41e2a;
+        --accent-soft: #e8a0a5;
+        --grad-primary: linear-gradient(135deg, #1f0709 0%, #7a1218 55%, #c41e2a 100%);
+    }
+</style>
 </head>
-<body>
+<body class="acteurs-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -49,6 +59,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="acteurs_badge">Interactions Front-End</span>
             <p class="hero-sub" data-key="acteurs_banner"></p>
             <h1>TOP 5 ACTEURS</h1>
             <p data-key="acteurs_pres_tagline"></p>
@@ -80,7 +91,7 @@
     <!-- OVERVIEW -->
     <section class="reveal" id="overview">
         <div class="section-header">
-            <h2 data-key="acteurs_overview_title" style="margin-bottom:0;"></h2>
+            <h2 data-key="acteurs_overview_title" style="margin-bottom:0;">01 — Objectif</h2>
             <div class="bar"></div>
         </div>
         <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
@@ -103,7 +114,7 @@
     <!-- FEATURES -->
     <section class="reveal" id="features" aria-labelledby="features-title">
         <div class="section-header">
-            <h2 id="features-title" data-key="acteurs_features_title"></h2>
+            <h2 id="features-title" data-key="acteurs_features_title">02 — Interactions & implémentation Front-End</h2>
             <div class="bar"></div>
         </div>
         <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem">
@@ -117,7 +128,7 @@
     <!-- TECHNOLOGIES -->
     <section class="reveal" id="technologies">
         <div class="section-header">
-            <h2 data-key="titre_dev_technos"></h2>
+            <h2 data-key="acteurs_demonstrates_title">03 — Ce que ce projet démontre</h2>
             <div class="bar"></div>
         </div>
         <div class="tool-grid">
@@ -147,12 +158,36 @@
     <!-- LINKS -->
     <section class="reveal" id="links">
         <div class="section-header">
-            <h2 data-key="acteurs_links_title"></h2>
+            <h2 data-key="acteurs_links_title">04 — Résultat</h2>
             <div class="bar"></div>
         </div>
         <div id="links-btns" class="proto-wrap" style="display:flex;justify-content:center;align-items:center;gap:1rem;width:100%;">
             <a class="btn btn-primary" target="_blank" href="https://top5acteurs.thomashoudard.com/" data-key="acteurs_button_site" style="flex:1;text-align:center;"></a>
             <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/Top5MeilleursActeurs" data-key="acteurs_button_code" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
+        </div>
+    </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="snake.html" style="border-left:3px solid #2e9e3f">
+                <span class="project-nav-label" data-key="dev_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Snake Game</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDeveloppeur.html" data-key="dev_nav_all">Voir tous les projets Développement</a>
+            <a class="project-nav-link next" href="burger.html" style="border-left:3px solid #e8541f">
+                <span class="project-nav-label" data-key="dev_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Burger Code</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="dev_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="dev_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="dev_cta_contact">Me contacter</a>
         </div>
     </section>
 </main>
@@ -176,14 +211,7 @@
 <script>
 const translations = {
     fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Développement",
-        menu_projects_personal: "Perso",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
         acteurs_banner: "Intégration · Interface · Classement",
         acteurs_pres_tagline: "Classement interactif des 5 acteurs favoris avec fiches et films associés.",
@@ -192,7 +220,7 @@ const translations = {
         acteurs_meta_stack: "STACK : HTML · CSS · JS · jQuery",
         acteurs_meta_date: "DATE : 2024",
         acteurs_meta_duree: "DURÉE : 1 semaine",
-        acteurs_overview_title: "Présentation",
+        acteurs_overview_title: "01 — Objectif",
         acteurs_pres1: "Top 5 Acteurs présente un classement personnalisé de cinq acteurs reconnus.",
         acteurs_pres2: "Chaque fiche contient une courte bio et trois films emblématiques pour une lecture rapide.",
         acteurs_pres3: "Le site met l’accent sur la clarté des informations et une navigation simple.",
@@ -200,33 +228,34 @@ const translations = {
         acteurs_focus1: "Structure de données simple",
         acteurs_focus2: "Mise à jour du contenu facilitée",
         acteurs_focus3: "Expérience fluide et responsive",
-        acteurs_features_title: "Fonctionnalités",
+        acteurs_features_title: "02 — Interactions & implémentation Front-End",
         acteurs_feature1: "Classement dynamique",
         acteurs_feature2: "Fiches acteurs détaillées",
         acteurs_feature3: "Listing des films clés",
         acteurs_feature4: "Interface responsive",
+        acteurs_demonstrates_title: "03 — Ce que ce projet démontre",
         titre_dev_technos: "Technologies utilisées",
         acteurs_tech_html: "Structure sémantique des sections",
         acteurs_tech_css: "Layout responsive & stylisation",
         acteurs_tech_js: "Interaction & affichage conditionnel",
         acteurs_tech_jquery: "Manipulation DOM simplifiée",
-        acteurs_links_title: "Liens",
+        acteurs_links_title: "04 — Résultat",
         acteurs_button_site: "Voir le site en ligne",
         acteurs_button_code: "Voir le code sur GitHub",
         cta_scroll_overview: "Voir la présentation",
         cta_scroll_tools: "Voir les technologies",
         acteurs_cta_features: "Fonctionnalités",
-        acteurs_cta_links: "Liens"
+        acteurs_cta_links: "Liens",
+        acteurs_badge: "Interactions Front-End",
+        dev_nav_prev: "Projet précédent ←",
+        dev_nav_next: "Projet suivant →",
+        dev_nav_all: "Voir tous les projets Développement",
+        dev_cta_title: "Découvrir mes projets Product & UX/UI",
+        dev_cta_button: "Voir mes projets Product & UX/UI",
+        dev_cta_contact: "Me contacter"
     },
     en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Work Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_projects_personal: "Personal",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
         acteurs_banner: "Integration · Interface · Ranking",
         acteurs_pres_tagline: "Interactive ranking of 5 favorite actors with profiles and key films.",
@@ -235,7 +264,7 @@ const translations = {
         acteurs_meta_stack: "STACK: HTML · CSS · JS · jQuery",
         acteurs_meta_date: "DATE: 2024",
         acteurs_meta_duree: "DURATION: 1 week",
-        acteurs_overview_title: "Overview",
+        acteurs_overview_title: "01 — Objective",
         acteurs_pres1: "Top 5 Actors presents a personal selection of five notable actors.",
         acteurs_pres2: "Each profile includes a short bio plus three emblematic movies for quick insight.",
         acteurs_pres3: "The site focuses on clarity and straightforward navigation.",
@@ -243,23 +272,31 @@ const translations = {
         acteurs_focus1: "Simple data structure",
         acteurs_focus2: "Easy content updates",
         acteurs_focus3: "Smooth responsive experience",
-        acteurs_features_title: "Features",
+        acteurs_features_title: "02 — Interactions & Front-End implementation",
         acteurs_feature1: "Dynamic ranking",
         acteurs_feature2: "Detailed actor cards",
         acteurs_feature3: "Key movie listing",
         acteurs_feature4: "Responsive interface",
+        acteurs_demonstrates_title: "03 — What this project demonstrates",
         titre_dev_technos: "Technologies used",
         acteurs_tech_html: "Semantic section structure",
         acteurs_tech_css: "Responsive layout & styling",
         acteurs_tech_js: "Interaction & conditional display",
         acteurs_tech_jquery: "Simplified DOM handling",
-        acteurs_links_title: "Links",
+        acteurs_links_title: "04 — Result",
         acteurs_button_site: "View live site",
         acteurs_button_code: "View code on GitHub",
         cta_scroll_overview: "View overview",
         cta_scroll_tools: "View technologies",
         acteurs_cta_features: "Features",
-        acteurs_cta_links: "Links"
+        acteurs_cta_links: "Links",
+        acteurs_badge: "Front-End interactions",
+        dev_nav_prev: "Previous project ←",
+        dev_nav_next: "Next project →",
+        dev_nav_all: "See all Development projects",
+        dev_cta_title: "Discover my Product & UX/UI projects",
+        dev_cta_button: "See my Product & UX/UI projects",
+        dev_cta_contact: "Contact me"
     }
 };
 </script>

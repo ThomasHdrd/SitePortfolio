@@ -11,17 +11,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.arma-v2 {
+        --primary: #3a3f38;
+        --primary-soft: #c2c2ab;
+        --accent: #7a7a5c;
+        --accent-soft: #a8a889;
+        --grad-primary: linear-gradient(135deg, #23261f 0%, #4f5340 55%, #7a7a5c 100%);
+    }
+</style>
 </head>
-<body>
+<body class="arma-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -49,6 +59,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="arma_badge">Mission Design</span>
             <p class="hero-sub" data-key="arma_banner"></p>
             <h1>ARMA III</h1>
             <p data-key="arma_pres_tagline"></p>
@@ -104,6 +115,7 @@
                 <p data-key="arma_pres1"></p>
                 <p data-key="arma_pres2"></p>
                 <p data-key="arma_pres3"></p>
+                <p data-key="arma_disclaimer" style="font-size:.85rem;color:var(--text-dim);font-style:italic"></p>
             </div>
         </div>
         <div class="grid" style="gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:1.5rem">
@@ -153,6 +165,17 @@
                 <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="arma_role_liste5"></span></li>
             </ul>
         </div>
+
+        <div class="decision-block">
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_contrainte">Contrainte</span>
+                <p data-key="arma_decision_probleme">Concevoir une mission crédible sur le plan militaire sans expérience réelle du domaine.</p>
+            </div>
+            <div class="decision-item">
+                <span class="decision-label" data-key="label_decision">Décision</span>
+                <p data-key="arma_decision_solution">Rédaction d'un Mission Design Document basé sur des sources réelles, cadrant zones, progression et risques avant toute implémentation dans Eden Editor.</p>
+            </div>
+        </div>
     </section>
 
     <!-- MDD LINK -->
@@ -193,6 +216,30 @@
             </article>
         </div>
     </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="recolorful.html" style="border-left:3px solid #39d353">
+                <span class="project-nav-label" data-key="gdld_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Re-Colorful</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDesigner.html#game-design-projects" data-key="gdld_nav_all">Voir tous les projets Game & Level Design</a>
+            <a class="project-nav-link next" href="crysis2.html" style="border-left:3px solid #4a90c2">
+                <span class="project-nav-label" data-key="gdld_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Crysis II</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="gdld_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="gdld_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="gdld_cta_contact">Me contacter</a>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -214,14 +261,7 @@
 <script>
 const translations = {
     fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Développement",
-        menu_projects_personal: "Perso",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
         arma_banner: "Mission Design · Level Design · Narrative · Scripting · IA",
         arma_pres_tagline: "Extraction d'un chirurgien capturé : infiltration, progression tactique et contrôle du risque.",
@@ -258,17 +298,22 @@ const translations = {
         arma_tool_drive: "Stockage et versionnement du document.",
         cta_scroll_overview: "Voir la présentation",
         cta_scroll_role: "Explorer le rôle",
-        cta_scroll_tools: "Voir les outils"
+        cta_scroll_tools: "Voir les outils",
+        arma_badge: "Mission Design",
+        arma_disclaimer: "Mission créée de manière indépendante dans l'éditeur Eden Editor d'Arma III, à des fins d'entraînement — non affiliée à Bohemia Interactive.",
+        label_contrainte: "Contrainte",
+        label_decision: "Décision",
+        arma_decision_probleme: "Concevoir une mission crédible sur le plan militaire sans expérience réelle du domaine.",
+        arma_decision_solution: "Rédaction d'un Mission Design Document basé sur des sources réelles, cadrant zones, progression et risques avant toute implémentation dans Eden Editor.",
+        gdld_nav_prev: "Projet précédent ←",
+        gdld_nav_next: "Projet suivant →",
+        gdld_nav_all: "Voir tous les projets Game & Level Design",
+        gdld_cta_title: "Découvrir mes projets Product & UX/UI",
+        gdld_cta_button: "Voir mes projets Product & UX/UI",
+        gdld_cta_contact: "Me contacter"
     },
     en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Professional Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_projects_personal: "Personal",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
         arma_banner: "Mission Design · Level Design · Narrative · Scripting · AI",
         arma_pres_tagline: "Rescue a captured surgeon: stealth, tactical movement and controlled engagement.",
@@ -305,7 +350,19 @@ const translations = {
         arma_tool_drive: "Storage & versioning of the document.",
         cta_scroll_overview: "View overview",
         cta_scroll_role: "Explore role",
-        cta_scroll_tools: "View tools"
+        cta_scroll_tools: "View tools",
+        arma_badge: "Mission Design",
+        arma_disclaimer: "Mission created independently in Arma III's Eden Editor, for training purposes — not affiliated with Bohemia Interactive.",
+        label_contrainte: "Constraint",
+        label_decision: "Decision",
+        arma_decision_probleme: "Design a militarily credible mission without real-world military experience.",
+        arma_decision_solution: "Authored a Mission Design Document based on real sources, framing zones, progression and risks before any implementation in Eden Editor.",
+        gdld_nav_prev: "Previous project ←",
+        gdld_nav_next: "Next project →",
+        gdld_nav_all: "See all Game & Level Design projects",
+        gdld_cta_title: "Discover my Product & UX/UI projects",
+        gdld_cta_button: "See my Product & UX/UI projects",
+        gdld_cta_contact: "Contact me"
     }
 };
 </script>

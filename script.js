@@ -421,6 +421,12 @@ burger.addEventListener("click", () => {
 
 
 
+    // Nav condense on scroll
+    const navEl = document.querySelector("nav");
+    const onNavScroll = () => navEl.classList.toggle("scrolled", window.scrollY > 40);
+    window.addEventListener("scroll", onNavScroll, { passive: true });
+    onNavScroll();
+
     // Scroll reveal
     const observer = new IntersectionObserver(
       (entries) => {
@@ -444,4 +450,174 @@ burger.addEventListener("click", () => {
     });
 
     initLang();
+
+    // Estimateur — pages commande-*.html (no-op si absent de la page)
+    (function () {
+      const form = document.getElementById("devis-form");
+      if (!form) return;
+
+      const totalEl = document.getElementById("total");
+      const qtyInput = document.getElementById("qty");
+      const checkboxes = document.querySelectorAll(".opt");
+      const quoteBoxes = document.querySelectorAll(".opt-quote");
+      const hiddenDetail = document.getElementById("estimation_detail");
+      const hiddenTotal = document.getElementById("estimation_total");
+      const subjectInput = form.querySelector('input[name="_subject"]');
+      const nameInput = document.getElementById("clientName");
+      const emailInput = document.getElementById("clientEmail");
+      const msgInput = document.getElementById("clientMessage");
+
+      const params = new URLSearchParams(window.location.search);
+      let BASE_PRICE = parseInt(params.get("base"), 10);
+      if (isNaN(BASE_PRICE)) BASE_PRICE = parseInt(form.dataset.basePrice || "0", 10) || 0;
+
+      const formatEuro = (n) => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(n) + "€";
+      const getUnit = () => {
+        const v = parseInt(qtyInput?.dataset.unit ?? "0", 10);
+        return isNaN(v) ? 0 : v;
+      };
+
+      const unitEl = document.getElementById("section-unit");
+      if (unitEl && qtyInput) {
+        const unit = getUnit();
+        unitEl.textContent = unit > 0 ? "x " + formatEuro(unit) : "";
+      }
+
+      // Parcourt chaque bloc .estimation-container et en tire une ligne de résumé,
+      // quel que soit son contenu (case à cocher tarifée, quantité, select, cases
+      // informatives ou champ texte libre) — permet de réutiliser la même logique
+      // pour les estimateurs chiffrés (dev/design) et le questionnaire (complet).
+      function getSelectionsLines() {
+        const lines = [];
+        document.querySelectorAll(".estimation-container").forEach((container) => {
+          const priced = container.querySelector("input.opt");
+          if (priced) {
+            if (priced.checked) {
+              const label = (priced.parentElement?.querySelector("span")?.textContent || "Option").trim();
+              const price = parseInt(priced.dataset.price || "0", 10);
+              lines.push("- " + label + (price ? " (+" + formatEuro(price) + ")" : ""));
+            }
+            return;
+          }
+          const quote = container.querySelector("input.opt-quote");
+          if (quote) {
+            if (quote.checked) {
+              const label = (quote.parentElement?.querySelector("span")?.textContent || "Option").trim();
+              lines.push("- " + label + " (sur estimation)");
+            }
+            return;
+          }
+          const qty = container.querySelector("#qty");
+          if (qty) {
+            const val = parseInt(qty.value || "0", 10);
+            if (val > 0) {
+              const label = (container.querySelector("label")?.textContent || "Quantité").trim();
+              const unit = parseInt(qty.dataset.unit || "0", 10);
+              lines.push("- " + label + " : " + val + (unit ? " × " + formatEuro(unit) : ""));
+            }
+            return;
+          }
+          const select = container.querySelector("select");
+          if (select) {
+            if (select.value) {
+              const label = (container.querySelector("label")?.textContent || "Choix").trim();
+              const choice = select.options[select.selectedIndex]?.textContent.trim() || select.value;
+              lines.push("- " + label + " : " + choice);
+            }
+            return;
+          }
+          const infoBoxes = container.querySelectorAll("input.opt-info");
+          if (infoBoxes.length) {
+            const checked = [...infoBoxes]
+              .filter((cb) => cb.checked)
+              .map((cb) => (cb.nextElementSibling?.textContent || "").trim())
+              .filter(Boolean);
+            if (checked.length) {
+              const groupLabel = (container.querySelector("span[data-key]")?.textContent || "Fonctionnalités").trim();
+              lines.push("- " + groupLabel + " " + checked.join(", "));
+            }
+            return;
+          }
+          const textInput = container.querySelector('input[type="text"]:not(.qty-input)');
+          if (textInput && textInput.value.trim()) {
+            const label = (container.querySelector("label")?.textContent || "Précision").trim();
+            lines.push("- " + label + " : " + textInput.value.trim());
+          }
+        });
+        return lines;
+      }
+
+      function computeTotal() {
+        let total = BASE_PRICE;
+        checkboxes.forEach((cb) => { if (cb.checked) total += parseInt(cb.dataset.price || "0", 10); });
+        const qty = parseInt(qtyInput?.value || "0", 10);
+        const unit = getUnit();
+        if (qty > 0) total += qty * unit;
+        return total;
+      }
+
+      // Une case "sur estimation" cochée (fonctionnalité à charge de travail
+      // trop variable pour un prix fixe) fait basculer l'affichage du total
+      // en "À partir de X€ + estimation des fonctionnalités spécifiques"
+      // plutôt que de donner un faux chiffre précis.
+      function hasQuoteItems() {
+        return [...quoteBoxes].some((cb) => cb.checked);
+      }
+
+      function displayTotal() {
+        const amount = formatEuro(computeTotal());
+        if (!hasQuoteItems()) return amount;
+        const isEn = document.documentElement.lang === "en";
+        return isEn
+          ? "From " + amount + " + specific features on quote"
+          : "À partir de " + amount + " + fonctionnalités spécifiques sur estimation";
+      }
+
+      function refreshUI() {
+        if (totalEl) totalEl.textContent = displayTotal();
+      }
+
+      function updateHiddenFields() {
+        const name = (nameInput?.value || "(non précisé)").trim();
+        const email = (emailInput?.value || "(non précisé)").trim();
+        const msg = (msgInput?.value || "").trim();
+        const lines = getSelectionsLines();
+        const totalLine = totalEl
+          ? "Estimation indicative : " + displayTotal()
+          : "Sur devis — projet à qualifier";
+
+        const summary = [
+          "Nom : " + name,
+          "Email : " + email,
+          "",
+          "Détails :",
+          ...(lines.length ? lines : ["- Aucune précision sélectionnée"]),
+          "",
+          totalEl ? "Base : " + formatEuro(BASE_PRICE) : "Base : sur devis",
+          totalLine,
+          "",
+          msg ? "Message :\n" + msg : "",
+        ].join("\n");
+
+        if (hiddenDetail) hiddenDetail.value = summary;
+        if (hiddenTotal) hiddenTotal.value = totalEl ? displayTotal() : "Sur devis";
+        if (subjectInput) {
+          subjectInput.value = totalEl
+            ? "Demande — " + name + " — " + displayTotal()
+            : "Demande d'estimation — " + name;
+        }
+      }
+
+      checkboxes.forEach((cb) => cb.addEventListener("change", () => { refreshUI(); updateHiddenFields(); }));
+      quoteBoxes.forEach((cb) => cb.addEventListener("change", () => { refreshUI(); updateHiddenFields(); }));
+      document.querySelectorAll(".estimation-options input.opt-info, .estimation-options select").forEach((el) => {
+        el.addEventListener("change", () => { refreshUI(); updateHiddenFields(); });
+      });
+      [qtyInput, nameInput, emailInput, msgInput, document.getElementById("q-budget")].forEach((el) => {
+        if (el) el.addEventListener("input", () => { refreshUI(); updateHiddenFields(); });
+      });
+
+      refreshUI();
+      updateHiddenFields();
+    })();
 

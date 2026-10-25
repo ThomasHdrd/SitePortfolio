@@ -11,17 +11,37 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="script.js" defer></script>
+    <style>
+        /* MOVIE PASS V2 — thème "Noir" (scoped à cette page) */
+        body.moviepass-v2 {
+            --primary: #c22b3a;
+            --primary-soft: #e2717d;
+            --accent: #c22b3a;
+            --accent-soft: #e2a3ab;
+            --grad-primary: linear-gradient(135deg, #8f1c28 0%, #c22b3a 55%, #e2717d 100%);
+        }
+        body.moviepass-v2 h1 {
+            font-family: var(--font-display, "Fraunces", Georgia, serif);
+            font-style: italic;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.01em;
+        }
+        body.moviepass-v2 .badge .dot {
+            box-shadow: 0 0 0 4px rgba(194, 43, 58, 0.25);
+        }
+    </style>
 </head>
-<body>
+<body class="moviepass-v2">
     <nav>
         <div class="nav-inner">
             <div class="brand">
                 <div class="brand-title">
                     <h3>Thomas Houdard</h3>
-                    <small>UI/UX DESIGNER · DEV WEB</small>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
                 </div>
             </div>
             <div class="burger" id="burger"><span></span></div>
@@ -31,6 +51,7 @@
                     <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                     <div class="dropdown-content">
                         <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                         <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
                         <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
                     </div>
@@ -75,10 +96,15 @@
             <div class="video-wrap" style="align-self:start">
                 <div class="proto-wrap">
                     <div class="gallery">
-                        <img loading="lazy" src="images/moviepass/resultatfinal.png" alt="Aperçu haute fidélité Movie Pass">
+                        <img loading="lazy" src="images/moviepass/v2_hero.png?v=1" alt="Movie Pass V2 — Noir, écrans Home, Login et Movie Detail">
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- V2 NOTICE -->
+        <section class="reveal">
+            <p class="case-context" data-key="moviepass_v2_notice">Refonte V2 — j'ai repris ce projet pour retravailler entièrement la direction artistique et la structure de l'application, avec une identité "cinéma premium" (Noir) et un vrai design system réutilisable.</p>
         </section>
 
         <!-- RESPONSABILITÉS -->
@@ -88,7 +114,7 @@
             <div class="bar"></div>
             </div>
             <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:.5rem">
-            <li><a href="#bassefid" style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="moviepass_pres_reponsabilite1">Design Basse Fidélité</span></a></li>
+            <li><a href="#wireframe" style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="moviepass_pres_reponsabilite1">Design Basse Fidélité</span></a></li>
             <li><a href="#hautefid" style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="moviepass_pres_reponsabilite2">Design Haute Fidélité</span></a></li>
             <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="moviepass_pres_reponsabilite3">Tests utilisateurs</span></span></li>
             <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="moviepass_pres_reponsabilite4">Audit concurrentiel</span></span></li>
@@ -102,33 +128,38 @@
                 <h2>Personas</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="moviepass_persona_context">Avant de dessiner le moindre écran, j'ai défini deux profils types à partir de l'audit concurrentiel et de courts entretiens utilisateurs, pour identifier leurs attentes et leurs freins face à la réservation de place de cinéma en ligne.</p>
             <div class="gallery">
-                <img loading="lazy" src="images/moviepass/persona1.png" alt="Persona 1 Movie Pass">
-                <img loading="lazy" src="images/moviepass/persona2.png" alt="Persona 2 Movie Pass">
+                <figure>
+                    <img loading="lazy" src="images/moviepass/persona1.png" alt="Persona Thomas Movie Pass">
+                    <figcaption data-key="moviepass_persona1_caption">Thomas, 21 ans, étudiant — budget serré, veut réserver vite depuis son téléphone sans faire la queue ni rater une séance.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/moviepass/persona2.png" alt="Persona Marie Movie Pass">
+                    <figcaption data-key="moviepass_persona2_caption">Marie, 35 ans — sort en couple ou en famille, veut choisir sa place et pouvoir annuler facilement en cas d'imprévu.</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- WIREFRAME -->
+        <!-- WIREFRAME / BASSE FID -->
         <section class="reveal" id="wireframe">
             <div class="section-header">
-                <h2>Wireframe</h2>
+                <h2 data-key="titre_proto_bassefid">Wireframes & basse fidélité</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="moviepass_wireframe_context">Avant de reprendre l'identité visuelle, j'ai retravaillé la structure de chaque écran en niveaux de gris : hiérarchie de l'information, zones de contenu, emplacement des actions principales. Cette étape permet de valider l'organisation avant d'investir du temps sur le visuel final.</p>
             <div class="gallery">
-                <img loading="lazy" src="images/moviepass/wireframe.png" alt="Wireframe papier Movie Pass">
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_lowfid1.png?v=1" alt="Wireframes basse fidélité Movie Pass — set 1">
+                    <figcaption data-key="moviepass_lowfid1_caption">Structure des écrans clés : accueil, recherche, fiche film, pagination et profil — squelette avant habillage visuel.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_lowfid2.png?v=1" alt="Wireframes basse fidélité Movie Pass — set 2">
+                    <figcaption data-key="moviepass_lowfid2_caption">Variantes de mise en page pour les écrans de réservation et de compte, testées avant de figer la structure finale.</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- BASSE FID -->
-        <section class="reveal" id="bassefid">
-            <div class="section-header">
-                <h2 data-key="titre_proto_bassefid">Prototype basse fidélité</h2>
-                <div class="bar"></div>
-            </div>
-            <div class="gallery">
-                <img loading="lazy" src="images/moviepass/lowfid.png" alt="Prototype basse fidélité Movie Pass">
-            </div>
-        </section>
 
         <!-- HAUTE FID -->
         <section class="reveal" id="hautefid">
@@ -136,13 +167,61 @@
                 <h2 data-key="titre_proto_hautefid">Prototype haute fidélité</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="moviepass_hautefid_context">J'ai ensuite appliqué l'identité "Noir" (fond sombre, rouge cinéma, typographie éditoriale) et un vrai design system de composants réutilisables, pour aboutir à une interface cohérente sur tout le parcours : découverte, fiche film, réservation et compte.</p>
             <div class="gallery">
-                <img loading="lazy" src="images/moviepass/highfidtotal.png" alt="Prototype haute fidélité global Movie Pass">
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_highfid_home.png?v=1" alt="Écrans Home & Search Movie Pass V2">
+                    <figcaption data-key="moviepass_highfid1_caption">Home & Search — recommandations mises en avant, filtres par genre et recherche avec état vide géré.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_highfid_detail.png?v=1" alt="Écrans Movie Details Movie Pass V2">
+                    <figcaption data-key="moviepass_highfid2_caption">Movie Details — fiche film, infos et avis regroupés en onglets, avec sélection de séance par date et horaire.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_highfid_booking.png?v=1" alt="Écrans de réservation et compte Movie Pass V2">
+                    <figcaption data-key="moviepass_highfid3_caption">Réservation (sièges, snacks, paiement, confirmation) et compte (profil, wallet, notifications) — parcours complet de bout en bout.</figcaption>
+                </figure>
             </div>
+
+            <h3 class="compare-title" data-key="moviepass_compare_title">Avant / après la refonte de la sélection de séance</h3>
+            <div class="decision-block">
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_probleme">Problème identifié</span>
+                    <p data-key="moviepass_decision_probleme">En basse fidélité, le choix du jour de séance imposait de comparer plusieurs cases sans repère visuel clair.</p>
+                </div>
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_solution">Solution retenue</span>
+                    <p data-key="moviepass_decision_solution">La séance du jour est mise en évidence par défaut, et les informations film/avis sont regroupées en onglets pour réduire la charge de lecture.</p>
+                </div>
+            </div>
+            <div class="grid cols-2">
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_lowfid2.png?v=1" alt="Sélection de séance en basse fidélité">
+                    <figcaption data-key="moviepass_compare_before">Avant — structure en niveaux de gris, sans hiérarchie visuelle sur les créneaux.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_highfid_detail.png?v=1" alt="Sélection de séance en haute fidélité V2">
+                    <figcaption data-key="moviepass_compare_after">Après — séance du jour mise en avant, onglets Sessions/Info/Reviews pour prioriser l'action de réservation.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- DESIGN SYSTEM -->
+        <section class="reveal" id="designsystem">
+            <div class="section-header">
+                <h2 data-key="moviepass_ds_title">Design System</h2>
+                <div class="bar"></div>
+            </div>
+            <p class="case-context" data-key="moviepass_ds_context">Pour garantir la cohérence sur l'ensemble du parcours, j'ai formalisé un design system : palette de couleurs, typographie éditoriale (display en serif italique), échelle d'espacement/radius, et une bibliothèque de composants réutilisables (boutons, champs, cartes, sélecteurs de séance et de siège).</p>
             <div class="gallery">
-                <img loading="lazy" src="images/moviepass/highfid1.png" alt="Écran haute fidélité 1">
-                <img loading="lazy" src="images/moviepass/highfid2.png" alt="Écran haute fidélité 2">
-                <img loading="lazy" src="images/moviepass/highfid3.png" alt="Écran haute fidélité 3">
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_designsystem1.png?v=1" alt="Design system Movie Pass — couleurs, typographie, espacements">
+                    <figcaption data-key="moviepass_ds1_caption">Fondations : palette (encre, bordeaux, rouge cinéma, ivoire, or), typographie display/titre/UI, échelle d'espacement et de radius.</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/moviepass/v2_designsystem2.png?v=1" alt="Design system Movie Pass — composants">
+                    <figcaption data-key="moviepass_ds2_caption">Composants : boutons, champs, chips, sélecteurs de séance/siège, cartes film, notifications — avec règles d'accessibilité et d'usage.</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -152,6 +231,7 @@
                 <h2 data-key="moviepass_proto_title">Prototype final</h2>
                 <div class="bar"></div>
             </div>
+            <p class="case-context" data-key="moviepass_bilan_context">Ce projet m'a permis de mesurer l'importance de tester tôt, avant même d'avoir un visuel abouti : les ajustements les plus utiles sont venus des retours sur le prototype basse fidélité, pas de la phase de design final.</p>
             <div class="proto-wrap">
                 <p style="font-size:.95rem;color:var(--text-dim)" data-key="moviepass_proto_desc">Accédez au prototype Figma interactif.</p>
                 <a class="btn btn-primary" target="_blank" href="https://www.figma.com/design/zjpYbQloqZbqdnNYpSTzdf/MoviePass?node-id=34-36&p=f" data-key="button_proto">Voir le prototype Figma</a>
@@ -212,14 +292,7 @@
     <script>
         const translations = {
             fr: {
-                menu_about: "Accueil",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Expériences Professionnelles",
-                menu_projects_design: "Projets Design",
-                menu_projects_dev: "Projets Développement",
-                menu_projects_personal: "Perso",
-                menu_contact: "Contact",
-                menu_cv: "Travailler avec moi",
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
                 footer: "©2025 Thomas Houdard · Tous droits réservés",
                 moviepass_banner: "Design Thinking · Design Basse Fidélité · Design Haute Fidélité",
                 moviepass_hero_title: "Movie Pass — Réserver sa place de cinéma",
@@ -233,13 +306,36 @@
                 moviepass_pres_reponsabilite2: "Design Haute Fidélité",
                 moviepass_pres_reponsabilite3: "Tests utilisateurs",
                 moviepass_pres_reponsabilite4: "Audit concurrentiel",
-                titre_proto_bassefid: "Prototype basse fidélité",
+                titre_proto_bassefid: "Wireframes & basse fidélité",
                 titre_proto_hautefid: "Prototype haute fidélité",
                 button_proto: "Voir le prototype Figma",
                 titre_logiciels_utilises: "Logiciels utilisés",
                 moviepass_responsabilites_title: "Responsabilités",
                 moviepass_proto_title: "Prototype final",
                 moviepass_proto_desc: "Accédez au prototype Figma interactif.",
+                moviepass_v2_notice: "Refonte V2 — j'ai repris ce projet pour retravailler entièrement la direction artistique et la structure de l'application, avec une identité \"cinéma premium\" (Noir) et un vrai design system réutilisable.",
+                moviepass_persona_context: "Avant de dessiner le moindre écran, j'ai défini deux profils types à partir de l'audit concurrentiel et de courts entretiens utilisateurs, pour identifier leurs attentes et leurs freins face à la réservation de place de cinéma en ligne.",
+                moviepass_wireframe_context: "Avant de reprendre l'identité visuelle, j'ai retravaillé la structure de chaque écran en niveaux de gris : hiérarchie de l'information, zones de contenu, emplacement des actions principales. Cette étape permet de valider l'organisation avant d'investir du temps sur le visuel final.",
+                moviepass_hautefid_context: "J'ai ensuite appliqué l'identité \"Noir\" (fond sombre, rouge cinéma, typographie éditoriale) et un vrai design system de composants réutilisables, pour aboutir à une interface cohérente sur tout le parcours : découverte, fiche film, réservation et compte.",
+                moviepass_bilan_context: "Ce projet m'a permis de mesurer l'importance de tester tôt, avant même d'avoir un visuel abouti : les ajustements les plus utiles sont venus des retours sur le prototype basse fidélité, pas de la phase de design final.",
+                moviepass_persona1_caption: "Thomas, 21 ans, étudiant — budget serré, veut réserver vite depuis son téléphone sans faire la queue ni rater une séance.",
+                moviepass_persona2_caption: "Marie, 35 ans — sort en couple ou en famille, veut choisir sa place et pouvoir annuler facilement en cas d'imprévu.",
+                moviepass_lowfid1_caption: "Structure des écrans clés : accueil, recherche, fiche film, pagination et profil — squelette avant habillage visuel.",
+                moviepass_lowfid2_caption: "Variantes de mise en page pour les écrans de réservation et de compte, testées avant de figer la structure finale.",
+                moviepass_highfid1_caption: "Home & Search — recommandations mises en avant, filtres par genre et recherche avec état vide géré.",
+                moviepass_highfid2_caption: "Movie Details — fiche film, infos et avis regroupés en onglets, avec sélection de séance par date et horaire.",
+                moviepass_highfid3_caption: "Réservation (sièges, snacks, paiement, confirmation) et compte (profil, wallet, notifications) — parcours complet de bout en bout.",
+                moviepass_compare_title: "Avant / après la refonte de la sélection de séance",
+                label_probleme: "Problème identifié",
+                label_solution: "Solution retenue",
+                moviepass_decision_probleme: "En basse fidélité, le choix du jour de séance imposait de comparer plusieurs cases sans repère visuel clair.",
+                moviepass_decision_solution: "La séance du jour est mise en évidence par défaut, et les informations film/avis sont regroupées en onglets pour réduire la charge de lecture.",
+                moviepass_compare_before: "Avant — structure en niveaux de gris, sans hiérarchie visuelle sur les créneaux.",
+                moviepass_compare_after: "Après — séance du jour mise en avant, onglets Sessions/Info/Reviews pour prioriser l'action de réservation.",
+                moviepass_ds_title: "Design System",
+                moviepass_ds_context: "Pour garantir la cohérence sur l'ensemble du parcours, j'ai formalisé un design system : palette de couleurs, typographie éditoriale (display en serif italique), échelle d'espacement/radius, et une bibliothèque de composants réutilisables (boutons, champs, cartes, sélecteurs de séance et de siège).",
+                moviepass_ds1_caption: "Fondations : palette (encre, bordeaux, rouge cinéma, ivoire, or), typographie display/titre/UI, échelle d'espacement et de radius.",
+                moviepass_ds2_caption: "Composants : boutons, champs, chips, sélecteurs de séance/siège, cartes film, notifications — avec règles d'accessibilité et d'usage.",
                 cta_see_final: "Voir le résultat",
                 cta_see_proto: "Voir le prototype",
                 moviepass_wireframe_liste1: "Hiérarchie de l’information",
@@ -256,14 +352,7 @@
                 tool_miro_title: "Idéation"
             },
             en: {
-                menu_about: "Home",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Professional Experience",
-                menu_projects_design: "Design Projects",
-                menu_projects_dev: "Development Projects",
-                menu_projects_personal: "Personal",
-                menu_contact: "Contact",
-                menu_cv: "Work with me",
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
                 footer: "©2025 Thomas Houdard · All rights reserved",
                 moviepass_banner: "Design Thinking · Low-Fidelity · High-Fidelity",
                 moviepass_hero_title: "Movie Pass — Book a movie ticket",
@@ -277,13 +366,36 @@
                 moviepass_pres_reponsabilite2: "High-Fidelity Design",
                 moviepass_pres_reponsabilite3: "User testing",
                 moviepass_pres_reponsabilite4: "Competitive audit",
-                titre_proto_bassefid: "Low-fidelity prototype",
+                titre_proto_bassefid: "Wireframes & low-fidelity",
                 titre_proto_hautefid: "High-fidelity prototype",
                 button_proto: "Open Figma prototype",
                 titre_logiciels_utilises: "Tools used",
                 moviepass_responsabilites_title: "Responsibilities",
                 moviepass_proto_title: "Final prototype",
                 moviepass_proto_desc: "Open the interactive Figma prototype.",
+                moviepass_v2_notice: "V2 redesign — I revisited this project to fully rework its art direction and structure, with a premium \"cinema noir\" identity and a proper reusable design system.",
+                moviepass_persona_context: "Before sketching a single screen, I defined two target profiles based on the competitive audit and short user interviews, to identify their expectations and pain points around booking movie tickets online.",
+                moviepass_wireframe_context: "Before reworking the visual identity, I restructured every screen in grayscale: information hierarchy, content zones, placement of key actions. This step validates the layout before investing time in final visuals.",
+                moviepass_hautefid_context: "I then applied the \"Noir\" identity (dark background, cinema red, editorial typography) and a proper reusable design system, to reach a consistent interface across the whole flow: discovery, movie detail, booking and account.",
+                moviepass_bilan_context: "This project showed me how much value there is in testing early, before the visuals are even finished: the most useful adjustments came from feedback on the low-fidelity prototype, not the final design phase.",
+                moviepass_persona1_caption: "Thomas, 21 — student, tight budget, wants to book fast from his phone without queuing or missing a screening.",
+                moviepass_persona2_caption: "Marie, 35 — goes out as a couple or family, wants to pick her seat and cancel easily if plans change.",
+                moviepass_lowfid1_caption: "Structure of key screens: home, search, movie detail, pagination and profile — skeleton before visual styling.",
+                moviepass_lowfid2_caption: "Layout variants for the booking and account screens, tested before locking the final structure.",
+                moviepass_highfid1_caption: "Home & Search — recommendations up front, genre filters, and a search flow with a handled empty state.",
+                moviepass_highfid2_caption: "Movie Details — movie info and reviews grouped into tabs, with showtime selection by date and hour.",
+                moviepass_highfid3_caption: "Booking (seats, snacks, payment, confirmation) and account (profile, wallet, notifications) — the full end-to-end flow.",
+                moviepass_compare_title: "Before / after reworking showtime selection",
+                label_probleme: "Problem identified",
+                label_solution: "Solution chosen",
+                moviepass_decision_probleme: "In low-fidelity, picking a date meant comparing several boxes with no clear visual cue.",
+                moviepass_decision_solution: "Today's showtime is highlighted by default, and movie info/reviews are grouped into tabs to reduce reading load.",
+                moviepass_compare_before: "Before — grayscale structure, no visual hierarchy on time slots.",
+                moviepass_compare_after: "After — today's showtime highlighted, Sessions/Info/Reviews tabs to prioritize the booking action.",
+                moviepass_ds_title: "Design System",
+                moviepass_ds_context: "To keep the whole flow consistent, I formalized a design system: color palette, editorial typography (italic serif display), spacing/radius scale, and a library of reusable components (buttons, fields, cards, showtime and seat selectors).",
+                moviepass_ds1_caption: "Foundations: palette (ink, wine, cinema red, ivory, gold), display/title/UI typography, spacing and radius scale.",
+                moviepass_ds2_caption: "Components: buttons, fields, chips, showtime/seat selectors, movie cards, notifications — with accessibility and usage rules.",
                 cta_see_final: "See final",
                 cta_see_proto: "Open prototype",
                 moviepass_wireframe_liste1: "Information hierarchy",

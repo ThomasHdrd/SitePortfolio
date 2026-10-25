@@ -13,8 +13,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <script src="script.js" defer></script>
+    <style>
+        /* Identité subtile par expérience — 90% portfolio / 10% entreprise */
+        .experience-grid .experience-card.card-ironcat { border-top: 3px solid #9fb4c7; }
+        .experience-grid .experience-card.card-ironcat .category { color: #c3d3e0; border-color: rgba(159,180,199,.45); }
+        .experience-grid .experience-card.card-ironcat:hover { box-shadow: 0 18px 40px rgba(159,180,199,.16); }
+
+        .experience-grid .experience-card.card-chromateq { border-top: 3px solid #e0792e; }
+        .experience-grid .experience-card.card-chromateq .category { color: #f2b57e; border-color: rgba(224,121,46,.45); }
+        .experience-grid .experience-card.card-chromateq:hover { box-shadow: 0 18px 40px rgba(224,121,46,.16); }
+
+        .experience-grid .experience-card.card-stc { border-top: 3px solid #9aa3b2; }
+        .experience-grid .experience-card.card-stc .category { color: #c7ced8; border-color: rgba(154,163,178,.45); }
+        .experience-grid .experience-card.card-stc:hover { box-shadow: 0 18px 40px rgba(154,163,178,.16); }
+    </style>
 </head>
 <body>
 <nav>
@@ -22,7 +36,7 @@
       <div class="brand">
         <div class="brand-title">
           <h3>Thomas Houdard</h3>
-          <small>UI/UX DESIGNER · DEV WEB</small>
+          <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
         </div>
       </div>
 
@@ -34,6 +48,7 @@
           <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
           <div class="dropdown-content">
             <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
             <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
             <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
           </div>
@@ -55,8 +70,9 @@
                 <div class="bar"></div>
             </div>
             <div class="experience-grid">
-                <div class="experience-card">
+                <div class="experience-card card-ironcat">
                     <img src="images/expro/Ironcat.png" alt="Ironcat">
+                    <span class="category" data-key="badge_exp_international">Expérience internationale</span>
                     <h3>Ironcat</h3>
                     <h4 data-key="exp_pro_ironcat_role">UX/UI Designer & Développeur Web</h4>
                     <p data-key="exp_pro_ironcat_desc"></p>
@@ -66,13 +82,15 @@
                 </div>
                 <div class="experience-card">
                     <img src="images/photoprofil.webp" alt="Freelance">
+                    <span class="category" data-key="badge_exp_freelance">Activité freelance</span>
                     <h3>Freelance</h3>
-                    <h4 data-key="exp_pro_freelance_role">UX/UI Designer & Développeur Web</h4>
+                    <h4 data-key="exp_pro_freelance_role">UI/UX & Product Designer · Front-End</h4>
                     <p data-key="exp_pro_freelance_desc"></p>
                     <a href="freelance.html" class="btn btn-primary" data-key="button_plus">Plus d'infos</a>
                 </div>
-                <div class="experience-card">
+                <div class="experience-card card-chromateq">
                     <img src="images/expro/chromateq.png" alt="Chromateq">
+                    <span class="category" data-key="badge_exp_support">Support technique</span>
                     <h3>Chromateq</h3>
                     <h4 data-key="exp_pro_chromateq_role">Technicien Support Client</h4>
                     <p data-key="exp_pro_chromateq_desc"></p>
@@ -80,8 +98,9 @@
                 </div>
             </div>
             <div class="experience-grid">
-                <div class="experience-card">
+                <div class="experience-card card-stc">
                     <img src="images/expro/stc.png" alt="Sud Trading Company">
+                    <span class="category" data-key="badge_exp_frontend">Mission Front-End</span>
                     <h3>Sud Trading Company</h3>
                     <h4 data-key="exp_pro_stc_role">Développeur Web Angular</h4>
                     <p data-key="exp_pro_stc_desc"></p>
@@ -114,32 +133,38 @@
     <script>
         const translations = {
             fr: {
-                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",
-                menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
                 titre_exp_pro:"Expériences Professionnelles",
+                badge_exp_international:"Expérience internationale",
+                badge_exp_freelance:"Activité freelance",
+                badge_exp_support:"Support technique",
+                badge_exp_frontend:"Mission Front-End",
                 exp_pro_ironcat_role:"UX/UI Designer & Développeur Web",
-                exp_pro_ironcat_desc:"Conception et développement de solutions numériques dans un environnement international : création d’interfaces, amélioration de l’expérience utilisateur et participation à des projets web et interactifs.",
-                exp_pro_freelance_role:"UX/UI Designer & Développeur Web",
-                exp_pro_freelance_desc:"Conception d’interfaces centrées utilisateur (wireframes, prototypage haute fidélité, design système) et intégration front (HTML, CSS, JS). Optimisation accessibilité, performance & SEO.",
+                exp_pro_ironcat_desc:"Conception d’interfaces, développement web et contribution à une expérience VR dans un environnement international.",
+                exp_pro_freelance_role:"UI/UX & Product Designer · Front-End",
+                exp_pro_freelance_desc:"Conception UX/UI et développement Front-End pour différents projets digitaux.",
                 exp_pro_chromateq_role:"Technicien Support Client",
-                exp_pro_chromateq_desc:"Support technique international (FR/EN), diagnostic logiciel & matériel, création de documentation claire et amélioration de l’expérience utilisateur.",
+                exp_pro_chromateq_desc:"Support technique international, tests fonctionnels et création de documentation pour des solutions de contrôle d’éclairage.",
                 exp_pro_stc_role:"Développeur Web Angular",
-                exp_pro_stc_desc:"Intégration front moderne, composants réutilisables, collaboration UI/UX & optimisation des parcours utilisateurs sur application métier.",
+                exp_pro_stc_desc:"Développement Front-End Angular et amélioration d’une application métier dans un environnement technique.",
                 button_plus:"Plus d'infos",
                 footer:"©2025 Thomas Houdard · Tous droits réservés"
             },
             en: {
-                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",
-                menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
                 titre_exp_pro:"Professional Experience",
+                badge_exp_international:"International experience",
+                badge_exp_freelance:"Freelance activity",
+                badge_exp_support:"Technical support",
+                badge_exp_frontend:"Front-End mission",
                 exp_pro_ironcat_role:"UX/UI Designer & Web Developer",
-                exp_pro_ironcat_desc:"Designing and developing digital solutions in an international environment: creating interfaces, improving user experience and participating in web and interactive projects.",
-                exp_pro_freelance_role:"UX/UI Designer & Web Developer",
-                exp_pro_freelance_desc:"Designing user-centered interfaces (wireframes, high‑fidelity prototypes, design systems) and front-end integration (HTML, CSS, JS). Accessibility, performance & SEO optimization.",
+                exp_pro_ironcat_desc:"Designing interfaces, web development and contributing to a VR experience in an international environment.",
+                exp_pro_freelance_role:"UI/UX & Product Designer · Front-End",
+                exp_pro_freelance_desc:"UX/UI design and Front-End development for various digital projects.",
                 exp_pro_chromateq_role:"Customer Support Technician",
-                exp_pro_chromateq_desc:"International technical support (FR/EN), software & hardware diagnostics, clear documentation and UX improvement initiatives.",
+                exp_pro_chromateq_desc:"International technical support, functional testing and documentation for lighting control solutions.",
                 exp_pro_stc_role:"Angular Web Developer",
-                exp_pro_stc_desc:"Modern front-end integration, reusable components, UI/UX collaboration and user flow optimization on business web app.",
+                exp_pro_stc_desc:"Front-End Angular development and improvements to a business application in a technical environment.",
                 button_plus:"More info",
                 footer:"©2025 Thomas Houdard · All rights reserved"
             }

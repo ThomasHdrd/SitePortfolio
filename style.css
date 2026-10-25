@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap");
 :root {
     --bg: #05070b;
     --bg-alt: #0c1117;
@@ -7,6 +8,7 @@
     --primary-soft: #9cc3e7;
     --accent: #e56c6c;
     --accent-soft: #f2c3b2;
+    --font-display: "Fraunces", Georgia, serif;
     --sand: #f2e9dc;
     --text: #f8f7f3;
     --text-dim: #a7b1c3;
@@ -63,21 +65,25 @@ h4 {
     letter-spacing: 0.04em;
 }
 h1 {
-    font-size: 38px;
-    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: -0.01em;
     background: linear-gradient(135deg, #f8f7f3 0%, var(--primary-soft) 45%, var(--accent-soft) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 h2 {
     font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-    margin-bottom: 1.2rem;
     color: var(--sand);
     text-transform: uppercase;
 }
 p {
     font-size: var(--cm);
-    text-align: justify;
+    text-align: left;
     color: var(--text-dim);
 }
 ::-webkit-scrollbar {
@@ -125,6 +131,12 @@ nav {
     backdrop-filter: blur(18px);
     background: linear-gradient(to bottom, rgba(5, 7, 11, 0.96), rgba(5, 7, 11, 0.7), transparent);
     border-bottom: 1px solid rgba(242, 233, 220, 0.08);
+    transition: background var(--trans), border-color var(--trans), box-shadow var(--trans);
+}
+nav.scrolled {
+    background: rgba(5, 7, 11, 0.92);
+    border-bottom-color: rgba(242, 233, 220, 0.14);
+    box-shadow: var(--shadow-soft);
 }
 .nav-inner {
     width: min(1400px, 92%);
@@ -134,6 +146,10 @@ nav {
     justify-content: space-between;
     gap: 2rem;
     padding: 0.7rem 0;
+    transition: padding var(--trans);
+}
+nav.scrolled .nav-inner {
+    padding: 0.45rem 0;
 }
 .brand {
     display: flex;
@@ -390,8 +406,60 @@ nav {
 .hero p {
     font-size: 0.96rem;
     color: var(--text-dim);
-    max-width: 96%;
-    text-align: justify;
+    text-align: left;
+}
+
+/* HERO — animated gradient title */
+h1 {
+    background-size: 200% auto;
+    animation: heroGradient 6s ease-in-out infinite;
+}
+@keyframes heroGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* HERO — idle float on the profile photo */
+.hero-media img {
+    animation: heroFloat 5s ease-in-out infinite;
+}
+.hero-media .ring {
+    animation: spin 18s linear infinite, ringPulse 4s ease-in-out infinite;
+}
+@keyframes heroFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes ringPulse {
+    0%, 100% { opacity: 0.55; }
+    50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    h1, .hero-media img, .hero-media .ring { animation: none; }
+}
+
+/* HERO — staggered entrance on load */
+.hero-sub, .hero h1, .hero p, .hero .badges, .hero-actions, .hero-media {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease forwards;
+}
+.hero-sub { animation-delay: 0.05s; }
+.hero h1 { animation-delay: 0.15s; margin-bottom: 10px;}
+.hero p[data-key="presentation_1"] { animation-delay: 0.25s; }
+.hero p[data-key="presentation_2"] { animation-delay: 0.32s; }
+.hero p[data-key="presentation_3"] { animation-delay: 0.39s; }
+.hero .badges { animation-delay: 0.46s; }
+.hero-actions { animation-delay: 0.53s; }
+.hero-media { animation-delay: 0.1s; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-sub, .hero h1, .hero p, .hero .badges, .hero-actions, .hero-media {
+        animation: none;
+        opacity: 1;
+    }
 }
 .badges {
     display: flex;
@@ -419,6 +487,14 @@ nav {
     border-radius: 50%;
     background: var(--primary);
     box-shadow: 0 0 0 4px rgba(50, 138, 211, 0.25);
+    animation: dotPulse 2.4s ease-in-out infinite;
+}
+@keyframes dotPulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(50, 138, 211, 0.25); }
+    50% { box-shadow: 0 0 0 7px rgba(50, 138, 211, 0.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .badge .dot { animation: none; }
 }
 .hero-actions {
     display: flex;
@@ -448,7 +524,23 @@ nav {
     background: rgba(11, 16, 25, 0.95);
     color: var(--sand);
     cursor: pointer;
+    overflow: hidden;
     transition: background var(--trans), transform var(--trans), box-shadow var(--trans), color var(--trans);
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+.btn:hover::after {
+    transform: translateX(120%);
+}
+@media (prefers-reduced-motion: reduce) {
+    .btn::after { transition: none; }
 }
 .btn-primary {
     border: none;
@@ -536,6 +628,13 @@ video {
     text-transform: uppercase;
     color: var(--sand);
 }
+.card h4.card-subtitle {
+    font-size: 12px;
+}
+.card p.card-desc {
+    font-size: 15px;
+    color: var(--text-dim);
+}
 .card ul {
     list-style: none;
     display: grid;
@@ -612,6 +711,77 @@ video {
     filter: brightness(1.8) contrast(1.2);
     opacity: 1;
     transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+/* Logo dont le visuel source a peu de marge interne : on agrandit le
+   padding pour garder un poids visuel cohérent avec les autres logos. */
+.logo-wall img.logo-compact {
+    padding: 2.1rem;
+}
+/* Infobulle discrète au survol (ex. détail des logiciels Adobe regroupés) */
+.logo-tooltip {
+    position: relative;
+    width: 100%;
+}
+.logo-tooltip-text {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: var(--bg-alt);
+    border: var(--border-soft);
+    color: var(--text-dim);
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    padding: 0.4rem 0.65rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--trans), transform var(--trans);
+    z-index: 5;
+}
+.logo-tooltip:hover .logo-tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+/* Workflow IA — catégorie secondaire, visuellement distincte du mur de logos principal */
+.tools-secondary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: var(--border-soft);
+}
+.tools-secondary-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+.tools-secondary-logos {
+    display: flex;
+    gap: 0.7rem;
+}
+.tools-secondary-logos img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background: var(--bg-alt);
+    border: 1px solid rgba(242, 233, 220, 0.08);
+    opacity: 0.78;
+    transition: transform var(--trans), filter var(--trans), opacity var(--trans), box-shadow var(--trans);
+}
+.tools-secondary-logos img:hover {
+    filter: brightness(1.8) contrast(1.2);
+    opacity: 1;
+    transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 /* PASSIONS / LANGUES CARDS */
@@ -835,6 +1005,57 @@ footer {
 }
 
 /* ------------------------------------------------------------------------------------------- */
+/* HOME PAGE ONLY — extra scroll flourishes (scoped so other pages keep their current behaviour) */
+body:has(#hero) .section-header .bar {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.9s ease;
+}
+body:has(#hero) .reveal.visible .section-header .bar {
+    transform: scaleX(1);
+}
+body:has(#hero) .reveal .grid > *,
+body:has(#hero) .reveal .cert-grid > *,
+body:has(#hero) .reveal .logo-wall > * {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+body:has(#hero) .reveal.visible .grid > *,
+body:has(#hero) .reveal.visible .cert-grid > *,
+body:has(#hero) .reveal.visible .logo-wall > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+body:has(#hero) .reveal .grid > *:nth-child(1),  body:has(#hero) .reveal .cert-grid > *:nth-child(1),  body:has(#hero) .reveal .logo-wall > *:nth-child(1)  { transition-delay: 0.03s; }
+body:has(#hero) .reveal .grid > *:nth-child(2),  body:has(#hero) .reveal .cert-grid > *:nth-child(2),  body:has(#hero) .reveal .logo-wall > *:nth-child(2)  { transition-delay: 0.07s; }
+body:has(#hero) .reveal .grid > *:nth-child(3),  body:has(#hero) .reveal .cert-grid > *:nth-child(3),  body:has(#hero) .reveal .logo-wall > *:nth-child(3)  { transition-delay: 0.11s; }
+body:has(#hero) .reveal .grid > *:nth-child(4),  body:has(#hero) .reveal .cert-grid > *:nth-child(4),  body:has(#hero) .reveal .logo-wall > *:nth-child(4)  { transition-delay: 0.15s; }
+body:has(#hero) .reveal .grid > *:nth-child(5),  body:has(#hero) .reveal .cert-grid > *:nth-child(5),  body:has(#hero) .reveal .logo-wall > *:nth-child(5)  { transition-delay: 0.19s; }
+body:has(#hero) .reveal .grid > *:nth-child(6),  body:has(#hero) .reveal .logo-wall > *:nth-child(6)  { transition-delay: 0.23s; }
+body:has(#hero) .reveal .grid > *:nth-child(7),  body:has(#hero) .reveal .logo-wall > *:nth-child(7)  { transition-delay: 0.27s; }
+body:has(#hero) .reveal .grid > *:nth-child(8),  body:has(#hero) .reveal .logo-wall > *:nth-child(8)  { transition-delay: 0.31s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(9)  { transition-delay: 0.35s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(10) { transition-delay: 0.39s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(11) { transition-delay: 0.43s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(12) { transition-delay: 0.47s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(13) { transition-delay: 0.51s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(14) { transition-delay: 0.55s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(15) { transition-delay: 0.59s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(16) { transition-delay: 0.63s; }
+body:has(#hero) .reveal .logo-wall > *:nth-child(17) { transition-delay: 0.67s; }
+@media (prefers-reduced-motion: reduce) {
+    body:has(#hero) .section-header .bar,
+    body:has(#hero) .reveal .grid > *,
+    body:has(#hero) .reveal .cert-grid > *,
+    body:has(#hero) .reveal .logo-wall > * {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------- */
 /* EXPERIENCE PAGE */
 .reveal {
     max-width: 1400px;
@@ -892,6 +1113,26 @@ footer {
     background: var(--bg-alt);
     border-radius: 14px;
     border: 1px solid rgba(242,233,220,.08);
+}
+.experience-monogram {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    border: 1px solid rgba(242,233,220,.08);
+}
+.experience-monogram span {
+    font-family: "Plus Jakarta Sans", Inter, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .experience-card h3 {
@@ -978,6 +1219,65 @@ footer {
     gap: 16px;
     margin-top: 10px;
 }
+/* Navigation entre case studies freelance (footer de projet) */
+.project-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    gap: 1rem;
+}
+.project-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem 1.2rem;
+    background: var(--bg-soft);
+    border: var(--border-soft);
+    border-radius: 14px;
+    transition: transform var(--trans), border-color var(--trans), box-shadow var(--trans);
+}
+.project-nav-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+.project-nav-link.next {
+    text-align: right;
+    align-items: flex-end;
+}
+.project-nav-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-soft);
+}
+.project-nav-name {
+    font-family: "Plus Jakarta Sans", Inter, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--sand);
+}
+.project-nav-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+}
+@media (max-width: 640px) {
+    .project-nav {
+        grid-template-columns: 1fr;
+    }
+    .project-nav-link.next {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+.case-context {
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
 .gallery img {
     width: 100%;
     aspect-ratio: 16/10;
@@ -989,6 +1289,56 @@ footer {
 }
 .gallery img:hover {
     transform: scale(1.025);
+}
+.gallery img.mobile-shot {
+    aspect-ratio: 9/16;
+    object-fit: contain;
+    background: var(--bg-alt);
+}
+.gallery figure {
+    margin: 0;
+}
+.gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-dim);
+}
+.compare-title {
+    font-size: 1rem;
+    text-transform: none;
+    color: var(--sand);
+    margin: 2.4rem 0 0.4rem;
+}
+/* Blocs de raisonnement UX courts (case studies) : montrer le "pourquoi"
+   d'une décision, pas seulement le rendu final. */
+.decision-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 0.8rem 0 1.4rem;
+}
+.decision-item {
+    background: var(--bg-soft);
+    border: var(--border-soft);
+    border-left: 3px solid var(--primary);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    display: grid;
+    gap: 0.4rem;
+}
+.decision-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-soft);
+}
+.decision-item p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    text-align: left;
+    margin: 0;
 }
 .tools-grid {
     display: grid;
@@ -1242,6 +1592,35 @@ body.projetDesign .card .btn:hover {
     box-shadow: 0 24px 56px rgba(0,0,0,.8);
     font-weight: 700;
 }
+
+/* Hiérarchie visuelle projetDesigner.html : les projets Product/UX-UI
+   occupent plus d'espace que le background Game & Level Design. */
+#uxui-projects .grid.cards,
+#game-design-projects .grid.cards {
+    grid-template-columns: repeat(4, 1fr);
+}
+#uxui-projects .grid.cards {
+    gap: 32px;
+}
+#game-design-projects .grid.cards {
+    gap: 16px;
+}
+#game-design-projects .card {
+    padding: 0.85rem 0.8rem 0.95rem;
+    gap: 0.5rem;
+}
+#game-design-projects .card img {
+    aspect-ratio: 16/10;
+}
+
+#game-design-projects .card h4 {
+    font-size: 10px;
+}
+#game-design-projects .card p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
 /* --------------------------------------------------------------------------------------------- */
 /* overview design */
 .meta-panel{
@@ -1536,6 +1915,78 @@ ul.contact-list li {
     font-weight: 600;
     letter-spacing: .14em;
     color: var(--primary-soft);
+}
+.price-placeholder {
+    color: var(--accent-soft);
+    border-bottom: 1px dashed var(--accent);
+    padding-bottom: 1px;
+}
+#tarifs .btn:focus-visible {
+    outline: 2px solid var(--sand);
+    outline-offset: 3px;
+}
+#tarifs .card p.card-desc {
+    margin: 0;
+}
+#tarifs .card-featured {
+    border-color: rgba(50, 138, 211, 0.5);
+    box-shadow: 0 0 0 1px rgba(50, 138, 211, 0.25), var(--shadow-soft);
+}
+#tarifs .badge-featured {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    align-self: flex-start;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(50, 138, 211, 0.15);
+    color: var(--primary-soft);
+    border: 1px solid rgba(50, 138, 211, 0.35);
+}
+
+/* Process timeline (6 steps) */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.4rem;
+}
+.process-step {
+    background: var(--bg-soft);
+    border: var(--border-soft);
+    border-radius: 16px;
+    padding: 1.3rem 1.2rem;
+    transition: transform var(--trans), border-color var(--trans), box-shadow var(--trans);
+}
+.process-step:hover {
+    transform: translateY(-4px);
+    border-color: rgba(242, 233, 220, 0.2);
+    box-shadow: var(--shadow-soft);
+}
+.process-step .step-number {
+    display: block;
+    font-family: "Plus Jakarta Sans", Inter, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.process-step h3 {
+    font-size: 15px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-top: .5rem;
+}
+.process-step p {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-top: .5rem;
 }
 
 /* FAQ accordion */
@@ -2267,6 +2718,10 @@ details p {
 
 /* --------- BREAKPOINT 1 : TABLETTES & PETITS ORDIS (≤ 1024px) -------- */
 @media (max-width: 1024px) {
+    #uxui-projects .grid.cards,
+    #game-design-projects .grid.cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
     h2 {
         margin-bottom: 0;
         font-size: 12px;
@@ -2327,6 +2782,10 @@ details p {
 
 /* --------- BREAKPOINT 2 : MOBILE LARGE / TABLETTE PORTRAIT (≤ 768px) -- */
 @media (max-width: 768px) {
+    #uxui-projects .grid.cards,
+    #game-design-projects .grid.cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
     h2,
     .reveal h2 {
         margin-bottom: 0;
@@ -2431,7 +2890,7 @@ details p {
         transform: translateX(-50%);
         width: 100%;
         height: 2px;
-        background: #328ad3;
+        background: var(--primary);
         border-radius: 999px;
     }
 
@@ -2491,8 +2950,8 @@ details p {
     }
 
     .lang-switch button.active {
-        background: #328ad3;
-        border-color: #328ad3;
+        background: var(--primary);
+        border-color: var(--primary);
         max-width: 100%;
     }
 
@@ -2662,6 +3121,10 @@ details p {
 
 /* --------- BREAKPOINT 3 : MOBILE PETIT (≤ 480px) ------------------ */
 @media (max-width: 480px) {
+    #uxui-projects .grid.cards,
+    #game-design-projects .grid.cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     /* Typo globale un poil plus petite pour éviter l'effet "chargé" */
     body {

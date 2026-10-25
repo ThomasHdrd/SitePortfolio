@@ -11,17 +11,26 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="script.js" defer></script>
+    <style>
+        body.unite-v2 {
+            --primary: #1a0f08;
+            --primary-soft: #f2946b;
+            --accent: #e0562e;
+            --accent-soft: #f2946b;
+            --grad-primary: linear-gradient(135deg, #1a0f08 0%, #b8401f 55%, #e0562e 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="unite-v2">
     <nav>
         <div class="nav-inner">
             <div class="brand">
                 <div class="brand-title">
                     <h3>Thomas Houdard</h3>
-                    <small>UI/UX DESIGNER · DEV WEB</small>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
                 </div>
             </div>
             <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                     <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                     <div class="dropdown-content">
                         <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                         <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                         <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                     </div>
@@ -49,6 +59,7 @@
         <!-- HERO -->
         <section class="hero reveal">
             <div class="hero-intro">
+                <span class="category" data-key="unite_badge">Projet événementiel</span>
                 <p class="hero-sub" data-key="unite_banner_tags"></p>
                 <h1 data-key="unite_hero_title"></h1>
                 <p data-key="unite_pres1"></p>
@@ -91,7 +102,7 @@
             <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.5rem">
                 <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Game Design</span></li>
                 <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Level Design</span></li>
-                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg data-key="unite_role_liste1"></svg><span data-key="unite_role_liste1"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="unite_role_liste1"></span></span></li>
                 <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>UI & UX</span></li>
                 <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Playtests</span></li>
                 <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="unite_role_liste2"></span></span></li>
@@ -158,6 +169,17 @@
                     <figcaption style="line-height:1.3;color:var(--text-dim)" data-key="unite_figcaption"></figcaption>
                 </figure>
             </div>
+
+            <div class="decision-block">
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_contrainte">Contrainte</span>
+                    <p data-key="unite_decision_probleme">Offrir une expérience courte et immédiatement compréhensible pour un public d'événement, sans temps d'apprentissage long.</p>
+                </div>
+                <div class="decision-item">
+                    <span class="decision-label" data-key="label_decision">Décision</span>
+                    <p data-key="unite_decision_solution">Une session resserrée à deux minutes et des mécaniques orientées réflexe, pour capter l'attention du public en peu de temps.</p>
+                </div>
+            </div>
         </section>
 
         <!-- TOOLS -->
@@ -193,6 +215,30 @@
                 </article>
             </div>
         </section>
+
+        <!-- NAVIGATION ENTRE PROJETS -->
+        <section class="reveal">
+            <div class="project-nav">
+                <a class="project-nav-link" href="japon.html" style="border-left:3px solid #a83a2f">
+                    <span class="project-nav-label" data-key="gdld_nav_prev">Projet précédent ←</span>
+                    <span class="project-nav-name">Seishin</span>
+                </a>
+                <a class="project-nav-all btn btn-outline" href="projetDesigner.html#game-design-projects" data-key="gdld_nav_all">Voir tous les projets Game & Level Design</a>
+                <a class="project-nav-link next" href="holdup.html" style="border-left:3px solid #b6912f">
+                    <span class="project-nav-label" data-key="gdld_nav_next">Projet suivant →</span>
+                    <span class="project-nav-name">Hold-Up</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA DISCRET -->
+        <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+            <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="gdld_cta_title">Découvrir mes projets Product & UX/UI</h2>
+            <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+                <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="gdld_cta_button">Voir mes projets Product & UX/UI</a>
+                <a href="contact.html" class="btn btn-outline" data-key="gdld_cta_contact">Me contacter</a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -214,14 +260,7 @@
     <script>
         const translations = {
             fr: {
-                menu_about: "Accueil",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Expérience Professionnelles",
-                menu_projects_design: "Projets Design",
-                menu_projects_dev: "Projets Développement",
-                menu_projects_personal: "Perso",
-                menu_contact: "Contact",
-                menu_cv: "Travailler avec moi",
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
                 footer: "©2025 Thomas Houdard · Tous droits réservés",
                 unite_hero_title: "UNITE",
                 unite_banner_tags: "Game Design · Level Design · Prototype · QA · UI & UX",
@@ -255,17 +294,21 @@
                 unite_tool_drive: "Partage documentaire & suivi d’avancement.",
                 cta_scroll_overview: "Voir la présentation",
                 cta_scroll_role: "Explorer le rôle",
-                cta_scroll_tools: "Voir les outils"
+                cta_scroll_tools: "Voir les outils",
+                unite_badge: "Projet événementiel",
+                label_contrainte: "Contrainte",
+                label_decision: "Décision",
+                unite_decision_probleme: "Offrir une expérience courte et immédiatement compréhensible pour un public d'événement, sans temps d'apprentissage long.",
+                unite_decision_solution: "Une session resserrée à deux minutes et des mécaniques orientées réflexe, pour capter l'attention du public en peu de temps.",
+                gdld_nav_prev: "Projet précédent ←",
+                gdld_nav_next: "Projet suivant →",
+                gdld_nav_all: "Voir tous les projets Game & Level Design",
+                gdld_cta_title: "Découvrir mes projets Product & UX/UI",
+                gdld_cta_button: "Voir mes projets Product & UX/UI",
+                gdld_cta_contact: "Me contacter"
             },
             en: {
-                menu_about: "Home",
-                menu_portfolio: "Portfolio ▾",
-                menu_exp_pro: "Professional Experience",
-                menu_projects_design: "Design Projects",
-                menu_projects_dev: "Development Projects",
-                menu_projects_personal: "Personal",
-                menu_contact: "Contact",
-                menu_cv: "Work with me",
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
                 footer: "©2025 Thomas Houdard · All rights reserved",
                 unite_hero_title: "UNITE",
                 unite_banner_tags: "Game Design · Level Design · Prototype · QA · UI & UX",
@@ -299,7 +342,18 @@
                 unite_tool_drive: "Documentation sharing & progress tracking.",
                 cta_scroll_overview: "View overview",
                 cta_scroll_role: "Explore role",
-                cta_scroll_tools: "View tools"
+                cta_scroll_tools: "View tools",
+                unite_badge: "Event project",
+                label_contrainte: "Constraint",
+                label_decision: "Decision",
+                unite_decision_probleme: "Deliver a short, immediately understandable experience for an event audience, with no lengthy learning curve.",
+                unite_decision_solution: "A tight two-minute session and reflex-driven mechanics to capture the public's attention in a short time.",
+                gdld_nav_prev: "Previous project ←",
+                gdld_nav_next: "Next project →",
+                gdld_nav_all: "See all Game & Level Design projects",
+                gdld_cta_title: "Discover my Product & UX/UI projects",
+                gdld_cta_button: "See my Product & UX/UI projects",
+                gdld_cta_contact: "Contact me"
             }
         };
     </script>

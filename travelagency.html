@@ -11,17 +11,26 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=1" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
 <script src="script.js" defer></script>
+<style>
+    body.travel-v2 {
+        --primary: #1a4a6e;
+        --primary-soft: #7ec8e3;
+        --accent: #f2a71b;
+        --accent-soft: #f7c876;
+        --grad-primary: linear-gradient(135deg, #0d2b40 0%, #1a4a6e 55%, #7ec8e3 100%);
+    }
+</style>
 </head>
-<body>
+<body class="travel-v2">
 <nav>
     <div class="nav-inner">
         <div class="brand">
             <div class="brand-title">
                 <h3>Thomas Houdard</h3>
-                <small>UI/UX DESIGNER · DEV WEB</small>
+                <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
             </div>
         </div>
         <div class="burger" id="burger"><span></span></div>
@@ -31,6 +40,7 @@
                 <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
                 <div class="dropdown-content">
                     <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
                     <a href="projetDesigner.html" data-key="menu_projects_design"></a>
                     <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
                 </div>
@@ -49,6 +59,7 @@
     <!-- HERO -->
     <section class="hero reveal">
         <div class="hero-intro">
+            <span class="category" data-key="travel_badge">Intégration Front-End</span>
             <p class="hero-sub" data-key="travel_banner"></p>
             <h1>TRAVEL AGENCY</h1>
             <p data-key="travel_pres_tagline"></p>
@@ -80,7 +91,7 @@
     <!-- OVERVIEW -->
     <section class="reveal" id="overview">
         <div class="section-header">
-            <h2 data-key="travel_overview_title" style="margin-bottom:0;"></h2>
+            <h2 data-key="travel_overview_title" style="margin-bottom:0;">01 — Objectif</h2>
             <div class="bar"></div>
         </div>
         <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
@@ -103,7 +114,7 @@
     <!-- FEATURES -->
     <section class="reveal" id="features" aria-labelledby="features-title">
         <div class="section-header">
-            <h2 id="features-title" data-key="travel_features_title"></h2>
+            <h2 id="features-title" data-key="travel_features_title">02 — Intégration & responsive</h2>
             <div class="bar"></div>
         </div>
         <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem">
@@ -117,7 +128,7 @@
     <!-- TECHNOLOGIES -->
     <section class="reveal" id="technologies">
         <div class="section-header">
-            <h2 data-key="titre_dev_technos"></h2>
+            <h2 data-key="travel_demonstrates_title">03 — Ce que ce projet démontre</h2>
             <div class="bar"></div>
         </div>
         <div class="tool-grid">
@@ -137,12 +148,36 @@
     <!-- LINKS -->
     <section class="reveal" id="links">
         <div class="section-header">
-            <h2 data-key="travel_links_title"></h2>
+            <h2 data-key="travel_links_title">04 — Résultat</h2>
             <div class="bar"></div>
         </div>
         <div id="links-btns" class="proto-wrap" style="display:flex;justify-content:center;align-items:center;gap:1rem;width:100%;">
             <a class="btn btn-primary" target="_blank" href="https://voyage.thomashoudard.com/" data-key="travel_button_site" style="flex:1;text-align:center;"></a>
             <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/websitevoyage-HTML-CSS?tab=readme-ov-file" data-key="travel_button_code" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
+        </div>
+    </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <section class="reveal">
+        <div class="project-nav">
+            <a class="project-nav-link" href="burger.html" style="border-left:3px solid #e8541f">
+                <span class="project-nav-label" data-key="dev_nav_prev">Projet précédent ←</span>
+                <span class="project-nav-name">Burger Code</span>
+            </a>
+            <a class="project-nav-all btn btn-outline" href="projetDeveloppeur.html" data-key="dev_nav_all">Voir tous les projets Développement</a>
+            <a class="project-nav-link next" href="snake.html" style="border-left:3px solid #2e9e3f">
+                <span class="project-nav-label" data-key="dev_nav_next">Projet suivant →</span>
+                <span class="project-nav-name">Snake Game</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+        <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="dev_cta_title">Découvrir mes projets Product & UX/UI</h2>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+            <a href="projetDesigner.html#uxui-projects" class="btn btn-primary" data-key="dev_cta_button">Voir mes projets Product & UX/UI</a>
+            <a href="contact.html" class="btn btn-outline" data-key="dev_cta_contact">Me contacter</a>
         </div>
     </section>
 </main>
@@ -166,14 +201,7 @@
 <script>
 const translations = {
     fr: {
-        menu_about: "Accueil",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Expériences Professionnelles",
-        menu_projects_design: "Projets Design",
-        menu_projects_dev: "Projets Développement",
-        menu_projects_personal: "Perso",
-        menu_contact: "Contact",
-        menu_cv: "Travailler avec moi",
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
         footer: "©2025 Thomas Houdard · Tous droits réservés",
         travel_banner: "Intégration · UI · Responsive",
         travel_pres_tagline: "Page d'accueil statique mettant en avant des destinations et une navigation simple.",
@@ -182,7 +210,7 @@ const translations = {
         travel_meta_stack: "STACK : HTML · CSS",
         travel_meta_date: "DATE : 2024",
         travel_meta_duree: "DURÉE : 1 semaine",
-        travel_overview_title: "Présentation",
+        travel_overview_title: "01 — Objectif",
         travel_pres1: "Travel Agency est une page d'accueil statique conçue pour une agence de voyages ou un blog personnel.",
         travel_pres2: "Objectif : présenter clairement des destinations à venir avec une structure légère et rapide à charger.",
         travel_pres3: "Le design minimaliste facilite la lisibilité et la réutilisation du modèle pour d'autres contenus.",
@@ -190,31 +218,32 @@ const translations = {
         travel_focus1: "Hiérarchie visuelle propre",
         travel_focus2: "Compatibilité multi-écrans",
         travel_focus3: "Structure réutilisable",
-        travel_features_title: "Fonctionnalités",
+        travel_features_title: "02 — Intégration & responsive",
         travel_feature1: "Accueil épuré",
         travel_feature2: "Design responsive",
         travel_feature3: "Sections simples",
         travel_feature4: "Navigation intuitive",
+        travel_demonstrates_title: "03 — Ce que ce projet démontre",
         titre_dev_technos: "Technologies utilisées",
         travel_tech_html: "Structure sémantique",
         travel_tech_css: "Mise en page & responsive",
-        travel_links_title: "Liens",
+        travel_links_title: "04 — Résultat",
         travel_button_site: "Voir le site en ligne",
         travel_button_code: "Voir le code sur GitHub",
         cta_scroll_overview: "Voir la présentation",
         cta_scroll_tools: "Voir les technologies",
         travel_cta_features: "Fonctionnalités",
-        travel_cta_links: "Liens"
+        travel_cta_links: "Liens",
+        travel_badge: "Intégration Front-End",
+        dev_nav_prev: "Projet précédent ←",
+        dev_nav_next: "Projet suivant →",
+        dev_nav_all: "Voir tous les projets Développement",
+        dev_cta_title: "Découvrir mes projets Product & UX/UI",
+        dev_cta_button: "Voir mes projets Product & UX/UI",
+        dev_cta_contact: "Me contacter"
     },
     en: {
-        menu_about: "Home",
-        menu_portfolio: "Portfolio ▾",
-        menu_exp_pro: "Work Experience",
-        menu_projects_design: "Design Projects",
-        menu_projects_dev: "Development Projects",
-        menu_projects_personal: "Personal",
-        menu_contact: "Contact",
-        menu_cv: "Work with me",
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
         footer: "©2025 Thomas Houdard · All rights reserved",
         travel_banner: "Integration · UI · Responsive",
         travel_pres_tagline: "Static landing page highlighting destinations with clean navigation.",
@@ -223,7 +252,7 @@ const translations = {
         travel_meta_stack: "STACK: HTML · CSS",
         travel_meta_date: "DATE: 2024",
         travel_meta_duree: "DURATION: 1 week",
-        travel_overview_title: "Overview",
+        travel_overview_title: "01 — Objective",
         travel_pres1: "Travel Agency is a static landing page for a travel agency or personal blog.",
         travel_pres2: "Goal: clearly highlight upcoming destinations with a lightweight structure.",
         travel_pres3: "Minimal design improves readability and makes the template reusable.",
@@ -231,21 +260,29 @@ const translations = {
         travel_focus1: "Clean visual hierarchy",
         travel_focus2: "Multi-device compatibility",
         travel_focus3: "Reusable structure",
-        travel_features_title: "Features",
+        travel_features_title: "02 — Integration & responsive",
         travel_feature1: "Clean homepage",
         travel_feature2: "Responsive design",
         travel_feature3: "Simple sections",
         travel_feature4: "Intuitive navigation",
+        travel_demonstrates_title: "03 — What this project demonstrates",
         titre_dev_technos: "Technologies used",
         travel_tech_html: "Semantic structure",
         travel_tech_css: "Layout & responsiveness",
-        travel_links_title: "Links",
+        travel_links_title: "04 — Result",
         travel_button_site: "View live site",
         travel_button_code: "View code on GitHub",
         cta_scroll_overview: "View overview",
         cta_scroll_tools: "View technologies",
         travel_cta_features: "Features",
-        travel_cta_links: "Links"
+        travel_cta_links: "Links",
+        travel_badge: "Front-End Integration",
+        dev_nav_prev: "Previous project ←",
+        dev_nav_next: "Next project →",
+        dev_nav_all: "See all Development projects",
+        dev_cta_title: "Discover my Product & UX/UI projects",
+        dev_cta_button: "See my Product & UX/UI projects",
+        dev_cta_contact: "Contact me"
     }
 };
 </script>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PetCare — Application mobile, Design & Dev | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas PetCare : application mobile qui scanne les croquettes et pâtées pour chats et chiens et leur attribue une note sur 100, conçue et développée de A à Z (UX/UI, design system, Flutter, Firebase)." />
+    <meta property="og:title" content="PetCare — Application mobile, Design & Dev" />
+    <meta property="og:description" content="Scanner un paquet de croquettes et comprendre sa qualité nutritionnelle : UX/UI, design system, Flutter et Firebase." />
+    <meta property="og:url" content="https://thomashoudard.com/petcare.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1" />
+    <script src="script.js" defer></script>
+    <style>
+        /* PETCARE — case study (scoped à cette page) */
+        body.petcare-cs {
+            --accent: #d4f45a;
+        }
+        body.petcare-cs h1,
+        body.petcare-cs .cs-section h2 {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.01em;
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            color: var(--sand);
+        }
+
+        .cs-eyebrow { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: .7rem; display: block; }
+        .cs-hero-wrap { display: grid; grid-template-columns: minmax(300px, .85fr) 1.5fr; gap: 3rem; align-items: start; }
+        .cs-hero { padding-top: .5rem; }
+        .cs-hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); margin: .2rem 0 1.2rem; line-height: 1.05; }
+        .cs-hero-desc { font-size: 1.05rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.6rem; text-align: justify; }
+        .cs-hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.8rem; padding-top: 1.5rem; border-top: var(--border-soft); }
+        .cs-hero-meta div span { display: block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: .35rem; }
+        .cs-hero-meta div strong { font-size: .85rem; font-weight: 500; color: var(--sand); line-height: 1.5; }
+        .cs-hero-media { margin: 0; }
+        @media (max-width: 1100px) {
+            .cs-hero-wrap { grid-template-columns: 1fr; }
+            .cs-hero-media { margin-top: 2.5rem; }
+        }
+        .cs-img-full { width: 100%; border-radius: var(--radius); border: var(--border-soft); box-shadow: var(--shadow-soft); display: block; background: var(--bg-alt); }
+
+        .cs-section { margin: 7rem 0; }
+        .cs-section h2 { font-size: clamp(1.9rem, 3.2vw, 2.7rem); margin-bottom: 1.1rem; }
+        .cs-lede { font-size: 1rem; color: var(--text-dim); line-height: 1.65; text-align: justify; }
+
+        .cs-problems { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.2rem; margin-top: 2.4rem; }
+        .cs-problems .cs-num { display: block; font-family: var(--font-display); font-style: italic; font-size: 1.7rem; color: var(--accent); margin-bottom: .5rem; }
+        .cs-problems h4 { font-size: 1rem; margin-bottom: .45rem; color: var(--sand); font-weight: 600; }
+        .cs-problems p { font-size: .9rem; color: var(--text-dim); line-height: 1.55; text-align: justify; }
+
+        .cs-split { display: grid; grid-template-columns: .9fr 1.3fr; gap: 3.2rem; align-items: center; }
+        .cs-split.reverse { grid-template-columns: 1.3fr .9fr; }
+        .cs-split.reverse .cs-split-media { order: -1; }
+
+        .cs-principles { list-style: none; margin: 1.6rem 0 0; padding: 0; display: grid; gap: .8rem; }
+        .cs-principles li { font-size: .92rem; color: var(--sand); display: flex; gap: .7rem; align-items: baseline; }
+        .cs-principles li::before { content: "—"; color: var(--accent); flex-shrink: 0; }
+
+        .cs-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.3rem; }
+        .cs-tag { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; padding: .4rem .8rem; border: var(--border-soft); border-radius: 999px; color: var(--text-dim); }
+
+        .cs-stats { display: flex; gap: 2.4rem; margin-top: 1.8rem; flex-wrap: wrap; }
+        .cs-stat strong { display: block; font-family: var(--font-display); font-style: italic; font-size: 2.1rem; color: var(--accent); line-height: 1; }
+        .cs-stat span { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); display: block; margin-top: .4rem; }
+
+        .cs-swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        .cs-swatch { border: var(--border-soft); border-radius: var(--radius); overflow: hidden; }
+        .cs-swatch .chip { height: 70px; }
+        .cs-swatch p { font-size: .78rem; color: var(--sand); padding: .6rem .8rem .1rem; margin: 0; font-weight: 600; }
+        .cs-swatch small { font-size: .72rem; color: var(--text-dim); padding: 0 .8rem; display: block; line-height: 1.4; }
+        .cs-swatch code { font-size: .7rem; color: var(--text-dim); padding: .3rem .8rem .7rem; display: block; }
+
+        .cs-status { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+        .cs-status span { font-size: .72rem; padding: .4rem .8rem; border-radius: 999px; color: #0b1f1e; font-weight: 600; }
+
+        .cs-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+        .cs-stack div { border: var(--border-soft); border-radius: var(--radius); padding: 1.3rem 1.4rem; background: var(--bg-alt); }
+        .cs-stack h4 { font-size: .95rem; color: var(--sand); margin-bottom: .5rem; font-weight: 600; }
+        .cs-stack p { font-size: .86rem; color: var(--text-dim); line-height: 1.55; margin: 0; }
+
+        .cs-note { font-size: .85rem; color: var(--text-dim); border-left: 2px solid var(--accent); padding-left: 1.1rem; margin-top: 1.6rem; font-style: italic; text-align: justify; }
+
+        .cs-final-list { list-style: none; padding: 0; margin: 2.2rem 0 0; display: grid; gap: 1.1rem; max-width: 620px; }
+        .cs-final-list li { display: flex; align-items: center; gap: 1rem; font-size: .95rem; color: var(--text-dim); flex-wrap: wrap; }
+        .cs-final-list li strong { color: var(--sand); font-weight: 500; }
+        .cs-final-list li .arrow { color: var(--accent); }
+
+        @media (max-width: 860px) {
+            .cs-split, .cs-split.reverse { grid-template-columns: 1fr; gap: 2rem; }
+            .cs-split.reverse .cs-split-media { order: 0; }
+            .cs-hero-meta { gap: 1.6rem; }
+        }
+    </style>
+</head>
+<body class="petcare-cs">
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small data-key="menu_job">UI/UX & PRODUCT DESIGNER · FRONT-END</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="applicationsMobiles.html" data-key="menu_projects_mobile">Applications mobiles</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- 01 HERO -->
+        <section class="cs-hero-wrap reveal">
+            <div class="cs-hero">
+                <span class="cs-eyebrow" data-key="pc_eyebrow">Étude de cas — Application mobile / Design & Dev</span>
+                <h1>PetCare</h1>
+                <p class="cs-hero-desc" data-key="pc_hero_desc">Scanner un paquet de croquettes ou de pâtée et comprendre en un coup d'œil s'il convient à son chat ou à son chien : une note sur 100, ses points forts, ses points faibles et la ration à donner chaque jour.</p>
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>Product Design</span>
+                    <span class="badge"><span class="dot"></span>Design System</span>
+                    <span class="badge"><span class="dot"></span>Flutter</span>
+                    <span class="badge"><span class="dot"></span>Firebase</span>
+                    <span class="badge"><span class="dot"></span>2024 – 2026</span>
+                </div>
+                <div class="cs-hero-meta">
+                    <div><span data-key="pc_role_label">Rôle</span><strong data-key="pc_role_value">Product Designer & Développeur</strong></div>
+                    <div><span data-key="pc_scope_label">Périmètre</span><strong data-key="pc_scope_value">UX · UI · Design System · Identité visuelle · Développement mobile · Back-end</strong></div>
+                    <div><span data-key="pc_platform_label">Plateforme</span><strong data-key="pc_platform_value">Android · iOS à venir</strong></div>
+                </div>
+            </div>
+            <div class="cs-hero-media">
+                <img class="cs-img-full" src="images/petcare/pc_hero.jpg" alt="PetCare — écrans accueil, fiche produit notée 84/100, comparateur et historique">
+            </div>
+        </section>
+
+        <!-- 02 LE DÉFI -->
+        <section class="cs-section reveal" id="challenge">
+            <span class="cs-eyebrow">02 — <span data-key="pc_challenge_eyebrow">Le défi</span></span>
+            <h2 data-key="pc_challenge_title">Des étiquettes que personne ne sait lire</h2>
+            <p class="cs-lede" data-key="pc_challenge_lede">Les propriétaires d'animaux veulent bien nourrir leur chat ou leur chien, mais les étiquettes de croquettes et de pâtées sont techniques, difficiles à comparer et souvent incomplètes. PetCare transforme ces informations en une réponse simple, sans jamais cacher ce qui manque.</p>
+            <div class="cs-problems">
+                <div>
+                    <span class="cs-num">01</span>
+                    <h4 data-key="pc_problem1_title">Des données illisibles</h4>
+                    <p data-key="pc_problem1_desc">Protéines, cendres brutes, rapport calcium/phosphore : les constituants analytiques ne parlent pas au grand public.</p>
+                </div>
+                <div>
+                    <span class="cs-num">02</span>
+                    <h4 data-key="pc_problem2_title">Des produits incomparables</h4>
+                    <p data-key="pc_problem2_desc">Une pâtée contient beaucoup d'eau, des croquettes très peu : comparer leurs pourcentages bruts n'a aucun sens.</p>
+                </div>
+                <div>
+                    <span class="cs-num">03</span>
+                    <h4 data-key="pc_problem3_title">Des informations manquantes</h4>
+                    <p data-key="pc_problem3_desc">Beaucoup de produits sont mal renseignés dans les bases ouvertes. Une note calculée sur des données absentes serait trompeuse.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 L'ANIMAL AU CENTRE -->
+        <section class="cs-section reveal cs-split" id="onboarding">
+            <div class="cs-split-text">
+                <span class="cs-eyebrow">03 — <span data-key="pc_onb_eyebrow">Compte & animaux</span></span>
+                <h2 data-key="pc_onb_title">Tout part de l'animal</h2>
+                <p class="cs-lede" data-key="pc_onb_lede">L'inscription est courte, et un mode invité permet de tester l'application sans compte. Le profil de l'animal (espèce, race, âge, poids) personnalise ensuite l'accueil, les conseils et la ration journalière. On peut suivre plusieurs animaux et passer de l'un à l'autre en un geste.</p>
+                <ul class="cs-principles">
+                    <li data-key="pc_onb_p1">Connexion e-mail ou Google, ou mode invité</li>
+                    <li data-key="pc_onb_p2">Plusieurs animaux, chacun avec son profil</li>
+                    <li data-key="pc_onb_p3">Ration conseillée selon l'animal et son alimentation</li>
+                </ul>
+            </div>
+            <div class="cs-split-media">
+                <img class="cs-img-full" loading="lazy" src="images/petcare/pc_onboarding.jpg" alt="PetCare — écrans de connexion, création du profil de l'animal et accueil avec deux animaux">
+            </div>
+        </section>
+
+        <!-- 04 SCAN & RECHERCHE -->
+        <section class="cs-section reveal" id="scan">
+            <span class="cs-eyebrow">04 — <span data-key="pc_scan_eyebrow">Scan & recherche</span></span>
+            <h2 data-key="pc_scan_title">Trouver le produit, quoi qu'il arrive</h2>
+            <p class="cs-lede" data-key="pc_scan_lede">Le scan du code-barres reste l'entrée principale, avec un bouton toujours accessible. Mais chaque impasse a sa sortie : pas de code-barres, on cherche par nom ; produit introuvable, on photographie l'étiquette et la reconnaissance de texte remplit les valeurs nutritionnelles.</p>
+            <img class="cs-img-full" loading="lazy" style="margin-top:1.8rem" src="images/petcare/pc_scan.jpg" alt="PetCare — scanner de code-barres, recherche par nom et ajout d'un produit">
+            <div class="cs-tags">
+                <span class="cs-tag" data-key="pc_scan_tag1">Scan du code-barres</span>
+                <span class="cs-tag" data-key="pc_scan_tag2">Recherche par nom</span>
+                <span class="cs-tag" data-key="pc_scan_tag3">Lecture de l'étiquette par photo</span>
+                <span class="cs-tag" data-key="pc_scan_tag4">Produits ajoutés par la communauté</span>
+            </div>
+        </section>
+
+        <!-- 05 NOTE PETCARE -->
+        <section class="cs-section reveal cs-split reverse" id="score">
+            <div class="cs-split-text">
+                <span class="cs-eyebrow">05 — <span data-key="pc_score_eyebrow">La note PetCare</span></span>
+                <h2 data-key="pc_score_title">Une note sur 100, honnête et expliquée</h2>
+                <p class="cs-lede" data-key="pc_score_lede">J'ai conçu un barème inspiré des seuils nutritionnels européens (FEDIAF). Les valeurs sont recalculées sur matière sèche pour comparer équitablement pâtées et croquettes, avec des seuils différents selon l'espèce et l'âge. Chaque note est accompagnée d'une phrase qui l'explique.</p>
+                <div class="cs-stats">
+                    <div class="cs-stat"><strong>70</strong><span data-key="pc_stat1">Nutrition</span></div>
+                    <div class="cs-stat"><strong>20</strong><span data-key="pc_stat2">Sécurité & formulation</span></div>
+                    <div class="cs-stat"><strong>10</strong><span data-key="pc_stat3">Transparence</span></div>
+                </div>
+                <p class="cs-note" data-key="pc_score_note">Une donnée absente n'est jamais comptée comme zéro. Une jauge de complétude (par exemple 7/9 données) montre la fiabilité de la note, séparément de sa qualité. Si les informations sont trop rares, la note est marquée comme provisoire.</p>
+            </div>
+            <div class="cs-split-media">
+                <img class="cs-img-full" loading="lazy" src="images/petcare/pc_score.jpg" alt="PetCare — résultat d'analyse noté 39/100 et fiche d'une pâtée notée 96/100">
+            </div>
+        </section>
+
+        <!-- 06 COMPARER & HISTORIQUE -->
+        <section class="cs-section reveal" id="compare">
+            <span class="cs-eyebrow">06 — <span data-key="pc_comp_eyebrow">Comparer & historique</span></span>
+            <h2 data-key="pc_comp_title">Comparer pour mieux choisir</h2>
+            <p class="cs-lede" data-key="pc_comp_lede">Le comparateur met deux produits côte à côte, désigne celui qui a la meilleure note et explique l'écart en une phrase, nutriment par nutriment. L'historique regroupe toutes les analyses par date, avec une recherche et des filtres par verdict.</p>
+            <img class="cs-img-full" loading="lazy" style="margin-top:1.8rem" src="images/petcare/pc_compare_history.jpg" alt="PetCare — comparateur de deux produits, historique filtré et sélection multiple">
+            <div class="cs-tags">
+                <span class="cs-tag" data-key="pc_comp_tag1">Meilleure note mise en avant</span>
+                <span class="cs-tag" data-key="pc_comp_tag2">Tableau des nutriments</span>
+                <span class="cs-tag" data-key="pc_comp_tag3">Filtres par verdict</span>
+                <span class="cs-tag" data-key="pc_comp_tag4">Sélection multiple</span>
+            </div>
+        </section>
+
+        <!-- 07 DESIGN SYSTEM -->
+        <section class="cs-section reveal" id="designsystem">
+            <span class="cs-eyebrow">07 — <span data-key="pc_ds_eyebrow">Design System</span></span>
+            <h2 data-key="pc_ds_title">Une couleur, un rôle</h2>
+            <p class="cs-lede" data-key="pc_ds_lede">Pour la nouvelle version, j'ai repensé toute l'interface en mode sombre, à partir d'un prototype HTML de référence ensuite porté en tokens dans le code. Règle centrale : chaque couleur a un seul rôle. Le citron vert sert aux actions, le turquoise aux données, le corail à l'animal, et les couleurs de verdict ne servent qu'à juger la qualité. L'utilisateur ne confond jamais une donnée incomplète avec un mauvais produit.</p>
+            <div class="cs-swatches">
+                <div class="cs-swatch"><div class="chip" style="background:#D4F45A"></div><p data-key="pc_sw1">Action</p><small data-key="pc_sw1_desc">Boutons et actions principales</small><code>#D4F45A</code></div>
+                <div class="cs-swatch"><div class="chip" style="background:#4FE3C9"></div><p data-key="pc_sw2">Données</p><small data-key="pc_sw2_desc">Complétude, jamais la qualité</small><code>#4FE3C9</code></div>
+                <div class="cs-swatch"><div class="chip" style="background:#FF8C69"></div><p data-key="pc_sw3">Animal</p><small data-key="pc_sw3_desc">Avatar et profil de l'animal</small><code>#FF8C69</code></div>
+                <div class="cs-swatch"><div class="chip" style="background:#0B1F1E"></div><p data-key="pc_sw4">Fond</p><small data-key="pc_sw4_desc">Mode sombre uniquement</small><code>#0B1F1E</code></div>
+                <div class="cs-swatch"><div class="chip" style="background:#F2F1EA"></div><p data-key="pc_sw5">Texte</p><small data-key="pc_sw5_desc">Blanc cassé, plus doux</small><code>#F2F1EA</code></div>
+            </div>
+            <p class="cs-lede" style="margin-top:2rem" data-key="pc_ds_verdict">Les couleurs de verdict, réservées à la note :</p>
+            <div class="cs-status">
+                <span style="background:#5BE39A" data-key="pc_v1">Excellent · 80+</span>
+                <span style="background:#B4E35E" data-key="pc_v2">Bon · 60+</span>
+                <span style="background:#FFC15A" data-key="pc_v3">Médiocre · 40+</span>
+                <span style="background:#FF7A85" data-key="pc_v4">Mauvais</span>
+            </div>
+            <div class="cs-tags" style="margin-top:1.8rem">
+                <span class="cs-tag">Gabarito</span>
+                <span class="cs-tag">Onest</span>
+                <span class="cs-tag">Martian Mono</span>
+            </div>
+            <p class="cs-lede" style="margin-top:2.4rem" data-key="pc_id_lede">J'ai aussi exploré plusieurs pistes de logo autour de trois idées : l'animal, la note et le geste de scan. Chaque piste est testée en icône d'application, en logo complet et en petite taille.</p>
+            <img class="cs-img-full" loading="lazy" style="margin-top:1.4rem" src="images/petcare/pc_logo_pistes.jpg" alt="PetCare — quatre pistes de logo : patte et anneau de note, tête d'animal et coche, viseur de scan, monogramme p">
+        </section>
+
+        <!-- 08 PETCARE+ -->
+        <section class="cs-section reveal cs-split" id="premium">
+            <div class="cs-split-text">
+                <span class="cs-eyebrow">08 — <span data-key="pc_plus_eyebrow">PetCare+</span></span>
+                <h2 data-key="pc_plus_title">Un modèle freemium clair</h2>
+                <p class="cs-lede" data-key="pc_plus_lede">Le scan, la note et la comparaison restent gratuits. L'offre PetCare+ ajoute des outils pour aller plus loin, présentés sans pression et sans bloquer l'essentiel.</p>
+                <ul class="cs-principles">
+                    <li data-key="pc_plus_p1">Analyse des ingrédients et des additifs, affichée à part de la note</li>
+                    <li data-key="pc_plus_p2">Changement d'aliment guidé sur 7 jours</li>
+                    <li data-key="pc_plus_p3">Plusieurs animaux, chacun avec sa note et sa ration</li>
+                    <li data-key="pc_plus_p4">Alternatives mieux notées pour le même animal</li>
+                </ul>
+            </div>
+            <div class="cs-split-media">
+                <img class="cs-img-full" loading="lazy" src="images/petcare/pc_premium.jpg" alt="PetCare — écran PetCare+, profil avec deux animaux et paramètres">
+            </div>
+        </section>
+
+        <!-- 09 DÉVELOPPEMENT -->
+        <section class="cs-section reveal" id="dev">
+            <span class="cs-eyebrow">09 — <span data-key="pc_dev_eyebrow">Développement</span></span>
+            <h2 data-key="pc_dev_title">Du scan à la note, côté code</h2>
+            <p class="cs-lede" data-key="pc_dev_lede">J'ai développé l'application complète : scan, calcul de la note, ration, comptes, contributions de la communauté, abonnement et traduction.</p>
+            <div class="cs-stack">
+                <div>
+                    <h4>Flutter · Dart</h4>
+                    <p data-key="pc_stack1">Une seule base de code pour Android et iOS, avec la lecture du code-barres par la caméra, la vibration de confirmation et la lampe torche.</p>
+                </div>
+                <div>
+                    <h4>Firebase</h4>
+                    <p data-key="pc_stack2">Authentification (e-mail et Google), base de données Firestore pour les profils et les produits ajoutés, et Cloud Functions.</p>
+                </div>
+                <div>
+                    <h4>Open Pet Food Facts</h4>
+                    <p data-key="pc_stack3">Recherche automatique dans cette base ouverte, avec plusieurs serveurs de secours si l'un ne répond pas.</p>
+                </div>
+                <div>
+                    <h4>Google ML Kit</h4>
+                    <p data-key="pc_stack4">Reconnaissance de texte sur la photo de l'étiquette pour remplir automatiquement les valeurs nutritionnelles.</p>
+                </div>
+                <div>
+                    <h4>RevenueCat</h4>
+                    <p data-key="pc_stack5">Gestion de l'abonnement PetCare+ (mensuel ou annuel, avec essai gratuit de 7 jours).</p>
+                </div>
+                <div>
+                    <h4 data-key="pc_stack6_title">Français · Anglais</h4>
+                    <p data-key="pc_stack6">Application entièrement traduite, avec rappels, confidentialité et suppression du compte.</p>
+                </div>
+            </div>
+            <p class="cs-note" data-key="pc_dev_note">Encore en cours : le paiement réel de PetCare+ (l'abonnement est simulé en mode test) et la connexion avec Apple pour la version iPhone. Les captures montrent des données de démonstration.</p>
+        </section>
+
+        <!-- 10 RÉSULTAT -->
+        <section class="cs-section reveal" id="final">
+            <span class="cs-eyebrow">10 — <span data-key="pc_final_eyebrow">Résultat</span></span>
+            <h2 data-key="pc_final_title">Choisir la bonne alimentation en un scan</h2>
+            <ul class="cs-final-list">
+                <li><span data-key="pc_final_a1">Une étiquette technique</span> <span class="arrow">→</span> <strong data-key="pc_final_b1">Une note claire sur 100, expliquée</strong></li>
+                <li><span data-key="pc_final_a2">Pâtée et croquettes incomparables</span> <span class="arrow">→</span> <strong data-key="pc_final_b2">Une comparaison sur matière sèche</strong></li>
+                <li><span data-key="pc_final_a3">Des données manquantes</span> <span class="arrow">→</span> <strong data-key="pc_final_b3">Une complétude affichée en toute transparence</strong></li>
+            </ul>
+        </section>
+
+        <!-- OUTILS -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="tool-grid">
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/figma.png" alt="Figma"></div>
+                    <p class="tool-title">UI DESIGN</p>
+                    <p class="tool-sub">Figma</p>
+                    <p class="tool-desc" data-key="tool_figma_desc">Maquettes, composants & identité visuelle.</p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/claude.svg" alt="Claude"></div>
+                    <p class="tool-title" data-key="tool_ai_title">IA</p>
+                    <p class="tool-sub">Claude</p>
+                    <p class="tool-desc" data-key="pc_tool_claude_desc">Prototype HTML, design system & développement assisté.</p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/github.png" alt="GitHub"></div>
+                    <p class="tool-title" data-key="tool_versioning_title">Versioning</p>
+                    <p class="tool-sub">GitHub</p>
+                    <p class="tool-desc" data-key="tool_github_desc">Historique du code & sauvegarde.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_mobile:"Applications mobiles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                menu_job: "UI/UX & PRODUCT DESIGNER · FRONT-END",
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+                pc_eyebrow: "Étude de cas — Application mobile / Design & Dev",
+                pc_hero_desc: "Scanner un paquet de croquettes ou de pâtée et comprendre en un coup d'œil s'il convient à son chat ou à son chien : une note sur 100, ses points forts, ses points faibles et la ration à donner chaque jour.",
+                pc_role_label: "Rôle",
+                pc_role_value: "Product Designer & Développeur",
+                pc_scope_label: "Périmètre",
+                pc_scope_value: "UX · UI · Design System · Identité visuelle · Développement mobile · Back-end",
+                pc_platform_label: "Plateforme",
+                pc_platform_value: "Android · iOS à venir",
+                pc_challenge_eyebrow: "Le défi",
+                pc_challenge_title: "Des étiquettes que personne ne sait lire",
+                pc_challenge_lede: "Les propriétaires d'animaux veulent bien nourrir leur chat ou leur chien, mais les étiquettes de croquettes et de pâtées sont techniques, difficiles à comparer et souvent incomplètes. PetCare transforme ces informations en une réponse simple, sans jamais cacher ce qui manque.",
+                pc_problem1_title: "Des données illisibles",
+                pc_problem1_desc: "Protéines, cendres brutes, rapport calcium/phosphore : les constituants analytiques ne parlent pas au grand public.",
+                pc_problem2_title: "Des produits incomparables",
+                pc_problem2_desc: "Une pâtée contient beaucoup d'eau, des croquettes très peu : comparer leurs pourcentages bruts n'a aucun sens.",
+                pc_problem3_title: "Des informations manquantes",
+                pc_problem3_desc: "Beaucoup de produits sont mal renseignés dans les bases ouvertes. Une note calculée sur des données absentes serait trompeuse.",
+                pc_onb_eyebrow: "Compte & animaux",
+                pc_onb_title: "Tout part de l'animal",
+                pc_onb_lede: "L'inscription est courte, et un mode invité permet de tester l'application sans compte. Le profil de l'animal (espèce, race, âge, poids) personnalise ensuite l'accueil, les conseils et la ration journalière. On peut suivre plusieurs animaux et passer de l'un à l'autre en un geste.",
+                pc_onb_p1: "Connexion e-mail ou Google, ou mode invité",
+                pc_onb_p2: "Plusieurs animaux, chacun avec son profil",
+                pc_onb_p3: "Ration conseillée selon l'animal et son alimentation",
+                pc_scan_eyebrow: "Scan & recherche",
+                pc_scan_title: "Trouver le produit, quoi qu'il arrive",
+                pc_scan_lede: "Le scan du code-barres reste l'entrée principale, avec un bouton toujours accessible. Mais chaque impasse a sa sortie : pas de code-barres, on cherche par nom ; produit introuvable, on photographie l'étiquette et la reconnaissance de texte remplit les valeurs nutritionnelles.",
+                pc_scan_tag1: "Scan du code-barres",
+                pc_scan_tag2: "Recherche par nom",
+                pc_scan_tag3: "Lecture de l'étiquette par photo",
+                pc_scan_tag4: "Produits ajoutés par la communauté",
+                pc_score_eyebrow: "La note PetCare",
+                pc_score_title: "Une note sur 100, honnête et expliquée",
+                pc_score_lede: "J'ai conçu un barème inspiré des seuils nutritionnels européens (FEDIAF). Les valeurs sont recalculées sur matière sèche pour comparer équitablement pâtées et croquettes, avec des seuils différents selon l'espèce et l'âge. Chaque note est accompagnée d'une phrase qui l'explique.",
+                pc_stat1: "Nutrition",
+                pc_stat2: "Sécurité & formulation",
+                pc_stat3: "Transparence",
+                pc_score_note: "Une donnée absente n'est jamais comptée comme zéro. Une jauge de complétude (par exemple 7/9 données) montre la fiabilité de la note, séparément de sa qualité. Si les informations sont trop rares, la note est marquée comme provisoire.",
+                pc_comp_eyebrow: "Comparer & historique",
+                pc_comp_title: "Comparer pour mieux choisir",
+                pc_comp_lede: "Le comparateur met deux produits côte à côte, désigne celui qui a la meilleure note et explique l'écart en une phrase, nutriment par nutriment. L'historique regroupe toutes les analyses par date, avec une recherche et des filtres par verdict.",
+                pc_comp_tag1: "Meilleure note mise en avant",
+                pc_comp_tag2: "Tableau des nutriments",
+                pc_comp_tag3: "Filtres par verdict",
+                pc_comp_tag4: "Sélection multiple",
+                pc_ds_eyebrow: "Design System",
+                pc_ds_title: "Une couleur, un rôle",
+                pc_ds_lede: "Pour la nouvelle version, j'ai repensé toute l'interface en mode sombre, à partir d'un prototype HTML de référence ensuite porté en tokens dans le code. Règle centrale : chaque couleur a un seul rôle. Le citron vert sert aux actions, le turquoise aux données, le corail à l'animal, et les couleurs de verdict ne servent qu'à juger la qualité. L'utilisateur ne confond jamais une donnée incomplète avec un mauvais produit.",
+                pc_sw1: "Action",
+                pc_sw1_desc: "Boutons et actions principales",
+                pc_sw2: "Données",
+                pc_sw2_desc: "Complétude, jamais la qualité",
+                pc_sw3: "Animal",
+                pc_sw3_desc: "Avatar et profil de l'animal",
+                pc_sw4: "Fond",
+                pc_sw4_desc: "Mode sombre uniquement",
+                pc_sw5: "Texte",
+                pc_sw5_desc: "Blanc cassé, plus doux",
+                pc_ds_verdict: "Les couleurs de verdict, réservées à la note :",
+                pc_v1: "Excellent · 80+",
+                pc_v2: "Bon · 60+",
+                pc_v3: "Médiocre · 40+",
+                pc_v4: "Mauvais",
+                pc_id_lede: "J'ai aussi exploré plusieurs pistes de logo autour de trois idées : l'animal, la note et le geste de scan. Chaque piste est testée en icône d'application, en logo complet et en petite taille.",
+                pc_plus_eyebrow: "PetCare+",
+                pc_plus_title: "Un modèle freemium clair",
+                pc_plus_lede: "Le scan, la note et la comparaison restent gratuits. L'offre PetCare+ ajoute des outils pour aller plus loin, présentés sans pression et sans bloquer l'essentiel.",
+                pc_plus_p1: "Analyse des ingrédients et des additifs, affichée à part de la note",
+                pc_plus_p2: "Changement d'aliment guidé sur 7 jours",
+                pc_plus_p3: "Plusieurs animaux, chacun avec sa note et sa ration",
+                pc_plus_p4: "Alternatives mieux notées pour le même animal",
+                pc_dev_eyebrow: "Développement",
+                pc_dev_title: "Du scan à la note, côté code",
+                pc_dev_lede: "J'ai développé l'application complète : scan, calcul de la note, ration, comptes, contributions de la communauté, abonnement et traduction.",
+                pc_stack1: "Une seule base de code pour Android et iOS, avec la lecture du code-barres par la caméra, la vibration de confirmation et la lampe torche.",
+                pc_stack2: "Authentification (e-mail et Google), base de données Firestore pour les profils et les produits ajoutés, et Cloud Functions.",
+                pc_stack3: "Recherche automatique dans cette base ouverte, avec plusieurs serveurs de secours si l'un ne répond pas.",
+                pc_stack4: "Reconnaissance de texte sur la photo de l'étiquette pour remplir automatiquement les valeurs nutritionnelles.",
+                pc_stack5: "Gestion de l'abonnement PetCare+ (mensuel ou annuel, avec essai gratuit de 7 jours).",
+                pc_stack6_title: "Français · Anglais",
+                pc_stack6: "Application entièrement traduite, avec rappels, confidentialité et suppression du compte.",
+                pc_dev_note: "Encore en cours : le paiement réel de PetCare+ (l'abonnement est simulé en mode test) et la connexion avec Apple pour la version iPhone. Les captures montrent des données de démonstration.",
+                pc_final_eyebrow: "Résultat",
+                pc_final_title: "Choisir la bonne alimentation en un scan",
+                pc_final_a1: "Une étiquette technique",
+                pc_final_b1: "Une note claire sur 100, expliquée",
+                pc_final_a2: "Pâtée et croquettes incomparables",
+                pc_final_b2: "Une comparaison sur matière sèche",
+                pc_final_a3: "Des données manquantes",
+                pc_final_b3: "Une complétude affichée en toute transparence",
+                titre_logiciels_utilises: "Logiciels utilisés",
+                tool_figma_desc: "Maquettes, composants & identité visuelle.",
+                tool_ai_title: "IA",
+                tool_versioning_title: "Versioning",
+                pc_tool_claude_desc: "Prototype HTML, design system & développement assisté.",
+                tool_github_desc: "Historique du code & sauvegarde.",
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_mobile:"Mobile Apps",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                menu_job: "UI/UX & PRODUCT DESIGNER · FRONT-END",
+                footer: "©2025 Thomas Houdard · All rights reserved",
+                pc_eyebrow: "Case study — Mobile app / Design & Dev",
+                pc_hero_desc: "Scan a bag of kibble or a can of wet food and see at a glance whether it suits your cat or dog: a score out of 100, its strengths, its weaknesses and how much to feed each day.",
+                pc_role_label: "Role",
+                pc_role_value: "Product Designer & Developer",
+                pc_scope_label: "Scope",
+                pc_scope_value: "UX · UI · Design System · Visual identity · Mobile development · Back-end",
+                pc_platform_label: "Platform",
+                pc_platform_value: "Android · iOS coming",
+                pc_challenge_eyebrow: "The challenge",
+                pc_challenge_title: "Labels nobody can read",
+                pc_challenge_lede: "Pet owners want to feed their cat or dog well, but pet food labels are technical, hard to compare and often incomplete. PetCare turns that information into a simple answer, without ever hiding what is missing.",
+                pc_problem1_title: "Unreadable data",
+                pc_problem1_desc: "Protein, crude ash, calcium/phosphorus ratio: analytical constituents mean little to most people.",
+                pc_problem2_title: "Products you can't compare",
+                pc_problem2_desc: "Wet food is mostly water, kibble very little: comparing their raw percentages makes no sense.",
+                pc_problem3_title: "Missing information",
+                pc_problem3_desc: "Many products are poorly documented in open databases. A score computed on missing data would be misleading.",
+                pc_onb_eyebrow: "Account & pets",
+                pc_onb_title: "It all starts with the pet",
+                pc_onb_lede: "Sign-up is short, and a guest mode lets people try the app without an account. The pet's profile (species, breed, age, weight) then personalizes the home screen, the advice and the daily ration. You can follow several pets and switch between them in one tap.",
+                pc_onb_p1: "Email or Google sign-in, or guest mode",
+                pc_onb_p2: "Several pets, each with their own profile",
+                pc_onb_p3: "Recommended ration based on the pet and its diet",
+                pc_scan_eyebrow: "Scan & search",
+                pc_scan_title: "Finding the product, whatever happens",
+                pc_scan_lede: "Barcode scanning is the main entry point, with a button always within reach. But every dead end has a way out: no barcode, search by name; product not found, photograph the label and text recognition fills in the nutritional values.",
+                pc_scan_tag1: "Barcode scan",
+                pc_scan_tag2: "Search by name",
+                pc_scan_tag3: "Label reading from a photo",
+                pc_scan_tag4: "Community-added products",
+                pc_score_eyebrow: "The PetCare score",
+                pc_score_title: "A score out of 100, honest and explained",
+                pc_score_lede: "I designed a scoring model inspired by European nutritional guidelines (FEDIAF). Values are converted to dry matter so wet and dry food can be compared fairly, with different thresholds by species and age. Every score comes with a sentence that explains it.",
+                pc_stat1: "Nutrition",
+                pc_stat2: "Safety & formulation",
+                pc_stat3: "Transparency",
+                pc_score_note: "Missing data is never counted as zero. A completeness gauge (for example 7/9 data points) shows how reliable the score is, separately from its quality. When information is too scarce, the score is marked as provisional.",
+                pc_comp_eyebrow: "Compare & history",
+                pc_comp_title: "Compare to choose better",
+                pc_comp_lede: "The comparator puts two products side by side, highlights the one with the best score and explains the gap in one sentence, nutrient by nutrient. The history groups every analysis by date, with search and filters by verdict.",
+                pc_comp_tag1: "Best score highlighted",
+                pc_comp_tag2: "Nutrient table",
+                pc_comp_tag3: "Filters by verdict",
+                pc_comp_tag4: "Multi-select",
+                pc_ds_eyebrow: "Design System",
+                pc_ds_title: "One color, one role",
+                pc_ds_lede: "For the new version, I redesigned the whole interface in dark mode, starting from a reference HTML prototype later ported into tokens in the code. The core rule: each color has a single role. Lime is for actions, turquoise for data, coral for the pet, and verdict colors only judge quality. Users never mistake incomplete data for a bad product.",
+                pc_sw1: "Action",
+                pc_sw1_desc: "Buttons and primary actions",
+                pc_sw2: "Data",
+                pc_sw2_desc: "Completeness, never quality",
+                pc_sw3: "Pet",
+                pc_sw3_desc: "Pet avatar and profile",
+                pc_sw4: "Background",
+                pc_sw4_desc: "Dark mode only",
+                pc_sw5: "Text",
+                pc_sw5_desc: "Off-white, easier on the eyes",
+                pc_ds_verdict: "Verdict colors, reserved for the score:",
+                pc_v1: "Excellent · 80+",
+                pc_v2: "Good · 60+",
+                pc_v3: "Average · 40+",
+                pc_v4: "Poor",
+                pc_id_lede: "I also explored several logo directions around three ideas: the pet, the score and the act of scanning. Each direction is tested as an app icon, a full logo and at small sizes.",
+                pc_plus_eyebrow: "PetCare+",
+                pc_plus_title: "A clear freemium model",
+                pc_plus_lede: "Scanning, scoring and comparing stay free. The PetCare+ plan adds tools to go further, presented without pressure and without blocking the essentials.",
+                pc_plus_p1: "Ingredient and additive analysis, shown separately from the score",
+                pc_plus_p2: "Guided 7-day food transition",
+                pc_plus_p3: "Several pets, each with their own score and ration",
+                pc_plus_p4: "Better-rated alternatives for the same pet",
+                pc_dev_eyebrow: "Development",
+                pc_dev_title: "From scan to score, in code",
+                pc_dev_lede: "I built the complete app: scanning, score calculation, ration, accounts, community contributions, subscription and translation.",
+                pc_stack1: "One codebase for Android and iOS, with camera barcode scanning, haptic confirmation and flashlight.",
+                pc_stack2: "Authentication (email and Google), Firestore database for profiles and user-added products, and Cloud Functions.",
+                pc_stack3: "Automatic lookup in this open database, with several fallback servers if one does not respond.",
+                pc_stack4: "Text recognition on the label photo to fill in the nutritional values automatically.",
+                pc_stack5: "PetCare+ subscription management (monthly or yearly, with a 7-day free trial).",
+                pc_stack6_title: "French · English",
+                pc_stack6: "Fully translated app, with reminders, privacy settings and account deletion.",
+                pc_dev_note: "Still in progress: real payment for PetCare+ (the subscription is simulated in test mode) and Sign in with Apple for the iPhone version. Screenshots show demo data.",
+                pc_final_eyebrow: "Result",
+                pc_final_title: "Choosing the right food in one scan",
+                pc_final_a1: "A technical label",
+                pc_final_b1: "A clear, explained score out of 100",
+                pc_final_a2: "Wet and dry food impossible to compare",
+                pc_final_b2: "A dry-matter comparison",
+                pc_final_a3: "Missing data",
+                pc_final_b3: "Completeness shown transparently",
+                titre_logiciels_utilises: "Tools used",
+                tool_figma_desc: "Mockups, components & visual identity.",
+                tool_ai_title: "AI",
+                tool_versioning_title: "Versioning",
+                pc_tool_claude_desc: "HTML prototype, design system & assisted development.",
+                tool_github_desc: "Code history & backup.",
+            }
+        };
+    </script>
+</body>
+</html>
