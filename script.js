@@ -1,3 +1,20 @@
+// Année du copyright toujours à jour (aussi après un changement de langue)
+const updateCopyrightYear = () => {
+  const year = new Date().getFullYear();
+  document.querySelectorAll("footer").forEach((footer) => {
+    const walker = document.createTreeWalker(footer, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const updated = node.nodeValue.replace(/©(\s?)20\d{2}/g, `©$1${year}`);
+      if (updated !== node.nodeValue) node.nodeValue = updated;
+    }
+  });
+};
+updateCopyrightYear();
+document.querySelectorAll("footer").forEach((footer) => {
+  new MutationObserver(updateCopyrightYear).observe(footer, { childList: true, subtree: true, characterData: true });
+});
+
 // // MENUS HEADER
 // // Ouverture ou Fermeture du menu principal
 // document.getElementById('menu-toggle').addEventListener('click', function() {
