@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pack Complet — Design + Développement | Thomas Houdard</title>
+    <meta name="description" content="Pack Complet : design UX/UI + développement front (HTML/CSS/JS). Site clé en main, responsive, optimisé et prêt à être mis en ligne." />
+    <meta property="og:title" content="Pack Complet — Design + Développement" />
+    <meta property="og:description" content="Offre Pack Complet : UX, UI, HTML/CSS/JS, SEO de base, site turnkey." />
+    <meta property="og:url" content="https://thomashoudard.com/commande-complet.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                        <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="full_banner"></p>
+                <h1 data-key="full_title"></h1>
+                <p data-key="full_tagline"></p>
+                <div class="company-meta">
+                    <span data-key="full_meta_type"></span>
+                    <span data-key="full_meta_role"></span>
+                    <span data-key="full_meta_stack"></span>
+                    <span data-key="full_meta_date"></span>
+                    <span data-key="full_meta_duree"></span>
+                </div>
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>Figma</span>
+                    <span class="badge"><span class="dot"></span>UX</span>
+                    <span class="badge"><span class="dot"></span>UI</span>
+                    <span class="badge"><span class="dot"></span>HTML/CSS/JS</span>
+                    <span class="badge"><span class="dot"></span>Responsive</span>
+                    <span class="badge"><span class="dot"></span>SEO</span>
+                </div>
+                <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                    <a href="#overview" class="btn btn-primary" data-key="cta_overview"></a>
+                    <a href="#inclus" class="btn btn-outline" data-key="cta_inclus"></a>
+                    <a href="#optionnels" class="btn btn-outline" data-key="cta_optionals"></a>
+                    <a href="#process" class="btn btn-outline" data-key="cta_process"></a>
+                    <a href="#estimate" class="btn btn-outline" data-key="cta_estimate"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="reveal" id="overview">
+            <div class="section-header">
+                <h2 data-key="full_overview_title" style="margin-bottom:0;"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+                <div>
+                    <p data-key="full_pres1"></p>
+                    <p data-key="full_pres2"></p>
+                    <p data-key="full_pres3"></p>
+                </div>
+            </div>
+            <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+                <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="full_focus_title"></strong>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                    <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="full_focus1"></span></li>
+                    <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="full_focus2"></span></li>
+                    <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="full_focus3"></span></li>
+                    <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="full_focus4"></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- POUR QUI -->
+        <section class="reveal" id="pour-qui" aria-labelledby="pour-qui-title">
+            <div class="section-header">
+                <h2 id="pour-qui-title" data-key="full_pour_qui_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <ul class="grid" role="list" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+                <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem"><span aria-hidden="true">💼</span><span data-key="full_pour_qui_indep"></span></li>
+                <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem"><span aria-hidden="true">🚀</span><span data-key="full_pour_qui_startup"></span></li>
+                <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem"><span aria-hidden="true">🏢</span><span data-key="full_pour_qui_entreprise"></span></li>
+                <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem"><span aria-hidden="true">💡</span><span data-key="full_pour_qui_perso"></span></li>
+            </ul>
+        </section>
+
+        <!-- OBJECTIFS -->
+        <section class="reveal" id="objectifs">
+            <div class="section-header">
+                <h2 data-key="full_objectif_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.75rem">
+                <li style="display:flex;align-items:flex-start;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_objectif1"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_objectif2"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_objectif3"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_objectif4"></span></li>
+            </ul>
+        </section>
+
+        <!-- CARTES INFO -->
+        <section class="reveal" id="facts">
+            <div class="section-header">
+                <h2 data-key="full_facts_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+                <article class="tool-card">
+                    <p class="tool-title" style="font-size:18px" data-key="full_carte1"></p>
+                    <p class="tool-sub" data-key="full_carte1_texte"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" style="font-size:18px" data-key="full_carte2"></p>
+                    <p class="tool-sub" data-key="full_carte2_texte"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" style="font-size:18px" data-key="full_carte3"></p>
+                    <p class="tool-sub" data-key="full_carte3_texte"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- INCLUS -->
+        <section class="reveal" id="inclus">
+            <div class="section-header">
+                <h2 data-key="full_inclus_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+                <article style="display:grid;gap:.75rem">
+                    <h3 data-key="full_inclus_livrables"></h3>
+                    <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                        <li style="display:flex;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_inclus_wireframes"></span></li>
+                        <li style="display:flex;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_inclus_mockups"></span></li>
+                        <li style="display:flex;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_inclus_front"></span></li>
+                        <li style="display:flex;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_inclus_code"></span></li>
+                        <li style="display:flex;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_inclus_revisions"></span></li>
+                        <li style="display:flex;gap:.5rem; color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="full_inclus_sources"></span></li>
+                    </ul>
+                </article>
+                <article style="display:grid;gap:.75rem">
+                    <h3 data-key="full_inclus_method"></h3>
+                    <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">→</span><span data-key="full_method_brief"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">→</span><span data-key="full_method_wireframe"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">→</span><span data-key="full_method_design"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">→</span><span data-key="full_method_dev"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">→</span><span data-key="full_method_tests"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">→</span><span data-key="full_method_delivery"></span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- OPTIONNELS -->
+        <section class="reveal" id="optionnels">
+            <div class="section-header">
+                <h2 data-key="full_optionals_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+                <article style="display:grid;gap:.75rem">
+                    <h3 data-key="full_optionals_func_title"></h3>
+                    <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_prototype"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_system"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_darkmode"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_mockups"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_pages"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_form"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_animations"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_seo"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_multilang"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">+</span><span data-key="opt_express"></span></li>
+                    </ul>
+                </article>
+                <article style="display:grid;gap:.75rem">
+                    <h3 data-key="full_optionals_assets_title"></h3>
+                    <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">☆</span><span data-key="opt_icons"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">☆</span><span data-key="opt_images"></span></li>
+                    </ul>
+                </article>
+                <article style="display:grid;gap:.75rem">
+                    <h3 data-key="full_optionals_fullstack_title"></h3>
+                    <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">⚙</span><span data-key="opt_cms"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">⚙</span><span data-key="opt_blog"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">⚙</span><span data-key="opt_auth"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">⚙</span><span data-key="opt_backoffice"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">⚙</span><span data-key="opt_ecommerce"></span></li>
+                        <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">⚙</span><span data-key="opt_hosting"></span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="reveal" id="process">
+            <div class="section-header">
+                <h2 data-key="full_process_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+                <article class="tool-card">
+                    <p class="tool-title" data-key="full_process1_title"></p>
+                    <p class="tool-sub" data-key="full_process1_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="full_process2_title"></p>
+                    <p class="tool-sub" data-key="full_process2_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="full_process3_title"></p>
+                    <p class="tool-sub" data-key="full_process3_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="full_process4_title"></p>
+                    <p class="tool-sub" data-key="full_process4_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="full_process5_title"></p>
+                    <p class="tool-sub" data-key="full_process5_text"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ESTIMATION -->
+        <section class="reveal section-estimate" id="estimate" style="width:100%;padding-top:2rem">
+            <div class="section-header">
+                <h2 data-key="full_estimate_title"></h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="estimation-options" style="display:grid;gap:1rem;width:100%">
+                <fieldset style="border:0;padding:0;margin:0;display:grid;gap:.75rem">
+                    <legend class="visually-hidden">Modules optionnels</legend>
+
+                    <!-- Each option -->
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="70">
+                            <span data-key="est_prototype"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+70€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="120">
+                            <span data-key="est_system"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+120€</span>
+                    </div>
+
+                        <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="80">
+                            <span data-key="est_darkmode"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+80€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="60">
+                            <span data-key="est_mockups"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+60€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="50">
+                            <span data-key="est_form"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+50€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="60">
+                            <span data-key="est_animations"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+60€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="70">
+                            <span data-key="est_seo"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+70€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="150">
+                            <span data-key="est_multilang"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+150€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="70">
+                            <span data-key="est_express"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+70€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="40">
+                            <span data-key="est_icons"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+40€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="30">
+                            <span data-key="est_images"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+30€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="250">
+                            <span data-key="est_cms"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+250€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="120">
+                            <span data-key="est_blog"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+120€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="150">
+                            <span data-key="est_auth"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+150€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="200">
+                            <span data-key="est_backoffice"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+200€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="250">
+                            <span data-key="est_ecommerce"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+250€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:250px;cursor:pointer">
+                            <input type="checkbox" class="opt" data-price="80">
+                            <span data-key="est_hosting"></span>
+                        </label>
+                        <span class="price" style="font-weight:600;color:var(--accent)">+80€</span>
+                    </div>
+
+                    <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                        <label for="qty" style="display:flex;align-items:center;gap:.6rem;flex:1;min-width:250px;cursor:text" data-key="est_pages"></label>
+                        <div style="display:flex;align-items:center;gap:.6rem">
+                            <input id="qty" class="qty-input" type="number" min="0" step="1" value="0" data-unit="50" style="width:90px;padding:.4rem .5rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text)">
+                            <span class="price" id="section-unit" style="font-weight:600;color:var(--accent)"></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="total-container" style="border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:grid;gap:.9rem;width:100%;margin:1.4rem 0 0;background:var(--bg-soft)">
+                <p class="note" data-key="est_note" style="margin:0;font-size:.9rem;opacity:.85"></p>
+                <div class="total" style="display:flex;align-items:center;justify-content:space-between;">
+                    <p data-key="est_total" style="margin:0;font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:.8rem;opacity:.8"></p>
+                    <h1 id="total" style="margin:0;font-size:35px;line-height:1;color:var(--accent)">350€</h1>
+                </div>
+            </div>
+
+            <article class="tool-card" style="display:grid;gap:1rem;margin-top:2rem">
+                <form id="devis-form" action="https://formspree.io/f/mqayadbr" method="POST" style="margin:0;display:grid;gap:1rem;width:100%">
+                    <div class="client-fields" style="display:grid;gap:.4rem">
+                        <label for="clientName" data-key="form_name"></label>
+                        <input id="clientName" name="nom_prenom" type="text" data-i18n-attr="placeholder" data-key="form_name_placeholder" required style="padding:.65rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);">
+                    </div>
+                    <div class="client-fields" style="display:grid;gap:.4rem">
+                        <label for="clientEmail" data-key="form_email"></label>
+                        <input id="clientEmail" name="email" type="email" data-i18n-attr="placeholder" data-key="form_email_placeholder" required style="padding:.65rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);">
+                    </div>
+                        <div class="client-fields" style="display:grid;gap:.4rem">
+                        <label for="clientMessage" data-key="form_message"></label>
+                        <textarea id="clientMessage" name="message" rows="4" data-i18n-attr="placeholder" data-key="form_message_placeholder" style="padding:.65rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);resize:vertical"></textarea>
+                    </div>
+
+                    <input type="hidden" name="estimation_detail" id="estimation_detail">
+                    <input type="hidden" name="estimation_total" id="estimation_total">
+                    <input type="hidden" name="_subject" value="Demande de devis — Pack Complet">
+                    <input type="hidden" name="_next" value="https://thomashoudard.com/merci.html">
+
+                    <button type="submit" class="btn btn-primary" data-key="form_submit" style="height:52px;font-size:.85rem;letter-spacing:.5px"></button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const translations = {
+        fr: {
+            menu_about:"Accueil",
+            menu_portfolio:"Portfolio",
+            menu_exp_pro:"Expériences Pro",
+            menu_projects_design:"Projets Design",
+            menu_projects_dev:"Projets Dev",
+            menu_projects_personal:"Perso",
+            menu_contact:"Contact",
+            menu_cv:"Travailler avec moi",
+            footer:"©2025 Thomas Houdard · Tous droits réservés",
+
+            full_banner:"Design · Développement · Front",
+            full_title:"PACK COMPLET",
+            full_tagline:"Design UX/UI + développement HTML/CSS/JS → site responsive et clé en main.",
+            full_meta_type:"OFFRE : Pack Complet",
+            full_meta_role:"RÔLE : UX · UI · Front Dev",
+            full_meta_stack:"STACK : Figma · HTML · CSS · JS",
+            full_meta_date:"DATE : 2025",
+            full_meta_duree:"DURÉE : 10–20 j ouvrés",
+
+            cta_overview:"Voir la présentation",
+            cta_inclus:"Ce qui est inclus",
+            cta_optionals:"Modules optionnels",
+            cta_process:"Processus",
+            cta_estimate:"Estimation rapide",
+
+            full_overview_title:"Présentation",
+            full_pres1:"Un service all‑in‑one : conception UX/UI puis développement front pour un site cohérent et performant.",
+            full_pres2:"Vous obtenez des maquettes validées puis un code propre, commenté, responsive et prêt à héberger.",
+            full_pres3:"SEO technique de base, performances et structure claire pour soutenir vos objectifs (contact, conversion).",
+            full_focus_title:"Focus",
+            full_focus1:"Centraliser design + intégration → gain de temps",
+            full_focus2:"Expérience claire, hiérarchie efficace",
+            full_focus3:"Code modulaire, maintenable et optimisé",
+            full_focus4:"Livraison prête à mettre en ligne",
+
+            full_pour_qui_title:"Pour qui est ce pack ?",
+            full_pour_qui_indep:"Indépendants / PME → un site complet sans gérer plusieurs prestataires.",
+            full_pour_qui_startup:"Startups → présence en ligne rapide et scalable.",
+            full_pour_qui_entreprise:"Entreprises → moderniser la vitrine digitale avec cohérence design + code.",
+            full_pour_qui_perso:"Projets personnels → portfolio, événement, e‑commerce léger clé en main.",
+
+            full_objectif_title:"Objectifs traités",
+            full_objectif1:"Centraliser design + développement",
+            full_objectif2:"Expérience intuitive et responsive",
+            full_objectif3:"Visibilité (SEO de base + performance)",
+            full_objectif4:"Livraison clé en main exploitable",
+
+            full_facts_title:"Informations clés",
+            full_carte1:"À partir de 350€",
+            full_carte1_texte:"Pack de base",
+            full_carte2:"10 – 20 jours ouvrés",
+            full_carte2_texte:"Délai indicatif",
+            full_carte3:"100% clé en main",
+            full_carte3_texte:"Aligné à vos objectifs",
+
+            full_inclus_title:"Ce qui est inclus",
+            full_inclus_livrables:"Livrables",
+            full_inclus_wireframes:"Wireframes basse fidélité (mobile ou desktop si nécessaire)",
+            full_inclus_mockups:"Maquettes haute fidélité (1 version mobile ou desktop)",
+            full_inclus_front:"Développement front responsive (HTML/CSS/JS, 1–3 pages)",
+            full_inclus_code:"Code clair, commenté et optimisé",
+            full_inclus_revisions:"2 révisions (design + intégration)",
+            full_inclus_sources:"Sources Figma + code fournies",
+            full_inclus_method:"Méthode",
+            full_method_brief:"Brief & cadrage express des objectifs",
+            full_method_wireframe:"Wireframe validé avant design si nécessaire",
+            full_method_design:"Création UI/UX sur Figma",
+            full_method_dev:"Intégration front HTML/CSS/JS",
+            full_method_tests:"Tests multi‑supports (mobile, tablette, desktop)",
+            full_method_delivery:"Livraison + instructions de mise en ligne",
+
+            full_optionals_title:"Modules optionnels",
+            full_optionals_func_title:"Expérience & fonctionnalités",
+            opt_prototype:"Prototype interactif (Figma cliquable) — +70€",
+            opt_system:"Design system light — +120€",
+            opt_darkmode:"Dark mode (clair & sombre) — +80€",
+            opt_mockups:"Mockups marketing — +60€",
+            opt_pages:"Sections / pages supplémentaires — +50€/page",
+            opt_form:"Formulaire de contact dynamique — +50€",
+            opt_animations:"Animations & interactions JS — +60€",
+            opt_seo:"Optimisation SEO de base — +70€",
+            opt_multilang:"Multi‑langues (FR/EN/…) — +150€",
+            opt_express:"Livraison express 72h (si faisable) — +70€",
+            full_optionals_assets_title:"Identité & assets",
+            opt_icons:"Pack d’icônes personnalisées — +40€",
+            opt_images:"Banque d’images libres de droits — +30€",
+            full_optionals_fullstack_title:"Back/CMS & features avancées",
+            opt_cms:"Intégration CMS (WordPress/Autre) — +250€",
+            opt_blog:"Blog avec base de données — +120€",
+            opt_auth:"Authentification utilisateurs — +150€",
+            opt_backoffice:"Back‑office basique — +200€",
+            opt_ecommerce:"Paiement / e‑commerce léger (Stripe/PayPal) — +250€",
+            opt_hosting:"Hébergement & configuration initiale — +80€",
+
+            full_process_title:"Processus simple et rapide",
+            full_process1_title:"01 • Cadrage",
+            full_process1_text:"Échange 20–30 min pour objectifs et contenus.",
+            full_process2_title:"02 • Structure",
+            full_process2_text:"Wireframe & organisation des pages.",
+            full_process3_title:"03 • Design",
+            full_process3_text:"Maquettes haute fidélité sur Figma.",
+            full_process4_title:"04 • Développement",
+            full_process4_text:"Intégration HTML/CSS/JS responsive.",
+            full_process5_title:"05 • Livraison",
+            full_process5_text:"Sources + support de mise en ligne.",
+
+            full_estimate_title:"Estimation rapide",
+            est_prototype:"Prototype interactif (Figma cliquable)",
+            est_system:"Design system light",
+            est_darkmode:"Dark mode (clair & sombre)",
+            est_mockups:"Mockups marketing",
+            est_form:"Formulaire de contact dynamique",
+            est_animations:"Animations / interactions JS",
+            est_seo:"SEO technique de base",
+            est_multilang:"Multi‑langues (FR/EN/…)",
+            est_express:"Livraison express 72h",
+            est_icons:"Pack d’icônes personnalisées",
+            est_images:"Banque d’images libres de droits",
+            est_cms:"Intégration CMS",
+            est_blog:"Blog + base de données",
+            est_auth:"Authentification utilisateurs",
+            est_backoffice:"Back‑office basique",
+            est_ecommerce:"Paiement / e‑commerce léger",
+            est_hosting:"Hébergement & configuration",
+            est_pages:"Sections / pages supplémentaires",
+            est_note:"Sélectionnez vos options, ajoutez vos coordonnées et recevez votre devis personnalisé.",
+            est_total:"Total estimé",
+
+            form_name:"Nom & Prénom",
+            form_name_placeholder:"Votre nom complet",
+            form_email:"Email",
+            form_email_placeholder:"votre@email.com",
+            form_message:"Votre message",
+            form_message_placeholder:"Précisions (objectifs, contenus, délai)…",
+            form_submit:"DEMANDER LE DEVIS"
+        },
+        en: {
+            menu_about:"Home",
+            menu_portfolio:"Portfolio",
+            menu_exp_pro:"Work Experience",
+            menu_projects_design:"Design Projects",
+            menu_projects_dev:"Dev Projects",
+            menu_projects_personal:"Personal",
+            menu_contact:"Contact",
+            menu_cv:"Work with me",
+            footer:"©2025 Thomas Houdard · All rights reserved",
+
+            full_banner:"Design · Development · Front",
+            full_title:"COMPLETE PACK",
+            full_tagline:"UX/UI design + HTML/CSS/JS development → responsive turnkey site.",
+            full_meta_type:"OFFER: Complete Pack",
+            full_meta_role:"ROLE: UX · UI · Front Dev",
+            full_meta_stack:"STACK: Figma · HTML · CSS · JS",
+            full_meta_date:"DATE: 2025",
+            full_meta_duree:"DURATION: 10–20 business days",
+
+            cta_overview:"View overview",
+            cta_inclus:"What's included",
+            cta_optionals:"Optional modules",
+            cta_process:"Process",
+            cta_estimate:"Quick estimate",
+
+            full_overview_title:"Overview",
+            full_pres1:"All‑in‑one service: UX/UI design then front-end development for a coherent, performant site.",
+            full_pres2:"Validated mockups then clean, commented, responsive code ready to host.",
+            full_pres3:"Basic technical SEO, performance and clear structure to support your goals (contact, conversion).",
+            full_focus_title:"Focus",
+            full_focus1:"Centralize design + build → save time",
+            full_focus2:"Clear experience & effective hierarchy",
+            full_focus3:"Modular, maintainable, optimized code",
+            full_focus4:"Delivery ready to go live",
+
+            full_pour_qui_title:"Who is this for?",
+            full_pour_qui_indep:"Freelancers / SMB → complete site without juggling providers.",
+            full_pour_qui_startup:"Startups → fast, scalable online presence.",
+            full_pour_qui_entreprise:"Companies → modernize digital showcase with design + code consistency.",
+            full_pour_qui_perso:"Personal projects → portfolio, event, light e‑commerce turnkey.",
+
+            full_objectif_title:"Handled objectives",
+            full_objectif1:"Unify design + development",
+            full_objectif2:"Intuitive, responsive experience",
+            full_objectif3:"Visibility (basic SEO + performance)",
+            full_objectif4:"Turnkey, ready-to-use delivery",
+
+            full_facts_title:"Key facts",
+            full_carte1:"From €350",
+            full_carte1_texte:"Base pack",
+            full_carte2:"10–20 business days",
+            full_carte2_texte:"Indicative lead time",
+            full_carte3:"100% turnkey",
+            full_carte3_texte:"Aligned with your goals",
+
+            full_inclus_title:"What's included",
+            full_inclus_livrables:"Deliverables",
+            full_inclus_wireframes:"Low‑fidelity wireframes (mobile or desktop if needed)",
+            full_inclus_mockups:"High‑fidelity mockups (1 version mobile or desktop)",
+            full_inclus_front:"Front-end build (HTML/CSS/JS, 1–3 responsive pages)",
+            full_inclus_code:"Clean, commented and optimized code",
+            full_inclus_revisions:"2 revision rounds (design + integration)",
+            full_inclus_sources:"Source files (Figma + code)",
+            full_inclus_method:"Method",
+            full_method_brief:"Express brief & goals framing",
+            full_method_wireframe:"Wireframe validation if needed",
+            full_method_design:"UI/UX creation in Figma",
+            full_method_dev:"HTML/CSS/JS integration",
+            full_method_tests:"Multi-device testing (mobile/tablet/desktop)",
+            full_method_delivery:"Delivery + go-live guidance",
+
+            full_optionals_title:"Optional modules",
+            full_optionals_func_title:"Experience & features",
+            opt_prototype:"Interactive prototype (clickable Figma) — +€70",
+            opt_system:"Light design system — +€120",
+            opt_darkmode:"Dark mode (light & dark) — +€80",
+            opt_mockups:"Marketing mockups — +€60",
+            opt_pages:"Extra sections / pages — +€50/page",
+            opt_form:"Dynamic contact form — +€50",
+            opt_animations:"JS animations & interactions — +€60",
+            opt_seo:"Basic SEO optimization — +€70",
+            opt_multilang:"Multi-language (FR/EN/…) — +€150",
+            opt_express:"Express delivery 72h (if feasible) — +€70",
+            full_optionals_assets_title:"Identity & assets",
+            opt_icons:"Custom icon pack — +€40",
+            opt_images:"Stock images (selection & purchase) — +€30",
+            full_optionals_fullstack_title:"Back/CMS & advanced",
+            opt_cms:"CMS integration (WordPress/Other) — +€250",
+            opt_blog:"Blog with database — +€120",
+            opt_auth:"User authentication — +€150",
+            opt_backoffice:"Basic admin back‑office — +€200",
+            opt_ecommerce:"Payment / light e‑commerce (Stripe/PayPal) — +€250",
+            opt_hosting:"Hosting & initial setup — +€80",
+
+            full_process_title:"Simple and fast process",
+            full_process1_title:"01 • Framing",
+            full_process1_text:"20–30 min call for goals & content.",
+            full_process2_title:"02 • Structure",
+            full_process2_text:"Wireframe & page organization.",
+            full_process3_title:"03 • Design",
+            full_process3_text:"High‑fidelity Figma mockups.",
+            full_process4_title:"04 • Development",
+            full_process4_text:"Responsive HTML/CSS/JS build.",
+            full_process5_title:"05 • Delivery",
+            full_process5_text:"Sources + go‑live support.",
+
+            full_estimate_title:"Quick estimate",
+            est_prototype:"Interactive prototype (clickable Figma)",
+            est_system:"Light design system",
+            est_darkmode:"Dark mode (light & dark)",
+            est_mockups:"Marketing mockups",
+            est_form:"Dynamic contact form",
+            est_animations:"JS animations & interactions",
+            est_seo:"Basic technical SEO",
+            est_multilang:"Multi-language (FR/EN/…)",
+            est_express:"Express delivery 72h",
+            est_icons:"Custom icon pack",
+            est_images:"Stock images (selection & purchase)",
+            est_cms:"CMS integration",
+            est_blog:"Blog + database",
+            est_auth:"User authentication",
+            est_backoffice:"Basic admin back‑office",
+            est_ecommerce:"Payment / light e‑commerce",
+            est_hosting:"Hosting & setup",
+            est_pages:"Extra sections / pages",
+            est_note:"Select options, add your info and receive your tailored quote quickly.",
+            est_total:"Estimated total",
+
+            form_name:"Full name",
+            form_name_placeholder:"Your full name",
+            form_email:"Email",
+            form_email_placeholder:"you@email.com",
+            form_message:"Message",
+            form_message_placeholder:"Details (goals, content, deadlines)…",
+            form_submit:"REQUEST QUOTE"
+        }
+    };
+
+    const applyLang = (lang) => {
+        document.querySelectorAll("[data-key]").forEach(el => {
+            const k = el.getAttribute("data-key");
+            if (translations[lang][k] !== undefined) {
+                const attr = el.getAttribute("data-i18n-attr");
+                if (attr) {
+                    el.setAttribute(attr, translations[lang][k]);
+                } else {
+                    el.textContent = translations[lang][k];
+                }
+            }
+        });
+        document.querySelectorAll(".lang-switch button").forEach(b => {
+            b.classList.toggle("active", b.dataset.lang === lang);
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem("lang", lang);
+    };
+
+    const initLang = () => {
+        const stored = localStorage.getItem("lang") || "fr";
+        applyLang(stored);
+    };
+
+    document.getElementById("langSwitch").addEventListener("click", e => {
+        if (e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+        updateEstimateDetail();
+    });
+
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        menu.classList.toggle("open");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold:0.12 });
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    const BASE = 350;
+    const totalEl = document.getElementById("total");
+    const qtyEl = document.getElementById("qty");
+    const optsEls = document.querySelectorAll(".opt");
+    const unitEl = document.getElementById("section-unit");
+    const formEl = document.getElementById("devis-form");
+    const detailEl = document.getElementById("estimation_detail");
+    const totalHiddenEl = document.getElementById("estimation_total");
+
+    const updateUnitLabel = () => {
+        const unit = Number(qtyEl.dataset.unit || 0);
+        unitEl.textContent = "+" + unit + "€/page";
+    };
+
+    const updateEstimateDetail = () => {
+        const lang = document.documentElement.lang || "fr";
+        const selected = [];
+        optsEls.forEach(cb => {
+            if (cb.checked) {
+                const label = cb.parentElement.querySelector("span")?.textContent?.trim();
+                if (label) selected.push(label);
+            }
+        });
+        const qty = Number(qtyEl.value || 0);
+        if (qty > 0) {
+            selected.push((translations[lang]["est_pages"] || "Extra sections/pages") + " × " + qty);
+        }
+        detailEl.value = selected.join(" | ");
+        totalHiddenEl.value = totalEl.textContent;
+    };
+
+    const updateTotal = () => {
+        let sum = BASE;
+        optsEls.forEach(cb => { if (cb.checked) sum += Number(cb.dataset.price || 0); });
+        const unit = Number(qtyEl.dataset.unit || 0);
+        sum += unit * Number(qtyEl.value || 0);
+        totalEl.textContent = sum + "€";
+        updateEstimateDetail();
+    };
+
+    optsEls.forEach(cb => cb.addEventListener("change", updateTotal));
+    qtyEl.addEventListener("input", updateTotal);
+    formEl.addEventListener("submit", () => updateEstimateDetail());
+
+    initLang();
+    updateUnitLabel();
+    updateTotal();
+    </script>
+</body>
+</html>

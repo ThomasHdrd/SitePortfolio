@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Thomas Houdard</title>
+  <meta name="description" content="Articles sur le design UX/UI, le développement web et mes conseils pour PME et freelances.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <!-- même menu que sur index.html -->
+  </nav>
+
+  <header class="banner-blog">
+    <h1>Mon Blog</h1>
+    <p>UX/UI, Développement, Astuces & Réflexions</p>
+  </header>
+
+  <main class="blog-container">
+    <article class="blog-card">
+      <h2><a href="article1.html">Pourquoi investir dans un bon design UX/UI ?</a></h2>
+      <p>Un site bien conçu améliore la confiance des visiteurs et augmente vos ventes. Dans cet article, je vous explique...</p>
+      <a href="article1.html" class="button-info">Lire l’article</a>
+    </article>
+
+    <article class="blog-card">
+      <h2><a href="article2.html">Comment améliorer la vitesse de votre site web</a></h2>
+      <p>Google adore les sites rapides, vos utilisateurs aussi. Voici mes 5 techniques préférées pour booster vos performances...</p>
+      <a href="article2.html" class="button-info">Lire l’article</a>
+    </article>
+  </main>
+
+  <footer>
+    <!-- même footer que index.html -->
+  </footer>
+</body>
+</html>
+
+
+<style>
+    .banner-blog {
+  background: #328ad3;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.blog-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  gap: 30px;
+}
+
+.blog-card {
+  background: #f9f9f9;
+  border: 1px solid #328ad3;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog-card h2 a {
+  color: #328ad3;
+  text-decoration: none;
+}
+
+.blog-card h2 a:hover {
+  text-decoration: underline;
+}
+
+</style>

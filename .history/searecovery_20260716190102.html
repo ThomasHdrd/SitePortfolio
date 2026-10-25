@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IronCat — UI/UX Designer &amp; Web Developer | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas IronCat : UX/UI design, développement web et contribution à une plateforme de films en réalité virtuelle sous Unreal Engine 5." />
+  <meta property="og:title" content="IronCat — Étude de cas" />
+  <meta property="og:description" content="Conception d’interfaces, développement web et expérience immersive en réalité virtuelle à Vilnius." />
+  <meta property="og:url" content="https://thomashoudard.com/ironcat.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+        <li class="lang-switch" id="langSwitch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-intro">
+        <p class="hero-sub" data-key="ironcat_hero_sub">Expérience internationale · UI/UX Design &amp; développement web</p>
+        <h1 data-key="ironcat_hero_title">IronCat — UI/UX Designer &amp; Web Developer</h1>
+        <p data-key="ironcat_hero_p1">
+          IronCat est un studio technologique basé à Vilnius, en Lituanie, qui conçoit des solutions numériques
+          et des expériences immersives, notamment dans le domaine de la réalité virtuelle.
+        </p>
+        <p data-key="ironcat_hero_p2">
+          Pendant ce stage Erasmus+, j’ai conçu des interfaces centrées utilisateur, développé et amélioré des
+          applications web, puis contribué à une plateforme de films en réalité virtuelle avec Unreal Engine 5.
+        </p>
+
+        <div class="company-meta">
+          <span data-key="ironcat_meta_role">UI/UX Designer &amp; Web Developer</span>
+          <span data-key="ironcat_meta_date">Avril 2026 – Juillet 2026</span>
+          <span data-key="ironcat_meta_duration">3 mois · Vilnius, Lituanie</span>
+        </div>
+
+        <div class="badges">
+          <span class="badge" data-key="badge_uxui"><span class="dot"></span>UI/UX Design</span>
+          <span class="badge" data-key="badge_web"><span class="dot"></span>Développement web</span>
+          <span class="badge" data-key="badge_vr"><span class="dot"></span>Réalité virtuelle</span>
+          <span class="badge" data-key="badge_international"><span class="dot"></span>International</span>
+        </div>
+
+        <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+          <a href="#role" class="btn btn-primary" data-key="cta_see_role" style="width:100%;">Voir mon rôle</a>
+          <a href="#site" class="btn btn-outline" data-key="cta_see_site" style="width:100%;justify-content:center;">Voir le site IronCat</a>
+        </div>
+      </div>
+
+      <div class="video-wrap" style="align-self:start">
+        <div class="proto-wrap">
+          <div class="gallery">
+            <img class="ironcat-hero-image" loading="lazy" src="images/expro/Ironcat.png" alt="Logo IronCat" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTE -->
+    <section class="reveal" id="contexte">
+      <div class="section-header">
+        <h2 data-key="ironcat_context_title">Contexte &amp; entreprise</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="ironcat_context_company">IronCat</h4>
+          <p data-key="ironcat_context_p1">
+            IronCat développe des projets numériques et immersifs mêlant interfaces web, technologies interactives
+            et réalité virtuelle.
+          </p>
+          <p data-key="ironcat_context_p2">
+            Cette expérience de trois mois à Vilnius s’est déroulée dans un environnement international, en anglais,
+            avec une organisation agile et une forte autonomie dans la réalisation des missions.
+          </p>
+        </div>
+        <div class="card">
+          <h4 data-key="ironcat_context_mission">Mission</h4>
+          <ul>
+            <li data-key="ironcat_context_mission1">Concevoir des interfaces claires, cohérentes et centrées sur les besoins des utilisateurs.</li>
+            <li data-key="ironcat_context_mission2">Développer et améliorer des applications web avec HTML, CSS et JavaScript.</li>
+            <li data-key="ironcat_context_mission3">Participer à la conception d’une plateforme immersive de films en réalité virtuelle.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MON RÔLE -->
+    <section class="reveal" id="role">
+      <div class="section-header">
+        <h2 data-key="ironcat_role_title">Mon rôle</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+        <div class="card">
+          <h4 data-key="ironcat_role_design">UI/UX Design</h4>
+          <ul>
+            <li data-key="ironcat_role_design1">Conception d’interfaces centrées utilisateur et définition de parcours clairs.</li>
+            <li data-key="ironcat_role_design2">Création de wireframes et de maquettes haute fidélité avec Figma.</li>
+            <li data-key="ironcat_role_design3">Amélioration de la cohérence visuelle, de l’ergonomie et de l’expérience globale.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="ironcat_role_web">Développement web</h4>
+          <ul>
+            <li data-key="ironcat_role_web1">Développement et amélioration d’applications web avec HTML, CSS et JavaScript.</li>
+            <li data-key="ironcat_role_web2">Intégration d’interfaces responsives à partir des besoins et des maquettes définies.</li>
+            <li data-key="ironcat_role_web3">Optimisation des parcours et des interactions afin de rendre les produits plus intuitifs.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="ironcat_role_vr">Plateforme de films en réalité virtuelle</h4>
+          <ul>
+            <li data-key="ironcat_role_vr1">Contribution à la conception et au développement d’une plateforme de films VR avec Unreal Engine 5.</li>
+            <li data-key="ironcat_role_vr2">Travail sur l’expérience utilisateur et sur les fonctionnalités interactives de la plateforme.</li>
+            <li data-key="ironcat_role_vr3">Participation aux échanges et aux itérations produit au sein d’une équipe internationale.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="reveal" id="skills">
+      <div class="section-header">
+        <h2 data-key="ironcat_skills_title">Compétences &amp; technologies utilisées</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="ironcat_skills_product">Design &amp; produit</h4>
+          <ul>
+            <li data-key="ironcat_skills_product1">Conception centrée utilisateur, wireframes et prototypage haute fidélité.</li>
+            <li data-key="ironcat_skills_product2">Analyse et amélioration de parcours utilisateurs web et immersifs.</li>
+            <li data-key="ironcat_skills_product3">Collaboration agile, communication en anglais et adaptation aux retours.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4 data-key="ironcat_skills_tech">Compétences techniques</h4>
+          <ul>
+            <li data-key="ironcat_skills_tech1">Intégration front-end avec HTML, CSS et JavaScript.</li>
+            <li data-key="ironcat_skills_tech2">Conception d’expériences interactives avec Unreal Engine 5.</li>
+            <li data-key="ironcat_skills_tech3">Utilisation d’outils d’intelligence artificielle pour accélérer la recherche et améliorer les workflows.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section class="reveal" id="tools">
+      <div class="section-header">
+        <h2 data-key="ironcat_tools_title">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div>
+        <div class="tools-grid">
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/figma.png" alt="Figma" />
+            </div>
+            <p class="tool-title" data-key="ironcat_tool_figma_title">UX/UI DESIGN</p>
+            <p class="tool-sub">Figma</p>
+            <p class="tool-desc" data-key="ironcat_tool_figma_desc">
+              Création de wireframes, de maquettes haute fidélité et d’interfaces centrées utilisateur.
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/vscode.png" alt="Visual Studio Code" />
+            </div>
+            <p class="tool-title">HTML, CSS, JavaScript</p>
+            <p class="tool-sub">Visual Studio Code</p>
+            <p class="tool-desc" data-key="ironcat_tool_web_desc">
+              Développement et amélioration d’applications web responsives et de leurs interactions.
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/ue.png" alt="Unreal Engine 5" />
+            </div>
+            <p class="tool-title" data-key="ironcat_tool_unreal_title">RÉALITÉ VIRTUELLE</p>
+            <p class="tool-sub">Unreal Engine 5</p>
+            <p class="tool-desc" data-key="ironcat_tool_unreal_desc">
+              Contribution à une plateforme de films VR et amélioration de ses fonctionnalités interactives.
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/ChatGPT-Logo.png" alt="Outils d’intelligence artificielle" />
+            </div>
+            <p class="tool-title" data-key="ironcat_tool_ai_title">INTELLIGENCE ARTIFICIELLE</p>
+            <p class="tool-sub" data-key="ironcat_tool_ai_sub">Outils d’IA</p>
+            <p class="tool-desc" data-key="ironcat_tool_ai_desc">
+              Recherche de solutions, accélération de certaines tâches et amélioration des workflows.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODE SOURCE -->
+    <section class="reveal" id="code">
+      <div class="section-header">
+        <h2 data-key="ironcat_code_title">Voir le code</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="proto-wrap">
+        <p style="font-size:.95rem;color:var(--text-dim)" data-key="ironcat_code_desc">
+          Découvrez le code du projet, son organisation et les fonctionnalités développées pendant mon expérience chez IronCat.
+        </p>
+        <div>
+          <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/ThomasHdrd/IronCat" data-key="ironcat_code_button">
+            Voir le repository GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIEN SITE -->
+    <section class="reveal" id="site">
+      <div class="section-header">
+        <h2 data-key="ironcat_site_title">Découvrir IronCat</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="proto-wrap">
+        <p style="font-size:.95rem;color:var(--text-dim)" data-key="ironcat_site_desc">
+          Pour en savoir plus sur les projets numériques et les expériences immersives développés par IronCat, consultez le site officiel.
+        </p>
+        <div>
+          <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://ironcat.lt/en/" data-key="ironcat_site_button">
+            Voir le site de l’entreprise
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">©2026 Thomas Houdard · Tous droits réservés</span>
+      </div>
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2026 Thomas Houdard · Tous droits réservés",
+
+        ironcat_hero_sub: "Expérience internationale · UI/UX Design & développement web",
+        ironcat_hero_title: "IronCat — UI/UX Designer & Web Developpeur",
+        ironcat_hero_p1: "IronCat est un studio technologique basé à Vilnius, en Lituanie, qui conçoit des solutions numériques et des expériences immersives, notamment dans le domaine de la réalité virtuelle.",
+        ironcat_hero_p2: "Pendant ce stage Erasmus+, j’ai conçu des interfaces centrées utilisateur, développé et amélioré des applications web, puis contribué à une plateforme de films en réalité virtuelle avec Unreal Engine 5.",
+        ironcat_meta_role: "UI/UX Designer & Web Developpeur",
+        ironcat_meta_date: "Avril 2026 – Juillet 2026",
+        ironcat_meta_duration: "3 mois · Vilnius, Lituanie",
+        badge_uxui: "<span class='dot'></span>UI/UX Design",
+        badge_web: "<span class='dot'></span>développement web",
+        badge_vr: "<span class='dot'></span>réalité virtuelle",
+        badge_international: "<span class='dot'></span>international",
+        cta_see_role: "Voir mon rôle",
+        cta_see_site: "Voir le site IronCat",
+
+        ironcat_context_title: "Contexte & entreprise",
+        ironcat_context_company: "IronCat",
+        ironcat_context_p1: "IronCat développe des projets numériques et immersifs mêlant interfaces web, technologies interactives et réalité virtuelle.",
+        ironcat_context_p2: "Cette expérience de trois mois à Vilnius s’est déroulée dans un environnement international, en anglais, avec une organisation agile et une forte autonomie dans la réalisation des missions.",
+        ironcat_context_mission: "Mission",
+        ironcat_context_mission1: "Concevoir des interfaces claires, cohérentes et centrées sur les besoins des utilisateurs.",
+        ironcat_context_mission2: "Développer et améliorer des applications web avec HTML, CSS et JavaScript.",
+        ironcat_context_mission3: "Participer à la conception d’une plateforme immersive de films en réalité virtuelle.",
+
+        ironcat_role_title: "Mon rôle",
+        ironcat_role_design: "UI/UX Design",
+        ironcat_role_design1: "Conception d’interfaces centrées utilisateur et définition de parcours clairs.",
+        ironcat_role_design2: "Création de wireframes et de maquettes haute fidélité avec Figma.",
+        ironcat_role_design3: "Amélioration de la cohérence visuelle, de l’ergonomie et de l’expérience globale.",
+        ironcat_role_web: "Développement web",
+        ironcat_role_web1: "Développement et amélioration d’applications web avec HTML, CSS et JavaScript.",
+        ironcat_role_web2: "Intégration d’interfaces responsives à partir des besoins et des maquettes définies.",
+        ironcat_role_web3: "Optimisation des parcours et des interactions afin de rendre les produits plus intuitifs.",
+        ironcat_role_vr: "Plateforme de films en réalité virtuelle",
+        ironcat_role_vr1: "Contribution à la conception et au développement d’une plateforme de films VR avec Unreal Engine 5.",
+        ironcat_role_vr2: "Travail sur l’expérience utilisateur et sur les fonctionnalités interactives de la plateforme.",
+        ironcat_role_vr3: "Participation aux échanges et aux itérations produit au sein d’une équipe internationale.",
+
+        ironcat_skills_title: "Compétences & technologies utilisées",
+        ironcat_skills_product: "Design & produit",
+        ironcat_skills_product1: "Conception centrée utilisateur, wireframes et prototypage haute fidélité.",
+        ironcat_skills_product2: "Analyse et amélioration de parcours utilisateurs web et immersifs.",
+        ironcat_skills_product3: "Collaboration agile, communication en anglais et adaptation aux retours.",
+        ironcat_skills_tech: "Compétences techniques",
+        ironcat_skills_tech1: "Intégration front-end avec HTML, CSS et JavaScript.",
+        ironcat_skills_tech2: "Conception d’expériences interactives avec Unreal Engine 5.",
+        ironcat_skills_tech3: "Utilisation d’outils d’intelligence artificielle pour accélérer la recherche et améliorer les workflows.",
+
+        ironcat_tools_title: "Logiciels utilisés",
+        ironcat_tool_figma_title: "UX/UI DESIGN",
+        ironcat_tool_figma_desc: "Création de wireframes, de maquettes haute fidélité et d’interfaces centrées utilisateur.",
+        ironcat_tool_web_desc: "Développement et amélioration d’applications web responsives et de leurs interactions.",
+        ironcat_tool_unreal_title: "RÉALITÉ VIRTUELLE",
+        ironcat_tool_unreal_desc: "Contribution à une plateforme de films VR et amélioration de ses fonctionnalités interactives.",
+        ironcat_tool_ai_title: "INTELLIGENCE ARTIFICIELLE",
+        ironcat_tool_ai_sub: "Outils d’IA",
+        ironcat_tool_ai_desc: "Recherche de solutions, accélération de certaines tâches et amélioration des workflows.",
+
+        ironcat_code_title: "Voir le code",
+        ironcat_code_desc: "Découvrez le code du projet, son organisation et les fonctionnalités développées pendant mon expérience chez IronCat.",
+        ironcat_code_button: "Voir le repository GitHub",
+
+        ironcat_site_title: "Découvrir IronCat",
+        ironcat_site_desc: "Pour en savoir plus sur les projets numériques et les expériences immersives développés par IronCat, consultez le site officiel.",
+        ironcat_site_button: "Voir le site de l’entreprise"
+      },
+
+      en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional experience",
+        menu_projects_design: "Design projects",
+        menu_projects_dev: "Development projects",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2026 Thomas Houdard · All rights reserved",
+
+        ironcat_hero_sub: "International experience · UI/UX Design & web development",
+        ironcat_hero_title: "IronCat — UI/UX Designer & Web Developer",
+        ironcat_hero_p1: "IronCat is a technology studio based in Vilnius, Lithuania, that creates digital solutions and immersive experiences, particularly in the field of virtual reality.",
+        ironcat_hero_p2: "During this Erasmus+ internship, I designed user-centred interfaces, developed and improved web applications, and contributed to a virtual reality movie platform using Unreal Engine 5.",
+        ironcat_meta_role: "UI/UX Designer & Web Developer",
+        ironcat_meta_date: "April 2026 – July 2026",
+        ironcat_meta_duration: "3 months · Vilnius, Lithuania",
+        badge_uxui: "<span class='dot'></span>UI/UX Design",
+        badge_web: "<span class='dot'></span>web development",
+        badge_vr: "<span class='dot'></span>virtual reality",
+        badge_international: "<span class='dot'></span>international",
+        cta_see_role: "View my role",
+        cta_see_site: "Visit IronCat website",
+
+        ironcat_context_title: "Context & company",
+        ironcat_context_company: "IronCat",
+        ironcat_context_p1: "IronCat develops digital and immersive projects combining web interfaces, interactive technologies and virtual reality.",
+        ironcat_context_p2: "This three-month experience in Vilnius took place in an international, English-speaking environment with an agile organisation and a high level of autonomy.",
+        ironcat_context_mission: "Mission",
+        ironcat_context_mission1: "Design clear, consistent interfaces focused on users’ needs.",
+        ironcat_context_mission2: "Develop and improve web applications using HTML, CSS and JavaScript.",
+        ironcat_context_mission3: "Contribute to the design of an immersive virtual reality movie platform.",
+
+        ironcat_role_title: "My role",
+        ironcat_role_design: "UI/UX Design",
+        ironcat_role_design1: "Designed user-centred interfaces and defined clear user journeys.",
+        ironcat_role_design2: "Created wireframes and high-fidelity designs with Figma.",
+        ironcat_role_design3: "Improved visual consistency, usability and the overall user experience.",
+        ironcat_role_web: "Web development",
+        ironcat_role_web1: "Developed and improved web applications using HTML, CSS and JavaScript.",
+        ironcat_role_web2: "Integrated responsive interfaces based on defined requirements and designs.",
+        ironcat_role_web3: "Optimised user journeys and interactions to make products more intuitive.",
+        ironcat_role_vr: "Virtual reality movie platform",
+        ironcat_role_vr1: "Contributed to the design and development of a VR movie platform using Unreal Engine 5.",
+        ironcat_role_vr2: "Worked on the platform’s user experience and interactive features.",
+        ironcat_role_vr3: "Took part in product discussions and iterations within an international team.",
+
+        ironcat_skills_title: "Skills & technologies used",
+        ironcat_skills_product: "Design & product",
+        ironcat_skills_product1: "User-centred design, wireframing and high-fidelity prototyping.",
+        ironcat_skills_product2: "Analysis and improvement of web and immersive user journeys.",
+        ironcat_skills_product3: "Agile collaboration, communication in English and adaptation to feedback.",
+        ironcat_skills_tech: "Technical skills",
+        ironcat_skills_tech1: "Front-end integration using HTML, CSS and JavaScript.",
+        ironcat_skills_tech2: "Design of interactive experiences using Unreal Engine 5.",
+        ironcat_skills_tech3: "Use of artificial intelligence tools to accelerate research and improve workflows.",
+
+        ironcat_tools_title: "Software used",
+        ironcat_tool_figma_title: "UX/UI DESIGN",
+        ironcat_tool_figma_desc: "Creation of wireframes, high-fidelity designs and user-centred interfaces.",
+        ironcat_tool_web_desc: "Development and improvement of responsive web applications and their interactions.",
+        ironcat_tool_unreal_title: "VIRTUAL REALITY",
+        ironcat_tool_unreal_desc: "Contribution to a VR movie platform and improvement of its interactive features.",
+        ironcat_tool_ai_title: "ARTIFICIAL INTELLIGENCE",
+        ironcat_tool_ai_sub: "AI tools",
+        ironcat_tool_ai_desc: "Solution research, acceleration of specific tasks and workflow improvement.",
+
+        ironcat_code_title: "View the code",
+        ironcat_code_desc: "Explore the project’s code, its structure and the features developed during my experience at IronCat.",
+        ironcat_code_button: "View the GitHub repository",
+
+        ironcat_site_title: "Discover IronCat",
+        ironcat_site_desc: "For more information about IronCat’s digital projects and immersive experiences, visit the official website.",
+        ironcat_site_button: "Open company website"
+      }
+    };
+  </script>
+</body>
+</html>

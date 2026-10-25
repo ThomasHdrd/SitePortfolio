@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TRAVEL AGENCY — Projet | Thomas Houdard</title>
+<meta name="description" content="Travel Agency : page d'accueil statique HTML/CSS responsive pour une agence de voyages." />
+<meta property="og:title" content="TRAVEL AGENCY — Projet" />
+<meta property="og:description" content="Page d'accueil statique responsive réalisée en HTML et CSS." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="travel_banner"></p>
+            <h1>TRAVEL AGENCY</h1>
+            <p data-key="travel_tagline"></p>
+            <div class="company-meta">
+                <span data-key="travel_meta_type"></span>
+                <span data-key="travel_meta_role"></span>
+                <span data-key="travel_meta_stack"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>HTML</span>
+                <span class="badge"><span class="dot"></span>CSS</span>
+                <span class="badge"><span class="dot"></span>Responsive</span>
+                <span class="badge"><span class="dot"></span>Static</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview"></a>
+                <a href="#features" class="btn btn-outline" data-key="travel_cta_features"></a>
+                <a href="#technologies" class="btn btn-outline" data-key="cta_scroll_tools"></a>
+                <a href="#code" class="btn btn-outline" data-key="travel_cta_code"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <img src="images/developpeur/travel.png" alt="Capture Travel Agency" style="width:100%;border-radius:12px" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="travel_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="travel_pres1"></p>
+            </div>
+        </div>
+        <div class="meta-panel" style="margin-top:1rem">
+            <ul class="meta-list">
+                <li><span class="meta-icon">🧭</span><span data-key="travel_meta_focus"></span></li>
+                <li><span class="meta-icon">📱</span><span data-key="travel_meta_responsive"></span></li>
+                <li><span class="meta-icon">💡</span><span data-key="travel_meta_objectif"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="reveal" id="features" aria-labelledby="features-title">
+        <div class="section-header">
+            <h2 id="features-title" data-key="dev_fonctionnalites"></h2>
+            <div class="bar"></div>
+        </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem">
+            <li style="display:flex;align-items:flex-start;gap:.6rem">
+                <span style="color:var(--accent)">▹</span><span data-key="travel_pres_liste1"></span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem">
+                <span style="color:var(--accent)">▹</span><span data-key="travel_pres_liste2"></span>
+            </li>
+        </ul>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.5rem">
+            <strong style="font-size:.75rem;letter-spacing:.5px;text-transform:uppercase;opacity:.75" data-key="travel_focus_title"></strong>
+            <p style="font-size:.85rem" data-key="travel_focus_text"></p>
+        </div>
+    </section>
+
+    <!-- LIVE SITE -->
+    <section class="reveal" id="live">
+        <div class="section-header">
+            <h2 data-key="travel_site_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="proto-wrap">
+            <a class="btn btn-primary" target="_blank" href="https://voyage.thomashoudard.com/" data-key="dev_button1"></a>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="reveal" id="technologies">
+        <div class="section-header">
+            <h2 data-key="titre_dev_technos"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/html.png" alt="HTML"></div>
+                <p class="tool-title">Markup</p>
+                <p class="tool-sub">HTML</p>
+                <p class="tool-desc" data-key="travel_tool_html"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/css.png" alt="CSS"></div>
+                <p class="tool-title">Style</p>
+                <p class="tool-sub">CSS</p>
+                <p class="tool-desc" data-key="travel_tool_css"></p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CODE -->
+    <section class="reveal" id="code">
+        <div class="section-header">
+            <h2 data-key="travel_code_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="proto-wrap">
+            <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/websitevoyage-HTML-CSS?tab=readme-ov-file" data-key="dev_button2"></a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio",
+        menu_exp_pro: "Expériences Pro",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Dev",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_tools: "Voir les outils",
+        travel_cta_features: "Fonctionnalités",
+        travel_cta_code: "Voir le code",
+        travel_banner: "Page d'accueil statique · HTML · CSS · Responsive",
+        travel_tagline: "Site vitrine minimaliste pour présenter des destinations de voyage futures.",
+        travel_meta_type: "TYPE : Landing Page",
+        travel_meta_role: "RÔLE : Intégration & Design UI",
+        travel_meta_stack: "STACK : HTML + CSS",
+        travel_overview_title: "Présentation",
+        travel_pres1: "Travel Agency est un projet de page d'accueil statique développé avec HTML et CSS, conçu pour une agence de voyages ou un blog personnel. Interface épurée mettant en avant les destinations à venir avec une navigation intuitive.",
+        dev_fonctionnalites: "Fonctionnalités principales",
+        travel_pres_liste1: "PAGE D'ACCUEIL : Interface claire et minimaliste pour accueillir les visiteurs.",
+        travel_pres_liste2: "DESIGN RESPONSIVE : Adapté aux différents types d'appareils (mobiles, tablettes, ordinateurs).",
+        travel_focus_title: "Objectif",
+        travel_focus_text: "Créer une base simple réutilisable pour présenter des offres ou inspirations voyage.",
+        travel_meta_focus: "FOCUS : Clarté & lisibilité",
+        travel_meta_responsive: "RESPONSIVE : Mobile-first",
+        travel_meta_objectif: "OBJECTIF : Présentation rapide",
+        travel_site_title: "Site en ligne",
+        dev_button1: "Voir le site en ligne",
+        titre_dev_technos: "Technologies utilisées",
+        travel_tool_html: "Structure sémantique propre pour SEO et accessibilité basique.",
+        travel_tool_css: "Mise en page responsive, typographie et grille flexible.",
+        travel_code_title: "Code source",
+        dev_button2: "Voir le code sur GitHub"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio",
+        menu_exp_pro: "Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Dev Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        cta_scroll_overview: "View overview",
+        cta_scroll_tools: "View tools",
+        travel_cta_features: "Features",
+        travel_cta_code: "View code",
+        travel_banner: "Static landing · HTML · CSS · Responsive",
+        travel_tagline: "Minimal showcase site to present upcoming travel destinations.",
+        travel_meta_type: "TYPE: Landing Page",
+        travel_meta_role: "ROLE: Integration & UI Design",
+        travel_meta_stack: "STACK: HTML + CSS",
+        travel_overview_title: "Overview",
+        travel_pres1: "Travel Agency is a static landing page project built with HTML and CSS for a travel agency or personal blog. Clean interface highlighting future destinations with intuitive navigation.",
+        dev_fonctionnalites: "Main Features",
+        travel_pres_liste1: "HOME PAGE: Clear minimalist interface welcoming visitors.",
+        travel_pres_liste2: "RESPONSIVE DESIGN: Adapts to mobile, tablet and desktop.",
+        travel_focus_title: "Goal",
+        travel_focus_text: "Provide a simple reusable base to showcase offers or travel inspiration.",
+        travel_meta_focus: "FOCUS: Clarity & readability",
+        travel_meta_responsive: "RESPONSIVE: Mobile-first",
+        travel_meta_objectif: "GOAL: Quick presentation",
+        travel_site_title: "Live site",
+        dev_button1: "View live site",
+        titre_dev_technos: "Technologies used",
+        travel_tool_html: "Semantic structure for basic SEO and accessibility.",
+        travel_tool_css: "Responsive layout, typography and flexible grid.",
+        travel_code_title: "Source code",
+        dev_button2: "View code on GitHub"
+    }
+};
+
+const applyLang = (lang) => {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const k = el.getAttribute("data-key");
+        if (translations[lang][k]) el.textContent = translations[lang][k];
+    });
+    document.querySelectorAll(".lang-switch button").forEach(b => {
+        b.classList.toggle("active", b.dataset.lang === lang);
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem("lang", lang);
+};
+
+const initLang = () => {
+    const stored = localStorage.getItem("lang") || "fr";
+    applyLang(stored);
+};
+
+document.getElementById("langSwitch").addEventListener("click", e => {
+    if (e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+});
+
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+    menu.classList.toggle("open");
+});
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+},{ threshold:0.12 });
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+initLang();
+</script>
+</body>
+</html>

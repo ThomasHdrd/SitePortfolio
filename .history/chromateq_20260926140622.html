@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chromateq — Technicien Support Client | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas Chromateq : support technique, tests fonctionnels, documentation et formation client. Par Thomas Houdard." />
+  <meta property="og:title" content="Chromateq — Étude de cas" />
+  <meta property="og:description" content="Support technique international, tests fonctionnels, documentation et amélioration de l’expérience utilisateur." />
+  <meta property="og:url" content="https://thomashoudard.com/chromateq.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script.js" defer></script>
+  <style>
+    body.chromateq-v2 {
+      --primary: #7a3d12;
+      --primary-soft: #f2b57e;
+      --accent: #e0792e;
+      --accent-soft: #f2b57e;
+      --grad-primary: linear-gradient(135deg, #4a2609 0%, #b85a1f 55%, #e0792e 100%);
+    }
+  </style>
+</head>
+<body class="chromateq-v2">
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-intro">
+        <span class="category" data-key="chroma_badge">Support technique</span>
+        <p class="hero-sub" data-key="chroma_hero_sub">Expérience professionnelle · Support technique</p>
+        <h1 data-key="chroma_hero_title">Chromateq — Technicien Support Client</h1>
+        <p data-key="chroma_hero_p1">
+          Chromateq est un acteur spécialisé dans les solutions de contrôle d’éclairage DMX utilisées dans des projets
+          architecturaux, événementiels et scéniques partout dans le monde.
+        </p>
+        <p data-key="chroma_hero_p2">
+          En tant que technicien support, j’ai accompagné les clients dans la prise en main des produits, assuré les tests
+          fonctionnels avant mise en vente et contribué à la documentation technique et à la maintenance.
+        </p>
+
+        <div class="company-meta">
+          <span data-key="chroma_meta_role">Technicien support client</span>
+          <span data-key="chroma_meta_date">Juillet 2023 – Janvier 2024</span>
+          <span data-key="chroma_meta_duration">6 mois</span>
+        </div>
+
+        <div class="badges">
+          <span class="badge" data-key="badge_support_technique"><span class="dot"></span>Support technique</span>
+          <span class="badge" data-key="badge_tests_fonctionnels"><span class="dot"></span>Tests fonctionnels</span>
+          <span class="badge"><span class="dot"></span>Documentation</span>
+          <span class="badge" data-key="badge_relation_client"><span class="dot" ></span>Relation client</span>
+        </div>
+
+        <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+            <a href="#role" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir mon rôle</a>
+            <a href="#site" class="btn btn-outline" data-key="cta_see_site" style="width:100%; justify-content: center;">Voir le site Chromateq</a>
+        </div>
+      </div>
+
+      <div class="video-wrap" style="align-self:start">
+        <div class="proto-wrap">
+          <div class="gallery">
+            <img loading="lazy" src="images/expro/Chromateq2.png" alt="Chromateq interface et matériel">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 CONTEXTE -->
+    <section class="reveal" id="contexte">
+      <div class="section-header">
+        <h2 data-key="chroma_context_title">01 — Contexte</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="card">
+        <h4 data-key="chroma_context_company">Chromateq</h4>
+        <p data-key="chroma_context_p1">
+          Chromateq développe, fabrique et fournit des solutions de contrôle d’éclairage stables, efficaces et
+          compétitives pour les professionnels du DMX dans le monde entier.
+        </p>
+        <p data-key="chroma_context_p2">
+          Les produits sont utilisés dans des contextes variés : installations architecturales, commerces,
+          lieux de divertissement, scènes et événements live.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 MON RÔLE -->
+    <section class="reveal" id="role">
+      <div class="section-header">
+        <h2 data-key="chroma_role_title">02 — Mon rôle</h2>
+        <div class="bar"></div>
+      </div>
+      <p data-key="chroma_role_intro">
+        Mon rôle s’est organisé autour de trois responsabilités complémentaires : le support technique international,
+        les tests & la qualité produit, et la documentation destinée aux clients.
+      </p>
+    </section>
+
+    <!-- 03 SUPPORT INTERNATIONAL -->
+    <section class="reveal" id="support">
+      <div class="section-header">
+        <h2 data-key="chroma_role_support">03 — Support international</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="card">
+        <ul>
+          <li data-key="chroma_role_support1">Assistance technique à distance (FR / EN) auprès des clients internationaux.</li>
+          <li data-key="chroma_role_support2">Diagnostic des problèmes de configuration DMX et des contrôleurs.</li>
+          <li data-key="chroma_role_support3">Proposition de solutions concrètes et pédagogiques adaptées aux contextes d’utilisation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 04 TESTS & QUALITÉ -->
+    <section class="reveal" id="tests">
+      <div class="section-header">
+        <h2 data-key="chroma_role_tests">04 — Tests & qualité</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="card">
+        <ul>
+          <li data-key="chroma_role_tests1">Réalisation de tests complets avant mise en vente des produits.</li>
+          <li data-key="chroma_role_tests2">Analyse des dysfonctionnements et remontée des bugs aux équipes internes.</li>
+          <li data-key="chroma_role_tests3">Vérification de la stabilité et de la fiabilité des solutions matérielles et logicielles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 DOCUMENTATION & PÉDAGOGIE -->
+    <section class="reveal" id="documentation">
+      <div class="section-header">
+        <h2 data-key="chroma_role_doc">05 — Documentation & pédagogie</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="card">
+        <ul>
+          <li data-key="chroma_role_doc1">Rédaction et mise à jour de la documentation technique des produits.</li>
+          <li data-key="chroma_role_doc2">Création de supports expliquant l’installation, l’utilisation et la maintenance.</li>
+          <li data-key="chroma_role_doc3">Animation de sessions de formation pour aider les clients à tirer le meilleur parti des solutions Chromateq.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 06 OUTILS / ENVIRONNEMENT -->
+    <section class="reveal" id="tools">
+      <div class="section-header">
+        <h2 data-key="chroma_tools_title">06 — Outils & environnement</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid tool-grid">
+        <div class="card">
+          <div class="tool-card-header">
+            <img src="images/expro/chromateq/teamviewer.png" alt="TeamViewer" class="tool-icon" />
+            <div>
+              <h4>TeamViewer</h4>
+              <p class="tool-sub" data-key="chroma_tool_teamviewer_sub">Support distant</p>
+            </div>
+          </div>
+          <p data-key="chroma_tool_teamviewer_desc">
+            Assistance technique à distance et diagnostic en temps réel.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="tool-card-header">
+            <img src="images/expro/chromateq/prodmx.png" alt="Pro DMX" class="tool-icon" />
+            <div>
+              <h4>Pro DMX</h4>
+              <p class="tool-sub" data-key="chroma_tool_prodmx_sub">Contrôle DMX</p>
+            </div>
+          </div>
+          <p data-key="chroma_tool_prodmx_desc">
+            Configuration et test des installations d’éclairage DMX.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="tool-card-header">
+            <img src="images/expro/chromateq/pixxem.png" alt="Pixxem" class="tool-icon" />
+            <div>
+              <h4>Pixxem</h4>
+              <p class="tool-sub" data-key="chroma_tool_pixxem_sub">Gestion d’effets</p>
+            </div>
+          </div>
+          <p data-key="chroma_tool_pixxem_desc">
+            Gestion avancée des équipements d’éclairage et de projection.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="tool-card-header">
+            <img src="images/expro/chromateq/fz.png" alt="FileZilla" class="tool-icon" />
+            <div>
+              <h4>FileZilla</h4>
+              <p class="tool-sub" data-key="chroma_tool_fz_sub">Transfert de fichiers</p>
+            </div>
+          </div>
+          <p data-key="chroma_tool_fz_desc">
+            Transfert de mises à jour et fichiers de configuration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 CE QUE CETTE EXPÉRIENCE M'A APPORTÉ -->
+    <section class="reveal" id="apport">
+      <div class="section-header">
+        <h2 data-key="chroma_apport_title">07 — Ce que cette expérience m’a apporté</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="card">
+        <p data-key="chroma_apport_text">
+          Ce poste ne relevait pas d’une fonction UX, mais il a nourri des compétences transférables à mon activité
+          actuelle : compréhension fine des problèmes utilisateurs remontés par les clients, écoute, pédagogie et
+          rigueur dans la documentation — des réflexes que je retrouve aujourd’hui dans mon travail de UI/UX &amp; Product Designer.
+        </p>
+      </div>
+    </section>
+
+    <!-- LIEN SITE -->
+    <section class="reveal" id="site">
+      <div class="section-header">
+        <h2 data-key="chroma_site_title">Découvrir Chromateq</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="proto-wrap">
+        <p style="font-size:.95rem;color:var(--text-dim)" data-key="chroma_site_desc">
+          Pour en savoir plus sur les produits et solutions d’éclairage DMX proposés par Chromateq, consultez le site officiel.
+        </p>
+        <div>
+          <a class="btn btn-primary" target="_blank" href="https://www.chromateq.com/" data-key="chroma_site_button">
+            Voir le site de l’entreprise
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION ENTRE EXPÉRIENCES -->
+    <section class="reveal">
+      <div class="project-nav">
+        <a class="project-nav-link" href="ironcat.html" style="border-left:3px solid #9fb4c7">
+          <span class="project-nav-label" data-key="exp_nav_prev">Expérience précédente ←</span>
+          <span class="project-nav-name">IronCat</span>
+        </a>
+        <a class="project-nav-all btn btn-outline" href="experiencesProfessionnelles.html" data-key="exp_nav_all">Voir toutes mes expériences</a>
+        <a class="project-nav-link next" href="sudtradingcompany.html" style="border-left:3px solid #9aa3b2">
+          <span class="project-nav-label" data-key="exp_nav_next">Expérience suivante →</span>
+          <span class="project-nav-name">Sud Trading Company</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA DISCRET -->
+    <section class="reveal" style="text-align:center;padding:2.5rem 1rem">
+      <h2 style="margin-bottom:.6rem;font-size:1.3rem" data-key="exp_cta_title">Vous souhaitez échanger sur mon parcours ?</h2>
+      <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary" data-key="exp_cta_button">Me contacter</a>
+        <a href="cv/CV_Thomas_Houdard.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-key="exp_cta_cv">Voir mon CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+        chroma_hero_sub: "Expérience professionnelle · Support technique",
+        chroma_hero_title: "Chromateq — Technicien Support Client",
+        chroma_hero_p1: "Chromateq est un acteur spécialisé dans les solutions de contrôle d’éclairage DMX utilisées dans des projets architecturaux, événementiels et scéniques partout dans le monde.",
+        chroma_hero_p2: "En tant que technicien support, j’ai accompagné les clients dans la prise en main des produits, assuré les tests fonctionnels avant mise en vente et contribué à la documentation technique et à la maintenance.",
+        chroma_meta_role: "Technicien support client",
+        chroma_meta_date: "Juillet 2023 – Janvier 2024",
+        chroma_meta_duration: "6 mois",
+        badge_support_technique: "<span class='dot'></span>support technique",
+        badge_tests_fonctionnels: "<span class='dot'></span>tests fonctionnels",
+        badge_documentation: "<span class='dot'></span>documentation",
+        badge_relation_client: "<span class='dot'></span>relation client",
+        cta_see_final: "Voir mon rôle",
+        cta_see_site: "Voir le site Chromateq",
+        chroma_side_note: "Aperçu des interfaces et matériel utilisés chez Chromateq.",
+        chroma_badge: "Support technique",
+
+        chroma_context_title: "01 — Contexte",
+        chroma_context_company: "Chromateq",
+        chroma_context_p1: "Chromateq développe, fabrique et fournit des solutions de contrôle d’éclairage stables, efficaces et compétitives pour les professionnels du DMX dans le monde entier.",
+        chroma_context_p2: "Les produits sont utilisés dans des contextes variés : installations architecturales, commerces, lieux de divertissement, scènes et événements live.",
+
+        chroma_role_title: "02 — Mon rôle",
+        chroma_role_intro: "Mon rôle s’est organisé autour de trois responsabilités complémentaires : le support technique international, les tests & la qualité produit, et la documentation destinée aux clients.",
+
+        chroma_role_support: "03 — Support international",
+        chroma_role_support1: "Assistance technique à distance (FR / EN) auprès des clients internationaux.",
+        chroma_role_support2: "Diagnostic des problèmes de configuration DMX et des contrôleurs.",
+        chroma_role_support3: "Proposition de solutions concrètes et pédagogiques adaptées aux contextes d’utilisation.",
+
+        chroma_role_tests: "04 — Tests & qualité",
+        chroma_role_tests1: "Réalisation de tests complets avant mise en vente des produits.",
+        chroma_role_tests2: "Analyse des dysfonctionnements et remontée des bugs aux équipes internes.",
+        chroma_role_tests3: "Vérification de la stabilité et de la fiabilité des solutions matérielles et logicielles.",
+
+        chroma_role_doc: "05 — Documentation & pédagogie",
+        chroma_role_doc1: "Rédaction et mise à jour de la documentation technique des produits.",
+        chroma_role_doc2: "Création de supports expliquant l’installation, l’utilisation et la maintenance.",
+        chroma_role_doc3: "Animation de sessions de formation pour aider les clients à tirer le meilleur parti des solutions Chromateq.",
+
+        chroma_tools_title: "06 — Outils & environnement",
+        chroma_tool_teamviewer_sub: "Support distant",
+        chroma_tool_teamviewer_desc: "Assistance technique à distance et diagnostic en temps réel.",
+        chroma_tool_prodmx_sub: "Contrôle DMX",
+        chroma_tool_prodmx_desc: "Configuration et test des installations d’éclairage DMX.",
+        chroma_tool_pixxem_sub: "Gestion d’effets",
+        chroma_tool_pixxem_desc: "Gestion avancée des équipements d’éclairage et de projection.",
+        chroma_tool_fz_sub: "Transfert de fichiers",
+        chroma_tool_fz_desc: "Transfert de mises à jour et fichiers de configuration.",
+
+        chroma_apport_title: "07 — Ce que cette expérience m’a apporté",
+        chroma_apport_text: "Ce poste ne relevait pas d’une fonction UX, mais il a nourri des compétences transférables à mon activité actuelle : compréhension fine des problèmes utilisateurs remontés par les clients, écoute, pédagogie et rigueur dans la documentation — des réflexes que je retrouve aujourd’hui dans mon travail de UI/UX & Product Designer.",
+
+        chroma_site_title: "Découvrir Chromateq",
+        chroma_site_desc: "Pour en savoir plus sur les produits et solutions d’éclairage DMX proposés par Chromateq, consultez le site officiel.",
+        chroma_site_button: "Voir le site de l’entreprise",
+
+        exp_nav_prev: "Expérience précédente ←",
+        exp_nav_next: "Expérience suivante →",
+        exp_nav_all: "Voir toutes mes expériences",
+        exp_cta_title: "Vous souhaitez échanger sur mon parcours ?",
+        exp_cta_button: "Me contacter",
+        exp_cta_cv: "Voir mon CV"
+      },
+
+      en: {
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+
+        chroma_hero_sub: "Professional experience · Technical support",
+        chroma_hero_title: "Chromateq — Customer Support Technician",
+        chroma_hero_p1: "Chromateq is a specialist in DMX lighting control solutions used in architectural, event and stage projects worldwide.",
+        chroma_hero_p2: "As a support technician, I helped clients get the most from the products, performed functional tests before release and contributed to technical documentation and maintenance.",
+        chroma_meta_role: "Customer support technician",
+        chroma_meta_date: "July 2023 – January 2024",
+        chroma_meta_duration: "6 months",
+        badge_support_technique: "<span class='dot'></span>technical support",
+        badge_tests_fonctionnels: "<span class='dot'></span>functional testing",
+        badge_documentation: "documentation",
+        badge_relation_client: "<span class='dot'></span>customer relationship",
+        cta_see_final: "View my role",
+        cta_see_site: "Visit Chromateq website",
+        chroma_side_note: "Preview of interfaces and equipment used at Chromateq.",
+        chroma_badge: "Technical support",
+
+        chroma_context_title: "01 — Context",
+        chroma_context_company: "Chromateq",
+        chroma_context_p1: "Chromateq designs, manufactures and provides reliable and cost-effective lighting control solutions for DMX professionals worldwide.",
+        chroma_context_p2: "Its products are used in many contexts: architectural installations, retail, entertainment venues, stages and live events.",
+
+        chroma_role_title: "02 — My role",
+        chroma_role_intro: "My role was organised around three complementary responsibilities: international technical support, testing & product quality, and customer documentation.",
+
+        chroma_role_support: "03 — International support",
+        chroma_role_support1: "Remote technical support (FR / EN) for international customers.",
+        chroma_role_support2: "Diagnosed configuration issues on DMX controllers and setups.",
+        chroma_role_support3: "Provided clear, practical solutions tailored to each use case.",
+
+        chroma_role_tests: "04 — Testing & quality",
+        chroma_role_tests1: "Performed comprehensive tests before products were put on sale.",
+        chroma_role_tests2: "Analysed malfunctions and reported bugs to internal teams.",
+        chroma_role_tests3: "Checked stability and reliability of both hardware and software solutions.",
+
+        chroma_role_doc: "05 — Documentation & training",
+        chroma_role_doc1: "Wrote and updated product technical documentation.",
+        chroma_role_doc2: "Created guides covering installation, usage and maintenance.",
+        chroma_role_doc3: "Delivered training sessions to help clients fully leverage Chromateq solutions.",
+
+        chroma_tools_title: "06 — Tools & environment",
+        chroma_tool_teamviewer_sub: "Remote support",
+        chroma_tool_teamviewer_desc: "Remote technical assistance and real-time diagnosis.",
+        chroma_tool_prodmx_sub: "DMX control",
+        chroma_tool_prodmx_desc: "Configuration and testing of DMX lighting setups.",
+        chroma_tool_pixxem_sub: "Effects management",
+        chroma_tool_pixxem_desc: "Advanced management of lighting and projection equipment.",
+        chroma_tool_fz_sub: "File transfer",
+        chroma_tool_fz_desc: "Transferring updates and configuration files.",
+
+        chroma_apport_title: "07 — What this experience brought me",
+        chroma_apport_text: "This role wasn't a UX position, but it built skills that transfer directly to my current work: a sharp understanding of the problems customers report, listening, teaching, and rigorous documentation — reflexes I still rely on today as a UI/UX & Product Designer.",
+
+        chroma_site_title: "Discover Chromateq",
+        chroma_site_desc: "For more information about Chromateq’s DMX lighting control solutions, visit the official website.",
+        chroma_site_button: "Open company website",
+
+        exp_nav_prev: "Previous experience ←",
+        exp_nav_next: "Next experience →",
+        exp_nav_all: "See all my experiences",
+        exp_cta_title: "Want to talk about my background?",
+        exp_cta_button: "Contact me",
+        exp_cta_cv: "View my CV"
+      }
+    };
+  </script>
+</body>
+</html>

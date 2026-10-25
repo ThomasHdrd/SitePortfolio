@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jarlasogür — Étude de cas Game/Level Design | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas Jarlasogür : TPS exploration, mécaniques de changement de monde, wallrun, prototypage, level design et trailer Unreal Engine." />
+    <meta property="og:title" content="Jarlasogür — Étude de cas Game/Level Design" />
+    <meta property="og:description" content="Projet étudiant : TPS exploration avec changement de monde. Game Design, Level Design, prototypage et trailer Unreal Engine." />
+    <meta property="og:url" content="https://thomashoudard.com/viking.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>                
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="viking_banner"></p>
+                <h1 data-key="viking_hero_title"></h1>
+                <p data-key="viking_pres"></p>
+                <div class="company-meta">
+                    <span data-key="viking_pres_type"></span>
+                    <span data-key="viking_pres_role"></span>
+                    <span data-key="viking_pres_date"></span>
+                    <span data-key="viking_pres_duree"></span>
+                    <span data-key="viking_pres_equipe"></span>
+                </div>
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>Game Design</span>
+                    <span class="badge"><span class="dot"></span>Level Design</span>
+                    <span class="badge"><span class="dot"></span>Prototypage</span>
+                    <span class="badge"><span class="dot"></span>QA & Feedback</span>
+                </div>
+                <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                    <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%; justify-content: center;"></a>
+                    <a href="#role" class="btn btn-outline" data-key="cta_scroll_role" style="width: 100%; justify-content: center;"></a>
+                    <a href="#tools" class="btn btn-outline" data-key="cta_scroll_tools" style="width: 100%; justify-content: center;"></a>
+                </div>
+            </div>
+            <div class="video-wrap" style="align-self:start">
+                <div class="proto-wrap">
+                    <video controls style="width:100%;border-radius:12px">
+                        <source src="videos/JARLASOGUR TRAILER FINAL - VIKING GAME.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESPONSABILITÉS -->
+        <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+            <div class="section-header">
+                <h2 id="responsabilites-title" data-key="viking_responsabilites_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.5rem">
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_gd"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_ld"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_proto"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_playtests"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_feedback"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_modelisation"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="viking_resp_texturing"></span></span></li>
+            </ul>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="reveal" id="overview">
+            <div class="section-header">
+                <h2 data-key="viking_overview_title" style="margin-bottom: 0;"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+                <div>
+                    <p data-key="viking_intro1"></p>
+                    <p data-key="viking_intro2"></p>
+                    <p data-key="viking_intro3"></p>
+                    <p data-key="viking_intro4"></p>
+                </div>
+            </div>
+            <div class="grid" style="gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-top:1.5rem">
+                <img loading="lazy" src="images/viking/vikingpres1.png" alt="Capture Jarlasogür environnement 1" style="border-radius:12px">
+                <img loading="lazy" src="images/viking/vikingpres2.png" alt="Capture Jarlasogür environnement 2" style="border-radius:12px">
+            </div>
+            <div>
+                <div class="meta-panel">
+                    <ul class="meta-list" aria-label="Informations sur le projet">
+                        <li><span class="meta-icon">🎮</span><span data-key="viking_pres_genre"></span></li>
+                        <li><span class="meta-icon">⚙️</span><span data-key="viking_pres_mecanique"></span></li>
+                        <li><span class="meta-icon">👥</span><span data-key="viking_pres_joueur"></span></li>
+                        <li><span class="meta-icon">💻</span><span data-key="viking_pres_support"></span></li>
+                        <li><span class="meta-icon">🛠️</span><span data-key="viking_pres_moteur"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROLE & APPROCHE -->
+        <section class="reveal role-section" id="role" aria-labelledby="role-title"></section>
+            <div class="section-header">
+            <h2 id="role-title" data-key="viking_role_section_title" style="margin-bottom: 0;"></h2>
+            <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="align-items:start;gap: 5px;">
+            <!-- Texte -->
+            <div class="role-text" style="display:flex;flex-direction:column;"></div>
+                <p data-key="viking_role_texte1"></p>
+                <p data-key="viking_role_texte2"></p>
+                <p data-key="viking_role_texte3"></p>
+                <p data-key="viking_role_texte4"></p>
+
+                <!-- Mise en avant synthétique (réutilise les mêmes clés pour ne pas créer de nouvelles traductions) -->
+                <div class="highlight" style="margin: 20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+                <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8">Focus</strong>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                    <span style="color:var(--accent)">▹</span>
+                    <span data-key="viking_role_texte2"></span>
+                    </li>
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                    <span style="color:var(--accent)">▹</span>
+                    <span data-key="viking_role_texte3"></span>
+                    </li>
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                    <span style="color:var(--accent)">▹</span>
+                    <span data-key="viking_role_texte4"></span>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <figure class="role-figure" style="margin:0;display:flex;flex-direction:column;gap:.75rem">
+                <div style="position:relative">
+                <img loading="lazy" src="images/viking/vikingpres3.png" alt="Zone de gameplay montrant un blocage et son blockout" style="border-radius:12px;display:block;width:100%;height:auto">
+                <div>
+                </div>
+                </div>
+                <figcaption style="line-height:1.3;color:var(--text-dim)">
+                </figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section class="reveal" id="tools">
+            <div class="section-header">
+                <h2 data-key="titre_logiciels_utilises"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="tool-grid">
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/ue.png" alt="Unreal Engine"></div>
+                    <p class="tool-title">Engine</p>
+                    <p class="tool-sub">Unreal Engine</p>
+                    <p class="tool-desc" data-key="viking_tool_ue"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                    <p class="tool-title">Texturing</p>
+                    <p class="tool-sub">Photoshop</p>
+                    <p class="tool-desc" data-key="viking_tool_ps"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/3dsmax.png" alt="3ds Max"></div>
+                    <p class="tool-title">Modeling</p>
+                    <p class="tool-sub">3ds Max</p>
+                    <p class="tool-desc" data-key="viking_tool_3ds"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/googledrive.png" alt="Google Drive"></div>
+                    <p class="tool-title">Organisation</p>
+                    <p class="tool-sub">Drive</p>
+                    <p class="tool-desc" data-key="viking_tool_drive"></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Expériences Professionnelles",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Développement",
+                menu_projects_personal: "Perso",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+                viking_banner: "Game Design · Level Design · Prototypage · QA · Modélisation",
+                viking_hero_title: "Jarlasogür — TPS Exploration & Monde Alterné",
+                viking_pres: "Jarlasogür est un jeu d'aventure TPS d'exploration où l’on restaure un monde dévasté par le Ragnarok en alternant entre deux temporalités pour surmonter des défis.",
+                viking_pres_type: "PROJET : Production étudiante",
+                viking_pres_role: "RÔLE : Game & Level Designer · Graphiste",
+                viking_pres_date: "DATE : Mars 2020 – Juin 2020",
+                viking_pres_duree: "DURÉE : 3 mois",
+                viking_pres_equipe: "ÉQUIPE : 8 personnes",
+                viking_pres_genre: "GENRE : TPS · Exploration · Parcours",
+                viking_pres_mecanique: "MÉCANIQUES : Wallrun · Changement de monde · Slides",
+                viking_pres_joueur: "JOUEURS : 1",
+                viking_pres_support: "SUPPORT : PC",
+                viking_pres_moteur: "MOTEUR : Unreal Engine",
+                viking_overview_title: "Présentation",
+                viking_intro1: "Jarlasogür est un jeu d'aventure d'exploration à la troisième personne dont l’objectif est de sauver et restaurer un monde détruit par le Ragnarok.",
+                viking_intro2: "Le joueur incarne un viking pouvant se téléporter entre le monde ravagé d’après et le monde intact d’avant pour résoudre des énigmes et franchir des obstacles.",
+                viking_intro3: "Il traverse des terres abandonnées et affronte des épreuves testant ses compétences, son courage et sa détermination.",
+                viking_intro4: "L’histoire vise la compréhension des causes de la destruction et la restauration du monde en maîtrisant l’alternance entre les deux mondes.",
+                viking_responsabilites_title: "Responsabilités",
+                viking_resp_gd: "Game Design",
+                viking_resp_ld: "Level Design",
+                viking_resp_proto: "Prototypage",
+                viking_resp_playtests: "Playtests",
+                viking_resp_feedback: "Signes & Feedbacks",
+                viking_resp_modelisation: "Modélisation",
+                viking_resp_texturing: "Texturing",
+                viking_role_section_title: "Approche & Rôle",
+                viking_role_texte1: "Jarlasogür a été ma première grande production de groupe en tant que Game & Level Designer tout en contribuant au graphisme. J’ai rédigé le document de Game Design.",
+                viking_role_texte2: "En conception, ma mission principale était de cadrer le concept, définir le gameplay et l’architecture globale en garantissant cohérence et fluidité.",
+                viking_role_texte3: "En production, j’ai créé le blockout de zones clés avant l’implémentation des assets et éléments gameplay, réalisé des tests et ajusté le flow joueur.",
+                viking_role_texte4: "J’ai aussi participé à la modélisation et à la texturation de certains assets pour renforcer l’identité visuelle.",
+                titre_logiciels_utilises: "Logiciels utilisés",
+                viking_tool_ue: "Level design & intégration gameplay.",
+                viking_tool_ps: "Textures et retouches d’assets.",
+                viking_tool_3ds: "Modélisation d’éléments environnement.",
+                viking_tool_drive: "Suivi documentaire & partage.",
+                cta_scroll_overview: "Voir la présentation",
+                cta_scroll_role: "Explorer le rôle",
+                cta_scroll_tools: "Voir les outils"
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Professional Experience",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Development Projects",
+                menu_projects_personal: "Personal",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+                footer: "©2025 Thomas Houdard · All rights reserved",
+                viking_banner: "Game Design · Level Design · Prototyping · QA · Modeling",
+                viking_hero_title: "Jarlasogür — TPS Exploration & Dual Worlds",
+                viking_pres: "Jarlasogür is a third-person exploration adventure restoring a world shattered by Ragnarok by alternating between two timelines to overcome challenges.",
+                viking_pres_type: "PROJECT: Student production",
+                viking_pres_role: "ROLE: Game & Level Designer · Artist",
+                viking_pres_date: "DATE: Mar 2020 – Jun 2020",
+                viking_pres_duree: "DURATION: 3 months",
+                viking_pres_equipe: "TEAM: 8 people",
+                viking_pres_genre: "GENRE: TPS · Exploration · Movement",
+                viking_pres_mecanique: "MECHANICS: Wallrun · World switching · Slides",
+                viking_pres_joueur: "PLAYERS: 1",
+                viking_pres_support: "PLATFORM: PC",
+                viking_pres_moteur: "ENGINE: Unreal Engine",
+                viking_overview_title: "Overview",
+                viking_intro1: "Jarlasogür is a third-person exploration adventure whose goal is to restore a world destroyed by Ragnarok.",
+                viking_intro2: "You play a viking able to teleport between the ravaged post world and the intact prior world to solve puzzles and traverse obstacles.",
+                viking_intro3: "You cross abandoned lands facing trials that test skill, courage and determination.",
+                viking_intro4: "The narrative focuses on understanding the cause of destruction and restoring balance by mastering dual-world alternation.",
+                viking_responsabilites_title: "Responsibilities",
+                viking_resp_gd: "Game Design",
+                viking_resp_ld: "Level Design",
+                viking_resp_proto: "Prototyping",
+                viking_resp_playtests: "Playtests",
+                viking_resp_feedback: "Signs & Feedback",
+                viking_resp_modelisation: "Modeling",
+                viking_resp_texturing: "Texturing",
+                viking_role_section_title: "Approach & Role",
+                viking_role_texte1: "Jarlasogür was my first major group production as Game & Level Designer while contributing artistically. I authored the Game Design document.",
+                viking_role_texte2: "During conception I framed the concept, gameplay loops and structural architecture ensuring coherence and flow.",
+                viking_role_texte3: "In production I built blockouts for key zones prior to asset & gameplay element integration, performed tests and refined player flow.",
+                viking_role_texte4: "I also contributed to modeling and texturing of assets to strengthen visual identity.",
+                titre_logiciels_utilises: "Tools used",
+                viking_tool_ue: "Level design & gameplay integration.",
+                viking_tool_ps: "Texture work & asset polish.",
+                viking_tool_3ds: "Environment asset modeling.",
+                viking_tool_drive: "Documentation & sharing.",
+                cta_scroll_overview: "View overview",
+                cta_scroll_role: "Explore role",
+                cta_scroll_tools: "View tools"
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog – UX/UI Design & Développement Web | Thomas Houdard</title>
+  <meta name="description" content="Conseils en design UX/UI, développement web, SEO et performance. Découvrez mes articles pour améliorer votre site." />
+  <meta property="og:title" content="Blog – UX/UI · Développement Web" />
+  <meta property="og:description" content="Design UX/UI, performance, SEO, choix techniques : des articles clairs et actionnables." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thomashoudard.com/blog.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+      <div class="burger" id="burger"><span></span></div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="reveal">
+      <div class="section-header">
+        <h1 data-key="page_title_blog">Blog</h1>
+        <div class="bar"></div>
+      </div>
+      <p style="color:var(--text-dim)" data-key="page_intro_blog"></p>
+    </section>
+
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="page_section_latest">Derniers articles</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cards">
+        <!-- Post 1 -->
+        <article class="card">
+          <a class="cover" href="blog/combien-coute-un-site-en-2025.html" aria-label="Lire l’article sur le coût d’un site internet">
+            <img src="blog/images/combien-coute-un-site-en-2025.png" alt="Balance des coûts face à un site internet" loading="lazy">
+          </a>
+          <h3 data-key="post1_title"></h3>
+          <p data-key="post1_desc"></p>
+          <a href="blog/combien-coute-un-site-en-2025.html" class="btn btn-primary" data-key="button_read"></a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card">
+          <a class="cover" href="blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" aria-label="Lire l’article sur les erreurs de design">
+            <img src="blog/images/7-erreurs-de-design-qui-font-fuir-vos-clients.png" alt="Erreurs de design courantes sur un site" loading="lazy">
+          </a>
+          <h3 data-key="post2_title"></h3>
+          <p data-key="post2_desc"></p>
+          <a href="blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" class="btn btn-primary" data-key="button_read"></a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="card">
+          <a class="cover" href="blog/wordpress-ou-site-sur-mesure-lequel-choisir.html" aria-label="Lire l’article WordPress vs sur-mesure">
+            <img src="blog/images/wordpress-ou-site-sur-mesure-lequel-choisir.png" alt="Choisir WordPress ou un site sur-mesure" loading="lazy">
+          </a>
+          <h3 data-key="post3_title"></h3>
+          <p data-key="post3_desc"></p>
+          <a href="blog/wordpress-ou-site-sur-mesure-lequel-choisir.html" class="btn btn-primary" data-key="button_read"></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+        </div>
+        <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+      </div>
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Projets Design",menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+        page_title_blog:"Blog",
+        page_intro_blog:"Articles courts et concrets sur l’UX/UI, la performance web, le SEO et les choix techniques pour créer des sites efficaces.",
+        page_section_latest:"Derniers articles",
+        post1_title:"Combien coûte vraiment un site internet en 2025 ?",
+        post1_desc:"Tarifs réels selon le type de site (vitrine, e‑commerce, sur‑mesure), ce qui fait varier le prix et comment investir intelligemment.",
+        post2_title:"7 erreurs de design qui font fuir vos clients",
+        post2_desc:"Texte illisible, lenteur, pas de CTA, pas mobile‑first… Voici comment corriger vite pour convertir davantage.",
+        post3_title:"WordPress ou site sur‑mesure : lequel choisir ?",
+        post3_desc:"Avantages, limites et cas d’usage concrets pour décider selon vos objectifs et votre budget.",
+        button_read:"Lire l’article",
+        footer:"©2025 Thomas Houdard · Tous droits réservés"
+      },
+      en: {
+        menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+        page_title_blog:"Blog",
+        page_intro_blog:"Short, actionable articles on UX/UI, web performance, SEO, and technical choices to build effective websites.",
+        page_section_latest:"Latest posts",
+        post1_title:"How much does a website really cost in 2025?",
+        post1_desc:"Realistic pricing by website type (showcase, e‑commerce, custom), what impacts the cost, and how to invest smartly.",
+        post2_title:"7 design mistakes that drive users away",
+        post2_desc:"Unreadable text, slow pages, no CTA, not mobile‑first… Quick fixes to boost conversions.",
+        post3_title:"WordPress or custom site: which one to choose?",
+        post3_desc:"Pros, cons, and concrete use cases to decide based on your goals and budget.",
+        button_read:"Read article",
+        footer:"©2025 Thomas Houdard · All rights reserved"
+      }
+    };
+
+    const applyLang = (lang)=>{
+      document.querySelectorAll("[data-key]").forEach(el=>{
+        const k=el.getAttribute("data-key");
+        if(translations[lang][k]) el.textContent=translations[lang][k];
+      });
+      document.querySelectorAll(".lang-switch button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+      document.documentElement.lang=lang;localStorage.setItem("lang",lang);
+    };
+
+    const initLang=()=>{applyLang(localStorage.getItem("lang")||"fr");};
+
+    document.getElementById("langSwitch").addEventListener("click",e=>{
+      if(e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+    });
+
+    const burger=document.getElementById("burger");
+    const menu=document.getElementById("menu");
+    burger.addEventListener("click",()=>{burger.classList.toggle("open");menu.classList.toggle("open");});
+
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+      });
+    },{threshold:.12});
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+    initLang();
+  </script>
+</body>
+</html>

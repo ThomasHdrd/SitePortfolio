@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Freelance - Services Design & Web | Thomas Houdard</title>
+    <meta name="description" content="Services freelance UI/UX Design et développement web de Thomas Houdard : création d'interfaces, prototypes et sites web." />
+    <meta property="og:title" content="Services Freelance - Thomas Houdard" />
+    <meta property="og:description" content="UI/UX Design · Développement Web · Prototypes" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body class="page page-case-study">
+  <header class="site-header site-header--compact">
+    <div class="site-header__inner">
+      <a href="/" class="site-header__brand">
+        <span class="site-header__logo">TH</span>
+        <span class="site-header__title">Thomas Houdard</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+        <a href="#intro" class="site-nav__link">Projet</a>
+        <a href="#context" class="site-nav__link">Contexte</a>
+        <a href="#approche" class="site-nav__link">Approche</a>
+        <a href="#resultats" class="site-nav__link">Résultats</a>
+        <a href="#gallery" class="site-nav__link">Aperçus</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <!-- HERO / INTRO -->
+    <section id="intro" class="case-hero">
+      <div class="case-hero__inner">
+        <div class="case-hero__content">
+          <p class="case-hero__kicker">UI/UX DESIGN · FRONT-END</p>
+          <h1 class="case-hero__title">
+            Site de coaching sportif personnalisé
+          </h1>
+          <p class="case-hero__subtitle">
+            Création complète du site d’un coach sportif indépendant :
+            identité visuelle, design Figma et intégration HTML/CSS/JS
+            responsive, avec un focus sur la clarté de l’offre et la prise
+            de contact. [file:1]
+          </p>
+
+          <div class="case-hero__meta">
+            <div class="case-hero__meta-item">
+              <span class="case-hero__meta-label">Rôle</span>
+              <span class="case-hero__meta-value">
+                UI/UX designer & développeur front-end
+              </span>
+            </div>
+            <div class="case-hero__meta-item">
+              <span class="case-hero__meta-label">Client</span>
+              <span class="case-hero__meta-value">
+                Coach sportif indépendant
+              </span>
+            </div>
+            <div class="case-hero__meta-item">
+              <span class="case-hero__meta-label">Stack</span>
+              <span class="case-hero__meta-value">
+                Figma · HTML · CSS · JavaScript
+              </span>
+            </div>
+          </div>
+
+          <div class="case-hero__actions">
+            <a
+              href="https://coachsportif.thomashoudard.com/"
+              class="btn btn--primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Voir le site en ligne
+            </a>
+            <a href="#context" class="btn btn--ghost">
+              Découvrir l’étude de cas
+            </a>
+          </div>
+        </div>
+
+        <figure class="case-hero__preview">
+          <div class="case-hero__tag">Projet freelance</div>
+          <div class="case-hero__device">
+            <!-- Tu peux remplacer par une vraie capture du site -->
+            <img
+              src="/assets/img/cases/coach-sportif/hero-desktop.jpg"
+              alt="Aperçu desktop du site de coaching sportif"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="case-hero__caption">
+            Landing page orientée conversion avec mise en avant de l’offre,
+            de la méthode et des témoignages. [file:1]
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTEXTE & OBJECTIFS -->
+    <section id="context" class="case-section">
+      <div class="case-section__inner">
+        <header class="case-section__header">
+          <p class="case-section__kicker">Contexte</p>
+          <h2 class="case-section__title">
+            Clarifier l’offre et rassurer dès le premier écran
+          </h2>
+        </header>
+
+        <div class="case-section__content case-section__content--split">
+          <div class="case-section__column">
+            <p>
+              Le client souhaitait un site simple, clair et professionnel
+              pour présenter son activité de coaching sportif individuel,
+              à domicile et en suivi personnalisé. [file:1]
+            </p>
+            <p>
+              L’objectif principal : mettre en avant les bénéfices du
+              coaching, rassurer grâce aux témoignages et faciliter la
+              prise de contact avec un formulaire lisible et accessible.
+              [file:1]
+            </p>
+          </div>
+
+          <div class="case-section__column">
+            <ul class="case-list">
+              <li class="case-list__item">
+                <span class="case-list__label">Enjeux principaux</span>
+                <span class="case-list__value">
+                  Clarifier l’offre, valoriser la méthode de travail et
+                  guider vers la réservation d’un bilan gratuit.
+                </span>
+              </li>
+              <li class="case-list__item">
+                <span class="case-list__label">Contraintes</span>
+                <span class="case-list__value">
+                  Site léger, optimisé pour mobile, sans framework lourd et
+                  facilement maintenable par le client.
+                </span>
+              </li>
+              <li class="case-list__item">
+                <span class="case-list__label">Livrables</span>
+                <span class="case-list__value">
+                  Maquette Figma haute fidélité + code HTML/CSS/JS complet
+                  du site en production.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCHE DESIGN & DEV -->
+    <section id="approche" class="case-section case-section--alt">
+      <div class="case-section__inner">
+        <header class="case-section__header">
+          <p class="case-section__kicker">Approche</p>
+          <h2 class="case-section__title">
+            Une identité sobre, sportive et centrée sur l’action
+          </h2>
+        </header>
+
+        <div class="case-grid case-grid--2">
+          <article class="case-card">
+            <h3 class="case-card__title">Design UI/UX</h3>
+            <p class="case-card__text">
+              Le design a été entièrement réalisé sur Figma : structure de
+              la landing page, hiérarchie typographique, grille et
+              composants réutilisables pour les sections services,
+              témoignages, méthode et FAQ. [file:1]
+            </p>
+            <p class="case-card__text">
+              La direction artistique repose sur une base très sombre, un
+              vert d’accent dynamique et la police Poppins, pour un rendu
+              sportif, moderne et lisible sur desktop comme sur mobile.
+              [file:1]
+            </p>
+          </article>
+
+          <article class="case-card">
+            <h3 class="case-card__title">Développement front-end</h3>
+            <p class="case-card__text">
+              À partir de la maquette, tout le site a été intégré à la
+              main en HTML, CSS et JavaScript vanilla : header sticky,
+              navigation ancrée, sections modulaires et interactions
+              légères (FAQ, formulaire, menu mobile). [file:1]
+            </p>
+            <p class="case-card__text">
+              Le code est structuré pour rester lisible et facilement
+              modifiable, avec une attention portée aux performances et à
+              l’accessibilité (sémantique, focus, aria-attributes).
+            </p>
+          </article>
+        </div>
+
+        <div class="case-highlights">
+          <div class="case-highlight">
+            <span class="case-highlight__label">Palette</span>
+            <span class="case-highlight__value">
+              Fond #0F0F0F, header/footer #000000 90 %, accent vert
+              #B6FF2E.
+            </span>
+          </div>
+          <div class="case-highlight">
+            <span class="case-highlight__label">Typographie</span>
+            <span class="case-highlight__value">
+              Poppins pour tous les titres et textes.
+            </span>
+          </div>
+          <div class="case-highlight">
+            <span class="case-highlight__label">Interactions</span>
+            <span class="case-highlight__value">
+              Menu mobile, FAQ accordéon, validation de formulaire
+              côté front.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUCTURE DE LA PAGE -->
+    <section id="structure" class="case-section">
+      <div class="case-section__inner">
+        <header class="case-section__header">
+          <p class="case-section__kicker">Architecture</p>
+          <h2 class="case-section__title">
+            Une landing page structurée autour du parcours utilisateur
+          </h2>
+        </header>
+
+        <div class="case-section__content case-section__content--split">
+          <div class="case-section__column">
+            <ol class="case-steps">
+              <li class="case-steps__item">
+                <span class="case-steps__index">01</span>
+                <div class="case-steps__body">
+                  <h3 class="case-steps__title">Hero & offre</h3>
+                  <p class="case-steps__text">
+                    Titre principal, promesse de coaching personnalisé,
+                    bouton d’appel à l’action et éléments de preuve
+                    (bénéfices clés). [file:1]
+                  </p>
+                </div>
+              </li>
+              <li class="case-steps__item">
+                <span class="case-steps__index">02</span>
+                <div class="case-steps__body">
+                  <h3 class="case-steps__title">À propos & services</h3>
+                  <p class="case-steps__text">
+                    Présentation du coach, points forts, puis détail des
+                    trois services principaux : coaching individuel,
+                    coaching à domicile et suivi personnalisé. [file:1]
+                  </p>
+                </div>
+              </li>
+              <li class="case-steps__item">
+                <span class="case-steps__index">03</span>
+                <div class="case-steps__body">
+                  <h3 class="case-steps__title">Méthode & témoignages</h3>
+                  <p class="case-steps__text">
+                    Mise en avant d’une méthode simple en 3 étapes
+                    (analyse, programme, suivi) et intégration de
+                    témoignages clients pour rassurer. [file:1]
+                  </p>
+                </div>
+              </li>
+              <li class="case-steps__item">
+                <span class="case-steps__index">04</span>
+                <div class="case-steps__body">
+                  <h3 class="case-steps__title">Contact & FAQ</h3>
+                  <p class="case-steps__text">
+                    Formulaire de contact accessible, suivi d’une section
+                    FAQ sous forme d’accordéon pour répondre aux questions
+                    les plus fréquentes. [file:1]
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="case-section__column">
+            <div class="case-note">
+              <h3 class="case-note__title">Focus sur l’accessibilité</h3>
+              <p class="case-note__text">
+                Le code utilise une structure HTML sémantique, des
+                intitulés de boutons explicites, des labels de formulaire
+                associés et des attributs ARIA pour le menu mobile et la
+                FAQ. [web:7]
+              </p>
+              <p class="case-note__text">
+                L’objectif est de garantir une expérience confortable quel
+                que soit l’appareil, tout en restant facile à faire
+                évoluer si l’offre du coach change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉSULTATS -->
+    <section id="resultats" class="case-section case-section--alt">
+      <div class="case-section__inner">
+        <header class="case-section__header">
+          <p class="case-section__kicker">Résultats</p>
+          <h2 class="case-section__title">
+            Un site prêt à accueillir de nouveaux clients
+          </h2>
+        </header>
+
+        <div class="case-section__content case-section__content--split">
+          <div class="case-section__column">
+            <p>
+              Le projet a abouti à un site clair, cohérent et aligné sur
+              l’identité du coach, avec un parcours lisible de la promesse
+              initiale jusqu’à la prise de contact. [file:1]
+            </p>
+            <p>
+              L’association d’un design sobre et d’un développement
+              léger permet au client de disposer d’une base solide pour sa
+              communication et ses futures évolutions.
+            </p>
+          </div>
+
+          <div class="case-section__column">
+            <ul class="case-bullets">
+              <li class="case-bullets__item">
+                Interface responsive pensée desktop-first puis optimisée
+                pour mobile.
+              </li>
+              <li class="case-bullets__item">
+                Design et code maîtrisés de bout en bout par la même
+                personne, pour une cohérence maximale.
+              </li>
+              <li class="case-bullets__item">
+                Site en production accessible via
+                <a
+                  href="https://coachsportif.thomashoudard.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  coachsportif.thomashoudard.com
+                </a>.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-cta">
+          <p class="case-cta__text">
+            Un projet similaire en tête&nbsp;? Discutons de votre site sur
+            mesure (design + développement front).
+          </p>
+          <a href="#contact" class="btn btn--primary">
+            Me contacter
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY / VISUELS -->
+    <section id="gallery" class="case-section">
+      <div class="case-section__inner">
+        <header class="case-section__header">
+          <p class="case-section__kicker">Aperçus</p>
+          <h2 class="case-section__title">
+            Quelques écrans clés du site
+          </h2>
+        </header>
+
+        <div class="case-gallery">
+          <figure class="case-gallery__item">
+            <img
+              src="/assets/img/cases/coach-sportif/home-hero.jpg"
+              alt="Section hero du site de coaching sportif"
+              loading="lazy"
+            />
+            <figcaption class="case-gallery__caption">
+              Section d’accueil avec promesse, CTA principal et mise en
+              avant des bénéfices du coaching. [file:1]
+            </figcaption>
+          </figure>
+
+          <figure class="case-gallery__item">
+            <img
+              src="/assets/img/cases/coach-sportif/services.jpg"
+              alt="Section services du site de coaching sportif"
+              loading="lazy"
+            />
+            <figcaption class="case-gallery__caption">
+              Présentation des services : coaching individuel, à domicile
+              et suivi personnalisé. [file:1]
+            </figcaption>
+          </figure>
+
+          <figure class="case-gallery__item">
+            <img
+              src="/assets/img/cases/coach-sportif/faq-contact.jpg"
+              alt="Section contact et FAQ du site de coaching sportif"
+              loading="lazy"
+            />
+            <figcaption class="case-gallery__caption">
+              Formulaire de contact et FAQ pour lever les derniers freins
+              avant la prise de rendez-vous. [file:1]
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (ancre vers ta section globale) -->
+    <section id="contact" class="case-section case-section--contact-bridge">
+      <div class="case-section__inner">
+        <div class="case-section__content case-section__content--center">
+          <h2 class="case-section__title">
+            Discutons de votre projet
+          </h2>
+          <p>
+            Ce projet de coaching sportif combine design Figma et
+            développement front-end. Si vous avez un projet similaire
+            (site vitrine, landing page produit, refonte UI/UX), la même
+            approche peut être appliquée à votre cas.
+          </p>
+          <a href="/#contact" class="btn btn--primary">
+            Me parler de votre projet
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">
+        © 2026 · Design & développement front · Thomas Houdard
+      </p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

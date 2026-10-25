@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Freelance UI/UX Designer & Développeur Web - Thomas Houdard</title>
+  <meta name="description" content="Designer UI/UX & développeur web (HTML, CSS, JS) à Montpellier. Création de sites modernes, rapides, responsives." />
+  <meta property="og:title" content="Freelance UI/UX Designer & Dev Web" />
+  <meta property="og:description" content="Design & développement web moderne, rapide, responsive." />
+  <meta property="og:url" content="https://thomashoudard.com" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Palette inspirée de "A Dictionary of Color Combinations" + ton bleu */
+      --bg: #05070b;
+      --bg-alt: #0c1117;
+      --bg-soft: #151b23;
+      --bg-soft-alt: #1b222e;
+
+      --primary: #328ad3;
+      --primary-soft: #9cc3e7;
+      --accent: #e56c6c;
+      --accent-soft: #f2c3b2;
+      --sand: #f2e9dc;
+
+      --text: #f8f7f3;
+      --text-dim: #a7b1c3;
+
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
+
+      --border-soft: 1px solid rgba(242, 233, 220, 0.08);
+      --border-strong: 1px solid rgba(242, 233, 220, 0.18);
+
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.7);
+
+      --grad-primary: linear-gradient(135deg, #328ad3 0%, #46a4e4 40%, #f2c3b2 100%);
+      --grad-surface: radial-gradient(circle at 0 0, rgba(50, 138, 211, 0.2), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(5, 19, 58, 0.253), transparent 55%),
+        #10141e;
+
+      --cm: clamp(0.9rem, 1vw + 0.55rem, 1.05rem);
+      --trans: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(22, 129, 216, 0.12), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--primary-soft);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    a:hover {
+      color: var(--sand);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Plus Jakarta Sans", Inter, sans-serif;
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 4vw, 2rem);
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #f8f7f3 0%, var(--primary-soft) 45%, var(--accent-soft) 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+      margin-bottom: 1.2rem;
+      color: var(--sand);
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: var(--cm);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #05070b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #1c2430;
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #273140;
+    }
+
+    /* Layout */
+
+    .wrapper {
+      width: min(1400px, 92%);
+      margin: 0 auto;
+      padding: 0 0 5rem;
+    }
+
+    section {
+      margin: 4.2rem 0;
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.1rem;
+    }
+
+    .section-header .bar {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(242, 233, 220, 0.3), rgba(50, 138, 211, 0.4), transparent);
+    }
+
+    .grid {
+      display: grid;
+      gap: 30px;
+    }
+
+    /* NAV */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5, 7, 11, 0.96), rgba(5, 7, 11, 0.7), transparent);
+      border-bottom: 1px solid rgba(242, 233, 220, 0.08);
+    }
+
+    .nav-inner {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 0.7rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 20% 0%, #f8f7f3 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(229, 108, 108, 0.7), transparent 55%),
+        radial-gradient(circle at 0 100%, rgba(50, 138, 211, 0.9), transparent 55%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #05070b;
+      box-shadow: 0 0 0 1px rgba(242, 233, 220, 0.5), var(--shadow-soft);
+    }
+
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title h3 {
+      font-size: 1.02rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand-title small {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 0.1rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .menu a {
+      padding: 0.55rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: var(--radius-xs);
+      position: relative;
+      color: var(--text-dim);
+      transition: background var(--trans), color var(--trans), transform var(--trans);
+    }
+
+    .menu a:hover {
+      color: var(--sand);
+      background: rgba(21, 27, 35, 0.9);
+    }
+
+    .menu a.active {
+      color: var(--sand);
+      background: rgba(21, 27, 35, 1);
+    }
+
+    .menu a.active::after {
+      content: "";
+      position: absolute;
+      inset: auto 4px -7px;
+      height: 2px;
+      border-radius: 999px;
+      /* background: linear-gradient(90deg, var(--primary), var(--accent)); */
+      background: linear-gradient(var(--primary));
+    }
+
+    .menu .dropdown {
+      position: relative;
+    }
+
+    .menu .dropdown-content {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background: var(--bg-soft);
+      padding: 0.55rem;
+      border-radius: 12px;
+      border: var(--border-soft);
+      display: none;
+      min-width: 220px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .menu .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu .dropdown-content a {
+      display: block;
+      padding: 0.5rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .menu .dropdown-content a:hover {
+      background: rgba(242, 233, 220, 0.07);
+      color: var(--sand);
+    }
+
+    /* LANG SWITCH */
+
+    .lang-switch {
+      display: flex;
+      gap: 0.4rem;
+      padding: 0.25rem 0.35rem;
+      border-radius: 999px;
+      border: var(--border-soft);
+      background: rgba(10, 15, 22, 0.9);
+    }
+
+    .lang-switch button {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background var(--trans), color var(--trans);
+    }
+
+    .lang-switch button.active {
+      background: var(--grad-primary);
+      color: #05070b;
+    }
+
+    .lang-switch button:hover:not(.active) {
+      background: rgba(242, 233, 220, 0.06);
+      color: var(--sand);
+    }
+
+    /* BURGER */
+
+    .burger {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: var(--border-soft);
+      background: rgba(10, 15, 22, 0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--trans);
+    }
+
+    .burger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--sand);
+      position: relative;
+      border-radius: 999px;
+      transition: var(--trans);
+    }
+
+    .burger span::before,
+    .burger span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: var(--sand);
+      border-radius: 999px;
+      transition: var(--trans);
+    }
+
+    .burger span::before {
+      top: -6px;
+    }
+
+    .burger span::after {
+      top: 6px;
+    }
+
+    .burger.open span {
+      background: transparent;
+    }
+
+    .burger.open span::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .burger.open span::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3.1rem;
+      align-items: center;
+      margin: 3.4rem 0 1.2rem;
+    }
+
+.hero-media {position:relative;}
+.hero-media .ring {
+    position:absolute;inset:0;
+    border:2px dashed #2a3340;
+    border-radius:50%;
+    animation:spin 18s linear infinite;
+}
+@keyframes spin {to {transform:rotate(360deg);}}
+.hero-media img {
+    width:280px;aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #20262e;
+    box-shadow:0 12px 40px -10px rgba(0,0,0,.7),0 0 0 6px rgba(99,102,241,.15);
+    background:#1a1f26;
+    margin:auto;
+}
+
+    .hero-pill {
+      position: absolute;
+      bottom: -0.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      border: var(--border-strong);
+      background: rgba(5, 7, 11, 0.96);
+      backdrop-filter: blur(12px);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+
+    .hero-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #23c886;
+      box-shadow: 0 0 8px rgba(35, 200, 134, 0.9);
+    }
+
+    .hero-pill strong {
+      color: var(--primary-soft);
+    }
+
+    .hero-sub {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-dim);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero p[data-key="presentation_1"] {
+      margin-top: 10px;
+    }
+    .hero p[data-key="presentation_2"] {
+      margin-top: 10px;
+    }
+    .hero p[data-key="presentation_3"] {
+      margin-top: 10px;
+    }
+
+    .hero p {
+      font-size: 0.96rem;
+      color: var(--text-dim);
+      max-width: 96%;
+      text-align: justify;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1.4rem 0 0;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      padding: 0.45rem 0.9rem;
+      background: rgba(11, 16, 25, 0.95);
+      border-radius: 999px;
+      border: var(--border-soft);
+      display: inline-flex;
+      gap: 0.45rem;
+      align-items: center;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 4px rgba(50, 138, 211, 0.25);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      border: var(--border-soft);
+      background: rgba(11, 16, 25, 0.95);
+      color: var(--sand);
+      cursor: pointer;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans), color var(--trans);
+    }
+
+    .btn-primary {
+      border: none;
+      background: var(--grad-primary);
+      color: #05070b;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-outline {
+      background: rgba(17, 23, 32, 1);
+    }
+
+    .btn-outline:hover {
+      background: rgba(27, 34, 46, 1);
+    }
+
+    .btn:hover:not(.btn-primary) {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* VIDEO */
+
+    .video-wrap {
+      background: var(--grad-surface);
+      border-radius: 20px;
+      border: var(--border-strong);
+      padding: 1.6rem 1.5rem 1.4rem;
+      display: grid;
+      gap: 1.2rem;
+      box-shadow: var(--shadow-soft);
+      max-width: 100%;
+      margin: 0 auto;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .video-wrap p {
+      font-size: 0.92rem;
+      color: var(--text-dim);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 14px;
+      border: var(--border-soft);
+      background: #05070b;
+      outline: none;
+    }
+
+    /* CARDS */
+
+    .card {
+      background: radial-gradient(circle at 0 0, rgba(50, 138, 211, 0.16), transparent 70%),
+        radial-gradient(circle at 100% 100%, rgba(242, 233, 220, 0.06), transparent 70%),
+        var(--bg-soft);
+      border-radius: 18px;
+      border: var(--border-soft);
+      padding: 1.2rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans), background var(--trans);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(242, 233, 220, 0.18), transparent 65%);
+      opacity: 0;
+      transition: opacity var(--trans);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(242, 233, 220, 0.2);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+
+    .card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.3rem;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .card ul li {
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: relative;
+      padding-left: 0.9rem;
+    }
+
+    .card ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 2px;
+      background: var(--primary);
+      box-shadow: 0 0 0 3px rgba(50, 138, 211, 0.25);
+    }
+
+    .category {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--primary-soft);
+      background: rgba(10, 15, 22, 0.9);
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      border: var(--border-soft);
+      display: inline-block;
+    }
+
+    /* GRIDS UTILITAIRES */
+
+    .grid.cols-5 {
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+
+    .grid.cols-4 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .grid.cols-6 {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.1rem;
+    }
+
+    /* LOGO WALL */
+
+    .logo-wall {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 1rem;
+      background: var(--bg-soft);
+      border-radius: 20px;
+      border: var(--border-soft);
+      padding: 1.5rem;
+    }
+
+    .logo-wall img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(0.9);
+      opacity: 0.78;
+      padding: 0.6rem;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid rgba(242, 233, 220, 0.08);
+      transition: transform var(--trans), filter var(--trans), opacity var(--trans), box-shadow var(--trans);
+    }
+
+    .logo-wall img:hover {
+      filter: none;
+      opacity: 1;
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* PASSIONS / LANGUES CARDS */
+
+    .passion-card {
+      background: var(--bg-soft);
+      border-radius: 16px;
+      border: var(--border-soft);
+      padding: 0.95rem 0.95rem 1.05rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      transition: var(--trans);
+    }
+
+    .passion-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(50, 138, 211, 0.2), transparent 60%);
+      opacity: 0;
+      transition: opacity var(--trans);
+      z-index: -1;
+    }
+
+    .passion-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .passion-card:hover::after {
+      opacity: 1;
+    }
+
+    .passion-card h4 {
+      font-size: 15px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+
+    .passion-card p {
+      font-size: 15px;
+      color: var(--text-dim);
+    }
+
+    /* fr */
+    .langages .imagefr {
+        background-image: url(images/fr.png);   
+        height: 160px;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s ease; 
+    }
+
+    /* en */
+    .langages .imageen {
+        background-image: url(images/eng.png);   
+        height: 160px;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s ease; 
+    }
+
+    /* CERTIFICATIONS */
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .cert {
+      background: var(--bg-soft);
+      border-radius: 14px;
+      border: var(--border-soft);
+      padding: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+    }
+
+    .cert img {
+      width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    }
+
+    .cert:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+      border-color: rgba(242, 233, 220, 0.2);
+    }
+
+    /* CV LINKS */
+
+    .cv-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .cv-link {
+      flex: 1 1 280px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      padding: 0.9rem 1rem;
+      border-radius: 999px;
+      border: var(--border-soft);
+      background: rgba(10, 15, 22, 0.97);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      transition: background var(--trans), color var(--trans), transform var(--trans), box-shadow var(--trans);
+    }
+
+    .cv-link span {
+      white-space: nowrap;
+    }
+
+    .cv-link img {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+    }
+
+    .cv-link:hover {
+      background: var(--bg-soft-alt);
+      color: var(--sand);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #05070b;
+      border-top: 1px solid rgba(242, 233, 220, 0.08);
+      padding: 2.2rem 0 3rem;
+      margin-top: 3.5rem;
+    }
+
+    .footer-inner {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .social {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .social a {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: var(--border-soft);
+      background: var(--bg-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+    }
+
+    .social img {
+      width: 22px;
+      height: 22px;
+      filter: grayscale(100%) brightness(0.9);
+      transition: filter var(--trans);
+    }
+
+    .social a:hover {
+      background: var(--bg-soft-alt);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .social a:hover img {
+      filter: none;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.1rem;
+      border-top: 1px solid rgba(242, 233, 220, 0.12);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .footer-bottom a {
+      color: var(--primary-soft);
+      font-weight: 600;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--sand);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .burger {
+        display: flex;
+      }
+
+      .menu {
+        position: fixed;
+        inset: 70px 0 auto;
+        background: rgba(5, 7, 11, 0.97);
+        backdrop-filter: blur(18px);
+        flex-direction: column;
+        padding: 1.1rem 1.3rem 1.8rem;
+        gap: 0.65rem;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 26px 60px rgba(0, 0, 0, 0.8);
+        transition: max-height 0.5s ease;
+      }
+
+      .menu.open {
+        max-height: 480px;
+      }
+
+      .menu .dropdown-content {
+        position: static;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0.3rem 0 0.1rem;
+        display: block;
+      }
+
+      .menu .dropdown-content a {
+        padding-left: 1.4rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        gap: 2.1rem;
+        margin-top: 2.6rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cv-link {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* SCROLL REVEAL */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark">TH</div>
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="#hero" class="active" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+            <a href="projetPersonnels.html" data-key="menu_projects_personal">Perso</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv">Travailler avec moi</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section id="hero" class="hero reveal">
+        <div class="hero-media">
+            <div class="ring"></div>
+            <img src="images/photoprofil.webp" alt="Photo de profil">
+        </div>
+      <div>
+        <p class="hero-sub">UI/UX Design · Front-end · Produits digitaux</p>
+        <h1 data-key="presentation_title">Designer & Développeur Web</h1>
+        <p data-key="presentation_1"></p>
+        <p data-key="presentation_2"></p>
+        <p data-key="presentation_3"></p>
+
+        </p>
+        <div class="badges">
+          <span class="badge"><span class="dot"></span>UI/UX</span>
+          <span class="badge"><span class="dot"></span>Front-End</span>
+          <span class="badge"><span class="dot"></span>Prototype</span>
+          <span class="badge"><span class="dot"></span>SEO</span>
+          <span class="badge"><span class="dot"></span>Agile</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#cv-section" class="btn btn-primary" data-key="cta_cv">Voir mon CV</a>
+          <a href="contact.html" class="btn btn-outline" data-key="cta_contact">Me contacter</a>
+          <a href="projetDesigner.html" class="btn" data-key="cta_portfolio">Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_video">CV Vidéo</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="video-wrap">
+        <p data-key="video_intro">Découvrez mon profil en moins de 90 secondes.</p>
+        <video controls preload="metadata">
+          <source src="videos/CV VIDEO - THOMAS HOUDARD_FINAL.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES TECHNIQUES -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_competences_tech">Compétences Techniques</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-5">
+        <div class="card">
+          <span class="category">UI/UX</span>
+          <h4>Design de produits</h4>
+          <ul>
+            <li>Design Thinking</li>
+            <li>Wireframes & Flows</li>
+            <li data-key="competences_tech_uiux">Audit Concurrentiel</li>
+            <li>Prototypage</li>
+            <li>Design d’interaction</li>
+            <li>Responsive</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">FRONT-END</span>
+          <h4>Intégration moderne</h4>
+          <ul>
+            <li>HTML Sémantique</li>
+            <li>CSS (Grid/Flex)</li>
+            <li>JavaScript</li>
+            <li>Angular</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">BACK-END</span>
+          <h4>Logique & Données</h4>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>PHP</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">GAME DESIGN</span>
+          <h4>Gameplay & Level</h4>
+          <ul>
+            <li>Design itératif</li>
+            <li>GDD / LDD</li>
+            <li>Prototypage</li>
+            <li>Level Building</li>
+            <li>Rational Design</li>
+            <li>Blueprint</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">ANNEXES</span>
+          <h4>Écosystème</h4>
+          <ul>
+            <li>Wordpress</li>
+            <li>Shopify</li>
+            <li>IA & Prompt</li>
+            <li>Git</li>
+            <li>SEO / SEA</li>
+            <li>Gestion projet</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOFT SKILLS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_competences_relation">Compétences Relationnelles</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-4">
+        <div class="card">
+          <span class="category">EQUIPE</span>
+          <h4 data-key="competences_relation_equipe">Esprit d’équipe</h4>
+          <p style="font-size:15px;color:var(--text-dim);">
+            Communication claire, écoute active et co-construction avec les équipes produit et tech.
+          </p>
+        </div>
+        <div class="card">
+          <span class="category">CRÉATIF</span>
+          <h4 data-key="competences_relation_creatif">Créativité</h4>
+          <p style="font-size:15px;color:var(--text-dim);">
+            Exploration structurée, prototypes rapides et recherche de solutions réalistes.
+          </p>
+        </div>
+        <div class="card">
+          <span class="category">POLYVALENT</span>
+          <h4 data-key="competences_relation_polyvalent">Polyvalence</h4>
+          <p style="font-size:15px;color:var(--text-dim);">
+            Design, front-end, documentation, accompagnement produit sur la durée.
+          </p>
+        </div>
+        <div class="card">
+          <span class="category">CURIEUX</span>
+          <h4 data-key="competences_relation_curieux">Curiosité</h4>
+          <p style="font-size:15px;color:var(--text-dim);">
+            Veille UX, performance, accessibilité et nouvelles pratiques de développement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUES -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_langues">Langues</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-6">
+        <div class="passion-card">
+          <h4 data-key="langue_fr" class="imagefr">Français (Natif)</h4>
+          <p>Rédaction & communication professionnelle.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="langue_en">Anglais (C1)</h4>
+          <p>Tech, documentation & réunions internationales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_logiciels">Outils & Logiciels</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="logo-wall">
+        <img loading="lazy" src="images/logiciels/figma.png" alt="Figma" />
+        <img loading="lazy" src="images/logiciels/adobexd.png" alt="Adobe XD" />
+        <img loading="lazy" src="images/logiciels/adobephotoshop.png" alt="Photoshop" />
+        <img loading="lazy" src="images/logiciels/adobepremierepro.png" alt="Premiere Pro" />
+        <img loading="lazy" src="images/logiciels/adobeindesign.png" alt="InDesign" />
+        <img loading="lazy" src="images/logiciels/adobeillustrator.png" alt="Illustrator" />
+        <img loading="lazy" src="images/logiciels/shopify.png" alt="Shopify" />
+        <img loading="lazy" src="images/logiciels/wordpress.png" alt="Wordpress" />
+        <img loading="lazy" src="images/logiciels/vscode.png" alt="VS Code" />
+        <img loading="lazy" src="images/logiciels/github.png" alt="GitHub" />
+        <img loading="lazy" src="images/logiciels/ue.png" alt="Unreal Engine" />
+        <img loading="lazy" src="images/logiciels/teamviewer.png" alt="TeamViewer" />
+        <img loading="lazy" src="images/logiciels/googledrive.png" alt="Google Drive" />
+        <img loading="lazy" src="images/logiciels/googledoc.png" alt="Google Docs" />
+        <img loading="lazy" src="images/logiciels/googlesheets.png" alt="Google Sheets" />
+        <img loading="lazy" src="images/logiciels/googleslides.png" alt="Google Slides" />
+        <img loading="lazy" src="images/logiciels/googleforms.png" alt="Google Forms" />
+        <img loading="lazy" src="images/logiciels/miro.png" alt="Miro" />
+      </div>
+    </section>
+
+    <!-- PASSIONS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_passions">Passions</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-6">
+        <div class="passion-card">
+          <h4>Sports</h4>
+          <p>Discipline, énergie, équilibre au quotidien.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_voyages">Voyages</h4>
+          <p>Ouverture, découverte & curiosité du monde.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_entrepeunariat">Entrepreneuriat</h4>
+          <p>Créer de la valeur utile et concrète.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_lecture">Lecture</h4>
+          <p>Apprentissage continu & réflexion.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_jeuxvideos">Jeux vidéo</h4>
+          <p>Game design, narration & expérience interactive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_certifications">Certifications</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert">
+          <img src="images/certificato3d.png" alt="Certificat 3D" />
+        </div>
+        <div class="cert">
+          <img src="images/certificatux.png" alt="Certificat UX" />
+        </div>
+        <div class="cert">
+          <img src="images/certificatdev.png" alt="Certificat Développement" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv-section" class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_moncv">Mon CV</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="cv-wrapper">
+        <a href="cv/CV_Thomas_Houdard.pdf" target="_blank" class="cv-link" data-lang="fr">
+          <span data-key="label_cv_fr">Voir mon CV (FR)</span>
+          <img src="images/langSelect_FR.png" alt="FR" />
+        </a>
+        <a href="cv/Resume_Thomas_Houdard.pdf" target="_blank" class="cv-link" data-lang="en">
+          <span data-key="label_cv_en">See my resume (EN)</span>
+          <img src="images/langSelect_EN.png" alt="EN" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+      <div class="footer-bottom">
+        <p>Design & Code</p>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio",
+        menu_exp_pro: "Expériences Pro",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Dev",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        presentation_title: "Designer & Développeur Web",
+        presentation_1:
+          "Je m’appelle Thomas, Designer UI/UX et Développeur Web, avec un parcours débuté dans le Game/Level Design et l’UX. J’allie aujourd’hui créativité, vision produit et expertise technique pour concevoir des interfaces modernes, intuitives et efficaces. ",
+        presentation_2:  
+          "Je crée des expériences digitales centrées utilisateur, adaptées aux besoins réels, tout en apportant une vraie valeur aux entreprises et aux projets que j’accompagne — que ce soit en freelance ou au sein d'une équipe produit.",
+        presentation_3:
+          "Polyvalent, curieux et habitué aux environnements dynamiques, j’aime transformer des idées en solutions concrètes : prototypage rapide, design système, intégration front et optimisation continue. Disponible pour collaborer sur des projets ambitieux, je serais ravi d’échanger avec vous pour donner vie à vos concepts.",
+        video_intro: "Découvrez mon profil en moins de 90 secondes.",
+        titre_video: "CV Vidéo",
+        titre_competences_tech: "Compétences Techniques",
+        competences_tech_uiux: "Audit Concurrentiel",
+        titre_competences_relation: "Compétences Relationnelles",
+        competences_relation_equipe: "Esprit d’équipe",
+        competences_relation_creatif: "Créativité",
+        competences_relation_polyvalent: "Polyvalence",
+        competences_relation_curieux: "Curiosité",
+        titre_accueil_langues: "Langues",
+        langue_fr: "Français (Natif)",
+        langue_en: "Anglais (C1)",
+        titre_accueil_logiciels: "Outils & Logiciels",
+        titre_accueil_passions: "Passions",
+        passions_voyages: "Voyages",
+        passions_entrepeunariat: "Entrepreneuriat",
+        passions_lecture: "Lecture",
+        passions_jeuxvideos: "Jeux vidéo",
+        titre_accueil_certifications: "Certifications",
+        titre_accueil_moncv: "Mon CV",
+        label_cv_fr: "Voir mon CV (FR)",
+        label_cv_en: "See my resume (EN)",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        cta_cv: "Voir mon CV",
+        cta_contact: "Me contacter",
+        cta_portfolio: "Portfolio"
+      },
+      en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Dev Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        presentation_title: "Designer & Web Developer",
+        presentation_1:
+          "I help SMEs, founders and nonprofits build useful, aesthetic & performant interfaces.",
+        presentation_2:
+          "User-centered approach, product mindset and technical rigor for sustainable solutions.",
+        video_intro: "Discover my profile in under 90 seconds.",
+        titre_video: "Video Resume",
+        titre_competences_tech: "Technical Skills",
+        competences_tech_uiux: "Competitive Audit",
+        titre_competences_relation: "Relational Skills",
+        competences_relation_equipe: "Team Spirit",
+        competences_relation_creatif: "Creative",
+        competences_relation_polyvalent: "Versatile",
+        competences_relation_curieux: "Curious",
+        titre_accueil_langues: "Languages",
+        langue_fr: "French (Native)",
+        langue_en: "English (C1)",
+        titre_accueil_logiciels: "Tools & Software",
+        titre_accueil_passions: "Passions",
+        passions_voyages: "Travel",
+        passions_entrepeunariat: "Entrepreneurship",
+        passions_lecture: "Reading",
+        passions_jeuxvideos: "Video Games",
+        titre_accueil_certifications: "Certifications",
+        titre_accueil_moncv: "My Resume",
+        label_cv_fr: "View CV (FR)",
+        label_cv_en: "View Resume (EN)",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        cta_cv: "View my resume",
+        cta_contact: "Contact me",
+        cta_portfolio: "Portfolio"
+      }
+    };
+
+    const applyLang = (lang) => {
+      document.querySelectorAll("[data-key]").forEach((el) => {
+        const k = el.getAttribute("data-key");
+        if (translations[lang][k]) el.textContent = translations[lang][k];
+      });
+      document.querySelectorAll(".lang-switch button").forEach((b) => {
+        b.classList.toggle("active", b.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem("lang", lang);
+    };
+
+    const initLang = () => {
+      const stored = localStorage.getItem("lang") || "fr";
+      applyLang(stored);
+    };
+
+    document.getElementById("langSwitch").addEventListener("click", (e) => {
+      if (e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+    });
+
+    // Burger
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("open");
+      menu.classList.toggle("open");
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Prefetch CV
+    ["cv/CV_Thomas_Houdard.pdf", "cv/Resume_Thomas_Houdard.pdf"].forEach((url) => {
+      const link = document.createElement("link");
+      link.rel = "prefetch";
+      link.href = url;
+      document.head.appendChild(link);
+    });
+
+    initLang();
+  </script>
+</body>
+</html>

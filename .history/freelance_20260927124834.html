@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Expérience Freelance | Thomas Houdard</title>
+    <meta name="description" content="Missions freelance réalisées par Thomas Houdard en UI/UX Design, Product Design et Front-End pour des entreprises, indépendants et porteurs de projets." />
+    <meta property="og:title" content="Expérience Freelance - Thomas Houdard" />
+    <meta property="og:description" content="UI/UX Design · Product Design · Front-End — missions réelles" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+    <style>
+        .grid.cards .card.card-startup { border-top: 3px solid #8b5cf6; }
+        .grid.cards .card.card-startup .category { color: #c4b5fd; border-color: rgba(139,92,246,.45); }
+        .grid.cards .card.card-startup:hover { box-shadow: 0 18px 40px rgba(139,92,246,.16); }
+
+        .grid.cards .card.card-coach { border-top: 3px solid #a3e635; }
+        .grid.cards .card.card-coach .category { color: #d4f19a; border-color: rgba(163,230,53,.4); }
+        .grid.cards .card.card-coach:hover { box-shadow: 0 18px 40px rgba(163,230,53,.14); }
+
+        .grid.cards .card.card-acu { border-top: 3px solid #d4a017; }
+        .grid.cards .card.card-acu .category { color: #e8c874; border-color: rgba(212,160,23,.45); }
+        .grid.cards .card.card-acu:hover { box-shadow: 0 18px 40px rgba(212,160,23,.16); }
+
+        .grid.cards .card.card-sea { border-top: 3px solid #0ea5e9; }
+        .grid.cards .card.card-sea .category { color: #7dd3fc; border-color: rgba(14,165,233,.45); }
+        .grid.cards .card.card-sea:hover { box-shadow: 0 18px 40px rgba(14,165,233,.16); }
+    </style>
+</head>
+<body>
+   <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+</nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="page_title_freelance">Expérience Freelance</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:880px;color:var(--text-dim)" data-key="page_intro_freelance">Missions réalisées en UI/UX Design, Product Design et Front-End pour des entreprises, indépendants et porteurs de projets.</p>
+        </section>
+
+        <!-- MISSIONS -->
+        <section class="reveal">
+            <div class="grid cards">
+                <!-- startup -->
+                <div class="card card-startup">
+                    <img src="images/freelance/miniature_startup1.png" alt="Refonte UI/UX - Études de cas" loading="lazy">
+                    <span class="category" data-key="freelance_startup_badge">Mission freelance</span>
+                    <h3>STARTUP REDESIGN</h3>
+                    <h4 class="card-subtitle" data-key="freelance_design_uiux_title">UX/UI Design</h4>
+                    <p data-key="freelance_design_uiux"></p>
+                    <div class="tags">
+                        <span class="tag">Design System</span><span class="tag">Figma</span><span class="tag">Responsive</span>
+                    </div>
+                    <a href="freelanceStartup.html" class="btn btn-primary" data-key="cta_voir_projet">Voir le projet</a>
+                </div>
+                <!-- Coach sportif -->
+                <div class="card card-coach">
+                    <img src="images/freelance/CoachSport/miniature_coachsport.png" alt="Design site web - Études de cas" loading="lazy">
+                    <span class="category" data-key="freelance_coach_badge">Mission freelance</span>
+                    <h3>COACH SPORTIF</h3>
+                    <h4 class="card-subtitle" data-key="freelance_design_web_title">UX/UI Design + Front-End</h4>
+                    <p data-key="freelance_design_web"></p>
+                    <div class="tags">
+                        <span class="tag">Figma</span><span class="tag">Front-End</span><span class="tag">Responsive</span>
+                    </div>
+                    <a href="freelanceCoach.html" class="btn btn-primary" data-key="cta_voir_projet">Voir le projet</a>
+                </div>
+                 <!-- Au comptoir urbain -->
+                <div class="card card-acu">
+                    <img src="images/freelance/AuComptoirUrbain/miniature_aucomptoirurbain.png" alt="Design site web - Études de cas" loading="lazy">
+                    <span class="category" data-key="freelance_acu_badge">Mission freelance</span>
+                    <h3>AU COMPTOIR URBAIN</h3>
+                    <h4 class="card-subtitle" data-key="freelance_design_acu_title">UX/UI Design + Front-End</h4>
+                    <p data-key="freelance_design_acu"></p>
+                    <div class="tags">
+                        <span class="tag">Branding</span><span class="tag">Figma</span><span class="tag">Responsive</span>
+                    </div>
+                    <a href="freelanceAuComptoirUrbain.html" class="btn btn-primary" data-key="cta_voir_projet">Voir le projet</a>
+                </div>
+                 <!-- Sea recovery -->
+                 <div class="card card-sea">
+                    <img src="images/freelance/img_hero.png" alt="Design site web - Études de cas" loading="lazy">
+                    <span class="category" data-key="freelance_sea_badge">Projet UX/UI</span>
+                    <h3>SEA RECOVERY</h3>
+                    <h4 class="card-subtitle" data-key="freelance_design_sea_title">UX/UI Design + WordPress</h4>
+                    <p data-key="freelance_design_sea"></p>
+                    <div class="tags">
+                        <span class="tag">Figma</span><span class="tag">WordPress</span><span class="tag">Responsive</span>
+                    </div>
+                    <a href="freelanceSeaRecovery.html" class="btn btn-primary" data-key="cta_voir_projet">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="reveal" style="text-align:center;padding:4rem 2rem">
+            <h2 data-key="freelance_cta_title" style="margin-bottom:1rem"></h2>
+            <p style="max-width:600px;margin:0 auto 2rem;color:var(--text-dim)" data-key="freelance_cta_desc"></p>
+            <a href="TravaillerAvecMoi.html" class="btn btn-primary" data-key="button_contact_now"></a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                page_title_freelance:"Expérience Freelance",
+                page_intro_freelance:"Missions réalisées en UI/UX Design, Product Design et Front-End pour des entreprises, indépendants et porteurs de projets.",
+                titre_freelance_design:"Services Design",
+                titre_freelance_dev:"Services Développement",
+                freelance_startup_badge:"Mission freelance",
+                freelance_design_uiux_title:"UX/UI Design",
+                freelance_design_uiux:"Refonte de la hiérarchie visuelle, harmonisation des composants et mise en place d'un design system, du wireframe au prototype Figma.",
+                freelance_coach_badge:"Mission freelance",
+                freelance_design_web_title:"UX/UI Design + Front-End",
+                freelance_design_web: "Conception UX et développement front-end d'une landing page one-page pour un coach sportif indépendant, pensée mobile-first.",
+                freelance_acu_badge:"Mission freelance",
+                freelance_design_acu_title:"UX/UI Design + Front-End",
+                freelance_design_acu:"Direction artistique et intégration du site d'un restaurant gastronomique, avec une identité visuelle premium (palette or/noir, typographie éditoriale).",
+                freelance_sea_badge:"Projet UX/UI",
+                freelance_design_sea_title:"UX/UI Design + WordPress",
+                freelance_design_sea:"Test technique : refonte UX/UI et intégration WordPress du site d'une entreprise de récupération de déchets marins, du wireframe à la mise en ligne.",
+                cta_voir_projet:"Voir le projet",
+                freelance_design_game_title:"Game & Level design · Gameplay",
+                freelance_design_game:"Conception de niveaux, mécaniques de jeu et expériences interactives engageantes.",
+                freelance_design_brand_title:"Logo · Guideline · Charte graphique",
+                freelance_design_brand:"Création d'identités visuelles fortes et cohérentes pour marquer vos clients.",
+                freelance_dev_website_title:"Sites vitrines · Landing pages",
+                freelance_dev_website:"Développement de sites web performants, SEO-friendly et optimisés pour la conversion.",
+                freelance_dev_webapp_title:"Applications interactives · PWA",
+                freelance_dev_webapp:"Développement d'applications web modernes avec les dernières technologies.",
+                freelance_dev_ecommerce_title:"Boutiques en ligne · Intégrations paiement",
+                freelance_dev_ecommerce:"Création de plateformes e-commerce complètes et sécurisées.",
+                freelance_dev_support_title:"Maintenance · Optimisation · Support",
+                freelance_dev_support:"Maintenance, mises à jour de sécurité et optimisations de performance.",
+                freelance_cta_title:"Vous avez un projet similaire ?",
+                freelance_cta_desc:"Découvrez comment je peux vous accompagner sur votre propre projet.",
+                button_contact:"CONTACT",
+                button_contact_now:"Voir mes services",
+                footer:"©2025 Thomas Houdard · Tous droits réservés"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                page_title_freelance:"Freelance Experience",
+                page_intro_freelance:"Missions completed in UI/UX Design, Product Design and Front-End for companies, independents and project owners.",
+                titre_freelance_design:"Design Services",
+                titre_freelance_dev:"Development Services",
+                freelance_startup_badge:"Freelance mission",
+                freelance_design_uiux_title:"UX/UI Design",
+                freelance_design_uiux:"Overhauled visual hierarchy, harmonized components and built a design system, from wireframe to Figma prototype.",
+                freelance_coach_badge:"Freelance mission",
+                freelance_design_web_title:"UX/UI Design + Front-End",
+                freelance_design_web:"UX design and front-end development of a one-page landing page for an independent fitness coach, built mobile-first.",
+                freelance_acu_badge:"Freelance mission",
+                freelance_design_acu_title:"UX/UI Design + Front-End",
+                freelance_design_acu:"Art direction and integration of a gastronomic restaurant's website, with a premium visual identity (gold/black palette, editorial typography).",
+                freelance_sea_badge:"UX/UI Project",
+                freelance_design_sea_title:"UX/UI Design + WordPress",
+                freelance_design_sea:"Recruitment test: UX/UI redesign and WordPress integration for a marine waste recovery company's website, from wireframe to launch.",
+                cta_voir_projet:"View project",
+                freelance_design_game_title:"Game & Level design · Gameplay",
+                freelance_design_game:"Designing engaging levels, game mechanics and interactive experiences.",
+                freelance_design_brand_title:"Logo · Guidelines · Visual identity",
+                freelance_design_brand:"Creating strong and consistent visual identities that impress your clients.",
+                freelance_dev_website_title:"Showcase websites · Landing pages",
+                freelance_dev_website:"Developing high-performance, SEO-friendly and conversion-optimized websites.",
+                freelance_dev_webapp_title:"Interactive applications · PWA",
+                freelance_dev_webapp:"Developing modern web applications using the latest technologies.",
+                freelance_dev_ecommerce_title:"Online stores · Payment integration",
+                freelance_dev_ecommerce:"Creating complete and secure e-commerce platforms.",
+                freelance_dev_support_title:"Maintenance · Optimization · Support",
+                freelance_dev_support:"Maintenance, security updates and performance optimization.",
+                freelance_cta_title:"Have a similar project?",
+                freelance_cta_desc:"See how I can support you on your own project.",
+                button_contact:"CONTACT",
+                button_contact_now:"See my services",
+                footer:"©2025 Thomas Houdard · All rights reserved"
+            }
+        };
+    </script>
+</body>
+</html>

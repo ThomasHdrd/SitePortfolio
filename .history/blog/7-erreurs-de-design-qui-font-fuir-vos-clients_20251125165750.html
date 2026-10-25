@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7 erreurs de design qui font fuir vos clients | Blog Thomas Houdard</title>
+<meta name="description" content="Les 7 erreurs UX/UI les plus fréquentes sur un site web et comment les corriger pour améliorer la conversion.">
+<link rel="canonical" href="https://thomashoudard.com/blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7 erreurs de design qui font fuir vos clients">
+<meta property="og:description" content="Typo illisible, pas de CTA, lenteur... Corrigez ces erreurs UX/UI pour garder vos visiteurs.">
+<meta property="og:url" content="https://thomashoudard.com/blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html">
+<meta property="og:image" content="https://thomashoudard.com/images/blog/7-erreurs-design.webp">
+<meta name="author" content="Thomas Houdard">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-title">
+        <h3>Thomas Houdard</h3>
+        <small>UI/UX DESIGNER · DEV WEB</small>
+      </div>
+    </div>
+    <div class="burger" id="burger"><span></span></div>
+    <ul class="menu" id="menu">
+      <li><a href="../index.html" data-key="menu_about"></a></li>
+      <li class="dropdown">
+        <a href="#" data-key="menu_portfolio"> ▾</a>
+        <div class="dropdown-content">
+          <a href="../experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+          <a href="../projetDesigner.html" data-key="menu_projects_design"></a>
+          <a href="../projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+          <a href="../projetPersonnels.html" data-key="menu_projects_personal"></a>
+        </div>
+      </li>
+      <li><a href="../contact.html" data-key="menu_contact"></a></li>
+      <li><a href="../TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <div class="lang-switch" id="langSwitch">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrapper">
+  <article class="post-outer">
+    <header class="hero reveal" style="display:grid;gap:1.5rem">
+      <div>
+        <p class="hero-sub" data-key="post_label"></p>
+        <h1 data-key="post_title"></h1>
+        <div class="post-meta-inline" style="display:flex;flex-wrap:wrap;gap:.75rem;font-size:.75rem;opacity:.8">
+          <span data-key="post_date"></span>
+          <span>•</span>
+          <span data-key="post_readtime"></span>
+          <span>•</span>
+          <span data-key="post_category"></span>
+        </div>
+        <p class="lead" data-key="post_intro"></p>
+        <div class="badges" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem">
+          <span class="badge"><span class="dot"></span>UX</span>
+          <span class="badge"><span class="dot"></span>UI</span>
+          <span class="badge"><span class="dot"></span>Conversion</span>
+        </div>
+        <div class="toc" style="margin:1.2rem 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft)">
+          <strong style="font-size:.7rem;letter-spacing:.5px;text-transform:uppercase;opacity:.75" data-key="toc_title"></strong>
+          <ol style="margin:.5rem 0 0;padding-left:1.1rem;font-size:.85rem;display:grid;gap:.4rem">
+            <li><a href="#err1" data-key="err1_title"></a></li>
+            <li><a href="#err2" data-key="err2_title"></a></li>
+            <li><a href="#err3" data-key="err3_title"></a></li>
+            <li><a href="#err4" data-key="err4_title"></a></li>
+            <li><a href="#err5" data-key="err5_title"></a></li>
+            <li><a href="#err6" data-key="err6_title"></a></li>
+            <li><a href="#err7" data-key="err7_title"></a></li>
+          </ol>
+        </div>
+      </div>
+      <figure style="margin:0">
+        <img src="images/7-erreurs-de-design-qui-font-fuir-vos-clients.png" alt="Illustration erreurs UX/UI courantes" style="width:100%;border-radius:12px">
+        <figcaption style="font-size:.65rem;opacity:.6" data-key="image_caption"></figcaption>
+      </figure>
+    </header>
+
+    <div class="content-grid" style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2.5rem">
+      <div class="post-body">
+        <section id="err1" class="reveal">
+          <h2 data-key="err1_title"></h2>
+          <p data-key="err1_text"></p>
+        </section>
+        <section id="err2" class="reveal">
+          <h2 data-key="err2_title"></h2>
+          <p data-key="err2_text"></p>
+        </section>
+        <section id="err3" class="reveal">
+          <h2 data-key="err3_title"></h2>
+          <p data-key="err3_text"></p>
+        </section>
+        <section id="err4" class="reveal">
+          <h2 data-key="err4_title"></h2>
+          <p data-key="err4_text"></p>
+        </section>
+        <section id="err5" class="reveal">
+          <h2 data-key="err5_title"></h2>
+          <p data-key="err5_text"></p>
+        </section>
+        <section id="err6" class="reveal">
+          <h2 data-key="err6_title"></h2>
+          <p data-key="err6_text"></p>
+        </section>
+        <section id="err7" class="reveal">
+          <h2 data-key="err7_title"></h2>
+          <p data-key="err7_text"></p>
+        </section>
+
+        <div class="cta reveal" style="margin:2.5rem 0;padding:1.8rem;border:1px solid var(--border);border-radius:14px;background:var(--bg-soft);display:grid;gap:.75rem">
+          <h3 data-key="cta_title"></h3>
+            <p data-key="cta_text"></p>
+            <a href="../TravaillerAvecMoi.html" class="btn btn-primary" data-key="cta_button"></a>
+        </div>
+
+        <p><a href="../blog.html" class="btn btn-outline" data-key="back_blog"></a></p>
+      </div>
+
+      <aside class="sidebar reveal" style="display:grid;gap:1.2rem;align-content:start">
+        <div class="post-droit-card" style="padding:1rem;border:1px solid var(--border);border-radius:10px">
+          <h4 data-key="resume_title"></h4>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.4rem;font-size:.85rem">
+            <li data-key="err1_short"></li>
+            <li data-key="err2_short"></li>
+            <li data-key="err3_short"></li>
+            <li data-key="err4_short"></li>
+            <li data-key="err5_short"></li>
+            <li data-key="err6_short"></li>
+            <li data-key="err7_short"></li>
+          </ul>
+        </div>
+        <div class="post-droit-card" style="padding:1rem;border:1px solid var(--border);border-radius:10px">
+          <h4 data-key="audit_title"></h4>
+          <p data-key="audit_text"></p>
+          <a class="btn btn-outline" href="../TravaillerAvecMoi.html" data-key="audit_button"></a>
+        </div>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="../images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="../images/github.png" alt="GitHub"></a>
+        <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="../images/email.png" alt="Email"></a>
+      </div>
+      <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+    </div>
+    <div class="footer-bottom">
+      <a href="../blog.html">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  fr: {
+    menu_about:"Accueil",
+    menu_portfolio:"Portfolio",
+    menu_exp_pro:"Expériences Pro",
+    menu_projects_design:"Projets Design",
+    menu_projects_dev:"Projets Dev",
+    menu_projects_personal:"Perso",
+    menu_contact:"Contact",
+    menu_cv:"Travailler avec moi",
+    footer:"©2025 Thomas Houdard · Tous droits réservés",
+    post_label:"UX · UI · Conversion",
+    post_title:"7 erreurs de design qui font fuir vos clients",
+    post_date:"Mis à jour 2025",
+    post_readtime:"Lecture ~3 min",
+    post_category:"Article UX/UI",
+    post_intro:"Un site peut être esthétique mais inefficace. Beaucoup d’entreprises commettent des erreurs de design qui réduisent la crédibilité, la lisibilité et la conversion. Voici les 7 erreurs UX/UI les plus fréquentes et comment les corriger.",
+    image_caption:"Visuel illustrant des défauts d’interface courants",
+    toc_title:"Sommaire",
+    err1_title:"1. Texte illisible",
+    err2_title:"2. Pas de bouton clair (CTA)",
+    err3_title:"3. Site lent à charger",
+    err4_title:"4. Non adapté au mobile",
+    err5_title:"5. Trop d’informations",
+    err6_title:"6. Manque de cohérence graphique",
+    err7_title:"7. Aucune preuve de confiance",
+    err1_text:"Typographie trop petite, contraste faible ou fond chargé fatiguent la lecture. Solution : police lisible (16px min), contraste suffisant (WCAG AA), hauteur de ligne généreuse et espaces blancs cohérents.",
+    err2_text:"Sans CTA visible, l’utilisateur hésite. Solution : un bouton principal clair très tôt (above the fold) + répétition en bas de page. Texte actionnable et couleur contrastée.",
+    err3_text:"Chaque seconde supplémentaire peut faire perdre jusqu’à 10% des visiteurs. Solution : compression images (WebP/AVIF), préchargement des ressources critiques, réduction des scripts tiers et audit Lighthouse.",
+    err4_text:"Plus de 60% du trafic est mobile. Un site non responsive décrédibilise. Solution : grille fluide, points de rupture adaptés (≤480px, 768px, 1024px), hit‑zones suffisantes et tests sur devices réels.",
+    err5_text:"Empiler trop de blocs dilue le message. Solution : hiérarchiser : titre clair, sous‑titre, bénéfice clé, preuve, action. Regrouper et supprimer ce qui n’aide pas l’objectif principal.",
+    err6_text:"Couleurs, marges ou styles incohérents nuisent à la confiance. Solution : mini design system (palette, échelles typographiques, spacing, composants) + utilisation systématique.",
+    err7_text:"Sans témoignages, mentions légales ou visuels authentiques la confiance chute. Solution : ajouter avis clients, logos partenaires, mentions légales, photo/identité et signifier la sécurité (HTTPS, RGPD).",
+    err1_short:"Texte illisible",
+    err2_short:"Pas de CTA",
+    err3_short:"Site lent",
+    err4_short:"Non mobile",
+    err5_short:"Trop d’infos",
+    err6_short:"Incohérences",
+    err7_short:"Manque de réassurance",
+    resume_title:"Résumé rapide",
+    audit_title:"Besoin d’un audit ?",
+    audit_text:"Analyse rapide offerte pour identifier vos points faibles UX/UI et prioriser les actions.",
+    audit_button:"Demander un audit",
+    cta_title:"Votre site commet certaines de ces erreurs ?",
+    cta_text:"Je vous aide à corriger ces points pour augmenter conversion et crédibilité.",
+    cta_button:"Optimiser mon site",
+    back_blog:"← Retour au blog"
+  },
+  en: {
+    menu_about:"Home",
+    menu_portfolio:"Portfolio",
+    menu_exp_pro:"Work Experience",
+    menu_projects_design:"Design Projects",
+    menu_projects_dev:"Dev Projects",
+    menu_projects_personal:"Personal",
+    menu_contact:"Contact",
+    menu_cv:"Work with me",
+    footer:"©2025 Thomas Houdard · All rights reserved",
+    post_label:"UX · UI · Conversion",
+    post_title:"7 design mistakes that drive your users away",
+    post_date:"Updated 2025",
+    post_readtime:"Read ~3 min",
+    post_category:"UX/UI Article",
+    post_intro:"A site can look nice yet perform poorly. Many businesses make design mistakes that hurt credibility, readability and conversions. Here are 7 common UX/UI errors and how to fix them.",
+    image_caption:"Visual illustrating common interface pitfalls",
+    toc_title:"Contents",
+    err1_title:"1. Unreadable text",
+    err2_title:"2. No clear call-to-action",
+    err3_title:"3. Slow loading site",
+    err4_title:"4. Not mobile friendly",
+    err5_title:"5. Too much information",
+    err6_title:"6. Visual inconsistency",
+    err7_title:"7. No trust signals",
+    err1_text:"Tiny font sizes, weak contrast or busy backgrounds exhaust users. Fix: legible font (16px+), sufficient contrast (WCAG AA), generous line-height and consistent whitespace rhythm.",
+    err2_text:"Without a visible CTA users hesitate. Fix: clear primary button early (above the fold) + repeat near the end. Actionable label, contrasting color and contextual microcopy.",
+    err3_text:"Extra seconds cost visitors. Fix: compress images (WebP/AVIF), preload critical assets, trim third-party scripts and run Lighthouse performance audits.",
+    err4_text:"60%+ traffic is mobile. Non-responsive = amateur impression. Fix: fluid grid, suitable breakpoints (<480px, 768px, 1024px), adequate touch targets and real device tests.",
+    err5_text:"Overloaded pages dilute the core message. Fix: hierarchy: clear headline, subhead, key benefit, proof, action. Group, remove and defer anything not supporting the goal.",
+    err6_text:"Inconsistent colors, spacing or styles erode trust. Fix: small design system (palette, type scale, spacing, components) and strict reuse.",
+    err7_text:"No testimonials, legal info or authentic visuals reduces trust. Fix: add client quotes, partner logos, legal pages, your photo and signal security (HTTPS, GDPR).",
+    err1_short:"Unreadable text",
+    err2_short:"No CTA",
+    err3_short:"Slow site",
+    err4_short:"Not mobile",
+    err5_short:"Info overload",
+    err6_short:"Inconsistency",
+    err7_short:"No trust",
+    resume_title:"Quick recap",
+    audit_title:"Need an audit?",
+    audit_text:"Free quick review to identify UX/UI weaknesses and prioritize improvements.",
+    audit_button:"Request audit",
+    cta_title:"Spot these mistakes on your site?",
+    cta_text:"I help you fix them to boost conversion and credibility.",
+    cta_button:"Improve my site",
+    back_blog:"← Back to blog"
+  }
+};
+
+function applyLang(lang){
+  document.querySelectorAll("[data-key]").forEach(el=>{
+    const k=el.getAttribute("data-key");
+    if(translations[lang][k]) el.textContent=translations[lang][k];
+  });
+  document.querySelectorAll(".lang-switch button").forEach(b=>{
+    b.classList.toggle("active", b.dataset.lang===lang);
+  });
+  document.documentElement.lang=lang;
+  localStorage.setItem("lang",lang);
+}
+(function init(){
+  const stored = localStorage.getItem("lang") || "fr";
+  applyLang(stored);
+})();
+document.getElementById("langSwitch").addEventListener("click",e=>{
+  if(e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+});
+const burger=document.getElementById("burger");
+const menu=document.getElementById("menu");
+burger.addEventListener("click",()=>{burger.classList.toggle("open");menu.classList.toggle("open");});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){en.target.classList.add("visible");observer.unobserve(en.target);}
+  });
+},{threshold:.14});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

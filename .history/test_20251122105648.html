@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Thomas Houdard — UI/UX Designer & Développeur Web</title>
+  <meta name="description" content="Portfolio de Thomas Houdard, UI/UX Designer & Développeur Web. Projets, services et contact pour créer des expériences digitales claires, modernes et efficaces." />
+  <meta name="keywords" content="freelance web, UI UX designer, développeur web, HTML CSS JS, portfolio, site vitrine" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thomas Houdard — UI/UX Designer & Développeur Web" />
+  <meta property="og:description" content="Découvrez mes projets en design d’interface, UX et développement front-end." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      /* Palette modernisée */
+      --bg: #f5f6fa;            /* gris-bleu très clair */
+      --bg-alt: #fdfcfb;        /* crème clair */
+      --surface: #ffffff;
+      --ink: #15171c;           /* encre sombre */
+      --muted: #6f7480;         /* gris neutre */
+      --accent: #328ad3;        /* ton bleu */
+      --accent-soft: #e1f0fb;   /* bleu très clair */
+      --accent-2: #215c92;      /* bleu plus profond */
+      --border-subtle: rgba(15, 23, 42, 0.06);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.06);
+      --transition-fast: 160ms ease-out;
+      --transition-med: 220ms ease;
+      --nav-height: 72px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, #e9f2ff 0, #f5f6fa 40%, #f3f4f7 100%);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout global */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    @media (min-width: 960px) {
+      section {
+        padding: 96px 0;
+      }
+    }
+
+    /* Navigation */
+
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(245, 246, 250, 0.97),
+        rgba(245, 246, 250, 0.92),
+        rgba(245, 246, 250, 0.86)
+      );
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-inner {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .brand-tag {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.88rem;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 10px 30px rgba(50, 138, 211, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+    }
+
+    .nav-cta span {
+      font-size: 1.1em;
+      margin-bottom: 2px;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      background: var(--accent-2);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+    }
+
+    .nav-cta:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+    }
+
+    /* Burger menu */
+
+    .nav-toggle {
+      width: 32px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+      background: rgba(245, 246, 250, 0.9);
+      transition: background var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .nav-toggle:hover {
+      background: rgba(245, 246, 250, 1);
+      border-color: rgba(15, 23, 42, 0.12);
+    }
+
+    .nav-toggle-bar {
+      width: 16px;
+      height: 2px;
+      border-radius: 999px;
+      background: #111827;
+      transition:
+        transform var(--transition-med),
+        opacity var(--transition-fast),
+        width var(--transition-fast);
+    }
+
+    .nav-toggle.open .nav-toggle-bar:nth-child(1) {
+      transform: translateY(3px) rotate(45deg);
+      width: 18px;
+    }
+
+    .nav-toggle.open .nav-toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open .nav-toggle-bar:nth-child(3) {
+      transform: translateY(-3px) rotate(-45deg);
+      width: 18px;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        position: absolute;
+        inset: var(--nav-height) 16px auto 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 18px;
+        background: rgba(245, 246, 250, 0.98);
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+        transform-origin: top;
+        transform: scaleY(0.9) translateY(-12px);
+        opacity: 0;
+        pointer-events: none;
+        border: 1px solid var(--border-subtle);
+        backdrop-filter: blur(18px);
+        transition:
+          opacity var(--transition-med),
+          transform var(--transition-med);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scaleY(1) translateY(0);
+      }
+
+      .nav-links a {
+        padding: 6px 0;
+      }
+
+      .nav-cta {
+        margin-top: 8px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+    }
+
+    /* Hero */
+
+    .hero {
+      padding-top: 40px;
+    }
+
+    @media (min-width: 960px) {
+      .hero {
+        padding-top: 56px;
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (min-width: 880px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+        gap: 40px;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .hero-kicker-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(50, 138, 211, 0.24);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      max-width: 32rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      border-radius: 999px;
+      padding: 6px 10px;
+      border: 1px solid rgba(15, 23, 42, 0.07);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .pill.accent {
+      background: var(--accent-soft);
+      border-color: rgba(50, 138, 211, 0.4);
+      color: var(--accent-2);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      transition:
+        background var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #ffffff;
+      box-shadow: var(--shadow-soft);
+      border-color: transparent;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.2);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(15, 23, 42, 0.08);
+      color: var(--ink);
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+      border-color: rgba(15, 23, 42, 0.16);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.1);
+    }
+
+    .btn-icon-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-item span {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .hero-visual {
+      position: relative;
+      max-width: 380px;
+      margin-inline: auto;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .hero-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    }
+
+    .hero-avatar-inner {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--accent-2);
+    }
+
+    .hero-card-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .hero-card-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-card-pill {
+      margin-left: auto;
+      font-size: 0.72rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      background: rgba(22, 163, 74, 0.06);
+      color: #15803d;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-card-body {
+      font-size: 0.82rem;
+      color: #4b5563;
+      margin-bottom: 12px;
+    }
+
+    .hero-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.72rem;
+    }
+
+    .chip {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(248, 250, 252, 0.95);
+      color: #334155;
+    }
+
+    .hero-floating {
+      position: absolute;
+      inset: auto -4px -18px auto;
+      width: 190px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: #0f172a;
+      color: #e5e7eb;
+      font-size: 0.75rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-floating strong {
+      display: block;
+      font-size: 0.77rem;
+      margin-bottom: 2px;
+    }
+
+    .hero-floating span {
+      color: #e5e7eb;
+    }
+
+    .hero-floating-badge {
+      align-self: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 219, 254, 0.5);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bfdbfe;
+    }
+
+    @media (max-width: 480px) {
+      .hero-floating {
+        inset: auto auto -18px 6px;
+      }
+    }
+
+    /* Sections titre */
+
+    .section-header {
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .section-description {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+    }
+
+    /* Projets */
+
+    .projects-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 960px) {
+      .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .project-card {
+      border-radius: var(--radius-md);
+      padding: 14px 14px 16px;
+      background: var(--surface);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37, 99, 235, 0.4);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .project-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .project-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .project-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .project-meta {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.8rem;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stack-pill {
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.72rem;
+      background: rgba(248, 250, 252, 0.96);
+      color: #1f2937;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .project-link span {
+      font-size: 1.1em;
+      margin-bottom: 1px;
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 880px) {
+      .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .service-card {
+      border-radius: var(--radius-md);
+      padding: 16px 16px 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .service-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--accent-2);
+    }
+
+    .service-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .service-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .service-bullets {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+
+    .service-bullets li {
+      margin-left: 18px;
+      margin-bottom: 3px;
+    }
+
+    /* Compétences */
+
+    .skills-layout {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 880px) {
+      .skills-layout {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      }
+    }
+
+    .skills-group {
+      border-radius: var(--radius-md);
+      padding: 16px 16px 14px;
+      background: #ffffff;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.04);
+    }
+
+    .skills-title {
+      font-size: 0.94rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .skills-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.78rem;
+      margin-top: 6px;
+    }
+
+    .skills-chip {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #111827;
+    }
+
+    .skills-note {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* CV & vidéo */
+
+    .cv-layout {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 880px) {
+      .cv-layout {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+        align-items: center;
+      }
+    }
+
+    .cv-video-wrapper {
+      border-radius: var(--radius-md);
+      padding: 10px;
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .cv-video-wrapper video {
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      max-height: 360px;
+      width: 100%;
+    }
+
+    .cv-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .cv-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 0.8rem;
+      background: rgba(248, 250, 252, 0.96);
+      cursor: pointer;
+      transition:
+        background var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+
+    .cv-chip span {
+      font-size: 1rem;
+    }
+
+    .cv-chip:hover {
+      background: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    /* Contact */
+
+    .contact-card {
+      border-radius: var(--radius-lg);
+      padding: 22px 20px 20px;
+      background: linear-gradient(135deg, #ffffff, #e1f0fb);
+      box-shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 780px) {
+      .contact-card {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        align-items: center;
+      }
+    }
+
+    .contact-text-main {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-small {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .contact-option {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .contact-side {
+      border-radius: 18px;
+      padding: 12px;
+      background: #0f172a;
+      color: #e5e7eb;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-side strong {
+      font-size: 0.86rem;
+    }
+
+    .contact-side small {
+      color: #9ca3af;
+    }
+
+    .contact-side a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 24px 0 28px;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(245, 246, 250, 0.98);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-badge {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(248, 250, 252, 0.96);
+      font-size: 0.78rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    /* Scroll reveal léger */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity 500ms ease-out,
+        transform 500ms ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand">
+          <div>
+            <div class="brand-name">Thomas Houdard</div>
+            <div class="brand-tag">UI/UX Designer & Développeur Web</div>
+          </div>
+        </div>
+
+        <nav>
+          <div class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <div class="nav-toggle-bar"></div>
+            <div class="nav-toggle-bar"></div>
+            <div class="nav-toggle-bar"></div>
+          </div>
+
+          <div class="nav-links" id="navLinks">
+            <a href="#hero" class="active">Accueil</a>
+            <a href="#projects">Projets</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-cta">
+              Me contacter
+              <span>↗</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="hero-kicker">
+              <span class="hero-kicker-dot"></span>
+              Portfolio 2025
+            </div>
+            <h1 class="hero-title">
+              Je crée des interfaces <span>claires</span> et des sites qui donnent envie d’agir.
+            </h1>
+            <p class="hero-subtitle">
+              Designer orienté UX et développeur front-end, j’aide les entreprises et projets
+              à transformer leurs idées en expériences digitales simples, modernes et efficaces.
+            </p>
+
+            <div class="hero-pill">
+              <div class="pill accent">UI/UX Design</div>
+              <div class="pill">Dév. Front-end</div>
+              <div class="pill">Sites vitrines & produits</div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                Voir mes projets
+                <div class="btn-icon-circle">↓</div>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Discuter de votre projet
+                <span>↗</span>
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span>Basé à :</span> Montpellier, France
+              </div>
+              <div class="hero-meta-item">
+                <span>Je travaille avec :</span> PME, freelances, associations & studios
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <div class="hero-avatar">
+                  <div class="hero-avatar-inner">
+                    TH
+                  </div>
+                </div>
+                <div>
+                  <div class="hero-card-title">Portfolio Thomas Houdard</div>
+                  <div class="hero-card-sub">
+                    UI/UX • Front-end • Game Design
+                  </div>
+                </div>
+                <div class="hero-card-pill">Disponible</div>
+              </div>
+              <div class="hero-card-body">
+                Design de parcours clairs, intégration HTML/CSS/JS soignée,
+                et accompagnement produit pour aligner expérience et objectifs.
+              </div>
+              <div class="hero-chip-row">
+                <div class="chip">Design systèmes & maquettes Figma</div>
+                <div class="chip">Composants réutilisables</div>
+                <div class="chip">Responsive & performance</div>
+              </div>
+            </div>
+
+            <div class="hero-floating">
+              <div>
+                <strong>Projets récents</strong>
+                <span>Sites vitrines, dashboards, e-commerce léger, prototypes UX…</span>
+              </div>
+              <div class="hero-floating-badge">
+                Learn. Move. Evolve
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Projets sélectionnés</div>
+          <h2 class="section-title">Un aperçu de mon travail</h2>
+          <p class="section-description">
+            Quelques projets qui illustrent ma façon de travailler : partir de besoins
+            concrets, clarifier l’expérience, puis livrer des interfaces propres, cohérentes
+            et faciles à maintenir.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-tag">UI/UX • Site vitrine</div>
+            <h3 class="project-title">Refonte d’un site freelance</h3>
+            <p class="project-desc">
+              Repenser la structure, le storytelling et l’interface d’un site
+              personnel pour mieux présenter les services, cas clients et CTA.
+            </p>
+            <div class="project-meta">
+              <div class="project-stack">
+                <span class="stack-pill">Figma</span>
+                <span class="stack-pill">Design système</span>
+                <span class="stack-pill">Prototype interactif</span>
+              </div>
+              <div class="project-link">
+                Étude de cas
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-tag">Front-end • UX</div>
+            <h3 class="project-title">Dashboard web sur-mesure</h3>
+            <p class="project-desc">
+              Conception et intégration d’un tableau de bord pour suivre des données métier,
+              avec hiérarchie visuelle claire, filtrage simple et vue responsive.
+            </p>
+            <div class="project-meta">
+              <div class="project-stack">
+                <span class="stack-pill">HTML/CSS</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill">Composants modulaires</span>
+              </div>
+              <div class="project-link">
+                Voir le prototype
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-tag">Produit • Game / UX</div>
+            <h3 class="project-title">Expérience jeu & progression</h3>
+            <p class="project-desc">
+              Travail sur le flow de progression, le feedback visuel et les interfaces d’un
+              projet de jeu, pour garder le joueur dans une boucle claire et motivante.
+            </p>
+            <div class="project-meta">
+              <div class="project-stack">
+                <span class="stack-pill">Game & Level Design</span>
+                <span class="stack-pill">Blueprint</span>
+                <span class="stack-pill">UX joueur</span>
+              </div>
+              <div class="project-link">
+                En savoir plus
+                <span>↗</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">Comment je peux vous aider</h2>
+          <p class="section-description">
+            J’interviens sur la réflexion (UX), le design visuel (UI) et
+            l’intégration front-end pour livrer un résultat cohérent de bout en bout.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">✏️</div>
+            <h3 class="service-title">UI & UX Design</h3>
+            <p class="service-desc">
+              Concevoir des parcours fluides et des interfaces lisibles, en partant
+              des objectifs du projet et des besoins réels des utilisateurs.
+            </p>
+            <ul class="service-bullets">
+              <li>Ateliers & cadrage des besoins</li>
+              <li>Wireframes, maquettes haute fidélité</li>
+              <li>Design systèmes & style guide</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">💻</div>
+            <h3 class="service-title">Développement front-end</h3>
+            <p class="service-desc">
+              Intégration propre et responsive des maquettes avec une attention particulière
+              à la cohérence, aux détails et aux performances.
+            </p>
+            <ul class="service-bullets">
+              <li>HTML, CSS (modulaire, BEM, utility)</li>
+              <li>JavaScript & interactions</li>
+              <li>Optimisation mobile & accessibilité</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🎮</div>
+            <h3 class="service-title">Produit & Game Design</h3>
+            <p class="service-desc">
+              Appliquer une logique de game design pour rendre vos produits plus clairs,
+              engageants et motivants (feedback, progression, flow).
+            </p>
+            <ul class="service-bullets">
+              <li>Flow & architecture d’expérience</li>
+              <li>Prototypage & itérations rapides</li>
+              <li>Documentation (GDD, LDD, specs)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Compétences</div>
+          <h2 class="section-title">Design, code & collaboration</h2>
+          <p class="section-description">
+            Un profil hybride : à l’aise pour structurer un parcours UX, créer un design
+            cohérent, l’intégrer en front-end, et collaborer avec des équipes produit,
+            dev ou marketing.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skills-group reveal">
+            <div class="skills-title">Design & produit</div>
+            <div class="skills-chips">
+              <span class="skills-chip">Design Thinking</span>
+              <span class="skills-chip">Audit UX & concurrentiel</span>
+              <span class="skills-chip">Wireframes & flows</span>
+              <span class="skills-chip">Maquettes Figma</span>
+              <span class="skills-chip">Design d’interaction</span>
+              <span class="skills-chip">Responsive web design</span>
+              <span class="skills-chip">Game & Level Design</span>
+              <span class="skills-chip">Prototypage</span>
+            </div>
+            <p class="skills-note">
+              J’aime particulièrement clarifier les parcours complexes et simplifier
+              ce que l’utilisateur voit à l’écran.
+            </p>
+          </div>
+
+          <div class="skills-group reveal">
+            <div class="skills-title">Techniques & outils</div>
+            <div class="skills-chips">
+              <span class="skills-chip">HTML • CSS • JavaScript</span>
+              <span class="skills-chip">Angular</span>
+              <span class="skills-chip">Python • PHP • SQL</span>
+              <span class="skills-chip">WordPress • Shopify</span>
+              <span class="skills-chip">Git & GitHub</span>
+              <span class="skills-chip">VS Code</span>
+              <span class="skills-chip">Figma</span>
+              <span class="skills-chip">Adobe XD / Photoshop / Illustrator</span>
+              <span class="skills-chip">Notions d’IA & automatisation</span>
+            </div>
+            <p class="skills-note">
+              J’aime garder le code lisible, structuré, et documenté, pour faciliter
+              la reprise par d’autres développeurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV & VIDÉO -->
+    <section id="cv">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Parcours</div>
+          <h2 class="section-title">Mon profil en détail</h2>
+          <p class="section-description">
+            Vous préférez un format plus classique ? Voici mon CV vidéo ainsi que mon
+            CV / résumé à télécharger en français ou en anglais.
+          </p>
+        </div>
+
+        <div class="cv-layout">
+          <div class="cv-video-wrapper reveal">
+            <!-- Mets ici ton vrai chemin vidéo -->
+            <video controls preload="metadata">
+              <source src="videos/CV VIDEO - THOMAS HOUDARD_FINAL.mp4" type="video/mp4" />
+              Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+          </div>
+
+          <div class="reveal">
+            <p>
+              Diplômé en game design et expérimenté en front-end / back-end, j’ai
+              travaillé sur des projets variés : sites vitrines, outils internes,
+              expériences interactives et projets personnels orientés produit.
+            </p>
+            <p style="margin-top: 10px;">
+              J’aime les environnements où l’on peut combiner réflexion, design
+              d’expérience et code pour livrer des interfaces complètes, pas juste
+              “jolies”.
+            </p>
+
+            <div class="cv-links">
+              <a href="cv/CV_Thomas_Houdard.pdf" target="_blank" class="cv-chip">
+                <span>📄</span>
+                CV complet (FR)
+              </a>
+              <a href="cv/Resume_Thomas_Houdard.pdf" target="_blank" class="cv-chip">
+                <span>🌍</span>
+                Resume (EN)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Parlons de votre projet</h2>
+          <p class="section-description">
+            Vous avez un site à refondre, un nouveau produit à lancer, ou besoin d’un
+            renfort design/front-end ? Écrivez-moi avec quelques lignes de contexte.
+          </p>
+        </div>
+
+        <div class="contact-card reveal">
+          <div>
+            <p class="contact-text-main">
+              Envoyez-moi un mail avec :
+              <br>• une courte présentation de votre projet<br>
+              • vos objectifs<br>
+              • votre timing (idéalement) et votre budget indicatif.
+            </p>
+            <p class="contact-small" style="margin-bottom: 14px;">
+              Je vous réponds avec une première analyse et, si besoin, une proposition
+              de collaboration (mission freelance, régie, ou autre format).
+            </p>
+
+            <a href="mailto:contact@thomashoudard.com?subject=Projet%20web%20ou%20design&body=Bonjour%20Thomas,%0D%0A%0D%0AJe%20vous%20contacte%20concernant%20..." class="btn btn-primary">
+              Écrire à contact@thomashoudard.com
+              <span>↗</span>
+            </a>
+
+            <div class="contact-options" style="margin-top: 14px;">
+              <div class="contact-option">Montpellier & télétravail</div>
+              <div class="contact-option">Missions freelance / CDD / long terme</div>
+            </div>
+          </div>
+
+          <div class="contact-side">
+            <strong>Envie de creuser un peu plus ?</strong>
+            <small>Quelques liens directs :</small>
+            <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank">
+              LinkedIn — Parcours & expériences
+            </a>
+            <a href="https://github.com/ThomasHdrd" target="_blank">
+              GitHub — Projets & code
+            </a>
+            <span>
+              Ouvert aux collaborations en France et à l’international, en particulier
+              dans les domaines du produit, du design, du jeu vidéo et du web.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" class="footer-badge">
+            LinkedIn
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" class="footer-badge">
+            GitHub
+          </a>
+          <a href="mailto:contact@thomashoudard.com" class="footer-badge">
+            Email
+          </a>
+        </div>
+        <div class="footer-links">
+          <span>© 2025 — Thomas Houdard</span>
+          <a href="#hero">Retour en haut</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Burger menu
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 720) {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // Smooth scroll + active state
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  navAnchors.forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const targetId = anchor.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 82;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    let currentSection = null;
+    document.querySelectorAll('section[id]').forEach(sec => {
+      const offset = sec.getBoundingClientRect().top;
+      if (offset <= 140 && offset > -sec.offsetHeight + 140) {
+        currentSection = sec.id;
+      }
+    });
+
+    navAnchors.forEach(a => {
+      const href = a.getAttribute('href').substring(1);
+      a.classList.toggle('active', href === currentSection);
+    });
+  });
+
+  // Petit effet "reveal on scroll"
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16 });
+
+  revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

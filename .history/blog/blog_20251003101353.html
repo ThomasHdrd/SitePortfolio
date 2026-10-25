@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Thomas Houdard</title>
+  <meta name="description" content="Articles sur le design UX/UI, le développement web et mes conseils pour PME et freelances.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <!-- même menu que sur index.html -->
+  </nav>
+
+  <header class="banner-blog">
+    <h1>Mon Blog</h1>
+    <p>UX/UI, Développement, Astuces & Réflexions</p>
+  </header>
+
+<main class="blog-container">
+  <article class="blog-card">
+    <img src="images/blog/uxdesign.jpg" alt="UX design">
+    <h2><a href="article1.html">Pourquoi investir dans un bon design UX/UI ?</a></h2>
+    <p>Un site bien conçu améliore la confiance des visiteurs et augmente vos ventes. Dans cet article, je vous explique...</p>
+    <a href="article1.html" class="button-info">Lire l’article</a>
+  </article>
+
+  <article class="blog-card">
+    <img src="images/blog/performance.jpg" alt="Performance site web">
+    <h2><a href="article2.html">Comment améliorer la vitesse de votre site web</a></h2>
+    <p>Google adore les sites rapides, vos utilisateurs aussi. Voici mes 5 techniques préférées pour booster vos performances...</p>
+    <a href="article2.html" class="button-info">Lire l’article</a>
+  </article>
+
+  <article class="blog-card">
+    <img src="images/blog/freelance.jpg" alt="Freelance design dev">
+    <h2><a href="article3.html">Travailler avec un freelance : avantages et conseils</a></h2>
+    <p>Un freelance est flexible, réactif et moins coûteux qu’une agence. Découvrons pourquoi c’est un bon choix...</p>
+    <a href="article3.html" class="button-info">Lire l’article</a>
+  </article>
+</main>
+
+  <footer>
+    <!-- même footer que index.html -->
+  </footer>
+</body>
+</html>
+
+
+<style>
+.blog-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 30px;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #328ad3;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.blog-card h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.blog-card p {
+  flex-grow: 1;
+  color: #444;
+}
+
+.blog-card a.button-info {
+  margin-top: 15px;
+  align-self: flex-start;
+  background: #328ad3;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.blog-card a.button-info:hover {
+  background: #1a5696;
+}
+</style>

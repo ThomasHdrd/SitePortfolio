@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sud Trading Company – Développeur Angular | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas : mission de Développeur Front-End Angular chez Sud Trading Company. Intégration, optimisation UI et support technique." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#05070b;
+      --bg-alt:#0c1117;
+      --bg-soft:#151b23;
+      --bg-soft-alt:#1b222e;
+
+      --primary:#328ad3;
+      --primary-soft:#9cc3e7;
+      --accent:#e56c6c;
+      --accent-soft:#f2c3b2;
+      --sand:#f2e9dc;
+
+      --text:#f8f7f3;
+      --text-dim:#a7b1c3;
+
+      --radius:16px;
+      --radius-sm:10px;
+      --radius-xs:6px;
+
+      --border-soft:1px solid rgba(242,233,220,.08);
+      --border-strong:1px solid rgba(242,233,220,.18);
+
+      --shadow-soft:0 18px 40px rgba(0,0,0,.7);
+
+      --grad-primary:linear-gradient(135deg,#328ad3 0%,#46a4e4 40%,#f2c3b2 100%);
+      --grad-surface:radial-gradient(circle at 0 0,rgba(50,138,211,.2),transparent 55%),
+                     radial-gradient(circle at 100% 100%,rgba(5,19,58,.25),transparent 55%),
+                     #10141e;
+
+      --cm:clamp(.9rem,1vw + .55rem,1.05rem);
+      --trans:.3s cubic-bezier(.4,.2,.2,1);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%,rgba(22,129,216,.12),transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+    img,video{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:var(--primary-soft);transition:color var(--trans)}
+    a:hover{color:var(--sand)}
+    h1,h2,h3,h4{
+      font-family:"Plus Jakarta Sans",Inter,sans-serif;
+      font-weight:600;
+      line-height:1.15;
+      letter-spacing:.04em;
+    }
+    h1{
+      font-size:clamp(2.2rem,3.4vw,2.8rem);
+      text-transform:uppercase;
+      background:linear-gradient(135deg,#f8f7f3 0%,var(--primary-soft) 45%,var(--accent-soft) 100%);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    h2{
+      font-size:clamp(1.6rem,2.4vw,2.1rem);
+      margin-bottom:1.2rem;
+      color:var(--sand);
+      text-transform:uppercase;
+    }
+    p{font-size:var(--cm)}
+    ::-webkit-scrollbar{width:10px}
+    ::-webkit-scrollbar-track{background:#05070b}
+    ::-webkit-scrollbar-thumb{background:#1c2430;border-radius:20px}
+    ::-webkit-scrollbar-thumb:hover{background:#273140}
+
+    .wrapper{width:min(1200px,92%);margin:0 auto}
+    section{margin:4rem 0;position:relative}
+    .section-header{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      margin-bottom:2rem;
+    }
+    .section-header .bar{
+      flex:1;
+      height:1px;
+      background:linear-gradient(90deg,rgba(242,233,220,.3),rgba(50,138,211,.4),transparent);
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:40;
+      backdrop-filter:blur(18px);
+      background:linear-gradient(to bottom,rgba(5,7,11,.96),rgba(5,7,11,.7),transparent);
+      border-bottom:1px solid rgba(242,233,220,.08);
+    }
+    .nav-inner{
+      width:min(1200px,92%);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:2rem;
+      padding:.7rem 0;
+    }
+    .brand{display:flex;align-items:center;gap:.8rem}
+    .brand-title{display:flex;flex-direction:column}
+    .brand-title h3{
+      font-size:20px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .brand-title small{
+      font-size:13px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--text-dim);
+      margin-top:.1rem;
+    }
+
+    .menu{
+      display:flex;
+      gap:1.2rem;
+      list-style:none;
+      align-items:center;
+    }
+    .menu a{
+      padding:.55rem .9rem;
+      font-size:.82rem;
+      font-weight:500;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      border-radius:var(--radius-xs);
+      position:relative;
+      color:var(--text-dim);
+      transition:background var(--trans),color var(--trans),transform var(--trans);
+    }
+    .menu a:hover{
+      color:var(--sand);
+      background:rgba(21,27,35,.9);
+    }
+    .menu a.active{
+      color:var(--sand);
+      background:rgba(21,27,35,1);
+    }
+    .menu a.active::after{
+      content:"";
+      position:absolute;
+      inset:auto 4px -7px;
+      height:2px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--primary),var(--accent));
+    }
+    .menu .dropdown{position:relative}
+    .menu .dropdown-content{
+      position:absolute;
+      top:110%;
+      left:0;
+      background:var(--bg-soft);
+      padding:.55rem;
+      border-radius:12px;
+      border:var(--border-soft);
+      display:none;
+      min-width:220px;
+      box-shadow:var(--shadow-soft);
+    }
+    .menu .dropdown:hover .dropdown-content{display:block}
+    .menu .dropdown-content a{
+      display:block;
+      padding:.5rem .7rem;
+      border-radius:8px;
+      font-size:.78rem;
+      color:var(--text-dim);
+    }
+    .menu .dropdown-content a:hover{
+      background:rgba(242,233,220,.07);
+      color:var(--sand);
+    }
+
+    .menu a.btn-taf-avec-moi{
+      background:var(--grad-primary);
+      color:#05070b;
+      font-weight:600;
+      box-shadow:var(--shadow-soft);
+    }
+    .menu a.btn-taf-avec-moi:hover{
+      transform:translateY(-2px);
+      box-shadow:0 24px 56px rgba(0,0,0,.8);
+      color:var(--text);
+    }
+
+    /* Lang switch */
+    .lang-switch{
+      display:flex;
+      gap:.4rem;
+      padding:.25rem .35rem;
+      border-radius:999px;
+      border:var(--border-soft);
+      background:rgba(10,15,22,.9);
+    }
+    .lang-switch button{
+      background:transparent;
+      border:none;
+      color:var(--text-dim);
+      font-size:.65rem;
+      font-weight:600;
+      letter-spacing:.16em;
+      padding:.35rem .7rem;
+      border-radius:999px;
+      cursor:pointer;
+      text-transform:uppercase;
+      transition:background var(--trans),color var(--trans);
+    }
+    .lang-switch button.active{
+      background:var(--grad-primary);
+      color:#05070b;
+    }
+    .lang-switch button:hover:not(.active){
+      background:rgba(242,233,220,.06);
+      color:var(--sand);
+    }
+
+    /* Burger */
+    .burger{
+      width:42px;height:42px;
+      border-radius:50%;
+      border:var(--border-soft);
+      background:rgba(10,15,22,.95);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition:var(--trans);
+    }
+    .burger span{
+      display:block;
+      width:18px;
+      height:2px;
+      background:var(--sand);
+      position:relative;
+      border-radius:999px;
+      transition:var(--trans);
+    }
+    .burger span::before,
+    .burger span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:18px;
+      height:2px;
+      background:var(--sand);
+      border-radius:999px;
+      transition:var(--trans);
+    }
+    .burger span::before{top:-6px}
+    .burger span::after{top:6px}
+    .burger.open span{background:transparent}
+    .burger.open span::before{transform:translateY(6px) rotate(45deg)}
+    .burger.open span::after{transform:translateY(-6px) rotate(-45deg)}
+
+    /* HERO CASE */
+    .case-hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,.95fr);
+      gap:3rem;
+      align-items:center;
+      margin:3rem 0 1rem;
+    }
+    .case-meta{
+      font-size:.8rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--text-dim);
+      margin-bottom:.7rem;
+    }
+    .case-subtitle{
+      margin-top:1rem;
+      font-size:.96rem;
+      color:var(--text-dim);
+      max-width:36rem;
+    }
+    .case-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      margin-top:1.4rem;
+    }
+    .tag{
+      font-size:.7rem;
+      font-weight:600;
+      letter-spacing:.12em;
+      padding:.35rem .9rem;
+      border-radius:999px;
+      border:var(--border-soft);
+      background:rgba(11,16,25,.95);
+      color:var(--text-dim);
+      text-transform:uppercase;
+    }
+    .tag--solid{
+      background:var(--grad-primary);
+      color:#05070b;
+      border:none;
+    }
+
+    .case-cover{
+      background:var(--grad-surface);
+      border-radius:20px;
+      border:var(--border-strong);
+      padding:1.4rem;
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .case-cover img{
+      border-radius:12px;
+      border:var(--border-soft);
+    }
+
+    /* GENERIC CARDS */
+    .card{
+      background:radial-gradient(circle at 0 0,rgba(50,138,211,.16),transparent 70%),
+                 radial-gradient(circle at 100% 100%,rgba(242,233,220,.06),transparent 70%),
+                 var(--bg-soft);
+      border-radius:18px;
+      border:var(--border-soft);
+      padding:1.4rem 1.6rem;
+      display:flex;
+      flex-direction:column;
+      gap:.85rem;
+      position:relative;
+      overflow:hidden;
+      transition:transform var(--trans),box-shadow var(--trans),border-color var(--trans);
+      height:100%;
+    }
+    .card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(242,233,220,.2);
+      box-shadow:var(--shadow-soft);
+    }
+    .card h3{
+      font-size:1.1rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--sand);
+    }
+    .card small{
+      font-size:.8rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--primary-soft);
+    }
+    .card ul{
+      list-style:none;
+      display:grid;
+      gap:.35rem;
+      padding-left:0;
+    }
+    .card ul li{
+      font-size:.95rem;
+      color:var(--text-dim);
+    }
+    .meta-list{
+      list-style:none;
+      display:grid;
+      gap:.35rem;
+      font-size:.93rem;
+      color:var(--text-dim);
+    }
+    .meta-list strong{color:var(--sand)}
+
+    .grid{
+      display:grid;
+      gap:1.7rem;
+    }
+    .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+    /* Tools (logiciels) */
+    .tools-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:1.3rem;
+      margin-top:1.5rem;
+    }
+    .tool-card{
+      background:var(--bg-soft);
+      border-radius:16px;
+      border:var(--border-soft);
+      padding:1.1rem 1.3rem;
+      display:flex;
+      flex-direction:column;
+      gap:.45rem;
+      min-height:160px;
+      transition:transform var(--trans),box-shadow var(--trans),border-color var(--trans);
+    }
+    .tool-card:hover{
+      transform:translateY(-3px);
+      box-shadow:var(--shadow-soft);
+      border-color:rgba(242,233,220,.2);
+    }
+    .tool-icon{
+      width:40px;height:40px;
+      border-radius:14px;
+      background:#05070b;
+      border:1px solid rgba(242,233,220,.18);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:.25rem;
+    }
+    .tool-icon img{
+      width:26px;
+      height:26px;
+      object-fit:contain;
+    }
+    .tool-title{
+      font-size:.78rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--primary-soft);
+    }
+    .tool-sub{
+      font-size:1rem;
+      font-weight:600;
+      color:var(--sand);
+    }
+    .tool-desc{
+      font-size:.9rem;
+      color:var(--text-dim);
+      max-width:32rem;
+    }
+
+    /* CTA Button */
+    .btn{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.6rem;
+      padding:.85rem 1.4rem;
+      font-size:.8rem;
+      font-weight:600;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      border-radius:999px;
+      border:var(--border-soft);
+      background:rgba(11,16,25,.95);
+      color:var(--sand);
+      cursor:pointer;
+      transition:background var(--trans),transform var(--trans),box-shadow var(--trans),color var(--trans);
+    }
+    .btn-primary{
+      border:none;
+      background:var(--grad-primary);
+      color:#05070b;
+      box-shadow:var(--shadow-soft);
+    }
+    .btn-primary:hover{
+      transform:translateY(-1px) scale(1.01);
+      box-shadow:0 24px 56px rgba(0,0,0,.8);
+    }
+
+    /* Footer */
+    footer{
+      background:#05070b;
+      border-top:1px solid rgba(242,233,220,.08);
+      padding:2.2rem 0 3rem;
+      margin-top:3.5rem;
+    }
+    .footer-inner{
+      width:min(1200px,92%);
+      margin:0 auto;
+      display:grid;
+      gap:2rem;
+    }
+    .footer-top{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1.6rem;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .social{display:flex;gap:.7rem}
+    .social a{
+      width:42px;height:42px;
+      border-radius:12px;
+      border:var(--border-soft);
+      background:var(--bg-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:background var(--trans),transform var(--trans),box-shadow var(--trans);
+    }
+    .social img{
+      width:22px;height:22px;
+      filter:grayscale(1) brightness(.7);
+      transition:filter var(--trans);
+    }
+    .social a:hover{
+      background:var(--bg-soft-alt);
+      transform:translateY(-3px);
+      box-shadow:var(--shadow-soft);
+    }
+    .social a:hover img{filter:none}
+    .footer-bottom{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      align-items:center;
+      justify-content:space-between;
+      padding-top:1.1rem;
+      border-top:1px solid rgba(242,233,220,.12);
+      font-size:.7rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--text-dim);
+    }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .burger{display:flex}
+      .menu{
+        position:fixed;
+        inset:70px 0 auto;
+        background:rgba(5,7,11,.97);
+        backdrop-filter:blur(18px);
+        flex-direction:column;
+        padding:1.1rem 1.3rem 1.8rem;
+        gap:.65rem;
+        max-height:0;
+        overflow:hidden;
+        box-shadow:0 26px 60px rgba(0,0,0,.8);
+        transition:max-height .5s ease;
+      }
+      .menu.open{max-height:480px}
+      .menu .dropdown-content{
+        position:static;
+        border:none;
+        box-shadow:none;
+        background:transparent;
+        padding:.3rem 0 .1rem;
+        display:block;
+      }
+      .menu .dropdown-content a{padding-left:1.4rem}
+      .case-hero{
+        grid-template-columns:1fr;
+        gap:2.3rem;
+        margin-top:2.4rem;
+      }
+    }
+    @media (max-width:640px){
+      .card{padding:1.1rem 1.2rem}
+    }
+
+    /* Scroll reveal */
+    .reveal{
+      opacity:0;
+      transform:translateY(28px);
+      transition:opacity .8s ease,transform .8s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX Designer · Dev Web</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="experiencesProfessionnelles.html" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+            <a href="projetPersonnels.html" data-key="menu_projects_personal">Perso</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="reveal">
+      <div class="case-hero">
+        <div>
+          <p class="case-meta" data-key="stc_meta">Étude de cas · Front-End · Angular</p>
+          <h1 data-key="stc_title">Application métier pour Sud Trading Company</h1>
+          <p class="case-subtitle" data-key="stc_subtitle">
+            Mission de développement front-end Angular pour une application métier utilisée en environnement industriel :
+            optimisation de l’interface, stabilité et support à l’équipe produit.
+          </p>
+
+          <div class="case-badges">
+            <span class="tag tag--solid">Angular</span>
+            <span class="tag">Front-End</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">Agile</span>
+          </div>
+        </div>
+
+        <div class="case-cover">
+          <img src="images/expro/stc/stc1.png" alt="Interface Sud Trading Company" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTE & MISSION -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_context_title">Contexte & mission</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <article class="card">
+          <small data-key="stc_context_label">Entreprise & enjeux</small>
+          <h3 data-key="stc_context_heading">Sud Trading Company</h3>
+          <p data-key="stc_context_text">
+            Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l’intégration et
+            la maintenance de solutions logicielles pour des environnements industriels et techniques.
+            L’équipe avait besoin de renforcer le front-end d’une application Angular existante tout en
+            améliorant la lisibilité et la stabilité du produit.
+          </p>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_meta_label">Rôle & cadre</small>
+          <h3 data-key="stc_role_heading">Mission front-end Angular</h3>
+          <ul class="meta-list">
+            <li data-key="stc_role_item_role"><strong>Rôle :</strong> Développeur Front-End Angular</li>
+            <li data-key="stc_role_item_date"><strong>Période :</strong> Décembre 2024</li>
+            <li data-key="stc_role_item_duration"><strong>Durée :</strong> 1 mois</li>
+            <li data-key="stc_role_item_env"><strong>Environnement :</strong> Angular, Git, VMware, VS Code</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- MON RÔLE -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_role_title">Mon rôle</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <article class="card">
+          <small data-key="stc_role_block1_label">Front-End & composants</small>
+          <h3 data-key="stc_role_block1_title">Évolution de l’interface</h3>
+          <ul>
+            <li data-key="stc_role_l1">
+              Participation au déploiement de nouvelles fonctionnalités Angular, en veillant au bon
+              fonctionnement de l’application en production.
+            </li>
+            <li data-key="stc_role_l2">
+              Modification et optimisation de composants existants pour améliorer la lisibilité, la
+              cohérence visuelle et la fluidité de navigation.
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_role_block2_label">Support & qualité</small>
+          <h3 data-key="stc_role_block2_title">Stabilité & support technique</h3>
+          <ul>
+            <li data-key="stc_role_l3">
+              Réalisation de tests fonctionnels ciblés pour détecter les anomalies et documenter les
+              correctifs à appliquer.
+            </li>
+            <li data-key="stc_role_l4">
+              Support à l’équipe de développement dans un environnement Agile : échanges réguliers,
+              remontées d’anomalies et propositions d’améliorations UI.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES & TECHNOLOGIES -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_skills_title">Compétences & technologies utilisées</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-3">
+        <article class="card">
+          <small data-key="stc_skills_block1_label">Front-End</small>
+          <h3 data-key="stc_skills_block1_title">Angular & intégration</h3>
+          <ul>
+            <li data-key="stc_skill_l1">Développement d’interfaces avec Angular et TypeScript.</li>
+            <li data-key="stc_skill_l2">Gestion de composants réutilisables et logiques d’affichage.</li>
+            <li data-key="stc_skill_l3">Intégration HTML/CSS responsive en cohérence avec le design existant.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_skills_block2_label">Qualité</small>
+          <h3 data-key="stc_skills_block2_title">Tests & débogage</h3>
+          <ul>
+            <li data-key="stc_skill_l4">Tests fonctionnels sur les parcours clés de l’application.</li>
+            <li data-key="stc_skill_l5">Débogage et correction de bugs mineurs côté front.</li>
+            <li data-key="stc_skill_l6">Suivi des retours utilisateurs internes pour prioriser les correctifs.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <small data-key="stc_skills_block3_label">Collaboration</small>
+          <h3 data-key="stc_skills_block3_title">Travail en équipe</h3>
+          <ul>
+            <li data-key="stc_skill_l7">Collaboration avec l’équipe de développement en environnement Agile.</li>
+            <li data-key="stc_skill_l8">Communication régulière avec les référents techniques.</li>
+            <li data-key="stc_skill_l9">Documentation claire des changements et des impacts.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- LOGICIELS UTILISÉS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_tools_title">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/expro/stc/angular.png" alt="Angular" loading="lazy" />
+          </div>
+          <p class="tool-title" data-key="stc_tools_cat1">Framework front-end</p>
+          <p class="tool-sub">Angular</p>
+          <p class="tool-desc" data-key="stc_tools_desc1">
+            Framework principal utilisé pour le développement de l’application web :
+            composants dynamiques, routing et gestion des états côté client.
+          </p>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/logiciels/vscode.png" alt="Visual Studio Code" loading="lazy" />
+          </div>
+          <p class="tool-title" data-key="stc_tools_cat2">Environnement de développement</p>
+          <p class="tool-sub">Visual Studio Code</p>
+          <p class="tool-desc" data-key="stc_tools_desc2">
+            Éditeur de code utilisé pour le développement, le versionning Git, les extensions Angular
+            et la collaboration avec l’équipe technique.
+          </p>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/expro/stc/vmware.png" alt="VMware" loading="lazy" />
+          </div>
+          <p class="tool-title" data-key="stc_tools_cat3">Environnements virtuels</p>
+          <p class="tool-sub">VMware</p>
+          <p class="tool-desc" data-key="stc_tools_desc3">
+            Utilisé pour créer et gérer des environnements de test isolés, afin de valider les
+            modifications sans impacter l’infrastructure principale.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RÉSULTAT & LIEN -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="stc_outcome_title">Résultat & lien</h2>
+        <div class="bar"></div>
+      </div>
+
+      <article class="card">
+        <small data-key="stc_outcome_label">Impact</small>
+        <h3 data-key="stc_outcome_heading">Une application plus claire et maintenable</h3>
+        <p data-key="stc_outcome_text">
+          Cette mission m’a permis de contribuer à la stabilité et à l’évolution d’une application
+          métier Angular existante, en améliorant à la fois l’interface et la qualité du front-end.
+          Elle a également renforcé mon expérience dans les environnements techniques exigeants.
+        </p>
+
+        <div style="margin-top:1.4rem;">
+          <a href="https://stcpro.fr/FR/" target="_blank" rel="noopener" class="btn btn-primary" data-key="stc_outcome_cta">
+            Voir le site de l’entreprise
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about:"Accueil",
+        menu_portfolio:"Portfolio",
+        menu_exp_pro:"Expériences Pro",
+        menu_projects_design:"Projets Design",
+        menu_projects_dev:"Projets Dev",
+        menu_projects_personal:"Perso",
+        menu_contact:"Contact",
+        menu_cv:"Travailler avec moi",
+
+        stc_meta:"Étude de cas · Front-End · Angular",
+        stc_title:"Application métier pour Sud Trading Company",
+        stc_subtitle:"Mission de développement front-end Angular pour une application métier utilisée en environnement industriel : optimisation de l’interface, stabilité et support à l’équipe produit.",
+
+        stc_context_title:"Contexte & mission",
+        stc_context_label:"Entreprise & enjeux",
+        stc_context_heading:"Sud Trading Company",
+        stc_context_text:"Sud Trading Company (STC) est une entreprise spécialisée dans le développement, l’intégration et la maintenance de solutions logicielles pour des environnements industriels et techniques. L’équipe avait besoin de renforcer le front-end d’une application Angular existante tout en améliorant la lisibilité et la stabilité du produit.",
+
+        stc_meta_label:"Rôle & cadre",
+        stc_role_heading:"Mission front-end Angular",
+        stc_role_item_role:"Rôle : Développeur Front-End Angular",
+        stc_role_item_date:"Période : Décembre 2024",
+        stc_role_item_duration:"Durée : 1 mois",
+        stc_role_item_env:"Environnement : Angular, Git, VMware, VS Code",
+
+        stc_role_title:"Mon rôle",
+        stc_role_block1_label:"Front-End & composants",
+        stc_role_block1_title:"Évolution de l’interface",
+        stc_role_l1:"Participation au déploiement de nouvelles fonctionnalités Angular, en veillant au bon fonctionnement de l’application en production.",
+        stc_role_l2:"Modification et optimisation de composants existants pour améliorer la lisibilité, la cohérence visuelle et la fluidité de navigation.",
+        stc_role_block2_label:"Support & qualité",
+        stc_role_block2_title:"Stabilité & support technique",
+        stc_role_l3:"Réalisation de tests fonctionnels ciblés pour détecter les anomalies et documenter les correctifs à appliquer.",
+        stc_role_l4:"Support à l’équipe de développement dans un environnement Agile : échanges réguliers, remontées d’anomalies et propositions d’améliorations UI.",
+
+        stc_skills_title:"Compétences & technologies utilisées",
+        stc_skills_block1_label:"Front-End",
+        stc_skills_block1_title:"Angular & intégration",
+        stc_skill_l1:"Développement d’interfaces avec Angular et TypeScript.",
+        stc_skill_l2:"Gestion de composants réutilisables et logiques d’affichage.",
+        stc_skill_l3:"Intégration HTML/CSS responsive en cohérence avec le design existant.",
+        stc_skills_block2_label:"Qualité",
+        stc_skills_block2_title:"Tests & débogage",
+        stc_skill_l4:"Tests fonctionnels sur les parcours clés de l’application.",
+        stc_skill_l5:"Débogage et correction de bugs mineurs côté front.",
+        stc_skill_l6:"Suivi des retours utilisateurs internes pour prioriser les correctifs.",
+        stc_skills_block3_label:"Collaboration",
+        stc_skills_block3_title:"Travail en équipe",
+        stc_skill_l7:"Collaboration avec l’équipe de développement en environnement Agile.",
+        stc_skill_l8:"Communication régulière avec les référents techniques.",
+        stc_skill_l9:"Documentation claire des changements et des impacts.",
+
+        stc_tools_title:"Logiciels utilisés",
+        stc_tools_cat1:"Framework front-end",
+        stc_tools_desc1:"Framework principal utilisé pour le développement de l’application web : composants dynamiques, routing et gestion des états côté client.",
+        stc_tools_cat2:"Environnement de développement",
+        stc_tools_desc2:"Éditeur de code utilisé pour le développement, le versionning Git, les extensions Angular et la collaboration avec l’équipe technique.",
+        stc_tools_cat3:"Environnements virtuels",
+        stc_tools_desc3:"Utilisé pour créer et gérer des environnements de test isolés, afin de valider les modifications sans impacter l’infrastructure principale.",
+
+        stc_outcome_title:"Résultat & lien",
+        stc_outcome_label:"Impact",
+        stc_outcome_heading:"Une application plus claire et maintenable",
+        stc_outcome_text:"Cette mission m’a permis de contribuer à la stabilité et à l’évolution d’une application métier Angular existante, en améliorant à la fois l’interface et la qualité du front-end. Elle a également renforcé mon expérience dans les environnements techniques exigeants.",
+        stc_outcome_cta:"Voir le site de l’entreprise",
+
+        footer:"©2025 Thomas Houdard · Tous droits réservés"
+      },
+
+      en: {
+        menu_about:"Home",
+        menu_portfolio:"Portfolio",
+        menu_exp_pro:"Professional Experience",
+        menu_projects_design:"Design Projects",
+        menu_projects_dev:"Dev Projects",
+        menu_projects_personal:"Personal",
+        menu_contact:"Contact",
+        menu_cv:"Work with me",
+
+        stc_meta:"Case study · Front-End · Angular",
+        stc_title:"Business application for Sud Trading Company",
+        stc_subtitle:"Front-end Angular mission on an internal business application used in an industrial context: interface optimisation, stability and support to the product team.",
+
+        stc_context_title:"Context & mission",
+        stc_context_label:"Company & challenges",
+        stc_context_heading:"Sud Trading Company",
+        stc_context_text:"Sud Trading Company (STC) is a company specialised in developing, integrating and maintaining software solutions for industrial and technical environments. The team needed to strengthen the front-end of an existing Angular application while improving readability and product stability.",
+
+        stc_meta_label:"Role & scope",
+        stc_role_heading:"Front-end Angular mission",
+        stc_role_item_role:"Role: Front-End Angular Developer",
+        stc_role_item_date:"Period: December 2024",
+        stc_role_item_duration:"Duration: 1 month",
+        stc_role_item_env:"Environment: Angular, Git, VMware, VS Code",
+
+        stc_role_title:"My role",
+        stc_role_block1_label:"Front-End & components",
+        stc_role_block1_title:"Interface evolution",
+        stc_role_l1:"Contributed to deploying new Angular features, ensuring the application worked properly in production.",
+        stc_role_l2:"Updated and optimised existing components to improve readability, visual consistency and navigation flow.",
+        stc_role_block2_label:"Support & quality",
+        stc_role_block2_title:"Stability & technical support",
+        stc_role_l3:"Performed functional tests to detect issues and document the fixes to apply.",
+        stc_role_l4:"Supported the development team in an Agile environment: regular discussions, issue reporting and UI improvement suggestions.",
+
+        stc_skills_title:"Skills & technologies used",
+        stc_skills_block1_label:"Front-End",
+        stc_skills_block1_title:"Angular & integration",
+        stc_skill_l1:"Interface development with Angular and TypeScript.",
+        stc_skill_l2:"Management of reusable components and display logic.",
+        stc_skill_l3:"Responsive HTML/CSS integration aligned with the existing design.",
+        stc_skills_block2_label:"Quality",
+        stc_skills_block2_title:"Testing & debugging",
+        stc_skill_l4:"Functional tests on key application flows.",
+        stc_skill_l5:"Debugging and fixing minor front-end issues.",
+        stc_skill_l6:"Monitoring internal user feedback to prioritise fixes.",
+        stc_skills_block3_label:"Collaboration",
+        stc_skills_block3_title:"Teamwork",
+        stc_skill_l7:"Collaboration with the development team in an Agile environment.",
+        stc_skill_l8:"Regular communication with technical leads.",
+        stc_skill_l9:"Clear documentation of changes and impacts.",
+
+        stc_tools_title:"Tools used",
+        stc_tools_cat1:"Front-end framework",
+        stc_tools_desc1:"Main framework used to develop the web application: dynamic components, routing and client-side state management.",
+        stc_tools_cat2:"Development environment",
+        stc_tools_desc2:"Code editor used for development, Git versioning, Angular extensions and collaboration with the technical team.",
+        stc_tools_cat3:"Virtual environments",
+        stc_tools_desc3:"Used to create and manage isolated test environments, to validate changes without impacting the main infrastructure.",
+
+        stc_outcome_title:"Result & link",
+        stc_outcome_label:"Impact",
+        stc_outcome_heading:"A clearer and more maintainable application",
+        stc_outcome_text:"This mission allowed me to contribute to the stability and evolution of an existing Angular business application, improving both the interface and front-end quality. It also strengthened my experience in demanding technical environments.",
+        stc_outcome_cta:"View the company website",
+
+        footer:"©2025 Thomas Houdard · All rights reserved"
+      }
+    };
+
+    function applyLang(lang){
+      document.querySelectorAll("[data-key]").forEach(el=>{
+        const k = el.getAttribute("data-key");
+        if(translations[lang][k]) el.textContent = translations[lang][k];
+      });
+      document.querySelectorAll(".lang-switch button").forEach(btn=>{
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem("lang", lang);
+    }
+
+    function initLang(){
+      const stored = localStorage.getItem("lang") || "fr";
+      applyLang(stored);
+    }
+
+    // Lang switch
+    document.getElementById("langSwitch").addEventListener("click",e=>{
+      if(e.target.matches("button[data-lang]")){
+        applyLang(e.target.dataset.lang);
+      }
+    });
+
+    // Burger menu
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+    burger.addEventListener("click",()=>{
+      burger.classList.toggle("open");
+      menu.classList.toggle("open");
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+    initLang();
+  </script>
+</body>
+</html>

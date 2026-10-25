@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coach Sportif — Étude de cas | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas : design UI/UX + intégration HTML/CSS/JS d’une landing page one-page pour un coach sportif indépendant. Mobile-first, premium dark UI, orientée conversion." />
+
+  <meta property="og:title" content="Coach Sportif — Étude de cas" />
+  <meta property="og:description" content="Design + développement d’une landing page one-page pour un coach sportif indépendant. Mobile-first, premium dark UI, orientée conversion." />
+  <meta property="og:url" content="https://thomashoudard.com/coachSportif.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- NAV (identique à ton template) -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+
+        <div class="lang-switch" id="langSwitch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-intro">
+        <p class="hero-sub" data-key="coach_hero_sub">Étude de cas · UI/UX · Front-end</p>
+
+        <h1 data-key="coach_hero_title">Landing page pour un coach sportif</h1>
+
+        <p data-key="coach_hero_p1">
+          Conception et développement d’une landing page one-page pour un coach sportif indépendant.
+          Objectif : inspirer confiance, clarifier l’offre et maximiser la prise de contact.
+        </p>
+
+        <p data-key="coach_hero_p2">
+          Travail réalisé : structure UX (mobile-first), UI design premium dark, hiérarchie typographique,
+          composants réutilisables, intégration HTML/CSS/JS et mise en ligne.
+        </p>
+
+        <div class="badges">
+          <span class="badge"><span class="dot"></span>UI/UX</span>
+          <span class="badge"><span class="dot"></span>Mobile-first</span>
+          <span class="badge"><span class="dot"></span>HTML/CSS/JS</span>
+          <span class="badge"><span class="dot"></span>Responsive</span>
+        </div>
+
+        <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+          <a href="#resultat" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir le résultat</a>
+
+          <a class="btn btn-outline"
+             href="https://coachsportif.thomashoudard.com/"
+             target="_blank"
+             rel="noopener"
+             data-key="cta_open_live"
+             style="width:100%; justify-content:center;">
+            Ouvrir le site en ligne
+          </a>
+        </div>
+      </div>
+
+      <!-- Right column (gallery preview) -->
+      <div class="video-wrap" style="align-self:start">
+        <div class="proto-wrap">
+          <p style="font-size:.92rem;color:var(--text-dim)" data-key="coach_side_note">
+            Aperçu (captures — mobile & desktop)
+          </p>
+
+          <!-- IMPORTANT : remplace ces images par tes exports -->
+          <div class="gallery">
+            <img loading="lazy" src="images/freelance/CoachSport/DesignDesktop.JPG" alt="Coach sportif - page mobile complète" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTE -->
+    <section class="reveal" id="contexte">
+      <div class="section-header">
+        <h2 data-key="coach_context_title">Contexte</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="coach_context_problem_title">Problème</h4>
+          <p data-key="coach_context_problem">
+            Un coach indépendant a besoin d’une présence en ligne claire et crédible pour transformer des visiteurs en demandes de contact,
+            sans complexifier l’expérience (site simple, rapide, orienté conversion).
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 data-key="coach_context_goal_title">Objectifs</h4>
+          <ul>
+            <li data-key="coach_goal_1">Clarifier l’offre et la valeur du coaching</li>
+            <li data-key="coach_goal_2">Créer un sentiment de confiance (structure + ton)</li>
+            <li data-key="coach_goal_3">Optimiser la conversion (CTA, sections, contact)</li>
+            <li data-key="coach_goal_4">Garantir une expérience mobile-first fluide</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCHE -->
+    <section class="reveal" id="approche">
+      <div class="section-header">
+        <h2 data-key="coach_approach_title">Approche</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="coach_ux_title">Structure UX</h4>
+          <p data-key="coach_ux_p">
+            La page suit un parcours simple et progressif (one-page) :
+            Accueil → À propos → Services → Méthode → Retours → Contact → FAQ.
+          </p>
+          <ul>
+            <li data-key="coach_ux_1">Message clair en 5 secondes</li>
+            <li data-key="coach_ux_2">Sections courtes, lisibles, sans surcharge</li>
+            <li data-key="coach_ux_3">CTA répétés aux endroits clés</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="coach_ui_title">Direction UI</h4>
+          <p data-key="coach_ui_p">
+            Identité premium “performance” : dark UI, contraste fort, accent lime, typographie structurée,
+            cartes et composants cohérents.
+          </p>
+          <ul>
+            <li data-key="coach_ui_1">Hiérarchie typographique et rythme visuel</li>
+            <li data-key="coach_ui_2">Cohérence des composants (cards, boutons, sections)</li>
+            <li data-key="coach_ui_3">Focus sur la lisibilité mobile</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEV -->
+    <section class="reveal" id="dev">
+      <div class="section-header">
+        <h2 data-key="coach_dev_title">Développement</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="coach_dev_stack_title">Stack</h4>
+          <ul>
+            <li data-key="coach_dev_1">HTML sémantique (structure claire)</li>
+            <li data-key="coach_dev_2">CSS responsive + composants réutilisables</li>
+            <li data-key="coach_dev_3">JavaScript léger (menu, interactions)</li>
+            <li data-key="coach_dev_4">Mise en ligne (démo accessible)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="coach_dev_focus_title">Focus</h4>
+          <ul>
+            <li data-key="coach_dev_focus_1">Mobile-first puis adaptation desktop</li>
+            <li data-key="coach_dev_focus_2">Lisibilité et hiérarchie visuelle</li>
+            <li data-key="coach_dev_focus_3">CTA visibles et parcours fluide</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTAT -->
+    <section class="reveal" id="resultat" style="">
+      <div class="section-header">
+        <h2 data-key="coach_result_title">Résultat</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div style="display:grid;gap:2rem;grid-template-columns:1fr">
+        <div class="card">
+          <p data-key="coach_result_p">
+            Une landing page premium, claire et orientée conversion, conçue mobile-first et déclinée en desktop.
+            L'intégration front respecte le responsive, la lisibilité et une structure simple pour faciliter l'évolution.
+          </p>
+
+          <h4 data-key="coach_result_keys_title">Points clés</h4>
+          <ul>
+            <li data-key="coach_result_1">Hero impactante + CTA immédiat</li>
+            <li data-key="coach_result_2">Sections structurées et rassurantes</li>
+            <li data-key="coach_result_3">Design premium dark / performance</li>
+            <li data-key="coach_result_4">Navigation par ancres + menu mobile</li>
+            <li data-key="coach_result_5">Contact accessible et visible</li>
+          </ul>
+
+          <div style="margin-top:1rem">
+            <a class="btn btn-primary"
+               target="_blank"
+               rel="noopener"
+               href="https://coachsportif.thomashoudard.com/"
+               data-key="cta_open_live_btn">
+              Voir le site en ligne
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <img loading="lazy" src="images/freelance/CoachSport/DesignDesktop.JPG" alt="Coach sportif - hero mobile">
+          <img loading="lazy" src="images/freelance/CoachSport/DesignMobile.JPG" alt="Coach sportif - services mobile" style="margin-top: -2rem;">
+          <img loading="lazy" src="images/freelance/CoachSport/DesignMobile2.JPG" alt="Coach sportif - services desktop">
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section>
+      <div class="section-header">
+        <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div>
+        <div class="tools-grid">
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/figma.png" alt="Figma">
+            </div>
+            <p class="tool-title">UI/UX DESIGN</p>
+            <p class="tool-sub">Figma</p>
+            <p class="tool-desc" data-key="tool_figma_desc">
+              Maquettes haute fidélité, direction artistique, composants réutilisables et préparation du design mobile-first.
+            </p>
+          </article>
+
+          <!-- visual studio code  -->
+            <article class="tool-card">
+                <div class="tool-icon">
+                <img src="images/logiciels/vscode.png" alt="Visual Studio Code">
+                </div>
+                <p class="tool-title">HTML, CSS, JavaScript</p>
+                <p class="tool-sub">Visual Studio Code</p>
+                <p class="tool-desc" data-key="tool_html_desc">
+                Structure sémantique et organisation claire des sections.
+                </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (identique à ton template) -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TRANSLATIONS (même système que ton template) -->
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+        coach_hero_sub: "Étude de cas · UI/UX · Front-end",
+        coach_hero_title: "Landing page pour un coach sportif",
+        coach_hero_p1: "Conception et développement d’une landing page one-page pour un coach sportif indépendant. Objectif : inspirer confiance, clarifier l’offre et maximiser la prise de contact.",
+        coach_hero_p2: "Travail réalisé : structure UX (mobile-first), UI design premium dark, hiérarchie typographique, composants réutilisables, intégration HTML/CSS/JS et mise en ligne.",
+        coach_side_note: "Aperçu (captures — mobile & desktop)",
+        cta_see_final: "Voir le résultat",
+        cta_open_live: "Ouvrir le site en ligne",
+
+        coach_context_title: "Contexte",
+        coach_context_problem_title: "Problème",
+        coach_context_problem: "Un coach indépendant a besoin d’une présence en ligne claire et crédible pour transformer des visiteurs en demandes de contact, sans complexifier l’expérience (site simple, rapide, orienté conversion).",
+        coach_context_goal_title: "Objectifs",
+        coach_goal_1: "Clarifier l’offre et la valeur du coaching",
+        coach_goal_2: "Créer un sentiment de confiance (structure + ton)",
+        coach_goal_3: "Optimiser la conversion (CTA, sections, contact)",
+        coach_goal_4: "Garantir une expérience mobile-first fluide",
+
+        coach_approach_title: "Approche",
+        coach_ux_title: "Structure UX",
+        coach_ux_p: "La page suit un parcours simple et progressif (one-page) : Accueil → À propos → Services → Méthode → Retours → Contact → FAQ.",
+        coach_ux_1: "Message clair en 5 secondes",
+        coach_ux_2: "Sections courtes, lisibles, sans surcharge",
+        coach_ux_3: "CTA répétés aux endroits clés",
+        coach_ui_title: "Direction UI",
+        coach_ui_p: "Identité premium “performance” : dark UI, contraste fort, accent lime, typographie structurée, cartes et composants cohérents.",
+        coach_ui_1: "Hiérarchie typographique et rythme visuel",
+        coach_ui_2: "Cohérence des composants (cards, boutons, sections)",
+        coach_ui_3: "Focus sur la lisibilité mobile",
+
+        coach_result_title: "Résultat",
+        coach_result_p: "Une landing page premium, claire et orientée conversion, conçue mobile-first et déclinée en desktop. L’intégration front respecte le responsive, la lisibilité et une structure simple pour faciliter l’évolution.",
+        coach_result_keys_title: "Points clés",
+        coach_result_1: "Hero impactante + CTA immédiat",
+        coach_result_2: "Sections structurées et rassurantes",
+        coach_result_3: "Design premium dark / performance",
+        coach_result_4: "Navigation par ancres + menu mobile",
+        coach_result_5: "Contact accessible et visible",
+        coach_gallery_title: "Captures",
+        coach_gallery_note: "Remplace ces images par tes exports (mobile full + sections + desktop).",
+        cta_open_live_btn: "Voir le site en ligne",
+
+        coach_dev_title: "Développement",
+        coach_dev_stack_title: "Stack",
+        coach_dev_1: "HTML sémantique (structure claire)",
+        coach_dev_2: "CSS responsive + composants réutilisables",
+        coach_dev_3: "JavaScript léger (menu, interactions)",
+        coach_dev_4: "Mise en ligne (démo accessible)",
+        coach_dev_focus_title: "Focus",
+        coach_dev_focus_1: "Mobile-first puis adaptation desktop",
+        coach_dev_focus_2: "Lisibilité et hiérarchie visuelle",
+        coach_dev_focus_3: "CTA visibles et parcours fluide",
+
+        titre_logiciels_utilises: "Logiciels utilisés",
+        tool_figma_desc: "Maquettes haute fidélité, direction artistique, composants réutilisables et préparation du design mobile-first.",
+        tool_html_desc: "Structure sémantique et organisation claire des sections.",
+        tool_css_desc: "Responsive mobile-first, composants, typographie et cohérence visuelle.",
+        tool_js_desc: "Interactions légères (menu mobile, navigation, micro-comportements)."
+      },
+
+      en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+
+        coach_hero_sub: "Case study · UI/UX · Front-end",
+        coach_hero_title: "Landing page for a fitness coach",
+        coach_hero_p1: "Design and development of a one-page landing page for an independent fitness coach. Goal: build trust, clarify the offer and maximize contact requests.",
+        coach_hero_p2: "Work delivered: UX structure (mobile-first), premium dark UI, typographic hierarchy, reusable components, HTML/CSS/JS integration and deployment.",
+        coach_side_note: "Preview (screens — mobile & desktop)",
+        cta_see_final: "See result",
+        cta_open_live: "Open live website",
+
+        coach_context_title: "Context",
+        coach_context_problem_title: "Problem",
+        coach_context_problem: "An independent coach needs a clear and credible online presence to convert visitors into contact requests, without adding friction (simple, fast, conversion-focused page).",
+        coach_context_goal_title: "Goals",
+        coach_goal_1: "Clarify the offer and coaching value",
+        coach_goal_2: "Build trust (structure + tone)",
+        coach_goal_3: "Improve conversion (CTA, sections, contact)",
+        coach_goal_4: "Ensure a smooth mobile-first experience",
+
+        coach_approach_title: "Approach",
+        coach_ux_title: "UX structure",
+        coach_ux_p: "The page follows a simple one-page flow: Home → About → Services → Method → Feedback → Contact → FAQ.",
+        coach_ux_1: "Clear message in 5 seconds",
+        coach_ux_2: "Short, readable sections",
+        coach_ux_3: "CTAs placed at key moments",
+        coach_ui_title: "UI direction",
+        coach_ui_p: "Premium performance identity: dark UI, strong contrast, lime accent, structured typography, consistent cards and components.",
+        coach_ui_1: "Typographic hierarchy and visual rhythm",
+        coach_ui_2: "Consistent UI components (cards, buttons, sections)",
+        coach_ui_3: "Mobile readability focus",
+
+        coach_result_title: "Outcome",
+        coach_result_p: "A premium, clear and conversion-focused landing page designed mobile-first and adapted to desktop. The front-end integration focuses on responsive behavior, readability and a maintainable structure.",
+        coach_result_keys_title: "Highlights",
+        coach_result_1: "Impactful hero + immediate CTA",
+        coach_result_2: "Trust-building sections",
+        coach_result_3: "Premium dark performance UI",
+        coach_result_4: "Anchor navigation + mobile menu",
+        coach_result_5: "Accessible contact section",
+        coach_gallery_title: "Screens",
+        coach_gallery_note: "Replace these with your exports (full mobile + sections + desktop).",
+        cta_open_live_btn: "View live site",
+
+        coach_dev_title: "Development",
+        coach_dev_stack_title: "Stack",
+        coach_dev_1: "Semantic HTML (clear structure)",
+        coach_dev_2: "Responsive CSS + reusable components",
+        coach_dev_3: "Lightweight JavaScript (menu, interactions)",
+        coach_dev_4: "Deployment (accessible demo)",
+        coach_dev_focus_title: "Focus",
+        coach_dev_focus_1: "Mobile-first then desktop adaptation",
+        coach_dev_focus_2: "Readability and visual hierarchy",
+        coach_dev_focus_3: "Visible CTAs and smooth flow",
+
+        titre_logiciels_utilises: "Tools used",
+        tool_figma_desc: "High-fidelity UI, art direction, reusable components and mobile-first design preparation.",
+        tool_html_desc: "Semantic structure and clear section organization.",
+        tool_css_desc: "Mobile-first responsive, components, typography and visual consistency.",
+        tool_js_desc: "Light interactions (mobile menu, navigation, micro behaviors)."
+      }
+    };
+  </script>
+</body>
+</html>

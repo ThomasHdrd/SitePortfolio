@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Au Comptoir Urbain — Étude de cas | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas : branding + design UI/UX pour Au Comptoir Urbain, restaurant de luxe haut de gamme. Identité visuelle raffinée, design premium et expérience gastronomique." />
+
+  <meta property="og:title" content="Au Comptoir Urbain — Étude de cas" />
+  <meta property="og:description" content="Branding + design pour Au Comptoir Urbain, restaurant de luxe. Identité visuelle raffinée, design premium et expérience gastronomique." />
+  <meta property="og:url" content="https://thomashoudard.com/auComptoirUrbain.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+
+        <div class="lang-switch" id="langSwitch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-intro">
+        <p class="hero-sub" data-key="comptoir_hero_sub">Étude de cas · Branding · UI/UX Design</p>
+
+        <h1 data-key="comptoir_hero_title">Au Comptoir Urbain — Restaurant de Luxe</h1>
+
+        <p data-key="comptoir_hero_p1">
+          Branding et design d'identité visuelle pour Au Comptoir Urbain, restaurant gastronomique haut de gamme.
+          Objectif : créer une identité raffinée, premium et mémorable reflétant l'excellence culinaire.
+        </p>
+
+        <p data-key="comptoir_hero_p2">
+          Travail réalisé : stratégie de marque, direction artistique, palette couleur et typographie, système de design,
+          applications print et digitales, design UI/UX pour site restaurant.
+        </p>
+
+        <div class="badges">
+          <span class="badge"><span class="dot"></span>Branding</span>
+          <span class="badge"><span class="dot"></span>Design système</span>
+          <span class="badge"><span class="dot"></span>UI/UX</span>
+          <span class="badge"><span class="dot"></span>Identité visuelle</span>
+        </div>
+
+        <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+          <a href="#resultat" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir le résultat</a>
+
+          <a class="btn btn-outline"
+             href="https://aucomptoirurbain.thomashoudard.com/"
+             target="_blank"
+             rel="noopener"
+             data-key="cta_open_live"
+             style="width:100%; justify-content:center;">
+            Découvrir la marque
+          </a>
+        </div>
+      </div>
+
+      <!-- Right column (gallery preview) -->
+      <div class="video-wrap" style="align-self:start">
+        <div class="proto-wrap">
+          <p style="font-size:.92rem;color:var(--text-dim)" data-key="comptoir_side_note">
+            Aperçu de l'identité visuelle
+          </p>
+
+          <div class="gallery">
+            <img loading="lazy" src="images/freelance/AuComptoirUrbain/DesignDesktop.JPG" alt="Au Comptoir Urbain - identité visuelle" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTE -->
+    <section class="reveal" id="contexte">
+      <div class="section-header">
+        <h2 data-key="comptoir_context_title">Contexte</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_context_problem_title">Défi</h4>
+          <p data-key="comptoir_context_problem">
+            Au Comptoir Urbain, restaurant gastronomique de luxe, avait besoin d'une identité visuelle distinctive et premium.
+            Nécessité de communiquer l'excellence, la raffinement et la singularité de l'établissement.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_context_goal_title">Objectifs</h4>
+          <ul>
+            <li data-key="comptoir_goal_1">Créer une identité visuelle luxury distinctive</li>
+            <li data-key="comptoir_goal_2">Communiquer le prestige et l'excellence culinaire</li>
+            <li data-key="comptoir_goal_3">Développer une cohérence brand sur tous les supports</li>
+            <li data-key="comptoir_goal_4">Proposer une expérience premium et mémorable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCHE -->
+    <section class="reveal" id="approche">
+      <div class="section-header">
+        <h2 data-key="comptoir_approach_title">Approche</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_strategy_title">Stratégie de marque</h4>
+          <p data-key="comptoir_strategy_p">
+            Immersion dans l'univers du restaurant : ambiance, cuisine, clientèle. Définition du positionnement :
+            luxury, gastronomique, urbain et raffiné. Construction d'une identité mémorable et distinctive.
+          </p>
+          <ul>
+            <li data-key="comptoir_strategy_1">Positionnement premium et culinaire</li>
+            <li data-key="comptoir_strategy_2">Valeurs : excellence, raffinement, innovation</li>
+            <li data-key="comptoir_strategy_3">Cible : clientèle haut de gamme et aventurière</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_visual_title">Direction visuelle</h4>
+          <p data-key="comptoir_visual_p">
+            Palette minimaliste et élégante : or, noir, blanc avec accents naturels.
+            Typographie premium, imagerie raffinée et mise en page aérée pour exprimer le luxe discret.
+          </p>
+          <ul>
+            <li data-key="comptoir_visual_1">Couleurs : or, noir, blanc, terracotta</li>
+            <li data-key="comptoir_visual_2">Typographie : sérif elegant et sans-serif moderne</li>
+            <li data-key="comptoir_visual_3">Imagerie : photographie culinaire premium</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN SYSTEM -->
+    <section class="reveal" id="design-system">
+      <div class="section-header">
+        <h2 data-key="comptoir_design_system_title">Système de design</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_logo_title">Logo et marque</h4>
+          <p data-key="comptoir_logo_p">
+            Logo épuré combinant des éléments géométriques et organiques. Symbole distinct et intemporel,
+            adaptable à tous les supports (print, digital, signalétique).
+          </p>
+          <ul>
+            <li data-key="comptoir_logo_1">Marque principale et variantes</li>
+            <li data-key="comptoir_logo_2">Espaces de protection et grille</li>
+            <li data-key="comptoir_logo_3">Monochrome et couleur</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_typography_title">Typographie</h4>
+          <p data-key="comptoir_typography_p">
+            Hiérarchie typographique claire et élégante. Sérif pour titres (prestige), sans-serif pour corps (lisibilité).
+            Espacements généreux et équilibrage visuel premium.
+          </p>
+          <ul>
+            <li data-key="comptoir_typography_1">Titres : Playfair Display ou équivalent</li>
+            <li data-key="comptoir_typography_2">Corps : Inter ou équivalent</li>
+            <li data-key="comptoir_typography_3">Hiérarchie et espacements optimisés</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_colors_title">Palette couleur</h4>
+          <p data-key="comptoir_colors_p">
+            Harmonie minimaliste avec profondeur. Couleurs primaires et accessoires utilisées
+            stratégiquement pour créer raffinement et distinction.
+          </p>
+          <ul>
+            <li data-key="comptoir_colors_1">Primaire : Or et Noir</li>
+            <li data-key="comptoir_colors_2">Secondaire : Blanc, Gris clair, Terracotta</li>
+            <li data-key="comptoir_colors_3">Contrastes et nuances pour subtilité</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_components_title">Composants</h4>
+          <p data-key="comptoir_components_p">
+            Système modulaire cohérent : boutons, cartes, formulaires, éléments interactifs.
+            Chaque composant conçu pour excellence et cohérence brand.
+          </p>
+          <ul>
+            <li data-key="comptoir_components_1">Boutons et appels à action</li>
+            <li data-key="comptoir_components_2">Cartes et conteneurs</li>
+            <li data-key="comptoir_components_3">Micro-interactions élégantes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="reveal" id="applications">
+      <div class="section-header">
+        <h2 data-key="comptoir_applications_title">Applications</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_print_title">Print</h4>
+          <ul>
+            <li data-key="comptoir_print_1">Cartes de visite et en-têtes</li>
+            <li data-key="comptoir_print_2">Menus restaurant (format et typographie)</li>
+            <li data-key="comptoir_print_3">Matériel événementiel et flyers</li>
+            <li data-key="comptoir_print_4">Emballage et signalétique</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_digital_title">Digital</h4>
+          <ul>
+            <li data-key="comptoir_digital_1">Site web restaurant (présentation, réservation)</li>
+            <li data-key="comptoir_digital_2">Interfaces et applications mobiles</li>
+            <li data-key="comptoir_digital_3">Réseaux sociaux et contenu digital</li>
+            <li data-key="comptoir_digital_4">Emails et communications</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_brand_elements_title">Éléments de marque</h4>
+          <ul>
+            <li data-key="comptoir_brand_1">Patterns et textures</li>
+            <li data-key="comptoir_brand_2">Photographie et imagerie</li>
+            <li data-key="comptoir_brand_3">Illustrations et icônes</li>
+            <li data-key="comptoir_brand_4">Voix et ton de communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTAT -->
+    <section class="reveal" id="resultat">
+      <div class="section-header">
+        <h2 data-key="comptoir_result_title">Résultat</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div style="display:grid;gap:2rem;grid-template-columns:1fr">
+        <div class="card">
+          <p data-key="comptoir_result_p">
+            Une identité visuelle complète et cohérente reflétant le prestige et l'excellence de Au Comptoir Urbain.
+            Un système de design flexible, scalable et mémorable, adapté à tous les supports.
+          </p>
+
+          <h4 data-key="comptoir_result_keys_title">Points clés</h4>
+          <ul>
+            <li data-key="comptoir_result_1">Identité distinctive et luxury</li>
+            <li data-key="comptoir_result_2">Cohérence visuelle sur tous supports</li>
+            <li data-key="comptoir_result_3">Système de design complet et scalable</li>
+            <li data-key="comptoir_result_4">Expérience premium et mémorable</li>
+            <li data-key="comptoir_result_5">Communication marque claire et élégante</li>
+          </ul>
+        </div>
+
+        <div class="gallery">
+          <img loading="lazy" src="images/freelance/AuComptoirUrbain/DesignDesktop2.JPG" alt="Au Comptoir Urbain - guide de marque">
+          <img loading="lazy" src="images/freelance/AuComptoirUrbain/DesignMobile.JPG" alt="Au Comptoir Urbain - applications">
+          <img loading="lazy" src="images/freelance/AuComptoirUrbain/DesignMobile2.JPG" alt="Au Comptoir Urbain - site web" style="object-position:top;">
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section>
+      <div class="section-header">
+        <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div>
+        <div class="tools-grid">
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/figma.png" alt="Figma">
+            </div>
+            <p class="tool-title">DESIGN SYSTÈME</p>
+            <p class="tool-sub">Figma</p>
+            <p class="tool-desc" data-key="tool_figma_desc">
+              Création du guide de marque complet, design system, composants et applications digitales.
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/illustrator.png" alt="Adobe Illustrator">
+            </div>
+            <p class="tool-title">IDENTITÉ ET BRANDING</p>
+            <p class="tool-sub">Illustrator</p>
+            <p class="tool-desc" data-key="tool_illustrator_desc">
+              Logo, typographie, éléments graphiques et préparation fichiers print haute résolution.
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/indesign.png" alt="Adobe Indesign">
+            </div>
+            <p class="tool-title">DESIGN PRINT</p>
+            <p class="tool-sub">InDesign</p>
+            <p class="tool-desc" data-key="tool_indesign_desc">
+              Mises en page menus, cartes de visite, documents commerciaux et matériels événementiels.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liens -->
+    <section class="reveal" id="links">
+        <div class="section-header">
+            <h2 data-key="links_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div id="links-btns" class="proto-wrap" style="display:flex;justify-content:center;align-items:center;gap:1rem;width:100%;">
+            <a class="btn btn-primary" target="_blank" href="https://www.figma.com/design/..." data-key="cta_brand_guide" style="flex:1;text-align:center;"></a>
+            <a class="btn btn-outline" target="_blank" href="https://aucomptoirurbain.thomashoudard.com" data-key="cta_visit_site" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
+        </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TRANSLATIONS -->
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+        comptoir_hero_sub: "Étude de cas · Branding · UI/UX Design",
+        comptoir_hero_title: "Au Comptoir Urbain — Restaurant de Luxe",
+        comptoir_hero_p1: "Branding et design d'identité visuelle pour Au Comptoir Urbain, restaurant gastronomique haut de gamme. Objectif : créer une identité raffinée, premium et mémorable reflétant l'excellence culinaire.",
+        comptoir_hero_p2: "Travail réalisé : stratégie de marque, direction artistique, palette couleur et typographie, système de design, applications print et digitales, design UI/UX pour site restaurant.",
+        comptoir_side_note: "Aperçu de l'identité visuelle",
+        cta_see_final: "Voir le résultat",
+        cta_open_live: "Découvrir la marque",
+
+        comptoir_context_title: "Contexte",
+        comptoir_context_problem_title: "Défi",
+        comptoir_context_problem: "Au Comptoir Urbain, restaurant gastronomique de luxe, avait besoin d'une identité visuelle distinctive et premium. Nécessité de communiquer l'excellence, la raffinement et la singularité de l'établissement.",
+        comptoir_context_goal_title: "Objectifs",
+        comptoir_goal_1: "Créer une identité visuelle luxury distinctive",
+        comptoir_goal_2: "Communiquer le prestige et l'excellence culinaire",
+        comptoir_goal_3: "Développer une cohérence brand sur tous les supports",
+        comptoir_goal_4: "Proposer une expérience premium et mémorable",
+
+        comptoir_approach_title: "Approche",
+        comptoir_strategy_title: "Stratégie de marque",
+        comptoir_strategy_p: "Immersion dans l'univers du restaurant : ambiance, cuisine, clientèle. Définition du positionnement : luxury, gastronomique, urbain et raffiné. Construction d'une identité mémorable et distinctive.",
+        comptoir_strategy_1: "Positionnement premium et culinaire",
+        comptoir_strategy_2: "Valeurs : excellence, raffinement, innovation",
+        comptoir_strategy_3: "Cible : clientèle haut de gamme et aventurière",
+        comptoir_visual_title: "Direction visuelle",
+        comptoir_visual_p: "Palette minimaliste et élégante : or, noir, blanc avec accents naturels. Typographie premium, imagerie raffinée et mise en page aérée pour exprimer le luxe discret.",
+        comptoir_visual_1: "Couleurs : or, noir, blanc, terracotta",
+        comptoir_visual_2: "Typographie : sérif elegant et sans-serif moderne",
+        comptoir_visual_3: "Imagerie : photographie culinaire premium",
+
+        comptoir_design_system_title: "Système de design",
+        comptoir_logo_title: "Logo et marque",
+        comptoir_logo_p: "Logo épuré combinant des éléments géométriques et organiques. Symbole distinct et intemporel, adaptable à tous les supports (print, digital, signalétique).",
+        comptoir_logo_1: "Marque principale et variantes",
+        comptoir_logo_2: "Espaces de protection et grille",
+        comptoir_logo_3: "Monochrome et couleur",
+        comptoir_typography_title: "Typographie",
+        comptoir_typography_p: "Hiérarchie typographique claire et élégante. Sérif pour titres (prestige), sans-serif pour corps (lisibilité). Espacements généreux et équilibrage visuel premium.",
+        comptoir_typography_1: "Titres : Playfair Display ou équivalent",
+        comptoir_typography_2: "Corps : Inter ou équivalent",
+        comptoir_typography_3: "Hiérarchie et espacements optimisés",
+        comptoir_colors_title: "Palette couleur",
+        comptoir_colors_p: "Harmonie minimaliste avec profondeur. Couleurs primaires et accessoires utilisées stratégiquement pour créer raffinement et distinction.",
+        comptoir_colors_1: "Primaire : Or et Noir",
+        comptoir_colors_2: "Secondaire : Blanc, Gris clair, Terracotta",
+        comptoir_colors_3: "Contrastes et nuances pour subtilité",
+        comptoir_components_title: "Composants",
+        comptoir_components_p: "Système modulaire cohérent : boutons, cartes, formulaires, éléments interactifs. Chaque composant conçu pour excellence et cohérence brand.",
+        comptoir_components_1: "Boutons et appels à action",
+        comptoir_components_2: "Cartes et conteneurs",
+        comptoir_components_3: "Micro-interactions élégantes",
+
+        comptoir_applications_title: "Applications",
+        comptoir_print_title: "Print",
+        comptoir_print_1: "Cartes de visite et en-têtes",
+        comptoir_print_2: "Menus restaurant (format et typographie)",
+        comptoir_print_3: "Matériel événementiel et flyers",
+        comptoir_print_4: "Emballage et signalétique",
+        comptoir_digital_title: "Digital",
+        comptoir_digital_1: "Site web restaurant (présentation, réservation)",
+        comptoir_digital_2: "Interfaces et applications mobiles",
+        comptoir_digital_3: "Réseaux sociaux et contenu digital",
+        comptoir_digital_4: "Emails et communications",
+        comptoir_brand_elements_title: "Éléments de marque",
+        comptoir_brand_1: "Patterns et textures",
+        comptoir_brand_2: "Photographie et imagerie",
+        comptoir_brand_3: "Illustrations et icônes",
+        comptoir_brand_4: "Voix et ton de communication",
+
+        comptoir_result_title: "Résultat",
+        comptoir_result_p: "Une identité visuelle complète et cohérente reflétant le prestige et l'excellence de Au Comptoir Urbain. Un système de design flexible, scalable et mémorable, adapté à tous les supports.",
+        comptoir_result_keys_title: "Points clés",
+        comptoir_result_1: "Identité distinctive et luxury",
+        comptoir_result_2: "Cohérence visuelle sur tous supports",
+        comptoir_result_3: "Système de design complet et scalable",
+        comptoir_result_4: "Expérience premium et mémorable",
+        comptoir_result_5: "Communication marque claire et élégante",
+
+        titre_logiciels_utilises: "Logiciels utilisés",
+        tool_figma_desc: "Création du guide de marque complet, design system, composants et applications digitales.",
+        tool_illustrator_desc: "Logo, typographie, éléments graphiques et préparation fichiers print haute résolution.",
+        tool_indesign_desc: "Mises en page menus, cartes de visite, documents commerciaux et matériels événementiels.",
+
+        links_title: "Liens",
+        cta_brand_guide: "Guide de marque Figma",
+        cta_visit_site: "Découvrir le site",
+      },
+
+      en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+
+        comptoir_hero_sub: "Case study · Branding · UI/UX Design",
+        comptoir_hero_title: "Au Comptoir Urbain — Luxury Restaurant",
+        comptoir_hero_p1: "Branding and visual identity design for Au Comptoir Urbain, a high-end gastronomic restaurant. Goal: create a refined, premium and memorable identity reflecting culinary excellence.",
+        comptoir_hero_p2: "Work delivered: brand strategy, art direction, color palette and typography, design system, print and digital applications, UI/UX design for restaurant website.",
+        comptoir_side_note: "Visual identity overview",
+        cta_see_final: "See result",
+        cta_open_live: "Discover the brand",
+
+        comptoir_context_title: "Context",
+        comptoir_context_problem_title: "Challenge",
+        comptoir_context_problem: "Au Comptoir Urbain, a luxury gastronomic restaurant, needed a distinctive and premium visual identity. Need to communicate excellence, refinement and the establishment's uniqueness.",
+        comptoir_context_goal_title: "Goals",
+        comptoir_goal_1: "Create a distinctive luxury visual identity",
+        comptoir_goal_2: "Communicate prestige and culinary excellence",
+        comptoir_goal_3: "Develop brand consistency across all touchpoints",
+        comptoir_goal_4: "Deliver a premium and memorable experience",
+
+        comptoir_approach_title: "Approach",
+        comptoir_strategy_title: "Brand strategy",
+        comptoir_strategy_p: "Immersion in restaurant universe: ambiance, cuisine, clientele. Positioning definition: luxury, gastronomic, urban and refined. Building a memorable and distinctive identity.",
+        comptoir_strategy_1: "Premium and gastronomic positioning",
+        comptoir_strategy_2: "Values: excellence, refinement, innovation",
+        comptoir_strategy_3: "Target: high-end adventurous clientele",
+        comptoir_visual_title: "Visual direction",
+        comptoir_visual_p: "Minimalist and elegant palette: gold, black, white with natural accents. Premium typography, refined imagery and airy layout expressing discreet luxury.",
+        comptoir_visual_1: "Colors: gold, black, white, terracotta",
+        comptoir_visual_2: "Typography: elegant serif and modern sans-serif",
+        comptoir_visual_3: "Imagery: premium culinary photography",
+
+        comptoir_design_system_title: "Design System",
+        comptoir_logo_title: "Logo & Brand",
+        comptoir_logo_p: "Refined logo combining geometric and organic elements. Distinctive and timeless symbol, adaptable across all touchpoints (print, digital, signage).",
+        comptoir_logo_1: "Main brand and variations",
+        comptoir_logo_2: "Protection space and grid",
+        comptoir_logo_3: "Monochrome and color",
+        comptoir_typography_title: "Typography",
+        comptoir_typography_p: "Clear and elegant typographic hierarchy. Serif for headings (prestige), sans-serif for body (legibility). Generous spacing and premium visual balance.",
+        comptoir_typography_1: "Headings: Playfair Display or equivalent",
+        comptoir_typography_2: "Body: Inter or equivalent",
+        comptoir_typography_3: "Optimized hierarchy and spacing",
+        comptoir_colors_title: "Color Palette",
+        comptoir_colors_p: "Minimalist harmony with depth. Primary and accent colors used strategically to create refinement and distinction.",
+        comptoir_colors_1: "Primary: Gold and Black",
+        comptoir_colors_2: "Secondary: White, Light Gray, Terracotta",
+        comptoir_colors_3: "Contrast and subtle nuances",
+        comptoir_components_title: "Components",
+        comptoir_components_p: "Coherent modular system: buttons, cards, forms, interactive elements. Each component designed for excellence and brand consistency.",
+        comptoir_components_1: "Buttons and call-to-action",
+        comptoir_components_2: "Cards and containers",
+        comptoir_components_3: "Elegant micro-interactions",
+
+        comptoir_applications_title: "Applications",
+        comptoir_print_title: "Print",
+        comptoir_print_1: "Business cards and letterheads",
+        comptoir_print_2: "Restaurant menus (format and typography)",
+        comptoir_print_3: "Event materials and flyers",
+        comptoir_print_4: "Packaging and signage",
+        comptoir_digital_title: "Digital",
+        comptoir_digital_1: "Restaurant website (presentation, reservations)",
+        comptoir_digital_2: "Interfaces and mobile applications",
+        comptoir_digital_3: "Social media and digital content",
+        comptoir_digital_4: "Emails and communications",
+        comptoir_brand_elements_title: "Brand Elements",
+        comptoir_brand_1: "Patterns and textures",
+        comptoir_brand_2: "Photography and imagery",
+        comptoir_brand_3: "Illustrations and icons",
+        comptoir_brand_4: "Voice and tone of communication",
+
+        comptoir_result_title: "Outcome",
+        comptoir_result_p: "A complete and cohesive visual identity reflecting Au Comptoir Urbain's prestige and excellence. A flexible, scalable and memorable design system, adapted to all touchpoints.",
+        comptoir_result_keys_title: "Highlights",
+        comptoir_result_1: "Distinctive and luxury identity",
+        comptoir_result_2: "Visual consistency across all touchpoints",
+        comptoir_result_3: "Complete and scalable design system",
+        comptoir_result_4: "Premium and memorable experience",
+        comptoir_result_5: "Clear and elegant brand communication",
+
+        titre_logiciels_utilises: "Tools used",
+        tool_figma_desc: "Creation of complete brand guide, design system, components and digital applications.",
+        tool_illustrator_desc: "Logo, typography, graphic elements and high-resolution print file preparation.",
+        tool_indesign_desc: "Menu layouts, business cards, business documents and event materials.",
+
+        links_title: "Links",
+        cta_brand_guide: "Figma brand guide",
+        cta_visit_site: "Discover the website",
+      }
+    };
+  </script>
+</body>
+</html>

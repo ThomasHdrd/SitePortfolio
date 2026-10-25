@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Travel Agency — Étude de cas Site Web | Thomas Houdard</title>
+<meta name="description" content="Travel Agency : page d'accueil statique responsive HTML/CSS pour promouvoir des destinations de voyage." />
+<meta property="og:title" content="Travel Agency — Étude de cas Site Web" />
+<meta property="og:description" content="Projet vitrine : intégration HTML/CSS, responsive, structure simple et claire." />
+<meta property="og:url" content="https://thomashoudard.com/travelagency.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <li><a href="blog.html">Blog</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>            
+        </ul>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="travel_banner"></p>
+            <h1>TRAVEL AGENCY</h1>
+            <p data-key="travel_pres_tagline"></p>
+            <div class="company-meta">
+                <span data-key="travel_meta_type"></span>
+                <span data-key="travel_meta_role"></span>
+                <span data-key="travel_meta_stack"></span>
+                <span data-key="travel_meta_date"></span>
+                <span data-key="travel_meta_duree"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>HTML</span>
+                <span class="badge"><span class="dot"></span>CSS</span>
+                <span class="badge"><span class="dot"></span>Responsive</span>
+                <span class="badge"><span class="dot"></span>UI Layout</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%;"></a>
+                <a href="#links" class="btn btn-outline" data-key="travel_cta_links" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <img src="images/developpeur/travel.png" alt="Capture Travel Agency" style="width:100%;border-radius:12px">
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="travel_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="travel_pres1"></p>
+                <p data-key="travel_pres2"></p>
+                <p data-key="travel_pres3"></p>
+            </div>
+        </div>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="travel_focus_title"></strong>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="travel_focus1"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="travel_focus2"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="travel_focus3"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="reveal" id="features" aria-labelledby="features-title">
+        <div class="section-header">
+            <h2 id="features-title" data-key="travel_features_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem">
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="travel_feature1"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="travel_feature2"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="travel_feature3"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="travel_feature4"></span></li>
+        </ul>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="reveal" id="technologies">
+        <div class="section-header">
+            <h2 data-key="titre_dev_technos"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/html.png" alt="HTML"></div>
+                <p class="tool-title">HTML</p>
+                <p class="tool-sub" data-key="travel_tech_html"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/css.png" alt="CSS"></div>
+                <p class="tool-title">CSS</p>
+                <p class="tool-sub" data-key="travel_tech_css"></p>
+            </article>
+        </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="reveal" id="links">
+        <div class="section-header">
+            <h2 data-key="travel_links_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <style>
+            @media (max-width: 600px) {
+            #links-btns {
+                flex-direction: column;
+            }
+            }
+        </style>
+        <div id="links-btns" class="proto-wrap" style="display:flex;justify-content:center;align-items:center;gap:1rem;width:100%;">
+            <a class="btn btn-primary" target="_blank" href="https://voyage.thomashoudard.com/" data-key="travel_button_site" style="flex:1;text-align:center;"></a>
+            <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/websitevoyage-HTML-CSS?tab=readme-ov-file" data-key="travel_button_code" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        travel_banner: "Intégration · UI · Responsive",
+        travel_pres_tagline: "Page d'accueil statique mettant en avant des destinations et une navigation simple.",
+        travel_meta_type: "PROJET : Site vitrine",
+        travel_meta_role: "RÔLE : Intégration HTML & CSS",
+        travel_meta_stack: "STACK : HTML · CSS",
+        travel_meta_date: "DATE : 2024",
+        travel_meta_duree: "DURÉE : 1 semaine",
+        travel_overview_title: "Présentation",
+        travel_pres1: "Travel Agency est une page d'accueil statique conçue pour une agence de voyages ou un blog personnel.",
+        travel_pres2: "Objectif : présenter clairement des destinations à venir avec une structure légère et rapide à charger.",
+        travel_pres3: "Le design minimaliste facilite la lisibilité et la réutilisation du modèle pour d'autres contenus.",
+        travel_focus_title: "Focus",
+        travel_focus1: "Hiérarchie visuelle propre",
+        travel_focus2: "Compatibilité multi-écrans",
+        travel_focus3: "Structure réutilisable",
+        travel_features_title: "Fonctionnalités",
+        travel_feature1: "Accueil épuré",
+        travel_feature2: "Design responsive",
+        travel_feature3: "Sections simples",
+        travel_feature4: "Navigation intuitive",
+        titre_dev_technos: "Technologies utilisées",
+        travel_tech_html: "Structure sémantique",
+        travel_tech_css: "Mise en page & responsive",
+        travel_links_title: "Liens",
+        travel_button_site: "Voir le site en ligne",
+        travel_button_code: "Voir le code sur GitHub",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_tools: "Voir les technologies",
+        travel_cta_features: "Fonctionnalités",
+        travel_cta_links: "Liens"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Work Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        travel_banner: "Integration · UI · Responsive",
+        travel_pres_tagline: "Static landing page highlighting destinations with clean navigation.",
+        travel_meta_type: "PROJECT: Showcase site",
+        travel_meta_role: "ROLE: HTML & CSS Integration",
+        travel_meta_stack: "STACK: HTML · CSS",
+        travel_meta_date: "DATE: 2024",
+        travel_meta_duree: "DURATION: 1 week",
+        travel_overview_title: "Overview",
+        travel_pres1: "Travel Agency is a static landing page for a travel agency or personal blog.",
+        travel_pres2: "Goal: clearly highlight upcoming destinations with a lightweight structure.",
+        travel_pres3: "Minimal design improves readability and makes the template reusable.",
+        travel_focus_title: "Focus",
+        travel_focus1: "Clean visual hierarchy",
+        travel_focus2: "Multi-device compatibility",
+        travel_focus3: "Reusable structure",
+        travel_features_title: "Features",
+        travel_feature1: "Clean homepage",
+        travel_feature2: "Responsive design",
+        travel_feature3: "Simple sections",
+        travel_feature4: "Intuitive navigation",
+        titre_dev_technos: "Technologies used",
+        travel_tech_html: "Semantic structure",
+        travel_tech_css: "Layout & responsiveness",
+        travel_links_title: "Links",
+        travel_button_site: "View live site",
+        travel_button_code: "View code on GitHub",
+        cta_scroll_overview: "View overview",
+        cta_scroll_tools: "View technologies",
+        travel_cta_features: "Features",
+        travel_cta_links: "Links"
+    }
+};
+</script>
+</body>
+</html>

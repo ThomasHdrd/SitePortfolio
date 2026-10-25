@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Travailler avec moi — UI/UX Design & Développement Web | Thomas Houdard</title>
+    <meta name="description" content="UI/UX Designer & développeur web freelance. Sites clairs et modernes pensés pour vos utilisateurs, du tourisme au sport et au-delà. Parlons de votre projet."/>
+    <meta property="og:title" content="Travailler avec moi — UI/UX Design & Développement Web"/>
+    <meta property="og:description" content="Sites clairs, modernes et pensés pour vos utilisateurs. UX/UI Design, développement web, ou les deux. Premier échange sans engagement."/>
+    <meta property="og:type" content="website"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css?v=1"/>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Professionnelles</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Product & UX/UI</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Développement Web</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi active" data-key="menu_cv">Travailler avec moi</a></li>
+                <div class="lang-switch" id="langSwitch">
+                    <button data-lang="fr" class="active">FR</button>
+                    <button data-lang="en">EN</button>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+
+        <!-- 1. HERO -->
+        <section class="hero reveal">
+            <div>
+                <p class="hero-sub" data-key="hero_kicker">UX/UI Design · Figma · Web Design · Développement Front-End</p>
+                <h1 data-key="hero_title">Créons une expérience digitale qui donne envie d'agir.</h1>
+                <p data-key="hero_text_1"></p>
+                <p data-key="hero_text_2"></p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary" data-key="hero_cta_primary">Parler de votre projet</a>
+                    <a href="#realisations" class="btn btn-outline" data-key="hero_cta_secondary">Voir mes réalisations</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PROBLÉMATIQUES CLIENTS -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="problems_title">Votre site fait-il vraiment son travail ?</h2>
+                <div class="bar"></div>
+            </div>
+            <p data-key="problems_text_1"></p>
+            <p margin-top:.8rem" data-key="problems_text_2"></p>
+            <div class="grid cols-4" style="margin-top:2rem">
+                <div class="card">
+                    <span class="category" data-key="problem1_title">Une offre difficile à comprendre</span>
+                    <p data-key="problem1_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="problem2_title">Une expérience mobile frustrante</span>
+                    <p data-key="problem2_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="problem3_title">Un parcours qui ne mène pas à l'action</span>
+                    <p data-key="problem3_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="problem4_title">Une image qui ne vous ressemble plus</span>
+                    <p data-key="problem4_desc"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SERVICES -->
+        <section class="reveal" id="services">
+            <div class="section-header">
+                <h2 data-key="services_title">Comment puis-je vous aider ?</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <div class="card">
+                    <h3 data-key="service1_title">Optimisation UX/UI</h3>
+                    <h4 data-key="service1_subtitle"></h4>
+                    <p data-key="service1_desc"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="service1_item1">Analyse UX/UI</li>
+                        <li data-key="service1_item2">Expérience mobile</li>
+                        <li data-key="service1_item3">Navigation et hiérarchie</li>
+                        <li data-key="service1_item4">CTA et parcours de conversion</li>
+                        <li data-key="service1_item5">Recommandations concrètes</li>
+                    </ul>
+                    <a href="commande-dev.html?base=200#estimate" class="btn btn-primary" data-key="service1_cta" style="margin-top:auto">Améliorer mon site</a>
+                </div>
+                <div class="card">
+                    <h3 data-key="service2_title">Création & Refonte UX/UI</h3>
+                    <h4 data-key="service2_subtitle"></h4>
+                    <p data-key="service2_desc"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="service2_item1">Analyse de l'existant</li>
+                        <li data-key="service2_item2">Architecture et wireframes</li>
+                        <li data-key="service2_item3">UI Design</li>
+                        <li data-key="service2_item4">Responsive Design</li>
+                        <li data-key="service2_item5">Prototype Figma interactif</li>
+                    </ul>
+                    <a href="commande-design.html?base=300#estimate" class="btn btn-primary" data-key="service2_cta" style="margin-top:auto">Parler de mon projet</a>
+                </div>
+                <div class="card">
+                    <h3 data-key="service3_title">Design + Développement</h3>
+                    <h4 data-key="service3_subtitle"></h4>
+                    <p data-key="service3_desc"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="service3_item1">UX/UI Design</li>
+                        <li data-key="service3_item2">Prototype Figma</li>
+                        <li data-key="service3_item3">Développement Front-End</li>
+                        <li data-key="service3_item4">Responsive</li>
+                        <li data-key="service3_item5">Optimisation et mise en ligne</li>
+                    </ul>
+                    <a href="commande-complet.html#estimate" class="btn btn-primary" data-key="service3_cta" style="margin-top:auto">Créer mon site</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECTEURS / POSITIONNEMENT -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="sectors_title">Des univers qui me parlent particulièrement</h2>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:70ch" data-key="sectors_text_1"></p>
+            <p style="max-width:70ch;margin-top:.8rem" data-key="sectors_text_2"></p>
+            <div class="grid cols-3" style="margin-top:2rem">
+                <div class="card">
+                    <span class="category" data-key="sector1_title">Tourisme & Voyage</span>
+                    <p data-key="sector1_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="sector2_title">Outdoor & Loisirs</span>
+                    <p data-key="sector2_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="sector3_title">Sport & Bien-être</span>
+                    <p data-key="sector3_desc"></p>
+                </div>
+            </div>
+            <div class="card" style="margin-top:1.4rem;text-align:center;align-items:center">
+                <h3 data-key="sectors_other_title">Votre secteur est différent ?</h3>
+                <p style="max-width:60ch" data-key="sectors_other_desc"></p>
+                <a href="contact.html" class="btn btn-primary" data-key="sectors_other_cta">Parlons de votre projet</a>
+            </div>
+        </section>
+
+        <!-- 5. RÉALISATIONS -->
+        <section class="reveal" id="realisations">
+            <div class="section-header">
+                <h2 data-key="realisations_title">Quelques projets</h2>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:70ch" data-key="realisations_text"></p>
+            <div class="grid cards" style="margin-top:2rem">
+                <div class="card">
+                    <img src="images/freelance/img_hero.png" alt="Sea Recovery — refonte de site web pour une entreprise de récupération de déchets marins" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">WordPress</span><span class="tag">Responsive</span>
+                    </div>
+                    <h3>Sea Recovery</h3>
+                    <h4 data-key="proj1_sector">Outdoor & environnement</h4>
+                    <p data-key="proj1_desc"></p>
+                    <a href="freelanceSeaRecovery.html" class="btn btn-primary" data-key="realisations_cta">Découvrir le projet</a>
+                </div>
+                <div class="card">
+                    <img src="images/freelance/CoachSport/DesignDesktop.JPG" alt="Site one-page pour un coach sportif indépendant" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Front-End</span><span class="tag">Responsive</span>
+                    </div>
+                    <h3>Coach sportif</h3>
+                    <h4 data-key="proj2_sector">Sport & bien-être</h4>
+                    <p data-key="proj2_desc"></p>
+                    <a href="freelanceCoach.html" class="btn btn-primary" data-key="realisations_cta">Découvrir le projet</a>
+                </div>
+                <div class="card">
+                    <img src="images/freelance/AuComptoirUrbain/DesignDesktop.JPG" alt="Site web pour Au Comptoir Urbain, restaurant de luxe" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Front-End</span><span class="tag">Responsive</span>
+                    </div>
+                    <h3>Au Comptoir Urbain</h3>
+                    <h4 data-key="proj3_sector">Restauration — autre univers</h4>
+                    <p data-key="proj3_desc"></p>
+                    <a href="freelanceAuComptoirUrbain.html" class="btn btn-primary" data-key="realisations_cta">Découvrir le projet</a>
+                </div>
+            </div>
+            <div class="card-cta">
+                <a href="projetDesigner.html" class="btn btn-outline" data-key="realisations_seeall">Voir toutes mes réalisations</a>
+            </div>
+        </section>
+
+        <!-- 6. PROCESSUS -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="process_title">Comment se déroule un projet ?</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="step-number">01</span>
+                    <h3 data-key="step1_title">Échange</h3>
+                    <p data-key="step1_desc"></p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">02</span>
+                    <h3 data-key="step2_title">Analyse</h3>
+                    <p data-key="step2_desc"></p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">03</span>
+                    <h3 data-key="step3_title">Conception</h3>
+                    <p data-key="step3_desc"></p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">04</span>
+                    <h3 data-key="step4_title">Échanges & ajustements</h3>
+                    <p data-key="step4_desc"></p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">05</span>
+                    <h3 data-key="step5_title">Développement</h3>
+                    <p data-key="step5_desc"></p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">06</span>
+                    <h3 data-key="step6_title">Livraison</h3>
+                    <p data-key="step6_desc"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. POURQUOI TRAVAILLER AVEC MOI -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_pourquoi_avec_moi">Pourquoi travailler avec moi ?</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cols-4">
+                <div class="card">
+                    <span class="category" data-key="why1_title">Design & développement</span>
+                    <p data-key="why1_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="why2_title">Une approche centrée utilisateur</span>
+                    <p data-key="why2_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="why3_title">Un interlocuteur unique</span>
+                    <p data-key="why3_desc"></p>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="why4_title">Une expérience pensée pour tous les écrans</span>
+                    <p data-key="why4_desc"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. À PROPOS -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="about_title">Qui suis-je ?</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="hero" style="margin:1rem 0">
+                <div class="hero-media" style="margin:auto">
+                    <div class="ring"></div>
+                    <img src="images/photoprofil.webp" alt="Photo de Thomas Houdard, UI/UX Designer & Développeur Web">
+                </div>
+                <div>
+                    <p data-key="about_text_1"></p>
+                    <p style="margin-top:.8rem" data-key="about_text_2"></p>
+                    <p style="margin-top:.8rem" data-key="about_text_3"></p>
+                    <div class="hero-actions">
+                        <a href="experiencesProfessionnelles.html" class="btn btn-primary" data-key="about_cta">En savoir plus sur moi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. TÉMOIGNAGES — masquée : aucun témoignage client réel disponible pour le moment.
+             Pour réactiver : supprimer cette ligne de commentaire d'ouverture et la ligne "FIN TÉMOIGNAGES" ci-dessous.
+        <section class="reveal" id="reviews">
+            <div class="section-header">
+                <h2 data-key="reviews_title">Ils m'ont fait confiance</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="reviews-summary">
+                <div class="reviews-stars" id="reviews-average-stars" aria-hidden="true">★★★★★</div>
+                <div><span id="reviews-average">0.0</span>/5 — <span id="reviews-count" data-key="reviews_count_label"></span></div>
+            </div>
+            <div id="reviews-list" class="reviews-list" data-key="reviews_list"></div>
+            <p style="margin-top:1rem" data-key="reviews_note"></p>
+        </section>
+        FIN TÉMOIGNAGES -->
+
+        <!-- 10. TARIFS / OFFRES -->
+        <section class="reveal" id="tarifs">
+            <div class="section-header">
+                <h2 data-key="pricing_title">Chaque projet est différent</h2>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:70ch" data-key="pricing_text"></p>
+            <div class="grid cols-3" style="margin-top:2rem;align-items:stretch">
+                <div class="card">
+                    <span class="category" data-key="price_audit_title">Optimisation UX/UI</span>
+                    <p class="price-text" data-key="price_audit_price">à partir de 200 €</p>
+                    <p style="font-weight:600;color:var(--sand)" data-key="price_audit_hook"></p>
+                    <p class="card-desc" data-key="price_audit_desc"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="price_audit_item1">Analyse UX/UI de l'existant</li>
+                        <li data-key="price_audit_item2">Identification des points de friction</li>
+                        <li data-key="price_audit_item3">Refonte d'une page ou d'un parcours prioritaire</li>
+                        <li data-key="price_audit_item4">UI Design</li>
+                        <li data-key="price_audit_item5">Desktop & mobile</li>
+                        <li data-key="price_audit_item6">Maquette Figma</li>
+                    </ul>
+                    <a href="commande-dev.html?base=200#estimate" class="btn btn-primary" data-key="price_audit_cta" style="margin-top:auto">Améliorer mon site</a>
+                </div>
+                <div class="card card-featured">
+                    <span class="badge-featured" data-key="price_design_badge">UX/UI · Offre principale</span>
+                    <span class="category" data-key="price_design_title">Création & Refonte UX/UI</span>
+                    <p class="price-text" data-key="price_design_price">à partir de 300 €</p>
+                    <p style="font-weight:600;color:var(--sand)" data-key="price_design_hook"></p>
+                    <p class="card-desc" data-key="price_design_desc"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="price_design_item1">Analyse du besoin ou de l'existant</li>
+                        <li data-key="price_design_item2">Parcours utilisateur</li>
+                        <li data-key="price_design_item3">Wireframes si nécessaires</li>
+                        <li data-key="price_design_item4">UI Design</li>
+                        <li data-key="price_design_item5">Responsive Design</li>
+                        <li data-key="price_design_item6">Prototype interactif Figma</li>
+                        <li data-key="price_design_item7">Fichiers prêts pour le développement</li>
+                    </ul>
+                    <a href="commande-design.html?base=300#estimate" class="btn btn-primary" data-key="price_design_cta" style="margin-top:auto">Parler de mon projet</a>
+                </div>
+                <div class="card">
+                    <span class="category" data-key="price_full_title">Design + Développement</span>
+                    <p class="price-text" data-key="price_full_price">sur devis</p>
+                    <p style="font-weight:600;color:var(--sand)" data-key="price_full_hook"></p>
+                    <p class="card-desc" data-key="price_full_desc"></p>
+                    <ul style="list-style:none;display:grid;gap:.4rem;font-size:14px;color:var(--text-dim);padding:0;margin:0">
+                        <li data-key="price_full_item1">UX/UI Design</li>
+                        <li data-key="price_full_item2">Wireframes</li>
+                        <li data-key="price_full_item3">Prototype Figma</li>
+                        <li data-key="price_full_item4">Responsive Design</li>
+                        <li data-key="price_full_item5">Intégration Front-End</li>
+                        <li data-key="price_full_item6">Interactions et animations</li>
+                        <li data-key="price_full_item7">Optimisation</li>
+                        <li data-key="price_full_item8">Accompagnement jusqu'à la mise en ligne</li>
+                    </ul>
+                    <a href="commande-complet.html#estimate" class="btn btn-primary" data-key="price_full_cta" style="margin-top:auto">Créer mon site</a>
+                </div>
+            </div>
+            <div class="card" style="margin-top:1.4rem;text-align:center;align-items:center">
+                <h3 data-key="pricing_help_title">Vous ne savez pas quelle formule choisir ?</h3>
+                <p style="max-width:60ch" data-key="pricing_help_text"></p>
+                <a href="contact.html" class="btn btn-outline" data-key="pricing_help_cta">Discuter de mon projet</a>
+            </div>
+            <div class="card" style="margin-top:1.4rem;text-align:center;align-items:center">
+                <h3 data-key="frontend_secondary_title">Vous avez déjà vos maquettes ?</h3>
+                <p style="max-width:60ch" data-key="frontend_secondary_text"></p>
+                <a href="contact.html" class="btn btn-outline" data-key="frontend_secondary_cta">Me confier mes maquettes</a>
+            </div>
+        </section>
+
+        <!-- 11. FAQ -->
+        <section class="reveal" aria-labelledby="faq-title">
+            <div class="section-header">
+                <h2 id="faq-title" data-key="faq_title">Questions fréquentes</h2>
+                <div class="bar"></div>
+            </div>
+            <div>
+                <details><summary data-key="faq_question_1"></summary><p data-key="faq_answer_1"></p></details>
+                <details><summary data-key="faq_question_2"></summary><p data-key="faq_answer_2"></p></details>
+                <details><summary data-key="faq_question_3"></summary><p data-key="faq_answer_3"></p></details>
+                <details><summary data-key="faq_question_4"></summary><p data-key="faq_answer_4"></p></details>
+                <details><summary data-key="faq_question_5"></summary><p data-key="faq_answer_5"></p></details>
+            </div>
+        </section>
+
+        <!-- 12. CTA FINAL -->
+        <section class="reveal" style="text-align:center;padding:3rem 1rem">
+            <h2 data-key="final_title" style="margin-bottom:1rem">Un projet en tête ?</h2>
+            <p style="max-width:600px;margin:0 auto;color:var(--text-dim)" data-key="final_text_1"></p>
+            <p style="max-width:600px;margin:.6rem auto 2rem;color:var(--text-dim)" data-key="final_text_2"></p>
+            <a href="contact.html" class="btn btn-primary" data-key="final_cta">Parler de mon projet</a>
+            <p style="margin-top:1rem;font-size:.8rem" data-key="final_note"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const translations={
+        fr:{
+            menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+
+            hero_kicker:"UX/UI Design · Figma · Web Design · Développement Front-End",
+            hero_title:"Créons une expérience digitale qui donne envie d'agir.",
+            hero_text_1:"J'accompagne les entreprises dans la création et la refonte de sites web clairs, modernes et pensés pour leurs utilisateurs.",
+            hero_text_2:"De l'UX/UI Design au développement web, je peux vous accompagner de la réflexion jusqu'à la mise en ligne, avec une affinité particulière pour les univers du tourisme, de l'outdoor et du sport.",
+            hero_cta_primary:"Parler de votre projet",
+            hero_cta_secondary:"Voir mes réalisations",
+
+            problems_title:"Votre site fait-il vraiment son travail ?",
+            problems_text_1:"Un site ne doit pas seulement être esthétique. Il doit permettre à vos visiteurs de comprendre rapidement votre offre, trouver l'information dont ils ont besoin et passer facilement à l'action.",
+            problems_text_2:"J'identifie les points de friction de votre expérience digitale et conçois des solutions pour rendre le parcours plus simple, plus clair et plus efficace.",
+            problem1_title:"Une offre difficile à comprendre",
+            problem1_desc:"Vos visiteurs doivent chercher pour comprendre ce que vous proposez, à qui cela s'adresse ou pourquoi ils devraient vous choisir.",
+            problem2_title:"Une expérience mobile frustrante",
+            problem2_desc:"Navigation compliquée, informations difficiles à trouver ou interface peu adaptée aux smartphones.",
+            problem3_title:"Un parcours qui ne mène pas à l'action",
+            problem3_desc:"Réserver, demander un devis, acheter ou vous contacter n'est pas suffisamment simple ou visible.",
+            problem4_title:"Une image qui ne vous ressemble plus",
+            problem4_desc:"Votre site ne reflète plus la qualité, le positionnement ou l'expérience que vous souhaitez transmettre.",
+
+            services_title:"Comment puis-je vous aider ?",
+            service1_title:"Optimisation UX/UI",
+            service1_subtitle:"Vous avez déjà un site mais vous sentez qu'il pourrait être plus efficace ?",
+            service1_desc:"J'analyse votre interface et votre parcours utilisateur afin d'identifier les principaux points de friction et les opportunités d'amélioration.",
+            service1_item1:"Analyse UX/UI",service1_item2:"Expérience mobile",service1_item3:"Navigation et hiérarchie",service1_item4:"CTA et parcours de conversion",service1_item5:"Recommandations concrètes",
+            service1_cta:"Améliorer mon site",
+            service2_title:"Création & Refonte UX/UI",
+            service2_subtitle:"Votre site a besoin d'une nouvelle expérience ?",
+            service2_desc:"Je repense son parcours et son interface pour créer une expérience plus claire, moderne et cohérente avec votre identité.",
+            service2_item1:"Analyse de l'existant",service2_item2:"Architecture et wireframes",service2_item3:"UI Design",service2_item4:"Responsive Design",service2_item5:"Prototype Figma interactif",
+            service2_cta:"Parler de mon projet",
+            service3_title:"Design + Développement",
+            service3_subtitle:"Vous recherchez un accompagnement jusqu'au site final ?",
+            service3_desc:"Je peux également transformer les maquettes en une expérience web fonctionnelle et responsive afin de vous accompagner de la conception jusqu'à la mise en ligne.",
+            service3_item1:"UX/UI Design",service3_item2:"Prototype Figma",service3_item3:"Développement Front-End",service3_item4:"Responsive",service3_item5:"Optimisation et mise en ligne",
+            service3_cta:"Créer mon site",
+
+            sectors_title:"Des univers qui me parlent particulièrement",
+            sectors_text_1:"J'aime concevoir des expériences digitales pour des entreprises qui permettent de découvrir, bouger, explorer et vivre de nouvelles expériences.",
+            sectors_text_2:"Ma sensibilité pour le voyage, l'outdoor et le sport me permet de comprendre naturellement les attentes de leurs utilisateurs : découvrir une expérience, comparer une offre, trouver les bonnes informations et passer facilement à la réservation ou à la prise de contact.",
+            sector1_title:"Tourisme & Voyage",
+            sector1_desc:"Hébergements, destinations, agences, guides, expériences touristiques et acteurs locaux.",
+            sector2_title:"Outdoor & Loisirs",
+            sector2_desc:"Randonnée, plongée, kayak, excursions, activités nature et expériences outdoor.",
+            sector3_title:"Sport & Bien-être",
+            sector3_desc:"Coachs, salles, clubs, événements sportifs et services liés au sport et au bien-être.",
+            sectors_other_title:"Votre secteur est différent ?",
+            sectors_other_desc:"Aucun problème. Je reste ouvert aux projets d'autres univers lorsque mon expertise peut répondre à vos besoins.",
+            sectors_other_cta:"Parlons de votre projet",
+
+            realisations_title:"Quelques projets",
+            realisations_text:"Découvrez quelques expériences digitales que j'ai eu l'occasion de concevoir et de développer.",
+            proj1_sector:"Outdoor & environnement",
+            proj1_desc:"Une entreprise de récupération de déchets marins avec un site vieillissant, peu lisible sur mobile. Refonte complète de l'expérience et de l'identité visuelle sous WordPress.",
+            proj2_sector:"Sport & bien-être",
+            proj2_desc:"Un coach sportif indépendant sans présence en ligne claire. Conception et développement d'une landing page one-page pensée pour convertir les visiteurs en clients.",
+            proj3_sector:"Restauration — autre univers",
+            proj3_desc:"Un restaurant souhaitant une identité plus premium. Création complète du site et d'une expérience utilisateur alignée avec le positionnement haut de gamme de l'établissement.",
+            realisations_cta:"Découvrir le projet",
+            realisations_seeall:"Voir toutes mes réalisations",
+
+            process_title:"Comment se déroule un projet ?",
+            step1_title:"Échange",
+            step1_desc:"Nous commençons par discuter de votre entreprise, de votre projet, de vos objectifs et des besoins de vos utilisateurs.",
+            step2_title:"Analyse",
+            step2_desc:"J'étudie votre environnement, votre site existant si vous en avez un, ainsi que les principales opportunités d'amélioration.",
+            step3_title:"Conception",
+            step3_desc:"Je structure le parcours utilisateur puis conçois l'interface et les différents écrans dans Figma.",
+            step4_title:"Échanges & ajustements",
+            step4_desc:"Nous avançons ensemble grâce à vos retours afin d'affiner la solution et d'arriver à un résultat qui répond réellement à vos besoins.",
+            step5_title:"Développement",
+            step5_desc:"Si votre projet comprend le développement, j'intègre les maquettes pour créer une expérience responsive et fonctionnelle.",
+            step6_title:"Livraison",
+            step6_desc:"Une fois le projet validé, je vous livre les éléments nécessaires et vous accompagne jusqu'à la mise en ligne lorsque cela fait partie de la mission.",
+
+            titre_pourquoi_avec_moi:"Pourquoi travailler avec moi ?",
+            why1_title:"Design & développement",
+            why1_desc:"UX/UI Designer et développeur web, je peux intervenir aussi bien sur la conception de l'expérience que sur sa réalisation technique.",
+            why2_title:"Une approche centrée utilisateur",
+            why2_desc:"Chaque décision de design répond à un objectif : permettre à l'utilisateur de comprendre, naviguer et agir plus facilement.",
+            why3_title:"Un interlocuteur unique",
+            why3_desc:"Vous échangez directement avec moi pendant toute la mission, de la première discussion jusqu'à la livraison.",
+            why4_title:"Une expérience pensée pour tous les écrans",
+            why4_desc:"Les interfaces sont conçues dès le départ pour offrir une expérience cohérente sur ordinateur, tablette et mobile.",
+
+            about_title:"Qui suis-je ?",
+            about_text_1:"Je suis Thomas, UI/UX Designer et développeur web basé en France.",
+            about_text_2:"Mon parcours entre design et développement m'a appris à penser une interface à la fois du point de vue de l'utilisateur, de l'entreprise et de sa réalisation technique.",
+            about_text_3:"Curieux et attiré par le voyage, le sport et les expériences qui sortent du quotidien, j'aime particulièrement travailler sur des projets qui permettent aux utilisateurs de découvrir, explorer ou vivre quelque chose.",
+            about_cta:"En savoir plus sur moi",
+
+            reviews_title:"Ils m'ont fait confiance",
+            reviews_count_label:"0 avis",
+            reviews_list:"Aucun avis pour le moment. Les premiers retours clients seront bientôt disponibles ici.",
+            reviews_note:"Vous avez déjà travaillé avec moi ? Écrivez-moi votre retour à contact@thomashoudard.com, je serai ravi de le partager ici.",
+
+            pricing_title:"Chaque projet est différent",
+            pricing_text:"Les besoins varient selon votre projet, votre site actuel et vos objectifs. Choisissez le type d'accompagnement qui vous correspond ; après un premier échange, je vous propose une solution et un devis adaptés.",
+            price_audit_title:"Optimisation UX/UI",
+            price_audit_price:"à partir de 200 €",
+            price_audit_hook:"Améliorez votre site sans forcément tout refaire.",
+            price_audit_desc:"Votre site existe déjà mais certaines pages ou certains parcours manquent de clarté ou d'efficacité ? J'identifie les principaux points de friction et repense les éléments prioritaires pour améliorer l'expérience utilisateur.",
+            price_audit_item1:"Analyse UX/UI de l'existant",price_audit_item2:"Identification des points de friction",price_audit_item3:"Refonte d'une page ou d'un parcours prioritaire",price_audit_item4:"UI Design",price_audit_item5:"Desktop & mobile",price_audit_item6:"Maquette Figma",
+            price_audit_cta:"Améliorer mon site",
+            price_design_badge:"UX/UI · Offre principale",
+            price_design_title:"Création & Refonte UX/UI",
+            price_design_price:"à partir de 300 €",
+            price_design_hook:"Concevons une expérience claire, moderne et pensée pour vos utilisateurs.",
+            price_design_desc:"Création d'une nouvelle interface ou refonte complète d'une expérience existante, de la réflexion UX jusqu'au prototype final dans Figma.",
+            price_design_item1:"Analyse du besoin ou de l'existant",price_design_item2:"Parcours utilisateur",price_design_item3:"Wireframes si nécessaires",price_design_item4:"UI Design",price_design_item5:"Responsive Design",price_design_item6:"Prototype interactif Figma",price_design_item7:"Fichiers prêts pour le développement",
+            price_design_cta:"Parler de mon projet",
+            price_full_title:"Design + Développement",
+            price_full_price:"sur devis",
+            price_full_hook:"De l'idée jusqu'au site fonctionnel.",
+            price_full_desc:"Je prends en charge la conception UX/UI puis l'intégration Front-End afin de transformer les maquettes en une expérience web responsive et fonctionnelle.",
+            price_full_item1:"UX/UI Design",price_full_item2:"Wireframes",price_full_item3:"Prototype Figma",price_full_item4:"Responsive Design",price_full_item5:"Intégration Front-End",price_full_item6:"Interactions et animations",price_full_item7:"Optimisation",price_full_item8:"Accompagnement jusqu'à la mise en ligne",
+            price_full_cta:"Créer mon site",
+            pricing_help_title:"Vous ne savez pas quelle formule choisir ?",
+            pricing_help_text:"Expliquez-moi votre projet et je vous orienterai vers l'accompagnement le plus adapté à vos besoins.",
+            pricing_help_cta:"Discuter de mon projet",
+            frontend_secondary_title:"Vous avez déjà vos maquettes ?",
+            frontend_secondary_text:"Je peux également prendre en charge leur intégration Front-End pour les transformer en une interface responsive et fonctionnelle.",
+            frontend_secondary_cta:"Me confier mes maquettes",
+
+            faq_title:"Questions fréquentes",
+            faq_question_1:"Pouvez-vous améliorer un site existant ?",
+            faq_answer_1:"Oui. Je peux analyser votre site actuel, identifier les principaux problèmes UX/UI et intervenir sur certaines pages ou réaliser une refonte plus globale.",
+            faq_question_2:"Travaillez-vous uniquement avec le tourisme et le sport ?",
+            faq_answer_2:"Non. Ce sont des univers avec lesquels j'ai une affinité particulière, mais je travaille également avec des entreprises et porteurs de projets d'autres secteurs.",
+            faq_question_3:"Pouvez-vous uniquement réaliser le design ?",
+            faq_answer_3:"Oui. Je peux intervenir uniquement sur l'UX/UI et vous livrer les maquettes et prototypes Figma nécessaires à votre équipe de développement.",
+            faq_question_4:"Pouvez-vous également développer le site ?",
+            faq_answer_4:"Selon les besoins du projet, je peux également prendre en charge le développement Front-End afin de vous accompagner jusqu'à une version fonctionnelle.",
+            faq_question_5:"Travaillez-vous à distance ?",
+            faq_answer_5:"Oui. Je peux travailler avec des clients en France comme à l'international et organiser les échanges à distance tout au long du projet.",
+
+            final_title:"Un projet en tête ?",
+            final_text_1:"Vous souhaitez créer une nouvelle expérience digitale ou améliorer un site existant ?",
+            final_text_2:"Expliquez-moi votre projet et échangeons sur vos objectifs, vos utilisateurs et les solutions que nous pourrions mettre en place.",
+            final_cta:"Parler de mon projet",
+            final_note:"Premier échange sans engagement.",
+
+            footer:"©"+new Date().getFullYear()+" Thomas Houdard · Tous droits réservés"
+        },
+        en:{
+            menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+
+            hero_kicker:"UX/UI Design · Figma · Web Design · Front-End Development",
+            hero_title:"Let's build a digital experience that makes people want to act.",
+            hero_text_1:"I help companies create and redesign websites that are clear, modern and built for their users.",
+            hero_text_2:"From UX/UI Design to web development, I can support you from the first idea to launch, with a particular affinity for travel, outdoor and sport brands.",
+            hero_cta_primary:"Talk about your project",
+            hero_cta_secondary:"See my work",
+
+            problems_title:"Is your website really doing its job?",
+            problems_text_1:"A website shouldn't just look good. It needs to help visitors quickly understand your offer, find the information they need and easily take action.",
+            problems_text_2:"I identify the friction points in your digital experience and design solutions to make the journey simpler, clearer and more effective.",
+            problem1_title:"An offer that's hard to understand",
+            problem1_desc:"Visitors have to dig to understand what you offer, who it's for, or why they should choose you.",
+            problem2_title:"A frustrating mobile experience",
+            problem2_desc:"Confusing navigation, hard-to-find information, or an interface poorly suited to smartphones.",
+            problem3_title:"A journey that doesn't lead to action",
+            problem3_desc:"Booking, requesting a quote, buying or contacting you isn't simple or visible enough.",
+            problem4_title:"An image that no longer reflects you",
+            problem4_desc:"Your site no longer reflects the quality, positioning or experience you want to convey.",
+
+            services_title:"How can I help you?",
+            service1_title:"UX/UI Optimization",
+            service1_subtitle:"Already have a site but feel it could perform better?",
+            service1_desc:"I analyze your interface and user journey to identify the main friction points and opportunities for improvement.",
+            service1_item1:"UX/UI analysis",service1_item2:"Mobile experience",service1_item3:"Navigation & hierarchy",service1_item4:"CTAs & conversion path",service1_item5:"Concrete recommendations",
+            service1_cta:"Improve my website",
+            service2_title:"UX/UI Creation & Redesign",
+            service2_subtitle:"Does your site need a new experience?",
+            service2_desc:"I rethink its journey and interface to create an experience that's clearer, more modern and consistent with your identity.",
+            service2_item1:"Current state analysis",service2_item2:"Architecture & wireframes",service2_item3:"UI Design",service2_item4:"Responsive design",service2_item5:"Interactive Figma prototype",
+            service2_cta:"Talk about my project",
+            service3_title:"Design + Development",
+            service3_subtitle:"Looking for support all the way to the final website?",
+            service3_desc:"I can also turn the mockups into a functional, responsive website, supporting you from concept to launch.",
+            service3_item1:"UX/UI Design",service3_item2:"Figma prototype",service3_item3:"Front-End development",service3_item4:"Responsive",service3_item5:"Optimization & launch",
+            service3_cta:"Build my website",
+
+            sectors_title:"Industries I'm especially drawn to",
+            sectors_text_1:"I enjoy designing digital experiences for companies that help people discover, move, explore and live new experiences.",
+            sectors_text_2:"My interest in travel, the outdoors and sport helps me naturally understand what their users expect: discovering an experience, comparing an offer, finding the right information, and easily booking or getting in touch.",
+            sector1_title:"Travel & Tourism",
+            sector1_desc:"Accommodation, destinations, agencies, guides, tourism experiences and local businesses.",
+            sector2_title:"Outdoor & Leisure",
+            sector2_desc:"Hiking, diving, kayaking, excursions, nature activities and outdoor experiences.",
+            sector3_title:"Sport & Wellness",
+            sector3_desc:"Coaches, gyms, clubs, sporting events and sport & wellness services.",
+            sectors_other_title:"Your industry is different?",
+            sectors_other_desc:"No problem. I remain open to projects from other industries whenever my expertise can meet your needs.",
+            sectors_other_cta:"Let's talk about your project",
+
+            realisations_title:"A few projects",
+            realisations_text:"Discover a few digital experiences I've had the chance to design and develop.",
+            proj1_sector:"Outdoor & environment",
+            proj1_desc:"A marine waste recovery company with an aging site, hard to read on mobile. Complete redesign of the experience and visual identity on WordPress.",
+            proj2_sector:"Sport & wellness",
+            proj2_desc:"An independent sports coach with no clear online presence. Design and development of a one-page landing page built to convert visitors into clients.",
+            proj3_sector:"Restaurant — different industry",
+            proj3_desc:"A restaurant wanting a more premium identity. Full website creation with a user experience aligned with the venue's upscale positioning.",
+            realisations_cta:"See the project",
+            realisations_seeall:"See all my work",
+
+            process_title:"How does a project unfold?",
+            step1_title:"Discussion",
+            step1_desc:"We start by discussing your company, your project, your goals and your users' needs.",
+            step2_title:"Analysis",
+            step2_desc:"I study your environment, your existing site if you have one, and the main opportunities for improvement.",
+            step3_title:"Design",
+            step3_desc:"I structure the user journey, then design the interface and the different screens in Figma.",
+            step4_title:"Feedback & adjustments",
+            step4_desc:"We move forward together based on your feedback, refining the solution until it truly meets your needs.",
+            step5_title:"Development",
+            step5_desc:"If your project includes development, I integrate the mockups to create a responsive, functional experience.",
+            step6_title:"Delivery",
+            step6_desc:"Once the project is validated, I deliver the necessary files and support you through launch when that's part of the mission.",
+
+            titre_pourquoi_avec_moi:"Why work with me?",
+            why1_title:"Design & development",
+            why1_desc:"As a UX/UI Designer and web developer, I can work on both the experience design and its technical implementation.",
+            why2_title:"A user-centered approach",
+            why2_desc:"Every design decision serves a goal: helping the user understand, navigate and act more easily.",
+            why3_title:"A single point of contact",
+            why3_desc:"You work directly with me throughout the whole project, from the first conversation to delivery.",
+            why4_title:"An experience designed for every screen",
+            why4_desc:"Interfaces are designed from the start to offer a consistent experience on desktop, tablet and mobile.",
+
+            about_title:"Who am I?",
+            about_text_1:"I'm Thomas, a UI/UX Designer and web developer based in France.",
+            about_text_2:"My background across design and development taught me to think about an interface from the user's, the company's, and the technical implementation's point of view all at once.",
+            about_text_3:"Curious and drawn to travel, sport and experiences outside the everyday, I especially enjoy working on projects that let users discover, explore or experience something new.",
+            about_cta:"More about me",
+
+            reviews_title:"Clients who trusted me",
+            reviews_count_label:"0 reviews",
+            reviews_list:"No reviews yet. The first client reviews will be available here soon.",
+            reviews_note:"Already worked with me? Send your feedback to contact@thomashoudard.com and I'll be glad to feature it here.",
+
+            pricing_title:"Every project is different",
+            pricing_text:"Needs vary depending on your project, your current site and your goals. Choose the type of support that fits you; after an initial conversation, I'll propose a solution and a quote tailored to your needs.",
+            price_audit_title:"UX/UI Optimization",
+            price_audit_price:"from €200",
+            price_audit_hook:"Improve your website without necessarily rebuilding it.",
+            price_audit_desc:"Your site already exists but some pages or journeys lack clarity or effectiveness? I identify the main friction points and rework the priority elements to improve the user experience.",
+            price_audit_item1:"UX/UI analysis of the existing site",price_audit_item2:"Identification of friction points",price_audit_item3:"Redesign of a priority page or journey",price_audit_item4:"UI Design",price_audit_item5:"Desktop & mobile",price_audit_item6:"Figma mockup",
+            price_audit_cta:"Improve my website",
+            price_design_badge:"UX/UI · Main offer",
+            price_design_title:"UX/UI Creation & Redesign",
+            price_design_price:"from €300",
+            price_design_hook:"Let's create a clear, modern experience built for your users.",
+            price_design_desc:"Creating a new interface or fully redesigning an existing experience, from UX thinking to the final Figma prototype.",
+            price_design_item1:"Needs or current state analysis",price_design_item2:"User journey",price_design_item3:"Wireframes if needed",price_design_item4:"UI Design",price_design_item5:"Responsive design",price_design_item6:"Interactive Figma prototype",price_design_item7:"Files ready for development",
+            price_design_cta:"Talk about my project",
+            price_full_title:"Design + Development",
+            price_full_price:"custom quote",
+            price_full_hook:"From idea to a fully working website.",
+            price_full_desc:"I take care of the UX/UI design and then the Front-End integration, turning the mockups into a responsive, functional web experience.",
+            price_full_item1:"UX/UI Design",price_full_item2:"Wireframes",price_full_item3:"Figma prototype",price_full_item4:"Responsive design",price_full_item5:"Front-End integration",price_full_item6:"Interactions & animations",price_full_item7:"Optimization",price_full_item8:"Support through launch",
+            price_full_cta:"Build my website",
+            pricing_help_title:"Not sure which package to choose?",
+            pricing_help_text:"Tell me about your project and I'll point you to the support that fits your needs best.",
+            pricing_help_cta:"Discuss my project",
+            frontend_secondary_title:"Already have your mockups?",
+            frontend_secondary_text:"I can also take care of their Front-End integration, turning them into a responsive, functional interface.",
+            frontend_secondary_cta:"Hand over my mockups",
+
+            faq_title:"Frequently asked questions",
+            faq_question_1:"Can you improve an existing website?",
+            faq_answer_1:"Yes. I can analyze your current site, identify the main UX/UI issues and work on specific pages or carry out a broader redesign.",
+            faq_question_2:"Do you only work with travel and sport?",
+            faq_answer_2:"No. These are industries I have a particular affinity with, but I also work with companies and project owners from other sectors.",
+            faq_question_3:"Can you handle just the design?",
+            faq_answer_3:"Yes. I can work on the UX/UI only and deliver the mockups and Figma prototypes your development team needs.",
+            faq_question_4:"Can you also develop the website?",
+            faq_answer_4:"Depending on the project's needs, I can also take care of Front-End development to deliver a fully working version.",
+            faq_question_5:"Do you work remotely?",
+            faq_answer_5:"Yes. I work with clients in France and internationally, organizing remote check-ins throughout the project.",
+
+            final_title:"Got a project in mind?",
+            final_text_1:"Want to create a new digital experience or improve an existing website?",
+            final_text_2:"Tell me about your project and let's discuss your goals, your users and the solutions we could put in place.",
+            final_cta:"Talk about my project",
+            final_note:"First conversation, no commitment.",
+
+            footer:"©"+new Date().getFullYear()+" Thomas Houdard · All rights reserved"
+        }
+    };
+    </script>
+</body>
+</html>

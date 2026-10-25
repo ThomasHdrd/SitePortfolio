@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Travailler avec moi | Thomas Houdard</title>
+    <meta name="description" content="UI/UX Design, Développement Web et Pack Complet à Montpellier. Maquettes Figma, sites vitrines HTML/CSS/JS, solutions clé en main."/>
+    <meta property="og:title" content="Travailler avec moi — UI/UX & Développement Web"/>
+    <meta property="og:description" content="Design Figma, développement Web, pack clé en main. Devis rapide."/>
+    <meta property="og:type" content="website"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../style.css"/>
+    <script src="../script.js" defer></script>   
+</head>
+
+<body>
+  <!-- NAV (même pattern que les autres pages blog) -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3 data-key="brand_name" data-en="Thomas Houdard">Thomas Houdard</h3>
+          <small data-key="brand_role" data-en="UI/UX DESIGNER · WEB DEV">
+            UI/UX DESIGNER · DEV WEB
+          </small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li>
+          <a
+            href="../index.html#hero"
+            data-key="menu_home"
+            data-en="Home"
+          >Accueil</a>
+        </li>
+        <li class="dropdown">
+          <a
+            href="#"
+            data-key="menu_portfolio"
+            data-en="Portfolio ▾"
+          >Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a
+              href="../experiencesProfessionnelles.html"
+              data-key="menu_exp_pro"
+              data-en="Professional Experience"
+            >Expériences Pro</a>
+            <a
+              href="../projetDesigner.html"
+              data-key="menu_projects_design"
+              data-en="Design Projects"
+            >Projets Design</a>
+            <a
+              href="../projetDeveloppeur.html"
+              data-key="menu_projects_dev"
+              data-en="Development Projects"
+            >Projets Développement</a>
+          </div>
+        </li>
+        <li>
+          <a
+            href="../contact.html"
+            data-key="menu_contact"
+            data-en="Contact"
+          >Contact</a>
+        </li>
+        <li>
+          <a
+            href="../TravaillerAvecMoi.html"
+            class="btn-taf-avec-moi"
+            data-key="menu_work_with_me"
+            data-en="Work with me"
+          >Travailler avec moi</a>
+        </li>
+        <li>
+          <a
+            href="../blog.html"
+            class="active"
+            data-key="menu_blog"
+            data-en="Blog"
+          >Blog</a>
+        </li>
+      <div class="lang-switch" id="langSwitch">
+        <button
+          data-lang="fr"
+          class="active"
+          data-key="lang_fr"
+          data-en="FR"
+        >FR</button>
+        <button
+          data-lang="en"
+          data-key="lang_en"
+          data-en="EN"
+        >EN</button>
+      </div>        
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENEUR BLOG -->
+  <div class="blog-container">
+    <!-- Fil d’Ariane -->
+    <div
+      class="en-tete"
+      data-key="breadcrumb_full"
+      data-en="Blog › WordPress or custom website: which one should you choose?"
+    >
+      <a
+        href="../blog.html"
+        data-key="breadcrumb_blog"
+        data-en="Blog"
+      >Blog</a>
+      <span>›</span>
+      <span
+        data-key="breadcrumb_post"
+        data-en="WordPress or custom website: which one should you choose?"
+      >
+        WordPress ou site sur-mesure : lequel choisir ?
+      </span>
+    </div>
+
+    <!-- Bannière -->
+    <header class="post-banniere">
+      <img
+        src="images/wordpress-ou-site-sur-mesure-lequel-choisir.png"
+        alt="Choisir entre WordPress et un site sur-mesure"
+        data-en-alt="Choosing between WordPress and a custom website"
+        width="1600"
+        height="600"
+        loading="lazy"
+      />
+      <div class="post-banniere_overlay"></div>
+      <div class="post-banniere_content">
+        <h1
+          data-key="wp_custom_title"
+          data-en="WordPress or custom website: which one should you choose?"
+        >
+          WordPress ou site sur-mesure : lequel choisir ?
+        </h1>
+        <p
+          class="post-meta"
+          data-key="wp_custom_meta"
+          data-en="3 min read • Updated 2025"
+        >
+          Lecture 3 min • Mis à jour 2025
+        </p>
+      </div>
+    </header>
+
+    <!-- Corps + Aside -->
+    <main class="post-layout">
+      <!-- Article principal -->
+      <article class="post">
+        <p
+          class="post-texte-intro"
+          data-key="wp_custom_intro"
+          data-en="WordPress powers a large part of the web and lets you launch a site quickly. However, a custom website can become the best option when performance, branding and specific features are a priority. Here is a simple comparison to help you decide with confidence."
+        >
+          WordPress propulse une grande partie du web et permet de lancer un site rapidement.
+          Pourtant, un <strong>site sur-mesure</strong>
+          peut devenir le meilleur choix quand performance, image de marque et fonctionnalités spécifiques sont prioritaires.
+          Voici un <strong>comparatif simple</strong> pour décider sereinement.
+        </p>
+
+        <!-- Quand WordPress est un excellent choix -->
+        <section>
+          <h2
+            data-key="wp_custom_wp_good_title"
+            data-en="When WordPress is an excellent choice"
+          >
+            Quand WordPress est un excellent choix
+          </h2>
+          <ul class="list1">
+            <li
+              data-key="wp_custom_wp_good_item1"
+              data-en="<strong>Fast launch</strong> — theme + a few plugins and you’re online."
+            >
+              <strong>Lancement rapide</strong> — thème + quelques plugins et vous êtes en ligne.
+            </li>
+            <li
+              data-key="wp_custom_wp_good_item2"
+              data-en="<strong>Controlled budget</strong> — ideal for blogs, editorial sites and small e-commerce."
+            >
+              <strong>Budget contenu</strong> — idéal pour blogs, sites éditoriaux, petits e-commerces.
+            </li>
+            <li
+              data-key="wp_custom_wp_good_item3"
+              data-en="<strong>Rich ecosystem</strong> — thousands of plugins (SEO, forms, shops…)."
+            >
+              <strong>Écosystème riche</strong> — milliers de plugins (SEO, formulaires, boutiques…).
+            </li>
+            <li
+              data-key="wp_custom_wp_good_item4"
+              data-en="<strong>Simple back-office</strong> — you can edit your pages without coding."
+            >
+              <strong>Back-office simple</strong> — vous pouvez éditer vos pages sans coder.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Limites de WordPress -->
+        <section>
+          <h2
+            data-key="wp_custom_limits_title"
+            data-en="The limits of WordPress"
+          >
+            Les limites de WordPress
+          </h2>
+          <ul class="list2">
+            <li
+              data-key="wp_custom_limits_item1"
+              data-en="<strong>Performance</strong> — too many plugins or a heavy theme = slow website."
+            >
+              <strong>Performance</strong> — trop de plugins ou un thème lourd = site lent.
+            </li>
+            <li
+              data-key="wp_custom_limits_item2"
+              data-en="<strong>Security</strong> — regular updates required (core, themes, plugins)."
+            >
+              <strong>Sécurité</strong> — mises à jour régulières indispensables (noyau, thèmes, plugins).
+            </li>
+            <li
+              data-key="wp_custom_limits_item3"
+              data-en="<strong>Constrained design</strong> — deep customisation is more complex."
+            >
+              <strong>Design contraint</strong> — la personnalisation profonde est plus complexe.
+            </li>
+            <li
+              data-key="wp_custom_limits_item4"
+              data-en="<strong>Technical debt</strong> — stacking plugins over time."
+            >
+              <strong>Dette technique</strong> — empilement d’extensions au fil du temps.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Note sur le sur-mesure -->
+        <section class="note">
+          <h3
+            data-key="wp_custom_note_title"
+            data-en="Key advantage of custom builds: control"
+          >
+            Atout clé du sur-mesure : la maîtrise
+          </h3>
+          <p
+            data-key="wp_custom_note_text"
+            data-en="With a custom site (HTML/CSS/JS, light framework), you control the <strong>weight</strong>, <strong>structure</strong> and <strong>quality</strong>: clean code, optimised LCP/CLS, accessibility and SEO considered from the start."
+          >
+            Avec un site custom (HTML/CSS/JS, framework léger), vous contrôlez le
+            <strong>poids</strong>, la <strong>structure</strong> et la <strong>qualité</strong> :
+            code propre, vitesses LCP/CLS optimisées, accessibilité et SEO pensés dès le départ.
+          </p>
+        </section>
+
+        <!-- Quand le sur-mesure s’impose -->
+        <section>
+          <h2
+            data-key="wp_custom_custom_when_title"
+            data-en="When a custom website is the right choice"
+          >
+            Quand le site sur-mesure s’impose
+          </h2>
+          <ul class="check-list">
+            <li
+              data-key="wp_custom_custom_when_item1"
+              data-en="<strong>Performance & SEO</strong> — ultra-fast loading, great Core Web Vitals."
+            >
+              <strong>Performance & SEO</strong> — chargement ultra-rapide, excellent score Core Web Vitals.
+            </li>
+            <li
+              data-key="wp_custom_custom_when_item2"
+              data-en="<strong>Brand image</strong> — 100% custom design, controlled animations."
+            >
+              <strong>Image de marque</strong> — design 100% personnalisé, animations maîtrisées.
+            </li>
+            <li
+              data-key="wp_custom_custom_when_item3"
+              data-en="<strong>Specific features</strong> — member areas, specific journeys, integrations."
+            >
+              <strong>Fonctionnalités spécifiques</strong> — espace membre, parcours atypiques, intégrations.
+            </li>
+            <li
+              data-key="wp_custom_custom_when_item4"
+              data-en="<strong>Scalability</strong> — healthy base, simple maintenance, predictable evolutions."
+            >
+              <strong>Scalabilité</strong> — base saine, maintenance simple, évolutions plus prévisibles.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Résumé : que choisir ? -->
+        <section>
+          <h2
+            data-key="wp_custom_choice_title"
+            data-en="In short: which one to choose?"
+          >
+            En résumé : que choisir ?
+          </h2>
+          <ul class="list1">
+            <li
+              data-key="wp_custom_choice_item1"
+              data-en="<strong>Choose WordPress</strong> if you want to get online quickly, focus on content and keep a tight budget."
+            >
+              <strong>Choisissez WordPress</strong> si vous voulez un site vite en ligne, orienté contenu,
+              avec un budget serré.
+            </li>
+            <li
+              data-key="wp_custom_choice_item2"
+              data-en="<strong>Choose custom</strong> if you need <em>top performance</em>, a <em>unique design</em> and a solid technical base for the long term."
+            >
+              <strong>Choisissez le sur-mesure</strong> si vous recherchez des
+              <em>performances top</em>, un <em>design unique</em> et une base
+              technique solide pour le long terme.
+            </li>
+          </ul>
+        </section>
+
+        <!-- CTA principal -->
+        <div class="cta">
+          <h3
+            data-key="wp_custom_cta_title"
+            data-en="Still not sure?"
+          >
+            Vous hésitez encore ?
+          </h3>
+          <p
+            data-key="wp_custom_cta_text"
+            data-en="I help you choose the best option based on your goals, budget and timeline."
+          >
+            Je vous aide à choisir la meilleure option selon vos objectifs, votre budget et votre planning.
+          </p>
+          <a
+            class="button-cta1"
+            href="../TravaillerAvecMoi.html"
+            data-key="wp_custom_cta_button"
+            data-en="Get an expert opinion"
+          >
+            Obtenir un avis expert
+          </a>
+        </div>
+
+        <p class="back-blog">
+          <a
+            href="../blog.html"
+            data-key="wp_custom_back"
+            data-en="← Back to blog"
+          >
+            ← Retour au blog
+          </a>
+        </p>
+      </article>
+
+      <!-- Colonne droite -->
+      <aside class="post-droit">
+        <div class="post-droit-card">
+          <h4
+            data-key="wp_custom_summary_title"
+            data-en="Quick summary"
+          >
+            Résumé rapide
+          </h4>
+          <ul>
+            <li
+              data-key="wp_custom_summary_item1"
+              data-en="WP: fast, affordable, plugin ecosystem"
+            >
+              WP : rapide, économique, écosystème plugins
+            </li>
+            <li
+              data-key="wp_custom_summary_item2"
+              data-en="Limits: speed, security, technical debt"
+            >
+              Limites : vitesse, sécurité, dette technique
+            </li>
+            <li
+              data-key="wp_custom_summary_item3"
+              data-en="Custom: performance, unique design, scalable"
+            >
+              Sur-mesure : perf, design unique, évolutif
+            </li>
+          </ul>
+        </div>
+
+        <div class="post-droit-card">
+          <h4
+            data-key="wp_custom_help_title"
+            data-en="Let’s talk about your project"
+          >
+            Parlons de votre projet
+          </h4>
+          <p
+            data-key="wp_custom_help_text"
+            data-en="I guide you objectively: WordPress when it makes sense, custom when it’s more profitable."
+          >
+            Je vous oriente objectivement : WordPress quand c’est pertinent,
+            sur-mesure quand c’est rentable.
+          </p>
+          <a
+            class="button-cta2"
+            href="../TravaillerAvecMoi.html"
+            data-key="wp_custom_help_button"
+            data-en="Talk now"
+          >
+            Discuter maintenant
+          </a>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/in/thomashoudard/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img src="../images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a
+            href="https://github.com/ThomasHdrd"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <img src="../images/github.png" alt="GitHub" />
+          </a>
+          <a
+            href="mailto:contact@thomashoudard.com"
+            aria-label="Mail"
+          >
+            <img src="../images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span
+          style="font-size:0.7rem;color:var(--text-dim);"
+          data-key="footer_copyright"
+          data-en="©2025 Thomas Houdard · All rights reserved"
+        >
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+      <div class="footer-bottom">
+        <a
+          href="../blog.html"
+          data-key="footer_blog_link"
+          data-en="Blog"
+        >
+          Blog
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<script>
+     // Burger
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("open");          // anime l’icône
+    document.body.classList.toggle("menu-open"); // ouvre / ferme le menu
+});
+
+// Dropdown Portfolio (ouverture / fermeture en mobile)
+const dropdown = document.querySelector(".dropdown");
+const dropdownLink = document.querySelector(".dropdown > a");
+
+dropdownLink.addEventListener("click", (e) => {
+  if (window.innerWidth <= 768) {
+    e.preventDefault(); // empêche la navigation / scroll
+    dropdown.classList.toggle("open");
+  }
+});
+
+// Quand on ferme le burger → on referme aussi le dropdown
+burger.addEventListener("click", () => {
+  if (!document.body.classList.contains("menu-open")) {
+    dropdown.classList.remove("open");
+  }
+});
+
+
+    const applyLang = (lang) => {
+      document.querySelectorAll("[data-key]").forEach((el) => {
+        const k = el.getAttribute("data-key");
+        if (translations[lang][k]) el.textContent = translations[lang][k];
+      });
+      document.querySelectorAll(".lang-switch button").forEach((b) => {
+        b.classList.toggle("active", b.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem("lang", lang);
+    };
+
+    const initLang = () => {
+      const stored = localStorage.getItem("lang") || "fr";
+      applyLang(stored);
+    };
+
+    document.getElementById("langSwitch").addEventListener("click", (e) => {
+      if (e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+    });
+
+
+
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Prefetch CV
+    ["cv/CV_Thomas_Houdard.pdf", "cv/Resume_Thomas_Houdard.pdf"].forEach((url) => {
+      const link = document.createElement("link");
+      link.rel = "prefetch";
+      link.href = url;
+      document.head.appendChild(link);
+    });
+
+    initLang();
+</script>

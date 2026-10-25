@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Snake Game — Étude de cas | Thomas Houdard</title>
+<meta name="description" content="Implémentation du jeu Snake en JavaScript : gestion du mouvement, de la croissance et des collisions." />
+<meta property="og:title" content="Snake Game — Étude de cas" />
+<meta property="og:description" content="Projet JavaScript : boucle de jeu, score dynamique, contrôles clavier." />
+<meta property="og:url" content="https://thomashoudard.com/snake.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <li><a href="blog.html">Blog</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>            
+        </ul>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="snake_banner"></p>
+            <h1>SNAKE GAME</h1>
+            <p data-key="snake_pres_tagline"></p>
+            <div class="company-meta">
+                <span data-key="snake_meta_type"></span>
+                <span data-key="snake_meta_role"></span>
+                <span data-key="snake_meta_stack"></span>
+                <span data-key="snake_meta_date"></span>
+                <span data-key="snake_meta_duree"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>HTML</span>
+                <span class="badge"><span class="dot"></span>CSS</span>
+                <span class="badge"><span class="dot"></span>JavaScript</span>
+                <span class="badge"><span class="dot"></span>Game Loop</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%;"></a>
+                <a href="#links" class="btn btn-outline" data-key="snake_cta_links" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <img src="images/developpeur/snake.png" alt="Capture Snake Game" style="width:100%;border-radius:12px">
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="snake_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="snake_pres1"></p>
+                <p data-key="snake_pres2"></p>
+                <p data-key="snake_pres3"></p>
+            </div>
+        </div>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="snake_focus_title"></strong>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="snake_focus1"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="snake_focus2"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="snake_focus3"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="reveal" id="features" aria-labelledby="features-title">
+        <div class="section-header">
+            <h2 id="features-title" data-key="snake_features_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem">
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="snake_feature1"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="snake_feature2"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="snake_feature3"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="snake_feature4"></span></li>
+            <li style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent)">✔</span><span class="badge-alt" data-key="snake_feature5"></span></li>
+        </ul>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="reveal" id="technologies">
+        <div class="section-header">
+            <h2 data-key="titre_dev_technos"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/html.png" alt="HTML"></div>
+                <p class="tool-title">HTML</p>
+                <p class="tool-sub" data-key="snake_tech_html"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/css.png" alt="CSS"></div>
+                <p class="tool-title">CSS</p>
+                <p class="tool-sub" data-key="snake_tech_css"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/developpeur/logo/js.png" alt="JavaScript"></div>
+                <p class="tool-title">JavaScript</p>
+                <p class="tool-sub" data-key="snake_tech_js"></p>
+            </article>
+        </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="reveal" id="links">
+        <div class="section-header">
+            <h2 data-key="snake_links_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="links-btns" style="display:flex;justify-content:center;align-items:center;gap:1rem;width:100%;">
+            <a class="btn btn-primary" target="_blank" href="https://jeuduserpent.thomashoudard.com/" data-key="snake_button_site" style="flex:1;text-align:center;"></a>
+            <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/snake_game_JS" data-key="snake_button_code" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        snake_banner: "Jeu · Canvas · JavaScript",
+        snake_pres_tagline: "Implémentation du jeu Snake : déplacement, croissance, collisions et score.",
+        snake_meta_type: "PROJET : Jeu web",
+        snake_meta_role: "RÔLE : Développement JavaScript",
+        snake_meta_stack: "STACK : HTML · CSS · JS",
+        snake_meta_date: "DATE : 2024",
+        snake_meta_duree: "DURÉE : 2 jours",
+        snake_overview_title: "Présentation",
+        snake_pres1: "Snake Game est une version classique du jeu 'Snake' réalisée en JavaScript.",
+        snake_pres2: "Le joueur contrôle un serpent et doit manger la nourriture pour augmenter sa taille sans se percuter.",
+        snake_pres3: "Le code met l'accent sur une boucle de jeu simple et une logique claire de collisions.",
+        snake_focus_title: "Focus",
+        snake_focus1: "Gestion fluide du mouvement",
+        snake_focus2: "Logique de croissance segmentée",
+        snake_focus3: "Détection robuste des collisions",
+        snake_features_title: "Fonctionnalités",
+        snake_feature1: "Contrôles clavier (flèches)",
+        snake_feature2: "Croissance à chaque nourriture",
+        snake_feature3: "Score en direct",
+        snake_feature4: "Placement aléatoire de la nourriture",
+        snake_feature5: "Écran Game Over & restart",
+        titre_dev_technos: "Technologies utilisées",
+        snake_tech_html: "Structure et surface de rendu",
+        snake_tech_css: "Style simple et lisible",
+        snake_tech_js: "Boucle de jeu, états, collisions",
+        snake_links_title: "Liens",
+        snake_button_site: "Voir le jeu en ligne",
+        snake_button_code: "Voir le code sur GitHub",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_tools: "Voir les technologies",
+        snake_cta_features: "Fonctionnalités",
+        snake_cta_links: "Liens"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Work Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        snake_banner: "Game · Canvas · JavaScript",
+        snake_pres_tagline: "Snake implementation: movement, growth, collision, live score.",
+        snake_meta_type: "PROJECT: Web game",
+        snake_meta_role: "ROLE: JavaScript Development",
+        snake_meta_stack: "STACK: HTML · CSS · JS",
+        snake_meta_date: "DATE: 2024",
+        snake_meta_duree: "DURATION: 2 days",
+        snake_overview_title: "Overview",
+        snake_pres1: "Snake Game is a classic Snake recreation built in JavaScript.",
+        snake_pres2: "Player moves a snake, eats food to grow while avoiding self-collision.",
+        snake_pres3: "Focus on a clear game loop and collision logic.",
+        snake_focus_title: "Focus",
+        snake_focus1: "Smooth movement handling",
+        snake_focus2: "Segment-based growth logic",
+        snake_focus3: "Reliable collision detection",
+        snake_features_title: "Features",
+        snake_feature1: "Keyboard arrow controls",
+        snake_feature2: "Growth per food item",
+        snake_feature3: "Live score tracking",
+        snake_feature4: "Random food placement",
+        snake_feature5: "Game Over & restart",
+        titre_dev_technos: "Technologies used",
+        snake_tech_html: "Structure & render surface",
+        snake_tech_css: "Simple readable styling",
+        snake_tech_js: "Game loop, state, collisions",
+        snake_links_title: "Links",
+        snake_button_site: "Play live",
+        snake_button_code: "View code on GitHub",
+        cta_scroll_overview: "View overview",
+        cta_scroll_tools: "View technologies",
+        snake_cta_features: "Features",
+        snake_cta_links: "Links"
+    }
+};
+</script>
+</body>
+</html>

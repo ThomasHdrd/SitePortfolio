@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>7 erreurs de design qui font fuir vos clients | Blog Thomas Houdard</title>
+  <meta name="description" content="Les erreurs UX/UI les plus fréquentes qui font fuir vos visiteurs, et comment les corriger pour améliorer la conversion." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="7 erreurs de design qui font fuir vos clients" />
+  <meta property="og:description" content="Découvrez les 7 erreurs UX/UI les plus fréquentes et comment les corriger pour garder vos visiteurs." />
+  <meta property="og:url" content="https://thomashoudard.com/blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" />
+  <meta property="og:image" content="https://thomashoudard.com/images/blog/7-erreurs-design.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <script src="../script.js" defer></script>
+  <style>
+    :root {
+      --bg:#0f1115;
+      --bg-alt:#161920;
+      --bg-soft:#1f242c;
+      --text:#ffffff;
+      --text-dim:#8a93a5;
+      --primary:#4e7bff;
+      --primary-glow:#7fa1ff;
+      --accent:#ffcb66;
+      --danger:#ff5d5d;
+      --radius:14px;
+      --shadow:0 6px 24px -8px rgba(0,0,0,.4);
+      --gradient:linear-gradient(140deg,#4e7bff 0%,#6e5dff 55%,#ffcb66 120%);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body {
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:radial-gradient(circle at 20% 20%,#18202b 0%,#0f1115 70%);
+      color:var(--text);
+      line-height:1.58;
+      -webkit-font-smoothing:antialiased;
+    }
+    a {color:var(--primary);text-decoration:none}
+    a:hover {text-decoration:underline}
+    nav {
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(16px);
+      background:rgba(15,17,21,.72);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner {
+      max-width:1150px;margin:auto;
+      display:flex;align-items:center;gap:2rem;
+      padding:.9rem 1.4rem;
+    }
+    .brand-title h3 {font-family:"Plus Jakarta Sans";font-size:1.05rem;margin-bottom:.15rem;letter-spacing:.5px}
+    .brand-title small {font-size:.65rem;color:var(--text-dim);font-weight:600}
+    .menu {list-style:none;display:flex;gap:1.4rem;margin-left:auto}
+    .menu a {font-size:.85rem;font-weight:500;padding:.55rem .85rem;border-radius:8px;display:inline-block;position:relative}
+    .menu a.active,.menu a:hover {
+      background:var(--bg-soft);
+    }
+    .dropdown {position:relative}
+    .dropdown-content {
+      position:absolute;top:100%;left:0;
+      background:var(--bg-alt);
+      padding:.6rem .7rem;
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:10px;
+      display:none;flex-direction:column;min-width:200px;
+      box-shadow:var(--shadow);
+    }
+    .dropdown:hover .dropdown-content {display:flex}
+    .dropdown-content a {padding:.45rem .55rem;background:transparent}
+    .btn-taf-avec-moi {
+      background:var(--gradient);color:#fff;
+      box-shadow:0 4px 14px -4px rgba(78,123,255,.5);
+    }
+    .btn-taf-avec-moi:hover {filter:brightness(1.08)}
+    .lang-switch {display:flex;gap:.4rem}
+    .lang-switch button {
+      background:var(--bg-soft);color:var(--text-dim);border:none;
+      padding:.45rem .7rem;font-size:.65rem;font-weight:600;
+      border-radius:7px;cursor:pointer;letter-spacing:.5px
+    }
+    .lang-switch button.active {color:#fff;background:var(--primary)}
+    .en-tete {
+      max-width:1150px;margin:1.2rem auto 0;
+      font-size:.7rem;color:var(--text-dim);
+      letter-spacing:.6px;display:flex;align-items:center;gap:.5rem;
+      padding:0 1.4rem;
+    }
+    .post-banniere {
+      position:relative;max-width:1150px;margin:1.2rem auto 2.2rem;
+      border-radius:24px;overflow:hidden;
+      background:var(--bg-alt);
+      box-shadow:0 12px 42px -18px rgba(0,0,0,.55);
+    }
+    .post-banniere img {
+      width:100%;height:340px;object-fit:cover;display:block;
+      filter:brightness(.8) saturate(1.1);
+    }
+    .post-banniere_overlay {
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(15,17,21,.9) 0%,rgba(15,17,21,.4) 70%);
+    }
+    .post-banniere_content {
+      position:absolute;left:0;right:0;bottom:0;
+      padding:2.2rem 2.3rem;
+    }
+    .post-banniere_content h1 {
+      font-family:"Plus Jakarta Sans";font-size:2rem;
+      background:linear-gradient(90deg,#fff,#cdd6e5);-webkit-background-clip:text;color:transparent;
+      margin-bottom:.7rem;
+    }
+    .post-meta {font-size:.75rem;color:var(--text-dim);letter-spacing:.8px;font-weight:500;text-transform:uppercase}
+    .post-layout {
+      max-width:1150px;margin:auto;
+      display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2.3rem;
+      padding:0 1.4rem 4rem;
+    }
+    @media (max-width:980px){
+      .post-layout {grid-template-columns:1fr}
+      aside {order:-1}
+      .post-banniere img {height:260px}
+      .post-banniere_content {padding:1.5rem}
+      .post-banniere_content h1 {font-size:1.55rem}
+      .menu {display:none}
+    }
+    article.post {
+      background:var(--bg-alt);
+      padding:2.2rem 2.4rem;
+      border:1px solid rgba(255,255,255,.05);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+    article.post:before {
+      content:"";
+      position:absolute;top:0;left:0;right:0;height:4px;
+      background:var(--gradient);
+      border-radius:22px 22px 0 0;
+      opacity:.9;
+    }
+    .post-texte-intro {
+      font-size:1.02rem;line-height:1.55;
+      background:linear-gradient(90deg,#ffffff,#dce4f2);
+      -webkit-background-clip:text;color:transparent;
+      margin-bottom:1.8rem;
+      font-weight:500;
+    }
+    section {margin-bottom:1.6rem}
+    section h3 {
+      font-size:1.05rem;margin-bottom:.55rem;
+      font-weight:600;
+      display:flex;align-items:center;gap:.55rem;
+      position:relative;
+    }
+    section h3:before {
+      content:"";
+      width:26px;height:26px;border-radius:8px;
+      background:var(--bg-soft);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+    section p {font-size:.9rem;color:#d6dde9}
+    strong {color:#fff}
+    .cta {
+      margin:2.4rem 0 1.3rem;
+      background:linear-gradient(145deg,#1f242c 0%,#232a34 55%);
+      padding:2rem 2rem 2.1rem;
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:20px;
+      position:relative;
+      overflow:hidden;
+    }
+    .cta:before {
+      content:"";
+      position:absolute;inset:0;
+      background:radial-gradient(circle at 85% 15%,rgba(78,123,255,.35),transparent 60%);
+      pointer-events:none;
+    }
+    .cta h2 {
+      font-size:1.25rem;margin-bottom:.6rem;
+      font-family:"Plus Jakarta Sans";
+      background:linear-gradient(90deg,#fff,#b9c5d8);-webkit-background-clip:text;color:transparent;
+    }
+    .button-cta1,.button-cta2 {
+      display:inline-block;
+      background:var(--gradient);
+      color:#fff;
+      padding:.85rem 1.25rem;
+      font-size:.8rem;font-weight:600;
+      border-radius:14px;
+      letter-spacing:.6px;
+      margin-top:.6rem;
+      box-shadow:0 6px 18px -6px rgba(78,123,255,.55);
+      transition:.25s;
+    }
+    .button-cta1:hover,.button-cta2:hover {transform:translateY(-3px);filter:brightness(1.08)}
+    .back-blog a {
+      display:inline-block;margin-top:1.2rem;
+      font-size:.7rem;text-transform:uppercase;
+      letter-spacing:1.2px;color:var(--text-dim);
+      padding:.55rem .9rem;border-radius:10px;
+      background:var(--bg-soft);
+    }
+    aside {
+      display:flex;flex-direction:column;gap:1.4rem;
+    }
+    .post-droit-card {
+      background:var(--bg-alt);
+      padding:1.3rem 1.25rem 1.4rem;
+      border:1px solid rgba(255,255,255,.05);
+      border-radius:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .post-droit-card:before {
+      content:"";
+      position:absolute;inset:0;
+      background:radial-gradient(circle at 70% 0%,rgba(78,123,255,.18),transparent 60%);
+      opacity:.5;
+    }
+    .post-droit-card h4 {
+      font-size:.85rem;text-transform:uppercase;
+      letter-spacing:1.4px;font-weight:700;
+      margin-bottom:.75rem;
+      color:#fff;
+    }
+    .post-droit-card ul {list-style:none;display:grid;gap:.4rem}
+    .post-droit-card li {
+      font-size:.72rem;
+      padding:.45rem .55rem;
+      background:var(--bg-soft);
+      border-radius:9px;
+      letter-spacing:.5px;
+      display:flex;align-items:center;gap:.5rem;
+    }
+    .post-droit-card li:before {
+      content:"";
+      width:8px;height:8px;border-radius:50%;
+      background:var(--primary);
+      box-shadow:0 0 0 3px rgba(78,123,255,.35);
+    }
+    .post-droit-card p {
+      font-size:.78rem;line-height:1.4;color:#c8d0dc;
+      margin-bottom:.6rem;
+    }
+    footer {
+      border-top:1px solid rgba(255,255,255,.06);
+      background:#0d0f12;
+      padding:2.2rem 1.4rem 2.6rem;
+      margin-top:2rem;
+    }
+    .footer-inner {max-width:1150px;margin:auto}
+    .footer-top {
+      display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.4rem;
+    }
+    .social a img {
+      width:28px;height:28px;display:block;
+      filter:grayscale(40%) brightness(.9);
+      transition:.25s;
+    }
+    .social {display:flex;gap:.9rem}
+    .social a:hover img {filter:grayscale(0) brightness(1.15)}
+    ::selection {background:var(--primary);color:#fff}
+    /* Reading progress */
+    #progress {
+      position:fixed;top:0;left:0;height:3px;
+      background:var(--gradient);width:0;z-index:120;
+      box-shadow:0 0 0 1px #000,0 0 12px -3px rgba(255,203,102,.8);
+    }
+    /* Scrollbar */
+    body::-webkit-scrollbar {width:10px}
+    body::-webkit-scrollbar-track {background:#0f1115}
+    body::-webkit-scrollbar-thumb {background:var(--bg-soft);border-radius:20px}
+    body::-webkit-scrollbar-thumb:hover {background:#262d37}
+  </style>
+  <script>
+    // Progress bar
+    document.addEventListener('scroll',()=> {
+      const el=document.documentElement;
+      const scrolled=(el.scrollTop)/(el.scrollHeight-el.clientHeight)*100;
+      document.getElementById('progress').style.width=scrolled+'%';
+    });
+  </script>
+</head>
+<body>
+  <div id="progress"></div>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html#hero">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="../experiencesProfessionnelles.html">Expériences Pro</a>
+            <a href="../projetDesigner.html">Projets Design</a>
+            <a href="../projetDeveloppeur.html">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../TravaillerAvecMoi.html" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="en-tete">
+    <a href="../blog.html">Blog</a> <span>›</span> 7 erreurs de design qui font fuir vos clients
+  </div>
+
+  <header class="post-banniere">
+    <img src="images/7-erreurs-de-design-qui-font-fuir-vos-clients.png" alt="Erreurs de design UX/UI sur un site" width="1600" height="600" loading="lazy" />
+    <div class="post-banniere_overlay"></div>
+    <div class="post-banniere_content">
+      <h1>7 erreurs de design qui font fuir vos clients</h1>
+      <p class="post-meta">Lecture 3 min • Mis à jour 2025</p>
+    </div>
+  </header>
+
+  <main class="post-layout">
+    <article class="post">
+      <p class="post-texte-intro">
+        Un site peut être esthétique, mais inefficace. Beaucoup d’entreprises commettent
+        des erreurs de design qui réduisent leur crédibilité, leur lisibilité, et font fuir leurs visiteurs.
+        Voici les <strong>7 erreurs UX/UI les plus fréquentes</strong> et comment les corriger.
+      </p>
+
+      <section>
+        <h3>1. Texte illisible</h3>
+        <p>Une typographie trop petite, des couleurs mal contrastées, ou un fond trop chargé fatiguent la lecture.<br>
+          <strong>Solution :</strong> utilisez des polices lisibles (16px minimum), un contraste suffisant, et beaucoup d’espace blanc.</p>
+      </section>
+
+      <section>
+        <h3>2. Pas de bouton clair (CTA)</h3>
+        <p>Sans appel à l’action visible, le visiteur ne sait pas quoi faire.<br>
+          <strong>Solution :</strong> un bouton clair (“Demander un devis”, “Contactez-moi”) en haut de page et en bas.</p>
+      </section>
+
+      <section>
+        <h3>3. Site lent à charger</h3>
+        <p>Chaque seconde de plus = perte de 10% de visiteurs.<br>
+          <strong>Solution :</strong> compressez vos images, utilisez un hébergeur rapide et minimisez les scripts inutiles.</p>
+      </section>
+
+      <section>
+        <h3>4. Non adapté au mobile</h3>
+        <p>Plus de 60% du trafic vient du mobile. Un site non responsive donne une impression d’amateurisme.<br>
+          <strong>Solution :</strong> testez sur plusieurs tailles d’écran et adaptez vos blocs de contenu.</p>
+      </section>
+
+      <section>
+        <h3>5. Trop d’informations</h3>
+        <p>Un site trop chargé noie le message principal.<br>
+          <strong>Solution :</strong> hiérarchisez : titre, sous-titre, phrase clé, puis détail.</p>
+      </section>
+
+      <section>
+        <h3>6. Manque de cohérence graphique</h3>
+        <p>Changer de style entre les pages (couleurs, boutons, marges) casse la confiance.<br>
+          <strong>Solution :</strong> créez une charte visuelle simple et respectez-la sur tout le site.</p>
+      </section>
+
+      <section>
+        <h3>7. Aucune preuve de confiance</h3>
+        <p>Pas de témoignages, pas de mentions légales, pas de photos réelles : c’est suspect.<br>
+          <strong>Solution :</strong> ajoutez vos avis clients, logos partenaires, et votre visage sur la page contact.</p>
+      </section>
+
+      <div class="cta">
+        <h2>Votre site commet certaines de ces erreurs ?</h2>
+        <p>Je peux vous aider à les corriger et améliorer votre taux de conversion rapidement.</p>
+        <a class="button-cta1" href="../TravaillerAvecMoi.html">Optimiser mon site</a>
+      </div>
+
+      <p class="back-blog"><a href="../blog.html">← Retour au blog</a></p>
+    </article>
+
+    <aside>
+      <div class="post-droit-card">
+        <h4>Résumé rapide</h4>
+        <ul>
+          <li>Texte illisible</li>
+          <li>Pas de CTA</li>
+          <li>Site lent</li>
+          <li>Non mobile</li>
+          <li>Trop d’infos</li>
+          <li>Incohérences graphiques</li>
+          <li>Pas de réassurance</li>
+        </ul>
+      </div>
+
+      <div class="post-droit-card">
+        <h4>Besoin d’un audit ?</h4>
+        <p>J’analyse votre site gratuitement pour identifier vos points faibles et vous proposer des améliorations concrètes.</p>
+        <a class="button-cta2" href="../TravaillerAvecMoi.html">Demander un audit</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="../images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="../images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="../images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

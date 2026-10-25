@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-key="page_title" data-en="7 design mistakes that drive your customers away | Thomas Houdard Blog">7 erreurs de design qui font fuir vos clients | Blog Thomas Houdard</title>
+  <meta name="description" data-key="meta_description" content="Les erreurs UX/UI les plus fréquentes qui font fuir vos visiteurs, et comment les corriger pour améliorer la conversion." data-en="The most common UX/UI mistakes that make visitors leave, and how to fix them to improve conversion." />
+  <meta name="keywords" data-key="meta_keywords" content="design ux ui, erreurs site web, optimisation conversion, freelance design Montpellier" data-en="ux ui design, website mistakes, conversion optimization, freelance design Montpellier" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" data-key="og_title" content="7 erreurs de design qui font fuir vos clients" data-en="7 design mistakes that drive your customers away" />
+  <meta property="og:description" data-key="og_description" content="Découvrez les 7 erreurs UX/UI les plus fréquentes et comment les corriger pour garder vos visiteurs." data-en="Discover the 7 most common UX/UI mistakes and how to fix them to keep your visitors." />
+  <meta property="og:url" content="https://thomashoudard.com/blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" />
+  <meta property="og:image" content="https://thomashoudard.com/images/blog/7-erreurs-design.webp" />
+  <link rel="canonical" href="https://thomashoudard.com/blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
+  <style>
+  /* Fil d'Ariane au-dessus de la bannière */
+  .blog-container {
+      width: min(1400px, 92%);
+      margin: 0 auto 3rem;
+  }
+  .en-tete {
+      margin: 1.4rem auto 0.9rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+  }
+  .en-tete a {
+      color: var(--primary-soft);
+      font-weight: 600;
+  }
+  .en-tete a:hover {
+      color: var(--sand);
+  }
+
+  /* Bannière d’article */
+  .post-banniere {
+      margin: 0 auto 2.4rem;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      background: #05070b;
+  }
+  .post-banniere img {
+      width: 100%;
+      height: clamp(220px, 45vw, 380px);
+      object-fit: cover;
+      display: block;
+  }
+  .post-banniere_overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+          180deg,
+          rgba(5, 7, 11, 0.2),
+          rgba(5, 7, 11, 0.85)
+      );
+  }
+  .post-banniere_content {
+      position: absolute;
+      inset: auto 1.8rem 1.6rem;
+      max-width: 70%;
+  }
+  .post-banniere_content h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.7rem, 2.5vw, 2.1rem);
+      text-transform: none;
+      letter-spacing: 0.04em;
+      background: linear-gradient(
+          135deg,
+          #f8f7f3 0%,
+          var(--primary-soft) 40%,
+          var(--accent-soft) 100%
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+  }
+  .post-banniere_content .post-meta {
+      margin: 0;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+  }
+
+  /* Layout principal : article + colonne droite */
+  .post-layout {
+      margin: 0 auto 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+      gap: 2.6rem;
+      align-items: flex-start;
+  }
+
+  /* Bloc article */
+  .post {
+      background: var(--bg-soft);
+      border-radius: 18px;
+      border: var(--border-soft);
+      padding: 1.6rem 1.5rem 1.7rem;
+      box-shadow: var(--shadow-soft);
+  }
+  .post-texte-intro {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+  }
+  .post p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--text-dim);
+      margin: 0 0 0.85rem;
+      text-align: justify;
+  }
+  .post h2,
+  .post h3 {
+      margin: 1.5rem 0 0.6rem;
+      color: var(--sand);
+      text-transform: none;
+      letter-spacing: 0.04em;
+  }
+  .post section:first-of-type h3 {
+      margin-top: 0;
+  }
+
+  /* CTA dans l’article */
+  .cta {
+      margin: 2rem auto 1.6rem;
+      padding: 1.3rem 1.4rem 1.4rem;
+      border-radius: 16px;
+      border: var(--border-soft);
+      background:
+          radial-gradient(circle at 0 0, rgba(50,138,211,.22), transparent 60%),
+          var(--bg-soft-alt);
+      display: grid;
+      gap: 0.45rem;
+  }
+  .cta-section {
+      margin-top: 1.2rem;
+      margin-bottom: 0.8rem;
+  }
+  .cta h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      text-transform: none;
+      letter-spacing: 0.04em;
+      color: var(--sand);
+  }
+  .cta p {
+      margin: 0;
+      font-size: 0.9rem;
+  }
+
+  /* Boutons CTA */
+  .button-cta1,
+  .button-cta2 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background var(--trans), transform var(--trans),
+          box-shadow var(--trans), color var(--trans);
+      background: var(--grad-primary);
+      color: #05070b;
+      box-shadow: var(--shadow-soft);
+      text-decoration: none;
+  }
+  .button-cta1:hover,
+  .button-cta2:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.8);
+  }
+  .post-droit .button-cta2 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0.85rem 1.4rem;
+      box-sizing: border-box;
+      margin-top: 15px;
+  }
+
+  /* Lien retour */
+  .back-blog {
+      margin-top: 1.8rem;
+  }
+  .back-blog a {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--primary-soft);
+      text-decoration: none;
+  }
+  .back-blog a:hover {
+      color: var(--sand);
+  }
+
+  /* Colonne droite */
+  .post-droit {
+      display: grid;
+      gap: 1rem;
+      position: sticky;
+      top: 110px;
+      align-self: flex-start;
+      height: fit-content;
+  }
+  .post-droit-card {
+      background: var(--bg-soft);
+      border-radius: 16px;
+      border: var(--border-soft);
+      padding: 1rem 1.1rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+  }
+  .post-droit-card h4 {
+      margin: 0 0 0.45rem;
+      font-size: 0.86rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sand);
+  }
+  .post-droit-card p {
+      font-size: 0.9rem;
+      line-height: 1.45;
+  }
+  .post-droit-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.3rem;
+  }
+  .post-droit-card li {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+  }
+
+  .post section {
+      margin: 0 0 1.9rem;
+  }
+  .post section p {
+      margin: 10px 0 0 0;
+  }
+  .post p {
+      margin: 0 0 1.9rem;
+  }
+  .post h3 {
+      margin-top: 10px;
+  }
+  .post section p + p {
+      margin-top: 0.25rem;
+  }
+
+  @media (max-width: 900px) {
+      .post-layout {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          margin-bottom: 2.4rem;
+      }
+      .post-banniere_content {
+          inset: auto 1.2rem 1.25rem;
+          max-width: 100%;
+      }
+  }
+  @media (max-width: 600px) {
+      .post {
+          padding: 1.3rem 1.1rem 1.4rem;
+      }
+      .cta {
+          padding: 1.1rem 1.1rem 1.2rem;
+      }
+  }
+  </style>
+</head>
+<body>
+  <!-- Navigation (structure de base du site) -->
+  <nav>
+    <div class="name">
+      <h1 data-key="brand_name" data-en="Thomas Houdard">Thomas HOUDARD</h1>
+      <p data-key="brand_role" data-en="UI/UX Designer · Web Dev">UI/UX Designer · Dev Web</p>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+
+    <ul class="menu" id="menu">
+      <li><a href="../index.html" data-key="menu_about" data-en="About">À propos</a></li>
+      <li class="sousMenu">
+        <a href="#" data-key="menu_portfolio" data-en="Portfolio ▾">Portfolio ▾</a>
+        <div class="sousMenu-content">
+          <a href="../experiencesProfessionnelles.html" data-key="menu_exp_pro" data-en="Professional Experience">Expériences Pro</a>
+          <a href="../projetDesigner.html" data-key="menu_projects_design" data-en="Design Projects">Projets Design</a>
+          <a href="../projetDeveloppeur.html" data-key="menu_projects_dev" data-en="Dev Projects">Projets Dev</a>
+          <a href="../projetPersonnels.html" data-key="menu_projects_personal" data-en="Personal Projects">Projets Perso</a>
+        </div>
+      </li>
+      <li><a href="../contact.html" data-key="menu_contact" data-en="Contact">Contact</a></li>
+      <li><a class="travailleravecmoi" href="../TravaillerAvecMoi.html" data-key="menu_cv" data-en="Work with me">Travailler avec moi</a></li>
+      <li><a href="../blog.html" class="active" data-key="menu_blog" data-en="Blog">Blog</a></li>
+
+      <!-- Sélecteur de langue -->
+      <li class="lang-mobile">
+        <div class="lang-dropdown">
+          <button id="lang-button">
+            <img id="current-lang-img" src="../images/langSelect_FR.png" alt="Langue">
+            <span id="current-lang-text">FR</span>
+            <span id="dropdown-arrow">▾</span>
+          </button>
+          <ul id="lang-list">
+            <li id="lang-fr">
+              <img src="../images/langSelect_FR.png" alt="FR"> FR
+            </li>
+            <li id="lang-en">
+              <img src="../images/langSelect_EN.png" alt="EN"> EN
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="blog-container">
+    <div class="en-tete" data-key="breadcrumb_full" data-en="Blog › 7 design mistakes that drive your customers away">
+      <a href="../blog.html" data-key="breadcrumb_blog" data-en="Blog">Blog</a> <span>›</span>
+      <span data-key="breadcrumb_post" data-en="7 design mistakes that drive your customers away">7 erreurs de design qui font fuir vos clients</span>
+    </div>
+
+    <header class="post-banniere">
+      <img src="images/7-erreurs-de-design-qui-font-fuir-vos-clients.png"
+           alt="Erreurs de design UX/UI sur un site"
+           data-en-alt="UX/UI design mistakes on a website"
+           width="1600" height="600" loading="lazy">
+      <div class="post-banniere_overlay"></div>
+      <div class="post-banniere_content">
+        <h1 data-key="post_title" data-en="7 design mistakes that drive your customers away">7 erreurs de design qui font fuir vos clients</h1>
+        <p class="post-meta" data-key="post_meta" data-en="3 min read • Updated 2025">Lecture 3 min • Mis à jour 2025</p>
+      </div>
+    </header>
+
+    <main class="post-layout">
+      <article class="post">
+        <p class="post-texte-intro" data-key="intro_paragraph" data-en="A site can look nice but be ineffective. Many businesses make design mistakes that reduce credibility, readability, and push visitors away. Here are the 7 most common UX/UI errors and how to fix them.">
+          Un site peut être esthétique, mais inefficace. Beaucoup d’entreprises commettent
+          des erreurs de design qui réduisent leur crédibilité, leur lisibilité, et font fuir leurs visiteurs.
+          Voici les <strong data-key="intro_strong" data-en="7 most common UX/UI mistakes">7 erreurs UX/UI les plus fréquentes</strong> et comment les corriger.
+        </p>
+
+        <section>
+          <h3 data-key="error1_title" data-en="1. Illegible text">1. Texte illisible</h3>
+          <p data-key="error1_text" data-en="Typography that is too small, poor color contrast, or a busy background tires the reader. Solution: use readable fonts (16px minimum), sufficient contrast, and generous white space.">
+            Une typographie trop petite, des couleurs mal contrastées, ou un fond trop chargé fatiguent la lecture.<br>
+            <strong data-key="error1_solution_label" data-en="Solution:">Solution :</strong> utilisez des polices lisibles (16px minimum), un contraste suffisant, et beaucoup d’espace blanc.
+          </p>
+        </section>
+
+        <section>
+          <h3 data-key="error2_title" data-en="2. No clear CTA button">2. Pas de bouton clair (CTA)</h3>
+          <p data-key="error2_text" data-en="Without a visible call to action, the visitor does not know what to do. Solution: a clear button (“Request a quote”, “Contact me”) at top and bottom of page.">
+            Sans appel à l’action visible, le visiteur ne sait pas quoi faire.<br>
+            <strong data-key="error2_solution_label" data-en="Solution:">Solution :</strong> un bouton clair (“Demander un devis”, “Contactez-moi”) en haut de page et en bas.
+          </p>
+        </section>
+
+        <section>
+          <h3 data-key="error3_title" data-en="3. Slow loading site">3. Site lent à charger</h3>
+          <p data-key="error3_text" data-en="Each extra second = 10% visitor loss. Solution: compress images, use fast hosting, and minimize unnecessary scripts.">
+            Chaque seconde de plus = perte de 10% de visiteurs.<br>
+            <strong data-key="error3_solution_label" data-en="Solution:">Solution :</strong> compressez vos images, utilisez un hébergeur rapide et minimisez les scripts inutiles.
+          </p>
+        </section>
+
+        <section>
+          <h3 data-key="error4_title" data-en="4. Not mobile friendly">4. Non adapté au mobile</h3>
+          <p data-key="error4_text" data-en="Over 60% of traffic is mobile. A non-responsive site looks amateur. Solution: test on multiple screen sizes and adapt content blocks.">
+            Plus de 60% du trafic vient du mobile. Un site non responsive donne une impression d’amateurisme.<br>
+            <strong data-key="error4_solution_label" data-en="Solution:">Solution :</strong> testez sur plusieurs tailles d’écran et adaptez vos blocs de contenu.
+          </p>
+        </section>
+
+        <section>
+          <h3 data-key="error5_title" data-en="5. Too much information">5. Trop d’informations</h3>
+          <p data-key="error5_text" data-en="An overloaded site buries the main message. Solution: structure hierarchy: title, subtitle, key sentence, then detail.">
+            Un site trop chargé noie le message principal.<br>
+            <strong data-key="error5_solution_label" data-en="Solution:">Solution :</strong> hiérarchisez : titre, sous-titre, phrase clé, puis détail.
+          </p>
+        </section>
+
+        <section>
+          <h3 data-key="error6_title" data-en="6. Lack of visual consistency">6. Manque de cohérence graphique</h3>
+          <p data-key="error6_text" data-en="Switching styles between pages (colors, buttons, spacing) breaks trust. Solution: build a simple visual style guide and apply it everywhere.">
+            Changer de style entre les pages (couleurs, boutons, marges) casse la confiance.<br>
+            <strong data-key="error6_solution_label" data-en="Solution:">Solution :</strong> créez une charte visuelle simple et respectez-la sur tout le site.
+          </p>
+        </section>
+
+        <section>
+          <h3 data-key="error7_title" data-en="7. No trust signals">7. Aucune preuve de confiance</h3>
+          <p data-key="error7_text" data-en="No testimonials, no legal info, no real photos: it feels suspicious. Solution: add client reviews, partner logos, and your face on the contact page.">
+            Pas de témoignages, pas de mentions légales, pas de photos réelles : c’est suspect.<br>
+            <strong data-key="error7_solution_label" data-en="Solution:">Solution :</strong> ajoutez vos avis clients, logos partenaires, et votre visage sur la page contact.
+          </p>
+        </section>
+      </article>
+
+      <aside class="post-droit">
+        <div class="post-droit-card">
+          <h4 data-key="sidebar_summary_title" data-en="Quick summary">Résumé rapide</h4>
+          <ul>
+            <li data-key="summary_item1" data-en="Illegible text">Texte illisible</li>
+            <li data-key="summary_item2" data-en="No CTA">Pas de CTA</li>
+            <li data-key="summary_item3" data-en="Slow site">Site lent</li>
+            <li data-key="summary_item4" data-en="Not mobile">Non mobile</li>
+            <li data-key="summary_item5" data-en="Too much info">Trop d’infos</li>
+            <li data-key="summary_item6" data-en="Graphic inconsistencies">Incohérences graphiques</li>
+            <li data-key="summary_item7" data-en="No reassurance">Pas de réassurance</li>
+          </ul>
+        </div>
+
+        <div class="post-droit-card">
+          <h4 data-key="sidebar_audit_title" data-en="Need an audit?">Besoin d’un audit ?</h4>
+          <p data-key="sidebar_audit_text" data-en="I analyze your site for free to identify weaknesses and give you concrete improvements.">
+            J’analyse votre site gratuitement pour identifier vos points faibles et vous proposer des améliorations concrètes.
+          </p>
+          <a class="button-cta2" href="../TravaillerAvecMoi.html" data-key="sidebar_audit_button" data-en="Request an audit">Demander un audit</a>
+        </div>
+      </aside>
+    </main>
+
+    <section class="cta-section">
+      <div class="cta">
+        <h2 data-key="cta_title" data-en="Does your site make some of these mistakes?">Votre site commet certaines de ces erreurs ?</h2>
+        <p data-key="cta_text" data-en="I can help you fix them and increase your conversion rate quickly.">Je peux vous aider à les corriger et améliorer votre taux de conversion rapidement.</p>
+        <a class="button-cta1" href="../TravaillerAvecMoi.html" data-key="cta_button" data-en="Optimize my site">Optimiser mon site</a>
+      </div>
+    </section>
+
+    <p class="back-blog"><a href="../blog.html" data-key="back_blog" data-en="← Back to blog">← Retour au blog</a></p>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="../images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="../images/github.png" alt="GitHub"></a>
+        <a href="mailto:contact@thomashoudard.com" class="social-icon" target="_blank"><img src="../images/email.png" alt="Email"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="blog.html" data-key="footer_blog_link" data-en="Blog">Blog</a>
+      <p data-key="footer_copyright" data-en="©2025, Thomas Houdard, All rights reserved">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- Script de bascule FR/EN basé sur data-key / data-en -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const htmlEl = document.documentElement;
+
+    // Sauvegarde FR initiale
+    const originalContent = {};
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (key && originalContent[key] == null) {
+        originalContent[key] = el.innerHTML.trim();
+      }
+    });
+
+    // Alt FR
+    const originalAlt = new Map();
+    document.querySelectorAll('[data-en-alt]').forEach(img => {
+      originalAlt.set(img, img.getAttribute('alt'));
+    });
+
+    function setLanguage(lang) {
+      const isEN = lang === 'en';
+      htmlEl.setAttribute('lang', isEN ? 'en' : 'fr');
+
+      // Menu dropdown (images)
+      const currentImg = document.getElementById('current-lang-img');
+      const currentText = document.getElementById('current-lang-text');
+      if (currentImg && currentText) {
+        currentImg.src = isEN ? '../images/langSelect_EN.png' : '../images/langSelect_FR.png';
+        currentText.textContent = isEN ? 'EN' : 'FR';
+      }
+
+      // Contenu textuel
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const en = el.getAttribute('data-en');
+        const key = el.getAttribute('data-key');
+        if (!key) return;
+
+        if (isEN && en) {
+          if (el.tagName === 'META') {
+            el.setAttribute('content', en);
+          } else if (el.tagName === 'TITLE') {
+            el.textContent = en;
+          } else {
+            el.innerHTML = en;
+          }
+        } else {
+          const fr = originalContent[key];
+            if (fr !== undefined) {
+              if (el.tagName === 'META') {
+                // meta content déjà FR au chargement
+              } else if (el.tagName === 'TITLE') {
+                el.textContent = fr;
+              } else {
+                el.innerHTML = fr;
+              }
+            }
+        }
+      });
+
+      // Alt des images
+      document.querySelectorAll('[data-en-alt]').forEach(img => {
+        if (isEN) {
+          const enAlt = img.getAttribute('data-en-alt');
+          if (enAlt) img.setAttribute('alt', enAlt);
+        } else {
+          const frAlt = originalAlt.get(img);
+          if (frAlt) img.setAttribute('alt', frAlt);
+        }
+      });
+
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    // Dropdown langue du header
+    const langFr = document.getElementById('lang-fr');
+    const langEn = document.getElementById('lang-en');
+    if (langFr) langFr.addEventListener('click', () => setLanguage('fr'));
+    if (langEn) langEn.addEventListener('click', () => setLanguage('en'));
+
+    // Initialisation
+    const saved = localStorage.getItem('preferredLang');
+    setLanguage(saved === 'en' ? 'en' : 'fr');
+  });
+  </script>
+</body>
+</html>

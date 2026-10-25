@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pack Design — UX/UI | Thomas Houdard</title>
+    <meta name="description" content="Pack Design : maquettes modernes et efficaces, orientées conversion. Livraison Figma, prêtes pour l’intégration." />
+    <meta property="og:title" content="Pack Design — UX/UI" />
+    <meta property="og:description" content="Offre Pack Design : UX, UI, Figma, structure claire et orientée objectifs." />
+    <meta property="og:url" content="https://thomashoudard.com/commande-design.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi active" data-key="menu_cv"></a></li>
+                <li><a href="blog.html">Blog</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>                
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="pack_banner"></p>
+                <h1 data-key="pack_title"></h1>
+                <p data-key="pack_pres_tagline"></p>
+                <div class="company-meta">
+                    <span data-key="pack_meta_type"></span>
+                    <span data-key="pack_meta_role"></span>
+                    <span data-key="pack_meta_stack"></span>
+                    <span data-key="pack_meta_date"></span>
+                    <span data-key="pack_meta_duree"></span>
+                </div>
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>Figma</span>
+                    <span class="badge"><span class="dot"></span>UX</span>
+                    <span class="badge"><span class="dot"></span>UI</span>
+                    <span class="badge"><span class="dot"></span>Responsive</span>
+                    <span class="badge"><span class="dot"></span>Styleguide</span>
+                </div>
+                <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                    <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview"></a>
+                    <a href="#inclus" class="btn btn-outline" data-key="pack_cta_inclus"></a>
+                    <a href="#estimate" class="btn btn-outline" data-key="cta_scroll_estimate"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="reveal" id="overview">
+            <div class="section-header">
+                <h2 data-key="pack_overview_title" style="margin-bottom:0;"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+                <div>
+                    <p data-key="pack_pres1"></p>
+                    <p data-key="pack_pres2"></p>
+                    <p data-key="pack_pres3"></p>
+                </div>
+            </div>
+            <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+                <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="pack_focus_title"></strong>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                    <li style="display:flex;gap:.5rem;"><span style="color:var(--accent)">▹</span><span data-key="pack_focus1"></span></li>
+                    <li style="display:flex;gap:.5rem;"><span style="color:var(--accent)">▹</span><span data-key="pack_focus2"></span></li>
+                    <li style="display:flex;gap:.5rem;"><span style="color:var(--accent)">▹</span><span data-key="pack_focus3"></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- POUR QUI -->
+        <section class="reveal" id="pour-qui" aria-labelledby="pour-qui-title">
+            <div class="section-header">
+            <h2 id="pour-qui-title" data-key="pour_qui_title"></h2>
+            <div class="bar"></div>
+            </div>
+            <ul class="grid" role="list" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+            <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem; color: var(--text-dim);">
+                <span aria-hidden="true">💼</span>
+                <span data-key="pour_qui_indep"></span>
+            </li>
+            <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem; color: var(--text-dim);">
+                <span aria-hidden="true">🚀</span>
+                <span data-key="pour_qui_startup"></span>
+            </li>
+            <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem; color: var(--text-dim);">
+                <span aria-hidden="true">🏢</span>
+                <span data-key="pour_qui_entreprise"></span>
+            </li>
+            <li class="badge-alt" style="display:flex;align-items:flex-start;gap:.6rem; color: var(--text-dim);">
+                <span aria-hidden="true">💡</span>
+                <span data-key="pour_qui_personnel"></span>
+            </li>
+            </ul>
+        </section>
+
+        <!-- OBJECTIFS -->
+        <section class="reveal" id="objectifs">
+            <div class="section-header">
+                <h2 data-key="objectif_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.75rem">
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="objectif_clarity"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="objectif_structure"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span style="color:var(--accent)">✔</span><span data-key="objectif_actions"></span></li>
+            </ul>
+        </section>
+
+        <!-- CARTES INFO -->
+        <section class="reveal" id="facts">
+            <div class="section-header">
+                <h2 data-key="pack_facts_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+                <article class="tool-card">
+                    <p class="tool-title" style="font-size: 18px;" data-key="carte1"></p>
+                    <p class="tool-sub" data-key="carte1_texte"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" style="font-size: 18px;" data-key="carte2"></p>
+                    <p class="tool-sub" data-key="carte2_texte"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" style="font-size: 18px;" data-key="carte3"></p>
+                    <p class="tool-sub" data-key="carte3_texte"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- INCLUS -->
+        <section class="reveal" id="inclus" aria-labelledby="inclus-title">
+            <div class="section-header">
+            <h2 id="inclus-title" data-key="inclus_title"></h2>
+            <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+            <article style="display:grid;gap:.75rem">
+                <h3 data-key="inclus_livrables"></h3>
+                <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">✔</span><span data-key="inclus_livrable_mockups"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">✔</span><span data-key="inclus_livrable_styleguide"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">✔</span><span data-key="inclus_livrable_revisions"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">✔</span><span data-key="inclus_livrable_source"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">✔</span><span data-key="inclus_livrable_exports"></span></li>
+                </ul>
+            </article>
+            <article style="display:grid;gap:.75rem">
+                <h3 data-key="inclus_method"></h3>
+                <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">→</span><span data-key="inclus_method_brief"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">→</span><span data-key="inclus_method_wireframe"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">→</span><span data-key="inclus_method_design"></span></li>
+                </ul>
+            </article>
+            </div>
+        </section>
+
+        <!-- OPTIONNELS -->
+        <section class="reveal" id="optionnels" aria-labelledby="optionnels-title">
+            <div class="section-header">
+            <h2 id="optionnels-title" data-key="optionals_title"></h2>
+            <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+            <article style="display:grid;gap:.75rem">
+                <h3 data-key="optionals_ui_title"></h3>
+                <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">+</span><span data-key="optionals_ui_prototype"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">+</span><span data-key="optionals_ui_system"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">+</span><span data-key="optionals_ui_pages"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">+</span><span data-key="optionals_ui_darkmode"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">+</span><span data-key="optionals_ui_express"></span></li>
+                </ul>
+            </article>
+            <article style="display:grid;gap:.75rem">
+                <h3 data-key="optionals_assets_title"></h3>
+                <ul role="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.55rem">
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">☆</span><span data-key="optionals_assets_logo"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">☆</span><span data-key="optionals_assets_illustrations"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">☆</span><span data-key="optionals_assets_mockups"></span></li>
+                <li style="display:flex;align-items:flex-start;gap:.5rem;color: var(--text-dim);"><span aria-hidden="true" style="color:var(--accent)">☆</span><span data-key="optionals_assets_stock"></span></li>
+                </ul>
+            </article>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="reveal" id="process">
+            <div class="section-header">
+                <h2 data-key="process_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+                <article class="tool-card">
+                    <p class="tool-title" data-key="process_step1_title"></p>
+                    <p class="tool-sub" data-key="process_step1_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="process_step2_title"></p>
+                    <p class="tool-sub" data-key="process_step2_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="process_step3_title"></p>
+                    <p class="tool-sub" data-key="process_step3_text"></p>
+                </article>
+                <article class="tool-card">
+                    <p class="tool-title" data-key="process_step4_title"></p>
+                    <p class="tool-sub" data-key="process_step4_text"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ESTIMATION -->
+        <section class="reveal section-estimate" id="estimate" aria-labelledby="estimate-title" style="width:100%;">
+            <div class="section-header">
+            <h2 id="estimate-title" data-key="estimate_title"></h2>
+            <div class="bar"></div>
+            </div>
+
+            <!-- Options -->
+            <div class="estimation-options" style="display:grid;gap:1rem;width:90%">
+            <fieldset style="border:0;padding:0;margin:0;display:grid;gap:.75rem">
+                <legend class="visually-hidden">Modules optionnels</legend>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="70">
+                    <span data-key="estimate_prototype"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+70€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="120">
+                    <span data-key="estimate_system"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+120€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="50">
+                    <span data-key="estimate_darkmode"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+50€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="60">
+                    <span data-key="estimate_mockups"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+60€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="30">
+                    <span data-key="estimate_stock"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+30€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="50">
+                    <span data-key="estimate_logo"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+50€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label class="estimation-option" style="display:flex;gap:.6rem;align-items:center;flex:1;min-width:240px;cursor:pointer">
+                    <input type="checkbox" class="opt" data-price="50">
+                    <span data-key="estimate_express"></span>
+                </label>
+                <span class="price" style="font-weight:600;color:var(--accent)">+50€</span>
+                </div>
+
+                <div class="estimation-container" style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)">
+                <label for="qty" style="display:flex;align-items:center;gap:.6rem;flex:1;min-width:240px;cursor:text" data-key="estimate_pages"></label>
+                <div style="display:flex;align-items:center;gap:.6rem">
+                    <input id="qty" class="qty-input" type="number" min="0" step="1" value="0" data-unit="45" style="width:90px;padding:.4rem .5rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text)">
+                    <span class="price" id="section-unit" style="font-weight:600;color:var(--accent)"></span>
+                </div>
+                </div>
+            </fieldset>
+            </div>
+
+            <!-- Total -->
+            <div class="total-container" style="border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:grid;gap:.9rem;width:100%;margin:1.4rem 0 0;background:var(--bg-soft)">
+            <p class="note" data-key="estimate_note" style="margin:0;font-size:.9rem;opacity:.85"></p>
+            <div class="total" style="display:flex;align-items:center;justify-content:space-between;">
+                <p data-key="estimate_total" style="margin:0;font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:.8rem;opacity:.8"></p>
+                <h1 id="total" style="margin:0;font-size:35px;line-height:1;color:var(--accent)">150€</h1>
+            </div>
+            </div>
+
+            <!-- Form -->
+            <article class="tool-card" style="display:grid;gap:1rem;margin-top:2rem">
+                <form id="devis-form" action="https://formspree.io/f/mqayadbr" method="POST" style="margin:0;display:grid;gap:1rem;width:100%">
+                    <div class="client-fields" style="display:grid;gap:.4rem">
+                        <label for="clientName" data-key="form_name"></label>
+                        <input id="clientName" name="nom_prenom" type="text" data-i18n-attr="placeholder" data-key="form_name_placeholder" required style="padding:.65rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);">
+                    </div>
+                    <div class="client-fields" style="display:grid;gap:.4rem">
+                        <label for="clientEmail" data-key="form_email"></label>
+                        <input id="clientEmail" name="email" type="email" data-i18n-attr="placeholder" data-key="form_email_placeholder" required style="padding:.65rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);">
+                    </div>
+                    <div class="client-fields" style="display:grid;gap:.4rem">
+                        <label for="clientMessage" data-key="form_message"></label>
+                        <textarea id="clientMessage" name="message" rows="4" data-i18n-attr="placeholder" data-key="form_message_placeholder" style="padding:.65rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);resize:vertical"></textarea>
+                    </div>
+
+                    <input type="hidden" name="estimation_detail" id="estimation_detail">
+                    <input type="hidden" name="estimation_total" id="estimation_total">
+                    <input type="hidden" name="_subject" value="Demande de devis — Estimation depuis le site">
+                    <input type="hidden" name="_next" value="https://thomashoudard.com/merci.html">
+
+                    <button type="submit" class="btn btn-primary" data-key="form_submit" style="height:52px;font-size:.85rem;letter-spacing:.5px"></button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const translations = {
+        fr: {
+            menu_about: "Accueil",
+            menu_portfolio: "Portfolio ▾",
+            menu_exp_pro: "Expériences Professionnelles",
+            menu_projects_design: "Projets Design",
+            menu_projects_dev: "Projets Développement",
+            menu_projects_personal: "Perso",
+            menu_contact: "Contact",
+            menu_cv: "Travailler avec moi",
+            footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+            pack_banner: "Design · UX · Figma",
+            pack_title: "PACK DESIGN",
+            pack_pres_tagline: "Maquettes modernes, claires et orientées conversion — livraison Figma, prêtes pour l’intégration.",
+            pack_meta_type: "OFFRE : Pack Design UI",
+            pack_meta_role: "RÔLE : UX · UI Design",
+            pack_meta_stack: "OUTILS : Figma · Styleguide",
+            pack_meta_date: "DATE : 2025",
+            pack_meta_duree: "DURÉE : 3–10 j ouvrés",
+
+            cta_scroll_overview: "Voir la présentation",
+            pack_cta_inclus: "Voir ce qui est inclus",
+            pack_cta_optionals: "Modules optionnels",
+            cta_scroll_process: "Processus",
+            cta_scroll_estimate: "Estimation rapide",
+
+            pack_overview_title: "Présentation",
+            pack_pres1: "Je conçois une expérience claire et efficace pour présenter votre activité et atteindre vos objectifs (devis, contact, ventes).",
+            pack_pres2: "Livraison Figma, prête pour l’intégration. Design responsive et hiérarchie de l’information soignée.",
+            pack_pres3: "2 allers-retours inclus et styleguide léger pour assurer la cohérence visuelle.",
+            pack_focus_title: "Focus",
+            pack_focus1: "Clarté du message et de la proposition de valeur",
+            pack_focus2: "Parcours simple, structure orientée objectifs",
+            pack_focus3: "Maquettes propres, réutilisables et modulaires",
+
+            pour_qui_title: "Pour qui est ce pack ?",
+            pour_qui_indep: "Indépendant ou PME → obtenir un site pro et clair qui rassure.",
+            pour_qui_startup: "Startup → lancer une landing page efficace qui convertit.",
+            pour_qui_entreprise: "Entreprise → moderniser la vitrine digitale et l’image.",
+            pour_qui_personnel: "Projet personnel → donner vie à l’idée avec un design esthétique et moderne.",
+
+            objectif_title: "Objectifs traités",
+            objectif_clarity: "Clarifier l’offre et la valeur ajoutée → rendre la proposition simple et convaincante.",
+            objectif_structure: "Structurer l’information → guider pas à pas pour trouver vite ce qui compte.",
+            objectif_actions: "Optimiser les actions clés → encourager le passage à l’action (contact, devis, achat).",
+
+            pack_facts_title: "Informations clés",
+            carte1: "À partir de 150€",
+            carte1_texte: "Pack de base",
+            carte2: "3 – 10 jours ouvrés",
+            carte2_texte: "Délai indicatif",
+            carte3: "100% sur-mesure",
+            carte3_texte: "Adapté à vos objectifs",
+
+            inclus_title: "Ce qui est inclus",
+            inclus_livrables: "Livrables",
+            inclus_livrable_mockups: "Maquettes haute-fidélité (mobile ou desktop) — Figma",
+            inclus_livrable_styleguide: "1 version au choix (mobile ou desktop)",
+            inclus_livrable_revisions: "2 révisions incluses",
+            inclus_livrable_source: "UI simple + fichier source (Figma)",
+            inclus_livrable_exports: "Exports PNG/SVG si besoin pour intégration",
+            inclus_method: "Méthode",
+            inclus_method_brief: "Brief express & cadrage des objectifs",
+            inclus_method_wireframe: "Wireframe rapide si nécessaire",
+            inclus_method_design: "Design UI final, prêt à intégrer",
+
+            optionals_title: "Modules optionnels",
+            optionals_ui_title: "Expérience & UI",
+            optionals_ui_prototype: "Prototype interactif (parcours cliquable Figma) — +70€",
+            optionals_ui_system: "Design system light (palette, typos, composants) — +120€",
+            optionals_ui_pages: "Sections / pages supplémentaires — +45€/page",
+            optionals_ui_darkmode: "Dark mode (clair & sombre) — +50€",
+            optionals_ui_express: "Livraison express 48h-72h — +50€",
+            optionals_assets_title: "Identité & assets",
+            optionals_assets_logo: "Logo simple / refonte légère — +50€",
+            optionals_assets_illustrations: "Illustrations (sélection & retouches) — +50€",
+            optionals_assets_mockups: "Mockups marketing — +60€",
+            optionals_assets_stock: "Banque d’images (sélection & achat) — +30€",
+
+            process_title: "Processus simple et rapide",
+            process_step1_title: "01 • Cadrage",
+            process_step1_text: "Échange 20–30 min pour objectifs, audience et contenus disponibles.",
+            process_step2_title: "02 • Structure",
+            process_step2_text: "Hiérarchie des informations + wireframe si nécessaire.",
+            process_step3_title: "03 • Design",
+            process_step3_text: "Maquettes haute-fidélité (desktop & mobile) selon votre identité.",
+            process_step4_title: "04 • Livraison",
+            process_step4_text: "Fichier Figma, exports si besoin, support pour intégration.",
+
+            estimate_title: "Estimation rapide",
+            estimate_prototype: "Prototype interactif (parcours cliquable dans Figma)",
+            estimate_system: "Design system light (palette, typos, composants clés, UI kit)",
+            estimate_darkmode: "Dark mode (version claire & sombre)",
+            estimate_mockups: "Mockups marketing (présentation réaliste pour pitch client)",
+            estimate_stock: "Banque d’images libres de droits (sélection & achat)",
+            estimate_logo: "Logo simple / refonte légère (version vectorielle .svg)",
+            estimate_express: "Livraison express 48h-72h (délai indicatif selon charge)",
+            estimate_pages: "Sections / pages supplémentaires",
+            estimate_note: "Sélectionnez vos options, indiquez vos coordonnées ci-dessous et recevez rapidement votre devis personnalisé.",
+            estimate_total: "Total estimé",
+
+            form_name: "Nom & Prénom",
+            form_name_placeholder: "Votre nom et prénom",
+            form_email: "Email",
+            form_email_placeholder: "votre@email.com",
+            form_message: "Votre message",
+            form_message_placeholder: "Quelques précisions (contenus, objectifs, délais)…",
+            form_submit: "DEMANDER LE DEVIS"
+        },
+        en: {
+            menu_about: "Home",
+            menu_portfolio: "Portfolio ▾",
+            menu_exp_pro: "Work Experience",
+            menu_projects_design: "Design Projects",
+            menu_projects_dev: "Development Projects",
+            menu_projects_personal: "Personal",
+            menu_contact: "Contact",
+            menu_cv: "Work with me",
+            footer: "©2025 Thomas Houdard · All rights reserved",
+
+            pack_banner: "Design · UX · Figma",
+            pack_title: "PACK DESIGN",
+            pack_pres_tagline: "Modern, clear and conversion-oriented mockups — delivered in Figma, ready for integration.",
+            pack_meta_type: "OFFER: UI Design Pack",
+            pack_meta_role: "ROLE: UX · UI Design",
+            pack_meta_stack: "TOOLS: Figma · Styleguide",
+            pack_meta_date: "DATE: 2025",
+            pack_meta_duree: "DURATION: 3–10 business days",
+
+            cta_scroll_overview: "View overview",
+            pack_cta_inclus: "See what's included",
+            pack_cta_optionals: "Optional modules",
+            cta_scroll_process: "Process",
+            cta_scroll_estimate: "Quick estimate",
+
+            pack_overview_title: "Overview",
+            pack_pres1: "I design a clear and effective experience to present your activity and reach your goals (quotes, contact, sales).",
+            pack_pres2: "Figma delivery, ready for integration. Responsive design with clean information hierarchy.",
+            pack_pres3: "2 revision rounds included and a light styleguide to ensure visual consistency.",
+            pack_focus_title: "Focus",
+            pack_focus1: "Clarity of message and value proposition",
+            pack_focus2: "Simple flow, goal-driven structure",
+            pack_focus3: "Clean, reusable and modular mockups",
+
+            pour_qui_title: "Who is this for?",
+            pour_qui_indep: "Freelancer or SMB → get a professional, reassuring site.",
+            pour_qui_startup: "Startup → launch an efficient, converting landing page.",
+            pour_qui_entreprise: "Company → modernize your digital showcase and brand image.",
+            pour_qui_personnel: "Personal project → bring your idea to life with modern aesthetics.",
+
+            objectif_title: "Handled objectives",
+            objectif_clarity: "Clarify the offer and value → make the proposition simple and convincing.",
+            objectif_structure: "Structure information → guide users to what matters quickly.",
+            objectif_actions: "Optimize key actions → encourage contact, quote, purchase.",
+
+            pack_facts_title: "Key facts",
+            carte1: "From €150",
+            carte1_texte: "Base pack",
+            carte2: "3–10 business days",
+            carte2_texte: "Indicative lead time",
+            carte3: "100% custom",
+            carte3_texte: "Aligned with your goals",
+
+            inclus_title: "What's included",
+            inclus_livrables: "Deliverables",
+            inclus_livrable_mockups: "High-fidelity mockups (mobile or desktop) — Figma",
+            inclus_livrable_styleguide: "1 version of your choice (mobile or desktop)",
+            inclus_livrable_revisions: "2 revision rounds included",
+            inclus_livrable_source: "Simple UI + source file (Figma)",
+            inclus_livrable_exports: "PNG/SVG exports if needed",
+            inclus_method: "Method",
+            inclus_method_brief: "Express brief & goals framing",
+            inclus_method_wireframe: "Quick wireframe if needed",
+            inclus_method_design: "Final UI design, ready to integrate",
+
+            optionals_title: "Optional modules",
+            optionals_ui_title: "Experience & UI",
+            optionals_ui_prototype: "Interactive prototype (clickable flow in Figma) — +€70",
+            optionals_ui_system: "Light design system (palette, fonts, key components) — +€120",
+            optionals_ui_pages: "Extra sections / pages — +€45/page",
+            optionals_ui_darkmode: "Dark mode (light & dark) — +€50",
+            optionals_ui_express: "Express delivery 48–72h — +€50",
+            optionals_assets_title: "Identity & assets",
+            optionals_assets_logo: "Simple logo / light refresh — +€50",
+            optionals_assets_illustrations: "Illustrations (selection & touch-ups) — +€50",
+            optionals_assets_mockups: "Marketing mockups — +€60",
+            optionals_assets_stock: "Stock images (selection & purchase) — +€30",
+
+            process_title: "Simple and fast process",
+            process_step1_title: "01 • Framing",
+            process_step1_text: "20–30 min chat to understand goals, audience and content.",
+            process_step2_title: "02 • Structure",
+            process_step2_text: "Information hierarchy + quick wireframe if needed.",
+            process_step3_title: "03 • Design",
+            process_step3_text: "High-fidelity mockups (desktop & mobile) aligned with your identity.",
+            process_step4_title: "04 • Delivery",
+            process_step4_text: "Figma file, exports if needed, and integration support.",
+
+            estimate_title: "Quick estimate",
+            estimate_prototype: "Interactive prototype (clickable flow in Figma)",
+            estimate_system: "Light design system (palette, fonts, components, UI kit)",
+            estimate_darkmode: "Dark mode (light & dark versions)",
+            estimate_mockups: "Marketing mockups (realistic presentation)",
+            estimate_stock: "Royalty-free stock images (selection & purchase)",
+            estimate_logo: "Simple logo / light refresh (vector .svg)",
+            estimate_express: "Express delivery 48–72h (indicative, workload-dependent)",
+            estimate_pages: "Extra sections / pages",
+            estimate_note: "Select your options, add your info below and receive your tailored quote quickly.",
+            estimate_total: "Estimated total",
+
+            form_name: "Full name",
+            form_name_placeholder: "Your first and last name",
+            form_email: "Email",
+            form_email_placeholder: "you@email.com",
+            form_message: "Your message",
+            form_message_placeholder: "Details (content, goals, timelines)…",
+            form_submit: "REQUEST A QUOTE"
+        }
+    };
+    </script>
+</body>
+</html>

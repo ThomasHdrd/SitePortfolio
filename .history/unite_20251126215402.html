@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UNITE — Étude de cas Game/Level Design | Thomas Houdard</title>
+    <meta name="description" content="UNITE : Jeu coopétitif rapide, Game & Level Design, prototypage Blueprint, UI/UX, playtests et document GDD." />
+    <meta property="og:title" content="UNITE — Étude de cas Game/Level Design" />
+    <meta property="og:description" content="Jeu coopétitif événementiel. Game Design, Level Design, prototypage Blueprint, UI/UX et tests." />
+    <meta property="og:url" content="https://thomashoudard.com/unite.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+                <li><a href="blog.html">Blog</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>                
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="unite_banner_tags"></p>
+                <h1 data-key="unite_hero_title"></h1>
+                <p data-key="unite_pres1"></p>
+                <p data-key="unite_pres2"></p>
+                <p data-key="unite_pres3"></p>
+                <div class="company-meta">
+                    <span data-key="unite_pres_liste5"></span>
+                    <span data-key="unite_pres_liste6"></span>
+                    <span data-key="unite_pres_liste4"></span>
+                    <span data-key="unite_pres_liste7"></span>
+                </div>
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>Game Design</span>
+                    <span class="badge"><span class="dot"></span>Level Design</span>
+                    <span class="badge" data-key="unite_badge_prototype"><span class="dot"></span>Prototypage</span>
+                    <span class="badge"><span class="dot"></span>UI & UX</span>
+                    <span class="badge"><span class="dot"></span>Playtests</span>
+                    <span class="badge"><span class="dot"></span>Feedback</span>
+                </div>
+                <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                    <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%;"></a>
+                    <a href="https://docs.google.com/document/d/1qWWYTfAxTM6VWUA1-mOaAr23jHWhJYGPYz76ovoLdNE/edit?usp=sharing" target="_blank" class="btn btn-outline" data-key="unite_button" style="width: 100%;"></a>
+                </div>
+            </div>
+            <div class="video-wrap" style="align-self:start">
+                <div class="proto-wrap">
+                    <video controls style="width:100%;border-radius:12px">
+                        <source src="videos/UNITY TRAILER - COEUR VILLE EN LUMIERE GAME.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESPONSABILITÉS -->
+        <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+            <div class="section-header">
+                <h2 id="responsabilites-title" data-key="unite_responsabilites_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.5rem">
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Game Design</span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Level Design</span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg data-key="unite_role_liste1"></svg><span data-key="unite_role_liste1"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>UI & UX</span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Playtests</span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="unite_role_liste2"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Blueprint</span></li>
+            </ul>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="reveal" id="overview">
+            <div class="section-header">
+                <h2 data-key="unite_overview_title" style="margin-bottom:0;"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+                <div>
+                    <p data-key="unite_pres1"></p>
+                    <p><a href="https://www.montpellier-tourisme.fr/Preparer-Reserver/Agenda/Les-evenements-phares/Coeur-de-Ville-en-lumieres" target="_blank" rel="noopener">Cœur de Ville en Lumière</a></p>
+                    <p data-key="unite_pres2"></p>
+                    <p data-key="unite_pres3"></p>
+                </div>
+            </div>
+            <div class="grid" style="gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-top:1.5rem">
+                <img loading="lazy" src="images/unite/unite1.png" alt="Capture Unite gameplay 1" style="border-radius:12px">
+                <img loading="lazy" src="images/unite/unite2.png" alt="Capture Unite gameplay 2" style="border-radius:12px">
+            </div>
+            <div>
+                <div class="meta-panel">
+                    <ul class="meta-list" aria-label="Informations projet">
+                        <li><span class="meta-icon">🎮</span><span data-key="unite_pres_liste1"></span></li>
+                        <li><span class="meta-icon">⚙️</span><span data-key="unite_pres_liste2"></span></li>
+                        <li><span class="meta-icon">👥</span><span data-key="unite_pres_liste3"></span></li>
+                        <li><span class="meta-icon">💻</span>PC</li>
+                        <li><span class="meta-icon">🛠️</span><span data-key="unite_pres_liste7"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROLE & APPROCHE -->
+        <section class="reveal role-section" id="role" aria-labelledby="role-title">
+            <div class="section-header">
+                <h2 id="role-title" data-key="unite_role_section_title" style="margin-bottom:0;"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="align-items:start;gap:5px;">
+                <div class="role-text" style="display:flex;flex-direction:column;">
+                    <p data-key="unite_role_texte1"></p>
+                    <p data-key="unite_role_texte2"></p>
+                    <p data-key="unite_role_texte3"></p>
+                    <p data-key="unite_role_texte4"></p>
+                    <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+                        <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="unite_focus_title"></strong>
+                        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                            <li style="display:flex;gap:.5rem;align-items:flex-start"><span style="color:var(--accent)">▹</span><span data-key="unite_role_texte2"></span></li>
+                            <li style="display:flex;gap:.5rem;align-items:flex-start"><span style="color:var(--accent)">▹</span><span data-key="unite_role_texte3"></span></li>
+                            <li style="display:flex;gap:.5rem;align-items:flex-start"><span style="color:var(--accent)">▹</span><span data-key="unite_role_texte4"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <figure class="role-figure" style="margin:0;display:flex;flex-direction:column;gap:.75rem">
+                    <div style="position:relative">
+                        <img loading="lazy" src="images/unite/unite3.png" alt="Capture Unite zone gameplay" style="border-radius:12px;display:block;width:100%;height:auto">
+                    </div>
+                    <figcaption style="line-height:1.3;color:var(--text-dim)" data-key="unite_figcaption"></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section class="reveal" id="tools">
+            <div class="section-header">
+                <h2 data-key="titre_logiciels_utilises"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="tool-grid">
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/ue.png" alt="Unreal Engine"></div>
+                    <p class="tool-title">Engine</p>
+                    <p class="tool-sub">Unreal Engine</p>
+                    <p class="tool-desc" data-key="unite_tool_ue"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                    <p class="tool-title">UI & Assets</p>
+                    <p class="tool-sub">Photoshop</p>
+                    <p class="tool-desc" data-key="unite_tool_ps"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/3dsmax.png" alt="3ds Max"></div>
+                    <p class="tool-title">Modeling</p>
+                    <p class="tool-sub">3ds Max</p>
+                    <p class="tool-desc" data-key="unite_tool_3ds"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/googledrive.png" alt="Google Drive"></div>
+                    <p class="tool-title">Organisation</p>
+                    <p class="tool-sub">Drive</p>
+                    <p class="tool-desc" data-key="unite_tool_drive"></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Expérience Professionnelles",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Développement",
+                menu_projects_personal: "Perso",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+                unite_hero_title: "UNITE",
+                unite_banner_tags: "Game Design · Level Design · Prototype · QA · UI & UX",
+                unite_overview_title: "Présentation",
+                unite_pres1: "Unite est un jeu coopétitif créé pour l'événement Cœur de Ville en Lumière (CVL) à Montpellier, un spectacle nocturne mettant en valeur les sites emblématiques de la ville.",
+                unite_pres2: "Inspiré par cet événement unique, il propose un gameplay rapide et intense, axé sur l’action et les réflexes. Des monstres ont envahi la planète Ozore et deux cyborgs sont envoyés pour la défendre.",
+                unite_pres3: "Les joueurs doivent unir leurs forces pendant deux minutes pour empêcher la planète de tomber. Si elle est détruite avant la fin du temps, l’humanité perd sa dernière chance.",
+                unite_responsabilites_title: "Responsabilités",
+                unite_role_section_title: "Approche & Rôle",
+                unite_role_texte1: "Sur Unite, j’ai occupé le rôle de Game & Level Designer. Après la rédaction du GDD, j’ai conçu l’intégralité du niveau de l’idée au passage en production.",
+                unite_role_texte2: "En conception : cadrage du concept, sélection des mécaniques et structuration du rythme pour une expérience dynamique.",
+                unite_role_texte3: "En production : blockout, implémentation des assets et éléments gameplay via Blueprint, tests réguliers et ajustements du flow joueur.",
+                unite_role_texte4: "En parallèle : création de l’UI et optimisation UX pour garantir lisibilité, réactivité et confort d’interaction.",
+                unite_focus_title: "Focus",
+                unite_figcaption: "Zone de gameplay illustrant l’implémentation et les tests de flux joueur.",
+                unite_pres_liste1: "GENRE : Vue de côté · Coopétitif · Réflexe",
+                unite_pres_liste2: "MÉCANIQUES : Tir · Déplacement",
+                unite_pres_liste3: "JOUEURS : 2",
+                unite_pres_liste4: "TAILLE D’ÉQUIPE : 3",
+                unite_pres_liste5: "DATE : Novembre 2020 – Décembre 2020",
+                unite_pres_liste6: "DURÉE : 1 mois",
+                unite_pres_liste7: "MOTEUR : Unreal Engine",
+                unite_badge_prototype: "<span class=\"dot\"></span>Prototypage",
+                unite_role_liste2: "Signes & Feedbacks",
+                unite_button: "Voir le Game Design Document",
+                titre_logiciels_utilises: "Logiciels utilisés",
+                unite_tool_ue: "Intégration gameplay & level scripting Blueprint.",
+                unite_tool_ps: "UI, éléments visuels et retouches.",
+                unite_tool_3ds: "Modélisation d’assets simples environnement.",
+                unite_tool_drive: "Partage documentaire & suivi d’avancement.",
+                cta_scroll_overview: "Voir la présentation",
+                cta_scroll_role: "Explorer le rôle",
+                cta_scroll_tools: "Voir les outils"
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Professional Experience",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Development Projects",
+                menu_projects_personal: "Personal",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+                footer: "©2025 Thomas Houdard · All rights reserved",
+                unite_hero_title: "UNITE",
+                unite_banner_tags: "Game Design · Level Design · Prototype · QA · UI & UX",
+                unite_overview_title: "Overview",
+                unite_pres1: "Unite is a co-opetitive game created for the Montpellier light event Cœur de Ville en Lumière, showcasing key historical sites.",
+                unite_pres2: "Inspired by the event, it delivers fast, reflex‑driven action: monsters invade planet Ozore and two cyborgs are deployed to defend it.",
+                unite_pres3: "Players must hold the planet for two minutes. If it falls before time ends, humanity loses its last chance.",
+                unite_responsabilites_title: "Responsibilities",
+                unite_role_section_title: "Approach & Role",
+                unite_role_texte1: "I acted as Game & Level Designer. After authoring the GDD I designed the entire level from concept to production handoff.",
+                unite_role_texte2: "Design phase: framing concept, selecting mechanics and structuring pacing for intensity.",
+                unite_role_texte3: "Production: blockouts, asset & gameplay integration via Blueprint, iterative testing and player flow refinement.",
+                unite_role_texte4: "Additionally: UI creation and UX polishing for clarity, responsiveness and comfort.",
+                unite_focus_title: "Focus",
+                unite_figcaption: "Gameplay zone showing implementation and flow testing.",
+                unite_pres_liste1: "GENRE: Side view · Co-opetitive · Reflex",
+                unite_pres_liste2: "MECHANICS: Shooting · Movement",
+                unite_pres_liste3: "PLAYERS: 2",
+                unite_pres_liste4: "TEAM SIZE: 3",
+                unite_pres_liste5: "DATE: Nov 2020 – Dec 2020",
+                unite_pres_liste6: "DURATION: 1 month",
+                unite_pres_liste7: "ENGINE: Unreal Engine",
+                unite_badge_prototype: "<span class=\"dot\"></span>Prototyping",
+                unite_role_liste2: "Signs & Feedback",
+                unite_button: "View the Game Design Document",
+                titre_logiciels_utilises: "Tools used",
+                unite_tool_ue: "Gameplay integration & level scripting (Blueprint).",
+                unite_tool_ps: "UI, visual elements & polish.",
+                unite_tool_3ds: "Simple environment asset modeling.",
+                unite_tool_drive: "Documentation sharing & progress tracking.",
+                cta_scroll_overview: "View overview",
+                cta_scroll_role: "Explore role",
+                cta_scroll_tools: "View tools"
+            }
+        };
+    </script>
+</body>
+</html>

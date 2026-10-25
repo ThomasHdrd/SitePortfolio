@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projets Design - UI/UX & Game Design | Thomas Houdard</title>
+    <meta name="description" content="Portfolio UI/UX Design et Game & Level Design de Thomas Houdard : prototypes, interfaces, expériences interactives." />
+    <meta property="og:title" content="Projets Design - Portfolio" />
+    <meta property="og:description" content="UI/UX Design · Game & Level Design · Prototypes" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+   <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html"  data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Product & UX/UI</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+</nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="page_title_projets_design">Projets Design</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:880px;color:var(--text-dim)" data-key="page_intro_projets_design">Sélection de projets UI/UX et Game & Level Design montrant processus, intention produit et approche centrée utilisateur.</p>
+        </section>
+
+        <!-- UI/UX -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_projets_design_uiux">UI & UX Design</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <!-- Cook Better -->
+                <div class="card">
+                    <img src="images/design/cookbetter.png" alt="Cook Better - UI UX" loading="lazy">
+                        <div class="tags">
+                            <span class="tag">Figma</span><span class="tag">Responsive</span><span class="tag">Food</span>
+                        </div>
+                    <h3>COOK BETTER</h3>
+                    <h4>UI · UX · Figma</h4>
+                    <p data-key="design_uiux_cookbetter"></p>
+                    <a href="cookbetter.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- Movie Pass -->
+                <div class="card">
+                    <img src="images/design/moviepass.png" alt="Movie Pass - UI UX" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Figma</span><span class="tag">App</span><span class="tag">Cinema</span>
+                    </div>
+                    <h3>MOVIE PASS</h3>
+                    <h4>UI · UX · Figma</h4>
+                    <p data-key="design_uiux_moviepass"></p>
+                    <a href="moviepass.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- Cat Kitchen -->
+                <div class="card">
+                    <img src="images/design/catkitchen.png" alt="Cat Kitchen - UI UX" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Adobe XD</span><span class="tag">E-commerce</span><span class="tag">Pets</span>
+                    </div>
+                    <h3>CAT KITCHEN</h3>
+                    <h4>UI · UX · Adobe XD</h4>
+                    <p data-key="design_uiux_catkitchen"></p>
+                    <a href="catkitchen.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- Among Us -->
+                <div class="card">
+                    <img src="images/design/amongus.png" alt="Among Us FPS - UI UX" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Adobe XD</span><span class="tag">Interface</span><span class="tag">Concept</span>
+                    </div>
+                    <h3>AMONG US FPS</h3>
+                    <h4>UI · UX · Adobe XD</h4>
+                    <p data-key="design_uiux_amongus"></p>
+                    <a href="amongus.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAME & LEVEL DESIGN -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_projets_design_gamedesign">Game & Level Design</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <!-- LAY -->
+                <div class="card">
+                    <img src="images/design/lay.png" alt="LAY - Exploration Puzzle" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unreal</span><span class="tag">Open World</span><span class="tag">Puzzle</span>
+                    </div>
+                    <h3>LAY</h3>
+                    <h4 data-key="design_gdld_lay_title"></h4>
+                    <p data-key="design_gdld_lay"></p>
+                    <a href="lay.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- JARLASOGÜR -->
+                <div class="card">
+                    <img src="images/design/viking.png" alt="Jarlasogur - TPS Exploration" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unreal</span><span class="tag">TPS</span><span class="tag">Exploration</span>
+                    </div>
+                    <h3>JARLASOGÜR</h3>
+                    <h4 data-key="design_gdld_viking_title"></h4>
+                    <p data-key="design_gdld_viking"></p>
+                    <a href="viking.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- SEISHIN -->
+                <div class="card">
+                    <img src="images/design/japon.png" alt="Seishin - Puzzle Temple" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unreal</span><span class="tag">Puzzle</span><span class="tag">Atmosphère</span>
+                    </div>
+                    <h3>SEISHIN</h3>
+                    <h4 data-key="design_gdld_japan_title"></h4>
+                    <p data-key="design_gdld_japan"></p>
+                    <a href="japon.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- UNITE -->
+                <div class="card">
+                    <img src="images/design/unite.png" alt="Unite - Coopétitif 2D" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unreal</span><span class="tag">2D</span><span class="tag">Event</span>
+                    </div>
+                    <h3>UNITE</h3>
+                    <h4 data-key="design_gdld_unite_title"></h4>
+                    <p data-key="design_gdld_unite"></p>
+                    <a href="unite.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- HOLD-UP -->
+                <div class="card">
+                    <img src="images/design/boardgame.png" alt="Hold-Up - Jeu de société" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Boardgame</span><span class="tag">Strategy</span>
+                    </div>
+                    <h3>HOLD-UP</h3>
+                    <h4 data-key="design_gdld_holdup_title"></h4>
+                    <p data-key="design_gdld_holdup"></p>
+                    <a href="holdup.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- RE-COLORFUL -->
+                <div class="card">
+                    <img src="images/design/recolorful.png" alt="Re-Colorful - Game Jam" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unity</span><span class="tag">Jam</span><span class="tag">Action</span>
+                    </div>
+                    <h3>RE-COLORFUL</h3>
+                    <h4 data-key="design_gdld_recolorful_title"></h4>
+                    <p data-key="design_gdld_recolorful"></p>
+                    <a href="recolorful.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- ARMA III -->
+                <div class="card">
+                    <img src="images/design/arma3.png" alt="Arma III - Mission Design" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Mission</span><span class="tag">Doc</span>
+                    </div>
+                    <h3>ARMA III</h3>
+                    <h4 data-key="design_gdld_arma3_title"></h4>
+                    <p data-key="design_gdld_arma3"></p>
+                    <a href="arma3.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- CRYSIS II -->
+                <div class="card">
+                    <img src="images/design/crysis2.png" alt="Crysis II - Level Doc" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unreal</span><span class="tag">Prototype</span>
+                    </div>
+                    <h3>CRYSIS II</h3>
+                    <h4 data-key="design_gdld_crysis2_title"></h4>
+                    <p data-key="design_gdld_crysis2"></p>
+                    <a href="crysis2.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- CAR PROJECT -->
+                <div class="card">
+                    <img src="images/design/car.png" alt="Car Project - Level Prototype" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">Unreal</span><span class="tag">Prototype</span><span class="tag">Level</span>
+                    </div>
+                    <h3>CAR PROJECT</h3>
+                    <h4 data-key="design_gdld_car_title"></h4>
+                    <p data-key="design_gdld_car"></p>
+                    <a href="car.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Projets Développement",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                page_title_projets_design:"Product & UX/UI",
+                page_intro_projets_design:"Une sélection de produits et expériences digitales montrant ma démarche de conception, de la définition du problème jusqu'au prototype et à l'interface finale.",
+                titre_projets_design_uiux:"UI & UX Design",
+                titre_projets_design_gamedesign:"Game & Level Design",
+                design_uiux_cookbetter:"Site responsive pour apprendre à préparer des repas sains via une interface claire et structurée centrée sur recettes et objectifs nutrition.",
+                design_uiux_moviepass:"Application mobile pour réserver facilement des places de cinéma : flux simplifié, hiérarchie visuelle optimisée et parcours rapide.",
+                design_uiux_catkitchen:"Plateforme e-commerce dédiée à l’alimentation féline saine : catégorisation produit, confiance et réassurance.",
+                design_uiux_amongus:"Exercice de refonte UI/UX du jeu culte en vue FPS : adaptation des informations, lisibilité et immersion.",
+                design_gdld_lay_title:"Jeu 3D · Monde ouvert · Exploration · Puzzle",
+                design_gdld_lay:"Exploration alternant marche / vol / résolution d’énigmes pour dévoiler un monde secret.",
+                design_gdld_viking_title:"Jeu 3D · TPS · Exploration · Parcours",
+                design_gdld_viking:"Aventure pour restaurer un monde ravagé par le Ragnarok à travers régions et objectifs.",
+                design_gdld_japan_title:"Jeu 3D · TPS · Réflexion · Puzzle",
+                design_gdld_japan:"Énigmes et tension dans un temple japonais clos favorisant observation et logique.",
+                design_gdld_unite_title:"Jeu 2D · Coopétitif · Réflexe",
+                design_gdld_unite:"Jeu orienté action rapide et réflexes réalisé pour l’événement Coeur de Ville en Lumière.",
+                design_gdld_holdup_title:"Jeu de société · Ruse · Stratégie",
+                design_gdld_holdup:"Collecter un maximum d’argent via bluff, anticipation et choix tactiques.",
+                design_gdld_recolorful_title:"Game Jam · Jeu 2D · Action",
+                design_gdld_recolorful:"Raviver une planète en incarnant une fleur : loop simple, feedback couleur progressif.",
+                design_gdld_arma3_title:"Mission design · Document",
+                design_gdld_arma3:"Mission 'Sauver le VIP' : infiltration, extraction et pacing tactique.",
+                design_gdld_crysis2_title:"Level & Mission design · Prototype",
+                design_gdld_crysis2:"Mission dans l’univers Crysis II pour désactiver un vaisseau Ceph dans Manhattan.",
+                design_gdld_car_title:"Level design · Prototype · Multi-biomes",
+                design_gdld_car:"Circuit voiture avec 4 biomes (ville, circuits, désert) focalisé sur flow et lisibilité trajet.",
+                button:"PLUS D'INFOS",
+                footer:"©2025 Thomas Houdard · Tous droits réservés"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",menu_projects_dev:"Development Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                page_title_projets_design:"Design Projects",
+                page_intro_projets_design:"Selection of UI/UX and Game & Level Design projects showcasing process, product intent and user-centered approach.",
+                titre_projets_design_uiux:"UI & UX Design",
+                titre_projets_design_gamedesign:"Game & Level Design",
+                design_uiux_cookbetter:"Responsive website helping users cook healthy meals through structured recipe flows and nutritional goals.",
+                design_uiux_moviepass:"Mobile app to book cinema tickets quickly: simplified flow, optimized visual hierarchy and fast pathway.",
+                design_uiux_catkitchen:"E-commerce platform for healthy cat food: product taxonomy, trust and reassurance patterns.",
+                design_uiux_amongus:"UI/UX redesign exercise of the cult game in FPS perspective: information adaptation, readability and immersion.",
+                design_gdld_lay_title:"3D Game · Open World · Exploration · Puzzle",
+                design_gdld_lay:"Exploration alternating walking / flying / puzzle solving to uncover a hidden world.",
+                design_gdld_viking_title:"3D Game · TPS · Exploration · Traversal",
+                design_gdld_viking:"Adventure restoring a world devastated by Ragnarok across regions and objectives.",
+                design_gdld_japan_title:"3D Game · TPS · Thinking · Puzzle",
+                design_gdld_japan:"Enigmas and tension in a closed Japanese temple focusing on observation & logic.",
+                design_gdld_unite_title:"2D Game · Competitive Co-op · Reflex",
+                design_gdld_unite:"Fast action reflex-focused game created for the Coeur de Ville en Lumière event.",
+                design_gdld_holdup_title:"Board Game · Bluff · Strategy",
+                design_gdld_holdup:"Accumulate the most money using bluff, anticipation and tactical choices.",
+                design_gdld_recolorful_title:"Game Jam · 2D · Action",
+                design_gdld_recolorful:"Revive a planet as a flower: simple loop, progressive color feedback.",
+                design_gdld_arma3_title:"Mission design · Document",
+                design_gdld_arma3:"'Save the VIP' mission: infiltration, extraction and tactical pacing.",
+                design_gdld_crysis2_title:"Level & Mission design · Prototype",
+                design_gdld_crysis2:"Mission in Crysis II universe to disable a Ceph ship in Manhattan.",
+                design_gdld_car_title:"Level design · Prototype · Multi-biomes",
+                design_gdld_car:"Car circuit with 4 biomes (city, tracks, desert) focusing on flow and path readability.",
+                button:"MORE INFO",
+                footer:"©2025 Thomas Houdard · All rights reserved"
+            }
+        };
+    </script>
+</body>
+</html>

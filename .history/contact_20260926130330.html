@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact | Thomas Houdard</title>
+    <meta name="description" content="Contactez Thomas Houdard, UI/UX & Product Designer : opportunités professionnelles, missions freelance, email, téléphone, LinkedIn." />
+    <meta property="og:title" content="Contact - Thomas Houdard, UI/UX & Product Designer" />
+    <meta property="og:description" content="Recruteur ou client : email, téléphone, LinkedIn et formulaire de contact." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX & PRODUCT DESIGNER · FRONT-END</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+
+                    </div>
+                </li>
+                <li><a href="contact.html" class="active" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+                <div class="lang-switch" id="langSwitch">
+                    <button data-lang="fr" class="active">FR</button>
+                    <button data-lang="en">EN</button>
+                </div>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="contact_title">Parlons de votre projet — ou de votre prochaine équipe.</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:100%;color:var(--text-dim)" data-key="contact_intro"></p>
+        </section>
+
+        <!-- DOUBLE PARCOURS : RECRUTEUR / CLIENT -->
+        <section class="reveal">
+            <div class="grid-contact">
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_recruit_title">Vous souhaitez me recruter ?</h2>
+                    <p data-key="contact_recruit_text"></p>
+                    <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:auto">
+                        <a href="cv/CV_Thomas_Houdard.pdf" class="btn" data-key="contact_recruit_cv" style="margin-top:0;flex:1 1 auto">Voir mon CV</a>
+                        <a href="#coordonnees" class="btn btn-outline" data-key="contact_recruit_contact" style="margin-top:0;flex:1 1 auto">Me contacter</a>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_client_title">Vous avez un projet ?</h2>
+                    <p data-key="contact_client_text"></p>
+                    <a href="TravaillerAvecMoi.html" class="btn" data-key="contact_client_cta">Voir mes services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COORDONNÉES + FORMULAIRE -->
+        <section class="reveal" id="coordonnees">
+            <div class="grid-contact">
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_other_title"></h2>
+                    <ul class="contact-list">
+                        <li><span class="highlight" data-key="contact_phone_label"></span><span> +33 7 88 20 29 32</span></li>
+                        <li><span class="highlight">Email:</span> <a href="mailto:contact@thomashoudard.com">contact@thomashoudard.com</a></li>
+                        <li><span class="highlight" data-key="contact_linkedin_label"></span> <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" rel="noopener">linkedin.com/in/thomashoudard</a></li>
+                        <li><span class="highlight" data-key="contact_availability_label"></span><span data-key="contact_availability"></span></li>
+                    </ul>
+                    <a href="mailto:contact@thomashoudard.com" class="btn" data-key="contact_email_button" style="margin-top:auto"></a>
+                </div>
+                <div class="panel">
+                    <h2 style="margin:0;font-size:1.3rem" data-key="contact_form_title">Envoyer un message</h2>
+                    <form action="https://formspree.io/f/mqayadbr" method="POST" style="display:grid;gap:.9rem">
+                        <div style="display:grid;gap:.35rem">
+                            <label for="contactName" style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)" data-key="contact_form_name">Nom</label>
+                            <input id="contactName" name="nom" type="text" required style="padding:.6rem .7rem;border:1px solid var(--border-soft);border-radius:8px;background:var(--bg);color:var(--text)">
+                        </div>
+                        <div style="display:grid;gap:.35rem">
+                            <label for="contactEmail" style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)" data-key="contact_form_email">Email</label>
+                            <input id="contactEmail" name="email" type="email" required style="padding:.6rem .7rem;border:1px solid var(--border-soft);border-radius:8px;background:var(--bg);color:var(--text)">
+                        </div>
+                        <div style="display:grid;gap:.35rem">
+                            <label for="contactReason" style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)" data-key="contact_form_reason">Vous me contactez pour :</label>
+                            <select id="contactReason" name="raison" style="padding:.6rem .7rem;border:1px solid var(--border-soft);border-radius:8px;background:var(--bg);color:var(--text)">
+                                <option data-key="contact_form_reason_opp">Une opportunité professionnelle</option>
+                                <option data-key="contact_form_reason_freelance">Une mission freelance</option>
+                                <option data-key="contact_form_reason_other">Autre</option>
+                            </select>
+                        </div>
+                        <div style="display:grid;gap:.35rem">
+                            <label for="contactMessage" style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)" data-key="contact_form_message">Message</label>
+                            <textarea id="contactMessage" name="message" rows="4" required style="padding:.6rem .7rem;border:1px solid var(--border-soft);border-radius:8px;background:var(--bg);color:var(--text);resize:vertical"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Nouveau message — thomashoudard.com/contact">
+                        <input type="hidden" name="_next" value="https://thomashoudard.com/merci.html">
+                        <button type="submit" class="btn btn-primary" data-key="contact_form_submit" style="margin-top:.2rem">Envoyer mon message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                footer:"©2025 Thomas Houdard · Tous droits réservés",
+                contact_title:"Parlons de votre projet — ou de votre prochaine équipe.",
+                contact_intro:"Vous souhaitez échanger sur un projet, une mission freelance ou une opportunité ? Voici les moyens directs de me joindre.",
+                contact_recruit_title:"Vous souhaitez me recruter ?",
+                contact_recruit_text:"Je suis ouvert aux opportunités en UI/UX et Product Design, en France comme à l'international.",
+                contact_recruit_cv:"Voir mon CV",
+                contact_recruit_contact:"Me contacter",
+                contact_client_title:"Vous avez un projet ?",
+                contact_client_text:"Création, refonte ou optimisation UX/UI : discutons de votre projet et de l'expérience que vous souhaitez proposer à vos utilisateurs.",
+                contact_client_cta:"Voir mes services",
+                contact_email_title:"Email direct",
+                contact_email_text:"Contactez-moi par mail pour un retour structuré (brief, budget, délais, objectifs). Réponse rapide.",
+                contact_email_button:"Envoyer un email",
+                contact_other_title:"Coordonnées",
+                contact_phone_label:"Téléphone:",
+                contact_linkedin_label:"LinkedIn:",
+                contact_availability_label:"Disponibilité: ",
+                contact_availability:"Ouvert à missions freelance / CDI (UI/UX · Front · Produit).",
+                contact_collab_title:"Collaborer",
+                contact_collab_text:"Intéressé par une refonte produit, prototype, audit UX ou intégration front ? Découvrir ma démarche.",
+                contact_collab_button:"Travailler ensemble",
+                contact_form_title:"Envoyer un message",
+                contact_form_name:"Nom",
+                contact_form_email:"Email",
+                contact_form_reason:"Vous me contactez pour :",
+                contact_form_reason_opp:"Une opportunité professionnelle",
+                contact_form_reason_freelance:"Une mission freelance",
+                contact_form_reason_other:"Autre",
+                contact_form_message:"Message",
+                contact_form_submit:"Envoyer mon message"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                footer:"©2025 Thomas Houdard · All rights reserved",
+                contact_title:"Let's talk about your project — or your next team.",
+                contact_intro:"Want to discuss a project, freelance mission or opportunity? Reach me through these direct channels.",
+                contact_recruit_title:"Looking to hire me?",
+                contact_recruit_text:"I'm open to UI/UX and Product Design opportunities, in France and internationally.",
+                contact_recruit_cv:"View my resume",
+                contact_recruit_contact:"Contact me",
+                contact_client_title:"Have a project?",
+                contact_client_text:"Creation, redesign or UX/UI optimization: let's discuss your project and the experience you want to offer your users.",
+                contact_client_cta:"View my services",
+                contact_email_title:"Direct email",
+                contact_email_text:"Email me for structured inquiries (brief, budget, timelines, goals). Fast reply.",
+                contact_email_button:"Send Email",
+                contact_other_title:"Details",
+                contact_phone_label:"Phone:",
+                contact_linkedin_label:"LinkedIn:",
+                contact_availability_label:"Availability: ",
+                contact_availability:"Open to freelance / full-time (UI/UX · Front · Product).",
+                contact_collab_title:"Collaborate",
+                contact_collab_text:"Need a product redesign, prototype, UX audit or front integration? Explore my approach.",
+                contact_collab_button:"Work together",
+                contact_form_title:"Send a message",
+                contact_form_name:"Name",
+                contact_form_email:"Email",
+                contact_form_reason:"You're contacting me for:",
+                contact_form_reason_opp:"A professional opportunity",
+                contact_form_reason_freelance:"A freelance mission",
+                contact_form_reason_other:"Other",
+                contact_form_message:"Message",
+                contact_form_submit:"Send my message"
+            }
+        };
+    </script>
+</body>
+</html>

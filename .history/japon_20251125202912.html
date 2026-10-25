@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Seishin — Étude de cas Game/Level Design | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas Seishin : jeu d'énigmes musical en vue FPS. Game Design, Level Design, prototypage, tests QA et modélisation sous Unreal Engine." />
+    <meta property="og:title" content="Seishin — Étude de cas Game/Level Design" />
+    <meta property="og:description" content="Projet étudiant : jeu d'énigmes musical anxiogène en temple japonais. Game & Level Design, prototypage et modélisation." />
+    <meta property="og:url" content="https://thomashoudard.com/japon.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="seishin_banner"></p>
+                <h1 data-key="seishin_hero_title"></h1>
+                <p data-key="seishin_pres"></p>
+                <div class="company-meta">
+                    <span data-key="seishin_pres_type"></span>
+                    <span data-key="seishin_pres_role"></span>
+                    <span data-key="seishin_pres_date"></span>
+                    <span data-key="seishin_pres_duree"></span>
+                    <span data-key="seishin_pres_equipe"></span>
+                </div>
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>Game Design</span>
+                    <span class="badge"><span class="dot"></span>Level Design</span>
+                    <span class="badge"><span class="dot"></span>Prototypage</span>
+                    <span class="badge"><span class="dot"></span>QA & Feedback</span>
+                </div>
+                <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                    <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview"></a>
+                    <a href="#role" class="btn btn-outline" data-key="cta_scroll_role"></a>
+                    <a href="#tools" class="btn btn-outline" data-key="cta_scroll_tools"></a>
+                </div>
+            </div>
+            <div class="video-wrap" style="align-self:start">
+                <div class="proto-wrap">
+                    <video controls style="width:100%;border-radius:12px">
+                        <source src="videos/SEISHIN TRAILER FINAL - JAPAN GAME.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESPONSABILITÉS -->
+        <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+            <div class="section-header">
+                <h2 id="responsabilites-title" data-key="seishin_responsabilites_title"></h2>
+                <div class="bar"></div>
+            </div>
+            <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.5rem">
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_gd"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_ld"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_proto"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_playtests"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_feedback"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_modelisation"></span></span></li>
+                <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="seishin_resp_texturing"></span></span></li>
+            </ul>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="reveal" id="overview">
+            <div class="section-header">
+                <h2 data-key="seishin_overview_title" style="margin-bottom:0;"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+                <div>
+                    <p data-key="seishin_intro1"></p>
+                    <p data-key="seishin_intro2"></p>
+                    <p data-key="seishin_intro3"></p>
+                    <p data-key="seishin_intro4"></p>
+                </div>
+            </div>
+            <div class="grid" style="gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-top:1.5rem">
+                <img loading="lazy" src="images/japan/japan1.png" alt="Capture Seishin environnement 1" style="border-radius:12px">
+                <img loading="lazy" src="images/japan/japan2.png" alt="Capture Seishin environnement 2" style="border-radius:12px">
+            </div>
+            <div>
+                <div class="meta-panel">
+                    <ul class="meta-list" aria-label="Informations sur le projet">
+                        <li><span class="meta-icon">🎮</span><span data-key="seishin_pres_genre"></span></li>
+                        <li><span class="meta-icon">🎼</span><span data-key="seishin_pres_mecanique"></span></li>
+                        <li><span class="meta-icon">👥</span><span data-key="seishin_pres_joueur"></span></li>
+                        <li><span class="meta-icon">💻</span><span data-key="seishin_pres_support"></span></li>
+                        <li><span class="meta-icon">🛠️</span><span data-key="seishin_pres_moteur"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROLE & APPROCHE -->
+        <section class="reveal role-section" id="role" aria-labelledby="role-title">
+            <div class="section-header">
+                <h2 id="role-title" data-key="seishin_role_section_title" style="margin-bottom:0;"></h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="align-items:start;gap:5px;">
+                <div class="role-text" style="display:flex;flex-direction:column;">
+                    <p data-key="seishin_role_texte1"></p>
+                    <p data-key="seishin_role_texte2"></p>
+                    <p data-key="seishin_role_texte3"></p>
+                    <p data-key="seishin_role_texte4"></p>
+
+                    <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+                        <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8">Focus</strong>
+                        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                            <li style="display:flex;gap:.5rem;align-items:flex-start">
+                                <span style="color:var(--accent)">▹</span>
+                                <span data-key="seishin_role_texte2"></span>
+                            </li>
+                            <li style="display:flex;gap:.5rem;align-items:flex-start">
+                                <span style="color:var(--accent)">▹</span>
+                                <span data-key="seishin_role_texte3"></span>
+                            </li>
+                            <li style="display:flex;gap:.5rem;align-items:flex-start">
+                                <span style="color:var(--accent)">▹</span>
+                                <span data-key="seishin_role_texte4"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <figure class="role-figure" style="margin:0;display:flex;flex-direction:column;gap:.75rem">
+                    <div style="position:relative">
+                        <img loading="lazy" src="images/japan/japan3.png" alt="Zone de gameplay Seishin et blockout" style="border-radius:12px;display:block;width:100%;height:auto">
+                    </div>
+                    <figcaption style="line-height:1.3;color:var(--text-dim)" data-key="seishin_role_caption"></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section class="reveal" id="tools">
+            <div class="section-header">
+                <h2 data-key="titre_logiciels_utilises"></h2>
+                <div class="bar"></div>
+            </div>
+            <div class="tool-grid">
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/ue.png" alt="Unreal Engine"></div>
+                    <p class="tool-title">Engine</p>
+                    <p class="tool-sub">Unreal Engine</p>
+                    <p class="tool-desc" data-key="seishin_tool_ue"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                    <p class="tool-title">Texturing</p>
+                    <p class="tool-sub">Photoshop</p>
+                    <p class="tool-desc" data-key="seishin_tool_ps"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/3dsmax.png" alt="3ds Max"></div>
+                    <p class="tool-title">Modeling</p>
+                    <p class="tool-sub">3ds Max</p>
+                    <p class="tool-desc" data-key="seishin_tool_3ds"></p>
+                </article>
+                <article class="tool-card">
+                    <div class="tool-icon"><img src="images/logiciels/googledrive.png" alt="Google Drive"></div>
+                    <p class="tool-title">Organisation</p>
+                    <p class="tool-sub">Drive</p>
+                    <p class="tool-desc" data-key="seishin_tool_drive"></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Expériences Pro",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Dev",
+                menu_projects_personal: "Perso",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+                cta_scroll_overview: "Voir la présentation",
+                cta_scroll_role: "Explorer le rôle",
+                cta_scroll_tools: "Voir les outils",
+                seishin_banner: "Game Design · Level Design · Prototypage · QA · Modélisation",
+                seishin_hero_title: "Seishin — Jeu d'Énigmes Musical FPS",
+                seishin_pres: "Seishin est un jeu d’énigmes et de réflexion mêlé d’angoisse dans un temple japonais clos. Le joueur doit s’échapper en résolvant des puzzles musicaux qui montent en complexité.",
+                seishin_pres_type: "PROJET : Production étudiante",
+                seishin_pres_role: "RÔLE : Game & Level Designer · Graphiste",
+                seishin_pres_date: "DATE : Nov 2019 – Déc 2019",
+                seishin_pres_duree: "DURÉE : 1 mois",
+                seishin_pres_equipe: "ÉQUIPE : 5 personnes",
+                seishin_pres_genre: "GENRE : FPS · Réflexion · Puzzle",
+                seishin_pres_mecanique: "MÉCANIQUES : Énigmes musicales · Intéractions culturelles",
+                seishin_pres_joueur: "JOUEURS : 1",
+                seishin_pres_support: "SUPPORT : PC",
+                seishin_pres_moteur: "MOTEUR : Unreal Engine",
+                seishin_overview_title: "Présentation",
+                seishin_intro1: "Seishin est un jeu d'énigmes et de réflexion mêlé d'angoisse, se déroulant dans un environnement clos inspiré de l'univers japonais.",
+                seishin_intro2: "Le protagoniste doit fuir et s'échapper d’un temple en résolvant une série d'énigmes basées sur des éléments musicaux avec difficulté croissante.",
+                seishin_intro3: "Chaque énigme résolue révèle un fragment culturel japonais, enrichissant la progression du joueur.",
+                seishin_intro4: "Les puzzles demandent compréhension des mécaniques mais aussi traditions et philosophie, offrant une expérience immersive et réfléchie.",
+                seishin_responsabilites_title: "Responsabilités",
+                seishin_resp_gd: "Game Design",
+                seishin_resp_ld: "Level Design",
+                seishin_resp_proto: "Prototypage",
+                seishin_resp_playtests: "Playtests",
+                seishin_resp_feedback: "Signes & Feedbacks",
+                seishin_resp_modelisation: "Modélisation",
+                seishin_resp_texturing: "Texturing",
+                seishin_role_section_title: "Approche & Rôle",
+                seishin_role_texte1: "J’ai assuré Game & Level Design ainsi que des tâches graphiques. Rédaction du document de Game Design et création de plusieurs blockouts.",
+                seishin_role_texte2: "En conception : définition du concept, structuration du gameplay et des énigmes musicales avec l’équipe.",
+                seishin_role_texte3: "En production : réalisation de blockouts, implémentation des assets et éléments de gameplay via Blueprint.",
+                seishin_role_texte4: "Tests réguliers, corrections de bugs et ajustement du flow joueur pour une expérience fluide.",
+                seishin_role_caption: "Capture d'une zone de gameplay après intégration des premiers assets.",
+                titre_logiciels_utilises: "Logiciels utilisés",
+                seishin_tool_ue: "Blockouts, intégration des énigmes & interactions musicales.",
+                seishin_tool_ps: "Textures simples et retouches d’éléments.",
+                seishin_tool_3ds: "Modélisation d’assets décoratifs du temple.",
+                seishin_tool_drive: "Partage documentaire & suivi d’équipe."
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Professional Experience",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Dev Projects",
+                menu_projects_personal: "Personal",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+                footer: "©2025 Thomas Houdard · All rights reserved",
+                cta_scroll_overview: "View overview",
+                cta_scroll_role: "Explore role",
+                cta_scroll_tools: "View tools",
+                seishin_banner: "Game Design · Level Design · Prototyping · QA · Modeling",
+                seishin_hero_title: "Seishin — Musical Puzzle FPS",
+                seishin_pres: "Seishin is a tense first-person puzzle game set in a sealed Japanese temple. Escape by solving escalating music-based puzzles.",
+                seishin_pres_type: "PROJECT: Student production",
+                seishin_pres_role: "ROLE: Game & Level Designer · Artist",
+                seishin_pres_date: "DATE: Nov 2019 – Dec 2019",
+                seishin_pres_duree: "DURATION: 1 month",
+                seishin_pres_equipe: "TEAM: 5 people",
+                seishin_pres_genre: "GENRE: FPS · Puzzle · Brain teaser",
+                seishin_pres_mecanique: "MECHANICS: Musical puzzles · Cultural interactions",
+                seishin_pres_joueur: "PLAYERS: 1",
+                seishin_pres_support: "PLATFORM: PC",
+                seishin_pres_moteur: "ENGINE: Unreal Engine",
+                seishin_overview_title: "Overview",
+                seishin_intro1: "Seishin is a puzzle-thriller set in a confined Japanese-inspired environment.",
+                seishin_intro2: "You must escape a temple by solving a series of music-driven puzzles increasing in complexity.",
+                seishin_intro3: "Each solved puzzle unveils cultural fragments, enriching progression.",
+                seishin_intro4: "Challenges require grasp of mechanics plus traditions and philosophy for a reflective experience.",
+                seishin_responsabilites_title: "Responsibilities",
+                seishin_resp_gd: "Game Design",
+                seishin_resp_ld: "Level Design",
+                seishin_resp_proto: "Prototyping",
+                seishin_resp_playtests: "Playtests",
+                seishin_resp_feedback: "Signs & Feedback",
+                seishin_resp_modelisation: "Modeling",
+                seishin_resp_texturing: "Texturing",
+                seishin_role_section_title: "Approach & Role",
+                seishin_role_texte1: "I handled Game & Level Design and contributed art. Authored the Game Design document and multiple blockouts.",
+                seishin_role_texte2: "During conception: concept framing, gameplay structure and musical puzzle architecture with the team.",
+                seishin_role_texte3: "During production: blockouts, asset & gameplay integration using Blueprint.",
+                seishin_role_texte4: "Regular playtests, bug fixing and player flow refinement for smooth experience.",
+                seishin_role_caption: "Gameplay zone after first asset integration.",
+                titre_logiciels_utilises: "Tools used",
+                seishin_tool_ue: "Blockouts and music puzzle interaction integration.",
+                seishin_tool_ps: "Basic texture work and asset polish.",
+                seishin_tool_3ds: "Modeling temple decorative assets.",
+                seishin_tool_drive: "Team documentation & coordination."
+            }
+        };
+
+        const applyLang = (lang) => {
+            document.querySelectorAll("[data-key]").forEach(el => {
+                const k = el.getAttribute("data-key");
+                if (translations[lang][k]) el.textContent = translations[lang][k];
+            });
+            document.querySelectorAll(".lang-switch button").forEach(b => {
+                b.classList.toggle("active", b.dataset.lang === lang);
+            });
+            document.documentElement.lang = lang;
+            localStorage.setItem("lang", lang);
+        };
+
+        const initLang = () => {
+            const stored = localStorage.getItem("lang") || "fr";
+            applyLang(stored);
+        };
+
+        document.getElementById("langSwitch").addEventListener("click", e => {
+            if (e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+        });
+
+        const burger = document.getElementById("burger");
+        const menu = document.getElementById("menu");
+        burger.addEventListener("click", () => {
+            burger.classList.toggle("open");
+            menu.classList.toggle("open");
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+        initLang();
+    </script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Thomas Houdard – UI/UX Designer & Développeur Web</title>
+    <meta name="description" content="Portfolio de Thomas Houdard, UI/UX Designer & Développeur Web. Je conçois des expériences claires, modernes et efficaces pour PME, entrepreneurs, associations et projets personnels.">
+    <meta name="keywords" content="portfolio, freelance web Montpellier, UI UX designer, développeur HTML CSS JS, création site vitrine, game designer">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thomas Houdard – UI/UX Designer & Développeur Web">
+    <meta property="og:description" content="Designs et sites modernes, rapides, responsives pour PME, entrepreneurs, associations et projets perso.">
+    <meta property="og:url" content="https://thomashoudard.com">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="images/preview.jpg"> -->
+
+    <!-- Palette DA inspirée de “A Dictionary of Color Combinations” -->
+    <style>
+        :root {
+            --color-ink: #111111;
+            --color-bg: #FAF7F2;
+            --color-navy: #1D3557;
+            --color-beige: #F5E9DA;
+            --color-brick: #D86C5B;
+            --color-green: #4C7A5A;
+            --color-muted: #8A8A8A;
+            --radius-lg: 18px;
+            --radius-xl: 28px;
+            --shadow-soft: 0 18px 45px rgba(0,0,0,0.08);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-bg);
+            color: var(--color-ink);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="home">
+    <!-- Navigation principale -->
+    <header class="site-header">
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="index.html" class="brand">
+                    <span class="brand-mark"></span>
+                    <div class="brand-text">
+                        <h1 class="brand-name">Thomas HOUDARD</h1>
+                        <p class="brand-role" data-key="menu_job"></p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Burger menu pour mobile -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html" class="active" data-key="menu_about"></a></li>
+                <li class="sousMenu">
+                    <a href="#" data-key="menu_portfolio"> ▾</a>
+                    <div class="sousMenu-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                        <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a class="travailleravecmoi" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+
+                <!-- Sélecteur de langue (mobile + desktop) -->
+                <li class="lang-mobile">
+                    <div class="lang-dropdown">
+                        <button id="lang-button">
+                            <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                            <span id="current-lang-text">FR</span>
+                            <span id="dropdown-arrow">▾</span>
+                        </button>
+                        <ul id="lang-list">
+                            <li id="lang-fr">
+                                <img src="images/langSelect_FR.png" alt="FR"> FR
+                            </li>
+                            <li id="lang-en">
+                                <img src="images/langSelect_EN.png" alt="EN"> EN
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Hero / Introduction -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <div class="hero-tagline">
+                        <span class="pill pill-main">UI/UX • Web • Game & Level Design</span>
+                    </div>
+                    <h2 class="hero-title">
+                        Je conçois des expériences claires, utiles<br>
+                        et agréables à utiliser.
+                    </h2>
+                    <p class="hero-subtitle">
+                        Je t’aide à transformer des idées en produits concrets : 
+                        sites vitrines, interfaces web, prototypes de jeux et outils digitaux 
+                        pensés pour les utilisateurs.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="projetDesigner.html" class="btn primary">
+                            Voir mes projets
+                        </a>
+                        <a href="TravaillerAvecMoi.html" class="btn ghost">
+                            Travailler avec moi
+                        </a>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <div class="highlight">
+                            <span class="highlight-label">UI/UX</span>
+                            <p>Audit, wireframes, maquettes haute-fidélité, tests utilisateurs.</p>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-label">Développement</span>
+                            <p>Intégration HTML/CSS/JS, performance, responsive, SEO.</p>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-label">Game Design</span>
+                            <p>Game & level design, documents de conception, prototypage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-card">
+                        <div class="hero-avatar">
+                            <img src="images/photoprofil.webp" alt="Photo de profil de Thomas Houdard" loading="lazy" width="260" height="260">
+                        </div>
+                        <div class="hero-bio">
+                            <p data-key="presentation_1"></p>
+                            <p data-key="presentation_2"></p>
+                            <p data-key="presentation_3"></p>
+                            <p data-key="presentation_4"></p>
+                            <p data-key="presentation_5"></p>
+                        </div>
+                        <div class="hero-meta">
+                            <span class="pill pill-soft">Basé à Montpellier</span>
+                            <span class="pill pill-soft">Ouvert au remote & à l’international</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- Video CV -->
+        <section class="section section-video" id="video">
+            <div class="section-header">
+                <h2 data-key="titre_video"></h2>
+                <p class="section-intro">
+                    En quelques minutes, je présente mon parcours, mes compétences 
+                    et ma façon de travailler. Idéal pour se faire une première idée 
+                    avant un échange plus concret.
+                </p>
+            </div>
+            <div class="video-wrapper">
+                <div class="video-frame">
+                    <video controls>
+                        <source src="videos/CV VIDEO - THOMAS HOUDARD_FINAL.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la lecture de vidéo.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences principales (design / front / back / game / annexes) -->
+        <section class="section section-skills" id="skills">
+            <div class="section-header">
+                <h2 data-key="titre_competences_tech">MES COMPÉTENCES TECHNIQUES</h2>
+                <p class="section-intro">
+                    Un profil hybride design + développement, avec une base solide 
+                    en game & level design. Idéal pour des projets qui demandent 
+                    à la fois vision produit et capacité à livrer.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- UI/UX DESIGN -->
+                <article class="skill-card">
+                    <div class="skill-icon imageuiuxdesign" id="uiuxdesign"></div>
+                    <h3>UI & UX DESIGN</h3>
+                    <ul>
+                        <li>Design Thinking</li>
+                        <li>Wireframe</li>
+                        <li data-key="competences_tech_uiux">Audit concurrentiel</li>
+                        <li>Prototype</li>
+                        <li data-key="competences_tech_uiux2">Design d’interaction</li>
+                        <li>Responsive web design</li>
+                    </ul>
+                </article>
+
+                <!-- FRONT-END -->
+                <article class="skill-card">
+                    <div class="skill-icon imagefrontend" id="frontend"></div>
+                    <h3>FRONT-END</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Angular</li>
+                    </ul>
+                </article>
+
+                <!-- BACK-END -->
+                <article class="skill-card">
+                    <div class="skill-icon imagebackend" id="backend"></div>
+                    <h3>BACK-END</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+
+                <!-- GAME & LEVEL DESIGN -->
+                <article class="skill-card">
+                    <div class="skill-icon imagegameleveldesign" id="gameleveldesign"></div>
+                    <h3>GAME & LEVEL DESIGN</h3>
+                    <ul>
+                        <li data-key="competences_tech_gdld">Design itératif</li>
+                        <li>Game & Level Design Document</li>
+                        <li data-key="competences_tech_gdld2">Prototypage</li>
+                        <li>Level Building</li>
+                        <li>Rational Design</li>
+                        <li>Blueprint</li>
+                    </ul>
+                </article>
+
+                <!-- COMPÉTENCES ANNEXES -->
+                <article class="skill-card">
+                    <div class="skill-icon imageannexe" id="annexe"></div>
+                    <h3>COMPÉTENCES ANNEXES</h3>
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Shopify</li>
+                        <li data-key="competences_tech_annexe">Intelligence artificielle</li>
+                        <li>Git</li>
+                        <li>SEO | SEA</li>
+                        <li data-key="competences_tech_annexe2">Gestion de projet</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Soft skills -->
+        <section class="section section-softskills" id="soft-skills">
+            <div class="section-header">
+                <h2 data-key="titre_competences_relation">MES COMPÉTENCES RELATIONNELLES ET COMPORTEMENTALES</h2>
+                <p class="section-intro">
+                    Au-delà des outils, je mise sur l’écoute, la clarté et la collaboration. 
+                    Parce que les meilleurs projets naissent de bonnes conversations.
+                </p>
+            </div>
+
+            <div class="softskills-grid">
+                <article class="soft-card">
+                    <div class="soft-icon imageespritequipe" id="espritequipe"></div>
+                    <h3 data-key="competences_relation_equipe">ESPRIT D'ÉQUIPE</h3>
+                    <p>Habitué à travailler avec des profils variés : devs, designers, commerciaux, direction.</p>
+                </article>
+
+                <article class="soft-card">
+                    <div class="soft-icon imagecreatif" id="creatif"></div>
+                    <h3 data-key="competences_relation_creatif">CRÉATIF</h3>
+                    <p>Capable de proposer des pistes visuelles cohérentes avec la marque et l’utilisateur final.</p>
+                </article>
+
+                <article class="soft-card">
+                    <div class="soft-icon imagepolyvalent" id="polyvalent"></div>
+                    <h3 data-key="competences_relation_polyvalent">POLYVALENT</h3>
+                    <p>À l’aise sur toutes les phases : recherche, conception, prototypage, intégration.</p>
+                </article>
+
+                <article class="soft-card">
+                    <div class="soft-icon imagecurieux" id="curieux"></div>
+                    <h3 data-key="competences_relation_curieux">CURIEUX</h3>
+                    <p>Veille régulière sur le design, le dev, le jeu vidéo et les nouvelles interfaces.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Langues -->
+        <section class="section section-langues" id="langues">
+            <div class="section-header">
+                <h2 data-key="titre_accueil_langues">MES LANGUES</h2>
+            </div>
+            <div class="langues-grid">
+                <article class="lang-card">
+                    <div class="lang-icon imagefr" id="fr"></div>
+                    <h3 data-key="langue_fr">FRANÇAIS</h3>
+                    <p>Langue maternelle.</p>
+                </article>
+                <article class="lang-card">
+                    <div class="lang-icon imageen" id="en"></div>
+                    <h3 data-key="langue_en">ANGLAIS</h3>
+                    <p>Bon niveau oral & écrit, à l’aise en contexte pro.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Outils & logiciels -->
+        <section class="section section-tools" id="outils">
+            <div class="section-header">
+                <h2 data-key="titre_accueil_logiciels">MES OUTILS & LOGICIELS</h2>
+                <p class="section-intro">
+                    J’utilise des outils standards du marché pour faciliter la collaboration, 
+                    le partage et la reprise de projets par d’autres équipes.
+                </p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tools-group">
+                    <h3>Design & Prototypage</h3>
+                    <div class="icone-logiciel">
+                        <img src="images/logiciels/figma.png" alt="Figma">
+                        <img src="images/logiciels/adobexd.png" alt="Adobe XD">
+                        <img src="images/logiciels/adobephotoshop.png" alt="Adobe Photoshop">
+                        <img src="images/logiciels/adobeillustrator.png" alt="Adobe Illustrator">
+                        <img src="images/logiciels/adobeindesign.png" alt="Adobe InDesign">
+                        <img src="images/logiciels/adobepremierepro.png" alt="Adobe Premiere Pro">
+                    </div>
+                </div>
+
+                <div class="tools-group">
+                    <h3>Développement & intégration</h3>
+                    <div class="icone-logiciel">
+                        <img src="images/logiciels/vscode.png" alt="Visual Studio Code">
+                        <img src="images/logiciels/github.png" alt="GitHub">
+                        <img src="images/logiciels/shopify.png" alt="Shopify">
+                        <img src="images/logiciels/wordpress.png" alt="WordPress">
+                        <img src="images/logiciels/ue.png" alt="Unreal Engine">
+                        <img src="images/logiciels/teamviewer.png" alt="TeamViewer">
+                    </div>
+                </div>
+
+                <div class="tools-group">
+                    <h3>Organisation & collaboration</h3>
+                    <div class="icone-logiciel">
+                        <img src="images/logiciels/googledrive.png" alt="Google Drive">
+                        <img src="images/logiciels/googledoc.png" alt="Google Docs">
+                        <img src="images/logiciels/googlesheets.png" alt="Google Sheets">
+                        <img src="images/logiciels/googleslides.png" alt="Google Slides">
+                        <img src="images/logiciels/googleforms.png" alt="Google Forms">
+                        <img src="images/logiciels/miro.png" alt="Miro">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passions -->
+        <section class="section section-passions" id="passions">
+            <div class="section-header">
+                <h2 data-key="titre_accueil_passions">MES PASSIONS</h2>
+                <p class="section-intro">
+                    Ce qui m’inspire au quotidien et nourrit ma façon de concevoir des expériences.
+                </p>
+            </div>
+            <div class="passions-grid">
+                <article class="passion">
+                    <div class="passion-icon imagesports" id="sports"></div>
+                    <h3>SPORTS</h3>
+                    <p>Running, musculation, sports collectifs : pour le dépassement de soi et la discipline.</p>
+                </article>
+                <article class="passion">
+                    <div class="passion-icon imagevoyages" id="voyages"></div>
+                    <h3 data-key="passions_voyages">VOYAGES</h3>
+                    <p>Découvrir d’autres cultures et façons de vivre, pour enrichir ma vision du design.</p>
+                </article>
+                <article class="passion">
+                    <div class="passion-icon imageentrepeneuriat" id="entrepeneuriat"></div>
+                    <h3 data-key="passions_entrepeunariat">ENTREPRENEURIAT</h3>
+                    <p>Créer des projets concrets, tester des idées, apprendre du terrain.</p>
+                </article>
+                <article class="passion">
+                    <div class="passion-icon imagelecture" id="lecture"></div>
+                    <h3 data-key="passions_lecture">LECTURE</h3>
+                    <p>Design, psychologie, business, développement personnel.</p>
+                </article>
+                <article class="passion">
+                    <div class="passion-icon imagejv" id="jv"></div>
+                    <h3 data-key="passions_jeuxvideos">JEUX VIDÉO</h3>
+                    <p>Source d’inspiration pour le game design, le rythme et la narration interactive.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section section-certifications" id="certifications">
+            <div class="section-header">
+                <h2 data-key="titre_accueil_certifications">MES CERTIFICATIONS</h2>
+                <p class="section-intro">
+                    Quelques jalons qui valident mon parcours et mes compétences, 
+                    en design, développement et 3D.
+                </p>
+            </div>
+            <div class="certifications-grid">
+                <article class="certificat">
+                    <img src="images/certificato3d.png" alt="Certification 3D">
+                </article>
+                <article class="certificat">
+                    <img src="images/certificatux.png" alt="Certification UX / UI">
+                </article>
+                <article class="certificat">
+                    <img src="images/certificatdev.png" alt="Certification développement">
+                </article>
+            </div>
+        </section>
+
+        <!-- CV -->
+        <section class="section section-cv" id="cv">
+            <div class="section-header">
+                <h2 data-key="titre_accueil_moncv">MON CV</h2>
+                <p class="section-intro">
+                    Tu peux télécharger mon CV en français ou mon résumé en anglais. 
+                    Ils complètent bien ce portfolio si tu souhaites en savoir plus sur mon parcours.
+                </p>
+            </div>
+
+            <div class="cv-container">
+                <a href="cv/CV_Thomas_Houdard.pdf" class="cv-link" data-lang="fr" target="_blank" rel="noopener noreferrer">
+                    <span data-key="label_cv_fr">CLIQUER POUR VOIR MON CV</span>
+                    <img src="images/langSelect_FR.png" alt="FR">
+                </a>
+                <a href="cv/Resume_Thomas_Houdard.pdf" class="cv-link" data-lang="en" target="_blank" rel="noopener noreferrer">
+                    <span data-key="label_cv_en">CLICK TO SEE MY RESUME</span>
+                    <img src="images/langSelect_EN.png" alt="EN">
+                </a>
+            </div>
+        </section>
+
+        <!-- Call to action final -->
+        <section class="section section-cta" id="cta-contact">
+            <div class="cta-inner">
+                <h2>Un projet en tête&nbsp;?</h2>
+                <p>
+                    Que ce soit pour un site vitrine, une refonte d’interface, un prototype 
+                    ou un projet plus expérimental, je serais ravi d’en discuter.
+                </p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn primary">Me contacter</a>
+                    <a href="TravaillerAvecMoi.html" class="btn ghost">Voir comment je travaille</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+                <a href="mailto:contact@thomashoudard.com" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/email.png" alt="Email">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+            <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

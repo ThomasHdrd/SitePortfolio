@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Freelance UI/UX Designer & Développeur Web à Montpellier</title>
+  <meta name="description" content="Je conçois des interfaces claires et développe des sites modernes, rapides et responsives pour PME, entrepreneurs et associations.">
+  <meta name="keywords" content="freelance web Montpellier, UI UX designer, développeur HTML CSS JS, création site vitrine">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Freelance UI/UX Designer & Développeur Web à Montpellier">
+  <meta property="og:description" content="Design et développement de sites modernes, rapides et responsives pour PME, entrepreneurs et associations.">
+  <meta property="og:url" content="https://thomashoudard.com">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* --------------------------
+       RESET & VARIABLES
+    --------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #328ad3;
+      --primary-light: #d9e9f8;
+      --primary-dark: #1f5f96;
+      --bg: #f4f4f7;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-soft: #6b7280;
+      --border-soft: rgba(148, 163, 184, 0.4);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+      --max-width: 1120px;
+      --transition: all 0.25s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0, var(--bg) 55%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    p {
+      font-size: 0.98rem;
+      color: var(--text-soft);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    /* --------------------------
+       NAVBAR
+    --------------------------- */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(244, 244, 247, 0.94),
+        rgba(244, 244, 247, 0.85),
+        rgba(244, 244, 247, 0.6)
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    nav .name {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav .name-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    nav h1 {
+      font-size: 1.15rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    nav .name p {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    /* Menu principal */
+
+    .menu-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      font-size: 0.9rem;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: var(--text-soft);
+      position: relative;
+      padding-bottom: 0.15rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .menu li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--primary);
+      transition: width 0.2s ease;
+    }
+
+    .menu li a:hover {
+      color: var(--text-main);
+    }
+
+    .menu li a:hover::after,
+    .menu li a.active::after {
+      width: 100%;
+    }
+
+    .travailleravecmoi {
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      background: var(--primary);
+      color: #f9fafb !important;
+      box-shadow: 0 12px 30px rgba(50, 138, 211, 0.45);
+      transition: var(--transition);
+    }
+
+    .travailleravecmoi::after {
+      display: none;
+    }
+
+    .travailleravecmoi:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.5);
+    }
+
+    /* Sous-menu (portfolio) */
+
+    .sousMenu {
+      position: relative;
+    }
+
+    .sousMenu > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .sousMenu-content {
+      position: absolute;
+      top: 120%;
+      left: 0;
+      min-width: 230px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+      padding: 0.4rem;
+      display: none;
+      flex-direction: column;
+      z-index: 20;
+    }
+
+    .sousMenu-content a {
+      padding: 0.45rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .sousMenu-content a:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .sousMenu:hover .sousMenu-content {
+      display: flex;
+    }
+
+    /* Sélecteur de langue (desktop) */
+
+    .lang-dropdown {
+      position: relative;
+    }
+
+    #lang-button {
+      background-color: transparent;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-soft);
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    #lang-button img {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+    }
+
+    #dropdown-arrow {
+      font-size: 0.7rem;
+    }
+
+    #lang-list {
+      position: absolute;
+      right: 0;
+      top: 120%;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-soft);
+      padding: 0.35rem 0;
+      list-style: none;
+      display: none;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+      min-width: 120px;
+    }
+
+    #lang-list li {
+      padding: 0.3rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      font-size: 0.86rem;
+    }
+
+    #lang-list li img {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+    }
+
+    #lang-list li:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .lang-mobile {
+      display: none;
+    }
+
+    /* Burger menu */
+
+    .menu-toggle {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: #ffffff;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background-color: var(--text-main);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .bar::before,
+    .bar::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background-color: var(--text-main);
+      left: 0;
+      transition: var(--transition);
+    }
+
+    .bar::before {
+      top: -5px;
+    }
+
+    .bar::after {
+      top: 5px;
+    }
+
+    .menu-toggle.active .bar {
+      background-color: transparent;
+    }
+
+    .menu-toggle.active .bar::before {
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar::after {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+
+    /* --------------------------
+       PRÉSENTATION / HERO
+    --------------------------- */
+
+    header {
+      max-width: var(--max-width);
+      margin: 2.5rem auto 2rem;
+      padding: 0 1.5rem;
+    }
+
+    .presentation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.8rem 1.6rem;
+      border-radius: 26px;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .image-left {
+      flex: 0 0 180px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-left img {
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+    }
+
+    .text-right {
+      flex: 1 1 260px;
+    }
+
+    .text-right p:first-child {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .text-right p + p {
+      margin-top: 0.5rem;
+    }
+
+    /* --------------------------
+       VIDEO CV
+    --------------------------- */
+
+    .cv-video {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 2.5rem;
+    }
+
+    .cv-video h2 {
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .video {
+      border-radius: var(--radius-lg);
+      padding: 0.9rem;
+      background: radial-gradient(circle at 0 0, #fef3c7 0, var(--primary-light) 50%, #0f172a 100%);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .video video {
+      width: 100%;
+      max-height: 420px;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.3);
+    }
+
+    /* --------------------------
+       SECTIONS EN CARTES
+    --------------------------- */
+
+    section.competences-techniques,
+    section.competences-relationnelles-comportementales,
+    section.langues,
+    section.logiciels,
+    section.passions,
+    section.certificat,
+    section.moncv {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 2.8rem;
+    }
+
+    section.competences-techniques > h2,
+    section.competences-relationnelles-comportementales > h2,
+    section.langues > h2,
+    section.logiciels > h2,
+    section.passions > h2,
+    section.certificat > h2,
+    section.moncv > h2 {
+      font-size: 1.05rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 1.3rem;
+    }
+
+    .tableau-technique,
+    .tableau-relations,
+    .tableau-langues,
+    .tableau-passion,
+    .tableau-certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .competencestechniques,
+    .competencesrelationnelles,
+    .langages,
+    .passion,
+    .certificat > div {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 1rem 0.9rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 30px rgba(148, 163, 184, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .competencestechniques h3,
+    .competencestechniques h4,
+    .competencesrelationnelles h4,
+    .langages h4,
+    .passion h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .competencestechniques ul {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .competencestechniques li + li {
+      margin-top: 0.2rem;
+    }
+
+    /* Images "icônes" de compétences (tu pourras les styliser comme tu veux en background dans un autre CSS si besoin) */
+    .competencestechniques div[id],
+    .competencesrelationnelles div[id],
+    .passion div[id],
+    .langages div[id] {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--primary-light);
+      margin-bottom: 0.35rem;
+    }
+
+    /* Langues */
+
+    .tableau-langues .langages {
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    /* Outils & logiciels */
+
+    .logiciels .icone-logiciel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 30px rgba(148, 163, 184, 0.25);
+    }
+
+    .logiciels .icone-logiciel img {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: #ffffff;
+      padding: 4px;
+      box-shadow: 0 4px 12px rgba(148, 163, 184, 0.4);
+    }
+
+    /* CV liens */
+
+    .cv-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: #ffffff;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .cv-link img {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+    }
+
+    .cv-link:hover {
+      background: var(--primary);
+      color: #f9fafb;
+      border-color: transparent;
+      box-shadow: 0 14px 30px rgba(50, 138, 211, 0.45);
+    }
+
+    /* --------------------------
+       FOOTER
+    --------------------------- */
+
+    footer {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 2rem 1.5rem 2.4rem;
+      margin-top: 2.5rem;
+    }
+
+    .footer-container {
+      max-width: var(--max-width);
+      margin: 0 auto 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .footer-social img {
+      width: 34px;
+      height: 34px;
+      filter: invert(1);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 6px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .footer-social img:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.7);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      border-top: 1px solid rgba(148, 163, 184, 0.6);
+      padding-top: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+    }
+
+    .footer-bottom a {
+      color: #e5e7eb;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    /* --------------------------
+       RESPONSIVE
+    --------------------------- */
+
+    @media (max-width: 960px) {
+      .presentation {
+        padding: 1.5rem 1.3rem;
+      }
+
+      .image-left {
+        flex-basis: 100%;
+      }
+
+      .image-left img {
+        width: 150px;
+        height: 150px;
+      }
+
+      main {
+        padding-inline: 1.3rem;
+      }
+    }
+
+    @media (max-width: 820px) {
+      nav .name {
+        padding-inline: 1.3rem;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-wrapper {
+        padding-inline: 1.3rem;
+      }
+
+      .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0.9rem 1.3rem 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+        background: rgba(244, 244, 247, 0.98);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+        display: none;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .sousMenu-content {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-inline: 0;
+        background: transparent;
+      }
+
+      .sousMenu-content a {
+        padding-left: 1rem;
+      }
+
+      .lang-dropdown {
+        display: none;
+      }
+
+      .lang-mobile {
+        display: block;
+        margin-top: 0.4rem;
+      }
+
+      footer .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .presentation {
+        border-radius: 20px;
+      }
+
+      section.competences-techniques,
+      section.competences-relationnelles-comportementales,
+      section.langues,
+      section.logiciels,
+      section.passions,
+      section.certificat,
+      section.moncv {
+        padding-bottom: 2.2rem;
+      }
+
+      .tableau-technique,
+      .tableau-relations,
+      .tableau-langues,
+      .tableau-passion,
+      .tableau-certifications {
+        gap: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="name">
+      <div class="name-left">
+        <h1>THOMAS HOUDARD</h1>
+        <p data-key="menu_job"></p>
+      </div>
+
+      <!-- Sélecteur de langue desktop -->
+      <div class="lang-dropdown">
+        <button id="lang-button">
+          <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue">
+          <span id="current-lang-text">FR</span>
+          <span id="dropdown-arrow">▾</span>
+        </button>
+        <ul id="lang-list">
+          <li id="lang-fr">
+            <img src="images/langSelect_FR.png" alt="FR"> FR
+          </li>
+          <li id="lang-en">
+            <img src="images/langSelect_EN.png" alt="EN"> EN
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-wrapper">
+      <!-- Menu petit écran -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+      </div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="active" data-key="menu_about"></a></li>
+
+        <li class="sousMenu">
+          <a href="#" data-key="menu_portfolio">▾</a>
+          <div class="sousMenu-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+            <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+            <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+          </div>
+        </li>
+
+        <li><a href="contact.html" data-key="menu_contact"></a></li>
+        <li><a class="travailleravecmoi" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+
+        <!-- Sélecteur de langue dans le menu mobile -->
+        <li class="lang-mobile">
+          <div class="lang-dropdown">
+            <button id="lang-button-mobile">
+              <img id="current-lang-img-mobile" src="images/langSelect_FR.png" alt="Langue">
+              <span id="current-lang-text-mobile">FR</span>
+              <span>▾</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PRÉSENTATION -->
+  <header>
+    <div class="presentation">
+      <div class="image-left">
+        <!-- adapte le chemin si besoin -->
+        <img src="images/photoprofil.webp" alt="Photo de profil">
+      </div>
+      <div class="text-right">
+        <p data-key="presentation_1"></p>
+        <p data-key="presentation_2"></p>
+        <p data-key="presentation_3"></p>
+        <p data-key="presentation_4"></p>
+        <p data-key="presentation_5"></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- VIDEO CV -->
+    <section class="cv-video">
+      <h2 data-key="titre_video"></h2>
+      <div class="video">
+        <video controls>
+          <source src="videos/CV VIDEO - THOMAS HOUDARD_FINAL.mp4" type="video/mp4">
+          Votre navigateur ne prend pas en charge la lecture de vidéo.
+        </video>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES TECHNIQUES -->
+    <section class="competences-techniques">
+      <h2 data-key="titre_competences_tech">MES COMPÉTENCES TECHNIQUES</h2>
+      <div class="tableau-technique">
+        <!-- ui ux design -->
+        <div class="competencestechniques">
+          <div class="imageuiuxdesign" id="uiuxdesign"></div>
+          <h4>UI & UX DESIGN</h4>
+          <ul>
+            <li>Design Thinking</li>
+            <li>Wireframe</li>
+            <li>Tests utilisateurs</li>
+            <li>Audit concurrentiel</li>
+            <li>Prototype Maquette</li>
+          </ul>
+        </div>
+
+        <!-- dev front -->
+        <div class="competencestechniques">
+          <div class="imagedevfront" id="devfront"></div>
+          <h4>DEV FRONT</h4>
+          <ul>
+            <li>HTML/CSS/JS</li>
+            <li>Angular</li>
+            <li>Responsive Web Design</li>
+            <li>Accessibilité</li>
+          </ul>
+        </div>
+
+        <!-- dev back -->
+        <div class="competencestechniques">
+          <div class="imagedevback" id="devback"></div>
+          <h4>DEV BACK</h4>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>PHP</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <!-- tools -->
+        <div class="competencestechniques">
+          <div class="imageseo" id="seo"></div>
+          <h4>WEB & PRODUIT</h4>
+          <ul>
+            <li>WordPress & Shopify</li>
+            <li>SEO de base</li>
+            <li>Gestion de projet</li>
+            <li>Analyse & suivi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES RELATIONNELLES -->
+    <section class="competences-relationnelles-comportementales">
+      <h2 data-key="titre_accueil_competences_relationnelles">MES COMPÉTENCES RELATIONNELLES & COMPORTEMENTALES</h2>
+      <div class="tableau-relations">
+        <div class="competencesrelationnelles">
+          <div class="imagecommunication" id="communication"></div>
+          <h4 data-key="competences_relation_communication">COMMUNICATION</h4>
+        </div>
+
+        <div class="competencesrelationnelles">
+          <div class="imageadaptabilite" id="adaptabilite"></div>
+          <h4 data-key="competences_relation_adaptabilite">ADAPTABILITE</h4>
+        </div>
+
+        <div class="competencesrelationnelles">
+          <div class="imagecreatif" id="creatif"></div>
+          <h4 data-key="competences_relation_creatif">CREATIF</h4>
+        </div>
+
+        <div class="competencesrelationnelles">
+          <div class="imagepolyvalent" id="polyvalent"></div>
+          <h4 data-key="competences_relation_polyvalent">POLYVALENT</h4>
+        </div>
+
+        <div class="competencesrelationnelles">
+          <div class="imagecurieux" id="curieux"></div>
+          <h4 data-key="competences_relation_curieux">CURIEUX</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUES -->
+    <section class="langues">
+      <h2 data-key="titre_accueil_langues">MES LANGUES</h2>
+      <div class="tableau-langues">
+        <div class="langages">
+          <div class="imagefr" id="fr"></div>
+          <h4 data-key="langue_fr">FRANCAIS</h4>
+        </div>
+        <div class="langages">
+          <div class="imageen" id="en"></div>
+          <h4 data-key="langue_en">ANGLAIS</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS & LOGICIELS -->
+    <section class="logiciels">
+      <h2 data-key="titre_accueil_logiciels">MES OUTILS & LOGICIELS</h2>
+      <div class="icone-logiciel">
+        <img src="images/logiciels/figma.png" alt="figma">
+        <img src="images/logiciels/adobexd.png" alt="adobexd">
+        <img src="images/logiciels/adobephotoshop.png" alt="adobephotoshop">
+        <img src="images/logiciels/adobeillustrator.png" alt="adobeillustrator">
+        <img src="images/logiciels/visualstudiocode.png" alt="visualstudiocode">
+        <img src="images/logiciels/pycharm.png" alt="pycharm">
+        <img src="images/logiciels/phpstorm.png" alt="phpstorm">
+        <img src="images/logiciels/intellij.png" alt="intellij">
+        <img src="images/logiciels/trello.png" alt="trello">
+        <img src="images/logiciels/jira.png" alt="jira">
+        <img src="images/logiciels/slack.png" alt="slack">
+        <img src="images/logiciels/teams.png" alt="teams">
+        <img src="images/logiciels/teamviewer.png" alt="teamviewer">
+        <img src="images/logiciels/googledrive.png" alt="googledrive">
+        <img src="images/logiciels/googledoc.png" alt="googledoc">
+        <img src="images/logiciels/googlesheets.png" alt="googlesheets">
+        <img src="images/logiciels/googleslides.png" alt="googleslides">
+        <img src="images/logiciels/googleforms.png" alt="googleforms">
+        <img src="images/logiciels/miro.png" alt="miro">
+      </div>
+    </section>
+
+    <!-- PASSIONS -->
+    <section class="passions">
+      <h2 data-key="titre_accueil_passions">MES PASSIONS</h2>
+      <div class="tableau-passion">
+        <div class="passion">
+          <div class="imagesports" id="sports"></div>
+          <h4>SPORTS</h4>
+        </div>
+        <div class="passion">
+          <div class="imagevoyages" id="voyages"></div>
+          <h4 data-key="passions_voyages">VOYAGES</h4>
+        </div>
+        <div class="passion">
+          <div class="imageentrepreneuriat" id="entrepreneuriat"></div>
+          <h4 data-key="passions_entrepreneuriat">ENTREPRENEURIAT</h4>
+        </div>
+        <div class="passion">
+          <div class="imagejeuvideo" id="jeuxvideo"></div>
+          <h4 data-key="passions_jeuxvideos">JEUX VIDEO</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certificat">
+      <h2 data-key="titre_accueil_certifications">MES CERTIFICATIONS</h2>
+      <div class="tableau-certifications">
+        <div class="certificat">
+          <div>
+            <img src="images/certificato3d.png" alt="certificat 3D">
+          </div>
+        </div>
+        <div class="certificat">
+          <div>
+            <img src="images/certificatux.png" alt="certificat UX">
+          </div>
+        </div>
+        <div class="certificat">
+          <div>
+            <img src="images/certificatdev.png" alt="certificat dev">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section class="moncv">
+      <h2 data-key="titre_accueil_moncv">MON CV</h2>
+      <div class="cv-container">
+        <a href="cv/CV_Thomas_Houdard.pdf" class="cv-link" data-lang="fr" target="_blank">
+          <span data-key="label_cv_fr">CLIQUER POUR VOIR MON CV</span>
+          <img src="images/langSelect_FR.png" alt="FR">
+        </a>
+        <a href="cv/Resume_Thomas_Houdard.pdf" class="cv-link" data-lang="en" target="_blank">
+          <span data-key="label_cv_en">CLICK TO SEE MY RESUME</span>
+          <img src="images/langSelect_EN.png" alt="EN">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin">
+        </a>
+        <a href="https://github.com/ThomasHdrd" target="_blank">
+          <img src="images/github.png" alt="github">
+        </a>
+        <a href="mailto:contact@thomashoudard.com" target="_blank">
+          <img src="images/email.png" alt="mail">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="blog.html">Blog</a>
+      <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script>
+    // -------- BURGER MENU ----------
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      });
+
+      menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          menu.classList.remove("active");
+        });
+      });
+    }
+
+    // -------- TRADUCTIONS ----------
+    let translations = {};
+    let currentLang = "fr";
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      const data = translations[lang] || {};
+
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (data[key]) {
+          el.textContent = data[key];
+        }
+      });
+
+      // CV : ne montrer que le bon lien
+      document.querySelectorAll(".cv-link").forEach(link => {
+        const linkLang = link.getAttribute("data-lang");
+        if (!linkLang || linkLang === lang) {
+          link.style.display = "inline-flex";
+        } else {
+          link.style.display = "none";
+        }
+      });
+
+      // Visuel bouton langue
+      const img = lang === "fr" ? "images/langSelect_FR.png" : "images/langSelect_EN.png";
+      const label = lang === "fr" ? "FR" : "EN";
+
+      const btnImg = document.getElementById("current-lang-img");
+      const btnText = document.getElementById("current-lang-text");
+      if (btnImg && btnText) {
+        btnImg.src = img;
+        btnText.textContent = label;
+      }
+
+      const btnImgM = document.getElementById("current-lang-img-mobile");
+      const btnTextM = document.getElementById("current-lang-text-mobile");
+      if (btnImgM && btnTextM) {
+        btnImgM.src = img;
+        btnTextM.textContent = label;
+      }
+    }
+
+    // Charge translation.json
+    fetch("translation.json")
+      .then(res => res.json())
+      .then(data => {
+        translations = data || {};
+        applyLanguage("fr");
+      })
+      .catch(() => {
+        // si le JSON n'est pas trouvé on garde le texte par défaut
+      });
+
+    // Dropdown langue (desktop)
+    const langButton = document.getElementById("lang-button");
+    const langList = document.getElementById("lang-list");
+
+    if (langButton && langList) {
+      langButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        langList.style.display = langList.style.display === "block" ? "none" : "block";
+      });
+
+      document.getElementById("lang-fr")?.addEventListener("click", () => {
+        applyLanguage("fr");
+        langList.style.display = "none";
+      });
+
+      document.getElementById("lang-en")?.addEventListener("click", () => {
+        applyLanguage("en");
+        langList.style.display = "none";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!langList.contains(e.target) && e.target !== langButton) {
+          langList.style.display = "none";
+        }
+      });
+    }
+
+    // Bouton langue mobile (juste toggle FR/EN)
+    const langButtonMobile = document.getElementById("lang-button-mobile");
+    if (langButtonMobile) {
+      langButtonMobile.addEventListener("click", () => {
+        const next = currentLang === "fr" ? "en" : "fr";
+        applyLanguage(next);
+      });
+    }
+  </script>
+</body>
+</html>

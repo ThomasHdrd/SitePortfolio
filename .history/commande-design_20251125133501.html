@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PACK DESIGN</title>
+    <meta name="description" content="Pack Design — moderne, intuitif, orienté objectifs. Maquettes Figma prêtes pour l’intégration, avec options et estimation rapide.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav aria-label="Menu principal">
+            <div class="name">
+                <h1>Thomas HOUDARD</h1>
+                <p data-key="menu_job"></p>
+            </div>
+
+            <!-- Toggle menu (mobile) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir/fermer le menu" aria-expanded="false" aria-controls="menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about"></a></li>
+                <li class="sousMenu">
+                    <a href="#" data-key="menu_portfolio" aria-haspopup="true" aria-expanded="false">▾</a>
+                    <div class="sousMenu-content" role="menu">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro" role="menuitem"></a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design" role="menuitem"></a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev" role="menuitem"></a>
+                        <a href="projetPersonnels.html" data-key="menu_projects_personal" role="menuitem"></a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact"></a></li>
+                <li><a class="travailleravecmoi active" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+
+                <!-- Sélecteur de langue (mobile) -->
+                <li class="lang-mobile">
+                    <div class="lang-dropdown">
+                        <button id="lang-button" aria-haspopup="listbox" aria-expanded="false">
+                            <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue actuelle: FR">
+                            <span id="current-lang-text">FR</span>
+                            <span id="dropdown-arrow" aria-hidden="true">▾</span>
+                        </button>
+                        <ul id="lang-list" role="listbox" aria-label="Choisir la langue">
+                            <li id="lang-fr" role="option" aria-selected="true">
+                                <img src="images/langSelect_FR.png" alt="FR"> FR
+                            </li>
+                            <li id="lang-en" role="option" aria-selected="false">
+                                <img src="images/langSelect_EN.png" alt="EN"> EN
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="design-page">
+        <h1 data-key="pack.title">Pack Design — moderne, intuitif, orienté objectifs</h1>
+
+        <p class="texte-presentation" data-key="pack.presentation">
+            Je conçois une expérience claire et efficace pour présenter votre activité et atteindre vos objectifs
+            (demandes de devis, prises de contact, ventes). Livraison sur Figma, prête pour l'intégration.
+        </p>
+
+        <ul class="liste-presentation" aria-label="Caractéristiques principales">
+            <li class="liste-presentation1" data-key="liste-presentation1">Desktop &amp; Mobile</li>
+            <li class="liste-presentation2" data-key="liste-presentation2">Figma</li>
+            <li class="liste-presentation3" data-key="liste-presentation3">2 allers-retours inclus</li>
+            <li class="liste-presentation4" data-key="liste-presentation4">Styleguide léger</li>
+        </ul>
+
+        <section class="cartes" aria-label="Résumé du pack">
+            <article class="carte1">
+                <strong data-key="carte1">À partir de 150€</strong>
+                <span data-key="carte1-texte">Pack de base</span>
+            </article>
+            <article class="carte2">
+                <strong data-key="carte2">3 – 10 jours ouvrés</strong>
+                <span data-key="carte2-texte">Délai indicatif</span>
+            </article>
+            <article class="carte3">
+                <strong data-key="carte3">100% sur-mesure</strong>
+                <span data-key="carte3-texte">Adapté à vos objectifs</span>
+            </article>
+        </section>
+
+        <div class="btn-actions">
+            <a class="btn-inclus" href="#section" data-key="btn-inclus">Voir ce qui est inclus</a>
+        </div>
+
+        <!-- Pour qui -->
+        <section class="pour-qui">
+            <h2 data-key="pour-qui-title">Pour qui est ce pack ?</h2>
+            <ul>
+                <li data-key="pour-qui-indep">Indépendant ou PME → avoir un site pro et clair qui rassure vos clients.</li>
+                <li data-key="pour-qui-startup">Startup → lancer une landing page efficace qui convertit.</li>
+                <li data-key="pour-qui-entreprise">Entreprise → moderniser votre vitrine digitale et votre image.</li>
+                <li data-key="pour-qui-personnel">Projet personnel → donner vie à votre idée avec un design esthétique et moderne.</li>
+            </ul>
+        </section>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Objectifs -->
+        <section class="objectif">
+            <h2 data-key="objectif-title">Objectifs traités</h2>
+            <ul>
+                <li data-key="objectif-clarity">Clarifier votre offre et votre valeur ajoutée → rendre votre proposition simple et convaincante pour vos visiteurs.</li>
+                <li data-key="objectif-structure">Structurer l’information → guider vos utilisateurs pas à pas pour qu’ils trouvent vite ce qu’ils cherchent.</li>
+                <li data-key="objectif-actions">Optimiser les actions clés → encourager vos visiteurs à passer à l’action (contact, devis, achat, inscription).</li>
+            </ul>
+        </section>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Inclus -->
+        <section class="section_inclus" id="section">
+            <h2 data-key="inclus-title">Ce qui est inclus dans le pack</h2>
+            <div>
+                <article>
+                    <h3 data-key="inclus-livrables">Livrables</h3>
+                    <ul>
+                        <li data-key="inclus-livrable-mockups">Maquettes haute-fidélité <strong>(mobile ou desktop)</strong> (Figma).</li>
+                        <li data-key="inclus-livrable-styleguide"><strong>1 version</strong> (au choix : mobile ou desktop)</li>
+                        <li data-key="inclus-livrable-revisions"><strong>2 révisions</strong> de corrections inclus.</li>
+                        <li data-key="inclus-livrable-source">UI simple + fichier source (Figma)</li>
+                        <li data-key="inclus-livrable-exports">Exports <strong>PNG/SVG</strong> si besoin pour intégration.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3 data-key="inclus-method">Méthode</h3>
+                    <ul>
+                        <li data-key="inclus-method-brief">Brief express &amp; cadrage des objectifs.</li>
+                        <li data-key="inclus-method-wireframe">Wireframe rapide si nécessaire.</li>
+                        <li data-key="inclus-method-design">Design UI final, prêt à être intégré.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Optionnels -->
+        <section class="section-optionnels">
+            <h2 data-key="optionals-title">Modules optionnels</h2>
+            <div>
+                <article>
+                    <h3 data-key="optionals-ui-title">Expérience & UI</h3>
+                    <ul>
+                        <li data-key="optionals-ui-prototype">Prototype interactif (Figma clickable) — +70€</li>
+                        <li data-key="optionals-ui-system">Design system light (palette, typos, composants clés) — +100€</li>
+                        <li data-key="optionals-ui-pages">Sections / pages supplémentaires — +45€/page</li>
+                        <li data-key="optionals-ui-darkmode">Dark mode (version claire & sombre) — +50€</li>
+                        <li data-key="optionals-ui-express">Livraison express 48h-72h — +50€</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3 data-key="optionals-assets-title">Identité & assets</h3>
+                    <ul>
+                        <li data-key="optionals-assets-logo">Logo simple / refonte légère — +50€</li>
+                        <li data-key="optionals-assets-illustrations">Illustrations (sélection & retouches) — +50€</li>
+                        <li data-key="optionals-assets-mockups">Préparation des mockups marketing — +60€</li>
+                        <li data-key="optionals-assets-stock">Banque d’images (sélection & achat) — +30€</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Processus -->
+        <section class="section-processus">
+            <h2 data-key="process-title">Processus simple et rapide</h2>
+            <div>
+                <article>
+                    <h3 data-key="process-step1-title">01 • Cadrage</h3>
+                    <ul>
+                        <li data-key="process-step1-text">Un échange de 20–30 minutes pour comprendre vos objectifs, audience et contenus disponibles.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3 data-key="process-step2-title">02 • Structure</h3>
+                    <ul>
+                        <li data-key="process-step2-text">Hiérarchie des informations et wireframe rapide si nécessaire pour valider le parcours.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3 data-key="process-step3-title">03 • Design</h3>
+                    <ul>
+                        <li data-key="process-step3-text">Création des maquettes haute-fidélité (desktop & mobile) selon votre identité.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3 data-key="process-step4-title">04 • Livraison</h3>
+                    <ul>
+                        <li data-key="process-step4-text">Remise du fichier Figma, exports si besoin, et support pour passage à l’intégration.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Estimation rapide -->
+        <section class="estimation-rapide" aria-labelledby="estimate-title">
+            <h3 id="estimate-title" data-key="estimate-title">Estimation rapide</h3>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="70">
+                    <span data-key="estimate-prototype">Prototype interactif (parcours cliquable dans Figma)</span>
+                </label>
+                <span class="price">+70€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="100">
+                    <span data-key="estimate-system">Design system light (palette, typos, composants clés, UI kit)</span>
+                </label>
+                <span class="price">+100€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="50">
+                    <span data-key="estimate-darkmode">Dark mode (version claire & sombre)</span>
+                </label>
+                <span class="price">+50€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="60">
+                    <span data-key="estimate-mockups">Mockups marketing (présentation réaliste pour pitch client)</span>
+                </label>
+                <span class="price">+60€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="30">
+                    <span data-key="estimate-stock">Banque d’images libres de droits (sélection & achat)</span>
+                </label>
+                <span class="price">+30€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="50">
+                    <span data-key="estimate-logo">Logo simple / refonte légère <i>(version vectorielle .svg)</i></span>
+                </label>
+                <span class="price">+50€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label class="estimation-option">
+                    <input type="checkbox" class="opt" data-price="50">
+                    <span data-key="estimate-express">Livraison express 48h-72h <i>(délai indicatif, selon charge de travail)</i></span>
+                </label>
+                <span class="price">+50€</span>
+            </div>
+
+            <div class="estimation-container">
+                <label for="qty" data-key="estimate-pages">Sections / pages supplémentaires</label>
+                <input id="qty" class="qty-input" type="number" min="0" step="1" value="0" data-unit="45" aria-describedby="section-unit">
+                <span class="price" id="section-unit">45€/page</span>
+            </div>
+
+            <div class="total-container">
+                <p class="note" data-key="estimate-note">Une fois vos options sélectionnées, indiquez vos coordonnées ci-dessous et recevez rapidement votre devis personnalisé.</p>
+                <div class="total" aria-live="polite">
+                    <p data-key="estimate-total">Total estimé</p>
+                    <h1 id="total">150€</h1>
+                </div>
+            </div>
+
+            <!-- Formulaire devis -->
+            <form id="devis-form" action="https://formspree.io/f/mqayadbr" method="POST" novalidate>
+                <div class="client-fields">
+                    <label for="clientName" data-key="form-name">Nom &amp; Prénom <span aria-hidden="true" style="color:#e53935">*</span></label>
+                    <input id="clientName" name="nom_prenom" type="text" autocomplete="name" data-i18n-attr="placeholder" data-key="form-name-placeholder" required>
+                </div>
+
+                <div class="client-fields">
+                    <label for="clientEmail" data-key="form-email">Email <span aria-hidden="true" style="color:#e53935">*</span></label>
+                    <input id="clientEmail" name="email" type="email" autocomplete="email" data-i18n-attr="placeholder" data-key="form-email-placeholder" required>
+                </div>
+
+                <div class="client-fields">
+                    <label for="clientMessage" data-key="form-message">Votre message</label>
+                    <textarea id="clientMessage" name="message" rows="4" data-i18n-attr="placeholder" data-key="form-message-placeholder"></textarea>
+                </div>
+
+                <input type="hidden" name="estimation_detail" id="estimation_detail">
+                <input type="hidden" name="estimation_total" id="estimation_total">
+                <input type="hidden" name="_subject" value="Demande de devis — Estimation depuis le site">
+                <input type="hidden" name="_next" value="https://thomashoudard.com/merci.html">
+
+                <button type="submit" class="btn-devis" data-key="form-submit">DEMANDER LE DEVIS</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social" aria-label="Réseaux sociaux">
+                <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+                <a href="mailto:contact@thomashoudard.com?" class="social-icon">
+                    <img src="images/email.png" alt="Email">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2025, Thomas Houdard, Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

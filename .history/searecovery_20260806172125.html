@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sea Recovery — Refonte UX/UI &amp; WordPress | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas Sea Recovery : refonte UX/UI premium, wireframes, maquettes haute fidélité et intégration WordPress responsive." />
+  <meta property="og:title" content="Sea Recovery — Étude de cas UX/UI" />
+  <meta property="og:description" content="Refonte d’une page d’accueil premium, de la direction artistique à l’intégration WordPress desktop et mobile." />
+  <meta property="og:url" content="https://thomashoudard.com/searecovery.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    .sea-hero-image,
+    .case-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .sea-hero-image {
+      max-height: 520px;
+      padding: .75rem;
+    }
+
+    .case-gallery {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .case-visual {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--card);
+    }
+
+    .case-visual figcaption {
+      padding: 1rem 1.1rem 1.15rem;
+      color: var(--text-dim);
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+
+    .result-highlight {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .result-highlight .card strong {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--accent);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 768px) {
+      .sea-hero-image { padding: .25rem; }
+      .case-visual { border-radius: 14px; }
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+        <li class="lang-switch" id="langSwitch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="hero reveal">
+      <div class="hero-intro">
+        <p class="hero-sub" data-key="sea_hero_sub">Test de recrutement · UX/UI Design &amp; WordPress</p>
+        <h1 data-key="sea_hero_title">Sea Recovery — Refonte d’une expérience digitale premium</h1>
+        <p data-key="sea_hero_p1">
+          Sea Recovery est un centre privé de rétablissement situé dans le sud de l’Espagne, destiné à une clientèle internationale recherchant discrétion, accompagnement sur mesure et excellence.
+        </p>
+        <p data-key="sea_hero_p2">
+          Dans le cadre d’un test de recrutement, j’ai repensé la page d’accueil afin de créer une expérience plus moderne, rassurante et haut de gamme, puis je l’ai intégrée sous WordPress en versions desktop et mobile.
+        </p>
+
+        <div class="company-meta">
+          <span data-key="sea_meta_role">UI/UX Designer &amp; WordPress Developer</span>
+          <span data-key="sea_meta_date">Juillet 2026</span>
+          <span data-key="sea_meta_duration">Test de recrutement · Projet individuel</span>
+        </div>
+
+        <div class="badges">
+          <span class="badge" data-key="badge_uxui"><span class="dot"></span>UI/UX Design</span>
+          <span class="badge" data-key="badge_figma"><span class="dot"></span>Figma</span>
+          <span class="badge" data-key="badge_wordpress"><span class="dot"></span>WordPress</span>
+          <span class="badge" data-key="badge_responsive"><span class="dot"></span>Responsive</span>
+        </div>
+
+        <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+          <a href="#process" class="btn btn-primary" data-key="cta_see_process" style="width:100%;">Voir ma démarche</a>
+          <a href="#site" class="btn btn-outline" data-key="cta_see_site" style="width:100%;justify-content:center;">Voir le site réalisé</a>
+        </div>
+      </div>
+
+      <div class="video-wrap" style="align-self:start">
+        <div class="proto-wrap">
+          <div class="gallery">
+            <img class="sea-hero-image" loading="eager" src="images/freelance/sea-recovery-design-process.png" alt="Wireframes et maquettes haute fidélité Sea Recovery sur Figma" />
+          </div>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-top:.8rem" data-key="sea_side_note">
+            Aperçu du processus Figma : fondations, wireframes et maquettes haute fidélité desktop/mobile.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="contexte">
+      <div class="section-header">
+        <h2 data-key="sea_context_title">Contexte &amp; objectif</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="sea_context_brand">Sea Recovery</h4>
+          <p data-key="sea_context_p1">
+            La marque évolue dans un univers sensible où la confiance, la confidentialité et la qualité de l’accompagnement doivent être perceptibles dès les premières secondes.
+          </p>
+          <p data-key="sea_context_p2">
+            La page devait transmettre un positionnement premium tout en restant humaine, calme et facile à parcourir pour une audience internationale.
+          </p>
+        </div>
+        <div class="card">
+          <h4 data-key="sea_context_brief">Le brief</h4>
+          <ul>
+            <li data-key="sea_context_brief1">Repenser visuellement la page d’accueil avec une grande liberté créative.</li>
+            <li data-key="sea_context_brief2">Créer une proposition claire, moderne et cohérente avec un service haut de gamme.</li>
+            <li data-key="sea_context_brief3">Livrer une expérience responsive sous WordPress, avec une proposition Figma complète.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="objectifs">
+      <div class="section-header">
+        <h2 data-key="sea_challenge_title">Problématique &amp; objectifs</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="sea_challenge_problem">Le défi</h4>
+          <p data-key="sea_challenge_problem_p">
+            Trouver l’équilibre entre une esthétique luxueuse et une communication rassurante, sans rendre l’expérience froide, démonstrative ou surchargée.
+          </p>
+        </div>
+        <div class="card">
+          <h4 data-key="sea_challenge_goals">Objectifs UX/UI</h4>
+          <ul>
+            <li data-key="sea_challenge_goal1">Installer immédiatement un sentiment de calme, de confiance et de confidentialité.</li>
+            <li data-key="sea_challenge_goal2">Structurer le contenu pour guider naturellement vers la prise de contact.</li>
+            <li data-key="sea_challenge_goal3">Garantir une lecture fluide et une forte cohérence entre desktop et mobile.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="process">
+      <div class="section-header">
+        <h2 data-key="sea_process_title">Ma démarche de conception</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <div class="card">
+          <h4 data-key="sea_process_foundation">01 · Fondations visuelles</h4>
+          <ul>
+            <li data-key="sea_process_foundation1">Définition d’une palette sobre : bleu profond, ivoire, sable et tons naturels.</li>
+            <li data-key="sea_process_foundation2">Association d’une typographie éditoriale élégante avec une typographie fonctionnelle lisible.</li>
+            <li data-key="sea_process_foundation3">Sélection d’images évoquant intimité, nature, sérénité et exigence.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="sea_process_wireframes">02 · Wireframes &amp; hiérarchie</h4>
+          <ul>
+            <li data-key="sea_process_wireframes1">Construction du parcours et hiérarchisation des informations avant la mise en forme.</li>
+            <li data-key="sea_process_wireframes2">Organisation des messages autour de la confidentialité, de l’accompagnement et du parcours de rétablissement.</li>
+            <li data-key="sea_process_wireframes3">Préparation simultanée des structures desktop et mobile.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="sea_process_hifi">03 · High fidelity &amp; intégration</h4>
+          <ul>
+            <li data-key="sea_process_hifi1">Création des maquettes haute fidélité et des composants dans Figma.</li>
+            <li data-key="sea_process_hifi2">Adaptation responsive des compositions, espacements et contenus.</li>
+            <li data-key="sea_process_hifi3">Intégration de la proposition sous WordPress et contrôle du rendu final.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="design">
+      <div class="section-header">
+        <h2 data-key="sea_design_title">Wireframes &amp; maquettes haute fidélité</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="case-gallery">
+        <figure class="case-visual">
+          <img class="case-image" loading="lazy" src="images/projets/searecovery/sea-recovery-design-process.png" alt="Processus de conception Sea Recovery avec wireframes et maquettes finales" />
+          <figcaption data-key="sea_design_caption">
+            Le fichier Figma regroupe les fondations de marque, les wireframes, les écrans high fidelity et les assets préparés pour l’intégration. Les déclinaisons desktop et mobile ont été pensées ensemble afin de conserver la hiérarchie et l’atmosphère sur chaque format.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="reveal" id="role">
+      <div class="section-header">
+        <h2 data-key="sea_role_title">Mon rôle</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <div class="card">
+          <h4 data-key="sea_role_direction">Direction artistique &amp; UI Design</h4>
+          <ul>
+            <li data-key="sea_role_direction1">Création d’un univers premium cohérent avec le positionnement de Sea Recovery.</li>
+            <li data-key="sea_role_direction2">Travail sur les couleurs, les typographies, l’iconographie, les images et le rythme éditorial.</li>
+            <li data-key="sea_role_direction3">Conception d’une interface sobre qui laisse de la place aux messages et aux émotions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="sea_role_ux">UX &amp; responsive design</h4>
+          <ul>
+            <li data-key="sea_role_ux1">Clarification du parcours de lecture et mise en avant des éléments de réassurance.</li>
+            <li data-key="sea_role_ux2">Structuration progressive du contenu jusqu’aux appels à l’action.</li>
+            <li data-key="sea_role_ux3">Déclinaison complète de l’expérience sur ordinateur et mobile.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="sea_role_build">Intégration WordPress</h4>
+          <ul>
+            <li data-key="sea_role_build1">Reproduction fidèle de la direction artistique définie dans Figma.</li>
+            <li data-key="sea_role_build2">Construction des sections et ajustement des espacements selon les différents écrans.</li>
+            <li data-key="sea_role_build3">Publication d’une démonstration responsive permettant d’évaluer la proposition en situation réelle.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="tools">
+      <div class="section-header">
+        <h2 data-key="sea_tools_title">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/logiciels/figma.png" alt="Figma" />
+          </div>
+          <p class="tool-title" data-key="sea_tool_figma_title">UX/UI DESIGN</p>
+          <p class="tool-sub">Figma</p>
+          <p class="tool-desc" data-key="sea_tool_figma_desc">Fondations visuelles, wireframes, maquettes haute fidélité et préparation des assets.</p>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">
+            <img src="images/logiciels/wordpress.png" alt="WordPress" />
+          </div>
+          <p class="tool-title" data-key="sea_tool_wordpress_title">INTÉGRATION WEB</p>
+          <p class="tool-sub">WordPress</p>
+          <p class="tool-desc" data-key="sea_tool_wordpress_desc">Construction de la page, adaptation responsive et publication de la démonstration.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal" id="resultat">
+      <div class="section-header">
+        <h2 data-key="sea_result_title">Résultat</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="result-highlight">
+        <div class="card">
+          <strong data-key="sea_result_1_title">Une identité premium</strong>
+          <p data-key="sea_result_1_desc">Une direction artistique calme et distinctive, alignée avec un accompagnement privé haut de gamme.</p>
+        </div>
+        <div class="card">
+          <strong data-key="sea_result_2_title">Un parcours plus clair</strong>
+          <p data-key="sea_result_2_desc">Une page structurée autour de la confiance, de la méthode et d’appels à l’action discrets mais visibles.</p>
+        </div>
+        <div class="card">
+          <strong data-key="sea_result_3_title">Une expérience responsive</strong>
+          <p data-key="sea_result_3_desc">Un rendu cohérent sur ordinateur et mobile, présenté dans une démonstration WordPress accessible en ligne.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="site">
+      <div class="section-header">
+        <h2 data-key="sea_site_title">Découvrir le projet</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="proto-wrap">
+        <p style="font-size:.95rem;color:var(--text-dim)" data-key="sea_site_desc">
+          Explorez la démonstration WordPress responsive de la page d’accueil Sea Recovery et découvrez le rendu final en situation réelle.
+        </p>
+        <div>
+          <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://searecovery.thomashoudard.com/" data-key="sea_site_button">Voir le site réalisé</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">©2026 Thomas Houdard · Tous droits réservés</span>
+      </div>
+      <div class="footer-bottom"><a href="blog.html">Blog</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil", menu_portfolio: "Portfolio ▾", menu_exp_pro: "Expériences Professionnelles", menu_projects_design: "Projets Design", menu_projects_dev: "Projets Développement", menu_contact: "Contact", menu_cv: "Travailler avec moi", footer: "©2026 Thomas Houdard · Tous droits réservés",
+        sea_hero_sub: "Test de recrutement · UX/UI Design & WordPress", sea_hero_title: "Sea Recovery — Refonte d’une expérience digitale premium", sea_hero_p1: "Sea Recovery est un centre privé de rétablissement situé dans le sud de l’Espagne, destiné à une clientèle internationale recherchant discrétion, accompagnement sur mesure et excellence.", sea_hero_p2: "Dans le cadre d’un test de recrutement, j’ai repensé la page d’accueil afin de créer une expérience plus moderne, rassurante et haut de gamme, puis je l’ai intégrée sous WordPress en versions desktop et mobile.", sea_meta_role: "UI/UX Designer & WordPress Developer", sea_meta_date: "Juillet 2026", sea_meta_duration: "Test de recrutement · Projet individuel", badge_uxui: "<span class='dot'></span>UI/UX Design", badge_figma: "<span class='dot'></span>Figma", badge_wordpress: "<span class='dot'></span>WordPress", badge_responsive: "<span class='dot'></span>Responsive", cta_see_process: "Voir ma démarche", cta_see_site: "Voir le site réalisé", sea_side_note: "Aperçu du processus Figma : fondations, wireframes et maquettes haute fidélité desktop/mobile.",
+        sea_context_title: "Contexte & objectif", sea_context_brand: "Sea Recovery", sea_context_p1: "La marque évolue dans un univers sensible où la confiance, la confidentialité et la qualité de l’accompagnement doivent être perceptibles dès les premières secondes.", sea_context_p2: "La page devait transmettre un positionnement premium tout en restant humaine, calme et facile à parcourir pour une audience internationale.", sea_context_brief: "Le brief", sea_context_brief1: "Repenser visuellement la page d’accueil avec une grande liberté créative.", sea_context_brief2: "Créer une proposition claire, moderne et cohérente avec un service haut de gamme.", sea_context_brief3: "Livrer une expérience responsive sous WordPress, avec une proposition Figma complète.",
+        sea_challenge_title: "Problématique & objectifs", sea_challenge_problem: "Le défi", sea_challenge_problem_p: "Trouver l’équilibre entre une esthétique luxueuse et une communication rassurante, sans rendre l’expérience froide, démonstrative ou surchargée.", sea_challenge_goals: "Objectifs UX/UI", sea_challenge_goal1: "Installer immédiatement un sentiment de calme, de confiance et de confidentialité.", sea_challenge_goal2: "Structurer le contenu pour guider naturellement vers la prise de contact.", sea_challenge_goal3: "Garantir une lecture fluide et une forte cohérence entre desktop et mobile.",
+        sea_process_title: "Ma démarche de conception", sea_process_foundation: "01 · Fondations visuelles", sea_process_foundation1: "Définition d’une palette sobre : bleu profond, ivoire, sable et tons naturels.", sea_process_foundation2: "Association d’une typographie éditoriale élégante avec une typographie fonctionnelle lisible.", sea_process_foundation3: "Sélection d’images évoquant intimité, nature, sérénité et exigence.", sea_process_wireframes: "02 · Wireframes & hiérarchie", sea_process_wireframes1: "Construction du parcours et hiérarchisation des informations avant la mise en forme.", sea_process_wireframes2: "Organisation des messages autour de la confidentialité, de l’accompagnement et du parcours de rétablissement.", sea_process_wireframes3: "Préparation simultanée des structures desktop et mobile.", sea_process_hifi: "03 · High fidelity & intégration", sea_process_hifi1: "Création des maquettes haute fidélité et des composants dans Figma.", sea_process_hifi2: "Adaptation responsive des compositions, espacements et contenus.", sea_process_hifi3: "Intégration de la proposition sous WordPress et contrôle du rendu final.",
+        sea_design_title: "Wireframes & maquettes haute fidélité", sea_design_caption: "Le fichier Figma regroupe les fondations de marque, les wireframes, les écrans high fidelity et les assets préparés pour l’intégration. Les déclinaisons desktop et mobile ont été pensées ensemble afin de conserver la hiérarchie et l’atmosphère sur chaque format.",
+        sea_role_title: "Mon rôle", sea_role_direction: "Direction artistique & UI Design", sea_role_direction1: "Création d’un univers premium cohérent avec le positionnement de Sea Recovery.", sea_role_direction2: "Travail sur les couleurs, les typographies, l’iconographie, les images et le rythme éditorial.", sea_role_direction3: "Conception d’une interface sobre qui laisse de la place aux messages et aux émotions.", sea_role_ux: "UX & responsive design", sea_role_ux1: "Clarification du parcours de lecture et mise en avant des éléments de réassurance.", sea_role_ux2: "Structuration progressive du contenu jusqu’aux appels à l’action.", sea_role_ux3: "Déclinaison complète de l’expérience sur ordinateur et mobile.", sea_role_build: "Intégration WordPress", sea_role_build1: "Reproduction fidèle de la direction artistique définie dans Figma.", sea_role_build2: "Construction des sections et ajustement des espacements selon les différents écrans.", sea_role_build3: "Publication d’une démonstration responsive permettant d’évaluer la proposition en situation réelle.",
+        sea_tools_title: "Logiciels utilisés", sea_tool_figma_title: "UX/UI DESIGN", sea_tool_figma_desc: "Fondations visuelles, wireframes, maquettes haute fidélité et préparation des assets.", sea_tool_wordpress_title: "INTÉGRATION WEB", sea_tool_wordpress_desc: "Construction de la page, adaptation responsive et publication de la démonstration.",
+        sea_result_title: "Résultat", sea_result_1_title: "Une identité premium", sea_result_1_desc: "Une direction artistique calme et distinctive, alignée avec un accompagnement privé haut de gamme.", sea_result_2_title: "Un parcours plus clair", sea_result_2_desc: "Une page structurée autour de la confiance, de la méthode et d’appels à l’action discrets mais visibles.", sea_result_3_title: "Une expérience responsive", sea_result_3_desc: "Un rendu cohérent sur ordinateur et mobile, présenté dans une démonstration WordPress accessible en ligne.",
+        sea_site_title: "Découvrir le projet", sea_site_desc: "Explorez la démonstration WordPress responsive de la page d’accueil Sea Recovery et découvrez le rendu final en situation réelle.", sea_site_button: "Voir le site réalisé"
+      },
+      en: {
+        menu_about: "Home", menu_portfolio: "Portfolio ▾", menu_exp_pro: "Professional experience", menu_projects_design: "Design projects", menu_projects_dev: "Development projects", menu_contact: "Contact", menu_cv: "Work with me", footer: "©2026 Thomas Houdard · All rights reserved",
+        sea_hero_sub: "Recruitment test · UX/UI Design & WordPress", sea_hero_title: "Sea Recovery — Redesigning a premium digital experience", sea_hero_p1: "Sea Recovery is a private recovery centre in Southern Spain for international clients seeking discretion, personalised care and excellence.", sea_hero_p2: "As part of a recruitment test, I redesigned the homepage to create a more modern, reassuring and premium experience, then built it in WordPress for desktop and mobile.", sea_meta_role: "UI/UX Designer & WordPress Developer", sea_meta_date: "July 2026", sea_meta_duration: "Recruitment test · Individual project", badge_uxui: "<span class='dot'></span>UI/UX Design", badge_figma: "<span class='dot'></span>Figma", badge_wordpress: "<span class='dot'></span>WordPress", badge_responsive: "<span class='dot'></span>Responsive", cta_see_process: "View my process", cta_see_site: "View the live project", sea_side_note: "Figma process overview: foundations, wireframes and desktop/mobile high-fidelity designs.",
+        sea_context_title: "Context & objective", sea_context_brand: "Sea Recovery", sea_context_p1: "The brand operates in a sensitive field where trust, confidentiality and quality of care must be clear from the very first seconds.", sea_context_p2: "The page needed to communicate a premium positioning while remaining human, calm and easy to navigate for an international audience.", sea_context_brief: "The brief", sea_context_brief1: "Visually redesign the homepage with broad creative freedom.", sea_context_brief2: "Create a clear, modern proposal aligned with a high-end service.", sea_context_brief3: "Deliver a responsive WordPress experience supported by a complete Figma proposal.",
+        sea_challenge_title: "Problem & goals", sea_challenge_problem: "The challenge", sea_challenge_problem_p: "Balance a luxurious aesthetic with reassuring communication without making the experience feel cold, demonstrative or overloaded.", sea_challenge_goals: "UX/UI goals", sea_challenge_goal1: "Immediately establish a sense of calm, trust and confidentiality.", sea_challenge_goal2: "Structure the content to guide users naturally towards making contact.", sea_challenge_goal3: "Ensure fluid reading and strong consistency across desktop and mobile.",
+        sea_process_title: "My design process", sea_process_foundation: "01 · Visual foundations", sea_process_foundation1: "Defined a restrained palette of deep blue, ivory, sand and natural tones.", sea_process_foundation2: "Paired an elegant editorial typeface with a clear functional typeface.", sea_process_foundation3: "Selected imagery evoking privacy, nature, serenity and excellence.", sea_process_wireframes: "02 · Wireframes & hierarchy", sea_process_wireframes1: "Built the journey and prioritised information before visual styling.", sea_process_wireframes2: "Organised messages around confidentiality, support and the recovery journey.", sea_process_wireframes3: "Prepared desktop and mobile structures together.", sea_process_hifi: "03 · High fidelity & build", sea_process_hifi1: "Created high-fidelity designs and components in Figma.", sea_process_hifi2: "Adapted compositions, spacing and content for responsive layouts.", sea_process_hifi3: "Built the proposal in WordPress and checked the final rendering.",
+        sea_design_title: "Wireframes & high-fidelity designs", sea_design_caption: "The Figma file brings together brand foundations, wireframes, high-fidelity screens and implementation-ready assets. Desktop and mobile layouts were designed together to preserve hierarchy and atmosphere across formats.",
+        sea_role_title: "My role", sea_role_direction: "Art direction & UI Design", sea_role_direction1: "Created a premium visual world aligned with Sea Recovery’s positioning.", sea_role_direction2: "Worked on colour, typography, iconography, imagery and editorial rhythm.", sea_role_direction3: "Designed a restrained interface that gives space to messages and emotions.", sea_role_ux: "UX & responsive design", sea_role_ux1: "Clarified the reading journey and highlighted reassurance elements.", sea_role_ux2: "Structured content progressively through to the calls to action.", sea_role_ux3: "Adapted the complete experience for desktop and mobile.", sea_role_build: "WordPress implementation", sea_role_build1: "Faithfully reproduced the visual direction defined in Figma.", sea_role_build2: "Built the sections and adjusted spacing across screen sizes.", sea_role_build3: "Published a responsive demo so the proposal could be assessed in a real environment.",
+        sea_tools_title: "Software used", sea_tool_figma_title: "UX/UI DESIGN", sea_tool_figma_desc: "Visual foundations, wireframes, high-fidelity designs and asset preparation.", sea_tool_wordpress_title: "WEB IMPLEMENTATION", sea_tool_wordpress_desc: "Page construction, responsive adaptation and demo publication.",
+        sea_result_title: "Outcome", sea_result_1_title: "A premium identity", sea_result_1_desc: "A calm, distinctive visual direction aligned with high-end private care.", sea_result_2_title: "A clearer journey", sea_result_2_desc: "A page structured around trust, method and understated but visible calls to action.", sea_result_3_title: "A responsive experience", sea_result_3_desc: "A consistent desktop and mobile result presented through an accessible WordPress demo.",
+        sea_site_title: "Discover the project", sea_site_desc: "Explore the responsive WordPress demo of the Sea Recovery homepage and see the final design in a real environment.", sea_site_button: "View the live project"
+      }
+    };
+  </script>
+</body>
+</html

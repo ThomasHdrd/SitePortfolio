@@ -1,0 +1,137 @@
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO de la page Services -->
+  <title>Travailler avec moi — UI/UX & Développement Web à Montpellier | Thomas Houdard</title>
+  <meta name="description" content="Freelance UI/UX & développeur web à Montpellier. Design Figma, sites vitrines HTML/CSS/JS, pack complet clé en main. Devis rapide, délais clairs.">
+  <link rel="canonical" href="https://thomashoudard.com/TravaillerAvecMoi.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (LinkedIn, FB, WhatsApp, Slack, Discord…) -->
+  <meta property="og:title" content="Travailler avec moi — UI/UX & Développement Web à Montpellier">
+  <meta property="og:description" content="Design Figma, développement HTML/CSS/JS, sites vitrines, pack clé en main. Devis rapide.">
+  <meta property="og:image" content="https://thomashoudard.com/images/preview.jpg">
+  <meta property="og:url" content="https://thomashoudard.com/TravaillerAvecMoi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="name">
+            <h1>Thomas HOUDARD</h1>
+            <p data-key="menu_job"></p>
+        </div>
+    <!-- menu petit ecran -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="sousMenu">
+                <a href="#" data-key="menu_portfolio"> ▾</a>
+                <div class="sousMenu-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a class="travailleravecmoi active" data-key="menu_cv" href="TravaillerAvecMoi.html"></a></li>
+        
+            <!-- Sélecteur de langue placé sous le menu -->
+            <li class="lang-mobile">
+                <div class="lang-dropdown">
+                    <button id="lang-button">
+                        <img id="current-lang-img" src="images/langSelect_FR.png" alt="Langue"> 
+                        <span id="current-lang-text">FR</span>
+                        <span id="dropdown-arrow">▾</span>
+                    </button>
+                    <ul id="lang-list">
+                        <li id="lang-fr">
+                            <img src="images/langSelect_FR.png" alt="FR"> FR
+                        </li>
+                        <li id="lang-en">
+                            <img src="images/langSelect_EN.png" alt="EN"> EN 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- section ux design et section coach sportif -->
+     <section class="mes-services">
+        <h2 data-key="titre_mes_services">MES SERVICES</h2>
+        <div class="tableau-services">
+            <!-- design -->
+            <div class="service-design">
+                <h4 data-key="titre_service_tech">UI/UX DESIGN & DÉVELOPPEMENT WEB</h4>
+                <p data-key="texte_service_tech">Je créé des design et des sites web modernes, rapides, responsives pour PME, entrepreneurs, associations...</p>
+                <ul>
+                    <li data-key="texte_service_design1">Design UI/UX sur Figma</li>
+                    <li data-key="texte_service_design2">Prototype interactif cliquable</li>
+                    <li data-key="texte_service_design3">Charte graphique complète</li>
+                    <li data-key="texte_service_design4">Export des assets pour le développement</li>
+                </ul>
+
+                <div class="service-price">
+                    <p class="price-text" data-key="prix_service_design">À PARTIR DE 150€</p>
+                    <a href="commande-design.html?base=150#estimation" class="commande-link" data-key="commander">Commander</a>
+                </div> 
+            </div>
+            <!-- dev -->
+            <div class="service-design">
+                <h4 data-key="titre_service_coaching">COACHING SPORTIF</h4>
+                <p data-key="texte_service_coaching">Accompagnement personnalisé pour atteindre vos objectifs sportifs.</p>
+                <ul>
+                    <li data-key="texte_service_coaching1">Bilan de compétences</li>
+                    <li data-key="texte_service_coaching2">Définition d'objectifs SMART</li>
+                    <li data-key="texte_service_coaching3">Suivi régulier et ajustements</li>
+                    <li data-key="texte_service_coaching4">Techniques de gestion du stress</li>
+                </ul>
+                <div class="service-price">
+                    <p class="price-text" data-key="prix_service_dev">À PARTIR DE 200€</p>
+                    <a href="commande-dev.html?base=200#estimation" class="commande-link" data-key="commander">Commander</a>
+                </div>
+                <div class="badges">
+                    <span class="badge" data-key="delai_service_dev">5-15 jours ouvrés</span>
+                    <span class="badge" data-key="sur_mesure_service_dev">100% sur-mesure</span>
+                    <span class="badge" data-key="optimisé_service_dev">Optimisé & documenté</span>
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+</body>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- social media -->
+        <div class="footer-social">
+           <a href="https://www.linkedin.com/in/thomashoudard/" class="social-icon" target="_blank"><img src="images/linkedin.png" alt="linkedin" loading="lazy"></a>
+           <a href="https://github.com/ThomasHdrd" class="social-icon" target="_blank"><img src="images/github.png" alt="github" loading="lazy"></a>
+           <a href="mailto:contact@thomashoudard.com?" class="social-icon" target="_blank"><img src="images/email.png" alt="mail" loading="lazy"></a>           
+        </div>
+    </div>
+
+    <!-- droits reserves -->
+    <div class="footer-bottom">
+        <p data-key="footer">©2025, Thomas Houdard, Tous droits réservés</p>
+    </div>
+</footer>
+
+</html>

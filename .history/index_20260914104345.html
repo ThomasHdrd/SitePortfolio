@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Freelance UI/UX Designer & Développeur Web - Thomas Houdard</title>
+  <meta name="description" content="Designer UI/UX & développeur web (HTML, CSS, JS) à Montpellier. Création de sites modernes, rapides, responsives." />
+  <meta property="og:title" content="Freelance UI/UX Designer & Dev Web" />
+  <meta property="og:description" content="Design & développement web moderne, rapide, responsive." />
+  <meta property="og:url" content="https://thomashoudard.com" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="#hero" class="active" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <div class="lang-switch" id="langSwitch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section id="hero" class="hero reveal">
+        <div class="hero-media">
+            <div class="ring"></div>
+            <img src="images/photoprofil.webp" alt="Photo de profil">
+        </div>
+      <div>
+        <p class="hero-sub" data-key="presentation_hero">UI/UX Design · Front-end · Produits digitaux</p>
+        <h1 data-key="presentation_title">Designer & Développeur Web</h1>
+        <p data-key="presentation_1"></p>
+        <p data-key="presentation_2"></p>
+        <p data-key="presentation_3"></p>
+
+        </p>
+        <div class="badges">
+          <span class="badge"><span class="dot"></span>UI/UX</span>
+          <span class="badge"><span class="dot"></span>Front-End</span>
+          <span class="badge"><span class="dot"></span>Prototype</span>
+          <span class="badge"><span class="dot"></span>SEO</span>
+          <span class="badge"><span class="dot"></span>Agile</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#cv-section" class="btn btn-primary" data-key="cta_cv">Voir mon CV</a>
+          <a href="contact.html" class="btn btn-outline" data-key="cta_contact">Me contacter</a>
+          <a href="projetDesigner.html" class="btn" data-key="cta_portfolio">Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_video">CV Vidéo</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="video-wrap">
+        <p data-key="video_intro">Découvrez mon profil en moins de 90 secondes.</p>
+        <video controls preload="metadata">
+          <source src="videos/CV VIDEO - THOMAS HOUDARD_FINAL.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES TECHNIQUES -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_competences_tech">Compétences Techniques</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-5">
+        <div class="card">
+          <span class="category">PRODUCT & UX DESIGN</span>
+          <h4 data-key="competences_tech_uiux" style="font-size: 12px;">Concevoir des expériences utiles</h4>
+          <ul>
+            <li>User Flows · User Journeys</li>
+            <li data-key="competences_tech_uiux_architecture">Information Architecture</li>
+            <li data-key="competences_tech_uiux_audit">Wireframing</li>
+            <li data-key="competences_tech_uiux_prototypage">Prototyping</li>
+            <li data-key="competences_tech_uiux_interaction">User Research</li>
+            <li data-key="competences_tech_uiux_design_system">Usability Testing</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">UI & INTERACTION DESIGN</span>
+          <h4 data-key="category_front_end" style="font-size: 12px;">Transformer les parcours en interfaces</h4>
+          <ul>
+            <li data-key="category_front_end_responsive">Responsive & Mobile Design</li>
+            <li>Interaction Design</li>
+            <li>Visual Hierarchy</li>
+            <li>Design Systems</li>
+            <li>Components</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">FRONT-END</span>
+          <h4 data-key="category_back_end" style="font-size: 12px;">Comprendre la réalité technique</h4>
+          <ul>
+            <li>HTML · CSS</li>
+            <li>JavaScript · Angular</li>
+            <li>Responsive Integration</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category">TECHNICAL KNOWLEDGE</span>
+          <h4 data-key="category_technical_knowledge" style="font-size: 12px;">Un profil design avec une culture technique</h4>
+          <ul>
+            <li data-key="category_game_design">Python · SQL · PHP</li>
+            <li data-key="category_game_design_gdd_ldd">WordPress · Shopify</li>
+            <li data-key="category_game_design_prototypage">SEO / SEA</li>
+            <li>AI-assisted workflows</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="category" data-key="annexe_title">GAME & EXPERIENCE DESIGN</span>
+          <ul>
+            <li>Game Design</li>
+            <li>Level Design</li>
+            <li>Blueprint</li>
+            <li>Prototyping</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOFT SKILLS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_competences_relation">Compétences Relationnelles</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-4">
+        <div class="card">
+          <span class="category" data-key="category1">Esprit d’équipe</span>
+          <h4 data-key="competences_relation_equipe"></h4>
+          <p style="font-size:15px;color:var(--text-dim);" data-key="competences_relation_equipe_desc">
+            Communication claire, écoute active et co-construction avec les équipes produit et tech.
+          </p>
+        </div>
+        <div class="card">
+          <span class="category" data-key="category2">CRÉATIF</span>
+          <h4 data-key="competences_relation_creatif">Créativité</h4>
+          <p style="font-size:15px;color:var(--text-dim);" data-key="competences_relation_creatif_desc">
+            Exploration structurée, prototypes rapides et recherche de solutions réalistes.
+          </p>
+        </div>
+        <div class="card">
+          <span class="category" data-key="category3">POLYVALENT</span>
+          <h4 data-key="competences_relation_polyvalent">Polyvalence</h4>
+          <p style="font-size:15px;color:var(--text-dim);" data-key="competences_relation_polyvalent_desc">
+            Design, front-end, documentation, accompagnement produit sur la durée.
+          </p>
+        </div>
+        <div class="card">
+          <span class="category" data-key="category4">CURIEUX</span>
+          <h4 data-key="competences_relation_curieux">Curiosité</h4>
+          <p style="font-size:15px;color:var(--text-dim);" data-key="competences_relation_curieux_desc">
+            Veille UX, performance, accessibilité et nouvelles pratiques de développement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUES -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_langues">Langues</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-6">
+        <div class="passion-card">
+          <h4 data-key="langue_fr" class="imagefr">Français (Natif)</h4>
+          <p data-key="langue_fr_desc">Rédaction & communication professionnelle.</p>
+          <img src="images/langSelect_FR.png" alt="FR" />
+        </div>
+        <div class="passion-card">
+          <h4 data-key="langue_en" class="imageen">Anglais (B2)</h4>
+          <p data-key="langue_en_desc">Tech, documentation & réunions internationales.</p>
+            <img src="images/langSelect_EN.png" alt="EN" />
+        </div>
+      </div>
+    </section>
+ 
+    <!-- OUTILS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_logiciels">Outils & Logiciels</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="logo-wall">
+        <img loading="lazy" src="images/logiciels/figma.png" alt="Figma" />
+        <img loading="lazy" src="images/logiciels/adobexd.png" alt="Adobe XD" />
+        <img loading="lazy" src="images/logiciels/adobephotoshop.png" alt="Photoshop" />
+        <img loading="lazy" src="images/logiciels/adobepremierepro.png" alt="Premiere Pro" />
+        <img loading="lazy" src="images/logiciels/adobeindesign.png" alt="InDesign" />
+        <img loading="lazy" src="images/logiciels/adobeillustrator.png" alt="Illustrator" />
+        <img loading="lazy" src="images/logiciels/shopify.png" alt="Shopify" />
+        <img loading="lazy" src="images/logiciels/wordpress.png" alt="Wordpress" />
+        <img loading="lazy" src="images/logiciels/vscode.png" alt="VS Code" />
+        <img loading="lazy" src="images/logiciels/github.png" alt="GitHub" />
+        <img loading="lazy" src="images/logiciels/ue.png" alt="Unreal Engine" />
+        <img loading="lazy" src="images/logiciels/teamviewer.png" alt="TeamViewer" />
+        <img loading="lazy" src="images/logiciels/googledrive.png" alt="Google Drive" />
+        <img loading="lazy" src="images/logiciels/googledoc.png" alt="Google Docs" />
+        <img loading="lazy" src="images/logiciels/googlesheets.png" alt="Google Sheets" />
+        <img loading="lazy" src="images/logiciels/googleslides.png" alt="Google Slides" />
+        <img loading="lazy" src="images/logiciels/googleforms.png" alt="Google Forms" />
+        <img loading="lazy" src="images/logiciels/miro.png" alt="Miro" />
+      </div>
+    </section>
+
+    <!-- PASSIONS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_passions">Passions</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="grid cols-6">
+        <div class="passion-card">
+          <h4 data-key="passions_sports">Sports</h4>
+          <p data-key="passions_sports_description">Discipline, énergie, équilibre au quotidien.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_voyages">Voyages</h4>
+          <p data-key="passions_voyages_description">Ouverture, découverte & curiosité du monde.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_entrepeunariat">Entrepreneuriat</h4>
+          <p data-key="passions_entrepreneuriat_description">Créer de la valeur utile et concrète.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_lecture">Lecture</h4>
+          <p data-key="passions_lecture_description">Apprentissage continu & réflexion.</p>
+        </div>
+        <div class="passion-card">
+          <h4 data-key="passions_jeuxvideos">Jeux vidéo</h4>
+          <p data-key="passions_jeuxvideos_description">Game design, narration & expérience interactive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_certifications">Certifications</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert">
+          <img src="images/certificato3d.png" alt="Certificat 3D" />
+        </div>
+        <div class="cert">
+          <img src="images/certificatux.png" alt="Certificat UX" />
+        </div>
+        <div class="cert">
+          <img src="images/certificatdev.png" alt="Certificat Développement" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv-section" class="reveal">
+      <div class="section-header">
+        <h2 data-key="titre_accueil_moncv">Mon CV</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="cv-wrapper">
+        <a href="cv/CV_Thomas_Houdard.pdf" target="_blank" class="cv-link" data-lang="fr">
+          <span data-key="label_cv_fr">Voir mon CV (FR)</span>
+          <img src="images/langSelect_FR.png" alt="FR" />
+        </a>
+        <a href="cv/Resume_Thomas_Houdard.pdf" target="_blank" class="cv-link" data-lang="en">
+          <span data-key="label_cv_en">See my resume (EN)</span>
+          <img src="images/langSelect_EN.png" alt="EN" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+      <div class="footer-bottom">
+        <!-- <p>Design & Code</p> -->
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        presentation_hero: "UI/UX · Front-End · Prototype · SEO · Agile",
+        presentation_title: "UI/UX Design · Product Design · Digital Experiences",
+        presentation_1:
+          "Je m’appelle Thomas, Designer UI/UX et Développeur Web, avec un parcours débuté dans le Game/Level Design et l’UX. J’allie aujourd’hui créativité, vision produit et expertise technique pour concevoir des interfaces modernes, intuitives et efficaces. ",
+        presentation_2:  
+          "Je crée des expériences digitales centrées utilisateur, adaptées aux besoins réels, tout en apportant une vraie valeur aux entreprises et aux projets que j’accompagne — que ce soit en freelance ou au sein d'une équipe produit.",
+        presentation_3:
+          "Polyvalent, curieux et habitué aux environnements dynamiques, j’aime transformer des idées en solutions concrètes : prototypage rapide, design système, intégration front et optimisation continue. Disponible pour collaborer sur des projets ambitieux, je serais ravi d’échanger avec vous pour donner vie à vos concepts.",
+        video_intro: "Découvrez mon profil en moins de 90 secondes.",
+        titre_video: "CV Vidéo",
+        titre_competences_tech: "Compétences Techniques",
+        titre_competences_tech_uiux: "UI/UX",
+        competences_tech_uiux: "Design de produits",
+        competences_tech_uiux_audit: "Audit Concurrentiel",
+        competences_tech_uiux_prototypage: "Prototypage",
+        competences_tech_uiux_interaction: "Design d’interaction",
+        category_front_end: "Transformer les parcours en interfaces",
+        category_back_end: "Comprendre la réalité technique", 
+        category_game_design: "Design itératif",
+        category_game_design_gdd_ldd: "GDD / LDD",
+        category_game_design_prototypage: "Prototypage",
+        annexe_title: "ANNEXES",
+        annexe_ecosysteme: "Écosystème",
+        annexe_gestion_projet: "Gestion projet",
+        category_technical_knowledge: "Un profil design avec une culture technique",
+
+        competences_tech_uiux: "Concevoir des expériences utiles",
+        titre_competences_relation: "Compétences Relationnelles",
+        category1: "EQUIPE",
+        category2: "CRÉATIF",
+        category3: "POLYVALENT",
+        category4: "CURIEUX",
+        competences_relation_equipe: "Esprit d’équipe",
+        competences_relation_creatif: "Créativité",
+        competences_relation_polyvalent: "Polyvalence",
+        competences_relation_curieux: "Curiosité",
+        competences_relation_equipe_desc: "Capacité à collaborer efficacement au sein d'une équipe, favorisant un environnement de travail harmonieux et productif.",
+        competences_relation_creatif_desc: "Aptitude à générer des idées innovantes et à penser en dehors des sentiers battus pour résoudre des problèmes complexes.",
+        competences_relation_polyvalent_desc: "Flexibilité et adaptabilité à divers rôles et responsabilités, démontrant une large gamme de compétences.",
+        competences_relation_curieux_desc: "Soif d'apprendre et d'explorer de nouvelles connaissances, technologies et perspectives.",
+        titre_accueil_langues: "Langues",
+        langue_fr: "Français (Natif)",
+        langue_en: "Anglais (B2)",
+        langue_fr_desc: "Rédaction & communication professionnelle.",
+        langue_en_desc: "Tech, documentation & réunions internationales.",
+        titre_accueil_logiciels: "Outils & Logiciels",
+        titre_accueil_passions: "Passions",
+        passions_sports: "Sports",
+        passions_voyages: "Voyages",
+        passions_entrepeunariat: "Entrepreneuriat",
+        passions_lecture: "Lecture",
+        passions_jeuxvideos: "Jeux vidéo",
+
+        passions_sports_description: "Discipline, énergie, équilibre au quotidien.",
+        passions_voyages_description: "Ouverture, découverte & curiosité du monde.",
+        passions_entrepreneuriat_description: "Créer de la valeur utile et concrète.",
+        passions_lecture_description: "Apprentissage continu & réflexion.",
+        passions_jeuxvideos_description: "Game design, narration & expérience interactive.",
+
+        titre_accueil_certifications: "Certifications",
+        titre_accueil_moncv: "Mon CV",
+        label_cv_fr: "Voir mon CV (FR)",
+        label_cv_en: "See my resume (EN)",
+        footer: "©" + new Date().getFullYear() + " Thomas Houdard · Tous droits réservés",
+        cta_cv: "Voir mon CV",
+        cta_contact: "Me contacter",
+        cta_portfolio: "Portfolio"
+      },
+      en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        presentation_hero: "UI/UX · Front-End · Prototype · SEO · Agile",
+        presentation_title: "UI/UX Design · Product Design · Digital Experiences",
+        presentation_1:
+          "My name is Thomas, a UI/UX Designer and Web Developer with a background in Game/Level Design and UX. I combine creativity, product vision, and technical expertise to craft modern, intuitive, and effective interfaces.",
+        presentation_2:
+          "I create user-centered digital experiences tailored to real needs, while delivering true value to the companies and projects I support—whether as a freelancer or within a product team.",
+        presentation_3:
+          "Versatile, curious, and accustomed to dynamic environments, I enjoy turning ideas into concrete solutions: rapid prototyping, design systems, front-end integration, and continuous optimization. Available to collaborate on ambitious projects, I would be delighted to discuss bringing your concepts to life.",
+        video_intro: "Discover my profile in under 90 seconds.",
+        titre_video: "Video Resume",
+        titre_competences_tech: "Technical Skills",
+        competences_tech_uiux: "Product Design",
+        competences_tech_uiux_audit: "Competitive Audit",
+        competences_tech_uiux_prototypage: "Prototyping",
+        competences_tech_uiux_interaction: "Interaction Design",
+        category_front_end: "Transforming user journeys into interfaces",
+        category_technical_knowledge: "A design profile with technical knowledge",
+        category_back_end: "Understanding the technical reality",
+        category_game_design: "Iterative Design",
+        category_game_design_gdd_ldd: "GDD / LDD",
+        category_game_design_prototypage: "Prototyping",
+        annexe_title: "ANNEXED",
+        annexe_ecosysteme: "Ecosystem",
+        annexe_gestion_projet: "Project Management",
+
+        competences_tech_uiux: "Designing useful experiences",
+        titre_competences_relation: "Relational Skills",
+        competences_relation_equipe: "Team Spirit",
+        category1: "TEAM SPIRIT",
+        category2: "CREATIVE",
+        category3: "VERSATILE",
+        category4: "CURIOUS",
+        competences_relation_creatif: "Creative",
+        competences_relation_polyvalent: "Versatile",
+        competences_relation_curieux: "Curious",
+        competences_relation_equipe_desc: "Ability to collaborate effectively within a team, fostering a harmonious and productive work environment.",
+        competences_relation_creatif_desc: "Aptitude for generating innovative ideas and thinking outside the box to solve complex problems.",
+        competences_relation_polyvalent_desc: "Flexibility and adaptability to various roles and responsibilities, demonstrating a wide range of skills.",
+        competences_relation_curieux_desc: "Thirst for learning and exploring new knowledge, technologies, and perspectives.",
+        titre_accueil_langues: "Languages",
+        langue_fr: "French (Native)",
+        langue_en: "English (B2)",
+        langue_fr_desc: "Professional writing & communication.",
+        langue_en_desc: "Tech, documentation & international meetings.",
+        titre_accueil_logiciels: "Tools & Software",
+        titre_accueil_passions: "Hobbies",
+        passions_voyages: "Travel",
+        passions_entrepeunariat: "Entrepreneurship",
+        passions_lecture: "Reading",
+        passions_jeuxvideos: "Video Games",
+
+        passions_sports_description: "Discipline, energy, balance in daily life.",
+        passions_voyages_description: "Openness, discovery & curiosity about the world.",
+        passions_entrepreneuriat_description: "Creating useful and concrete value.",
+        passions_lecture_description: "Continuous learning & reflection.",
+        passions_jeuxvideos_description: "Game design, storytelling & interactive experience.",
+
+        titre_accueil_certifications: "Certifications",
+        titre_accueil_moncv: "My Resume",
+        label_cv_fr: "View CV (FR)",
+        label_cv_en: "View Resume (EN)",
+        footer: "©" + new Date().getFullYear() + " Thomas Houdard · All rights reserved",
+        cta_cv: "View my resume",
+        cta_contact: "Contact me",
+        cta_portfolio: "Portfolio"
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ARMA III — Étude de cas Mission | Thomas Houdard</title>
+<meta name="description" content="Mission ARMA III : Level Design, Narrative Design, Mission Design, Programmation scriptée et IA." />
+<meta property="og:title" content="ARMA III — Étude de cas Mission" />
+<meta property="og:description" content="Mission Arma III : Infiltration tactique, extraction d’un VIP, scripting et IA." />
+<meta property="og:url" content="https://thomashoudard.com/arma3.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <li><a href="blog.html">Blog</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>            
+        </ul>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="arma_banner"></p>
+            <h1>ARMA III</h1>
+            <p data-key="arma_pres_tagline"></p>
+            <div class="company-meta">
+                <span data-key="arma_meta_type"></span>
+                <span data-key="arma_meta_role"></span>
+                <span data-key="arma_meta_date"></span>
+                <span data-key="arma_meta_duree"></span>
+                <span data-key="arma_meta_equipe"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>Mission Design</span>
+                <span class="badge"><span class="dot"></span>Level Design</span>
+                <span class="badge"><span class="dot"></span>Narrative</span>
+                <span class="badge"><span class="dot"></span>Scripting</span>
+                <span class="badge"><span class="dot"></span>AI</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%;"></a>
+                <a href="#mdd" class="btn btn-outline" data-key="arma_cta_mdd" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <img src="images/arma3/armaPres.png" alt="Capture mission Arma III" style="width:100%;border-radius:12px">
+            </div>
+        </div>
+    </section>
+
+    <!-- RESPONSABILITÉS -->
+    <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+        <div class="section-header">
+            <h2 id="responsabilites-title" data-key="arma_responsabilites_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.5rem">
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mission Design Document</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Playtests</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="arma_role_liste4"></span></span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="arma_role_liste5"></span></span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Level & Narrative</span></li>
+        </ul>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="arma_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="arma_pres1"></p>
+                <p data-key="arma_pres2"></p>
+                <p data-key="arma_pres3"></p>
+            </div>
+        </div>
+        <div class="grid" style="gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:1.5rem">
+            <img loading="lazy" src="images/arma3/armaPres1.png" alt="Zone mission Arma III" style="border-radius:12px">
+            <img loading="lazy" src="images/arma3/armaPres2.png" alt="Briefing mission Arma III" style="border-radius:12px">
+        </div>
+        <div class="meta-panel">
+            <ul class="meta-list" aria-label="Informations mission">
+                <li><span class="meta-icon">🎮</span><span data-key="arma_pres_liste1"></span></li>
+                <li><span class="meta-icon">⚙️</span><span data-key="arma_pres_liste2"></span></li>
+                <li><span class="meta-icon">👶</span><span data-key="arma_public"></span></li>
+                <li><span class="meta-icon">👥</span><span data-key="arma_pres_liste3"></span></li>
+                <li><span class="meta-icon">💻</span><span data-key="arma_platform"></span></li>
+            </ul>
+        </div>
+        <div class="meta-panel" style="margin-top:1rem">
+            <ul class="meta-list">
+                <li><span class="meta-icon">👥</span><span data-key="arma_team_size"></span></li>
+                <li><span class="meta-icon">📅</span><span data-key="arma_meta_date"></span></li>
+                <li><span class="meta-icon">⏱️</span><span data-key="arma_meta_duree"></span></li>
+                <li><span class="meta-icon">🛠️</span><span data-key="arma_engine"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ROLE & APPROCHE -->
+    <section class="reveal" id="role" aria-labelledby="role-title">
+        <div class="section-header">
+            <h2 id="role-title" data-key="arma_role_section_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="align-items:start;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="arma_role_texte1"></p>
+                <p data-key="arma_role_texte2"></p>
+                <p data-key="arma_role_texte3"></p>
+            </div>
+            <!-- <div>
+                <img src="images/arma3/armaPres3.png" alt="Outils Eden Editor" style="width:100%;border-radius:12px">
+            </div> -->
+        </div>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="arma_focus_title"></strong>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Mission & Level Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="arma_role_liste4"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="arma_role_liste5"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MDD LINK -->
+    <section class="reveal" id="mdd">
+        <div class="section-header">
+            <h2 data-key="arma_mdd_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="proto-wrap">
+            <a class="btn btn-primary" target="_blank" href="https://docs.google.com/document/d/157Hbaemf8z5Wu-gChzljMuym2Sxa_BOnp75NeBdMH48/edit?usp=sharing" data-key="arma_button"></a>
+        </div>
+    </section>
+
+    <!-- LOGICIELS -->
+    <section class="reveal" id="tools">
+        <div class="section-header">
+            <h2 data-key="titre_logiciels_utilises"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/edenEditor.png" alt="Eden Editor"></div>
+                <p class="tool-title">Mission</p>
+                <p class="tool-sub">Eden Editor</p>
+                <p class="tool-desc" data-key="arma_tool_eden"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                <p class="tool-title">Design</p>
+                <p class="tool-sub">Photoshop</p>
+                <p class="tool-desc" data-key="arma_tool_ps"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/googledrive.png" alt="Google Drive"></div>
+                <p class="tool-title">Organisation</p>
+                <p class="tool-sub">Google Drive</p>
+                <p class="tool-desc" data-key="arma_tool_drive"></p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        arma_banner: "Mission Design · Level Design · Narrative · Scripting · IA",
+        arma_pres_tagline: "Extraction d'un chirurgien capturé : infiltration, progression tactique et contrôle du risque.",
+        arma_meta_type: "PROJET : Mission solo",
+        arma_meta_role: "RÔLE : Mission / Level / Narrative Designer",
+        arma_meta_date: "DATE : Février 2021",
+        arma_meta_duree: "DURÉE : 1 mois",
+        arma_meta_equipe: "ÉQUIPE : Solo",
+        arma_responsabilites_title: "Responsabilités",
+        arma_overview_title: "Présentation",
+        arma_pres1: "\"Sauver le VIP\" est une mission d'Arma III où le joueur incarne un membre de l'OTAN chargé de libérer un médecin chirurgien capturé.",
+        arma_pres2: "Le médecin, envoyé pour soigner un militaire, a été kidnappé par la FIA. L'escouade doit traverser plusieurs villages en limitant l'engagement.",
+        arma_pres3: "Objectif : récupérer le médecin vivant en minimisant les pertes et la détection grâce à une approche discrète et coordonnée.",
+        arma_pres_liste1: "GENRE : FPS tactique · Infiltration",
+        arma_pres_liste2: "MÉCANIQUES : Tir · Tactique · Infiltration",
+        arma_public: "PUBLIC : 16+",
+        arma_pres_liste3: "JOUEURS : 1",
+        arma_platform: "SUPPORT : PC",
+        arma_team_size: "TAILLE ÉQUIPE : 1",
+        arma_engine: "MOTEUR : Eden Editor (Arma)",
+        arma_role_section_title: "Approche & Rôle",
+        arma_role_texte1: "Objectif : créer une mission immersive et cohérente avec les procédures militaires réalistes.",
+        arma_role_texte2: "Conception sur papier : rédaction d'un Mission Design Document (zones, progression, risques) basée sur sources réelles.",
+        arma_role_texte3: "Apprentissage d'Eden Editor pour traduire intentions en scripts, déclencheurs, comportements IA et feedbacks.",
+        arma_role_liste4: "Événements scriptés",
+        arma_role_liste5: "Comportement IA",
+        arma_focus_title: "Focus",
+        arma_mdd_title: "Mission Design Document",
+        arma_button: "Voir le Mission Design Document",
+        arma_cta_mdd: "Mission Design Document",
+        titre_logiciels_utilises: "Logiciels utilisés",
+        arma_tool_eden: "Construction du terrain, placement unités, triggers & scripts.",
+        arma_tool_ps: "Retouches d'images et visuels de documentation.",
+        arma_tool_drive: "Stockage et versionnement du document.",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_role: "Explorer le rôle",
+        cta_scroll_tools: "Voir les outils"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        arma_banner: "Mission Design · Level Design · Narrative · Scripting · AI",
+        arma_pres_tagline: "Rescue a captured surgeon: stealth, tactical movement and controlled engagement.",
+        arma_meta_type: "PROJECT: Solo mission",
+        arma_meta_role: "ROLE: Mission / Level / Narrative Designer",
+        arma_meta_date: "DATE: February 2021",
+        arma_meta_duree: "DURATION: 1 month",
+        arma_meta_equipe: "TEAM: Solo",
+        arma_responsabilites_title: "Responsibilities",
+        arma_overview_title: "Overview",
+        arma_pres1: "\"Save the VIP\" is an Arma III mission where the player is NATO infantry tasked with extracting a captured surgeon.",
+        arma_pres2: "The doctor, deployed to treat a wounded soldier, was kidnapped by FIA. The squad crosses villages minimizing engagement.",
+        arma_pres3: "Goal: recover the doctor alive while limiting losses and detection via stealth and coordinated movement.",
+        arma_pres_liste1: "GENRE: Tactical FPS · Stealth",
+        arma_pres_liste2: "MECHANICS: Shooting · Tactics · Stealth",
+        arma_public: "AUDIENCE: 16+",
+        arma_pres_liste3: "PLAYERS: 1",
+        arma_platform: "PLATFORM: PC",
+        arma_team_size: "TEAM SIZE: 1",
+        arma_engine: "ENGINE: Eden Editor (Arma)",
+        arma_role_section_title: "Approach & Role",
+        arma_role_texte1: "Goal: craft an immersive mission aligned with realistic military procedure.",
+        arma_role_texte2: "Paper design: Mission Design Document (areas, flow, risks) based on real sources.",
+        arma_role_texte3: "Learning Eden Editor to implement scripts, triggers, AI behaviors and feedback.",
+        arma_role_liste4: "Scripted events",
+        arma_role_liste5: "AI behavior",
+        arma_focus_title: "Focus",
+        arma_mdd_title: "Mission Design Document",
+        arma_button: "View the Mission Design Document",
+        arma_cta_mdd: "Mission Design Document",
+        titre_logiciels_utilises: "Tools used",
+        arma_tool_eden: "Terrain setup, unit placement, triggers & scripts.",
+        arma_tool_ps: "Image editing and documentation visuals.",
+        arma_tool_drive: "Storage & versioning of the document.",
+        cta_scroll_overview: "View overview",
+        cta_scroll_role: "Explore role",
+        cta_scroll_tools: "View tools"
+    }
+};
+</script>
+</body>
+</html>

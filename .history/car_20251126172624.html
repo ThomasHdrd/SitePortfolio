@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CAR PROJECT — Étude de cas | Thomas Houdard</title>
+<meta name="description" content="Car Project : Level Design d'un jeu de course avec 4 biomes. Game Design, Level Design, Blueprint, Playtests." />
+<meta property="og:title" content="CAR PROJECT — Étude de cas" />
+<meta property="og:description" content="Projet personnel : Level & Game Design d'un jeu de course (ville, 2 circuits, désert)." />
+<meta property="og:url" content="https://thomashoudard.com/car.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <li><a href="blog.html">Blog</a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>            
+        </ul>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="car_banner"></p>
+            <h1>CAR PROJECT</h1>
+            <p data-key="car_tagline"></p>
+            <div class="company-meta">
+                <span data-key="car_meta_type"></span>
+                <span data-key="car_meta_role"></span>
+                <span data-key="car_meta_date"></span>
+                <span data-key="car_meta_duree"></span>
+                <span data-key="car_meta_equipe"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>Game Design</span>
+                <span class="badge"><span class="dot"></span>Level Design</span>
+                <span class="badge"><span class="dot"></span>Playtests</span>
+                <span class="badge"><span class="dot"></span><span data-key="car_role_liste1"></span></span>
+                <span class="badge"><span class="dot"></span>UI</span>
+                <span class="badge"><span class="dot"></span>Blueprint</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview"></a>
+                <a href="#role" class="btn btn-outline" data-key="cta_scroll_role"></a>
+                <a href="#tools" class="btn btn-outline" data-key="cta_scroll_tools"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <video controls style="width:100%;border-radius:12px">
+                    <source src="videos/CAR PROJECT TRAILER - CAR GAME.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESPONSABILITÉS -->
+    <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+        <div class="section-header">
+            <h2 id="responsabilites-title" data-key="car_responsabilites_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.5rem">
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Game Design</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Level Design</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Playtests</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="car_role_liste1"></span></span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>UI</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Blueprint</span></li>
+        </ul>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="car_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="car_pres1"></p>
+                <ul aria-label="Biomes du projet" style="list-style:none;padding:0;margin:.75rem 0 0;display:grid;gap:.4rem">
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                        <span aria-hidden="true">🏙️</span>
+                        <span data-key="car_pres_liste1" style="color: var(--text-dim); font-size: var(--cm);"></span>
+                    </li>
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                        <span aria-hidden="true">🏁</span>
+                        <span data-key="car_pres_liste2" style="color: var(--text-dim); font-size: var(--cm);"></span>
+                    </li>
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                        <span aria-hidden="true">🏜️</span>
+                        <span data-key="car_pres_liste3" style="color: var(--text-dim); font-size: var(--cm);"></span>
+                    </li>
+                    <li style="display:flex;gap:.5rem;align-items:flex-start">
+                        <span aria-hidden="true">🏎️</span>
+                        <span data-key="car_pres_liste4" style="color: var(--text-dim); font-size: var(--cm);"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;">
+            <img loading="lazy" src="images/car/car1.png" alt="Capture Car Project 1" style="border-radius:12px;width:100%;height:auto;">
+            <img loading="lazy" src="images/car/car2.png" alt="Capture Car Project 2" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+        <div class="meta-panel">
+            <ul class="meta-list" aria-label="Informations projet">
+                <li><span class="meta-icon">🎮</span><span data-key="car_pres_liste_genre"></span></li>
+                <li><span class="meta-icon">⚙️</span><span data-key="car_pres_liste_meca"></span></li>
+                <li><span class="meta-icon">👶</span><span data-key="car_pres_public"></span></li>
+                <li><span class="meta-icon">👥</span><span data-key="car_pres_joueurs"></span></li>
+                <li><span class="meta-icon">💻</span><span data-key="car_pres_support"></span></li>
+            </ul>
+        </div>
+        <div class="meta-panel" style="margin-top:1rem">
+            <ul class="meta-list">
+                <li><span class="meta-icon">👥</span><span data-key="car_team_size"></span></li>
+                <li><span class="meta-icon">📅</span><span data-key="car_team_date"></span></li>
+                <li><span class="meta-icon">⏱️</span><span data-key="car_team_duree"></span></li>
+                <li><span class="meta-icon">🛠️</span><span data-key="car_engine"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ROLE & APPROCHE -->
+    <section class="reveal" id="role" aria-labelledby="role-title">
+        <div class="section-header">
+            <h2 id="role-title" data-key="car_role_section_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="align-items:start;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="car_role_texte1"></p>
+                <p data-key="car_role_texte2"></p>
+                <p data-key="car_role_texte3"></p>
+                <p data-key="car_role_texte4"></p>
+            </div>
+        </div>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="car_focus_title"></strong>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Game Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Level Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Playtests</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="car_role_liste1"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Blueprint</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/car/car3.png" alt="Capture Car Project 3" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+    </section>
+
+    <!-- LOGICIELS -->
+    <section class="reveal" id="tools">
+        <div class="section-header">
+            <h2 data-key="titre_logiciels_utilises"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/ue.png" alt="Unreal Engine"></div>
+                <p class="tool-title">Engine</p>
+                <p class="tool-sub">Unreal Engine</p>
+                <p class="tool-desc" data-key="car_tool_ue"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                <p class="tool-title">Design</p>
+                <p class="tool-sub">Photoshop</p>
+                <p class="tool-desc" data-key="car_tool_ps"></p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        car_banner: "Game Design · Level Design · Playtests · Signes & Feedbacks · UI · Blueprint",
+        car_tagline: "Projet personnel : création d’un level design de jeu de course avec quatre biomes uniques.",
+        car_meta_type: "PROJET : Jeu de course",
+        car_meta_role: "RÔLE : Game & Level Designer",
+        car_meta_date: "DATE : Juin 2022",
+        car_meta_duree: "DURÉE : 1 mois",
+        car_meta_equipe: "ÉQUIPE : Solo",
+        car_responsabilites_title: "Responsabilités",
+        car_overview_title: "Présentation",
+        car_pres1: "Projet personnel réalisé sur temps libre : conception d’un environnement de course comportant ville, deux circuits et désert.",
+        car_pres_liste1: "Ville : zone urbaine pour exploration libre et test des mécaniques de conduite.",
+        car_pres_liste2: "Circuit 1 : tracé désertique avec virages serrés et sauts pour un challenge soutenu.",
+        car_pres_liste3: "Désert : petit village ancien près d’un lac et lieux de culte, ambiance calme et historique.",
+        car_pres_liste4: "Circuit 2 : inspiré Formule 1, environnement verdoyant moderne favorisant la vitesse.",
+        car_pres_liste_genre: "GENRE : TPS, Voiture, Courses",
+        car_pres_liste_meca: "MÉCANIQUES : Conduite, Boost",
+        car_pres_public: "PUBLIC : 3+",
+        car_pres_joueurs: "JOUEURS : 1",
+        car_pres_support: "SUPPORT : PC",
+        car_team_size: "TAILLE ÉQUIPE : 1",
+        car_team_date: "DATE : Juin 2022",
+        car_team_duree: "DURÉE : 1 mois",
+        car_engine: "MOTEUR : Unreal Engine",
+        car_role_section_title: "Approche & Rôle",
+        car_role_texte1: "Objectif : proposer un ensemble cohérent mêlant zone d’apprentissage libre et circuits orientés performance.",
+        car_role_texte2: "Phase papier : layout des biomes, placements checkpoints, zones de boost, sauts et rythme des courbes.",
+        car_role_texte3: "Playtests : ajustement banking des virages, lisibilité des trajectoires et courbe de difficulté.",
+        car_role_texte4: "Production : blockout, modules environnement, Blueprint pour triggers de boost et réglages véhicule.",
+        car_role_liste1: "Signes & Feedbacks",
+        car_focus_title: "Focus",
+        titre_logiciels_utilises: "Logiciels utilisés",
+        car_tool_ue: "Implémentation du level, scripts Blueprint et réglages des paramètres de conduite.",
+        car_tool_ps: "Croquis du layout, annotations visuelles et éléments UI de test.",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_role: "Explorer le rôle",
+        cta_scroll_tools: "Voir les outils"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        car_banner: "Game Design · Level Design · Playtests · Signs & Feedback · UI · Blueprint",
+        car_tagline: "Personal project: racing level design with four distinct biomes.",
+        car_meta_type: "PROJECT: Racing Game",
+        car_meta_role: "ROLE: Game & Level Designer",
+        car_meta_date: "DATE: Jun 2022",
+        car_meta_duree: "DURATION: 1 month",
+        car_meta_equipe: "TEAM: Solo",
+        car_responsabilites_title: "Responsibilities",
+        car_overview_title: "Overview",
+        car_pres1: "Personal side project: design of a racing environment featuring city hub, two tracks and a desert village.",
+        car_pres_liste1: "City: urban free-roam zone to test driving mechanics.",
+        car_pres_liste2: "Track 1: desert layout with tight turns and jumps for sustained challenge.",
+        car_pres_liste3: "Desert: ancient village near a lake and worship sites, calm atmospheric biome.",
+        car_pres_liste4: "Track 2: F1-inspired modern green environment emphasizing high speed.",
+        car_pres_liste_genre: "GENRE: TPS, Car, Racing",
+        car_pres_liste_meca: "MECHANICS: Driving, Boost",
+        car_pres_public: "AUDIENCE: 3+",
+        car_pres_joueurs: "PLAYERS: 1",
+        car_pres_support: "PLATFORM: PC",
+        car_team_size: "TEAM SIZE: 1",
+        car_team_date: "DATE: Jun 2022",
+        car_team_duree: "DURATION: 1 month",
+        car_engine: "ENGINE: Unreal Engine",
+        car_role_section_title: "Approach & Role",
+        car_role_texte1: "Goal: combine a learn-by-roaming zone with performance-focused race tracks.",
+        car_role_texte2: "Paper phase: biome layout, checkpoint placement, boost zones, jumps and turn pacing.",
+        car_role_texte3: "Playtests: refining banking, trajectory readability and difficulty curve.",
+        car_role_texte4: "Production: blockout, modular environment, Blueprint for boost triggers and vehicle tuning.",
+        car_role_liste1: "Signs & Feedback",
+        car_focus_title: "Focus",
+        titre_logiciels_utilises: "Tools used",
+        car_tool_ue: "Implemented level, Blueprint scripting and driving parameter tuning.",
+        car_tool_ps: "Layout sketches, visual annotations and early UI test elements.",
+        cta_scroll_overview: "View overview",
+        cta_scroll_role: "Explore role",
+        cta_scroll_tools: "View tools"
+    }
+};
+</script>
+</body>
+</html>

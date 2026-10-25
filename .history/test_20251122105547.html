@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio - Accueil</title>
+<meta name="description" content="Portfolio personnel - Projets et compétences." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --radius-sm:6px;
+  --radius-md:14px;
+  --radius-full:999px;
+  --ease: cubic-bezier(.4,.0,.2,1);
+  --dur: .5s;
+
+  /* Palette A (inspirée combinaison ton chaud / neutre) */
+  --a-bg:#F5F1E9;
+  --a-surface:#FFFFFF;
+  --a-ink:#2E2A26;
+  --a-accent:#C94F3D;
+  --a-accent-alt:#E3A55D;
+  --a-line:rgba(46,42,38,.12);
+
+  /* Palette B (inspirée combinaison ton terre / bleu grisé) */
+  --b-bg:#F1ECE6;
+  --b-surface:#FDFCF9;
+  --b-ink:#242728;
+  --b-accent:#2F5D7D;
+  --b-accent-alt:#B07846;
+  --b-line:rgba(36,39,40,.14);
+
+  /* Palette C (inspirée combinaison vert sauge / rouge profond) */
+  --c-bg:#E9E7E2;
+  --c-surface:#FAFAF8;
+  --c-ink:#232421;
+  --c-accent:#7A3A37;
+  --c-accent-alt:#6B8562;
+  --c-line:rgba(35,36,33,.14);
+}
+
+/* Active palette (default A) */
+[data-theme="A"] {
+  --bg:var(--a-bg);
+  --surface:var(--a-surface);
+  --ink:var(--a-ink);
+  --accent:var(--a-accent);
+  --accent-alt:var(--a-accent-alt);
+  --line:var(--a-line);
+}
+[data-theme="B"] {
+  --bg:var(--b-bg);
+  --surface:var(--b-surface);
+  --ink:var(--b-ink);
+  --accent:var(--b-accent);
+  --accent-alt:var(--b-accent-alt);
+  --line:var(--b-line);
+}
+[data-theme="C"] {
+  --bg:var(--c-bg);
+  --surface:var(--c-surface);
+  --ink:var(--c-ink);
+  --accent:var(--c-accent);
+  --accent-alt:var(--c-accent-alt);
+  --line:var(--c-line);
+}
+
+* {
+  box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+}
+
+body {
+  margin:0;
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.35;
+}
+
+img,svg {display:block;max-width:100%;}
+
+a {
+  color:var(--accent);
+  text-decoration:none;
+  transition:color .25s var(--ease);
+}
+a:hover,a:focus {
+  color:var(--accent-alt);
+}
+
+::selection {
+  background:var(--accent);
+  color:#fff;
+}
+
+header {
+  position:sticky;
+  top:0;
+  backdrop-filter:saturate(140%) blur(14px);
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  z-index:100;
+  border-bottom:1px solid var(--line);
+}
+
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  padding:.9rem clamp(1rem,4vw,3rem);
+}
+
+.nav__brand {
+  font-weight:600;
+  font-size:1.15rem;
+  letter-spacing:.5px;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
+
+.nav__links {
+  display:flex;
+  gap:2.2rem;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.nav__links a {
+  font-size:.92rem;
+  font-weight:500;
+  position:relative;
+  padding:.4rem .2rem;
+}
+
+.nav__links a::after {
+  content:"";
+  position:absolute;
+  left:0;bottom:0;
+  height:2px;
+  width:0;
+  background:var(--accent);
+  transition:width .4s var(--ease);
+  border-radius:2px;
+}
+.nav__links a:hover::after,
+.nav__links a:focus::after {
+  width:100%;
+}
+
+.theme-switcher {
+  display:flex;
+  gap:.4rem;
+}
+.theme-btn {
+  width:38px;
+  height:38px;
+  border:1px solid var(--line);
+  background:var(--surface);
+  color:var(--ink);
+  font-size:.65rem;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:var(--radius-sm);
+  position:relative;
+  transition:background .35s var(--ease), transform .35s var(--ease), border-color .35s var(--ease);
+}
+.theme-btn[data-active="true"] {
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+.theme-btn:hover {
+  transform:translateY(-3px);
+  border-color:var(--accent);
+}
+
+.menu-toggle {
+  display:none;
+  background:var(--surface);
+  border:1px solid var(--line);
+  width:44px;height:44px;
+  border-radius:var(--radius-sm);
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display:block;
+  width:22px;
+  height:2px;
+  background:var(--ink);
+  position:relative;
+  transition:.45s var(--ease);
+  border-radius:2px;
+}
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content:"";
+  position:absolute;
+  left:0;
+}
+.menu-toggle span::before {top:-7px;}
+.menu-toggle span::after {top:7px;}
+.menu-toggle[aria-expanded="true"] span {
+  background:transparent;
+}
+.menu-toggle[aria-expanded="true"] span::before {
+  top:0;
+  transform:rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span::after {
+  top:0;
+  transform:rotate(-45deg);
+}
+
+.hero {
+  min-height:calc(100dvh - 76px);
+  display:grid;
+  align-items:center;
+  padding:clamp(2rem,6vw,5rem) clamp(1.2rem,5vw,4rem);
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:4rem;
+  position:relative;
+}
+
+.hero__intro {
+  max-width:630px;
+  animation:fadeIn .8s var(--ease) both;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.tagline {
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--surface);
+  padding:.5rem .9rem;
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  border:1px solid var(--line);
+  border-radius:var(--radius-full);
+  color:var(--accent);
+  margin-bottom:1.4rem;
+}
+
+.hero h1 {
+  font-size:clamp(2.4rem,6vw,3.8rem);
+  line-height:1.05;
+  margin:0 0 1.2rem;
+  letter-spacing:-1px;
+}
+
+.hero p {
+  font-size:clamp(1rem,1.3vw,1.15rem);
+  font-weight:400;
+  color:color-mix(in srgb, var(--ink) 78%, #000);
+  margin:0 0 2rem;
+  max-width:56ch;
+}
+
+.actions {
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.btn {
+  --btn-bg:var(--accent);
+  --btn-color:#fff;
+  background:var(--btn-bg);
+  color:var(--btn-color);
+  border:none;
+  font-weight:600;
+  font-size:.9rem;
+  padding:.95rem 1.4rem;
+  border-radius:var(--radius-full);
+  cursor:pointer;
+  letter-spacing:.5px;
+  position:relative;
+  overflow:hidden;
+  transition:background .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
+  box-shadow:0 6px 18px -8px color-mix(in srgb,var(--accent) 60%,transparent);
+}
+.btn:hover {
+  transform:translateY(-4px);
+  background:var(--accent-alt);
+  box-shadow:0 10px 26px -10px color-mix(in srgb,var(--accent-alt) 70%,transparent);
+}
+.btn--ghost {
+  --btn-bg:var(--surface);
+  --btn-color:var(--ink);
+  border:1px solid var(--line);
+  box-shadow:none;
+}
+.btn--ghost:hover {
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+
+.hero__visual {
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+
+.hero-art {
+  width:min(460px,90%);
+  aspect-ratio:4/5;
+  background:linear-gradient(130deg, var(--surface), color-mix(in srgb,var(--accent) 14%, var(--surface)));
+  border:1px solid var(--line);
+  border-radius:clamp(2rem,5vw,3.2rem);
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+}
+
+.hero-art::before,
+.hero-art::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 40% 30%, color-mix(in srgb,var(--accent) 25%, transparent) 0, transparent 55%),
+    radial-gradient(circle at 70% 65%, color-mix(in srgb,var(--accent-alt) 30%, transparent) 0, transparent 60%);
+  mix-blend-mode:multiply;
+  opacity:.6;
+  animation:pulse 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100% {transform:scale(1);}
+  50% {transform:scale(1.04);}
+}
+
+.hero-art__inner {
+  width:78%;
+  aspect-ratio:1/1;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:28%;
+  display:grid;
+  place-items:center;
+  position:relative;
+  animation:rotate 22s linear infinite;
+  overflow:hidden;
+}
+
+@keyframes rotate {
+  to {transform:rotate(360deg);}
+}
+
+.hero-art__inner img {
+  width:64%;
+  filter:grayscale(.35) contrast(1.05);
+  border-radius:18%;
+  box-shadow:0 12px 28px -12px rgba(0,0,0,.18);
+}
+
+.section {
+  padding:clamp(2.6rem,7vw,5.6rem) clamp(1.2rem,5vw,4rem);
+}
+
+.section__head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  margin-bottom:2.4rem;
+  flex-wrap:wrap;
+}
+
+.section__head h2 {
+  margin:0;
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  letter-spacing:-.5px;
+}
+
+.section__desc {
+  max-width:52ch;
+  font-size:.98rem;
+  color:color-mix(in srgb,var(--ink) 75%, #000);
+}
+
+.projects-grid {
+  display:grid;
+  gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.project-card {
+  position:relative;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:1.2rem 1.2rem 1.4rem;
+  display:flex;
+  flex-direction:column;
+  gap:.9rem;
+  isolation:isolate;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease);
+}
+.project-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 14px 38px -14px rgba(0,0,0,.16);
+}
+
+.project-card__thumb {
+  aspect-ratio:16/10;
+  background:linear-gradient(145deg, color-mix(in srgb,var(--accent) 20%, var(--surface)), var(--surface));
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  display:grid;
+  place-items:center;
+  font-size:.75rem;
+  letter-spacing:.08em;
+  font-weight:600;
+  color:var(--accent);
+  position:relative;
+  overflow:hidden;
+}
+.project-card__thumb::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 70% 30%, color-mix(in srgb,var(--accent-alt) 30%, transparent) 0, transparent 60%);
+  mix-blend-mode:multiply;
+  opacity:.55;
+}
+
+.project-card h3 {
+  margin:.2rem 0 .2rem;
+  font-size:1.1rem;
+  letter-spacing:-.3px;
+}
+
+.project-card p {
+  margin:0;
+  font-size:.82rem;
+  line-height:1.4;
+  color:color-mix(in srgb,var(--ink) 74%, #000);
+}
+
+.project-card a.more {
+  margin-top:auto;
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  color:var(--accent);
+}
+
+.about {
+  background:linear-gradient(120deg, color-mix(in srgb,var(--accent) 6%, var(--bg)), color-mix(in srgb,var(--accent-alt) 6%, var(--bg)));
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.about__content {
+  max-width:960px;
+  margin:0 auto;
+  display:grid;
+  gap:3rem;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  align-items:start;
+}
+
+.about__text h3 {
+  margin-top:0;
+  font-size:1.5rem;
+}
+
+.stack-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  margin:1.2rem 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.stack-list li {
+  font-size:.65rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:.55rem .8rem;
+  border-radius:var(--radius-full);
+  color:var(--ink);
+}
+
+.contact-cta {
+  text-align:center;
+  padding:clamp(2.8rem,7vw,5.8rem) clamp(1.2rem,5vw,4rem) 5rem;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.contact-cta h2 {
+  font-size:clamp(2rem,4.8vw,3rem);
+  margin:0 0 1.2rem;
+  letter-spacing:-1px;
+}
+
+.contact-cta p {
+  font-size:1rem;
+  max-width:54ch;
+  margin:0 auto 2rem;
+  color:color-mix(in srgb,var(--ink) 75%, #000);
+}
+
+footer {
+  padding:2.4rem clamp(1.2rem,5vw,4rem) 3.2rem;
+  background:var(--surface);
+  border-top:1px solid var(--line);
+  font-size:.8rem;
+  display:grid;
+  gap:2rem;
+}
+
+.footer__top {
+  display:flex;
+  flex-wrap:wrap;
+  gap:2rem;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.social {
+  display:flex;
+  gap:.8rem;
+}
+.social a {
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:var(--radius-full);
+  background:var(--bg);
+  color:var(--ink);
+  font-size:.85rem;
+  transition:.35s var(--ease);
+}
+.social a:hover {
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+  transform:translateY(-3px);
+}
+
+.footer__copy {
+  opacity:.7;
+}
+
+@media (max-width:900px) {
+  .hero {
+    padding:3rem 1.2rem 4rem;
+  }
+  .nav__links {
+    position:fixed;
+    inset:76px 0 auto 0;
+    background:var(--surface);
+    flex-direction:column;
+    padding:1.2rem 1.4rem 2rem;
+    gap:.6rem;
+    border-bottom:1px solid var(--line);
+    transform:translateY(-150%);
+    transition:transform .6s var(--ease);
+    box-shadow:0 18px 36px -12px rgba(0,0,0,.12);
+    z-index:80;
+  }
+  .nav__links a {
+    font-size:1rem;
+    padding:.7rem .4rem;
+  }
+  .nav__links[data-open="true"] {
+    transform:translateY(0);
+  }
+  .menu-toggle {display:flex;}
+  .theme-switcher {display:none;}
+}
+
+@media (prefers-reduced-motion:reduce) {
+  * {animation:none !important; transition:none !important;}
+}
+</style>
+</head>
+<body data-theme="A">
+<header>
+  <div class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav__brand">MonPortfolio</div>
+
+    <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+      <span></span>
+    </button>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="theme-switcher" aria-label="Changement de palette">
+      <button class="theme-btn" data-theme="A" data-active="true">A</button>
+      <button class="theme-btn" data-theme="B">B</button>
+      <button class="theme-btn" data-theme="C">C</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero__intro">
+      <div class="tagline">Créatif & Technique</div>
+      <h1>Construire des expériences numériques élégantes et utiles.</h1>
+      <p>Je conçois et développe des interfaces performantes centrées sur l’utilisateur. Mon approche combine design systémique, accessibilité, performance et une forte sensibilité typographique & colorimétrique inspirée des harmonies classiques.</p>
+      <div class="actions">
+        <button class="btn">Voir mes projets</button>
+        <button class="btn btn--ghost">Me contacter</button>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <figure class="hero-art">
+        <div class="hero-art__inner">
+          <!-- Remplacer par votre photo (ratio carré) -->
+          <img src="https://via.placeholder.com/600x600.png?text=Moi" alt="Portrait">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="projets" class="section">
+    <div class="section__head">
+      <h2>Projets sélectionnés</h2>
+      <p class="section__desc">Un aperçu de travaux illustrant conception UI, architecture front, optimisation et intégration d'outils modernes. Chaque projet met l'accent sur la qualité du détail et la cohérence visuelle.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-card__thumb">Projet 01</div>
+        <h3>Dashboard Analytique</h3>
+        <p>Interface réactive pour visualisation temps réel de métriques commerciales avec focus accessibilité et dark mode.</p>
+        <a href="#" class="more" aria-label="Détails Dashboard Analytique">Détails →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-card__thumb">Projet 02</div>
+        <h3>Plateforme E-learning</h3>
+        <p>Expérience didactique modulaire, design system scalable, tests automatiques et optimisation des performances.</p>
+        <a href="#" class="more" aria-label="Détails Plateforme E-learning">Détails →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-card__thumb">Projet 03</div>
+        <h3>Site Vitrine Marque</h3>
+        <p>Identité raffinée, animation micro-interactions légères, SEO technique et intégration CMS headless.</p>
+        <a href="#" class="more" aria-label="Détails Site Vitrine Marque">Détails →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-card__thumb">Projet 04</div>
+        <h3>Application Mobile Hybride</h3>
+        <p>Stack moderne, synchronisation offline-first, design adaptatif multi plateformes et qualité UI polie.</p>
+        <a href="#" class="more" aria-label="Détails Application Mobile Hybride">Détails →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="apropos" class="about section">
+    <div class="about__content">
+      <div class="about__text">
+        <h3>À propos</h3>
+        <p>Développeur orienté produit, j'unis rigueur technique et direction artistique pour fabriquer des interfaces cohérentes. J’accorde une attention particulière à la palette chromatique, la hiérarchie visuelle, et la lisibilité multi-supports. Recherche continue d’équilibre entre minimalisme, chaleur et fonctionnalité.</p>
+        <p>Influences: design systémique, typographie modulaire, harmonies colorées classiques et performance web.</p>
+      </div>
+      <div>
+        <h3>Stack & Outils</h3>
+        <ul class="stack-list">
+          <li>HTML5</li><li>CSS / PostCSS</li><li>Tailwind</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>Vite</li><li>Vitest</li><li>Playwright</li><li>GraphQL</li><li>REST</li><li>Prisma</li><li>GitHub Actions</li><li>Docker</li><li>Storybook</li><li>Figma</li><li>Accessibility</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-cta">
+    <h2>Discutons d’un projet.</h2>
+    <p>Disponible pour missions freelance, collaborations produit ou conseils en optimisation front-end. Ouvert aux projets sensibles à l’esthétique, la performance et la qualité de code.</p>
+    <div class="actions" style="justify-content:center;">
+      <button class="btn">Écrire un message</button>
+      <button class="btn btn--ghost">Télécharger CV</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer__top">
+    <div class="footer__brand">MonPortfolio</div>
+    <div class="social" aria-label="Liens sociaux">
+      <a href="#" aria-label="GitHub">GH</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="#" aria-label="Dribbble">DB</a>
+    </div>
+  </div>
+  <div class="footer__copy">© <span id="year"></span> Tous droits réservés.</div>
+</footer>
+
+<script>
+(function(){
+  const root = document.body;
+  const themeButtons = document.querySelectorAll('.theme-btn');
+  themeButtons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      root.setAttribute('data-theme', btn.dataset.theme);
+      themeButtons.forEach(b=>b.dataset.active="false");
+      btn.dataset.active="true";
+      localStorage.setItem('pref-theme', btn.dataset.theme);
+    });
+  });
+  const saved = localStorage.getItem('pref-theme');
+  if(saved && ['A','B','C'].includes(saved)){
+    root.setAttribute('data-theme', saved);
+    themeButtons.forEach(b=>b.dataset.active = (b.dataset.theme===saved));
+  }
+
+  const navLinks = document.getElementById('navLinks');
+  const toggle = document.querySelector('.menu-toggle');
+  toggle.addEventListener('click',()=>{
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+    navLinks.dataset.open = !expanded;
+  });
+
+  // Smooth scroll (native behavior modern browsers; fallback)
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+        if(window.innerWidth < 900){
+          toggle.setAttribute('aria-expanded','false');
+          navLinks.dataset.open=false;
+        }
+      }
+    });
+  });
+
+  // Dynamic year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reduce CLS by locking transitions until first paint
+  document.documentElement.classList.add('no-transitions');
+  requestAnimationFrame(()=>document.documentElement.classList.remove('no-transitions'));
+})();
+</script>
+</body>
+</html>

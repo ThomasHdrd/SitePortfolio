@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cook Better — Étude de cas UI/UX | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas Cook Better : persona, wireframes, prototypes basse et haute fidélité et design responsive." />
+    <meta property="og:title" content="Cook Better — Étude de cas UI/UX" />
+    <meta property="og:description" content="Design Thinking, wireframes, prototypes haute fidélité et responsive web design." />
+    <meta property="og:url" content="https://thomashoudard.com/cookbetter.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+            <p class="hero-sub" data-key="cookbetter_banner">Design Thinking · Low-fi · High-fi · Responsive</p>
+            <h1 data-key="cookbetter_hero_title">Cook Better — Apprendre à cuisiner sain</h1>
+            <p data-key="cookbetter_pres">
+                Cook Better est un site web responsive destiné aux amoureux de la cuisine souhaitant apprendre
+                à préparer des repas sains via des parcours guidés, des recettes structurées et une interface accessible.
+            </p>
+
+            <div class="company-meta">
+                <span data-key="cookbetter_pres_projet"></span>
+                <span data-key="cookbetter_pres_role"></span>
+                <span data-key="cookbetter_pres_date"></span>
+                <span data-key="cookbetter_pres_duree"></span>
+            </div>
+
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>Design Thinking</span>
+                <span class="badge"><span class="dot"></span>Wireframes</span>
+                <span class="badge"><span class="dot"></span>High Fidelity</span>
+                <span class="badge"><span class="dot"></span>Responsive</span>
+            </div>
+
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#hautefid" class="btn btn-primary" data-key="cta_see_final">Voir le résultat</a>
+                <a href="#site" class="btn btn-outline" data-key="cta_see_proto">Voir le prototype</a>
+            </div>
+            </div>
+
+            <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/highfid.png" alt="Maquette haute fidélité desktop Cook Better">
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- RESPONSABILITÉS -->
+        <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+            <div class="section-header">
+            <h2 id="responsabilites-title" data-key="cookbetter_responsabilites_title">Responsabilités</h2>
+            <div class="bar"></div>
+            </div>
+            <ul class="grid" style="grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:.5rem">
+            <li style="display:flex;align-items:center;gap:.5rem">
+                <a href="#bassefid" aria-label="Voir la section Prototype basse fidélité" title="Aller au prototype basse fidélité" style="display:flex;align-items:center;gap:.5rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-key="cookbetter_pres_reponsabilite1">Design Basse Fidélité</span>
+                </a>
+            </li>
+            <li style="display:flex;align-items:center;gap:.5rem">
+                <a href="#hautefid" aria-label="Voir la section Prototype haute fidélité" title="Aller au prototype haute fidélité" style="display:flex;align-items:center;gap:.5rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-key="cookbetter_pres_reponsabilite2">Design Haute Fidélité</span>
+                </a>
+            </li>
+            <li style="display:flex;align-items:center;gap:.5rem">
+                <span style="display:flex;align-items:center;gap:.5rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-key="cookbetter_pres_reponsabilite3">Tests utilisateurs</span>
+                </span>
+            </li>
+            <li style="display:flex;align-items:center;gap:.5rem">
+                <span style="display:flex;align-items:center;gap:.5rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-key="cookbetter_pres_reponsabilite4">Audit concurrentiel</span>
+                </span>
+            </li>
+            <li style="display:flex;align-items:center;gap:.5rem">
+                <a href="#persona" aria-label="Voir la section Persona" title="Aller au persona" style="display:flex;align-items:center;gap:.5rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Design Thinking</span>
+                </a>
+            </li>
+            <li style="display:flex;align-items:center;gap:.5rem">
+                <a href="#responsive-high" aria-label="Voir la section Responsive – Haute fidélité" title="Aller au responsive haute fidélité" style="display:flex;align-items:center;gap:.5rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Responsive Web Design</span>
+                </a>
+            </li>
+            </ul>
+        </section>
+
+        <!-- PERSONA -->
+        <section class="reveal" id="persona">
+            <div class="section-header">
+                <h2>Persona</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/persona.png" alt="Persona Cook Better">
+            </div>
+        </section>
+
+        <!-- WIREFRAME -->
+        <section class="reveal" id="wireframe">
+            <div class="section-header">
+                <h2>Wireframes</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/wireframepapier.png" alt="Wireframes papier desktop">
+                <img loading="lazy" src="images/cookbetter/wireframepapier-tel.png" alt="Wireframes papier mobile">
+            </div>
+        </section>
+
+        <!-- BASSE FID -->
+        <section class="reveal" id="bassefid">
+            <div class="section-header">
+                <h2 data-key="titre_proto_bassefid">Prototype basse fidélité</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/lowfid.png" alt="Prototype basse fidélité desktop">
+                <img loading="lazy" src="images/cookbetter/lowfid-tel.png" alt="Prototype basse fidélité mobile">
+            </div>
+        </section>
+
+        <!-- HAUTE FID -->
+        <section class="reveal" id="hautefid">
+            <div class="section-header">
+                <h2 data-key="titre_proto_hautefid">Prototype haute fidélité</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/highfid.png" alt="Prototype haute fidélité desktop global">
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/highfid-tel1.png" alt="Écran mobile 1">
+                <img loading="lazy" src="images/cookbetter/highfid-tel2.png" alt="Écran mobile 2">
+                <img loading="lazy" src="images/cookbetter/highfid-tel3.png" alt="Écran mobile 3">
+            </div>
+        </section>
+
+        <!-- RESPONSIVE LOW -->
+        <section class="reveal" id="responsive-low">
+            <div class="section-header">
+                <h2 data-key="titre_proto_bassefid_responsive">Responsive – Basse fidélité</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/responsive/bassefid.png" alt="Basse fidélité responsive">
+            </div>
+        </section>
+
+        <!-- RESPONSIVE HIGH -->
+        <section class="reveal" id="responsive-high">
+            <div class="section-header">
+                <h2 data-key="titre_proto_hautefid_responsive">Responsive – Haute fidélité</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/responsive/highfid.png" alt="Haute fidélité responsive ensemble">
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/cookbetter/responsive/highfid-result1.png" alt="Résultat final 1">
+                <img loading="lazy" src="images/cookbetter/responsive/highfid-result2.png" alt="Résultat final 2">
+                <img loading="lazy" src="images/cookbetter/responsive/highfid-result3.png" alt="Résultat final 3">
+            </div>
+        </section>
+
+        <!-- PROTOTYPE LINK -->
+       <section class="reveal" id="site">
+        <div class="section-header">
+            <h2 data-key="cookbetter_site_title">Prototype final</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="proto-wrap">
+            <p style="font-size:.95rem;color:var(--text-dim)" data-key="cookbetter_site_desc">
+            Accédez au prototype Figma interactif pour parcourir les écrans.
+            </p>
+            <div>
+            <a class="btn btn-primary" target="_blank" href="https://www.figma.com/design/pDlgTades5hfS4rYg28DBz/CookBetter?node-id=195-758&p=f" data-key="cookbetter_site_button">
+                Voir le prototype Figma
+            </a>
+            </div>
+        </div>
+        </section>
+
+        <!-- OUTILS -->
+        <section class="reveal">
+            <div class="section-header">
+            <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+            <div class="bar"></div>
+            </div>
+            <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon">
+                <img src="images/logiciels/figma.png" alt="Figma">
+                </div>
+                <p class="tool-title" data-key="tool_figma_title">UI DESIGN</p>
+                <p class="tool-sub" data-key="tool_figma_name">Figma</p>
+                <p class="tool-desc" data-key="tool_figma_desc">Maquettes, composants, prototype haute fidélité.</p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon">
+                <img src="images/logiciels/adobephotoshop.png" alt="Photoshop">
+                </div>
+                <p class="tool-title" data-key="tool_ps_title">Assets</p>
+                <p class="tool-sub" data-key="tool_ps_name">Photoshop</p>
+                <p class="tool-desc" data-key="tool_ps_desc">Retouches visuelles et optimisation.</p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon">
+                <img src="images/logiciels/googledrive.png" alt="Google Drive">
+                </div>
+                <p class="tool-title" data-key="tool_drive_title">Organisation</p>
+                <p class="tool-sub" data-key="tool_drive_name">Drive</p>
+                <p class="tool-desc" data-key="tool_drive_desc">Partage documentation & livrables.</p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon">
+                <img src="images/logiciels/miro.png" alt="Miro">
+                </div>
+                <p class="tool-title" data-key="tool_miro_title">Idéation</p>
+                <p class="tool-sub" data-key="tool_miro_name">Miro</p>
+                <p class="tool-desc" data-key="tool_miro_desc">Brainstorming & parcours utilisateur.</p>
+            </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedin.png" alt="LinkedIn" />
+                    </a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+                        <img src="images/github.png" alt="GitHub" />
+                    </a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+                        <img src="images/email.png" alt="Email" />
+                    </a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+                    ©2025 Thomas Houdard · Tous droits réservés
+                </span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Expériences Professionnelles",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Développement",
+                menu_projects_personal: "Perso",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+                cookbetter_banner: "Design Thinking · Low-fi · High-fi · Responsive",
+                cookbetter_hero_title: "Cook Better — Apprendre à cuisiner sain",
+                cookbetter_pres: "Cook Better est un site web responsive destiné aux amoureux de la cuisine souhaitant apprendre à préparer des repas sains via des parcours guidés, des recettes structurées et une interface accessible.",
+                cookbetter_pres_projet: "PROJET : Site web responsive",
+                cookbetter_pres_role: "RÔLE : UI & UX Designer",
+                cookbetter_pres_date: "DATE : Janvier 2023 – Avril 2023",
+                cookbetter_pres_duree: "DURÉE : 3 mois",
+                cookbetter_pres_reponsabilite1: "Design Basse Fidélité",
+                cookbetter_pres_reponsabilite2: "Design Haute Fidélité",
+                cookbetter_pres_reponsabilite3: "Tests utilisateurs",
+                cookbetter_pres_reponsabilite4: "Audit concurrentiel",
+                titre_proto_bassefid: "Prototype basse fidélité",
+                titre_proto_hautefid: "Prototype haute fidélité",
+                titre_proto_bassefid_responsive: "Responsive – Basse fidélité",
+                titre_proto_hautefid_responsive: "Responsive – Haute fidélité",
+                button_proto: "Voir le prototype Figma",
+                titre_logiciels_utilises: "Logiciels utilisés",
+                cookbetter_proto_title: "Prototype final",
+                cookbetter_proto_desc: "Accédez au prototype Figma interactif pour parcourir les écrans.",
+                cta_see_final: "Voir le résultat",
+                cta_see_proto: "Voir le prototype",
+                cookbetter_side_note: "Aperçu des écrans finaux",
+                cookbetter_responsabilites_title: "Responsabilités",
+                tool_figma_title: "UI DESIGN",
+                tool_figma_name: "Figma",
+                tool_figma_desc: "Maquettes, composants, prototype haute fidélité.",
+                tool_ps_title: "Assets",
+                tool_ps_name: "Photoshop",
+                tool_ps_desc: "Retouche d'images et création d'assets.",
+                tool_drive_title: "Documentation",
+                tool_drive_name: "Google Drive",
+                tool_drive_desc: "Partage documentation & livrables.",
+                tool_miro_title: "Idéation",
+                tool_miro_name: "Miro",
+                tool_miro_desc: "Brainstorming & parcours utilisateur.",
+                cookbetter_site_desc: "Accédez au prototype Figma interactif pour parcourir les écrans.",
+                cookbetter_site_title: "Prototype final",
+                cookbetter_site_button: "Voir le prototype Figma"
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Professional Experience",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Development Projects",
+                menu_projects_personal: "Personal",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+                footer: "©2025 Thomas Houdard · All rights reserved",
+                cookbetter_banner: "Design Thinking · Low-fi · High-fi · Responsive",
+                cookbetter_hero_title: "Cook Better — Learn healthy cooking",
+                cookbetter_pres: "Cook Better is a responsive web project helping food lovers learn to cook healthy meals via guided flows, structured recipes and an accessible interface.",
+                cookbetter_pres_projet: "PROJECT: Responsive website",
+                cookbetter_pres_role: "ROLE: UI & UX Designer",
+                cookbetter_pres_date: "DATE: Jan 2023 – Apr 2023",
+                cookbetter_pres_duree: "DURATION: 3 months",
+                cookbetter_pres_reponsabilite1: "Low-Fidelity Design",
+                cookbetter_pres_reponsabilite2: "High-Fidelity Design",
+                cookbetter_pres_reponsabilite3: "User testing",
+                cookbetter_pres_reponsabilite4: "Competitive audit",
+                titre_proto_bassefid: "Low-fidelity prototype",
+                titre_proto_hautefid: "High-fidelity prototype",
+                titre_proto_bassefid_responsive: "Responsive – Low-fidelity",
+                titre_proto_hautefid_responsive: "Responsive – High-fidelity",
+                button_proto: "Open Figma prototype",
+                titre_logiciels_utilises: "Tools used",
+                cookbetter_proto_title: "Final prototype",
+                cookbetter_proto_desc: "Open the interactive Figma prototype to browse screens.",
+                cta_see_final: "See final",
+                cta_see_proto: "Open prototype",
+                cookbetter_side_note: "Preview of final screens",
+                cookbetter_responsabilites_title: "Responsibilities",
+                tool_figma_title: "UI DESIGN",
+                tool_figma_name: "Figma",
+                tool_figma_desc: "Mockups, components, high-fidelity prototype.",
+                tool_ps_title: "Assets",
+                tool_ps_name: "Photoshop",
+                tool_ps_desc: "Image retouching and asset creation.",
+                tool_drive_title: "Documentation",
+                tool_drive_name: "Google Drive",
+                tool_drive_desc: "Sharing documentation & deliverables.",
+                tool_miro_title: "Ideation",
+                tool_miro_name: "Miro",
+                tool_miro_desc: "Brainstorming & user journeys.",
+                cookbetter_site_desc: "Open the interactive Figma prototype to browse screens.",
+                cookbetter_site_title: "Final prototype",
+                cookbetter_site_button: "Open Figma prototype"
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LAY — Étude de cas | Thomas Houdard</title>
+<meta name="description" content="LAY : Jeu d'exploration poétique. Game Design, Level Design, Puzzles, Prototype, QA." />
+<meta property="og:title" content="LAY — Étude de cas" />
+<meta property="og:description" content="Exploration aérienne, puzzles et univers contemplatif. Rôle : Level Design & Game Design." />
+<meta property="og:url" content="https://thomashoudard.com/lay.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                    <a href="projetPersonnels.html" data-key="menu_projects_personal"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="lay_banner"></p>
+            <h1>LAY</h1>
+            <p data-key="lay_tagline"></p>
+            <div class="company-meta">
+                <span data-key="lay_meta_type"></span>
+                <span data-key="lay_meta_role"></span>
+                <span data-key="lay_meta_date"></span>
+                <span data-key="lay_meta_duree"></span>
+                <span data-key="lay_meta_equipe"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>Game Design</span>
+                <span class="badge"><span class="dot"></span>Level Design</span>
+                <span class="badge"><span class="dot"></span>Puzzles</span>
+                <span class="badge"><span class="dot"></span>Prototype</span>
+                <span class="badge"><span class="dot"></span>QA</span>
+                <span class="badge"><span class="dot"></span>Exploration</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview"></a>
+                <a href="#role" class="btn btn-outline" data-key="cta_scroll_role"></a>
+                <a href="#puzzles" class="btn btn-outline" data-key="lay_cta_puzzles"></a>
+                <a href="#tools" class="btn btn-outline" data-key="cta_scroll_tools"></a>
+                <a href="#steam" class="btn btn-outline" data-key="lay_cta_steam"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <video controls style="width:100%;border-radius:12px">
+                    <source src="videos/LAY - OFFICIAL TRAILER 1 !.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="lay_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="lay_pres1"></p>
+                <p data-key="lay_pres2"></p>
+                <p data-key="lay_pres3"></p>
+            </div>
+        </div>
+        <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem">
+            <img loading="lazy" src="images/lay/lay1.png" alt="LAY capture 1" style="border-radius:12px;width:100%;height:auto;">
+            <img loading="lazy" src="images/lay/lay2.png" alt="LAY capture 2" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+        <div class="meta-panel">
+            <ul class="meta-list" aria-label="Informations projet">
+                <li><span class="meta-icon">🎮</span><span data-key="lay_pres_liste_genre"></span></li>
+                <li><span class="meta-icon">⚙️</span><span data-key="lay_pres_liste_meca"></span></li>
+                <li><span class="meta-icon">👶</span><span data-key="lay_pres_liste_public"></span></li>
+                <li><span class="meta-icon">👥</span><span data-key="lay_pres_liste_joueurs"></span></li>
+                <li><span class="meta-icon">💻</span><span data-key="lay_pres_liste_support"></span></li>
+            </ul>
+        </div>
+        <div class="meta-panel" style="margin-top:1rem">
+            <ul class="meta-list">
+                <li><span class="meta-icon">👥</span><span data-key="lay_team_size"></span></li>
+                <li><span class="meta-icon">📅</span><span data-key="lay_team_date"></span></li>
+                <li><span class="meta-icon">⏱️</span><span data-key="lay_team_duree"></span></li>
+                <li><span class="meta-icon">🛠️</span><span data-key="lay_engine"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ROLE & APPROCHE -->
+    <section class="reveal" id="role" aria-labelledby="role-title">
+        <div class="section-header">
+            <h2 id="role-title" data-key="lay_role_section_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="align-items:start;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="lay_role_texte1"></p>
+                <p data-key="lay_role_texte2"></p>
+                <p data-key="lay_role_texte3"></p>
+                <p data-key="lay_role_texte4"></p>
+            </div>
+        </div>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="lay_focus_title"></strong>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Level Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Game Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Puzzles</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Prototype / Blueprint</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>QA & Iteration</li>
+            </ul>
+        </div>
+        <div>
+            <img loading="lazy" src="images/lay/lay3.png" alt="Île civilisation blockout" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="reveal" id="plans">
+        <div class="section-header">
+            <h2 data-key="lay_plans_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <img loading="lazy" src="images/lay/plangeneral/plangeneral1.png" alt="Plan général 1" style="border-radius:12px;width:100%;height:auto;">
+            <img loading="lazy" src="images/lay/plangeneral/plangeneral2.png" alt="Plan général 2" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+        <div style="margin-top:1.5rem">
+            <h3 data-key="lay_circulation_title"></h3>
+            <img loading="lazy" src="images/lay/plancirculation/plancirculation.png" alt="Plan de circulation" style="border-radius:12px;width:100%;height:auto;margin-top:.75rem;">
+        </div>
+    </section>
+
+    <!-- PUZZLES -->
+    <section class="reveal" id="puzzles" aria-labelledby="puzzles-title">
+        <div class="section-header">
+            <h2 id="puzzles-title" data-key="lay_puzzles_title"></h2>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Zone 1 -->
+        <h3 data-key="lay_zone1_title" style="margin-bottom: 10px;"></h3>
+        <div class="grid puzzles-grid">
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone1/Z1_Sokoban1.gif" alt="Puzzle Sokoban (variation 1)" width="220" height="220">
+                <figcaption>Sokoban #1</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone1/Z1_Simon-1.gif" alt="Puzzle Simon (séquence lumineuse 1)" width="220" height="220">
+                <figcaption>Simon #1</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone1/Z1_Sokoban2.gif" alt="Puzzle Sokoban (variation 2)" width="220" height="220">
+                <figcaption>Sokoban #2</figcaption>
+            </figure>
+        </div>
+
+        <!-- Zone 2 -->
+        <h3 style="margin-top:2rem; margin-bottom: 10px;" data-key="lay_zone2_title"></h3>
+        <div class="grid puzzles-grid">
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone2/Z2_Simon.gif" alt="Puzzle Simon avancé (Zone 2)" width="220" height="220">
+                <figcaption>Simon avancé</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone2/Z2_Cercle.gif" alt="Puzzle cercle rotation / alignement" width="220" height="220">
+                <figcaption>Cercle rotation</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone2/Z2_Combinaison.gif" alt="Puzzle combinaison symboles" width="220" height="220">
+                <figcaption>Combinaison</figcaption>
+            </figure>
+        </div>
+
+        <!-- Zone 3 -->
+        <h3 style="margin-top:2rem; margin-bottom: 10px;" data-key="lay_zone3_title"></h3>
+        <div class="grid puzzles-grid">
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone3/Z3_Repeteur1.gif" alt="Puzzle répéteur phase 1" width="220" height="220">
+                <figcaption>Répéteur 1</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone3/Z2_Repeteur2.gif" alt="Puzzle répéteur phase 2" width="220" height="220">
+                <figcaption>Répéteur 2</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone3/Z2_Repeteur3.1.gif" alt="Puzzle répéteur phase 3.1" width="220" height="220">
+                <figcaption>Répéteur 3.1</figcaption>
+            </figure>
+            <figure class="puzzle-item">
+                <img loading="lazy" src="images/lay/gifs/zone3/Z2_Repeteur3.2.gif" alt="Puzzle répéteur phase 3.2" width="220" height="220">
+                <figcaption>Répéteur 3.2</figcaption>
+            </figure>
+        </div>
+    </section>
+
+
+
+    <!-- FINAL VIDEO -->
+    <section class="reveal" id="final">
+        <div class="section-header">
+            <h2 data-key="lay_final_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="proto-wrap">
+            <video controls style="width:100%;border-radius:12px">
+                <source src="videos/ILE CIVILISATION  - VIDEO PRESENTATION.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- STEAM -->
+    <section class="reveal" id="steam">
+        <div class="section-header">
+            <h2 data-key="lay_steam_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <a class="btn btn-primary" target="_blank" href="https://store.steampowered.com/app/1966100/LAY/" data-key="lay_button"></a>
+    </section>
+
+    <!-- LOGICIELS -->
+    <section class="reveal" id="tools">
+        <div class="section-header">
+            <h2 data-key="titre_logiciels_utilises"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/ue.png" alt="Unreal Engine"></div>
+                <p class="tool-title">Engine</p>
+                <p class="tool-sub">Unreal Engine</p>
+                <p class="tool-desc" data-key="lay_tool_ue"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                <p class="tool-title">Design</p>
+                <p class="tool-sub">Photoshop</p>
+                <p class="tool-desc" data-key="lay_tool_ps"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/adobexd.png" alt="Adobe XD"></div>
+                <p class="tool-title">UX</p>
+                <p class="tool-sub">Adobe XD</p>
+                <p class="tool-desc" data-key="lay_tool_xd"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/miro.png" alt="Miro"></div>
+                <p class="tool-title">Collab</p>
+                <p class="tool-sub">Miro</p>
+                <p class="tool-desc" data-key="lay_tool_miro"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/googledrive.png" alt="Google Drive"></div>
+                <p class="tool-title">Organisation</p>
+                <p class="tool-sub">Drive</p>
+                <p class="tool-desc" data-key="lay_tool_drive"></p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio",
+        menu_exp_pro: "Expériences Pro",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Dev",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        lay_banner: "Game Design · Level Design · Prototype · QA Tester",
+        lay_tagline: "Exploration poétique entre marche, vol et énigmes dans un archipel d’îles volantes.",
+        lay_meta_type: "PROJET : Jeu d'exploration",
+        lay_meta_role: "RÔLE : Level & Game Designer",
+        lay_meta_date: "DATE : Juin 2021 – Juin 2022",
+        lay_meta_duree: "DURÉE : 12 mois",
+        lay_meta_equipe: "ÉQUIPE : 25 personnes",
+        lay_overview_title: "Présentation",
+        lay_pres1: "Lay est un jeu d'exploration poétique et contemplatif invitant le joueur à alterner entre marcher, voler et résoudre des énigmes.",
+        lay_pres2: "Le joueur incarne Élise, une jeune fille de 14 ans qui se réveille dans un archipel d’îles volantes aux écosystèmes fantastiques.",
+        lay_pres3: "Le monde est en déclin : avec son animal, Élise restaure l’équilibre via exploration, défis et puzzles.",
+        lay_pres_liste_genre: "GENRE : TPS, Exploration, Aventure, Puzzle",
+        lay_pres_liste_meca: "MÉCANIQUES : Vol aérien, Puzzles",
+        lay_pres_liste_public: "PUBLIC : Tout public",
+        lay_pres_liste_joueurs: "JOUEURS : 1",
+        lay_pres_liste_support: "SUPPORT : PC",
+        lay_team_size: "TAILLE ÉQUIPE : 25",
+        lay_team_date: "DATE : Juin 2021 – Juin 2022",
+        lay_team_duree: "DURÉE : 12 mois",
+        lay_engine: "MOTEUR : Unreal Engine",
+        lay_role_section_title: "Approche & Rôle",
+        lay_role_texte1: "Participation comme Level Designer : conception de l'île civilisation (environnement majeur).",
+        lay_role_texte2: "Phase papier : itérations sur layout, conception d’énigmes et feeling général.",
+        lay_role_texte3: "Production : blockout, intégration des puzzles et éléments de gameplay pour dynamiser l’espace.",
+        lay_role_texte4: "Tests de gameplay, correction de bugs et ajustements de flow pour une expérience fluide.",
+        lay_focus_title: "Focus",
+        lay_plans_title: "Plans généraux",
+        lay_circulation_title: "Plan de circulation",
+        lay_puzzles_title: "Puzzles & Énigmes",
+        lay_zone1_title: "Zone 1",
+        lay_zone2_title: "Zone 2",
+        lay_zone3_title: "Zone 3",
+        lay_final_title: "Présentation de l'Île Civilisation",
+        lay_steam_title: "Téléchargement",
+        lay_button: "Télécharger le jeu sur Steam",
+        lay_cta_puzzles: "Voir puzzles",
+        lay_cta_steam: "Steam",
+        titre_logiciels_utilises: "Logiciels utilisés",
+        lay_tool_ue: "Implémentation, blockout, fonctionnalités et itérations gameplay.",
+        lay_tool_ps: "Supports visuels, annotations et documentation d’énigmes.",
+        lay_tool_xd: "Organisation des flux et schémas d’interaction.",
+        lay_tool_miro: "Brainstorming collaboratif et suivi des idées.",
+        lay_tool_drive: "Stockage des documents et versions.",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_role: "Explorer le rôle",
+        cta_scroll_tools: "Voir les outils"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Dev Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        lay_banner: "Game Design · Level Design · Prototype · QA Tester",
+        lay_tagline: "Poetic exploration mixing walking, flying and puzzle solving across floating isles.",
+        lay_meta_type: "PROJECT: Exploration Game",
+        lay_meta_role: "ROLE: Level & Game Designer",
+        lay_meta_date: "DATE: Jun 2021 – Jun 2022",
+        lay_meta_duree: "DURATION: 12 months",
+        lay_meta_equipe: "TEAM: 25 people",
+        lay_overview_title: "Overview",
+        lay_pres1: "Lay is a poetic, contemplative exploration game alternating walking, flying and puzzle solving.",
+        lay_pres2: "You play Elise, a 14-year-old awakening in an archipelago of floating islands with fantastical ecosystems.",
+        lay_pres3: "The world is decaying: with her companion animal she restores balance via exploration, challenges and puzzles.",
+        lay_pres_liste_genre: "GENRE: TPS, Exploration, Adventure, Puzzle",
+        lay_pres_liste_meca: "MECHANICS: Aerial flight, Puzzles",
+        lay_pres_liste_public: "AUDIENCE: All ages",
+        lay_pres_liste_joueurs: "PLAYERS: 1",
+        lay_pres_liste_support: "PLATFORM: PC",
+        lay_team_size: "TEAM SIZE: 25",
+        lay_team_date: "DATE: Jun 2021 – Jun 2022",
+        lay_team_duree: "DURATION: 12 months",
+        lay_engine: "ENGINE: Unreal Engine",
+        lay_role_section_title: "Approach & Role",
+        lay_role_texte1: "Joined as Level Designer: designing the civilisation island (major environment).",
+        lay_role_texte2: "Paper phase: layout iterations, puzzle concepts and overall gameplay feel.",
+        lay_role_texte3: "Production: blockout, integration of puzzles and interactive gameplay elements.",
+        lay_role_texte4: "Gameplay tests, bug fixing and flow adjustments for a smooth experience.",
+        lay_focus_title: "Focus",
+        lay_plans_title: "General Plans",
+        lay_circulation_title: "Flow Plan",
+        lay_puzzles_title: "Puzzles & Enigmas",
+        lay_zone1_title: "Zone 1",
+        lay_zone2_title: "Zone 2",
+        lay_zone3_title: "Zone 3",
+        lay_final_title: "Civilisation Island Presentation",
+        lay_steam_title: "Download",
+        lay_button: "Get the game on Steam",
+        lay_cta_puzzles: "View puzzles",
+        lay_cta_steam: "Steam",
+        titre_logiciels_utilises: "Tools used",
+        lay_tool_ue: "Implementation, blockout, features and gameplay iteration.",
+        lay_tool_ps: "Visual supports, annotations and puzzle documentation.",
+        lay_tool_xd: "Flow structuring and interaction diagrams.",
+        lay_tool_miro: "Collaborative brainstorming and idea tracking.",
+        lay_tool_drive: "Document storage and versioning.",
+        cta_scroll_overview: "View overview",
+        cta_scroll_role: "Explore role",
+        cta_scroll_tools: "View tools"
+    }
+};
+
+const applyLang = (lang) => {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const k = el.getAttribute("data-key");
+        if (translations[lang][k]) el.textContent = translations[lang][k];
+    });
+    document.querySelectorAll(".lang-switch button").forEach(b => {
+        b.classList.toggle("active", b.dataset.lang === lang);
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem("lang", lang);
+};
+
+const initLang = () => {
+    const stored = localStorage.getItem("lang") || "fr";
+    applyLang(stored);
+};
+
+document.getElementById("langSwitch").addEventListener("click", e => {
+    if (e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+});
+
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+    menu.classList.toggle("open");
+});
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+},{ threshold:0.12 });
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+initLang();
+</script>
+</body>
+</html>

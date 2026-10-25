@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CRYSIS II — Étude de cas | Thomas Houdard</title>
+<meta name="description" content="Crysis II : mission solo à Manhattan. Level Design, Narrative Design, Prototypage, Blueprint, 3D." />
+<meta property="og:title" content="CRYSIS II — Étude de cas" />
+<meta property="og:description" content="Mission solo dans Crysis II : Level Design, Narrative Design, Blueprint et prototypage." />
+<meta property="og:url" content="https://thomashoudard.com/crysis2.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-title">
+                <h3>Thomas Houdard</h3>
+                <small>UI/UX DESIGNER · DEV WEB</small>
+            </div>
+        </div>
+        <div class="burger" id="burger"><span></span></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" data-key="menu_about"></a></li>
+            <li class="dropdown">
+                <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                <div class="dropdown-content">
+                    <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro"></a>
+                    <a href="projetDesigner.html" data-key="menu_projects_design"></a>
+                    <a href="projetDeveloppeur.html" data-key="menu_projects_dev"></a>
+                </div>
+            </li>
+            <li><a href="contact.html" data-key="menu_contact"></a></li>
+            <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv"></a></li>
+        <div class="lang-switch" id="langSwitch">
+            <button data-lang="fr" class="active">FR</button>
+            <button data-lang="en">EN</button>
+        </div>            
+        </ul>
+    </div>
+</nav>
+
+<main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="hero-intro">
+            <p class="hero-sub" data-key="crysis_banner"></p>
+            <h1>CRYSIS II</h1>
+            <p data-key="crysis_tagline"></p>
+            <div class="company-meta">
+                <span data-key="crysis_meta_type"></span>
+                <span data-key="crysis_meta_role"></span>
+                <span data-key="crysis_meta_date"></span>
+                <span data-key="crysis_meta_duree"></span>
+                <span data-key="crysis_meta_equipe"></span>
+            </div>
+            <div class="badges">
+                <span class="badge"><span class="dot"></span>Level Design</span>
+                <span class="badge"><span class="dot"></span>Narrative Design</span>
+                <span class="badge"><span class="dot"></span>Blueprint</span>
+                <span class="badge"><span class="dot"></span>Prototypeage</span>
+                <span class="badge"><span class="dot"></span>Playtests</span>
+                <span class="badge"><span class="dot"></span>3D</span>
+            </div>
+            <div style="margin-top:1.4rem;display:flex;gap:.75rem;flex-wrap:wrap">
+                <a href="#overview" class="btn btn-primary" data-key="cta_scroll_overview" style="width: 100%;"></a>
+                <a href="#document" class="btn btn-outline" data-key="crysis_cta_doc" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div class="video-wrap" style="align-self:start">
+            <div class="proto-wrap">
+                <video controls style="width:100%;border-radius:12px">
+                    <source src="videos/CRYSIS II - TRAILER.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESPONSABILITÉS -->
+    <section class="reveal" id="responsabilites" aria-labelledby="responsabilites-title">
+        <div class="section-header">
+            <h2 id="responsabilites-title" data-key="crysis_responsabilites_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <ul class="grid" style="list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.5rem">
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Level Design</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Narrative Design</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-key="crysis_role_liste1"></span></span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Playtests</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Blueprint</span></li>
+            <li><span style="display:flex;align-items:center;gap:.5rem"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3D</span></li>
+        </ul>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="reveal" id="overview">
+        <div class="section-header">
+            <h2 data-key="crysis_overview_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="crysis_pres1"></p>
+                <p data-key="crysis_pres2"></p>
+                <p data-key="crysis_pres3"></p>
+            </div>
+        </div>
+        <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;">
+            <img loading="lazy" src="images/crysis/crysis.png" alt="Capture Crysis II 1" style="border-radius:12px;width:100%;height:auto;">
+            <img loading="lazy" src="images/crysis/crysis2.png" alt="Capture Crysis II 2" style="border-radius:12px;width:100%;height:auto;">
+        </div>
+        <div class="meta-panel">
+            <ul class="meta-list" aria-label="Informations projet">
+                <li><span class="meta-icon">🎮</span><span data-key="crysis_pres_liste_genre"></span></li>
+                <li><span class="meta-icon">⚙️</span><span data-key="crysis_pres_liste_meca"></span></li>
+                <li><span class="meta-icon">👶</span><span data-key="crysis_pres_public"></span></li>
+                <li><span class="meta-icon">👥</span><span data-key="crysis_pres_joueurs"></span></li>
+                <li><span class="meta-icon">💻</span><span data-key="crysis_pres_support"></span></li>
+            </ul>
+        </div>
+        <div class="meta-panel" style="margin-top:1rem">
+            <ul class="meta-list">
+                <li><span class="meta-icon">👥</span><span data-key="crysis_team_size"></span></li>
+                <li><span class="meta-icon">📅</span><span data-key="crysis_team_date"></span></li>
+                <li><span class="meta-icon">⏱️</span><span data-key="crysis_team_duree"></span></li>
+                <li><span class="meta-icon">🛠️</span><span data-key="crysis_engine"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ROLE & APPROCHE -->
+    <section class="reveal" id="role" aria-labelledby="role-title">
+        <div class="section-header">
+            <h2 id="role-title" data-key="crysis_role_section_title" style="margin-bottom:0;"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="grid" style="align-items:start;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+            <div>
+                <p data-key="crysis_role_texte1"></p>
+                <p data-key="crysis_role_texte2"></p>
+                <p data-key="crysis_role_texte3"></p>
+                <p data-key="crysis_role_texte4"></p>
+            </div>
+        </div>
+        <div class="highlight" style="margin:20px 0;padding:1rem;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:grid;gap:.75rem">
+            <strong style="font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8" data-key="crysis_focus_title"></strong>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;font-size:.9rem">
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Level Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Narrative Design</li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span><span data-key="crysis_role_liste1"></span></li>
+                <li style="display:flex;gap:.5rem"><span style="color:var(--accent)">▹</span>Blueprint</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- DOCUMENT -->
+    <section class="reveal" id="document">
+        <div class="section-header">
+            <h2 data-key="crysis_gdd_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="proto-wrap">
+            <a class="btn btn-primary" target="_blank" href="https://docs.google.com/document/d/1S54A4oPZs7Dyt32k22XiUVjCU1IaXNt2-F2aBgpEfSM/edit?usp=sharing" data-key="crysis_button"></a>
+        </div>
+    </section>
+
+    <!-- LOGICIELS -->
+    <section class="reveal" id="tools">
+        <div class="section-header">
+            <h2 data-key="titre_logiciels_utilises"></h2>
+            <div class="bar"></div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/ue.png" alt="Unreal Engine"></div>
+                <p class="tool-title">Engine</p>
+                <p class="tool-sub">Unreal Engine</p>
+                <p class="tool-desc" data-key="crysis_tool_ue"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/adobephotoshop.png" alt="Photoshop"></div>
+                <p class="tool-title">Design</p>
+                <p class="tool-sub">Photoshop</p>
+                <p class="tool-desc" data-key="crysis_tool_ps"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/3dsmax.png" alt="3ds Max"></div>
+                <p class="tool-title">3D</p>
+                <p class="tool-sub">3ds Max</p>
+                <p class="tool-desc" data-key="crysis_tool_3ds"></p>
+            </article>
+            <article class="tool-card">
+                <div class="tool-icon"><img src="images/logiciels/googledrive.png" alt="Google Drive"></div>
+                <p class="tool-title">Organisation</p>
+                <p class="tool-sub">Google Drive</p>
+                <p class="tool-desc" data-key="crysis_tool_drive"></p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+                <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email" /></a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer"></span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const translations = {
+    fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_projects_personal: "Perso",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+        crysis_banner: "Level Design · Narrative Design · Blueprint · 3D · Prototypage",
+        crysis_tagline: "Mission solo à Manhattan : désactiver le vaisseau Ceph au cœur de Central Park avant l’invasion totale.",
+        crysis_meta_type: "PROJET : Mission FPS",
+        crysis_meta_role: "RÔLE : Level & Narrative Designer",
+        crysis_meta_date: "DATE : Déc. 2020 – Jan. 2021",
+        crysis_meta_duree: "DURÉE : 1 mois",
+        crysis_meta_equipe: "ÉQUIPE : Solo",
+        crysis_responsabilites_title: "Responsabilités",
+        crysis_overview_title: "Présentation",
+        crysis_pres1: "Cette mission se déroule dans l'univers de Crysis II, où le joueur incarne Jacob, un soldat envoyé à Manhattan pour désactiver le vaisseau ennemi des Ceph.",
+        crysis_pres2: "Le vaisseau mère est situé au cœur de Central Park. Le joueur doit s’y rendre, récupérer une arme en chemin et affronter des ennemis sous contrainte de temps.",
+        crysis_pres3: "La pression temporelle structure le rythme : chaque seconde compte pour atteindre l’objectif et stopper la menace Ceph.",
+        crysis_pres_liste_genre: "GENRE : FPS",
+        crysis_pres_liste_meca: "MÉCANIQUES : Tir",
+        crysis_pres_public: "PUBLIC : 16+",
+        crysis_pres_joueurs: "JOUEURS : 1",
+        crysis_pres_support: "SUPPORT : PC",
+        crysis_team_size: "TAILLE ÉQUIPE : 1",
+        crysis_team_date: "DATE : Déc. 2020 – Jan. 2021",
+        crysis_team_duree: "DURÉE : 1 mois",
+        crysis_engine: "MOTEUR : Unreal Engine",
+        crysis_role_section_title: "Approche & Rôle",
+        crysis_role_texte1: "Objectif : concevoir une mission complète intégrant les capacités physiques du personnage et un rythme orienté urgence.",
+        crysis_role_texte2: "Phase papier : layout, placement ennemis, séquences d’action, récupération d’arme et points de tension.",
+        crysis_role_texte3: "Rédaction d’un document de level design structurant objectifs, flow spatial, gating et feedbacks clés.",
+        crysis_role_texte4: "Blockout puis création des modules pour l’environnement et intégration Blueprint des interactions.",
+        crysis_role_liste1: "Prototypage",
+        crysis_focus_title: "Focus",
+        crysis_gdd_title: "Level Design Document",
+        crysis_button: "Voir le Level Design Document",
+        crysis_cta_doc: "Level Design Document",
+        titre_logiciels_utilises: "Logiciels utilisés",
+        crysis_tool_ue: "Implémentation du niveau, scripting Blueprint et tests de gameplay.",
+        crysis_tool_ps: "Éléments graphiques et annotations visuelles du layout.",
+        crysis_tool_3ds: "Création / ajustement de modules 3D pour le blockout.",
+        crysis_tool_drive: "Stockage et suivi des versions du document de conception.",
+        cta_scroll_overview: "Voir la présentation",
+        cta_scroll_role: "Explorer le rôle",
+        cta_scroll_tools: "Voir les outils"
+    },
+    en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_projects_personal: "Personal",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+        crysis_banner: "Level Design · Narrative Design · Blueprint · 3D · Prototyping",
+        crysis_tagline: "Solo mission in Manhattan: disable the Ceph ship in Central Park before full invasion.",
+        crysis_meta_type: "PROJECT: FPS Mission",
+        crysis_meta_role: "ROLE: Level & Narrative Designer",
+        crysis_meta_date: "DATE: Dec 2020 – Jan 2021",
+        crysis_meta_duree: "DURATION: 1 month",
+        crysis_meta_equipe: "TEAM: Solo",
+        crysis_responsabilites_title: "Responsibilities",
+        crysis_overview_title: "Overview",
+        crysis_pres1: "Set in Crysis II where the player is Jacob, sent to Manhattan to deactivate the Ceph ship.",
+        crysis_pres2: "The mothership is in Central Park. The player must reach it, retrieve a weapon en route and face enemies under time pressure.",
+        crysis_pres3: "Time pressure shapes pacing: every second matters in reaching the objective and stopping the Ceph threat.",
+        crysis_pres_liste_genre: "GENRE: FPS",
+        crysis_pres_liste_meca: "MECHANICS: Shooting",
+        crysis_pres_public: "AUDIENCE: 16+",
+        crysis_pres_joueurs: "PLAYERS: 1",
+        crysis_pres_support: "PLATFORM: PC",
+        crysis_team_size: "TEAM SIZE: 1",
+        crysis_team_date: "DATE: Dec 2020 – Jan 2021",
+        crysis_team_duree: "DURATION: 1 month",
+        crysis_engine: "ENGINE: Unreal Engine",
+        crysis_role_section_title: "Approach & Role",
+        crysis_role_texte1: "Goal: design a complete mission leveraging player physical abilities and urgency pacing.",
+        crysis_role_texte2: "Paper phase: layout, enemy placement, action beats, weapon pickup and tension points.",
+        crysis_role_texte3: "Authored a level design doc: objectives, spatial flow, gating and core feedback loops.",
+        crysis_role_texte4: "Blockout then modular environment production and Blueprint integration for interactions.",
+        crysis_role_liste1: "Prototyping",
+        crysis_focus_title: "Focus",
+        crysis_gdd_title: "Level Design Document",
+        crysis_button: "View the Level Design Document",
+        crysis_cta_doc: "Level Design Document",
+        titre_logiciels_utilises: "Tools used",
+        crysis_tool_ue: "Implemented level, Blueprint scripting and gameplay testing.",
+        crysis_tool_ps: "Graphic elements and visual layout annotations.",
+        crysis_tool_3ds: "Modular 3D pieces for blockout and environment.",
+        crysis_tool_drive: "Storage and version control for design document.",
+        cta_scroll_overview: "View overview",
+        cta_scroll_role: "Explore role",
+        cta_scroll_tools: "View tools"
+    }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Développement Web | Thomas Houdard</title>
+    <meta name="description" content="Portfolio Développeur Front-End & Back-End de Thomas Houdard : projets d'apprentissage HTML, CSS, JavaScript, jQuery, PHP, SQL." />
+    <meta property="og:title" content="Projets Développeur - Portfolio" />
+    <meta property="og:description" content="Front-End · Back-End · Exercices d'apprentissage" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>    
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+            <div class="burger" id="burger"><span></span></div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="menu_portfolio" class="active">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Professionnelles</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Développement</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="reveal">
+            <div class="section-header">
+                <h1 data-key="page_title_projets_dev">Projets Développeur</h1>
+                <div class="bar"></div>
+            </div>
+            <p style="max-width:880px;color:var(--text-dim)" data-key="page_intro_projets_dev"></p>
+        </section>
+
+        <!-- FRONT-END -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_projets_dev_frontend">Front-End</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <!-- Travel Agency -->
+                <div class="card">
+                    <img src="images/developpeur/travel.png" alt="Agence de voyage - HTML CSS" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span>
+                    </div>
+                    <h3 data-key="dev_travelAgency_title"></h3>
+                    <h4>HTML · CSS · VS Code</h4>
+                    <p data-key="dev_travelAgency"></p>
+                    <a href="travelagency.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- Snake -->
+                <div class="card">
+                    <img src="images/developpeur/snake.png" alt="Snake Game - JavaScript" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">JavaScript</span><span class="tag">Canvas</span><span class="tag">Game</span>
+                    </div>
+                    <h3 data-key="dev_snake_title"></h3>
+                    <h4>JavaScript · HTML · CSS · VS Code</h4>
+                    <p data-key="dev_snake"></p>
+                    <a href="snake.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <!-- Top 5 Acteurs -->
+                <div class="card">
+                    <img src="images/developpeur/acteur.png" alt="Top 5 Acteurs - jQuery" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">jQuery</span><span class="tag">DOM</span><span class="tag">Interaction</span>
+                    </div>
+                        <h3 data-key="dev_top5acteurs_title"></h3>
+                        <h4>jQuery · HTML · CSS · VS Code</h4>
+                        <p data-key="dev_top5acteurs"></p>
+                        <a href="top5acteurs.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BACK-END -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2 data-key="titre_projets_dev_backend">Back-End</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="grid cards">
+                <!-- Burger Code -->
+                <div class="card">
+                    <img src="images/developpeur/burger.png" alt="Burger Code - PHP SQL" loading="lazy">
+                    <div class="tags">
+                        <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">CRUD</span>
+                    </div>
+                    <h3 data-key="dev_burger_title"></h3>
+                    <h4>PHP · SQL · HTML · CSS · VS Code</h4>
+                    <p data-key="dev_burger"></p>
+                    <a href="burger.html" class="btn btn-primary" data-key="button"></a>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+                </div>
+                <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about:"Accueil",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Expériences Professionnelles",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Développement Web",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+                page_title_projets_dev:"Projets Développeur",
+                page_intro_projets_dev:"Sélection de projets d'apprentissage Front-End et Back-End illustrant progression et technologies utilisées.",
+                titre_projets_dev_frontend:"Front-End",
+                titre_projets_dev_backend:"Back-End",
+                dev_travelAgency_title:"AGENCE DE VOYAGE",
+                dev_travelAgency:"Apprentissage du HTML et du CSS en créant un site web pour le voyage.",
+                dev_snake_title:"JEU DU SERPENT",
+                dev_snake:"Apprentissage du JavaScript en recréant le fameux jeu Snake.",
+                dev_top5acteurs_title:"TOP 5 ACTEURS",
+                dev_top5acteurs:"Apprentissage du jQuery en créant un site web interactif.",
+                dev_burger_title:"BURGER CODE",
+                dev_burger:"Apprentissage du PHP et du SQL en créant un site web dynamique de réservation de burger.",
+                button:"PLUS D'INFOS",
+                footer:"©2025 Thomas Houdard · Tous droits réservés"
+            },
+            en: {
+                menu_about:"Home",menu_portfolio:"Portfolio ▾",menu_exp_pro:"Professional Experience",menu_projects_design:"Product & UX/UI",menu_projects_dev:"Web Development",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+                page_title_projets_dev:"Developer Projects",
+                page_intro_projets_dev:"Selection of Front-End and Back-End learning projects showing progression and used technologies.",
+                titre_projets_dev_frontend:"Front-End",
+                titre_projets_dev_backend:"Back-End",
+                dev_travelAgency_title:"TRAVEL AGENCY",
+                dev_travelAgency:"Learning HTML & CSS by creating a travel website.",
+                dev_snake_title:"SNAKE GAME",
+                dev_snake:"Learning JavaScript by recreating the classic Snake game.",
+                dev_top5acteurs_title:"TOP 5 ACTORS",
+                dev_top5acteurs:"Learning jQuery by building an interactive ranking site.",
+                dev_burger_title:"BURGER CODE",
+                dev_burger:"Learning PHP & SQL by building a dynamic burger ordering website.",
+                button:"MORE INFO",
+                footer:"©2025 Thomas Houdard · All rights reserved"
+            }
+        };
+    </script>
+</body>
+</html>

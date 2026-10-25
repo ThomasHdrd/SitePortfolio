@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Au Comptoir Urbain — Étude de cas | Thomas Houdard</title>
+  <meta name="description" content="Étude de cas : design UI/UX + intégration HTML/CSS/JS d'une plateforme e-commerce pour Au Comptoir Urbain. Mobile-first, design épuré, orientée conversion." />
+
+  <meta property="og:title" content="Au Comptoir Urbain — Étude de cas" />
+  <meta property="og:description" content="Design + développement d'une plateforme e-commerce pour Au Comptoir Urbain. Mobile-first, design épuré, orientée conversion." />
+  <meta property="og:url" content="https://thomashoudard.com/auComptoirUrbain.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+
+      <div class="burger" id="burger"><span></span></div>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+          </div>
+        </li>
+
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+
+        <div class="lang-switch" id="langSwitch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-intro">
+        <p class="hero-sub" data-key="comptoir_hero_sub">Étude de cas · UI/UX · E-commerce</p>
+
+        <h1 data-key="comptoir_hero_title">Plateforme e-commerce Au Comptoir Urbain</h1>
+
+        <p data-key="comptoir_hero_p1">
+          Conception et développement d'une plateforme e-commerce pour Au Comptoir Urbain, un restaurant de luxe.
+          Objectif : créer une expérience d'achat épurée, intuitive et orientée vers la conversion.
+        </p>
+
+        <p data-key="comptoir_hero_p2">
+          Travail réalisé : architecture UX (mobile-first), design UI épuré et moderne, système de composants,
+          intégration HTML/CSS/JS, gestion du panier et mise en ligne.
+        </p>
+
+        <div class="badges">
+          <span class="badge"><span class="dot"></span>UI/UX</span>
+          <span class="badge"><span class="dot"></span>E-commerce</span>
+          <span class="badge"><span class="dot"></span>HTML/CSS/JS</span>
+          <span class="badge"><span class="dot"></span>Mobile-first</span>
+        </div>
+
+        <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+          <a href="#resultat" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir le résultat</a>
+
+          <a class="btn btn-outline"
+             href="https://aucomptoirurbain.thomashoudard.com/"
+             target="_blank"
+             rel="noopener"
+             data-key="cta_open_live"
+             style="width:100%; justify-content:center;">
+            Ouvrir le site en ligne
+          </a>
+        </div>
+      </div>
+
+      <!-- Right column (gallery preview) -->
+      <div class="video-wrap" style="align-self:start">
+        <div class="proto-wrap">
+          <p style="font-size:.92rem;color:var(--text-dim)" data-key="comptoir_side_note">
+            Aperçu (captures — mobile & desktop)
+          </p>
+
+          <div class="gallery">
+            <img loading="lazy" src="images/freelance/ComptoirUrbain/DesignDesktop.JPG" alt="Au Comptoir Urbain - page mobile complète" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTE -->
+    <section class="reveal" id="contexte">
+      <div class="section-header">
+        <h2 data-key="comptoir_context_title">Contexte</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_context_problem_title">Problème</h4>
+          <p data-key="comptoir_context_problem">
+            Au Comptoir Urbain cherche une plateforme e-commerce moderne, épurée et performante pour vendre ses produits.
+            Nécessité d'une expérience utilisateur fluide, d'une navigation intuitive et d'un panier optimisé.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_context_goal_title">Objectifs</h4>
+          <ul>
+            <li data-key="comptoir_goal_1">Présenter les produits de façon attractive</li>
+            <li data-key="comptoir_goal_2">Simplifier le parcours d'achat</li>
+            <li data-key="comptoir_goal_3">Optimiser la conversion et réduire l'abandon</li>
+            <li data-key="comptoir_goal_4">Assurer une expérience mobile fluide et responsive</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCHE -->
+    <section class="reveal" id="approche">
+      <div class="section-header">
+        <h2 data-key="comptoir_approach_title">Approche</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_ux_title">Structure UX</h4>
+          <p data-key="comptoir_ux_p">
+            Architecture claire et progressive : Accueil → Catalogue → Détail produit → Panier → Checkout.
+            Navigation intuitive, filtres accessibles et processus de paiement épuré.
+          </p>
+          <ul>
+            <li data-key="comptoir_ux_1">Navigation claire et catégorisée</li>
+            <li data-key="comptoir_ux_2">Fiche produit complète et riche</li>
+            <li data-key="comptoir_ux_3">Panier et checkout simplifiés</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_ui_title">Direction UI</h4>
+          <p data-key="comptoir_ui_p">
+            Design épuré et moderne : palette minimaliste, typographie nette, cartes produit cohérentes,
+            micro-interactions subtiles et visuellement agréable.
+          </p>
+          <ul>
+            <li data-key="comptoir_ui_1">Mise en valeur des produits</li>
+            <li data-key="comptoir_ui_2">Cohérence et modularité des composants</li>
+            <li data-key="comptoir_ui_3">Accessibilité et clarté sur tous les écrans</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEV -->
+    <section class="reveal" id="dev">
+      <div class="section-header">
+        <h2 data-key="comptoir_dev_title">Développement</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card">
+          <h4 data-key="comptoir_dev_stack_title">Stack</h4>
+          <ul>
+            <li data-key="comptoir_dev_1">HTML sémantique (structure optimisée)</li>
+            <li data-key="comptoir_dev_2">CSS responsive et système de composants</li>
+            <li data-key="comptoir_dev_3">JavaScript pour le panier et interactions</li>
+            <li data-key="comptoir_dev_4">Intégration paiement et mise en ligne</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-key="comptoir_dev_focus_title">Focus</h4>
+          <ul>
+            <li data-key="comptoir_dev_focus_1">Mobile-first et adaptation desktop</li>
+            <li data-key="comptoir_dev_focus_2">Performance et rapidité de chargement</li>
+            <li data-key="comptoir_dev_focus_3">Gestion du panier fluide et sécurisée</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTAT -->
+    <section class="reveal" id="resultat">
+      <div class="section-header">
+        <h2 data-key="comptoir_result_title">Résultat</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div style="display:grid;gap:2rem;grid-template-columns:1fr">
+        <div class="card">
+          <p data-key="comptoir_result_p">
+            Une plateforme e-commerce épurée et performante, conçue mobile-first et adaptée au desktop.
+            L'intégration respecte la fluidité, la lisibilité et une architecture maintenable pour évolution future.
+          </p>
+
+          <h4 data-key="comptoir_result_keys_title">Points clés</h4>
+          <ul>
+            <li data-key="comptoir_result_1">Catalogue produits attrayant et bien organisé</li>
+            <li data-key="comptoir_result_2">Fiches produits détaillées et engageantes</li>
+            <li data-key="comptoir_result_3">Panier et checkout optimisés</li>
+            <li data-key="comptoir_result_4">Design épuré et cohérent</li>
+            <li data-key="comptoir_result_5">Expérience mobile fluide et responsive</li>
+          </ul>
+        </div>
+
+        <div class="gallery">
+          <img loading="lazy" src="images/freelance/ComptoirUrbain/DesignDesktop.JPG" alt="Au Comptoir Urbain - desktop">
+          <img loading="lazy" src="images/freelance/ComptoirUrbain/DesignMobile.JPG" alt="Au Comptoir Urbain - mobile" style="object-position:top;">
+          <img loading="lazy" src="images/freelance/ComptoirUrbain/DesignMobile2.JPG" alt="Au Comptoir Urbain - mobile" style="object-position: top;">
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section>
+      <div class="section-header">
+        <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div>
+        <div class="tools-grid">
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/figma.png" alt="Figma">
+            </div>
+            <p class="tool-title">UI/UX DESIGN</p>
+            <p class="tool-sub">Figma</p>
+            <p class="tool-desc" data-key="tool_figma_desc">
+              Maquettes haute fidélité, système de design, composants e-commerce et préparation mobile-first.
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="images/logiciels/vscode.png" alt="Visual Studio Code">
+            </div>
+            <p class="tool-title">HTML, CSS, JavaScript</p>
+            <p class="tool-sub">Visual Studio Code</p>
+            <p class="tool-desc" data-key="tool_html_desc">
+              Structure sémantique, CSS responsive et logique JavaScript pour panier et interactions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lien -->
+    <section class="reveal" id="links">
+        <div class="section-header">
+            <h2 data-key="links_title"></h2>
+            <div class="bar"></div>
+        </div>
+        <div id="links-btns" class="proto-wrap" style="display:flex;justify-content:center;align-items:center;gap:1rem;width:100%;">
+            <a class="btn btn-primary" target="_blank" href="https://www.figma.com/design/..." data-key="cta_open_live_btn" style="flex:1;text-align:center;"></a>
+            <a class="btn btn-outline" target="_blank" href="https://github.com/ThomasHdrd/ComptoirUrbain" data-key="button_code" style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;"></a>
+        </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+            <img src="images/github.png" alt="GitHub" />
+          </a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+            <img src="images/email.png" alt="Email" />
+          </a>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+          ©2025 Thomas Houdard · Tous droits réservés
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TRANSLATIONS -->
+  <script>
+    const translations = {
+      fr: {
+        menu_about: "Accueil",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Expériences Professionnelles",
+        menu_projects_design: "Projets Design",
+        menu_projects_dev: "Projets Développement",
+        menu_contact: "Contact",
+        menu_cv: "Travailler avec moi",
+        footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+        comptoir_hero_sub: "Étude de cas · UI/UX · E-commerce",
+        comptoir_hero_title: "Plateforme e-commerce Au Comptoir Urbain",
+        comptoir_hero_p1: "Conception et développement d'une plateforme e-commerce pour Au Comptoir Urbain, un restaurant de luxe. <br> Objectif : créer une expérience d'achat épurée, intuitive et orientée vers la conversion.",
+        comptoir_hero_p2: "Travail réalisé : architecture UX (mobile-first), design UI épuré et moderne, système de composants, intégration HTML/CSS/JS, gestion du panier et mise en ligne.",
+        comptoir_side_note: "Aperçu (captures — mobile & desktop)",
+        cta_see_final: "Voir le résultat",
+        cta_open_live: "Ouvrir le site en ligne",
+
+        comptoir_context_title: "Contexte",
+        comptoir_context_problem_title: "Problème",
+        comptoir_context_problem: "Au Comptoir Urbain cherche une plateforme e-commerce moderne, épurée et performante pour vendre ses produits. Nécessité d'une expérience utilisateur fluide, d'une navigation intuitive et d'un panier optimisé.",
+        comptoir_context_goal_title: "Objectifs",
+        comptoir_goal_1: "Présenter les produits de façon attractive",
+        comptoir_goal_2: "Simplifier le parcours d'achat",
+        comptoir_goal_3: "Optimiser la conversion et réduire l'abandon",
+        comptoir_goal_4: "Assurer une expérience mobile fluide et responsive",
+
+        comptoir_approach_title: "Approche",
+        comptoir_ux_title: "Structure UX",
+        comptoir_ux_p: "Architecture claire et progressive : Accueil → Catalogue → Détail produit → Panier → Checkout. Navigation intuitive, filtres accessibles et processus de paiement épuré.",
+        comptoir_ux_1: "Navigation claire et catégorisée",
+        comptoir_ux_2: "Fiche produit complète et riche",
+        comptoir_ux_3: "Panier et checkout simplifiés",
+        comptoir_ui_title: "Direction UI",
+        comptoir_ui_p: "Design épuré et moderne : palette minimaliste, typographie nette, cartes produit cohérentes, micro-interactions subtiles et visuellement agréable.",
+        comptoir_ui_1: "Mise en valeur des produits",
+        comptoir_ui_2: "Cohérence et modularité des composants",
+        comptoir_ui_3: "Accessibilité et clarté sur tous les écrans",
+
+        comptoir_result_title: "Résultat",
+        comptoir_result_p: "Une plateforme e-commerce épurée et performante, conçue mobile-first et adaptée au desktop. L'intégration respecte la fluidité, la lisibilité et une architecture maintenable pour évolution future.",
+        comptoir_result_keys_title: "Points clés",
+        comptoir_result_1: "Catalogue produits attrayant et bien organisé",
+        comptoir_result_2: "Fiches produits détaillées et engageantes",
+        comptoir_result_3: "Panier et checkout optimisés",
+        comptoir_result_4: "Design épuré et cohérent",
+        comptoir_result_5: "Expérience mobile fluide et responsive",
+
+        comptoir_dev_title: "Développement",
+        comptoir_dev_stack_title: "Stack",
+        comptoir_dev_1: "HTML sémantique (structure optimisée)",
+        comptoir_dev_2: "CSS responsive et système de composants",
+        comptoir_dev_3: "JavaScript pour le panier et interactions",
+        comptoir_dev_4: "Intégration paiement et mise en ligne",
+        comptoir_dev_focus_title: "Focus",
+        comptoir_dev_focus_1: "Mobile-first et adaptation desktop",
+        comptoir_dev_focus_2: "Performance et rapidité de chargement",
+        comptoir_dev_focus_3: "Gestion du panier fluide et sécurisée",
+
+        titre_logiciels_utilises: "Logiciels utilisés",
+        tool_figma_desc: "Maquettes haute fidélité, système de design, composants e-commerce et préparation mobile-first.",
+        tool_html_desc: "Structure sémantique, CSS responsive et logique JavaScript pour panier et interactions.",
+
+        links_title: "Liens",
+        button_code: "Voir le code",
+        cta_open_live_btn: "Voir la maquette Figma",
+      },
+
+      en: {
+        menu_about: "Home",
+        menu_portfolio: "Portfolio ▾",
+        menu_exp_pro: "Professional Experience",
+        menu_projects_design: "Design Projects",
+        menu_projects_dev: "Development Projects",
+        menu_contact: "Contact",
+        menu_cv: "Work with me",
+        footer: "©2025 Thomas Houdard · All rights reserved",
+
+        comptoir_hero_sub: "Case study · UI/UX · E-commerce",
+        comptoir_hero_title: "Au Comptoir Urbain e-commerce platform",
+        comptoir_hero_p1: "Design and development of an e-commerce platform for Au Comptoir Urbain. Goal: create a clean, intuitive shopping experience focused on conversion.",
+        comptoir_hero_p2: "Work delivered: UX architecture (mobile-first), clean modern UI, component system, HTML/CSS/JS integration, cart management and deployment.",
+        comptoir_side_note: "Preview (screens — mobile & desktop)",
+        cta_see_final: "See result",
+        cta_open_live: "Open live website",
+
+        comptoir_context_title: "Context",
+        comptoir_context_problem_title: "Problem",
+        comptoir_context_problem: "Au Comptoir Urbain needs a modern, clean and performant e-commerce platform to sell its products. Requires fluid user experience, intuitive navigation and optimized cart.",
+        comptoir_context_goal_title: "Goals",
+        comptoir_goal_1: "Present products attractively",
+        comptoir_goal_2: "Simplify the purchase journey",
+        comptoir_goal_3: "Improve conversion and reduce cart abandonment",
+        comptoir_goal_4: "Ensure a smooth responsive mobile experience",
+
+        comptoir_approach_title: "Approach",
+        comptoir_ux_title: "UX structure",
+        comptoir_ux_p: "Clear progressive architecture: Home → Catalog → Product detail → Cart → Checkout. Intuitive navigation, accessible filters and streamlined payment flow.",
+        comptoir_ux_1: "Clear categorized navigation",
+        comptoir_ux_2: "Complete rich product sheets",
+        comptoir_ux_3: "Simplified cart and checkout",
+        comptoir_ui_title: "UI direction",
+        comptoir_ui_p: "Clean modern design: minimalist palette, sharp typography, cohesive product cards, subtle micro-interactions and visually pleasant.",
+        comptoir_ui_1: "Product showcase focus",
+        comptoir_ui_2: "Consistency and modularity",
+        comptoir_ui_3: "Accessibility and clarity across all screens",
+
+        comptoir_result_title: "Outcome",
+        comptoir_result_p: "A clean and performant e-commerce platform designed mobile-first and adapted to desktop. Integration ensures fluidity, readability and maintainable architecture for future evolution.",
+        comptoir_result_keys_title: "Highlights",
+        comptoir_result_1: "Attractive well-organized product catalog",
+        comptoir_result_2: "Detailed engaging product pages",
+        comptoir_result_3: "Optimized cart and checkout",
+        comptoir_result_4: "Clean and consistent design",
+        comptoir_result_5: "Smooth responsive mobile experience",
+
+        comptoir_dev_title: "Development",
+        comptoir_dev_stack_title: "Stack",
+        comptoir_dev_1: "Semantic HTML (optimized structure)",
+        comptoir_dev_2: "Responsive CSS and component system",
+        comptoir_dev_3: "JavaScript for cart and interactions",
+        comptoir_dev_4: "Payment integration and deployment",
+        comptoir_dev_focus_title: "Focus",
+        comptoir_dev_focus_1: "Mobile-first then desktop adaptation",
+        comptoir_dev_focus_2: "Performance and load speed",
+        comptoir_dev_focus_3: "Smooth and secure cart management",
+
+        titre_logiciels_utilises: "Tools used",
+        tool_figma_desc: "High-fidelity mockups, design system, e-commerce components and mobile-first preparation.",
+        tool_html_desc: "Semantic structure, responsive CSS and JavaScript logic for cart and interactions.",
+
+        links_title: "Links",
+        button_code: "View code",
+        cta_open_live_btn: "View Figma mockup",
+      }
+    };
+  </script>
+</body>
+</html>

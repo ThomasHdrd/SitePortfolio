@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog – UX/UI Design & Développement Web | Thomas Houdard</title>
+  <meta name="description" content="Conseils en design UX/UI, développement web, SEO et performance. Découvrez mes articles pour améliorer votre site." />
+  <meta property="og:title" content="Blog – UX/UI · Développement Web" />
+  <meta property="og:description" content="Design UX/UI, performance, SEO, choix techniques : des articles clairs et actionnables." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thomashoudard.com/blog.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#05070b;--bg-alt:#0c1117;--bg-soft:#151b23;--bg-soft-alt:#1b222e;
+      --primary:#328ad3;--primary-soft:#9cc3e7;--accent:#e56c6c;--accent-soft:#f2c3b2;--sand:#f2e9dc;
+      --text:#f8f7f3;--text-dim:#a7b1c3;--radius:16px;--radius-xs:6px;
+      --border-soft:1px solid rgba(242,233,220,.08);--border-strong:1px solid rgba(242,233,220,.18);
+      --shadow-soft:0 18px 40px rgba(0,0,0,.7);--grad-primary:linear-gradient(135deg,#328ad3 0%,#46a4e4 40%,#f2c3b2 100%);
+      --trans:.3s cubic-bezier(.4,.2,.2,1);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:
+      radial-gradient(circle at 0% 0%,rgba(22,129,216,.12),transparent 55%),var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:600;line-height:1.15;letter-spacing:.04em}
+    h1{font-size:clamp(2.1rem,4vw,3rem);text-transform:uppercase;background:linear-gradient(135deg,#f8f7f3 0%,var(--primary-soft) 45%,var(--accent-soft) 100%);-webkit-background-clip:text;color:transparent}
+    h2{font-size:clamp(1.3rem,2.4vw,2rem);margin-bottom:1.2rem;color:var(--sand);text-transform:uppercase}
+    p{font-size:.95rem}
+    a{text-decoration:none;color:var(--primary-soft);transition:color var(--trans)}
+    a:hover{color:var(--sand)}
+    nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px);background:linear-gradient(to bottom,rgba(5,7,11,.96),rgba(5,7,11,.7),transparent);border-bottom:1px solid rgba(242,233,220,.08)}
+    .nav-inner{width:min(1400px,92%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:.7rem 0}
+    .brand{display:flex;align-items:center;gap:.8rem}
+    .brand-title{display:flex;flex-direction:column}
+    .brand-title h3{font-size:24px;letter-spacing:.12em;text-transform:uppercase}
+    .brand-title small{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-top:.1rem}
+    .menu{display:flex;gap:1.2rem;list-style:none;align-items:center}
+    .menu a{padding:.55rem .9rem;font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--radius-xs);position:relative;color:var(--text-dim);transition:background var(--trans),color var(--trans)}
+    .menu a:hover{color:var(--sand);background:rgba(21,27,35,.9)}
+    .menu a.active{color:var(--sand);background:rgba(21,27,35,1)}
+    .menu a.active::after{content:"";position:absolute;inset:auto 4px -7px;height:2px;border-radius:999px;background:linear-gradient(90deg,#328ad3,#f2c3b2)}
+    .menu a.btn-taf-avec-moi {background:var(--grad-primary);color:#05070b;font-weight:600;box-shadow:var(--shadow-soft)}
+    .menu a.btn-taf-avec-moi:hover {transform:translateY(-2px);box-shadow:0 24px 56px rgba(0,0,0,.8);color:var(--text)}
+    .menu .dropdown{position:relative}
+    .menu .dropdown-content{position:absolute;top:110%;left:0;background:var(--bg-soft);padding:.55rem;border-radius:12px;border:var(--border-soft);display:none;min-width:220px;box-shadow:var(--shadow-soft)}
+    .menu .dropdown:hover .dropdown-content{display:block}
+    .menu .dropdown-content a{display:block;padding:.5rem .7rem;border-radius:8px;font-size:.78rem;color:var(--text-dim)}
+    .menu .dropdown-content a:hover{background:rgba(242,233,220,.07);color:var(--sand)}
+    .lang-switch{display:flex;gap:.4rem;padding:.25rem .35rem;border-radius:999px;border:var(--border-soft);background:rgba(10,15,22,.9)}
+    .lang-switch button{background:transparent;border:none;color:var(--text-dim);font-size:.65rem;font-weight:600;letter-spacing:.16em;padding:.35rem .7rem;border-radius:999px;cursor:pointer;text-transform:uppercase;transition:background var(--trans),color var(--trans)}
+    .lang-switch button.active{background:var(--grad-primary);color:#05070b}
+    .lang-switch button:hover:not(.active){background:rgba(242,233,220,.06);color:var(--sand)}
+    .burger{width:42px;height:42px;border-radius:50%;border:var(--border-soft);background:rgba(10,15,22,.95);display:none;align-items:center;justify-content:center;cursor:pointer;transition:var(--trans)}
+    .burger span{display:block;width:18px;height:2px;background:var(--sand);position:relative;border-radius:999px;transition:var(--trans)}
+    .burger span:before,.burger span:after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--sand);border-radius:999px;transition:var(--trans)}
+    .burger span:before{top:-6px}.burger span:after{top:6px}
+    .burger.open span{background:transparent}
+    .burger.open span:before{transform:translateY(6px) rotate(45deg)}
+    .burger.open span:after{transform:translateY(-6px) rotate(-45deg)}
+    .wrapper{width:min(1400px,92%);margin:0 auto}
+    section{margin:3.8rem 0;position:relative}
+    .section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem}
+    .section-header .bar{flex:1;height:1px;background:linear-gradient(90deg,rgba(242,233,220,.3),rgba(50,138,211,.4),transparent)}
+    .grid{display:grid;gap:28px}
+    .grid.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{
+      background:radial-gradient(circle at 0 0,rgba(50,138,211,.16),transparent 70%),radial-gradient(circle at 100% 100%,rgba(242,233,220,.06),transparent 70%),var(--bg-soft);
+      border-radius:18px;border:var(--border-soft);
+      padding:1.15rem 1.05rem 1.25rem;
+      display:flex;
+      flex-direction:column;
+      gap:.75rem;
+      position:relative;
+      overflow:hidden;
+      transition:transform var(--trans),box-shadow var(--trans),border-color var(--trans);
+    }
+    .card:hover{transform:translateY(-4px);border-color:rgba(242,233,220,.2);box-shadow:var(--shadow-soft)}
+    .card img{width:100%;border-radius:12px;border:1px solid rgba(242,233,220,.08);background:#0c1117;aspect-ratio:16/9;object-fit:cover}
+    .card h3{font-size:1rem;text-transform:uppercase;color:var(--sand);margin-top:.1rem}
+    .card p{font-size:.86rem;color:var(--text-dim);line-height:1.45}
+    .card .btn {
+    margin-top: auto;
+}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.7rem 1rem;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-radius:999px;border:none;background:var(--grad-primary);color:#05070b;cursor:pointer;transition:var(--trans);margin-top:.35rem;box-shadow:var(--shadow-soft)}
+    .btn:hover{transform:translateY(-1px) scale(1.01);box-shadow:0 24px 56px rgba(0,0,0,.8);font-weight:700}
+    footer{background:#05070b;border-top:1px solid rgba(242,233,220,.08);padding:2.2rem 0 3rem;margin-top:3.5rem}
+    .footer-inner{width:min(1400px,92%);margin:0 auto;display:grid;gap:2rem}
+    .footer-top{display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center;justify-content:space-between}
+    .social{display:flex;gap:.7rem}
+    .social a{width:42px;height:42px;border-radius:12px;border:var(--border-soft);background:var(--bg-soft);display:flex;align-items:center;justify-content:center;transition:background var(--trans),transform var(--trans),box-shadow var(--trans)}
+    .social img{width:22px;height:22px;filter:grayscale(1) brightness(.7);transition:filter var(--trans)}
+    .social a:hover{background:var(--bg-soft-alt);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+    .social a:hover img{filter:none}
+    .footer-bottom{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding-top:1.1rem;border-top:1px solid rgba(242,233,220,.12);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media (max-width:900px){
+      .menu{position:fixed;inset:70px 0 auto;background:rgba(5,7,11,.97);backdrop-filter:blur(18px);flex-direction:column;padding:1.1rem 1.3rem 1.8rem;gap:.65rem;max-height:0;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.8);transition:max-height .5s ease}
+      .menu.open{max-height:480px}
+      .dropdown-content{position:static;display:block;background:transparent;border:none;box-shadow:none;padding:.3rem 0 .1rem}
+      .dropdown-content a{padding-left:1.4rem}
+      .burger{display:flex}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h3>Thomas Houdard</h3>
+          <small>UI/UX DESIGNER · DEV WEB</small>
+        </div>
+      </div>
+      <div class="burger" id="burger"><span></span></div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" data-key="menu_portfolio">Portfolio ▾</a>
+          <div class="dropdown-content">
+            <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+            <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+            <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+            <a href="projetPersonnels.html" data-key="menu_projects_personal">Perso</a>
+          </div>
+        </li>
+        <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+        <li><a href="TravaillerAvecMoi.html" data-key="menu_cv" class="btn-taf-avec-moi">Travailler avec moi</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="reveal">
+      <div class="section-header">
+        <h1 data-key="page_title_blog">Blog</h1>
+        <div class="bar"></div>
+      </div>
+      <p style="color:var(--text-dim)" data-key="page_intro_blog"></p>
+    </section>
+
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="page_section_latest">Derniers articles</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cards">
+        <!-- Post 1 -->
+        <article class="card">
+          <a class="cover" href="blog/combien-coute-un-site-en-2025.html" aria-label="Lire l’article sur le coût d’un site internet">
+            <img src="blog/images/combien-coute-un-site-en-2025.png" alt="Balance des coûts face à un site internet" loading="lazy">
+          </a>
+          <h3 data-key="post1_title"></h3>
+          <p data-key="post1_desc"></p>
+          <a href="blog/combien-coute-un-site-en-2025.html" class="btn" data-key="button_read"></a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card">
+          <a class="cover" href="blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" aria-label="Lire l’article sur les erreurs de design">
+            <img src="blog/images/7-erreurs-de-design-qui-font-fuir-vos-clients.png" alt="Erreurs de design courantes sur un site" loading="lazy">
+          </a>
+          <h3 data-key="post2_title"></h3>
+          <p data-key="post2_desc"></p>
+          <a href="blog/7-erreurs-de-design-qui-font-fuir-vos-clients.html" class="btn" data-key="button_read"></a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="card">
+          <a class="cover" href="blog/wordpress-ou-site-sur-mesure-lequel-choisir.html" aria-label="Lire l’article WordPress vs sur-mesure">
+            <img src="blog/images/wordpress-ou-site-sur-mesure-lequel-choisir.png" alt="Choisir WordPress ou un site sur-mesure" loading="lazy">
+          </a>
+          <h3 data-key="post3_title"></h3>
+          <p data-key="post3_desc"></p>
+          <a href="blog/wordpress-ou-site-sur-mesure-lequel-choisir.html" class="btn" data-key="button_read"></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+          <a href="mailto:contact@thomashoudard.com" aria-label="Mail"><img src="images/email.png" alt="Email"></a>
+        </div>
+        <span style="font-size:.7rem;color:var(--text-dim)" data-key="footer">©2025 Thomas Houdard · Tous droits réservés</span>
+      </div>
+      <div class="footer-bottom">
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        menu_about:"Accueil",menu_portfolio:"Portfolio",menu_exp_pro:"Expériences Pro",menu_projects_design:"Projets Design",menu_projects_dev:"Projets Dev",menu_projects_personal:"Perso",menu_contact:"Contact",menu_cv:"Travailler avec moi",
+        page_title_blog:"Blog",
+        page_intro_blog:"Articles courts et concrets sur l’UX/UI, la performance web, le SEO et les choix techniques pour créer des sites efficaces.",
+        page_section_latest:"Derniers articles",
+        post1_title:"Combien coûte vraiment un site internet en 2025 ?",
+        post1_desc:"Tarifs réels selon le type de site (vitrine, e‑commerce, sur‑mesure), ce qui fait varier le prix et comment investir intelligemment.",
+        post2_title:"7 erreurs de design qui font fuir vos clients",
+        post2_desc:"Texte illisible, lenteur, pas de CTA, pas mobile‑first… Voici comment corriger vite pour convertir davantage.",
+        post3_title:"WordPress ou site sur‑mesure : lequel choisir ?",
+        post3_desc:"Avantages, limites et cas d’usage concrets pour décider selon vos objectifs et votre budget.",
+        button_read:"Lire l’article",
+        footer:"©2025 Thomas Houdard · Tous droits réservés"
+      },
+      en: {
+        menu_about:"Home",menu_portfolio:"Portfolio",menu_exp_pro:"Professional Experience",menu_projects_design:"Design Projects",menu_projects_dev:"Dev Projects",menu_projects_personal:"Personal",menu_contact:"Contact",menu_cv:"Work with me",
+        page_title_blog:"Blog",
+        page_intro_blog:"Short, actionable articles on UX/UI, web performance, SEO, and technical choices to build effective websites.",
+        page_section_latest:"Latest posts",
+        post1_title:"How much does a website really cost in 2025?",
+        post1_desc:"Realistic pricing by website type (showcase, e‑commerce, custom), what impacts the cost, and how to invest smartly.",
+        post2_title:"7 design mistakes that drive users away",
+        post2_desc:"Unreadable text, slow pages, no CTA, not mobile‑first… Quick fixes to boost conversions.",
+        post3_title:"WordPress or custom site: which one to choose?",
+        post3_desc:"Pros, cons, and concrete use cases to decide based on your goals and budget.",
+        button_read:"Read article",
+        footer:"©2025 Thomas Houdard · All rights reserved"
+      }
+    };
+
+    const applyLang = (lang)=>{
+      document.querySelectorAll("[data-key]").forEach(el=>{
+        const k=el.getAttribute("data-key");
+        if(translations[lang][k]) el.textContent=translations[lang][k];
+      });
+      document.querySelectorAll(".lang-switch button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+      document.documentElement.lang=lang;localStorage.setItem("lang",lang);
+    };
+
+    const initLang=()=>{applyLang(localStorage.getItem("lang")||"fr");};
+
+    document.getElementById("langSwitch").addEventListener("click",e=>{
+      if(e.target.matches("button[data-lang]")) applyLang(e.target.dataset.lang);
+    });
+
+    const burger=document.getElementById("burger");
+    const menu=document.getElementById("menu");
+    burger.addEventListener("click",()=>{burger.classList.toggle("open");menu.classList.toggle("open");});
+
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+      });
+    },{threshold:.12});
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+    initLang();
+  </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <title data-key="coach_title_page">
+    Projet · Site de coaching sportif – Design & Développement
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Étude de cas UI/UX et développement front pour un site de coaching sportif indépendant : design complet sur Figma puis intégration HTML/CSS/JS responsive."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="projetDev">
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">TH</div>
+        <div class="brand-title">
+          <h3>THOMAS HOUDARD</h3>
+          <small data-key="nav_subtitle">UX · UI · Front-end</small>
+        </div>
+      </a>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html#about" data-key="nav_a_propos">À propos</a></li>
+        <li class="dropdown">
+          <a href="index.html#portfolio" data-key="nav_portfolio">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="projet-design.html" data-key="nav_portfolio_ui">
+              Projets UI/UX
+            </a>
+            <a href="projet-dev.html" data-key="nav_portfolio_dev">
+              Projets développement
+            </a>
+          </div>
+        </li>
+        <li><a href="index.html#process" data-key="nav_process">Méthode</a></li>
+        <li><a href="index.html#contact" data-key="nav_contact">Contact</a></li>
+        <li>
+          <a href="index.html#contact" class="btn-taf-avec-moi" data-key="nav_cta">
+            Travailler avec moi
+          </a>
+        </li>
+      </ul>
+
+      <div class="lang-switch" id="langSwitch">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+
+      <button id="burger" class="burger" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <!-- HERO / INTRO -->
+    <section class="case-hero reveal">
+      <div>
+        <p class="case-meta" data-key="coach_kicker">
+          UI/UX DESIGN · DÉVELOPPEMENT FRONT-END
+        </p>
+        <h1 data-key="coach_title">
+          Site de coaching sportif personnalisé
+        </h1>
+        <p class="case-subtitle" data-key="coach_subtitle">
+          Création complète d’un site vitrine pour un coach sportif indépendant :
+          identité visuelle, maquette Figma haute fidélité et intégration
+          HTML/CSS/JS responsive. L’objectif : clarifier l’offre, rassurer et
+          faciliter la prise de contact avec un parcours simple et efficace.
+        </p>
+
+        <div class="case-badges">
+          <span class="tag" data-key="coach_badge_freelance">
+            Projet freelance
+          </span>
+          <span class="tag" data-key="coach_badge_stack">
+            Figma · HTML · CSS · JavaScript
+          </span>
+          <span class="tag tag--solid" data-key="coach_badge_role">
+            Design + Dev
+          </span>
+        </div>
+      </div>
+
+      <aside>
+        <div class="case-cover">
+          <!-- Tu remplaceras par un vrai visuel -->
+          <img
+            src="images/portfolio/coach-sportif-cover.jpg"
+            alt="Aperçu du site de coaching sportif"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="meta-panel" style="margin-top:1.6rem;">
+          <ul class="meta-list">
+            <li>
+              <span class="meta-icon">Rôle</span>
+              <span data-key="coach_role_text">
+                Direction artistique, UI/UX et développement front-end complet.
+              </span>
+            </li>
+            <li>
+              <span class="meta-icon">Client</span>
+              <span data-key="coach_client_text">
+                Coach sportif indépendant proposant coaching individuel, à domicile
+                et suivi personnalisé.
+              </span>
+            </li>
+            <li>
+              <span class="meta-icon">Objectif</span>
+              <span data-key="coach_objectif_text">
+                Structurer une landing page claire, rassurante et orientée prise
+                de rendez-vous.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-cta">
+          <a
+            href="https://coachsportif.thomashoudard.com/"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noreferrer"
+            data-key="coach_cta_site"
+          >
+            Voir le site en ligne
+          </a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CONTEXTE & OBJECTIFS -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="coach_context_title">Contexte & objectifs</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div>
+          <p data-key="coach_context_1">
+            Le client souhaitait un site simple et professionnel pour présenter
+            son activité de coaching sportif : séances individuelles, coaching à
+            domicile et accompagnement sur la durée. L’existant se résumait à
+            une présence informelle sur les réseaux sociaux, sans véritable
+            vitrine structurée. [file:1]
+          </p>
+          <p data-key="coach_context_2">
+            L’enjeu était de créer une landing page capable de donner envie de
+            passer à l’action rapidement, tout en rassurant grâce à une méthode
+            claire, des explications pédagogiques et des témoignages clients.
+            [file:1]
+          </p>
+        </div>
+
+        <div class="card">
+          <small data-key="coach_objectifs_label">Objectifs du projet</small>
+          <ul>
+            <li data-key="coach_objectif_1">
+              Clarifier l’offre de coaching et ses bénéfices dès le hero.
+            </li>
+            <li data-key="coach_objectif_2">
+              Structurer la page autour d’un parcours logique : offre, méthode,
+              preuves, contact.
+            </li>
+            <li data-key="coach_objectif_3">
+              Proposer un design sportif, moderne et lisible sur mobile.
+            </li>
+            <li data-key="coach_objectif_4">
+              Fournir un code HTML/CSS/JS propre, léger et facilement maintenable.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN & DIRECTION ARTISTIQUE -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="coach_design_title">
+          Design UI/UX & direction artistique
+        </h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h4 data-key="coach_design_ui_title">Structure & expérience</h4>
+          <p data-key="coach_design_ui_1">
+            La page a été d’abord conçue sur Figma en s’appuyant sur une grille
+            simple, un système de sections réutilisables et une hiérarchie
+            typographique nette. L’ensemble du contenu est organisé pour répondre
+            progressivement aux questions d’un prospect (quoi, comment,
+            pour qui, contact). [file:1]
+          </p>
+          <p data-key="coach_design_ui_2">
+            Les sections clés : hero avec promesse et CTA, présentation du coach,
+            détail des services, méthode en trois étapes, témoignages clients,
+            formulaire de contact et FAQ. [file:1]
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 data-key="coach_design_da_title">Palette & identité</h4>
+          <p data-key="coach_design_da_1">
+            La direction artistique repose sur un fond très sombre, un vert
+            d’accent lumineux et des blocs bien délimités, pour un rendu à la
+            fois sérieux et dynamique. La police principale est Poppins, adaptée
+            à un univers sportif moderne. [file:1]
+          </p>
+          <p data-key="coach_design_da_2">
+            La palette est volontairement restreinte pour renforcer la cohérence
+            visuelle et mettre l’accent sur les éléments importants comme les
+            boutons d’appel à l’action et les bénéfices du coaching.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÉVELOPPEMENT FRONT-END -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="coach_dev_title">
+          Intégration HTML, CSS & JavaScript
+        </h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h4 data-key="coach_dev_stack_title">Stack & organisation</h4>
+          <p data-key="coach_dev_stack_1">
+            À partir de la maquette Figma, le site a été entièrement intégré à la
+            main en HTML, CSS et JavaScript vanilla, sans framework. Le code est
+            organisé en sections claires (hero, services, méthode, témoignages,
+            contact, FAQ) pour rester lisible et facilement évolutif.
+          </p>
+          <p data-key="coach_dev_stack_2">
+            Une attention particulière a été portée à la sémantique (titres
+            hiérarchisés, balises de section, labels de formulaire) et aux
+            performances, avec un layout responsive pensé mobile-first.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 data-key="coach_dev_features_title">
+            Comportements & micro-interactions
+          </h4>
+          <ul>
+            <li data-key="coach_dev_feat_1">
+              Menu de navigation ancrée avec gestion du menu mobile.
+            </li>
+            <li data-key="coach_dev_feat_2">
+              FAQ en accordéon, avec une seule question ouverte à la fois.
+            </li>
+            <li data-key="coach_dev_feat_3">
+              Validation basique du formulaire de contact côté front.
+            </li>
+            <li data-key="coach_dev_feat_4">
+              Petites animations sur les hover, les boutons et les cartes
+              pour donner du relief sans alourdir l’expérience.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS UTILISATEUR / STRUCTURE -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="coach_flow_title">
+          Un parcours utilisateur pensé comme une landing page
+        </h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div>
+          <ol class="puzzles-grid">
+            <li class="puzzle-item">
+              <img
+                src="images/portfolio/coach-sportif-hero.jpg"
+                alt="Section héro du site de coaching sportif"
+                loading="lazy"
+              />
+              <p data-key="coach_flow_1">
+                01 · Hero : promesse claire, bénéfices clés du coaching et
+                bouton pour réserver un bilan gratuit. [file:1]
+              </p>
+            </li>
+            <li class="puzzle-item">
+              <img
+                src="images/portfolio/coach-sportif-services.jpg"
+                alt="Section services du site de coaching sportif"
+                loading="lazy"
+              />
+              <p data-key="coach_flow_2">
+                02 · Services : focus sur le coaching individuel, le coaching à
+                domicile et le suivi personnalisé. [file:1]
+              </p>
+            </li>
+            <li class="puzzle-item">
+              <img
+                src="images/portfolio/coach-sportif-method.jpg"
+                alt="Section méthode du site de coaching sportif"
+                loading="lazy"
+              />
+              <p data-key="coach_flow_3">
+                03 · Méthode : processus en 3 étapes (analyse, programme, suivi)
+                pour rassurer sur l’accompagnement. [file:1]
+              </p>
+            </li>
+            <li class="puzzle-item">
+              <img
+                src="images/portfolio/coach-sportif-contact-faq.jpg"
+                alt="Section contact et FAQ du site de coaching sportif"
+                loading="lazy"
+              />
+              <p data-key="coach_flow_4">
+                04 · Contact & FAQ : formulaire simple + questions fréquentes
+                pour lever les objections avant la prise de rendez-vous. [file:1]
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h4 data-key="coach_flow_side_title">Impact sur l’expérience</h4>
+          <p data-key="coach_flow_side_1">
+            Le site guide l’utilisateur depuis la découverte de l’offre jusqu’à
+            la prise de contact sans distractions inutiles. Chaque section a une
+            fonction précise et contribue à renforcer la confiance. [file:1]
+          </p>
+          <p data-key="coach_flow_side_2">
+            Cette approche de landing page permet au coach de disposer d’un
+            support clair pour sa communication (réseaux, bouche-à-oreille,
+            partenariats) et d’un point d’entrée unique pour ses prospects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSION / CTA -->
+    <section class="reveal">
+      <div class="section-header">
+        <h2 data-key="coach_result_title">
+          Un site prêt pour accueillir de nouveaux clients
+        </h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div>
+          <p data-key="coach_result_1">
+            Ce projet illustre une prise en charge complète : de la définition
+            de la structure à la direction artistique, jusqu’au développement
+            front-end du site en production. [file:1]
+          </p>
+          <p data-key="coach_result_2">
+            Le coach dispose désormais d’une vitrine claire, moderne et
+            alignée sur son positionnement, lui permettant de rediriger ses
+            prospects vers un seul point d’entrée.
+          </p>
+        </div>
+
+        <div class="card">
+          <p data-key="coach_result_3">
+            Vous avez un projet similaire (site vitrine, landing page, refonte
+            UI/UX) mêlant design et développement front ? La même approche peut
+            être appliquée à votre cas.
+          </p>
+          <div class="card-cta">
+            <a
+              href="index.html#contact"
+              class="btn btn-primary"
+              data-key="coach_result_cta"
+            >
+              Me parler de votre projet
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p class="site-footer__text">
+        © 2026 · Design & développement front · Thomas Houdard
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coach Sportif — Étude de cas | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas coach sportif : design UI/UX, développement web, et optimisation de l'expérience utilisateur. Par Thomas Houdard." />
+    <meta property="og:title" content="Coach Sportif — Étude de cas" />
+    <meta property="og:description" content="Refonte UI/UX et développement complet : analyse, design, et prototype." />
+    <meta property="og:url" content="https://coachsportif.thomashoudard.com/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+
+            <div class="burger" id="burger"><span></span></div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="freelanceCoach.html" data-key="menu_freelance">Freelance Coach</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+                <div class="lang-switch" id="langSwitch">
+                    <button data-lang="fr" class="active">FR</button>
+                    <button data-lang="en">EN</button>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="coach_hero_sub">Étude de cas · UI/UX · Développement Web</p>
+                <h1 data-key="coach_hero_title">Refonte UI/UX pour un Coach Sportif</h1>
+                <p data-key="coach_hero_p1">
+                    Projet de développement web complet, de la conception à la mise en ligne. Objectifs : améliorer l'expérience utilisateur, optimiser la navigation et renforcer l'identité visuelle.
+                </p>
+                <p data-key="coach_hero_p2">
+                    Travail réalisé : analyse des besoins, design UI/UX, développement front-end et back-end, et tests utilisateurs.
+                </p>
+
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>UI/UX</span>
+                    <span class="badge"><span class="dot"></span>Développement Web</span>
+                    <span class="badge"><span class="dot"></span>Prototype</span>
+                    <span class="badge"><span class="dot"></span>Responsive</span>
+                </div>
+
+                <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+                    <a href="#apres" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir le résultat</a>
+                    <a href="#prototype" class="btn btn-outline" data-key="cta_see_proto" style="width:100%; justify-content: center;">Voir le prototype</a>
+                </div>
+            </div>
+            <div class="video-wrap" style="align-self:start">
+                <div class="proto-wrap">
+                    <p style="font-size:.92rem;color:var(--text-dim)" data-key="coach_side_note">Extrait du prototype (aperçu statique)</p>
+                    <div class="gallery">
+                        <img loading="lazy" src="images/coach/after_design1.JPG" alt="Aperçu design final 1">
+                        <img loading="lazy" src="images/coach/after_design2.JPG" alt="Aperçu design final 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVANT -->
+        <section class="reveal" id="avant">
+            <div class="section-header">
+                <h2 data-key="coach_avant_title">Avant — État initial</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <h4 data-key="coach_avant_problemes">Constats & Pain points</h4>
+                    <ul>
+                        <li data-key="coach_avant1">Navigation complexe et peu intuitive</li>
+                        <li data-key="coach_avant2">Design peu engageant</li>
+                        <li data-key="coach_avant3">Manque de clarté dans l'information</li>
+                        <li data-key="coach_avant4">Responsive non optimisé</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 data-key="coach_avant_objectifs">Objectifs</h4>
+                    <ul>
+                        <li data-key="coach_avant_obj1">Simplifier la navigation</li>
+                        <li data-key="coach_avant_obj2">Créer un design attrayant</li>
+                        <li data-key="coach_avant_obj3">Clarifier l'information</li>
+                        <li data-key="coach_avant_obj4">Optimiser l'expérience mobile</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top:1.8rem">
+                <h3 style="font-size:1rem;color:var(--sand);text-transform:uppercase" data-key="coach_avant_galerie">Captures (avant)</h3>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/coach/before_design1.PNG" alt="Écran avant refonte 1">
+                <img loading="lazy" src="images/coach/before_design2.PNG" alt="Écran avant refonte 2">
+            </div>
+        </section>
+
+        <!-- APRES -->
+        <section class="reveal" id="apres">
+            <div class="section-header">
+                <h2 data-key="coach_apres_title">Après — État final du design</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <p data-key="coach_apres_intro">
+                        La refonte a permis d’obtenir une interface plus claire et engageante, facilitant l'accès à l'information et améliorant l'expérience utilisateur.
+                    </p>
+                    <h4 data-key="coach_apres_keys_title">Améliorations clés</h4>
+                    <ul>
+                        <li data-key="coach_apres1">Navigation simplifiée</li>
+                        <li data-key="coach_apres2">Design moderne et attrayant</li>
+                        <li data-key="coach_apres3">Information claire et accessible</li>
+                        <li data-key="coach_apres4">Optimisation responsive complète</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top:1.8rem">
+                <h3 style="font-size:1rem;color:var(--sand);text-transform:uppercase" data-key="coach_apres_galerie">Captures (après)</h3>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/coach/after_design1.JPG" alt="Écran après refonte 1">
+                <img loading="lazy" src="images/coach/after_design2.JPG" alt="Écran après refonte 2">
+            </div>
+        </section>
+
+        <!-- PROTOTYPE -->
+        <section class="reveal" id="prototype">
+            <div class="section-header">
+                <h2 data-key="coach_proto_title">Prototype</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="proto-wrap">
+                <p style="font-size:.95rem;color:var(--text-dim)" data-key="coach_proto_desc">
+                    Parcourez le prototype interactif pour découvrir les écrans clés et les interactions.
+                </p>
+                <div>
+                    <a class="btn btn-primary" target="_blank" href="https://www.figma.com/design/your-prototype-link" data-key="button_proto">
+                        Voir le prototype Figma
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTILS -->
+        <section>
+            <div class="section-header">
+                <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+                <div class="bar"></div>
+            </div>
+            <div>
+                <div class="tools-grid">
+                    <article class="tool-card">
+                        <div class="tool-icon">
+                            <img src="images/logiciels/figma.png" alt="Figma">
+                        </div>
+                        <p class="tool-title">UI/UX DESIGN</p>
+                        <p class="tool-sub">Figma</p>
+                        <p class="tool-desc" data-key="tool_figma_desc">
+                            Outil principal pour les maquettes haute fidélité, le design system, et le prototype interactif.
+                        </p>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-icon">
+                            <img src="images/logiciels/html.png" alt="HTML">
+                        </div>
+                        <p class="tool-title">Développement Web</p>
+                        <p class="tool-sub">HTML/CSS/JavaScript</p>
+                        <p class="tool-desc" data-key="tool_dev_desc">
+                            Technologies utilisées pour le développement du site web, assurant une expérience utilisateur fluide.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedin.png" alt="LinkedIn" />
+                    </a>
+                    <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+                        <img src="images/github.png" alt="GitHub" />
+                    </a>
+                    <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+                        <img src="images/email.png" alt="Email" />
+                    </a>
+                </div>
+                <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+                ©2025 Thomas Houdard · Tous droits réservés
+                </span>
+            </div>
+            <div class="footer-bottom">
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_freelance: "Freelance Coach",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Développement",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+                // Coach page
+                coach_hero_sub: "Étude de cas · UI/UX · Développement Web",
+                coach_hero_title: "Refonte UI/UX pour un Coach Sportif",
+                coach_hero_p1: "Projet de développement web complet, de la conception à la mise en ligne. Objectifs : améliorer l'expérience utilisateur, optimiser la navigation et renforcer l'identité visuelle.",
+                coach_hero_p2: "Travail réalisé : analyse des besoins, design UI/UX, développement front-end et back-end, et tests utilisateurs.",
+                cta_see_final: "Voir le résultat",
+                cta_see_proto: "Voir le prototype",
+                coach_side_note: "Extrait du prototype (aperçu statique)",
+
+                coach_avant_title: "Avant — État initial",
+                coach_avant_problemes: "Constats & Pain points",
+                coach_avant1: "Navigation complexe et peu intuitive",
+                coach_avant2: "Design peu engageant",
+                coach_avant3: "Manque de clarté dans l'information",
+                coach_avant4: "Responsive non optimisé",
+                coach_avant_objectifs: "Objectifs",
+                coach_avant_obj1: "Simplifier la navigation",
+                coach_avant_obj2: "Créer un design attrayant",
+                coach_avant_obj3: "Clarifier l'information",
+                coach_avant_obj4: "Optimiser l'expérience mobile",
+                coach_avant_galerie: "Captures (avant)",
+
+                coach_apres_title: "Après — État final du design",
+                coach_apres_intro: "La refonte a permis d’obtenir une interface plus claire et engageante, facilitant l'accès à l'information et améliorant l'expérience utilisateur.",
+                coach_apres_keys_title: "Améliorations clés",
+                coach_apres1: "Navigation simplifiée",
+                coach_apres2: "Design moderne et attrayant",
+                coach_apres3: "Information claire et accessible",
+                coach_apres4: "Optimisation responsive complète",
+                coach_apres_galerie: "Captures (après)",
+
+                coach_proto_title: "Prototype",
+                coach_proto_desc: "Parcourez le prototype interactif pour découvrir les écrans clés et les interactions.",
+                button_proto: "Voir le prototype Figma",
+
+                titre_logiciels_utilises: "Logiciels utilisés",
+                tool_figma_desc: "Outil principal pour les maquettes haute fidélité, le design system, et le prototype interactif.",
+                tool_dev_desc: "Technologies utilisées pour le développement du site web, assurant une expérience utilisateur fluide."
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_freelance: "Freelance Coach",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Development Projects",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+
+                footer: "©2025 Thomas Houdard · All rights reserved",
+
+                // Coach page
+                coach_hero_sub: "Case study · UI/UX · Web Development",
+                coach_hero_title: "UI/UX Redesign for a Sports Coach",
+                coach_hero_p1: "Complete web development project, from design to launch. Goals: improve user experience, optimize navigation, and strengthen visual identity.",
+                coach_hero_p2: "Work done: needs analysis, UI/UX design, front-end and back-end development, and user testing.",
+                cta_see_final: "See result",
+                cta_see_proto: "Open prototype",
+                coach_side_note: "Prototype excerpts (static preview)",
+
+                coach_avant_title: "Before — Initial state",
+                coach_avant_problemes: "Findings & Pain points",
+                coach_avant1: "Complex and unintuitive navigation",
+                coach_avant2: "Unengaging design",
+                coach_avant3: "Lack of clarity in information",
+                coach_avant4: "Non-optimized responsive",
+                coach_avant_objectifs: "Goals",
+                coach_avant_obj1: "Simplify navigation",
+                coach_avant_obj2: "Create an attractive design",
+                coach_avant_obj3: "Clarify information",
+                coach_avant_obj4: "Optimize mobile experience",
+                coach_avant_galerie: "Screens (before)",
+
+                coach_apres_title: "After — Final design",
+                coach_apres_intro: "The redesign delivers a clearer and more engaging interface, facilitating access to information and improving user experience.",
+                coach_apres_keys_title: "Key improvements",
+                coach_apres1: "Simplified navigation",
+                coach_apres2: "Modern and attractive design",
+                coach_apres3: "Clear and accessible information",
+                coach_apres4: "Complete responsive optimization",
+                coach_apres_galerie: "Screens (after)",
+
+                coach_proto_title: "Prototype",
+                coach_proto_desc: "Browse the interactive prototype to discover key screens and interactions.",
+                button_proto: "Open Figma prototype",
+
+                titre_logiciels_utilises: "Tools used",
+                tool_figma_desc: "Main tool for high-fidelity mockups, design system, and interactive prototype.",
+                tool_dev_desc: "Technologies used for website development, ensuring a smooth user experience."
+            }
+        };
+    </script>
+</body>
+</html>

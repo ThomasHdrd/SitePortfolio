@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Thomas Houdard – UI/UX Designer & Développeur Web à Montpellier</title>
+  <meta name="description" content="Je conçois des interfaces claires et développe des sites modernes, rapides et responsives pour PME, entrepreneurs et associations." />
+  <meta name="keywords" content="freelance web Montpellier, UI UX designer, développeur HTML CSS JS, création site vitrine" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thomas Houdard – UI/UX Designer & Développeur Web à Montpellier">
+  <meta property="og:description" content="Design et développement de sites modernes, rapides et responsives.">
+  <meta property="og:type" content="website">
+
+  <style>
+/* --------------------------
+   RESET & VARIABLES
+--------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #328ad3;
+    --primary-light: #d9e9f8;
+    --primary-dark: #1f5f96;
+    --bg: #f4f4f7;
+    --bg-card: #ffffff;
+    --text-main: #111827;
+    --text-soft: #6b7280;
+    --border-soft: rgba(148, 163, 184, 0.4);
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+    --max-width: 1120px;
+    --transition: all 0.25s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #ffffff 0, var(--bg) 55%);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Typo de base */
+p {
+    font-size: 0.98rem;
+    color: var(--text-soft);
+}
+
+/* Layout générique */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+/* --------------------------
+   NAVBAR
+--------------------------- */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(16px);
+    background: linear-gradient(
+        to bottom,
+        rgba(244, 244, 247, 0.94),
+        rgba(244, 244, 247, 0.85),
+        rgba(244, 244, 247, 0.6)
+    );
+    border-bottom: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+nav .name {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+nav .name h1 {
+    font-size: 1.15rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+nav .name p {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+}
+
+/* Menu principal */
+
+.menu {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem 0.9rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 0.9rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--text-soft);
+    position: relative;
+    padding-bottom: 0.15rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--primary);
+    transition: width 0.2s ease;
+}
+
+.menu li a:hover {
+    color: var(--text-main);
+}
+
+.menu li a:hover::after,
+.menu li a.active::after {
+    width: 100%;
+}
+
+.travailleravecmoi {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    background: var(--primary);
+    color: #f9fafb !important;
+    box-shadow: 0 12px 30px rgba(50, 138, 211, 0.45);
+    transition: var(--transition);
+}
+
+.travailleravecmoi::after {
+    display: none;
+}
+
+.travailleravecmoi:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.5);
+}
+
+/* Sous-menu (portfolio) */
+
+.sousMenu {
+    position: relative;
+}
+
+.sousMenu > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.sousMenu-content {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    min-width: 220px;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+    padding: 0.4rem;
+    display: none;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.sousMenu-content a {
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.sousMenu-content a:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.sousMenu:hover .sousMenu-content {
+    display: flex;
+}
+
+/* Sélecteur de langue */
+
+.lang-dropdown {
+    position: relative;
+}
+
+#lang-button {
+    background-color: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-soft);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#lang-button img {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+}
+
+#dropdown-arrow {
+    font-size: 0.7rem;
+}
+
+#lang-list {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-soft);
+    padding: 0.35rem 0;
+    list-style: none;
+    display: none;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+}
+
+#lang-list li {
+    padding: 0.3rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.86rem;
+}
+
+#lang-list li img {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+}
+
+#lang-list li:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* Mobile: emplacement langue dans le menu */
+.lang-mobile {
+    display: none;
+}
+
+/* Burger menu */
+
+.menu-toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bar {
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--text-main);
+    position: relative;
+    transition: var(--transition);
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--text-main);
+    left: 0;
+    transition: var(--transition);
+}
+
+.bar::before {
+    top: -5px;
+}
+
+.bar::after {
+    top: 5px;
+}
+
+/* Classe utilisée par script.js normalement */
+.menu-toggle.active .bar {
+    background-color: transparent;
+}
+
+.menu-toggle.active .bar::before {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.menu-toggle.active .bar::after {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+/* --------------------------
+   SECTION PRÉSENTATION (header)
+--------------------------- */
+
+header {
+    max-width: var(--max-width);
+    margin: 2.5rem auto 2rem;
+    padding: 0 1.5rem;
+}
+
+.presentation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.8rem 1.6rem;
+    border-radius: 26px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.image-left {
+    flex: 0 0 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-left img {
+    width: 180px;
+    height: 180px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+}
+
+.text-right {
+    flex: 1 1 260px;
+}
+
+.text-right p {
+    margin-bottom: 0.5rem;
+}
+
+.text-right p:first-child {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* --------------------------
+   SECTION CV VIDÉO
+--------------------------- */
+
+.cv-video {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem 2.5rem;
+}
+
+.cv-video h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 1rem;
+}
+
+.video {
+    border-radius: var(--radius-lg);
+    padding: 0.9rem;
+    background: radial-gradient(circle at 0 0, #fef3c7 0, var(--primary-light) 50%, #0f172a 100%);
+    box-shadow: var(--shadow-soft);
+}
+
+.video video {
+    width: 100%;
+    max-height: 420px;
+    border-radius: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.3);
+}
+
+/* --------------------------
+   COMPÉTENCES & SECTIONS EN CARTES
+--------------------------- */
+
+section.competences-techniques,
+section.competences-relationnelles-comportementales,
+section.langues,
+section.logiciels,
+section.passions,
+section.certifications,
+section.moncv {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem 2.8rem;
+}
+
+section.competences-techniques > h2,
+section.competences-relationnelles-comportementales > h2,
+section.langues > h2,
+section.logiciels > h2,
+section.passions > h2,
+section.certifications > h2,
+section.moncv > h2 {
+    font-size: 1.25rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 1.3rem;
+}
+
+/* Tableaux transformés en grilles modernes */
+
+.tableau-technique,
+.tableau-relations,
+.tableau-langues,
+.tableau-passion,
+.tableau-certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.1rem;
+}
+
+/* Cartes de compétences / passions / langues / certifications */
+
+.competencestechniques,
+.competencesrelationnelles,
+.langue,
+.passion,
+.certificat {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 1rem 0.9rem;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 10px 30px rgba(148, 163, 184, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.competencestechniques h3,
+.competencesrelationnelles h3,
+.langue h3,
+.passion h3,
+.certificat h3,
+.competencestechniques h4,
+.competencesrelationnelles h4,
+.langue h4,
+.passion h4,
+.certificat h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.competencestechniques p,
+.competencesrelationnelles p,
+.langue p,
+.passion p,
+.certificat p {
+    font-size: 0.9rem;
+}
+
+/* Icônes logiciels */
+
+.icone-logiciel {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.6rem;
+}
+
+.icone-logiciel img {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* CV (boutons) */
+
+.cv-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1rem;
+}
+
+.cv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    background: #ffffff;
+    color: var(--text-main);
+    font-size: 0.88rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cv-link:hover {
+    background: var(--primary);
+    color: #f9fafb;
+    border-color: transparent;
+    box-shadow: 0 14px 30px rgba(50, 138, 211, 0.45);
+}
+
+/* --------------------------
+   FOOTER
+--------------------------- */
+
+footer {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 2rem 1.5rem 2.4rem;
+    margin-top: 2.5rem;
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-container h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer-container p {
+    font-size: 0.85rem;
+    color: rgba(226, 232, 240, 0.9);
+}
+
+/* Icônes réseaux */
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-social img {
+    width: 34px;
+    height: 34px;
+    filter: invert(1);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.7);
+}
+
+/* Bas de page */
+
+.footer-bottom {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border-top: 1px solid rgba(148, 163, 184, 0.6);
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.78rem;
+}
+
+.footer-bottom a {
+    color: #e5e7eb;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* --------------------------
+   RESPONSIVE
+--------------------------- */
+
+@media (max-width: 960px) {
+    .presentation {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .image-left {
+        flex-basis: 100%;
+    }
+
+    .image-left img {
+        width: 150px;
+        height: 150px;
+    }
+
+    main {
+        padding-inline: 1.3rem;
+    }
+}
+
+@media (max-width: 820px) {
+    /* nav compact + burger */
+    nav .name {
+        padding-inline: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0.9rem 1.3rem 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+        background: rgba(244, 244, 247, 0.98);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+        display: none;
+    }
+
+    /* script.js devrait ajouter / enlever .active sur #menu */
+    .menu.active {
+        display: flex;
+    }
+
+    .sousMenu-content {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-inline: 0;
+        background: transparent;
+    }
+
+    .sousMenu-content a {
+        padding-left: 1rem;
+    }
+
+    /* langue dans le menu mobile */
+    .lang-dropdown {
+        display: none;
+    }
+
+    .lang-mobile {
+        display: block;
+        margin-top: 0.4rem;
+    }
+
+    header {
+        margin-top: 1.7rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 540px) {
+    .presentation {
+        border-radius: 20px;
+    }
+
+    section.competences-techniques,
+    section.competences-relationnelles-comportementales,
+    section.langues,
+    section.logiciels,
+    section.passions,
+    section.certifications,
+    section.moncv {
+        padding-bottom: 2.2rem;
+    }
+
+    .tableau-technique,
+    .tableau-relations,
+    .tableau-langues,
+    .tableau-passion,
+    .tableau-certifications {
+        gap: 0.9rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar-wrap">
+    <nav class="navbar">
+      <a href="#top" class="brand">
+        <div class="brand-mark">TH</div>
+        <div>
+          <div class="brand-text-main">Thomas Houdard</div>
+          <div class="brand-text-sub">UI/UX Design · Dev Web</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#skills" class="nav-link">Compétences</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#contact" class="nav-cta">
+          <span class="icon">✉️</span>
+          Travailler ensemble
+        </a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <div class="burger-lines"></div>
+      </button>
+    </nav>
+
+    <div class="nav-links-mobile" id="navMobile">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Projets</a>
+      <a href="#skills" class="nav-link">Compétences</a>
+      <a href="#about" class="nav-link">À propos</a>
+      <a href="#contact" class="nav-cta">
+        <span class="icon">✉️</span>
+        Travailler ensemble
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              Disponible pour de nouveaux projets freelance
+            </div>
+
+            <h1 class="hero-title">
+              Je conçois des interfaces claires et je développe des
+              <span>sites performants</span> pour vos projets web.
+            </h1>
+
+            <p class="hero-text">
+              UI/UX Designer & Développeur Web basé à Montpellier, j’accompagne
+              les PME, entrepreneurs et associations à transformer leurs idées en
+              expériences digitales modernes, rapides et responsives.
+            </p>
+
+            <div class="hero-tags">
+              <span class="hero-tag">UI & UX Design</span>
+              <span class="hero-tag">Sites vitrines</span>
+              <span class="hero-tag">HTML · CSS · JS · Angular</span>
+              <span class="hero-tag">WordPress & Shopify</span>
+              <span class="hero-tag">Game & Level Design</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                Voir mes projets
+                <span>↗</span>
+              </a>
+
+              <a href="cv/CV_Thomas_Houdard.pdf" target="_blank" class="btn btn-ghost">
+                Télécharger mon CV (FR)
+              </a>
+            </div>
+
+            <p class="hero-secondary-text">
+              <strong>+4 ans</strong> d’expérience entre design, développement et support,
+              avec une approche orientée résultats & utilisateur final.
+            </p>
+          </div>
+
+          <aside class="hero-card" aria-label="Carte de présentation">
+            <div class="hero-card-header">
+              <div class="hero-card-pill">Portfolio · 2025</div>
+              <div class="hero-card-dot"></div>
+            </div>
+
+            <div class="hero-card-main">
+              <div class="hero-avatar-wrap">
+                <div class="hero-avatar-inner">
+                  <!-- adapte le chemin si besoin -->
+                  <img src="images/photoprofil.webp" alt="Photo de profil de Thomas Houdard">
+                </div>
+              </div>
+
+              <div>
+                <div class="hero-card-name">Thomas Houdard</div>
+                <div class="hero-card-role">UI/UX Designer & Développeur Web</div>
+
+                <div class="hero-card-line">
+                  <span class="icon">📍</span>
+                  Montpellier · France
+                </div>
+                <div class="hero-card-line">
+                  <span class="icon">🎯</span>
+                  Sites vitrines, refonte d’interface, accompagnement produit
+                </div>
+                <div class="hero-card-line">
+                  <span class="icon">🧩</span>
+                  Double profil : design & technique, avec un parcours en game / level design
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <div class="hero-card-badges">
+                <span class="hero-card-badge">UI/UX · Figma</span>
+                <span class="hero-card-badge">HTML · CSS · JS</span>
+                <span class="hero-card-badge">Angular</span>
+              </div>
+              <div class="hero-card-availability">
+                <span>STATUT</span>
+                <span>Ouvert aux missions</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <p class="section-title">Services</p>
+        <h2 class="section-heading">Comment je peux vous aider</h2>
+        <p class="section-intro">
+          Je vous accompagne de l’idée jusqu’au site en ligne, avec une approche
+          simple : comprendre vos besoins, concevoir des interfaces claires, puis
+          livrer un site robuste, rapide et agréable à utiliser.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-label">01 · UI & UX Design</div>
+            <h3 class="service-title">Interfaces modernes & centrées utilisateur</h3>
+            <p class="service-text">
+              Recherche, maquettes basse et haute fidélité, prototypes Figma,
+              tests utilisateurs… pour créer une expérience fluide sur desktop
+              et mobile.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">Figma</span>
+              <span class="service-tag">Design System</span>
+              <span class="service-tag">Prototype</span>
+              <span class="service-tag">Responsive</span>
+            </div>
+            <div class="service-more">
+              Du concept à la maquette cliquable <span>→</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">02 · Développement web</div>
+            <h3 class="service-title">Intégration propre & performance</h3>
+            <p class="service-text">
+              Intégration sur-mesure en HTML/CSS/JS ou Angular, optimisation des
+              performances, mise en place des bonnes pratiques SEO de base.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">HTML · CSS · JS</span>
+              <span class="service-tag">Angular</span>
+              <span class="service-tag">SEO de base</span>
+            </div>
+            <div class="service-more">
+              De la maquette au site en ligne <span>→</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">03 · Accompagnement complet</div>
+            <h3 class="service-title">Projet clé en main & suivi</h3>
+            <p class="service-text">
+              Pack complet : stratégie, design, développement, mise en ligne,
+              puis accompagnement pour faire vivre votre site et l’améliorer
+              dans le temps.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">Conseil</span>
+              <span class="service-tag">Gestion projet</span>
+              <span class="service-tag">Itérations</span>
+            </div>
+            <div class="service-more">
+              Idéal pour une refonte ou un 1er site <span>→</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="projects-header">
+          <div>
+            <p class="section-title">Projets sélectionnés</p>
+            <h2 class="section-heading">Un aperçu de mon travail</h2>
+            <p class="section-intro">
+              Voici quelques projets qui illustrent ma manière de travailler sur
+              le design, le développement et l’expérience globale.
+            </p>
+          </div>
+          <a href="projetDesigner.html" class="projects-link-all">
+            Voir l’ensemble du portfolio
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <article class="project-card" onclick="window.location.href='projetDesigner.html'">
+            <div class="project-thumb">
+              <div class="project-thumb-inner">
+                <!-- adapte l'image -->
+                <img src="images/design/catkitchen.png" alt="Projet Cats Kitchen UI/UX">
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-type">UI/UX · Web responsive</p>
+              <h3 class="project-title">Cats Kitchen – Site e-commerce pour amoureux des chats</h3>
+              <p class="project-text">
+                Refonte complète de l’expérience : architecture de l’information,
+                maquettes responsive, design system, puis intégration front.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">UI/UX</span>
+                  <span class="project-tag">Prototype</span>
+                </div>
+                <span>Étude de cas →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-card" onclick="window.location.href='projetDeveloppeur.html'">
+            <div class="project-thumb">
+              <div class="project-thumb-inner">
+                <img src="images/developpeur/travel.png" alt="Projet Travel Agency développement web">
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Développement front-end</p>
+              <h3 class="project-title">Travel Agency – Site vitrine dynamique</h3>
+              <p class="project-text">
+                Intégration responsive, animations légères, mise en avant des
+                offres avec un focus sur la lisibilité et la conversion.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">HTML/CSS/JS</span>
+                  <span class="project-tag">Responsive</span>
+                </div>
+                <span>Voir le projet →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-card" onclick="window.location.href='experiencesProfessionnelles.html'">
+            <div class="project-thumb">
+              <div class="project-thumb-inner">
+                <img src="images/expro/stc/stc_black.png" alt="Expérience professionnelle support & IT">
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Expériences & Soft skills</p>
+              <h3 class="project-title">Expériences pro – Support, gestion & relation client</h3>
+              <p class="project-text">
+                Un parcours qui renforce ma capacité à communiquer, comprendre
+                les besoins métier et trouver des solutions concrètes.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">Support IT</span>
+                  <span class="project-tag">Relation client</span>
+                </div>
+                <span>En savoir plus →</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-title">Compétences</p>
+        <h2 class="section-heading">Un profil hybride : design & développement</h2>
+        <p class="section-intro">
+          Je peux intervenir à chaque étape du projet : structurer votre idée,
+          concevoir l’expérience, prototyper, puis intégrer et optimiser le site.
+        </p>
+
+        <div class="skills-grid">
+          <div class="skills-column">
+            <h3 class="skills-title">UI & UX Design</h3>
+            <div class="skills-chips">
+              <span class="skill-chip">Design Thinking</span>
+              <span class="skill-chip">Wireframes</span>
+              <span class="skill-chip">Prototypes Figma</span>
+              <span class="skill-chip">Audit concurrentiel</span>
+              <span class="skill-chip">Design d’interaction</span>
+              <span class="skill-chip">Responsive web design</span>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3 class="skills-title">Développement</h3>
+            <div class="skills-chips">
+              <span class="skill-chip">HTML · CSS · JavaScript</span>
+              <span class="skill-chip">Angular</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">PHP</span>
+              <span class="skill-chip">SQL</span>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3 class="skills-title">Écosystème & Soft skills</h3>
+            <div class="skills-chips">
+              <span class="skill-chip">WordPress & Shopify</span>
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">SEO/SEA</span>
+              <span class="skill-chip">Gestion de projet</span>
+              <span class="skill-chip">Esprit d’équipe</span>
+              <span class="skill-chip">Curiosité & créativité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="about">
+      <div class="container">
+        <p class="section-title">À propos</p>
+        <h2 class="section-heading">Travailler avec quelqu’un qui comprend vos enjeux</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Je m’appelle <strong>Thomas</strong>, j’ai un parcours mêlant game
+              design, UI/UX et développement web. J’aime créer des expériences
+              claires, cohérentes, qui donnent envie d’être utilisées au
+              quotidien.
+            </p>
+            <p>
+              Au-delà de la technique, j’accorde beaucoup d’importance à la
+              communication : comprendre votre contexte, vos contraintes, vos
+              objectifs, pour proposer des solutions réalistes et efficaces.
+            </p>
+            <p>
+              Mon objectif : vous aider à passer de “j’ai une idée de site” à
+              “mon site est en ligne, il me ressemble, et il sert vraiment mes
+              objectifs”.
+            </p>
+          </div>
+
+          <aside class="about-highlights">
+            <h3>Quelques repères</h3>
+            <ul>
+              <li>Basé à Montpellier, ouvert aux missions à distance et à l’étranger.</li>
+              <li>Expérience en UI/UX Design, développement front-end & support technique.</li>
+              <li>Habitué à travailler avec des entrepreneurs, PME et associations.</li>
+              <li>Apprend en continu via projets personnels (BodyAtlas, PetCare, etc.).</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <p class="section-title">Contact</p>
+        <h2 class="section-heading">Parlons de votre projet</h2>
+
+        <div class="contact-card">
+          <div class="contact-main">
+            <h3>Vous avez un site à créer, une refonte ou une idée à clarifier ?</h3>
+            <p>
+              Envoyez-moi quelques lignes sur votre projet (contexte, objectifs,
+              délais) et je vous réponds rapidement pour voir comment je peux vous
+              aider concrètement.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a href="mailto:contact@thomashoudard.com" class="btn-contact">
+              ✉️
+              <span>contact@thomashoudard.com</span>
+            </a>
+            <div class="contact-social">
+              <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" class="contact-icon" aria-label="LinkedIn">
+                in
+              </a>
+              <a href="https://github.com/ThomasHdrd" target="_blank" class="contact-icon" aria-label="GitHub">
+                ⌘
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2025 – Thomas Houdard. Tous droits réservés.</div>
+      <div class="footer-right">
+        <a href="blog.html" class="footer-link">Blog</a>
+        <span>Site personnel · Version portfolio 2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu burger
+    const burger = document.getElementById("burger");
+    const navMobile = document.getElementById("navMobile");
+    const mobileLinks = navMobile.querySelectorAll("a");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("open");
+      const isOpen = burger.classList.contains("open");
+      navMobile.style.display = isOpen ? "flex" : "none";
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        burger.classList.remove("open");
+        navMobile.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

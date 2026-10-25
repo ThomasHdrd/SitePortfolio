@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coach Sportif — Étude de cas | Thomas Houdard</title>
+    <meta name="description" content="Étude de cas : plateforme web Coach Sportif, design UX/UI, responsive design, et prototype Figma. Par Thomas Houdard." />
+    <meta property="og:title" content="Coach Sportif — Étude de cas" />
+    <meta property="og:description" content="Plateforme web complète : design UX/UI, interface utilisateur, responsive et prototype interactif." />
+    <meta property="og:url" content="https://thomashoudard.com/coachSportif.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <h3>Thomas Houdard</h3>
+                    <small>UI/UX DESIGNER · DEV WEB</small>
+                </div>
+            </div>
+
+            <div class="burger" id="burger"><span></span></div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html" data-key="menu_about">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active" data-key="menu_portfolio">Portfolio ▾</a>
+                    <div class="dropdown-content">
+                        <a href="experiencesProfessionnelles.html" data-key="menu_exp_pro">Expériences Pro</a>
+                        <a href="projetDesigner.html" data-key="menu_projects_design">Projets Design</a>
+                        <a href="projetDeveloppeur.html" data-key="menu_projects_dev">Projets Dev</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" data-key="menu_contact">Contact</a></li>
+                <li><a href="TravaillerAvecMoi.html" class="btn-taf-avec-moi" data-key="menu_cv">Travailler avec moi</a></li>
+            <div class="lang-switch" id="langSwitch">
+                <button data-lang="fr" class="active">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- HERO -->
+        <section class="hero reveal">
+            <div class="hero-intro">
+                <p class="hero-sub" data-key="coach_hero_sub">Étude de cas · Plateforme Web · UX/UI Design</p>
+                <h1 data-key="coach_hero_title">Plateforme Coach Sportif</h1>
+                <p data-key="coach_hero_p1">
+                    Conception complète d'une plateforme web destinée aux coachs sportifs et leurs clients. Objectifs : créer une interface intuitive,
+                    faciliter la gestion des séances et des programmes, et offrir une expérience fluide sur tous les appareils.
+                </p>
+                <p data-key="coach_hero_p2">
+                    Travail réalisé : analyse des besoins, wireframing, design UX/UI, système de design, prototypage Figma interactif,
+                    et spécifications de développement.
+                </p>
+
+                <div class="badges">
+                    <span class="badge"><span class="dot"></span>UX/UI</span>
+                    <span class="badge"><span class="dot"></span>Plateforme Web</span>
+                    <span class="badge"><span class="dot"></span>Prototype</span>
+                    <span class="badge"><span class="dot"></span>Responsive</span>
+                </div>
+
+                <div style="margin-top:1.4rem;display:grid;gap:.75rem;width:100%;">
+                    <a href="#apres" class="btn btn-primary" data-key="cta_see_final" style="width:100%;">Voir le résultat</a>
+                    <a href="#prototype" class="btn btn-outline" data-key="cta_see_proto" style="width:100%; justify-content: center;">Voir le prototype</a>
+                </div>
+            </div>
+            <div class="video-wrap" style="align-self:start">
+                <div class="proto-wrap">
+                    <p style="font-size:.92rem;color:var(--text-dim)" data-key="coach_side_note">Aperçu du prototype (vues clés)</p>
+                    <div class="gallery">
+                        <img loading="lazy" src="images/coach/design1.JPG" alt="Écran accueil Coach Sportif">
+                        <img loading="lazy" src="images/coach/design2.JPG" alt="Écran programme Coach Sportif">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTEXT & BRIEF -->
+        <section class="reveal" id="context">
+            <div class="section-header">
+                <h2 data-key="coach_context_title">Contexte & Brief</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <h4 data-key="coach_context_challenge">Challenge</h4>
+                    <p data-key="coach_context_challenge_desc">
+                        Créer une plateforme web ergonomique permettant aux coachs de gérer leurs clients, programmes d'entraînement et séances,
+                        tout en offrant une interface accessible et moderne pour les utilisateurs finaux.
+                    </p>
+                </div>
+                <div class="card">
+                    <h4 data-key="coach_context_users">Utilisateurs cibles</h4>
+                    <ul>
+                        <li data-key="coach_users1">Coachs sportifs professionnels</li>
+                        <li data-key="coach_users2">Clients suivant des programmes</li>
+                        <li data-key="coach_users3">Utilisateurs mobiles et desktop</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCOVERY -->
+        <section class="reveal" id="discovery">
+            <div class="section-header">
+                <h2 data-key="coach_discovery_title">Phase de Discovery</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <h4 data-key="coach_discovery_requirements">Besoins identifiés</h4>
+                    <ul>
+                        <li data-key="coach_discovery1">Gestion des clients et profils</li>
+                        <li data-key="coach_discovery2">Création et suivi de programmes</li>
+                        <li data-key="coach_discovery3">Planification des séances</li>
+                        <li data-key="coach_discovery4">Suivi des progrès et statistiques</li>
+                        <li data-key="coach_discovery5">Communication coach-client</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 data-key="coach_discovery_features">Fonctionnalités clés</h4>
+                    <ul>
+                        <li data-key="coach_feature1">Dashboard personnalisé</li>
+                        <li data-key="coach_feature2">Calendrier interactif</li>
+                        <li data-key="coach_feature3">Fiches d'exercices</li>
+                        <li data-key="coach_feature4">Système de notifications</li>
+                        <li data-key="coach_feature5">Export et rapports</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WIREFRAMES -->
+        <section class="reveal">
+            <div class="section-header">
+                <h3 style="font-size:1rem;color:var(--sand);text-transform:uppercase" data-key="coach_wireframes_title">Wireframes & Arborescence</h3>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/coach/wireframe1.PNG" alt="Wireframe vue accueil">
+                <img loading="lazy" src="images/coach/wireframe2.PNG" alt="Wireframe vue programmes">
+            </div>
+        </section>
+
+        <!-- APRES (Design Final) -->
+        <section class="reveal" id="apres">
+            <div class="section-header">
+                <h2 data-key="coach_final_title">Design Final</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+                <div class="card">
+                    <p data-key="coach_final_intro">
+                        Le design final privilégie la clarté, l'accessibilité et l'efficacité. Une interface épurée, une hiérarchie
+                        visuelle forte et une navigation intuitive permettent aux utilisateurs d'accomplir leurs tâches rapidement
+                        et sans friction.
+                    </p>
+                    <h4 data-key="coach_final_highlights">Points clés du design</h4>
+                    <ul>
+                        <li data-key="coach_highlight1">Interface minimaliste et épurée</li>
+                        <li data-key="coach_highlight2">Palette cohérente et motivante</li>
+                        <li data-key="coach_highlight3">Iconographie custom</li>
+                        <li data-key="coach_highlight4">Responsive design fluide</li>
+                        <li data-key="coach_highlight5">Accessibilité (WCAG)</li>
+                        <li data-key="coach_highlight6">Micro-interactions et feedback</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 data-key="coach_design_system">Design System</h4>
+                    <ul>
+                        <li data-key="coach_ds1">Palette couleurs (primaire, neutre, états)</li>
+                        <li data-key="coach_ds2">Typographie (titres, corps, labels)</li>
+                        <li data-key="coach_ds3">Composants UI (boutons, formulaires, cartes)</li>
+                        <li data-key="coach_ds4">Grille et espacements</li>
+                        <li data-key="coach_ds5">Iconographie et illustrations</li>
+                        <li data-key="coach_ds6">Patterns et templates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top:1.8rem">
+                <h3 style="font-size:1rem;color:var(--sand);text-transform:uppercase" data-key="coach_screens_title">Écrans clés</h3>
+                <div class="bar"></div>
+            </div>
+            <div class="gallery">
+                <img loading="lazy" src="images/coach/screen1.JPG" alt="Écran dashboard Coach Sportif">
+                <img loading="lazy" src="images/coach/screen2.JPG" alt="Écran programmes Coach Sportif">
+                <img loading="lazy" src="images/coach/screen3.JPG" alt="Écran séance Coach Sportif">
+            </div>
+        </section>
+
+        <!-- PROTOTYPE -->
+        <section class="reveal" id="prototype">
+            <div class="section-header">
+                <h2 data-key="coach_proto_title">Prototype Interactif</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="proto-wrap">
+                <p style="font-size:.95rem;color:var(--text-dim)" data-key="coach_proto_desc">
+                    Explorez le prototype Figma interactif pour tester les flows, interactions et responsive.
+                </p>
+                <div>
+                    <a class="btn btn-primary" target="_blank" href="https://coachsportif.thomashoudard.com/" data-key="button_live">
+                        Voir le site live
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTILS -->
+        <section>
+            <div class="section-header">
+                <h2 data-key="titre_logiciels_utilises">Logiciels utilisés</h2>
+                <div class="bar"></div>
+            </div>
+            <div>
+                <div class="tools-grid">
+                    <article class="tool-card">
+                        <div class="tool-icon">
+                            <img src="images/logiciels/figma.png" alt="Figma">
+                        </div>
+                        <p class="tool-title">UX/UI DESIGN</p>
+                        <p class="tool-sub">Figma</p>
+                        <p class="tool-desc" data-key="tool_figma_coach">
+                            Wireframes, maquettes haute fidélité, design system et prototypage interactif.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+        <div class="footer-top">
+            <div class="social">
+            <a href="https://www.linkedin.com/in/thomashoudard/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/ThomasHdrd" target="_blank" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub" />
+            </a>
+            <a href="mailto:contact@thomashoudard.com" aria-label="Mail">
+                <img src="images/email.png" alt="Email" />
+            </a>
+            </div>
+            <span style="font-size:0.7rem;color:var(--text-dim);" data-key="footer">
+            ©2025 Thomas Houdard · Tous droits réservés
+            </span>
+        </div>
+        <div class="footer-bottom">
+            <a href="blog.html">Blog</a>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                menu_about: "Accueil",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Expériences Professionnelles",
+                menu_projects_design: "Projets Design",
+                menu_projects_dev: "Projets Développement",
+                menu_contact: "Contact",
+                menu_cv: "Travailler avec moi",
+
+                footer: "©2025 Thomas Houdard · Tous droits réservés",
+
+                // Coach Sportif page
+                coach_hero_sub: "Étude de cas · Plateforme Web · UX/UI Design",
+                coach_hero_title: "Plateforme Coach Sportif",
+                coach_hero_p1: "Conception complète d'une plateforme web destinée aux coachs sportifs et leurs clients. Objectifs : créer une interface intuitive, faciliter la gestion des séances et des programmes, et offrir une expérience fluide sur tous les appareils.",
+                coach_hero_p2: "Travail réalisé : analyse des besoins, wireframing, design UX/UI, système de design, prototypage Figma interactif, et spécifications de développement.",
+                cta_see_final: "Voir le résultat",
+                cta_see_proto: "Voir le prototype",
+                coach_side_note: "Aperçu du prototype (vues clés)",
+
+                coach_context_title: "Contexte & Brief",
+                coach_context_challenge: "Challenge",
+                coach_context_challenge_desc: "Créer une plateforme web ergonomique permettant aux coachs de gérer leurs clients, programmes d'entraînement et séances, tout en offrant une interface accessible et moderne pour les utilisateurs finaux.",
+                coach_context_users: "Utilisateurs cibles",
+                coach_users1: "Coachs sportifs professionnels",
+                coach_users2: "Clients suivant des programmes",
+                coach_users3: "Utilisateurs mobiles et desktop",
+
+                coach_discovery_title: "Phase de Discovery",
+                coach_discovery_requirements: "Besoins identifiés",
+                coach_discovery1: "Gestion des clients et profils",
+                coach_discovery2: "Création et suivi de programmes",
+                coach_discovery3: "Planification des séances",
+                coach_discovery4: "Suivi des progrès et statistiques",
+                coach_discovery5: "Communication coach-client",
+                coach_discovery_features: "Fonctionnalités clés",
+                coach_feature1: "Dashboard personnalisé",
+                coach_feature2: "Calendrier interactif",
+                coach_feature3: "Fiches d'exercices",
+                coach_feature4: "Système de notifications",
+                coach_feature5: "Export et rapports",
+
+                coach_wireframes_title: "Wireframes & Arborescence",
+
+                coach_final_title: "Design Final",
+                coach_final_intro: "Le design final privilégie la clarté, l'accessibilité et l'efficacité. Une interface épurée, une hiérarchie visuelle forte et une navigation intuitive permettent aux utilisateurs d'accomplir leurs tâches rapidement et sans friction.",
+                coach_final_highlights: "Points clés du design",
+                coach_highlight1: "Interface minimaliste et épurée",
+                coach_highlight2: "Palette cohérente et motivante",
+                coach_highlight3: "Iconographie custom",
+                coach_highlight4: "Responsive design fluide",
+                coach_highlight5: "Accessibilité (WCAG)",
+                coach_highlight6: "Micro-interactions et feedback",
+                coach_design_system: "Design System",
+                coach_ds1: "Palette couleurs (primaire, neutre, états)",
+                coach_ds2: "Typographie (titres, corps, labels)",
+                coach_ds3: "Composants UI (boutons, formulaires, cartes)",
+                coach_ds4: "Grille et espacements",
+                coach_ds5: "Iconographie et illustrations",
+                coach_ds6: "Patterns et templates",
+                coach_screens_title: "Écrans clés",
+
+                coach_proto_title: "Prototype Interactif",
+                coach_proto_desc: "Explorez le prototype Figma interactif pour tester les flows, interactions et responsive.",
+                button_live: "Voir le site live",
+
+                titre_logiciels_utilises: "Logiciels utilisés",
+                tool_figma_coach: "Wireframes, maquettes haute fidélité, design system et prototypage interactif."
+            },
+            en: {
+                menu_about: "Home",
+                menu_portfolio: "Portfolio ▾",
+                menu_exp_pro: "Professional Experience",
+                menu_projects_design: "Design Projects",
+                menu_projects_dev: "Development Projects",
+                menu_contact: "Contact",
+                menu_cv: "Work with me",
+
+                footer: "©2025 Thomas Houdard · All rights reserved",
+
+                // Coach Sportif page
+                coach_hero_sub: "Case study · Web Platform · UX/UI Design",
+                coach_hero_title: "Sports Coach Platform",
+                coach_hero_p1: "Complete design of a web platform for sports coaches and their clients. Goals: create an intuitive interface, facilitate session and program management, and deliver a seamless experience across devices.",
+                coach_hero_p2: "Scope: requirements analysis, wireframing, UX/UI design, design system, interactive Figma prototype, and development specifications.",
+                cta_see_final: "See result",
+                cta_see_proto: "Open prototype",
+                coach_side_note: "Prototype preview (key screens)",
+
+                coach_context_title: "Context & Brief",
+                coach_context_challenge: "Challenge",
+                coach_context_challenge_desc: "Create an ergonomic web platform enabling coaches to manage clients, training programs and sessions, while offering an accessible and modern interface for end users.",
+                coach_context_users: "Target Users",
+                coach_users1: "Professional sports coaches",
+                coach_users2: "Clients following programs",
+                coach_users3: "Mobile and desktop users",
+
+                coach_discovery_title: "Discovery Phase",
+                coach_discovery_requirements: "Identified Needs",
+                coach_discovery1: "Client and profile management",
+                coach_discovery2: "Program creation and tracking",
+                coach_discovery3: "Session planning",
+                coach_discovery4: "Progress tracking and analytics",
+                coach_discovery5: "Coach-client communication",
+                coach_discovery_features: "Key Features",
+                coach_feature1: "Personalized dashboard",
+                coach_feature2: "Interactive calendar",
+                coach_feature3: "Exercise sheets",
+                coach_feature4: "Notification system",
+                coach_feature5: "Export and reports",
+
+                coach_wireframes_title: "Wireframes & Information Architecture",
+
+                coach_final_title: "Final Design",
+                coach_final_intro: "The final design prioritizes clarity, accessibility and efficiency. A clean interface, strong visual hierarchy and intuitive navigation enable users to accomplish tasks quickly and smoothly.",
+                coach_final_highlights: "Design Highlights",
+                coach_highlight1: "Minimalist and clean interface",
+                coach_highlight2: "Coherent and motivating palette",
+                coach_highlight3: "Custom iconography",
+                coach_highlight4: "Fluid responsive design",
+                coach_highlight5: "Accessibility (WCAG)",
+                coach_highlight6: "Micro-interactions and feedback",
+                coach_design_system: "Design System",
+                coach_ds1: "Color palette (primary, neutral, states)",
+                coach_ds2: "Typography (headings, body, labels)",
+                coach_ds3: "UI components (buttons, forms, cards)",
+                coach_ds4: "Grid and spacing",
+                coach_ds5: "Iconography and illustrations",
+                coach_ds6: "Patterns and templates",
+                coach_screens_title: "Key Screens",
+
+                coach_proto_title: "Interactive Prototype",
+                coach_proto_desc: "Explore the interactive Figma prototype to test flows, interactions and responsive behavior.",
+                button_live: "View live site",
+
+                titre_logiciels_utilises: "Tools Used",
+                tool_figma_coach: "Wireframes, high-fidelity mockups, design system and interactive prototyping."
+            }
+        };
+    </script>
+</body>
+</html>
